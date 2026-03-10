@@ -1,0 +1,8 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+
+# Ignore the venv and the env
+.llm-venv
+.env
+
+# Ignore the data for the datasets
+data
