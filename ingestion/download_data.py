@@ -10,7 +10,6 @@ def download_folder(url,output_path):
     argument
     '''
 
-
     try:
 
         old_files = len(os.listdir(output_path))
@@ -35,9 +34,10 @@ def download_folder(url,output_path):
 
     return
 
+if __name__ == '__main__':
 
-dotenv.load_dotenv()
-dataset_url = os.getenv('dataset_path')
-dataset_output = os.getenv('dataset_download_path')
+    dotenv.load_dotenv()
+    dataset_url = os.getenv('dataset_path')
+    dataset_output = os.getenv('dataset_download_path')
 
-download_folder(dataset_url,dataset_output)
+    download_folder(dataset_url,dataset_output)
