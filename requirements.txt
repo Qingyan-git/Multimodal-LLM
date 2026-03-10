@@ -1,3 +1,9 @@
 pymupdf
 dotenv
 gdown
+
+os
+datetime
+dotenv
+re
+unicodedata
