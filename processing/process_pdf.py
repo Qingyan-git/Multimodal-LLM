@@ -30,7 +30,6 @@ def delete_all_files_in_folder(folder_path):
 
 
 
-
 def clean_pdf_text(text):
 
     '''
@@ -81,51 +80,30 @@ def read_doc_text(file, output_path):
         Path.mkdir(output_path)
 
     with pymupdf.open(file) as doc:
-        print(f'Processing {filename}, saving pages to {output_path}')
+        print(f'Processing {filename}, saving to {output_path}')
         doc_metadata = doc.metadata.copy()  # pylint: disable=no-member
+
+        document = {'metadata':
+                    {'pdf_name' : filename,
+                    'document_metadata' : doc_metadata},
+                    'pages' : []
+                    }
 
         for i, page in enumerate(doc):
             page_text = page.get_text()
 
             if page_text.strip():   #skips empty page (q smart eh)
                 clean_text = clean_pdf_text(page_text)
-                page_json = {
-                    'page_content' : clean_text,
-                    'metadata' : {
-                        'page_number' : i+1,
-                        'pdf_name' : filename,
-                        'document_metadata' : doc_metadata
-                        }
-                }
 
-                save_file_name = f'{filename}_page_{i+1}.json'
-                save_path = output_path / save_file_name
-                with open(save_path,'w',encoding='utf-8') as save:
-                    json.dump(page_json, save, ensure_ascii=False, indent=4)
-                print(f'Saved page {i+1}')
+                document['pages'].append({'page_number' : i+1,
+                                          'page_content' : clean_text
+                                          })
 
-
-
-
-
-
-# def read_doc_text(doc_path, output_path):
-
-#     '''
-#     Reads a pdf for its textual content only
-#     '''
-
-#     with pymupdf.open(doc_path) as doc:
-#         doc_title = doc.metadata.get('title', f'No title found {datetime.datetime.now()}')
-
-#         write_path = os.path.join(output_path, f'{doc_title}.txt')
-#         with open(write_path, 'w', encoding='utf-8') as f:
-#             for page in doc:
-#                 text = page.get_text()
-#                 clean_text = clean_pdf_text(text)
-#                 f.write(clean_text)
-
-#     print(f'{doc_title} read and output saved.\n')
+        save_file_name = f'{filename}.json'
+        save_path = output_path / save_file_name
+        with open(save_path,'w',encoding='utf-8') as save:
+            json.dump(document, save, ensure_ascii=False, indent=4)
+        print(f'Saved document {save_file_name} at {output_path}')
 
 
 
