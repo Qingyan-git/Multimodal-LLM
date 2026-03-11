@@ -37,7 +37,7 @@ def download_folder(url,output_path):
 
     gdown.download_folder(
         url = url,
-        output = output_path,
+        output = str(output_path),
         quiet = True,
         use_cookies = True
     )

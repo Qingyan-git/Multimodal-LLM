@@ -5,22 +5,20 @@ import dotenv
 import re
 import unicodedata
 
-def clean_pdf_text(page):
+def clean_pdf_text(text):
 
     '''
     Cleans a pdf page's text content
     '''
 
-    def unicode_normalization(page):
-        return unicodedata.normalize('NFKC',page)
+    text = unicodedata.normalize('NFKC',text)
 
-    def remove_unprintable_chars(page):
-        return ''.join(char for char in page if char.isprintable())
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
+    text = text.replace("\u2028", "\n").replace("\u2029", "\n")
 
-    page = unicode_normalization(page)
-    page = remove_unprintable_chars(page)
+    ''.join(char for char in text if char.isprintable() or char in '\n')
 
-    return page
+    return text
 
 def read_doc_text(doc_path, output_path):
 
@@ -35,8 +33,8 @@ def read_doc_text(doc_path, output_path):
         with open(write_path, 'w', encoding='utf-8') as f:
             for page in doc:
                 text = page.get_text()
-                cleaned_text = clean_pdf_text(text)
-                f.write(cleaned_text)
+                clean_text = clean_pdf_text(text)
+                f.write(clean_text)
 
     print(f'{doc_title} read and output saved.\n')
 
