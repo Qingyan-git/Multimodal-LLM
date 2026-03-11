@@ -41,7 +41,7 @@ def retrieve_data(folder_path):
 
 
 
-def chunk_text(document_information, chunk_size=300, chunk_overlap=60):
+def chunk_text(document_information, chunk_size=500, chunk_overlap=100):
     '''
     Takes in some document_information, chunks the page_content of that document, and returns an 
     object with the chunks labelled with page number and metadata
@@ -64,7 +64,8 @@ def chunk_text(document_information, chunk_size=300, chunk_overlap=60):
     chunks_with_index = splitter.split_text(full_text)
     chunked_data = []
 
-    print(chunks_with_index)
+    print(chunks_with_index[0])
+
     
 
 
