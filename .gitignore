@@ -2,6 +2,8 @@
 
 # Ignore the venv and the env
 .llm-venv
+.llm-venv-py-3.12
+.vscode
 .env
 
 # Ignore the data for the datasets
