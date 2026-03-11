@@ -1,11 +1,9 @@
 pymupdf
-dotenv
 gdown
-
-datetime
 dotenv
 
 pylint
 
 langchain
 langchain_huggingface
+spacy

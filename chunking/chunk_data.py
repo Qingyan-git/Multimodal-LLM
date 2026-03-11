@@ -2,6 +2,7 @@ from pathlib import Path
 import os
 import dotenv
 import json
+import spacy
 
 
 def retrieve_data(folder_path):
@@ -19,7 +20,7 @@ def retrieve_data(folder_path):
     full_text = ""
 
     for file in folder_path.iterdir():
-        if file.is_file and file.suffix.lower() == '.json':
+        if file.is_file() and file.suffix.lower() == '.json':
             with open(file,'r',encoding='utf-8') as document:
                 doc = json.load(document)
                 doc_metadata = doc['metadata']
@@ -40,8 +41,21 @@ def retrieve_data(folder_path):
 
 
 
-def chunk_text(full_text,page_breaks,metadata):
-    pass
+def chunk_text(document_information, window_size=300, step_size=60):
+    '''
+    Takes in some document_information, chunks the page_content of that document, and returns an 
+    object with the chunks labelled with page number and metadata
+    '''
+    chunks = []
+    chunk_id = 1
+    pointer = 0
+
+    full_text,document_page_offset,doc_metadata = document_information
+    splitter = NLTKTextSplitter(separator="", language="english")  # sentence-level splitting
+    sentences = splitter.split_text(full_text)
+
+    print(sentences)
+
 
 
 
@@ -58,13 +72,11 @@ def chunk_text(full_text,page_breaks,metadata):
 
 
 #if __name__ == '__main__':
+nltk.download('punkt_tab')
 dotenv.load_dotenv()
 chunking_data_download = Path(os.getenv('chunking_data_download'))
 
 doc_data = retrieve_data(chunking_data_download)
-print(*doc_data)
-
-# print(len("\n\nGovernment Data Security Policies  |   !1\nGOVERNMENT  \nDATA SECURITY \nPOLICIES\nThis document contains general information for the \npublic only. It is not intended to be relied upon as a \ncomprehensive or definitive guide on each agency’s \npolicies and practices. The data security measures \nimplemented by each agency will differ depending on \nvarious factors such as the sensitivity of the data and \nthe agency’s assessment of data security risks. The \nGovernment may update the policies set out in this \ndocument without publishing such updates to the \npublic.  \n"))
-
+chunk_text(doc_data)
 
 
