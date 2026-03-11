@@ -17,7 +17,6 @@ def clean_pdf_text(page):
     def remove_unprintable_chars(page):
         return ''.join(char for char in page if char.isprintable())
 
-    page = re.sub(r'\\s+', ' ', page)
     page = unicode_normalization(page)
     page = remove_unprintable_chars(page)
 
@@ -29,15 +28,15 @@ def read_doc_text(doc_path, output_path):
     Reads a pdf for its textual content only
     '''
 
-    doc = pymupdf.open(doc_path)
-    doc_title = doc.metadata.get('title', f'No title found {datetime.datetime.now()}')
+    with pymupdf.open(doc_path) as doc:
+        doc_title = doc.metadata.get('title', f'No title found {datetime.datetime.now()}')
 
-    write_path = os.path.join(output_path, f'{doc_title}.txt')
-    with open(write_path, 'w', encoding='utf-8') as f:
-        for page in doc:
-            text = page.get_text()
-            cleaned_text = clean_pdf_text(text)
-            f.write(cleaned_text)
+        write_path = os.path.join(output_path, f'{doc_title}.txt')
+        with open(write_path, 'w', encoding='utf-8') as f:
+            for page in doc:
+                text = page.get_text()
+                cleaned_text = clean_pdf_text(text)
+                f.write(cleaned_text)
 
     print(f'{doc_title} read and output saved.\n')
 
