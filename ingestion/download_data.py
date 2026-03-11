@@ -19,7 +19,7 @@ def delete_all_files_in_folder(folder_path):
             file.unlink()
             count += 1
 
-    print(f'{count} files removed.\n\n') 
+    print(f'{count} files removed.\n\n')
 
 
 

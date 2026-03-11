@@ -2,8 +2,10 @@ pymupdf
 dotenv
 gdown
 
-os
 datetime
 dotenv
-re
-unicodedata
+
+pylint
+
+langchain
+langchain_huggingface
