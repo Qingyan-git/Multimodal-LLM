@@ -25,15 +25,17 @@ def delete_all_files_in_folder(folder_path):
 
 def download_folder(url,output_path):
     '''
-    Downloads a folder from google drive with the url argument and into the folder 
-    specified at output_path 
+    Downloads a folder from google drive with the url argument and into the directory 
+    specified at output_path. If directory found, deletes all files inside directory
+    else, creates directory at path
     '''
 
     if not Path.is_dir(output_path):
-        print(f"Directory not found at {output_path}, creating directory now\n")
+        print(f"Directory not found, creating directory now\n")
         output_path.mkdir(parents=True)
-
-    old_files = len(list(Path.iterdir(output_path)))
+    else:
+        delete_all_files_in_folder(output_path)
+        print(f'Directory found, deleting files in directory')
 
     gdown.download_folder(
         url = url,
@@ -42,10 +44,7 @@ def download_folder(url,output_path):
         use_cookies = True
     )
 
-    new_files = len(list(Path.iterdir(output_path)))
-    uploaded_files = new_files-old_files
-
-    print(f'Download successful. {uploaded_files} files downloaded.\n\n')
+    print(f'Download successful. {sum(1 for _ in output_path.iterdir())} files downloaded.\n\n')
 
 
 
@@ -55,5 +54,4 @@ dotenv.load_dotenv()
 dataset_url = os.getenv('dataset_path')
 dataset_output = Path(os.getenv('dataset_download_path'))
 
-delete_all_files_in_folder(dataset_output)
 download_folder(dataset_url,dataset_output)

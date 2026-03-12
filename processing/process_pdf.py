@@ -40,8 +40,8 @@ def clean_pdf_text(text):
 
     text = text.replace("\r\n", "\n").replace("\r", "\n")
     text = text.replace("\u2028", "\n").replace("\u2029", "\n")
-
-    ''.join(char for char in text if char.isprintable() or char in '\n')
+    text = ''.join(char for char in text if char.isprintable() or char in '\n')
+    text = text.strip()
 
     return text
 
@@ -73,10 +73,10 @@ def read_doc_text(file, output_path):
     output_path = output_path / filename
 
     if output_path.exists():
-        print(f'Files already exist at {output_path}, deleting them for overwriting')
+        print(f'Files already exist, deleting them for overwriting\n\n')
         delete_all_files_in_folder(output_path)
     else:
-        print(f'No folder found at {output_path}, creating a directory there')
+        print(f'No folder found, creating a directory there\n\n')
         Path.mkdir(output_path)
 
     with pymupdf.open(file) as doc:
@@ -84,9 +84,8 @@ def read_doc_text(file, output_path):
         doc_metadata = doc.metadata.copy()  # pylint: disable=no-member
 
         document = {'metadata':
-                    {'pdf_name' : filename,
-                    'document_metadata' : doc_metadata},
-                    'pages' : []
+                    {'document_metadata' : doc_metadata},
+                     'pages' : []
                     }
 
         for i, page in enumerate(doc):
@@ -103,7 +102,7 @@ def read_doc_text(file, output_path):
         save_path = output_path / save_file_name
         with open(save_path,'w',encoding='utf-8') as save:
             json.dump(document, save, ensure_ascii=False, indent=4)
-        print(f'Saved document {save_file_name} at {output_path}')
+        print(f'Saved document {save_file_name}\n')
 
 
 
