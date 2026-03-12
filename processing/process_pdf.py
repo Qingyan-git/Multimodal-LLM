@@ -4,6 +4,7 @@ import dotenv
 import unicodedata
 from pathlib import Path
 import json
+import re
 
 
 
@@ -38,8 +39,9 @@ def clean_pdf_text(text):
 
     text = unicodedata.normalize('NFKC',text)
 
-    text = text.replace("\r\n", "\n").replace("\r", "\n")
-    text = text.replace("\u2028", "\n").replace("\u2029", "\n")
+    text = text.replace("\r\n", "\n").replace("\r", "")
+    text = text.replace("\u2028", "\n").replace("\u2029", "\n\n")
+    # text = re.sub(r"\n{2,}", "\n\n", text)
     text = ''.join(char for char in text if char.isprintable() or char in '\n')
     text = text.strip()
 
@@ -66,7 +68,7 @@ def iterate_folder(folder_path, output_path):
 def read_doc_text(file, output_path):
     '''
     Takes a file provided by iterate_folder function and processes its textual content, then writes
-    the output into output_path
+    the output into output_path, returns the path where the file was saved
     '''
 
     filename = file.stem
