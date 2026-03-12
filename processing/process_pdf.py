@@ -85,8 +85,7 @@ def read_doc_text(file, output_path):
         print(f'Processing {filename}, saving to {output_path}')
         doc_metadata = doc.metadata.copy()  # pylint: disable=no-member
 
-        document = {'metadata':
-                    {'document_metadata' : doc_metadata},
+        document = {'metadata': doc_metadata,
                      'pages' : []
                     }
 

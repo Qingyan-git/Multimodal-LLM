@@ -2,10 +2,12 @@ pymupdf
 gdown
 dotenv
 
-pylint
-
 langchain
 langchain-text-splitters
 langchain_huggingface
 spacy
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0.tar.gz
+thinc
+# en_core_web_sm @ https://github.com/explosion/spacy-models
+
+sentence_transformers
+qdrant_client
