@@ -2,11 +2,12 @@ pymupdf
 gdown
 dotenv
 
+psycopg
+
 langchain
 langchain-text-splitters
 langchain_huggingface
 spacy
-thinc
 # en_core_web_sm @ https://github.com/explosion/spacy-models
 
 sentence_transformers

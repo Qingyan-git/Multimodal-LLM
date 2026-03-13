@@ -6,7 +6,6 @@ import spacy
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 
-
 def recursive_chunking(folder_path, chunk_size=800, overlap=150):
     '''
     Uses folder path to retrieve the data and returns chunks of paragraphs ready for embedding
@@ -14,8 +13,6 @@ def recursive_chunking(folder_path, chunk_size=800, overlap=150):
 
     if not Path.exists(folder_path):
         raise FileNotFoundError("Please check that the path input is correct")
-
-    print(f'Retriving data from folder')
 
     for file in folder_path.iterdir():
 
@@ -107,8 +104,6 @@ def sentence_chunking(folder_path):
     if not Path.exists(folder_path):
         raise FileNotFoundError("Please check that the path input is correct")
 
-    print(f'Retriving data from folder')
-
     spacy_model = spacy.load("en_core_web_sm")
     
     for file in folder_path.iterdir():
@@ -135,25 +130,53 @@ def sentence_chunking(folder_path):
 
 
 
+def store_chunk_data(folder_path,folder_name,chunks):
+    '''
+    Stores the chunk data locally at folder_path
+    '''
+
+    if not Path.exists(folder_path):
+        raise FileNotFoundError("Please check that the path input is correct")
+    
+    save_path = folder_path / folder_name
+
+    save_path.mkdir()
+
+    file_path = save_path / 'chunks.json'
+
+    with file_path.open('w', encoding='utf-8') as f:
+        json.dump(chunks, f, ensure_ascii=False, indent=4)
+
+    
+    print(f'Chunks from {folder_name} saved\n\n')
+
+
+
+
+def retrieve_pdfs_and_store_chunks(folder_path,storage_path,chunking_method=recursive_chunking):
+    '''
+    Retrieves each pdf from folder_path.
+    Extract the chunks from each pdf, and saves the chunk data
+    under the chunk directory
+    '''
+    if not Path.exists(folder_path):
+        raise FileNotFoundError("Please check that the path input is correct")
+
+    for subfolder_path in folder_path.iterdir():
+        print(f'Reading {subfolder_path.name}\n')
+
+        chunks = chunking_method(subfolder_path)
+
+        store_chunk_data(storage_path,subfolder_path.name,chunks)
 
 
 
 #if __name__ == '__main__':
 dotenv.load_dotenv()
 chunking_data_download = Path(os.getenv('chunking_data_download'))
+chunking_data_storage = Path(os.getenv('chunking_data_storage'))
 
-doc_data_sentences = sentence_chunking(chunking_data_download)
-doc_data_groupby = group_by_sentence_chunking(chunking_data_download)
-doc_data_paragraphs = recursive_chunking(chunking_data_download)
-# print(doc_data_sentences[0])
-# print()
-# print()
-# print(doc_data_groupby[0])
-# print()
-# print()
-print(doc_data_paragraphs[0])
-print()
-# print()
-# print(doc_data_paragraphs[1])
+retrieve_pdfs_and_store_chunks(chunking_data_download,chunking_data_storage)
+
 
 
