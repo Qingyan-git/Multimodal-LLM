@@ -173,10 +173,10 @@ def retrieve_pdfs_and_store_chunks(folder_path,storage_path,chunking_method=recu
 
 #if __name__ == '__main__':
 dotenv.load_dotenv()
-chunking_data_download = Path(os.getenv('chunking_data_download'))
-chunking_data_storage = Path(os.getenv('chunking_data_storage'))
+dataset_process_path = Path(os.getenv('dataset_process_path'))
+chunking_data_path = Path(os.getenv('chunking_data_path'))
 
-retrieve_pdfs_and_store_chunks(chunking_data_download,chunking_data_storage)
+retrieve_pdfs_and_store_chunks(dataset_process_path,chunking_data_path)
 
 
 

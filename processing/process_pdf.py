@@ -109,6 +109,6 @@ def read_doc_text(file, output_path):
 
 # if __name__ == '__main__':
 dotenv.load_dotenv()
-dataset_download_path = Path(os.getenv('dataset_download_path'))
+raw_dataset_path = Path(os.getenv('raw_dataset_path'))
 dataset_process_path = Path(os.getenv('dataset_process_path'))
-iterate_folder(dataset_download_path,dataset_process_path)
+iterate_folder(raw_dataset_path,dataset_process_path)

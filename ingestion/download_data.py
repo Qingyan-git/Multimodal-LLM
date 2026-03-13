@@ -51,7 +51,7 @@ def download_folder(url,output_path):
 # if __name__ == '__main__':
 
 dotenv.load_dotenv()
-dataset_url = os.getenv('dataset_path')
-dataset_output = Path(os.getenv('dataset_download_path'))
+dataset_gdrive_url = os.getenv('dataset_gdrive_url')
+raw_dataset_path = Path(os.getenv('raw_dataset_path'))
 
-download_folder(dataset_url,dataset_output)
+download_folder(dataset_gdrive_url,raw_dataset_path)
