@@ -51,7 +51,7 @@ def clean_pdf_text(text):
 
 def iterate_folder(folder_path, output_path):
     '''
-    Iterates through a folder and passes any pdf files with the output_path to another function to 
+    Iterates through a folder and passes any pdf files with the output_path to 
     read and process data
     '''
 

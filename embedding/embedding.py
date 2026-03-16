@@ -91,7 +91,7 @@ def embed_and_upload(folder_path,qdrant_cluster_endpoint,qdrant_api_key):
 
             print(f'Embeddings for {file} calculated\n')
 
-            upload_to_qdrant(qdrant_cluster_endpoint,qdrant_api_key,embeddings,model)
+            # upload_to_qdrant(qdrant_cluster_endpoint,qdrant_api_key,embeddings,model)
 
 
 
