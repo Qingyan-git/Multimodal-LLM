@@ -5,6 +5,7 @@ import json
 # import spacy
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from process_pdf import process_doc_text
+from postgresql import save_chunks
 
 
 def manual_recursive_chunking(folder_path, chunk_size=800, overlap=150):
@@ -171,8 +172,6 @@ def manual_retrieve_pdfs_and_store_chunks(folder_path,storage_path,chunking_meth
 
 
 
-
-
 def get_page_breaks(doc):
     """
     Takes in a document dictionary to find out the boundary of each page
@@ -211,6 +210,11 @@ def get_page_breaks(doc):
 
 
 def recursive_character_chunk(text,page_breaks,chunk_size=500,overlap=100):
+    """
+    Uses text_splitters' RecursiveCharacterTextSplitter module to chunk the text
+    Accounts for page breaks
+    Returns the chunks
+    """
 
     splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size,chunk_overlap=overlap)
     paragraphs = splitter.split_text(text)
@@ -246,18 +250,22 @@ def recursive_chunk_data(documents):
     Returns a similar object to be passed into embedding and storage into postgresql
     """
 
+    all_chunks = []
+
     for doc in documents:
+
+        document = {
+            'name' : doc['name'],
+            'chunks' : None
+        }
 
         full_text, page_breaks = get_page_breaks(doc)
 
-        print()
-        print(len(full_text))
-        print(page_breaks)
-        print()
+        doc_chunks = recursive_character_chunk(full_text,page_breaks)
+        document['chunks'] = doc_chunks
+        all_chunks.append(document)
 
-        chunks = recursive_character_chunk(full_text,page_breaks)
-
-        print(chunks[0])
+    # save_chunks(all_chunks)
 
 
 

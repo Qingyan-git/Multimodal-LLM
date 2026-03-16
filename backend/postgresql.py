@@ -3,6 +3,7 @@ import dotenv
 import os
 from pathlib import Path
 import pymupdf
+#from psycopg.extras import execute_values
 
 
 def create_llm_db(user,password,db_name,host='localhost',port=5432):
@@ -83,8 +84,8 @@ def create_db_tables():
                     CREATE TABLE IF NOT EXISTS chunks(
                     id SERIAL PRIMARY KEY,
                     document_id INT REFERENCES pdfs(id),
-                    content TEXT NOT NULL,
-                    page_number INT[] NOT NULL,
+                    text TEXT NOT NULL,
+                    pages INT[] NOT NULL,
                     )
                     """
                 )
@@ -140,8 +141,39 @@ def insert_pdfs(folder_path):
 
 
 
-def save_chunks(chunks):
-    pass
+def save_chunks(all_chunks):
+    try : 
+        with get_connection() as conn:
+            with conn.cursor() as cur:
+                for doc_chunks in all_chunks:
+                    
+                    document_name = doc_chunks['name']
+
+                    cur.execute(
+                        """
+                        SELECT id FROM pdfs WHERE name = %s
+                        """,
+                        (document_name,)
+                    )
+
+                    document_id = cur.fetchone()[0]
+                    document_chunks = doc_chunks['chunks']
+                    prepared_chunks = [(document_id, chunk['text'], chunk['pages'])
+                                       for chunk in document_chunks
+                                        ]
+                    
+                    psycopg.extras.execute_values(
+                        cur,
+                        """
+                        INSERT INTO chunks(document_id, text, pages) VALUES %s
+                        """,
+                        prepared_chunks
+                    )
+
+
+    except psycopg.Error as e:
+        print(f'Failed to save chunks into database, error : {e}')
+        raise
 
 
 

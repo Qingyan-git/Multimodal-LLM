@@ -131,4 +131,4 @@ dataset_process_path = Path(os.getenv('dataset_process_path'))
 
 documents = process_doc_text(raw_dataset_path)
 # print(documents[1].keys())
-print(documents[-1].get('content')[-1])
+# print(documents[0].get('content')[0])
