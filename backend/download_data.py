@@ -54,4 +54,4 @@ dotenv.load_dotenv()
 dataset_gdrive_url = os.getenv('dataset_gdrive_url')
 raw_dataset_path = Path(os.getenv('raw_dataset_path'))
 
-download_folder(dataset_gdrive_url,raw_dataset_path)
+# download_folder(dataset_gdrive_url,raw_dataset_path)

@@ -40,6 +40,10 @@ def create_llm_db(user,password,db_name,host='localhost',port=5432):
 
 def get_connection(user:str,password:str,db_name:str,host:str='localhost',port:int=5432):
 
+    '''
+    Gets and returns connection object for the database as specified
+    '''
+
     try :
         conn = psycopg.connect(
             host=host,
@@ -95,6 +99,11 @@ def create_db_tables():
 
 
 def insert_pdfs(folder_path):
+
+    '''
+    Inserts the pdfs found under the directory at folder_path into the postgresql database
+    '''
+
     try:
 
         if not folder_path.exists():
@@ -123,12 +132,7 @@ def insert_pdfs(folder_path):
                 
                 conn.commit()
 
-
-
-
-
-                   
-
+        print(f'All pdfs inserted, all done\n\n')
 
     except psycopg.Error as e:
         print(f'Failed to insert pdf references into database, error {e}\n\n')

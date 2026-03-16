@@ -4,30 +4,7 @@ import dotenv
 import unicodedata
 from pathlib import Path
 import json
-import re
-
-
-
-# from download_data import delete_all_files_in_folder 
-# not too sure how to do this but temporarily i will treat this as a fix
-
-def delete_all_files_in_folder(folder_path):
-    '''
-    Deletes all files in the folder specified by folder_path
-    '''
-
-    if not Path.exists(folder_path):
-        raise FileNotFoundError("Please check that the path entered is correct")
-
-    count = 0
-    for file in folder_path.iterdir():
-        if file.is_file():
-            filename = file.name
-            print(f'Removing {filename}...\n')
-            file.unlink()
-            count += 1
-
-    print(f'{count} files removed.\n\n')
+from download_data import delete_all_files_in_folder
 
 
 
@@ -41,7 +18,6 @@ def clean_pdf_text(text):
 
     text = text.replace("\r\n", "\n").replace("\r", "")
     text = text.replace("\u2028", "\n").replace("\u2029", "\n\n")
-    # text = re.sub(r"\n{2,}", "\n\n", text)
     text = ''.join(char for char in text if char.isprintable() or char in '\n')
     text = text.strip()
 
@@ -106,9 +82,50 @@ def read_doc_text(file, output_path):
         print(f'Saved document {save_file_name}\n')
 
 
+def process_doc_text(folder_path):
+    
+    '''
+    Processes the text of pdf documents at folder_path to extract out the page based content
+    Returns the stored text to pass into chunking function
+    '''
+
+    all_pdfs = []
+    for file in folder_path.iterdir():
+
+        pdf_document = {
+                        'name' : "",
+                        'content' : []
+                    }
+
+        if file.is_file() and file.suffix.lower() == '.pdf':
+            print(f'Processing {file.name}\n')
+            with pymupdf.open(file) as doc:
+            
+                pdf_document['name'] = file.stem
+
+                for page_no, page in enumerate(doc):
+                    clean_page_text = clean_pdf_text(page.get_text())
+                    content = {
+                        'page_number' : page_no,
+                        'text' : clean_page_text
+                    }
+
+                    pdf_document['content'].append(content)
+
+            all_pdfs.append(pdf_document)
+
+    return all_pdfs
+
+
+
+
 
 # if __name__ == '__main__':
 dotenv.load_dotenv()
 raw_dataset_path = Path(os.getenv('raw_dataset_path'))
 dataset_process_path = Path(os.getenv('dataset_process_path'))
-iterate_folder(raw_dataset_path,dataset_process_path)
+
+documents = process_doc_text(raw_dataset_path)
+print(documents[1].get('content')[0])
+
+# iterate_folder(raw_dataset_path,dataset_process_path)
