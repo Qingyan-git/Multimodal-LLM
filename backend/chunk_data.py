@@ -2,11 +2,12 @@ from pathlib import Path
 import os
 import dotenv
 import json
-import spacy
+# import spacy
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from process_pdf import process_doc_text
 
 
-def recursive_chunking(folder_path, chunk_size=800, overlap=150):
+def manual_recursive_chunking(folder_path, chunk_size=800, overlap=150):
     '''
     Uses folder path to retrieve the data and returns chunks of paragraphs ready for embedding
     '''
@@ -63,12 +64,12 @@ def recursive_chunking(folder_path, chunk_size=800, overlap=150):
 
             
 
-def group_by_sentence_chunking(folder_path,chunk_size=8,overlap=2):
+def manual_group_by_sentence_chunking(folder_path,chunk_size=8,overlap=2):
     '''
     Uses folder path to retrieve the data and returns chunks of groups of sentences ready for embedding
     '''
 
-    document = sentence_chunking(folder_path)
+    document = manual_sentence_chunking(folder_path)
 
     pointer = 0
     chunks = []
@@ -96,7 +97,7 @@ def group_by_sentence_chunking(folder_path,chunk_size=8,overlap=2):
 
         
 
-def sentence_chunking(folder_path):
+def manual_sentence_chunking(folder_path):
     '''
     Uses folder_path to retrieve the data and returns sentence chunks ready for embedding
     '''
@@ -104,7 +105,7 @@ def sentence_chunking(folder_path):
     if not Path.exists(folder_path):
         raise FileNotFoundError("Please check that the path input is correct")
 
-    spacy_model = spacy.load("en_core_web_sm")
+    spacy_model = None #spacy.load("en_core_web_sm")
     
     for file in folder_path.iterdir():
         document_sentences = []
@@ -130,7 +131,7 @@ def sentence_chunking(folder_path):
 
 
 
-def store_chunk_data(folder_path,folder_name,chunks):
+def manual_store_chunk_data(folder_path,folder_name,chunks):
     '''
     Stores the chunk data locally at folder_path
     '''
@@ -152,8 +153,7 @@ def store_chunk_data(folder_path,folder_name,chunks):
 
 
 
-
-def retrieve_pdfs_and_store_chunks(folder_path,storage_path,chunking_method=recursive_chunking):
+def manual_retrieve_pdfs_and_store_chunks(folder_path,storage_path,chunking_method=manual_recursive_chunking):
     '''
     Retrieves each pdf from folder_path.
     Extract the chunks from each pdf, and saves the chunk data
@@ -167,16 +167,116 @@ def retrieve_pdfs_and_store_chunks(folder_path,storage_path,chunking_method=recu
 
         chunks = chunking_method(subfolder_path)
 
-        store_chunk_data(storage_path,subfolder_path.name,chunks)
+        manual_store_chunk_data(storage_path,subfolder_path.name,chunks)
 
+
+
+
+
+def get_page_breaks(doc):
+    """
+    Takes in a document dictionary to find out the boundary of each page
+    Returns a tuple of the full_text and the page_breaks
+    """
+
+    full_text = ""
+    page_breaks = []
+    start_index = 0
+    end_index = 0
+
+    doc_content = doc.get('content')
+
+    for page_content in doc_content:
+
+        page = {
+            'page_number' : int,
+            'start_index' : int,
+            'end_index' : int
+        }
+
+        full_text += page_content['text']
+        end_index = len(full_text)
+
+        page['page_number'] = page_content['page_number']
+        page['start_index'] = start_index
+        page['end_index'] = end_index
+
+        start_index = end_index
+
+        page_breaks.append(page)
+
+
+    return (full_text,page_breaks)
+
+
+
+def recursive_character_chunk(text,page_breaks,chunk_size=500,overlap=100):
+
+    splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size,chunk_overlap=overlap)
+    paragraphs = splitter.split_text(text)
+
+    start_index = 0
+    chunks = []
+
+    for paragraph in paragraphs:
+        chunk = {
+            'text' : str,
+            'pages' : list
+        }
+
+        paragraph = paragraph.replace('\n', '')
+        chunk['text'] = paragraph
+
+        chunk_start = text.find(paragraph,start_index)
+        chunk_end = chunk_start + len(paragraph)
+
+        for page in page_breaks:
+            if chunk_start < page["end"] and chunk_end > page["start"]:
+                chunk['pages'].append(page["page_number"])
+
+        chunks.append(chunk)
+
+    return chunks
+
+
+
+def recursive_chunk_data(documents):
+    """
+    Takes in a list of document dictionaries to chunk them using RecursiveCharacterTextSplittersimilar 
+    Returns a similar object to be passed into embedding and storage into postgresql
+    """
+
+    for doc in documents:
+
+        full_text, page_breaks = get_page_breaks(doc)
+
+        print()
+        print(len(full_text))
+        print(page_breaks)
+        print()
+
+        chunks = recursive_character_chunk(full_text,page_breaks)
+
+        print(chunks[0])
+
+
+
+        
 
 
 #if __name__ == '__main__':
 dotenv.load_dotenv()
-dataset_process_path = Path(os.getenv('dataset_process_path'))
-chunking_data_path = Path(os.getenv('chunking_data_path'))
+# dataset_process_path = Path(os.getenv('dataset_process_path'))
+# chunking_data_path = Path(os.getenv('chunking_data_path'))
 
-retrieve_pdfs_and_store_chunks(dataset_process_path,chunking_data_path)
+# manual_retrieve_pdfs_and_store_chunks(dataset_process_path,chunking_data_path)
+
+raw_dataset_path = Path(os.getenv('raw_dataset_path'))
+
+documents = process_doc_text(raw_dataset_path)
+print(documents)
+
+recursive_chunk_data = recursive_chunk_data(documents)
 
 
 

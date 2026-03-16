@@ -140,6 +140,11 @@ def insert_pdfs(folder_path):
 
 
 
+def save_chunks(chunks):
+    pass
+
+
+
 
 # if __name__ == '__main__':
 
