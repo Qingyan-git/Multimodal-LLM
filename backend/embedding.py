@@ -5,6 +5,8 @@ import dotenv
 import os
 from pathlib import Path
 
+from postgre_setups import retrieve_chunks
+
 
 # def embed_chunks(chunks, use='all-MiniLM-L6-v2'):
 #     '''
@@ -158,8 +160,20 @@ def upload_to_qdrant(qdrant_cluster_endpoint,qdrant_api_key,collection_name,embe
     )
 
 
+def embed_documents(qdrant_cluster_endpoint,qdrant_api_key,collection_name,model_name):
+    
+    model = load_model(model_name)
 
+    all_chunks = retrieve_chunks()
 
+    for document_chunks in all_chunks:
+        name = document_chunks['name']
+        metadata = document_chunks['metadata']
+        chunks = document_chunks['chunks']
+
+        document_embeddings = embed_chunks(name,metadata,chunks,model)
+
+        upload_to_qdrant(qdrant_cluster_endpoint,qdrant_api_key,collection_name,document_embeddings,model)
 
 
 

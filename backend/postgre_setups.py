@@ -3,7 +3,6 @@ import dotenv
 import os
 from pathlib import Path
 import pymupdf
-#from psycopg.extras import execute_values
 
 
 def create_llm_db(user,password,db_name,host='localhost',port=5432):
@@ -175,6 +174,64 @@ def save_chunks(all_chunks):
         print(f'Failed to save chunks into database, error : {e}')
         raise
 
+
+
+def retrieve_chunks():
+    try:
+        with get_connection() as conn:
+            with conn.cursor() as cur:
+
+                cur.execute(
+                    """
+                    SELECT DISTINCT document_id FROM chunks ORDER BY document_id
+                    """
+                )
+                document_ids = [row[0] for row in cur.fetchall()]
+
+                documents = []
+                for document_id in document_ids:
+
+                    document = {
+                        'name' : "",
+                        'metadata' : {},
+                        'chunks' : [],
+                    }
+
+                    cur.execute(
+                        """
+                        SELECT name,metadata FROM pdfs WHERE id = %s
+                        """,
+                        (document_id,)
+                    )
+                    document_ref = cur.fetchone()
+
+                    document_name,document_metadata = document_ref
+
+                    document['name'] = document_name
+                    document['metadata'] = document_metadata
+
+                    cur.execute(
+                        """
+                        SELECT id, text, pages FROM chunks WHERE document_id = %s ORDER BY id
+                        """,
+                        (document_id,)
+                    )
+                    for chunk in cur:
+                        chunk_id,text,pages = chunk
+                        document['chunks'].append({
+                            'id' : chunk_id,
+                            'text' : text,
+                            'pages' : pages
+                        })
+
+                    documents.append(document)
+
+        return documents
+    
+
+    except psycopg.Error as e:
+        print(f'Failed to retrive chunks from database, error : {e}')
+        raise
 
 
 

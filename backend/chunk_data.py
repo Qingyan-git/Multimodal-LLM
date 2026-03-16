@@ -4,8 +4,10 @@ import dotenv
 import json
 # import spacy
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+
+
 from process_pdf import process_doc_text
-from postgresql import save_chunks
+from postgre_setups import save_chunks
 
 
 def manual_recursive_chunking(folder_path, chunk_size=800, overlap=150):
@@ -265,7 +267,7 @@ def recursive_chunk_data(documents):
         document['chunks'] = doc_chunks
         all_chunks.append(document)
 
-    # save_chunks(all_chunks)
+    save_chunks(all_chunks)
 
 
 
@@ -282,8 +284,6 @@ dotenv.load_dotenv()
 raw_dataset_path = Path(os.getenv('raw_dataset_path'))
 
 documents = process_doc_text(raw_dataset_path)
-print(documents)
-
 recursive_chunk_data = recursive_chunk_data(documents)
 
 
