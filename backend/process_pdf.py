@@ -25,61 +25,61 @@ def clean_pdf_text(text):
 
 
 
-def iterate_folder(folder_path, output_path):
-    '''
-    Iterates through a folder and passes any pdf files with the output_path to 
-    read and process data
-    '''
+# def iterate_folder(folder_path, output_path):
+#     '''
+#     Iterates through a folder and passes any pdf files with the output_path to 
+#     read and process data
+#     '''
 
-    if not Path.exists(folder_path) or not Path.exists(output_path):
-        raise FileNotFoundError("Please check that the path input is correct")
+#     if not Path.exists(folder_path) or not Path.exists(output_path):
+#         raise FileNotFoundError("Please check that the path input is correct")
 
-    for file in Path.iterdir(folder_path):
-        if file.is_file() and file.suffix.lower() == '.pdf':
-            print(f'Processing {file.name}.pdf now')
-            read_doc_text(file,output_path)
+#     for file in Path.iterdir(folder_path):
+#         if file.is_file() and file.suffix.lower() == '.pdf':
+#             print(f'Processing {file.name}.pdf now')
+#             read_doc_text(file,output_path)
 
 
 
-def read_doc_text(file, output_path):
-    '''
-    Takes a file provided by iterate_folder function and processes its textual content, then writes
-    the output into output_path, returns the path where the file was saved
-    '''
+# def read_doc_text(file, output_path):
+#     '''
+#     Takes a file provided by iterate_folder function and processes its textual content, then writes
+#     the output into output_path, returns the path where the file was saved
+#     '''
 
-    filename = file.stem
-    output_path = output_path / filename
+#     filename = file.stem
+#     output_path = output_path / filename
 
-    if output_path.exists():
-        print(f'Files already exist, deleting them for overwriting\n\n')
-        delete_all_files_in_folder(output_path)
-    else:
-        print(f'No folder found, creating a directory there\n\n')
-        Path.mkdir(output_path)
+#     if output_path.exists():
+#         print(f'Files already exist, deleting them for overwriting\n\n')
+#         delete_all_files_in_folder(output_path)
+#     else:
+#         print(f'No folder found, creating a directory there\n\n')
+#         Path.mkdir(output_path)
 
-    with pymupdf.open(file) as doc:
-        print(f'Processing {filename}, saving to {output_path}')
-        doc_metadata = doc.metadata.copy()  # pylint: disable=no-member
+#     with pymupdf.open(file) as doc:
+#         print(f'Processing {filename}, saving to {output_path}')
+#         doc_metadata = doc.metadata.copy()  # pylint: disable=no-member
 
-        document = {'metadata': doc_metadata,
-                     'pages' : []
-                    }
+#         document = {'metadata': doc_metadata,
+#                      'pages' : []
+#                     }
 
-        for i, page in enumerate(doc):
-            page_text = page.get_text()
+#         for i, page in enumerate(doc):
+#             page_text = page.get_text()
 
-            if page_text.strip():   #skips empty page (q smart eh)
-                clean_text = clean_pdf_text(page_text)
+#             if page_text.strip():   #skips empty page (q smart eh)
+#                 clean_text = clean_pdf_text(page_text)
 
-                document['pages'].append({'page_number' : i+1,
-                                          'page_content' : clean_text
-                                          })
+#                 document['pages'].append({'page_number' : i+1,
+#                                           'page_content' : clean_text
+#                                           })
 
-        save_file_name = f'{filename}.json'
-        save_path = output_path / save_file_name
-        with open(save_path,'w',encoding='utf-8') as save:
-            json.dump(document, save, ensure_ascii=False, indent=4)
-        print(f'Saved document {save_file_name}\n')
+#         save_file_name = f'{filename}.json'
+#         save_path = output_path / save_file_name
+#         with open(save_path,'w',encoding='utf-8') as save:
+#             json.dump(document, save, ensure_ascii=False, indent=4)
+#         print(f'Saved document {save_file_name}\n')
 
 
 

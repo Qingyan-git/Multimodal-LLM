@@ -8,7 +8,6 @@ langchain
 langchain-text-splitters
 langchain_huggingface
 spacy
-# en_core_web_sm @ https://github.com/explosion/spacy-models
 
 sentence_transformers
 qdrant_client
