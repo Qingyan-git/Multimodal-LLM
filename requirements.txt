@@ -3,6 +3,7 @@ gdown
 dotenv
 
 psycopg
+psycopg[binary]
 
 langchain
 langchain-text-splitters

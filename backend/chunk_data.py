@@ -190,12 +190,12 @@ def get_page_breaks(doc):
     for page_content in doc_content:
 
         page = {
-            'page_number' : int,
-            'start_index' : int,
-            'end_index' : int
+            'page_number' : 0,
+            'start_index' : 0,
+            'end_index' : 0
         }
 
-        full_text += page_content['text']
+        full_text += page_content['text'].replace('\n','')
         end_index = len(full_text)
 
         page['page_number'] = page_content['page_number']
@@ -226,8 +226,8 @@ def recursive_character_chunk(text,page_breaks,chunk_size=500,overlap=100):
 
     for paragraph in paragraphs:
         chunk = {
-            'text' : str,
-            'pages' : list
+            'text' : "",
+            'pages' : []
         }
 
         paragraph = paragraph.replace('\n', '')
@@ -237,7 +237,7 @@ def recursive_character_chunk(text,page_breaks,chunk_size=500,overlap=100):
         chunk_end = chunk_start + len(paragraph)
 
         for page in page_breaks:
-            if chunk_start < page["end"] and chunk_end > page["start"]:
+            if chunk_start < page["end_index"] and chunk_end > page["start_index"]:
                 chunk['pages'].append(page["page_number"])
 
         chunks.append(chunk)
@@ -255,10 +255,11 @@ def recursive_chunk_data(documents):
     all_chunks = []
 
     for doc in documents:
+        print(f'Chunking {doc['name']} now\n')
 
         document = {
             'name' : doc['name'],
-            'chunks' : None
+            'chunks' : []
         }
 
         full_text, page_breaks = get_page_breaks(doc)
@@ -267,7 +268,12 @@ def recursive_chunk_data(documents):
         document['chunks'] = doc_chunks
         all_chunks.append(document)
 
+
+    print(f'All documents chunked, saving to postgresql db now\n\n')
+    
     save_chunks(all_chunks)
+
+    return all_chunks
 
 
 
@@ -281,10 +287,23 @@ dotenv.load_dotenv()
 
 # manual_retrieve_pdfs_and_store_chunks(dataset_process_path,chunking_data_path)
 
-raw_dataset_path = Path(os.getenv('raw_dataset_path'))
+raw_dataset_path = os.getenv('raw_dataset_path')
 
-documents = process_doc_text(raw_dataset_path)
-recursive_chunk_data = recursive_chunk_data(documents)
+if raw_dataset_path is None:
+    raise AttributeError("Environment variable not found, please check your env files \n\n")
+
+documents = process_doc_text(Path(raw_dataset_path))
+
+if documents:
+    chunks = recursive_chunk_data(documents)
+
+    if chunks:
+
+        document = chunks[1]
+
+        print(f'document name : {document['name']}')
+        print(f'document first chunk : {document['chunks'][0]}')
+
 
 
 

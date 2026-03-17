@@ -19,7 +19,11 @@ def delete_all_files_in_folder(folder_path):
             file.unlink()
             count += 1
 
-    print(f'{count} files removed.\n\n')
+    if count == 0:
+        print(f'Folder was empty.')
+
+    else:
+        print(f'{count} files removed.\n\n')
 
 
 
@@ -31,11 +35,9 @@ def download_folder(url,output_path):
     '''
 
     if not Path.is_dir(output_path):
-        print(f"Directory not found, creating directory now\n")
         output_path.mkdir(parents=True)
     else:
         delete_all_files_in_folder(output_path)
-        print(f'Directory found, deleting files in directory')
 
     gdown.download_folder(
         url = url,
@@ -52,6 +54,10 @@ def download_folder(url,output_path):
 
 dotenv.load_dotenv()
 dataset_gdrive_url = os.getenv('dataset_gdrive_url')
-raw_dataset_path = Path(os.getenv('raw_dataset_path'))
+raw_dataset_path = os.getenv('raw_dataset_path')
 
-# download_folder(dataset_gdrive_url,raw_dataset_path)
+if raw_dataset_path is None:
+    raise AttributeError("Environment variable not found, please check your env files \n\n")
+
+
+download_folder(dataset_gdrive_url,Path(raw_dataset_path))

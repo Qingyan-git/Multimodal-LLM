@@ -3,51 +3,87 @@ import dotenv
 import os
 from pathlib import Path
 import pymupdf
+import json
 
 
-def create_llm_db(user,password,db_name,host='localhost',port=5432):
-
-    '''
-    Checks for the existence of the db_name in postgresql. If not exist, create the db.
-    Returns the conn for the db
-    '''
-
-    with psycopg.connect(
-        host=host,
-        port=port,
-        dbname='postgres',
-        user=user,
-        password=password
-    ) as conn:
-        conn.autocommit = True
-
-        with conn.cursor() as cursor:
-            cursor.execute(
-                'SELECT 1 FROM pg_database WHERE datname = %s',
-                (db_name,)
-            )
-
-            exists = cursor.fetchone()
-
-            if not exists:
-                print(f'Database {db_name} does not exist, creating database now \n')
-                cursor.execute(
-                    'CREATE DATABASE {db_name}'
-                )
-                print('Database created \n\n')
-
-
-
-def get_connection(user:str,password:str,db_name:str,host:str='localhost',port:int=5432):
+def create_llm_db():
 
     '''
-    Gets and returns connection object for the database as specified
+    Checks for the existence of the db_name in postgresql. If not exist, create the db
     '''
 
     try :
+
+        user = os.getenv('postgres_user')
+        password = os.getenv('postgres_password')
+        admin_db_name = os.getenv('postgres_admin_db_name')
+        llm_db_name = os.getenv('postgres_llm_db_name')
+
+        print(f'User : {user}')
+        print(f'Password : {password}')
+        print(f'db_name : {admin_db_name}')
+
+        if not user or not password or not admin_db_name:
+            raise AttributeError("Environment variable(s) not found, please check your environment files\n\n")
+        
+        host = 'localhost'
+        port = 5432
+
+        with psycopg.connect(
+            host=host,
+            port=port,
+            dbname='postgres',
+            user=user,
+            password=password
+        ) as conn:
+            
+            print(f'Connected to db {admin_db_name}\n')
+
+            conn.autocommit = True
+            with conn.cursor() as cursor:
+                cursor.execute(
+                    'SELECT 1 FROM pg_database WHERE datname = %s',
+                    (llm_db_name,)
+                )
+
+                exists = cursor.fetchone()
+
+                if not exists:
+                    print(f'Database {llm_db_name} does not exist, creating database now \n')
+                    cursor.execute(f'CREATE DATABASE "{llm_db_name}"') #type:ignore
+                    print('Database created \n\n')
+
+                else:
+                    print(f'Database {llm_db_name} already exists\n\n')
+
+
+    except psycopg.Error as e:
+        print(f'Cannot create the llm_db, error : {e}\n\n')
+        raise
+
+
+
+def get_connection():
+
+    '''
+    Gets and returns connection object for the llm database
+    '''
+
+    try :
+
+        user = os.getenv('postgres_user')
+        password = os.getenv('postgres_password')
+        db_name = os.getenv('postgres_llm_db_name')
+
+        if not user or not password or not db_name:
+            raise AttributeError("Environment variable not found, please check your environment files\n\n")
+
+        host = 'localhost'
+        port = 5432
+
         conn = psycopg.connect(
             host=host,
-            post=port,
+            port=port,
             dbname=db_name,
             user=user,
             password=password
@@ -56,12 +92,17 @@ def get_connection(user:str,password:str,db_name:str,host:str='localhost',port:i
         return conn
 
     except  psycopg.Error as e: 
-        print(f'Database connection failed, error : {e}')
+        print(f'Database connection failed, error : {e}\n\n')
         raise
 
 
 
 def create_db_tables():
+
+    """
+    Creates tables for database
+    """
+
     try : 
         with get_connection() as conn:
             with conn.cursor() as cur:
@@ -84,17 +125,15 @@ def create_db_tables():
                     id SERIAL PRIMARY KEY,
                     document_id INT REFERENCES pdfs(id),
                     text TEXT NOT NULL,
-                    pages INT[] NOT NULL,
+                    pages INT[] NOT NULL
                     )
                     """
                 )
 
-            conn.commit()
-
         print(f'Create tables successful \n\n')
 
     except psycopg.Error as e:
-        print(f'Failed to create table, {e}')
+        print(f'Failed to create table, {e}\n\n')
         raise
 
 
@@ -111,26 +150,22 @@ def insert_pdfs(folder_path):
 
         with get_connection() as conn:
             with conn.cursor() as cur:
-
                 for file in folder_path.iterdir():
                     if file.is_file() and file.suffix.lower() == '.pdf':
-                        print(f'Inserting {file.name}.pdf now\n')
+                        print(f'Inserting {file.name} now\n')
                         with pymupdf.open(file) as doc:
 
                             doc_name = file.stem
                             doc_path = str(file.resolve())
-                            doc_metadata = doc.metadata.copy()
+                            doc_metadata = (doc.metadata or {}).copy()
 
                             cur.execute(
                                 """
                                 INSERT INTO pdfs (name,path,metadata) VALUES (%s,%s,%s)
                                 """,
 
-                                (doc_name,doc_path,doc_metadata)
+                                (doc_name,doc_path,json.dumps(doc_metadata))
                             )
-
-                
-                conn.commit()
 
         print(f'All pdfs inserted, all done\n\n')
 
@@ -141,6 +176,11 @@ def insert_pdfs(folder_path):
 
 
 def save_chunks(all_chunks):
+
+    """
+    Saves chunks into postgres database
+    """
+
     try : 
         with get_connection() as conn:
             with conn.cursor() as cur:
@@ -155,19 +195,27 @@ def save_chunks(all_chunks):
                         (document_name,)
                     )
 
-                    document_id = cur.fetchone()[0]
+                    result = cur.fetchone()
+
+                    if result is None:
+                        raise ValueError(f"No document found with name: {document_name} \n\n")
+
+                    document_id = result[0]
                     document_chunks = doc_chunks['chunks']
                     prepared_chunks = [(document_id, chunk['text'], chunk['pages'])
                                        for chunk in document_chunks
                                         ]
                     
-                    psycopg.extras.execute_values(
-                        cur,
+                    print(f'Inserting chunks for document  {document_name}\n')
+                    
+                    cur.executemany(
                         """
-                        INSERT INTO chunks(document_id, text, pages) VALUES %s
+                        INSERT INTO chunks(document_id, text, pages) VALUES (%s,%s,%s)
                         """,
                         prepared_chunks
                     )
+
+                    print(f'Chunks inserted\n\n')
 
 
     except psycopg.Error as e:
@@ -177,6 +225,9 @@ def save_chunks(all_chunks):
 
 
 def retrieve_chunks():
+    """
+    Retrieves chunks from postgres database
+    """
     try:
         with get_connection() as conn:
             with conn.cursor() as cur:
@@ -205,10 +256,14 @@ def retrieve_chunks():
                     )
                     document_ref = cur.fetchone()
 
-                    document_name,document_metadata = document_ref
+                    if document_ref is None:
+                        raise ValueError(f"No document found with id: {document_id} \n\n")
 
+                    document_name,document_metadata = document_ref
                     document['name'] = document_name
                     document['metadata'] = document_metadata
+
+                    print(f'Chunks retrieved for document {document_name}\n')
 
                     cur.execute(
                         """
@@ -218,6 +273,7 @@ def retrieve_chunks():
                     )
                     for chunk in cur:
                         chunk_id,text,pages = chunk
+
                         document['chunks'].append({
                             'id' : chunk_id,
                             'text' : text,
@@ -226,6 +282,7 @@ def retrieve_chunks():
 
                     documents.append(document)
 
+        print(f'All chunks retrieved\n\n')
         return documents
     
 
@@ -238,6 +295,11 @@ def retrieve_chunks():
 # if __name__ == '__main__':
 
 dotenv.load_dotenv()
+create_llm_db()
+create_db_tables()
 
-postgresql_user = os.getenv('postgresql_user')
-postgresql_password = os.getenv('postgresql_password')
+raw_dataset_path=os.getenv('raw_dataset_path')
+if raw_dataset_path is None:
+    raise ValueError("Environment variable not found. Please check your environment variables")
+
+insert_pdfs(Path(raw_dataset_path))

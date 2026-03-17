@@ -6,7 +6,7 @@
 .llm-venv-3.12
 .vscode
 .env
-__pycache__
+backend\__pycache__
 
 # Ignore the data for the datasets
 data

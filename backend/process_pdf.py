@@ -4,7 +4,6 @@ import dotenv
 import unicodedata
 from pathlib import Path
 import json
-from download_data import delete_all_files_in_folder
 
 
 
@@ -92,31 +91,34 @@ def process_doc_text(folder_path):
 
     all_pdfs = []
     for file in folder_path.iterdir():
+        if file.is_file() and file.suffix.lower() == '.pdf':
+            print(f'Processing {file.name}\n')
 
-        pdf_document = {
+            pdf_document = {
                         'name' : "",
                         'content' : []
                     }
-
-        if file.is_file() and file.suffix.lower() == '.pdf':
-            print(f'Processing {file.name}\n')
-            with pymupdf.open(file) as doc:
             
-                pdf_document['name'] = file.stem
+            with pymupdf.open(file) as doc:
+                if doc:
+                    pdf_document['name'] = file.stem
+                    for page_no, page in enumerate(doc): # type: ignore
+                        if page.get_text().strip():
+                            clean_page_text = clean_pdf_text(page.get_text())
 
-                for page_no, page in enumerate(doc):
-                    if page.get_text().strip():
-                        clean_page_text = clean_pdf_text(page.get_text())
-                        content = {
-                            'page_number' : page_no,
-                            'text' : clean_page_text
-                        }
+                            content = {
+                                'page_number' : page_no,
+                                'text' : clean_page_text
+                            }
 
-                        pdf_document['content'].append(content)
+                            pdf_document['content'].append(content)
 
-            all_pdfs.append(pdf_document)
+            if pdf_document:
+                all_pdfs.append(pdf_document)
 
-    return all_pdfs
+    print(f'All files processed\n\n')
+
+    return all_pdfs if not None else None
 
 
 
@@ -124,11 +126,12 @@ def process_doc_text(folder_path):
 
 # if __name__ == '__main__':
 dotenv.load_dotenv()
-raw_dataset_path = Path(os.getenv('raw_dataset_path'))
-dataset_process_path = Path(os.getenv('dataset_process_path'))
+raw_dataset_path = os.getenv('raw_dataset_path')
 
-# iterate_folder(raw_dataset_path,dataset_process_path)
+if raw_dataset_path == None:
+    raise AttributeError("Environment variable not found, please check your env files \n\n")
 
-documents = process_doc_text(raw_dataset_path)
-# print(documents[1].keys())
-# print(documents[0].get('content')[0])
+documents = process_doc_text(Path(raw_dataset_path))
+# print(documents[1].get('name'))
+# print(documents[1].get('content')[1])
+

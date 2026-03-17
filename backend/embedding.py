@@ -117,10 +117,10 @@ def get_qdrant_client(qdrant_cluster_endpoint,qdrant_api_key):
             api_key=qdrant_api_key
         )
 
-    except Exception as e:
-        print(f'Failed to connect to qdrant using parameters, error {e}')
+        return qdrant_client
 
-    return qdrant_client
+    except Exception as e:
+        print(f'Failed to connect to qdrant using parameters, error {e}\n\n')
 
 
 def create_qdrant_collection(qdrant_client, collection_name,model):
@@ -131,16 +131,24 @@ def create_qdrant_collection(qdrant_client, collection_name,model):
     try:
         existing_collection = qdrant_client.get_collection(collection_name)
         if not existing_collection:
+
+            print(f'Creating collection {collection_name} now\n')
+
             qdrant_client.recreate_collection(
                 collection_name=collection_name,
                 vectors_config=VectorParams(
                     size=model.get_sentence_embedding_dimension(),
-                    distance="Cosine"
+                    distance=qdrant_client.models.Distance.cosine
                 )
             )
 
+            print(f'Collection {collection_name} created\n\n')
+        
+        else:
+            print(f'Collection {collection_name} already exists\n\n')
+
     except Exception as e:
-        print(f'Failed to connect to qdrant, error {e}')
+        print(f'Failed to connect to qdrant, error {e}\n\n')
 
 
 def embed_chunks(document_name, document_metadata, chunks, model):
@@ -175,12 +183,14 @@ def upload_to_qdrant(qdrant_client,collection_name,embeddings):
     """
     Uploads the embeddings into collection_name using qdrant_client
     """
-    
+    try : 
+        qdrant_client.upsert(
+            collection_name = collection_name,
+            points = embeddings
+        )
 
-    qdrant_client.upsert(
-        collection_name = collection_name,
-        points = embeddings
-    )
+    except Exception as e:
+        print(f'Unable to upload embeddings to qdrant cloud, error {e}\n\n')
 
 
 def embed_documents(qdrant_cluster_endpoint,qdrant_api_key,collection_name):
@@ -203,7 +213,9 @@ def embed_documents(qdrant_cluster_endpoint,qdrant_api_key,collection_name):
 
         document_embeddings = embed_chunks(name,metadata,chunks,model)
 
+        print(f'Uploading chunks from {name} to qdrant now\n')
         upload_to_qdrant(qdrant_client,collection_name,document_embeddings)
+        print(f'Upload complete\n\n')
 
 
 
@@ -212,12 +224,27 @@ def embed_documents(qdrant_cluster_endpoint,qdrant_api_key,collection_name):
 
 dotenv.load_dotenv()
 
-chunking_data_path = Path(os.getenv('chunking_data_path'))
-
 qdrant_cluster_endpoint = os.getenv('qdrant_cluster_endpoint')
 qdrant_api_key = os.getenv('qdrant_api_key')
 qdrant_collection_name = os.getenv('qdrant_collection_name')
 
+if not qdrant_cluster_endpoint or not qdrant_api_key or not qdrant_collection_name:
+    raise AttributeError("Environment variable not found, please check your env files \n\n")
+
 embed_documents(qdrant_cluster_endpoint,qdrant_api_key,qdrant_collection_name)
 
-#embed_and_upload(chunking_data_path,qdrant_cluster_endpoint,qdrant_api_key)
+
+# all_chunks = retrieve_chunks()
+
+# second_doc = all_chunks[1]
+
+# name = second_doc['name']
+# metadata = second_doc['metadata']
+# chunks = second_doc['chunks']
+
+# print(f'document name : {name}')
+# print(f'document metadata : {metadata}')
+# print(f'document first chunk : {chunks[0]}')
+
+
+
