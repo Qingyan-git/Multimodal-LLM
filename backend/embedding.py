@@ -107,6 +107,42 @@ def load_model(name='all-MiniLM-L6-v2'):
     return model
 
 
+def get_qdrant_client(qdrant_cluster_endpoint,qdrant_api_key):
+    """
+    Returns a qdrant_client object
+    """
+    try: 
+        qdrant_client = QdrantClient(
+            url=qdrant_cluster_endpoint,
+            api_key=qdrant_api_key
+        )
+
+    except Exception as e:
+        print(f'Failed to connect to qdrant using parameters, error {e}')
+
+    return qdrant_client
+
+
+def create_qdrant_collection(qdrant_client, collection_name,model):
+    """
+    Sets up the qdrant collection
+    """
+
+    try:
+        existing_collection = qdrant_client.get_collection(collection_name)
+        if not existing_collection:
+            qdrant_client.recreate_collection(
+                collection_name=collection_name,
+                vectors_config=VectorParams(
+                    size=model.get_sentence_embedding_dimension(),
+                    distance="Cosine"
+                )
+            )
+
+    except Exception as e:
+        print(f'Failed to connect to qdrant, error {e}')
+
+
 def embed_chunks(document_name, document_metadata, chunks, model):
     """
     Takes in the document_id and its metadata along with all of the associated chunks
@@ -133,26 +169,13 @@ def embed_chunks(document_name, document_metadata, chunks, model):
         embeddings.append(embedding)
 
     return embeddings
-        
 
 
-def upload_to_qdrant(qdrant_cluster_endpoint,qdrant_api_key,collection_name,embeddings,model):
+def upload_to_qdrant(qdrant_client,collection_name,embeddings):
     """
-    Uploads the embeddings previously calculated into qdrant
+    Uploads the embeddings into collection_name using qdrant_client
     """
-    qdrant_client = QdrantClient(
-        url=qdrant_cluster_endpoint,
-        api_key=qdrant_api_key
-    )
-
-    if not qdrant_client.get_collection(collection_name):
-        qdrant_client.recreate_collection(
-            collection_name=collection_name,
-            vectors_config=VectorParams(
-                size=model.get_sentence_embedding_dimension(),
-                distance="Cosine"
-            )
-        )
+    
 
     qdrant_client.upsert(
         collection_name = collection_name,
@@ -160,9 +183,16 @@ def upload_to_qdrant(qdrant_cluster_endpoint,qdrant_api_key,collection_name,embe
     )
 
 
-def embed_documents(qdrant_cluster_endpoint,qdrant_api_key,collection_name,model_name):
+def embed_documents(qdrant_cluster_endpoint,qdrant_api_key,collection_name):
+    """
+    Embeds the chunks from all documents in the postgresql db and uploads into qdrant
+    """
     
-    model = load_model(model_name)
+    model = load_model()
+
+    qdrant_client = get_qdrant_client(qdrant_cluster_endpoint,qdrant_api_key)
+
+    create_qdrant_collection(qdrant_client,collection_name,model)
 
     all_chunks = retrieve_chunks()
 
@@ -173,7 +203,7 @@ def embed_documents(qdrant_cluster_endpoint,qdrant_api_key,collection_name,model
 
         document_embeddings = embed_chunks(name,metadata,chunks,model)
 
-        upload_to_qdrant(qdrant_cluster_endpoint,qdrant_api_key,collection_name,document_embeddings,model)
+        upload_to_qdrant(qdrant_client,collection_name,document_embeddings)
 
 
 
@@ -186,6 +216,8 @@ chunking_data_path = Path(os.getenv('chunking_data_path'))
 
 qdrant_cluster_endpoint = os.getenv('qdrant_cluster_endpoint')
 qdrant_api_key = os.getenv('qdrant_api_key')
-qdrant_cluster_name = os.getenv('qdrant_cluster_name')
+qdrant_collection_name = os.getenv('qdrant_collection_name')
+
+embed_documents(qdrant_cluster_endpoint,qdrant_api_key,qdrant_collection_name)
 
 #embed_and_upload(chunking_data_path,qdrant_cluster_endpoint,qdrant_api_key)
