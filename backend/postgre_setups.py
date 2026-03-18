@@ -6,6 +6,8 @@ import pymupdf
 import json
 
 
+# Setting up functions
+
 def create_llm_db():
 
     '''
@@ -19,10 +21,6 @@ def create_llm_db():
         admin_db_name = os.getenv('postgres_admin_db_name')
         llm_db_name = os.getenv('postgres_llm_db_name')
 
-        print(f'User : {user}')
-        print(f'Password : {password}')
-        print(f'db_name : {admin_db_name}')
-
         if not user or not password or not admin_db_name:
             raise AttributeError("Environment variable(s) not found, please check your environment files\n\n")
         
@@ -32,7 +30,7 @@ def create_llm_db():
         with psycopg.connect(
             host=host,
             port=port,
-            dbname='postgres',
+            dbname=admin_db_name,
             user=user,
             password=password
         ) as conn:
@@ -137,6 +135,9 @@ def create_db_tables():
         raise
 
 
+
+#Execution functions
+
 def insert_pdfs(folder_path):
 
     '''
@@ -172,7 +173,6 @@ def insert_pdfs(folder_path):
     except psycopg.Error as e:
         print(f'Failed to insert pdf references into database, error {e}\n\n')
         raise
-
 
 
 def save_chunks(all_chunks):
@@ -221,7 +221,6 @@ def save_chunks(all_chunks):
     except psycopg.Error as e:
         print(f'Failed to save chunks into database, error : {e}')
         raise
-
 
 
 def retrieve_chunks():
