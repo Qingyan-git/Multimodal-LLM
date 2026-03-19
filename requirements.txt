@@ -5,10 +5,7 @@ dotenv
 psycopg
 psycopg[binary]
 
-langchain
-langchain-text-splitters
-langchain_huggingface
-spacy
-
-sentence_transformers
+torch
+transformers
+pillow
 qdrant_client

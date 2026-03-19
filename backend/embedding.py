@@ -1,21 +1,24 @@
-from sentence_transformers import SentenceTransformer
 from qdrant_client import QdrantClient
 from qdrant_client.http.models import VectorParams
-import dotenv
-import os
 from pathlib import Path
+from transformers import Blip2Processor, Blip2Model
+import torch
+import os
 
 from postgre_setups import retrieve_chunks
 
 
+#Setting up functions
 
-def load_model(name='all-MiniLM-L6-v2'):
+def load_text_model(name='Salesforce/blip2-flan-t5-xl', device=None):
     """
     Loads the model as specified in the input argument
     """
-    model = SentenceTransformer(name)
-
-    return model
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    processor = Blip2Processor.from_pretrained(name)
+    model = Blip2Model.from_pretrained(name).to(device)
+    
+    return model, processor, device
 
 
 def get_qdrant_client(qdrant_cluster_endpoint,qdrant_api_key):
@@ -48,7 +51,7 @@ def create_qdrant_collection(qdrant_client, collection_name,model):
             qdrant_client.recreate_collection(
                 collection_name=collection_name,
                 vectors_config=VectorParams(
-                    size=model.get_sentence_embedding_dimension(),
+                    size=model.text_projection.out_features,
                     distance=qdrant_client.models.Distance.cosine
                 )
             )
@@ -60,34 +63,6 @@ def create_qdrant_collection(qdrant_client, collection_name,model):
 
     except Exception as e:
         print(f'Failed to connect to qdrant, error {e}\n\n')
-
-
-def embed_chunks(document_name, document_metadata, chunks, model):
-    """
-    Takes in the document_id and its metadata along with all of the associated chunks
-    Embeds the chunks and attaches relevant metadata
-    Returns embeddings
-    """
-
-    embeddings = []
-    texts = [chunk['text'] for chunk in chunks]
-    vectors = model.encode(texts)
-
-    for index,chunk in enumerate(chunks):
-        embedding = {
-            'id': chunk['id'],
-            'vector' : vectors[index].tolist(),
-            'payload' : {
-                'title' : document_name,
-                'text' : chunk['text'],
-                'pages' : chunk['pages'],
-                'metadata' : document_metadata
-            }
-        }
-
-        embeddings.append(embedding)
-
-    return embeddings
 
 
 def upload_to_qdrant(qdrant_client,collection_name,embeddings):
@@ -104,60 +79,66 @@ def upload_to_qdrant(qdrant_client,collection_name,embeddings):
         print(f'Unable to upload embeddings to qdrant cloud, error {e}\n\n')
 
 
-def embed_documents(qdrant_cluster_endpoint,qdrant_api_key,collection_name):
+#Execution functions
+
+
+def embed_text_chunks(chunks,model,processor,device):
     """
-    Embeds the chunks from all documents in the postgresql db and uploads into qdrant
+    Takes in the chunks for a document
+    Embeds those chunks using model
+    Returns embeddings
     """
     
-    model = load_model()
+    embeddings = []
+
+    for chunk in chunks:
+
+        processed_text = processor(text=[chunk.text], return_tensors="pt").to(device)
+
+        dummy_image = torch.zeros(1,3,224,224)
+
+        processed_text = processor(
+            text=[chunk.text],
+            images = dummy_image,
+            return_tensors="pt",
+            padding=True
+        ).to(device)
+
+        with torch.no_grad():
+            text_embedding = model(**processed_text)
+
+        embedding = {
+            'id' : chunk.id,
+            'vector' : text_embedding,
+            'payload' : chunk
+        }
+
+        embeddings.append(embedding)
+
+    return embeddings
+
+
+def embed_documents():
+    """
+    Embeds documents
+    """
+
+    qdrant_cluster_endpoint = os.getenv('qdrant_cluster_endpoint')
+    qdrant_api_key = os.getenv('qdrant_api_key')
+    qdrant_collection_name = os.getenv('qdrant_collection_name')
+
+    model,processor,device = load_text_model()
 
     qdrant_client = get_qdrant_client(qdrant_cluster_endpoint,qdrant_api_key)
 
-    create_qdrant_collection(qdrant_client,collection_name,model)
+    create_qdrant_collection(qdrant_client,qdrant_collection_name,model)
 
-    all_chunks = retrieve_chunks()
+    all_documents = retrieve_chunks()
 
-    for document_chunks in all_chunks:
-        name = document_chunks['name']
-        metadata = document_chunks['metadata']
-        chunks = document_chunks['chunks']
+    for document in all_documents:
+        document_embeddings = embed_text_chunks(document,model,processor,device)
 
-        document_embeddings = embed_chunks(name,metadata,chunks,model)
+        upload_to_qdrant(document_embeddings)
 
-        print(f'Uploading chunks from {name} to qdrant now\n')
-        upload_to_qdrant(qdrant_client,collection_name,document_embeddings)
-        print(f'Upload complete\n\n')
-
-    print(f'All chunks uploaded\n\n')
-
-
-
-
-# if __name__ == "__main__":
-
-dotenv.load_dotenv()
-
-qdrant_cluster_endpoint = os.getenv('qdrant_cluster_endpoint')
-qdrant_api_key = os.getenv('qdrant_api_key')
-qdrant_collection_name = os.getenv('qdrant_collection_name')
-
-if not qdrant_cluster_endpoint or not qdrant_api_key or not qdrant_collection_name:
-    raise AttributeError("Environment variable not found, please check your env files \n\n")
-
-embed_documents(qdrant_cluster_endpoint,qdrant_api_key,qdrant_collection_name)
-
-
-# all_chunks = retrieve_chunks()
-
-# second_doc = all_chunks[1]
-
-# name = second_doc['name']
-# metadata = second_doc['metadata']
-# chunks = second_doc['chunks']
-
-# print(f'document name : {name}')
-# print(f'document metadata : {metadata}')
-# print(f'document first chunk : {chunks[0]}')
-
-
+    print(f'Done\n\n')
 

@@ -1,12 +1,44 @@
 import psycopg
-import dotenv
 import os
-from pathlib import Path
 import pymupdf
 import json
+from models.chunk import Chunk
 
 
 # Setting up functions
+
+def get_connection():
+
+    '''
+    Gets and returns connection object for the llm database
+    '''
+
+    try :
+
+        user = os.getenv('postgres_user')
+        password = os.getenv('postgres_password')
+        db_name = os.getenv('postgres_llm_db_name')
+
+        if not user or not password or not db_name:
+            raise AttributeError("Environment variable not found, please check your environment files\n\n")
+
+        host = 'localhost'
+        port = 5432
+
+        conn = psycopg.connect(
+            host=host,
+            port=port,
+            dbname=db_name,
+            user=user,
+            password=password
+        )
+
+        return conn
+
+    except  psycopg.Error as e: 
+        print(f'Database connection failed, error : {e}\n\n')
+        raise
+
 
 def create_llm_db():
 
@@ -60,41 +92,6 @@ def create_llm_db():
         raise
 
 
-
-def get_connection():
-
-    '''
-    Gets and returns connection object for the llm database
-    '''
-
-    try :
-
-        user = os.getenv('postgres_user')
-        password = os.getenv('postgres_password')
-        db_name = os.getenv('postgres_llm_db_name')
-
-        if not user or not password or not db_name:
-            raise AttributeError("Environment variable not found, please check your environment files\n\n")
-
-        host = 'localhost'
-        port = 5432
-
-        conn = psycopg.connect(
-            host=host,
-            port=port,
-            dbname=db_name,
-            user=user,
-            password=password
-        )
-
-        return conn
-
-    except  psycopg.Error as e: 
-        print(f'Database connection failed, error : {e}\n\n')
-        raise
-
-
-
 def create_db_tables():
 
     """
@@ -107,9 +104,22 @@ def create_db_tables():
 
                 cur.execute(
                     """
+                    DROP TABLE pdfs CASCADE;
+                    """
+                )
+
+                cur.execute(
+                    """
+                    DROP TABLE chunks CASCADE;
+                    """
+                )
+
+
+                cur.execute(
+                    """
                     CREATE TABLE IF NOT EXISTS pdfs(
                     id SERIAL PRIMARY KEY,
-                    name TEXT NOT NULL,
+                    name TEXT NOT NULL UNIQUE,
                     path TEXT NOT NULL,
                     metadata JSONB NOT NULL, 
                     uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -122,8 +132,11 @@ def create_db_tables():
                     CREATE TABLE IF NOT EXISTS chunks(
                     id SERIAL PRIMARY KEY,
                     document_id INT REFERENCES pdfs(id),
-                    text TEXT NOT NULL,
-                    pages INT[] NOT NULL
+                    type TEXT,
+                    content_text TEXT,
+                    content_image_data BYTEA,
+                    pages_blocks JSONB,
+                    document_name TEXT
                     )
                     """
                 )
@@ -175,58 +188,55 @@ def insert_pdfs(folder_path):
         raise
 
 
-def save_chunks(all_chunks):
 
+def save_document_chunks(filename,document_chunks):
     """
     Saves chunks into postgres database
     """
 
-    try : 
+    try:
         with get_connection() as conn:
             with conn.cursor() as cur:
-                for doc_chunks in all_chunks:
-                    
-                    document_name = doc_chunks['name']
+                
+                cur.execute(
+                    """
+                    SELECT id FROM pdfs WHERE name = %s
+                    """,
+                    (filename,)
+                )
 
-                    cur.execute(
-                        """
-                        SELECT id FROM pdfs WHERE name = %s
-                        """,
-                        (document_name,)
-                    )
+                result = cur.fetchone()
+                if result is None:
+                    raise ValueError(f"No document found with name: {filename} \n\n")
 
-                    result = cur.fetchone()
+                document_id = result[0]
+                prepared_chunks = [(
+                    document_id,
+                    chunk.type,
+                    chunk.text,
+                    chunk.image_data,
+                    json.dumps(chunk.pages_blocks),
+                    filename
+                    ) for chunk in document_chunks]
 
-                    if result is None:
-                        raise ValueError(f"No document found with name: {document_name} \n\n")
-
-                    document_id = result[0]
-                    document_chunks = doc_chunks['chunks']
-                    prepared_chunks = [(document_id, chunk['text'], chunk['pages'])
-                                       for chunk in document_chunks
-                                        ]
-                    
-                    print(f'Inserting chunks for document  {document_name}\n')
-                    
-                    cur.executemany(
-                        """
-                        INSERT INTO chunks(document_id, text, pages) VALUES (%s,%s,%s)
-                        """,
-                        prepared_chunks
-                    )
-
-                    print(f'Chunks inserted\n\n')
-
+                cur.executemany(
+                    """
+                    INSERT INTO chunks(document_id,type,content_text,content_image_data,pages_blocks,document_name)
+                    VALUES (%s,%s,%s,%s,%s,%s)
+                    """,
+                    prepared_chunks
+                )
 
     except psycopg.Error as e:
-        print(f'Failed to save chunks into database, error : {e}')
+        print(f'Unable to save chunks into postgres database, error {e}')
         raise
 
 
 def retrieve_chunks():
     """
-    Retrieves chunks from postgres database
+    Returns the chunks stored in the postgres db
     """
+
     try:
         with get_connection() as conn:
             with conn.cursor() as cur:
@@ -236,69 +246,40 @@ def retrieve_chunks():
                     SELECT DISTINCT document_id FROM chunks ORDER BY document_id
                     """
                 )
-                document_ids = [row[0] for row in cur.fetchall()]
+                document_ids = cur.fetchall()
 
-                documents = []
-                for document_id in document_ids:
+                all_chunks = []
 
-                    document = {
-                        'name' : "",
-                        'metadata' : {},
-                        'chunks' : [],
-                    }
+                for (document_id,) in document_ids:
+
+                    pdf_chunks = []
 
                     cur.execute(
                         """
-                        SELECT name,metadata FROM pdfs WHERE id = %s
+                        SELECT id,type,content_text,content_image_data,pages_blocks,document_name FROM chunks WHERE document_id = %s ORDER BY id
                         """,
                         (document_id,)
                     )
-                    document_ref = cur.fetchone()
 
-                    if document_ref is None:
-                        raise ValueError(f"No document found with id: {document_id} \n\n")
+                    chunks = cur.fetchall()
 
-                    document_name,document_metadata = document_ref
-                    document['name'] = document_name
-                    document['metadata'] = document_metadata
-
-                    print(f'Chunks retrieved for document {document_name}\n')
-
-                    cur.execute(
-                        """
-                        SELECT id, text, pages FROM chunks WHERE document_id = %s ORDER BY id
-                        """,
-                        (document_id,)
-                    )
-                    for chunk in cur:
-                        chunk_id,text,pages = chunk
-
-                        document['chunks'].append({
-                            'id' : chunk_id,
-                            'text' : text,
-                            'pages' : pages
-                        })
-
-                    documents.append(document)
-
-        print(f'All chunks retrieved\n\n')
-        return documents
-    
+                    for row in chunks:
+                        chunk = Chunk(
+                            id=row[0],
+                            type=row[1],
+                            text=row[2],
+                            image_data=row[3],
+                            pages_blocks=row[4],
+                            document_name=row[5]
+                        )
+                        pdf_chunks.append(chunk)
+                    
+                    all_chunks.append(pdf_chunks)
+                
+                return all_chunks
 
     except psycopg.Error as e:
-        print(f'Failed to retrive chunks from database, error : {e}')
+        print(f'Unable to retrieve chunks, error {e}')
         raise
 
 
-
-# if __name__ == '__main__':
-
-dotenv.load_dotenv()
-create_llm_db()
-create_db_tables()
-
-raw_dataset_path=os.getenv('raw_dataset_path')
-if raw_dataset_path is None:
-    raise ValueError("Environment variable not found. Please check your environment variables")
-
-insert_pdfs(Path(raw_dataset_path))
