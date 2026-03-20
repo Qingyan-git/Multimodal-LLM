@@ -15,4 +15,3 @@ class Chunk:
     pages_blocks: List[Dict] = field(default_factory=list)
 
     document_name : Optional[str] = None
-

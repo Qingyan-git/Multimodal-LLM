@@ -1,7 +1,7 @@
 from qdrant_client import QdrantClient
 from qdrant_client.http.models import VectorParams
 from pathlib import Path
-from transformers import Blip2Processor, Blip2Model
+from transformers import PreTrainedModel, AutoModel
 import torch
 import os
 
@@ -10,15 +10,20 @@ from postgre_setups import retrieve_chunks
 
 #Setting up functions
 
-def load_text_model(name='Salesforce/blip2-flan-t5-xl', device=None):
+def load_model(name="jinaai/jina-embeddings-v4", device=None):
     """
-    Loads the model as specified in the input argument
+    Loads Jina v4 embedding model
     """
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-    processor = Blip2Processor.from_pretrained(name)
-    model = Blip2Model.from_pretrained(name).to(device)
-    
-    return model, processor, device
+
+    device = device or ("cuda" if torch.cuda.is_available() else "cpu")
+    model = AutoModel.from_pretrained(
+        name,
+        trust_remote_code=True,
+        torch_dtype=torch.float16 if device == "cuda" else torch.float32,
+    ).to(device)
+    model.eval()
+
+    return model
 
 
 def get_qdrant_client(qdrant_cluster_endpoint,qdrant_api_key):
@@ -48,10 +53,13 @@ def create_qdrant_collection(qdrant_client, collection_name,model):
 
             print(f'Creating collection {collection_name} now\n')
 
+            dummy_embedding = model.encode([{"text": "dummy"}])
+            vector_size = len(dummy_embedding[0])
+
             qdrant_client.recreate_collection(
                 collection_name=collection_name,
                 vectors_config=VectorParams(
-                    size=model.text_projection.out_features,
+                    size=vector_size,
                     distance=qdrant_client.models.Distance.cosine
                 )
             )
@@ -82,37 +90,30 @@ def upload_to_qdrant(qdrant_client,collection_name,embeddings):
 #Execution functions
 
 
-def embed_text_chunks(chunks,model,processor,device):
+def embed_chunks(chunks,model):
     """
     Takes in the chunks for a document
     Embeds those chunks using model
     Returns embeddings
     """
     
-    embeddings = []
+    inputs = []
 
     for chunk in chunks:
+        if chunk.type == 'text':
+            inputs.append({'text' : chunk.text })
+        elif chunk.type == 'image':
+            inputs.append({'text' : chunk.text, 'image' : chunk.image_data })
 
-        processed_text = processor(text=[chunk.text], return_tensors="pt").to(device)
+    vectors = model.encode(inputs)
 
-        dummy_image = torch.zeros(1,3,224,224)
-
-        processed_text = processor(
-            text=[chunk.text],
-            images = dummy_image,
-            return_tensors="pt",
-            padding=True
-        ).to(device)
-
-        with torch.no_grad():
-            text_embedding = model(**processed_text)
-
+    embeddings = []
+    for i, chunk in enumerate(chunks):
         embedding = {
-            'id' : chunk.id,
-            'vector' : text_embedding,
-            'payload' : chunk
+            "id": chunk.id,
+            "vector": vectors[i],
+            "payload": chunk
         }
-
         embeddings.append(embedding)
 
     return embeddings
@@ -127,7 +128,7 @@ def embed_documents():
     qdrant_api_key = os.getenv('qdrant_api_key')
     qdrant_collection_name = os.getenv('qdrant_collection_name')
 
-    model,processor,device = load_text_model()
+    model = load_model()
 
     qdrant_client = get_qdrant_client(qdrant_cluster_endpoint,qdrant_api_key)
 
@@ -136,7 +137,7 @@ def embed_documents():
     all_documents = retrieve_chunks()
 
     for document in all_documents:
-        document_embeddings = embed_text_chunks(document,model,processor,device)
+        document_embeddings = embed_chunks(document,model)
 
         upload_to_qdrant(document_embeddings)
 

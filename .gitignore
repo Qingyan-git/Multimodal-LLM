@@ -1,6 +1,7 @@
 # Created by venv; see https://docs.python.org/3/library/venv.html
 
 # Ignore any venvs and pycache
+.venv
 .llm-venv
 .llm-venv-py-3.12
 .llm-venv-3.12
