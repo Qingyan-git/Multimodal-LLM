@@ -1,29 +1,16 @@
 from qdrant_client import QdrantClient
 from qdrant_client.http.models import VectorParams
-from pathlib import Path
-from transformers import PreTrainedModel, AutoModel
+from transformers import AutoModel, AutoProcessor
 import torch
 import os
+from PIL import Image
+from io import BytesIO
 
 from postgre_setups import retrieve_chunks
+from models.qwen import Qwen
 
 
 #Setting up functions
-
-def load_model(name="jinaai/jina-embeddings-v4", device=None):
-    """
-    Loads Jina v4 embedding model
-    """
-
-    device = device or ("cuda" if torch.cuda.is_available() else "cpu")
-    model = AutoModel.from_pretrained(
-        name,
-        trust_remote_code=True,
-        torch_dtype=torch.float16 if device == "cuda" else torch.float32,
-    ).to(device)
-    model.eval()
-
-    return model
 
 
 def get_qdrant_client(qdrant_cluster_endpoint,qdrant_api_key):
@@ -42,7 +29,7 @@ def get_qdrant_client(qdrant_cluster_endpoint,qdrant_api_key):
         print(f'Failed to connect to qdrant using parameters, error {e}\n\n')
 
 
-def create_qdrant_collection(qdrant_client, collection_name,model):
+def create_qdrant_collection(qdrant_client, collection_name, model):
     """
     Sets up the qdrant collection
     """
@@ -53,13 +40,10 @@ def create_qdrant_collection(qdrant_client, collection_name,model):
 
             print(f'Creating collection {collection_name} now\n')
 
-            dummy_embedding = model.encode([{"text": "dummy"}])
-            vector_size = len(dummy_embedding[0])
-
             qdrant_client.recreate_collection(
                 collection_name=collection_name,
                 vectors_config=VectorParams(
-                    size=vector_size,
+                    size=model.get_sentence_embedding_dimension(),
                     distance=qdrant_client.models.Distance.cosine
                 )
             )
@@ -96,16 +80,10 @@ def embed_chunks(chunks,model):
     Embeds those chunks using model
     Returns embeddings
     """
-    
-    inputs = []
 
-    for chunk in chunks:
-        if chunk.type == 'text':
-            inputs.append({'text' : chunk.text })
-        elif chunk.type == 'image':
-            inputs.append({'text' : chunk.text, 'image' : chunk.image_data })
+    # need to figure out how to use Qwenv3 to embed my inputs
 
-    vectors = model.encode(inputs)
+    vectors = model.encode(chunks)
 
     embeddings = []
     for i, chunk in enumerate(chunks):
@@ -128,18 +106,44 @@ def embed_documents():
     qdrant_api_key = os.getenv('qdrant_api_key')
     qdrant_collection_name = os.getenv('qdrant_collection_name')
 
-    model = load_model()
+    if not (qdrant_cluster_endpoint and qdrant_api_key and qdrant_collection_name):
+        raise ValueError("Environment variables unable to be initialised, please check environment variables\n")
+    
+    print(f'Loading model...\n')
+
+    model = Qwen()
+
+    print(f'Model loaded successfullly\n\n')
+
+
+    print(f'Getting qdrant client now...\n')
 
     qdrant_client = get_qdrant_client(qdrant_cluster_endpoint,qdrant_api_key)
 
+    print(f'Qdrant client successfully received\n\n')
+
+
+    print(f'Checking for existence of collection...\n')
+
     create_qdrant_collection(qdrant_client,qdrant_collection_name,model)
+
+    print(f'Collection created successfully\n\n')
+
+
+    print(f'Retrieving all chunks from postgresql now\n')
 
     all_documents = retrieve_chunks()
 
+    print(f'All chunks retrieved\n\n')
+
+
+    print(f'Embedding documents now and uploading to qdrant\n')
+
     for document in all_documents:
         document_embeddings = embed_chunks(document,model)
+        upload_to_qdrant(qdrant_client,qdrant_collection_name,document_embeddings)
 
-        upload_to_qdrant(document_embeddings)
+    print(f'Documents successfully uploaded\n\n')
 
     print(f'Done\n\n')
 

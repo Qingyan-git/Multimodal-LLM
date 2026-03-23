@@ -37,7 +37,13 @@ def download_folder():
     '''
 
     dataset_gdrive_url = os.getenv('dataset_gdrive_url')
-    raw_dataset_path = Path(os.getenv('raw_dataset_path'))
+    raw_dataset_path = os.getenv('raw_dataset_path')
+
+    if not (dataset_gdrive_url and raw_dataset_path):
+        print(f'Environment variables not found, please check your environment files\n')
+        raise
+    
+    raw_dataset_path = Path(raw_dataset_path)
 
     if not Path.is_dir(raw_dataset_path):
         raw_dataset_path.mkdir(parents=True)
@@ -56,6 +62,3 @@ def download_folder():
     print(f'Saving all pdfs to postgresql now\n')
     insert_pdfs(raw_dataset_path)
     print(f'Finished saving pdfs to postgresql\n\n')
-
-
-

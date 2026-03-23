@@ -135,7 +135,7 @@ def create_db_tables():
                     type TEXT,
                     content_text TEXT,
                     content_image_data BYTEA,
-                    pages_blocks JSONB,
+                    pages INT[],
                     document_name TEXT
                     )
                     """
@@ -215,13 +215,13 @@ def save_document_chunks(filename,document_chunks):
                     chunk.type,
                     chunk.text,
                     chunk.image_data,
-                    json.dumps(chunk.pages_blocks),
+                    chunk.pages,
                     filename
                     ) for chunk in document_chunks]
 
                 cur.executemany(
                     """
-                    INSERT INTO chunks(document_id,type,content_text,content_image_data,pages_blocks,document_name)
+                    INSERT INTO chunks(document_id,type,content_text,content_image_data,pages,document_name)
                     VALUES (%s,%s,%s,%s,%s,%s)
                     """,
                     prepared_chunks
@@ -256,7 +256,7 @@ def retrieve_chunks():
 
                     cur.execute(
                         """
-                        SELECT id,type,content_text,content_image_data,pages_blocks,document_name FROM chunks WHERE document_id = %s ORDER BY id
+                        SELECT id,type,content_text,content_image_data,pages,document_name FROM chunks WHERE document_id = %s ORDER BY id
                         """,
                         (document_id,)
                     )
@@ -269,7 +269,7 @@ def retrieve_chunks():
                             type=row[1],
                             text=row[2],
                             image_data=row[3],
-                            pages_blocks=row[4],
+                            pages=row[4],
                             document_name=row[5]
                         )
                         pdf_chunks.append(chunk)

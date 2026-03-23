@@ -11,3 +11,4 @@ backend\__pycache__
 
 # Ignore the data for the datasets
 data
+pdfs

@@ -10,6 +10,5 @@ qdrant-client
 
 pymupdf
 pytesseract
-tesseract
 gdown
-python-dotenv
+opencv-python

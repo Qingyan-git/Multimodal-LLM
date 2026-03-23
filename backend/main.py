@@ -1,25 +1,31 @@
 from download_data import download_folder
 from chunking import process_all_files
-from postgre_setups import create_llm_db, create_db_tables, insert_pdfs, retrieve_chunks
+from postgre_setups import create_llm_db, create_db_tables, insert_pdfs
 from embedding import embed_documents
 
 import dotenv
 import os
 from pathlib import Path
+import pytesseract
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 if __name__ == "__main__":
+    dotenv.load_dotenv()
 
-    create_llm_db()
-    create_db_tables()
+    # create_llm_db()
+    # create_db_tables()
 
-    # download_folder()
+    # # download_folder()
 
-    insert_pdfs(Path(os.getenv('raw_dataset_path')))
+    # raw_dataset_path = os.getenv('raw_dataset_path')
+    
+    # if not raw_dataset_path:
+    #     print(f'Environment variable not found\n')
+    #     raise
+    # raw_dataset_path = Path(raw_dataset_path)
 
-    all_chunks = process_all_files()
+    # insert_pdfs(raw_dataset_path)
 
-    all_chunks = [chunk for doc_chunks in all_chunks for chunk in doc_chunks]
-
-    retrieved_chunks = retrieve_chunks()
+    # process_all_files()
 
     embed_documents()
