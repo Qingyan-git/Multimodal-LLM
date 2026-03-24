@@ -1,15 +1,12 @@
 import os
-import dotenv
-
 from embedding import get_qdrant_client
-from embedding import load_model
-
+from models.qwen import Qwen_V3_VL
 
 def embed_query(user_query,model):
     """
     Embeds a user query using the model to produce the vector for that query
     """
-    return model.encode(user_query).tolist()
+    return model.process_user_query(user_query)
 
 
 def search_qdrant(qdrant_client,collection_name,query_vector,limit=5,filter=None):
@@ -27,27 +24,14 @@ def search_qdrant(qdrant_client,collection_name,query_vector,limit=5,filter=None
 
     for result in results.points:
         chunk = {
-            'id' : "",
-            'similarity' : 0.00,
-            'document_name' : "",
-            'pages' : [],
-            'text' : "",
-            'metadata' : {}
+            'id' : result.id,
+            'similarity' : result.score,
+            'chunk' : result.payload
         }
-
-        chunk['id'] = result.id
-        chunk['similarity'] = result.score
-        res_metadata = result.payload
-        chunk['document_name'] = res_metadata['title']
-        chunk['pages'] = res_metadata['pages']
-        chunk['text'] = res_metadata['text']
-        chunk['metadata'] = res_metadata['metadata']
 
         similar_chunks.append(chunk)
 
     return similar_chunks
-
-
 
 
 def process_user_query(qdrant_client,collection_name,model,user_query):
@@ -71,23 +55,12 @@ def get_user_query():
     qdrant_api_key = os.getenv('qdrant_api_key')
     collection_name = os.getenv('qdrant_collection_name')
 
-    model = load_model()
+    model = Qwen_V3_VL()
     qdrant_client = get_qdrant_client(qdrant_cluster_endpoint,qdrant_api_key)
-
 
     for _ in range(1):
         user_query = input(f"Enter a query for retrieval, enter 'exit' to exit : ")
         process_user_query(qdrant_client,collection_name,model,user_query)
-
-
-    # exit = False
-    # while not exit:
-    #     user_query = input(f"Enter a query for retrieval, enter 'exit' to exit : ")
-
-    #     if user_query == 'exit':
-    #         exit = True
-    #     else:
-    #         process_user_query(qdrant_client,collection_name,model,user_query)
 
 
 

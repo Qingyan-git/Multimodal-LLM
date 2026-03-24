@@ -4,6 +4,8 @@ torchaudio
 transformers
 peft
 pillow
+qwen-vl-utils
+flash-attn
 
 psycopg[binary]
 qdrant-client
@@ -11,4 +13,4 @@ qdrant-client
 pymupdf
 pytesseract
 gdown
-opencv-python
+dotenv

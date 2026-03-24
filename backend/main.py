@@ -15,7 +15,7 @@ if __name__ == "__main__":
     # create_llm_db()
     # create_db_tables()
 
-    # # download_folder()
+    # download_folder()
 
     # raw_dataset_path = os.getenv('raw_dataset_path')
     

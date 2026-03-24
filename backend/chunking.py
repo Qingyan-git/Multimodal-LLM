@@ -202,7 +202,7 @@ def get_file_chunks(file):
                                 chunk = Chunk()
                                 chunk.type = 'image'
                                 chunk.text = chunk_text.strip()
-                                chunk.image_data = image_data.tobytes()
+                                chunk.image_data = image_data.tobytes(output='png')
                                 chunk.pages = [page_number]
                                 chunk.document_name = file.name
 
