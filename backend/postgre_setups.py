@@ -283,3 +283,25 @@ def retrieve_chunks():
         raise
 
 
+def retrieve_image_data(chunk_id):
+
+    try:
+        with get_connection() as conn:
+            with conn.cursor() as cur:
+
+                cur.execute(
+                    """
+                    SELECT content_image_data FROM chunks WHERE chunk.id = %s
+                    """,
+                    (chunk_id,)
+                )
+
+                chunk_image_data = cur.fetchone()
+
+                if chunk_image_data:
+                    return chunk_image_data[0]
+    
+    except psycopg.Error as e:
+        print(f'Unable to retrieve image data for chunk {chunk_id}, error {e}')
+
+

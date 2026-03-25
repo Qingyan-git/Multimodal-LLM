@@ -160,24 +160,8 @@ class Qwen3VLEmbedder():
 
         self.default_instruction = default_instruction
 
-        """
-        I edited this part here to try to quantize the model because it is too big
-        """
-
-        # #Quantization
-        # quantization_config = BitsAndBytesConfig(
-        #     load_in_4bit=True,
-        #     bnb_4bit_compute_dtype=torch.bfloat16, # Optimized for RTX 5000
-        #     bnb_4bit_quant_type="nf4",             # Best for embedding accuracy
-        #     bnb_4bit_use_double_quant=True
-        # )
-
         self.model = Qwen3VLForEmbedding.from_pretrained(
-            model_name_or_path, 
-            trust_remote_code=True, 
-            #quantization_config=quantization_config, 
-            #device_map = 'auto',
-            **kwargs
+            model_name_or_path, trust_remote_code=True, **kwargs
         ).to(device)
         self.processor = Qwen3VLProcessor.from_pretrained(
             model_name_or_path, padding_side='right'

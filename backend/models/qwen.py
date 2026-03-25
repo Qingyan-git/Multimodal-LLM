@@ -1,23 +1,13 @@
 from PIL import Image
 from io import BytesIO
-import numpy as np
 
 from scripts.qwen3_vl_embedding import Qwen3VLEmbedder
 
 class Qwen_V3_VL():
 
-    # quant_config = BitsAndBytesConfig(
-    #     load_in_4bit=True,
-    #     bnb_4bit_compute_dtype=torch.bfloat16,
-    #     bnb_4bit_quant_type="nf4"
-    # )
-
     def __init__(self, model="Qwen/Qwen3-VL-Embedding-2B", dims=2048):
         
-        self.embedder = Qwen3VLEmbedder(
-            model,
-            # quantization_config = self.quant_config
-            )
+        self.embedder = Qwen3VLEmbedder(model)
         
         self.model = model
 
@@ -26,6 +16,9 @@ class Qwen_V3_VL():
     
     def get_dims(self):
         return self.dims
+    
+    def get_model(self):
+        return self.model
     
 
     def encode_chunks(self,chunks):
@@ -78,5 +71,10 @@ class Qwen_V3_VL():
         return all_embeddings
     
 
-    def process_user_query(self):
-        pass
+    def process_user_query(self,user_query):
+
+        processed_query = [{'text' : user_query}]
+        query_tensor = self.embedder.process(processed_query)
+        extracted_vector = query_tensor[0].tolist()
+
+        return extracted_vector

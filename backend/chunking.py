@@ -106,18 +106,27 @@ def filter_image(image,min_dim=100,min_color=5):
     Returns image data and useability flag
     """
 
-    use = True
+    if image.height == 0 or image.width == 0:
+        use = False
+        return image,use
 
     if image.height < min_dim or image.width < min_dim:
         use = False
+        return image,use
 
     if image.is_monochrome or image.is_unicolor or image.color_count() < min_color:
         use = False
+        return image,use
 
-    return image,use
+    ratio = image.height/image.width 
+    if ratio > 5 or ratio < 0.2:
+        use = False
+        return image,use
+    
+    return image,True
 
 
-def normalise_image(doc,page,block,zoom=2.0):
+def normalise_image(doc,page,block):
     """
     Takes in the parameters to construct a pixmap of the image at doc page block, and then filters to see whether it can be used
     Returns a tuple of the image data and whether it is usuable
@@ -136,12 +145,10 @@ def normalise_image(doc,page,block,zoom=2.0):
         return (pix,use)
 
     except Exception:
-
         try:
             bbox = block.get("bbox")
-            mat = pymupdf.Matrix(zoom, zoom)
-            pix = page.get_pixmap(matrix=mat, clip=bbox, alpha=False)
-            pix = pymupdf.Pixmap(pymupdf.csRGB, pix)
+            pix = page.get_pixmap(clip=bbox, alpha=False) #Page.get_pixmap()
+            pix = pymupdf.Pixmap(pymupdf.csRGB, pix) #Pixmap.__init__(colorspace,source)
 
             pix,use = filter_image(pix)
 
@@ -189,14 +196,14 @@ def get_file_chunks(file):
                                 chunk_text = ""
                                 for i in range(block_no,-1,-1):
                                     if page_blocks[i]['type'] == 0:
-                                        chunk_text += f"Previous Context : {extract_text(page_blocks[i])}"
+                                        chunk_text += f"{extract_text(page_blocks[i])}"
                                         break
 
                                 chunk_text += f" OCR TEXT : {ocr_image(image_data.pil_image())}"
 
                                 for i in range(block_no+1,len(page_blocks)):
                                     if page_blocks[i]['type'] == 0:
-                                        chunk_text += f"Next Context : {extract_text(page_blocks[i])}"
+                                        chunk_text += f"{extract_text(page_blocks[i])}"
                                         break
 
                                 chunk = Chunk()
