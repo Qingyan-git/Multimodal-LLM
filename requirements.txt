@@ -5,7 +5,7 @@ transformers
 peft
 pillow
 qwen-vl-utils
-flash-attn
+bitsandbytes
 
 psycopg[binary]
 qdrant-client
@@ -14,3 +14,10 @@ pymupdf
 pytesseract
 gdown
 dotenv
+beautifulsoup4
+
+langchain
+langchain-huggingface
+langchain-text-splitters
+sentence-transformers 
+huggingface_hub

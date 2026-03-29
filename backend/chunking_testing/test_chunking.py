@@ -57,3 +57,151 @@ Idea :
         7. Store the table in postgreSQL and Qdrant
 
         """
+
+
+"""
+Findings : 
+
+"""
+
+
+import pymupdf
+from bs4 import BeautifulSoup
+from pathlib import Path
+from langchain_text_splitters import HTMLHeaderTextSplitter, RecursiveCharacterTextSplitter
+from llms import GenerationLLM, EmbeddingModel
+import re
+import pymupdf4llm
+from langchain_text_splitters import MarkdownTextSplitter
+
+def chunk_text(file):
+
+    try:
+        if file.is_file() and file.suffix.lower() == '.pdf':
+            with pymupdf.open(file) as doc:
+                all_text = []
+                all_html = f"<html><head><title>{file.stem}</title></head><body>"
+                for page in doc:
+                    all_text += str(page.get_text('text'))
+                    all_html += str(page.get_text('html'))
+
+            summarise_llm = GenerationLLM()
+            summary = summarise_llm.summarise_text(all_text)
+
+            print(f'All text : {all_text}\n\n')
+
+            print(f'Summary : {summary}\n\n')
+
+            context = f"""
+            This document is : {file.stem}
+            This is the context of the document : {summary}
+            """
+
+    
+    except Exception as e:
+        print(f'Error when extracting chunks from {file}, error {e}\n')
+        raise
+
+
+def remove_image_elements(text):
+    
+
+    image_chunk_identifier = r"\*\*==> picture \[\d* x \d*\] intentionally omitted <==\*\*"
+    picture_text_pattern = r"\*\*----- (Start|End) of picture text -----\*\*"
+    break_patterns = r"\<br\>+"
+    cleaned_text = re.sub(image_chunk_identifier, '', text)
+    cleaned_text = re.sub(picture_text_pattern, '', cleaned_text)
+    cleaned_text = re.sub(break_patterns, '', cleaned_text)
+
+    return cleaned_text
+
+
+def save_to_file(content,filepath=r'C:\Users\Chu Qingyan\Documents\WFH\Multimodal-LLM\chunktesting.md'):
+
+    path = Path(filepath)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(content, encoding='utf-8')
+    
+    print(f"Successfully saved to {filepath}")
+
+
+def markdown_chunk_test(file):
+    
+    with pymupdf.open(file) as doc:
+        markdown_text = pymupdf4llm.to_markdown(doc, header=False, footer=False, page_separators=True, ignore_images=True)
+
+    cleaned_markdown_text = remove_image_elements(markdown_text) #type:ignore
+
+    save_to_file(cleaned_markdown_text)
+
+    semantic_chunks = EmbeddingModel().semantic_chunker(cleaned_markdown_text)
+
+    final_chunks = []
+    chunk_size = 2000
+    chunk_overlap = 200
+
+    recursive_splitter = RecursiveCharacterTextSplitter(
+        chunk_size=chunk_size,
+        chunk_overlap=chunk_overlap,
+        #separators=["\n\n", "\n", "|", " ", ""]
+    )
+
+    for chunk in semantic_chunks:
+        if len(chunk) > chunk_size:
+            smaller_chunks = recursive_splitter.split_text(chunk)
+            final_chunks.extend(smaller_chunks)
+        else:
+            final_chunks.append(chunk)
+    
+    for chunk in final_chunks:
+        print(f'Chunk : {chunk}\n\n\n')
+
+    return semantic_chunks
+
+
+def html_chunk_test(file):
+    try:
+        if file.is_file() and file.suffix.lower() == '.pdf':
+            with pymupdf.open(file) as doc:
+                all_html = f"<html><head><title>{file.stem}</title></head><body>"
+                for page in doc:
+                    all_html += page.get_text('html') #type:ignore
+
+                soup = BeautifulSoup(all_html, 'html.parser')
+                for img in soup.find_all('img'):
+                    img.decompose() 
+                cleaned_html = str(soup)
+
+                print(f'Cleaned HTML : {cleaned_html}\n\n')
+
+                splitter = HTMLHeaderTextSplitter(
+                    headers_to_split_on=[('h1','Main Topic')],
+                    return_each_element=False
+                )
+
+                html_chunks = splitter.split_text(all_html)
+
+                for chunk in html_chunks:
+                    print(f'Chunk : {chunk}\n')
+
+    
+    except Exception as e:
+        print(f'Error when extracting chunks from {file}, error {e}\n')
+        raise
+
+
+def table_extraction_test(file):
+    import pymupdf
+    
+    with pymupdf.open(file) as doc:
+        all_tables = []
+        for page in doc:
+            page_tables = page.find_tables()
+            for table in page_tables.tables: #type:ignore
+                all_tables.append(table.to_markdown())
+
+        for table in all_tables:
+            print(f'Table found : {table}\n\n')
+
+
+markdown_chunk_test(Path(r'C:\Users\Chu Qingyan\Documents\WFH\Multimodal-LLM\data\raw\government-data-security-policies.pdf'))
