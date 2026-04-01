@@ -2,7 +2,7 @@ from pathlib import Path
 import os
 import dotenv
 import gdown
-from postgre_setups import insert_pdfs
+#from postgre_setups import insert_pdfs
 
 dotenv.load_dotenv()
 
@@ -59,6 +59,9 @@ def download_folder():
 
     print(f'Download successful. {sum(1 for _ in raw_dataset_path.iterdir())} files downloaded.\n\n')
 
-    print(f'Saving all pdfs to postgresql now\n')
-    insert_pdfs(raw_dataset_path)
-    print(f'Finished saving pdfs to postgresql\n\n')
+    # print(f'Saving all pdfs to postgresql now\n')
+    # insert_pdfs(raw_dataset_path)
+    # print(f'Finished saving pdfs to postgresql\n\n')
+
+
+download_folder()
