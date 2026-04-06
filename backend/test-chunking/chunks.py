@@ -6,9 +6,11 @@ class Chunk:
 
     id : Optional[int] = None
 
-    type : Optional[str] = None
+    document_name : Optional[str] = ""
 
-    context : Optional[str] = None
+    type : Optional[str] = ""
+
+    context : Optional[str] = ""
 
     content : Optional[dict] = field(default_factory=dict)
 
@@ -19,7 +21,7 @@ class Chunk:
 class TextChunk(Chunk):
 
     type : str = 'text'
-    content: str = ""
+    content: dict = field(default_factory=lambda: {'text': ""})
 
 
 @dataclass
@@ -28,10 +30,3 @@ class ImageChunk(Chunk):
     type : str = 'image'
     content :  dict = field(default_factory=lambda: {'text': "", 'image': b""})
 
-
-# @dataclass
-# class TableChunk(Chunk):
-
-#     def __post_init__(self):
-#         self.type = 'table'
-#         self.content = {'markdown_text' : ""}

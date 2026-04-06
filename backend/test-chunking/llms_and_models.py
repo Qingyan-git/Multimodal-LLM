@@ -6,47 +6,93 @@ import torch
 from PIL import Image
 import open_clip
 from transformers import CLIPModel, CLIPProcessor
-from langchain_openai import ChatOpenAI
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain.messages import SystemMessage, HumanMessage
 from langchain_experimental.text_splitter import SemanticChunker
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_text_splitters import RecursiveCharacterTextSplitter
+from ragas.llms import LangchainLLMWrapper
+from ragas.embeddings import LangchainEmbeddingsWrapper
 
-load_dotenv()
 
-class GenerationLLM:
+class OpenAIModel:
 
-    def __init__(self,model_name='gpt-4o-mini'):
+    def __init__(self,chat_model='gpt-4o-mini',embedding_model='text-embedding-3-small'):
 
-        api_key = os.getenv('openai_api_key')
+        api_key = os.getenv('open_api_key')
+
+        self.embedding_model = OpenAIEmbeddings(
+            model=embedding_model,
+            dimensions=256,                # Optional: Only for 'text-embedding-3' models
+            api_key=api_key
+        )
+
+        self.text_splitter = SemanticChunker(
+            self.embedding_model, 
+            breakpoint_threshold_type="percentile",
+            breakpoint_threshold_amount=85
+        )
 
         self.chat_model = ChatOpenAI(
-            model=model_name,
+            model=chat_model,
             temperature=0,
-            max_completion_tokens=1000,
+            max_tokens=1000,
             timeout=None,
             max_retries=2,
             api_key=api_key,
         )
-        
+
+        self.ragas_llm = LangchainLLMWrapper(self.chat_model)
+        self.ragas_embedding = LangchainEmbeddingsWrapper(self.embedding_model)
+
+
+    def get_ragas_llms(self):
+        return (self.ragas_llm, self.ragas_embedding)
+
     
-    def summarise_text(self,text):
+    def semantic_chunker(self,text):
 
-        messages = [
-        SystemMessage(
-            content=('You are a helpful assistant who summarises the text content that is given to you. '
-                    'You are summarising the text to provide context and background information on the content that will be used in a RAG pipeline. '
-                    'Use only the text below as your data source, and do not recall any other data from any other sources. '
-                    'The context for the data is that they are used by the Singapore Government, hence the context is Singapore based'
-                    'The summary should be a detailed and in depth description of the content. '
-        )),
-        HumanMessage(
-            content=text
-        )]
+        semantic_chunks = self.text_splitter.split_text(text)
 
-        summary = self.chat_model.invoke(messages).content
+        return semantic_chunks
 
-        return summary
+    
+    def embed_texts(self,texts):
+
+        vectors = self.embedding_model.embed_documents(texts)
+
+        return vectors
+
+    
+    def get_context(self,document,chunk):
+
+        system_instructions = f"You are an AI assistant specialising in document analysis. Your task is to ptrovide brief, relevant context for a chunk of text from the given document."
+        user_message = f"""
+        Here is the main document:
+        <document>
+        {document}
+        </document>
+
+        Here is the chunk we want to situate within the whole document:
+        <chunk>
+        {chunk}
+        </chunk>
+
+        Provide a concise context (2-3 sentences) for this chunk, considering the following guidelines:
+        1. Identify the main topic or concept discussed in the chunk.
+        2. Mention any relevant information or comparisons from the broader document context.
+        3. If applicable, note how this information relates to the overall theme or purpose of the document.
+        4. Include any key figures, dates, or percentages that provide important context.
+        5. Do not use phrases like "This chunk discusses" or "This section provides". Instead, directly state the context.
+
+        Please give a short succinct context to situate this chunk within the overall document for the purposes of improving search retrieval of the chunk. Answer only with the succinct context and nothing else.
+        """
+
+        prompt = [
+            {"role": "system", "content": system_instructions},
+            {"role": "user", "content": user_message}
+        ]
+
+        response = self.chat_model.invoke(prompt).content
+        return response
 
 
     def caption_image(self,image_PIL):
@@ -73,54 +119,41 @@ class GenerationLLM:
         return caption
 
 
+    def get_query_vector(self,user_query):
 
-class EmbeddingModel:
-    def __init__(self,model_name='Qwen/Qwen3-VL-Embedding-2B'):
+        query_vector = self.embedding_model.embed_query(user_query)
 
-        model_kwargs = {'device': 'cuda', 'trust_remote_code': True}
-        encode_kwargs = {'normalize_embeddings': True}
-
-        self.embedder = HuggingFaceEmbeddings(
-            model_name=model_name,
-            model_kwargs=model_kwargs,
-            encode_kwargs=encode_kwargs,
-        )
+        return query_vector
 
 
-    def semantic_chunker(self,text):
+    def answer_question(self,user_query,retrieved_context):
 
-        text_splitter = SemanticChunker(
-            self.embedder, 
-            breakpoint_threshold_type="percentile"
-        )
-        
-        chunks = text_splitter.split_text(text)
+        messages = [
+            SystemMessage(content=f"""
+            You are a professional assistant. Your goal is to provide accurate answers based ONLY on the provided context chunks.
 
-        return chunks
+            RULES:
+            1. GROUNDING: If the answer is not contained within the provided context, state clearly that you do not have enough information. Do not use external knowledge.
+            2. CONTEXT INTEGRATION: Treat the chunks as a single unified knowledge base.
+            3. RELEVANCE: Only use information from chunks that are relevant to answering the question.  
+            4. TABLES: If context contains Markdown tables, interpret row-to-column relationships strictly to ensure data accuracy.
+            5. FORMATTING: Use clear headings and bullet points for complex answers.                          
+            """),
 
+            HumanMessage(content=f"""
 
+            The following context contains multiple labeled chunks from different pages of a document. 
+            Use them to answer the question accurately.
 
-class RecursiveSplitter:
-    
-    def __init__(self,chunk_size = 2000, chunk_overlap = 200):
+            Context: 
+            {retrieved_context}
 
-        self.chunk_size = chunk_size
-        self.chunk_overlap = chunk_overlap
+            Question: {user_query}
+            """)]
 
-        self.recursive_splitter = RecursiveCharacterTextSplitter(
-            chunk_size=chunk_size,
-            chunk_overlap=chunk_overlap,
-            #separators=["\n\n", "\n", "|", " ", ""]
-        )
+        answer = self.chat_model.invoke(messages).content
 
-    
-    def get_chunk_size(self):
-        return self.chunk_size
-
-    
-    def split_text(self,text):
-
-        return self.recursive_splitter.split_text(text)
+        return answer
 
 
 
@@ -129,8 +162,6 @@ class OpenClipModel:
     def __init__(self,model_id = "openai/clip-vit-large-patch14"):
 
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        
-        # Load the model and the processor (which handles both images and text)
         self.model = CLIPModel.from_pretrained(model_id).to(self.device)
         self.processor = CLIPProcessor.from_pretrained(model_id)
 
@@ -183,3 +214,22 @@ class OpenClipModel:
             positive = probs.cpu().tolist()[0][0]
 
         return positive
+
+
+
+class ContextMessage:
+    def __init__(self,num,document_name,pages,score,context,content):
+
+        self.message = f"""
+        Chunk number {num}
+        This background context is taken from document {document_name}, page(s) {pages}
+        This chunk has a similarity score of {score}
+        Information about the chunk's content : {context}
+        The chunk's contents itself : {content}
+        """
+
+
+    def get_message(self):
+        return self.message
+
+

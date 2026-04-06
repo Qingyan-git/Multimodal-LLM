@@ -25,3 +25,6 @@ langchain_openai
 open_clip_torch
 sentence-transformers
 huggingface_hub
+
+ragas
+rapidfuzz
