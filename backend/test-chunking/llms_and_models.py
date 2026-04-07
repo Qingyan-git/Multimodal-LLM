@@ -9,19 +9,17 @@ from transformers import CLIPModel, CLIPProcessor
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain.messages import SystemMessage, HumanMessage
 from langchain_experimental.text_splitter import SemanticChunker
-from ragas.llms import LangchainLLMWrapper
-from ragas.embeddings import LangchainEmbeddingsWrapper
 
 
 class OpenAIModel:
 
     def __init__(self,chat_model='gpt-4o-mini',embedding_model='text-embedding-3-small'):
 
-        api_key = os.getenv('open_api_key')
+        api_key = os.getenv('openai_api_key')
 
         self.embedding_model = OpenAIEmbeddings(
             model=embedding_model,
-            dimensions=256,                # Optional: Only for 'text-embedding-3' models
+            dimensions=256,
             api_key=api_key
         )
 
@@ -40,12 +38,17 @@ class OpenAIModel:
             api_key=api_key,
         )
 
-        self.ragas_llm = LangchainLLMWrapper(self.chat_model)
-        self.ragas_embedding = LangchainEmbeddingsWrapper(self.embedding_model)
+
+    def get_chat_model(self):
+        return self.chat_model
 
 
-    def get_ragas_llms(self):
-        return (self.ragas_llm, self.ragas_embedding)
+    def get_embedding_model(self):
+        return self.embedding_model
+
+
+    def get_text_splitter(self):
+        return self.text_splitter
 
     
     def semantic_chunker(self,text):
@@ -64,7 +67,7 @@ class OpenAIModel:
     
     def get_context(self,document,chunk):
 
-        system_instructions = f"You are an AI assistant specialising in document analysis. Your task is to ptrovide brief, relevant context for a chunk of text from the given document."
+        system_instructions = f"You are an AI assistant specialising in document analysis. Your task is to provide brief, relevant context for a chunk of text from the given document."
         user_message = f"""
         Here is the main document:
         <document>
@@ -93,30 +96,6 @@ class OpenAIModel:
 
         response = self.chat_model.invoke(prompt).content
         return response
-
-
-    def caption_image(self,image_PIL):
-        buffer = io.BytesIO()
-        image_PIL.save(buffer, format="PNG")
-        img_str = base64.b64encode(buffer.getvalue()).decode("utf-8")
-
-        messages = [
-        SystemMessage(
-            content=('You are a helpful assistant who generates an image caption and summary of the content that is given to you. '
-                     'You are captioning the image to provide context and background information on the content that will be used in a RAG pipeline. '
-                     'Use only the information provided as your data source, and do not recall any other data from any other sources. '
-                     'The context for the photos is that they are used by the Singapore Government, hence the context is Singapore based. '
-        )),
-        HumanMessage(
-            content=[
-                {"type": "text", "text": "Please caption this image for a RAG database. Please be brief and do not provide a long response. Respond with a maximum of 2 sentences."},
-                {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{img_str}"}}
-            ]
-        )]
-
-        caption = self.chat_model.invoke(messages).content
-
-        return caption
 
 
     def get_query_vector(self,user_query):
@@ -154,6 +133,32 @@ class OpenAIModel:
         answer = self.chat_model.invoke(messages).content
 
         return answer
+
+
+
+    def caption_image(self,image_PIL):
+
+        buffer = io.BytesIO()
+        image_PIL.save(buffer, format="PNG")
+        img_str = base64.b64encode(buffer.getvalue()).decode("utf-8")
+
+        messages = [
+        SystemMessage(
+            content=('You are a helpful assistant who generates an image caption and summary of the content that is given to you. '
+                        'You are captioning the image to provide context and background information on the content that will be used in a RAG pipeline. '
+                        'Use only the information provided as your data source, and do not recall any other data from any other sources. '
+                        'The context for the photos is that they are used by the Singapore Government, hence the context is Singapore based. '
+        )),
+        HumanMessage(
+            content=[
+                {"type": "text", "text": "Please caption this image for a RAG database. Please be brief and do not provide a long response. Respond with a maximum of 2 sentences."},
+                {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{img_str}"}}
+            ]
+        )]
+
+        caption = self.chat_model.invoke(messages).content
+
+        return caption
 
 
 
@@ -218,14 +223,13 @@ class OpenClipModel:
 
 
 class ContextMessage:
-    def __init__(self,num,document_name,pages,score,context,content):
+    def __init__(self,chunk):
 
         self.message = f"""
-        Chunk number {num}
-        This background context is taken from document {document_name}, page(s) {pages}
-        This chunk has a similarity score of {score}
-        Information about the chunk's content : {context}
-        The chunk's contents itself : {content}
+        This background context is taken from document {chunk['document_name']}, page(s) {chunk['pages']}
+        This chunk has a similarity score of {chunk['score']}
+        Information about the chunk's content : {chunk['context']}
+        The chunk's contents itself : {chunk['content']}
         """
 
 

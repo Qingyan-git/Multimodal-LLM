@@ -1,6 +1,9 @@
 from qdrant_client import QdrantClient, models
+from qdrant_client.models import PointStruct
 from chunks import Chunk
 import os
+import uuid
+from dataclasses import asdict
 
 def get_qdrant_client():
     """
@@ -23,6 +26,22 @@ def get_qdrant_client():
         print(f'Failed to connect to qdrant using parameters, error {e}\n\n')
 
 
+def format_embeddings(chunks,vectors):
+
+    embeddings = []
+
+    for i, chunk in enumerate(chunks):
+        embedding = PointStruct(
+            id=str(uuid.uuid4()),
+            vector=vectors[i],
+            payload=asdict(chunk)
+        )
+
+        embeddings.append(embedding)
+
+    return embeddings
+
+
 def upload_to_qdrant(embeddings):
     """
     Uploads the embeddings into collection_name using qdrant_client
@@ -38,7 +57,7 @@ def upload_to_qdrant(embeddings):
             print(f'Attempting uploading embeddings to qdrant cloud\n\n')
 
             qdrant_client.upsert(
-                collection_name = collection_name, #type:ignore
+                collection_name = collection_name,
                 points = embeddings
             )
 
@@ -67,7 +86,6 @@ def delete_points(collection_name):
         print(f'Unable to delete points from qdrant cloud, error {e}\n\n')
 
 
-
 def get_similar_chunks(query_vector,limit=5,filters=None):
 
     try:
@@ -84,7 +102,7 @@ def get_similar_chunks(query_vector,limit=5,filters=None):
                 limit=limit,
                 query_filter=filters,
                 with_payload=True,
-                with_vectors=True
+                with_vectors=False
             ).points
 
             if results:
@@ -96,7 +114,7 @@ def get_similar_chunks(query_vector,limit=5,filters=None):
                         'score' : result.score, 
                         'context' : result.payload['context'], 
                         'content' : result.payload['content']['text'], 
-                        'document_name' : result.payload['metadata']['document_name'], 
+                        'document_name' : result.payload['document_name'], 
                         'pages' : result.payload['metadata']['pages'],
                     }
 

@@ -1,11 +1,3 @@
-torch
-torchvision
-torchaudio
-transformers
-peft
-pillow
-qwen-vl-utils
-bitsandbytes
 
 psycopg[binary]
 qdrant-client
@@ -15,16 +7,12 @@ pymupdf4llm
 pytesseract
 gdown
 dotenv
-beautifulsoup4
 
 langchain
 langchain-huggingface
 langchain-text-splitters
 langchain_experimental
 langchain_openai
-open_clip_torch
-sentence-transformers
-huggingface_hub
 
 ragas
 rapidfuzz

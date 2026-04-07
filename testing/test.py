@@ -1,5 +1,5 @@
-import torch
+from pathlib import Path
 
-print(f'CUDA available: {torch.cuda.is_available()}\n')
-
-print(f'Using GPU: {torch.cuda.get_device_name(0)}\n')
+path = Path(r"C:\Users\UserAdmin\Documents\Multimodal-LLM\backend\test-chunking\testsets\government-data-security-policies_testset.csv")
+print(path.parent)
+print(path.stem)

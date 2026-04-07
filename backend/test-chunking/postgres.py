@@ -239,7 +239,7 @@ def retrieve_text_chunks(document_name):
         raise
 
 
-if __name__ == 'main':
+if __name__ == '__main__':
     create_llm_db()
     create_db_tables()
 
