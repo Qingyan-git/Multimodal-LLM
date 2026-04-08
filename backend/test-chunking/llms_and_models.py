@@ -5,6 +5,7 @@ import base64
 import torch
 from PIL import Image
 import open_clip
+import asyncio
 from transformers import CLIPModel, CLIPProcessor
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain.messages import SystemMessage, HumanMessage
@@ -25,18 +26,23 @@ class OpenAIModel:
 
         self.text_splitter = SemanticChunker(
             self.embedding_model, 
-            breakpoint_threshold_type="percentile",
-            breakpoint_threshold_amount=85
+            breakpoint_threshold_type="standard_deviation",
+            breakpoint_threshold_amount=1.0,
+            buffer_size=1
         )
 
         self.chat_model = ChatOpenAI(
             model=chat_model,
             temperature=0,
-            max_tokens=1000,
+            max_tokens=2048,
             timeout=None,
             max_retries=2,
             api_key=api_key,
         )
+
+    
+    def get_ragas_llm(self):
+        return self.chat_model.bind(response_format={"type": "json_object"})
 
 
     def get_chat_model(self):
@@ -58,14 +64,14 @@ class OpenAIModel:
         return semantic_chunks
 
     
-    def embed_texts(self,texts):
+    async def embed_texts(self,texts):
 
-        vectors = self.embedding_model.embed_documents(texts)
+        vectors = await self.embedding_model.aembed_documents(texts)
 
         return vectors
 
     
-    def get_context(self,document,chunk):
+    async def get_context(self,document,chunk):
 
         system_instructions = f"You are an AI assistant specialising in document analysis. Your task is to provide brief, relevant context for a chunk of text from the given document."
         user_message = f"""
@@ -90,49 +96,51 @@ class OpenAIModel:
         """
 
         prompt = [
-            {"role": "system", "content": system_instructions},
-            {"role": "user", "content": user_message}
+            SystemMessage(content=system_instructions),
+            HumanMessage(content=user_message)
         ]
 
-        response = self.chat_model.invoke(prompt).content
-        return response
+        response = await self.chat_model.ainvoke(prompt)
+        return response.content
 
 
-    def get_query_vector(self,user_query):
+    async def get_query_vector(self,user_query):
 
-        query_vector = self.embedding_model.embed_query(user_query)
+        query_vector = await self.embedding_model.aembed_query(user_query)
 
         return query_vector
 
 
-    def answer_question(self,user_query,retrieved_context):
+    async def answer_question(self,user_query,retrieved_context):
 
         messages = [
             SystemMessage(content=f"""
             You are a professional assistant. Your goal is to provide accurate answers based ONLY on the provided context chunks.
 
             RULES:
-            1. GROUNDING: If the answer is not contained within the provided context, state clearly that you do not have enough information. Do not use external knowledge.
-            2. CONTEXT INTEGRATION: Treat the chunks as a single unified knowledge base.
-            3. RELEVANCE: Only use information from chunks that are relevant to answering the question.  
-            4. TABLES: If context contains Markdown tables, interpret row-to-column relationships strictly to ensure data accuracy.
-            5. FORMATTING: Use clear headings and bullet points for complex answers.                          
+            1. GROUNDING: If the answer is not contained within the provided database, state clearly that you do not have enough information. Do not use external knowledge.
+            2. DATABASE INTEGRATION: Treat the chunks as a unified database repository.
+            3. RELEVANCE: If you receive irrelevant chunks, silently ignore any information that does not directly contribute to answering the user's question.
+            4. TABLES: If the database contains Markdown tables, interpret row-to-column relationships strictly to ensure data accuracy.
+            5. FORMATTING: Use clear headings and bullet points for complex answers.
+            6. REASONING: Before answering, identify which specific chunks contain the facts needed for the answer. If multiple chunks provide different pieces of the answer, synthesise them into a single response.                          
             """),
 
             HumanMessage(content=f"""
 
-            The following context contains multiple labeled chunks from different pages of a document. 
+            The following database contains multiple labelled chunks from different pages of a document. 
             Use them to answer the question accurately.
 
-            Context: 
+            <database>
             {retrieved_context}
+            </database>
 
             Question: {user_query}
             """)]
 
-        answer = self.chat_model.invoke(messages).content
+        answer = await self.chat_model.ainvoke(messages)
 
-        return answer
+        return answer.content
 
 
 
@@ -226,12 +234,19 @@ class ContextMessage:
     def __init__(self,chunk):
 
         self.message = f"""
-        This background context is taken from document {chunk['document_name']}, page(s) {chunk['pages']}
-        This chunk has a similarity score of {chunk['score']}
-        Information about the chunk's content : {chunk['context']}
-        The chunk's contents itself : {chunk['content']}
+        <source_context>
+            <metadata>
+                <source>{chunk['document_name']}</source>
+                <pages>{chunk['pages']}</pages>
+            </metadata>
+            <context>
+                {chunk['context']}
+            </context>
+            <content>
+                {chunk['content']}
+            </content>
+        </source_context>
         """
-
 
     def get_message(self):
         return self.message

@@ -26,13 +26,32 @@ def get_qdrant_client():
         print(f'Failed to connect to qdrant using parameters, error {e}\n\n')
 
 
+def delete_points(collection_name):
+
+    try:
+
+        qdrant_client = get_qdrant_client()
+
+        print(f'Attempting to delete all points from cloud\n\n')
+
+        qdrant_client.delete(
+            collection_name=collection_name,
+            points_selector=models.Filter(must=[])
+        )
+
+        print(f'Finished deleteing all points from cloud\n\n')
+
+    except Exception as e:
+        print(f'Unable to delete points from qdrant cloud, error {e}\n\n')
+
+
 def format_embeddings(chunks,vectors):
 
     embeddings = []
 
     for i, chunk in enumerate(chunks):
         embedding = PointStruct(
-            id=str(uuid.uuid4()),
+            id=chunk.id,
             vector=vectors[i],
             payload=asdict(chunk)
         )
@@ -54,36 +73,16 @@ def upload_to_qdrant(embeddings):
 
         if qdrant_client:
 
-            print(f'Attempting uploading embeddings to qdrant cloud\n\n')
-
             qdrant_client.upsert(
                 collection_name = collection_name,
                 points = embeddings
             )
 
-        print(f'Finished uploading embeddings to qdrant cloud\n\n')
-
     except Exception as e:
         print(f'Unable to upload embeddings to qdrant cloud, error {e}\n\n')
 
 
-def delete_points(collection_name):
 
-    try:
-
-        qdrant_client = get_qdrant_client()
-
-        print(f'Attempting to delete all points from cloud\n\n')
-
-        qdrant_client.delete(
-            collection_name=collection_name,
-            points_selector=models.Filter(must=[])
-        )
-
-        print(f'Finished deleteing all points from cloud\n\n')
-
-    except Exception as e:
-        print(f'Unable to delete points from qdrant cloud, error {e}\n\n')
 
 
 def get_similar_chunks(query_vector,limit=5,filters=None):
@@ -112,7 +111,7 @@ def get_similar_chunks(query_vector,limit=5,filters=None):
 
                     item = {
                         'score' : result.score, 
-                        'context' : result.payload['context'], 
+                        'context' : result.payload['context'],
                         'content' : result.payload['content']['text'], 
                         'document_name' : result.payload['document_name'], 
                         'pages' : result.payload['metadata']['pages'],

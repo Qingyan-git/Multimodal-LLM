@@ -2,6 +2,8 @@ import psycopg
 import os
 import json
 
+from chunks import TextChunk
+
 def get_connection():
 
     '''
@@ -99,19 +101,6 @@ def create_db_tables():
 
                 cur.execute(
                     """
-                    DROP TABLE pdfs CASCADE;
-                    """
-                )
-
-                cur.execute(
-                    """
-                    DROP TABLE chunks CASCADE;
-                    """
-                )
-
-
-                cur.execute(
-                    """
                     CREATE TABLE IF NOT EXISTS pdfs(
                     id SERIAL PRIMARY KEY,
                     name TEXT NOT NULL UNIQUE,
@@ -141,6 +130,28 @@ def create_db_tables():
         raise
 
 
+def delete_rows():
+
+    try:
+        with get_connection() as conn:
+            with conn.cursor() as cur:
+
+                cur.execute(
+                """
+                TRUNCATE TABLE pdfs CASCADE
+                """) 
+
+                cur.execute(
+                """
+                TRUNCATE TABLE chunks CASCADE
+                """)
+
+                print(f'\nAll rows from tables deleted\n\n')
+
+    except psycopg.Error as e:
+        print(f'Failed to delete rows from tables, {e}\n\n')
+
+
 
 #Execution functions
 
@@ -166,8 +177,6 @@ def insert_pdf(file_path,metadata):
 
                     (name,path,metadata)
                 )
-
-        print(f'{file_path.name} inserted\n\n')
 
     except psycopg.Error as e:
         print(f'Failed to insert pdfs into database, error {e}\n\n')
@@ -199,7 +208,9 @@ def save_document_chunks(document_name,document_chunks):
                     prepared_chunks
                 )
 
-        print(f'Finished saving chunks into postgresdb\n\n')
+        retrieved_chunks = retrieve_text_chunks(document_name)
+
+        return retrieved_chunks
 
     except psycopg.Error as e:
         print(f'Unable to save chunks into postgres database, error {e}')
@@ -240,6 +251,5 @@ def retrieve_text_chunks(document_name):
 
 
 if __name__ == '__main__':
-    create_llm_db()
-    create_db_tables()
+    delete_rows()
 

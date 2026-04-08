@@ -1,11 +1,16 @@
 
 from ragas.testset import TestsetGenerator
-from ragas.testset.graph import KnowledgeGraph, Node
 from ragas.testset.synthesizers import default_query_distribution
 from ragas.testset.transforms import default_transforms, apply_transforms
+from ragas.llms import llm_factory
+from ragas.embeddings.base import embedding_factory
+from langchain_openai import OpenAIEmbeddings
+from openai import AsyncOpenAI
 
 from ragas import experiment, EvaluationDataset
 from ragas.metrics.collections import Faithfulness, AnswerRelevancy, ContextPrecision, ContextRecall
+
+from langchain_core.documents import Document
 
 from pathlib import Path
 import pymupdf4llm
@@ -15,12 +20,36 @@ import dotenv
 import asyncio
 import pandas as pd
 from dataclasses import dataclass
+import traceback
 
 from text_chunking import clean_text
 from llms_and_models import OpenAIModel, ContextMessage
 from qdrant import get_similar_chunks
 
 dotenv.load_dotenv()
+
+
+def get_llms():
+    client = AsyncOpenAI(api_key=os.getenv('openai_api_key'))
+    generator_llm = llm_factory(
+        model="gpt-4o-mini", 
+        client=client,
+        # Custom requirements
+        temperature=0,
+        max_tokens=2048,
+        timeout=None,
+        max_retries=2,
+    )
+    embedding_model = embedding_factory(
+            'openai', 
+            model='text-embedding-3-small', 
+            client=client,
+            interface='modern'
+            # Custom requirements
+            # dimensions=256
+        )
+
+    return (generator_llm,embedding_model)
 
 
 def save_to_csv(df,folder_path,filename,generate=True):
@@ -37,13 +66,11 @@ def save_to_csv(df,folder_path,filename,generate=True):
     return save_path
 
 
-def generate_testset(filepath, output_path):
+def generate_testset(filepath, output_path,testset_size=10):
     try:
         if filepath.is_file():
 
-            model = OpenAIModel()
-            generator_llm = model.get_chat_model()
-            embedding_model = model.get_embedding_model()
+            generator_llm,embedding_model = get_llms()
 
             with pymupdf.open(filepath) as doc:
                 page_texts = pymupdf4llm.to_markdown(
@@ -54,32 +81,25 @@ def generate_testset(filepath, output_path):
                     page_chunks=True
                 )
 
-            nodes = []
-            for chunk in page_texts:
-                cleaned_content = clean_text(chunk["text"])
-                if cleaned_content:
-                    node = Node(
-                        properties={"page_content" : cleaned_content}
-                    )
-                    nodes.append(node)
-
-            """
-            ragas knowledge graph node have some issue
-            """
-
-            kg = KnowledgeGraph(nodes=nodes)
-
-            transform = default_transforms(documents=nodes, llm=generator_llm, embedding_model=embedding_model)
-            apply_transforms(kg, transform)
+            langchain_docs = []
+            for page in page_texts:
+                page_text = page['text']
+                cleaned_content = clean_text(page_text)
+                doc = Document(page_content=cleaned_content)
+                langchain_docs.append(doc)
 
             generator = TestsetGenerator(
                 llm=generator_llm, 
-                embedding_model=embedding_model,
-                knowledge_graph=kg,
+                embedding_model=embedding_model
             )
 
             query_distribution = default_query_distribution(generator_llm)
-            dataset = generator.generate(testset_size=10,query_distribution=query_distribution)
+
+            dataset = generator.generate_with_langchain_docs(
+                documents=langchain_docs, 
+                testset_size=testset_size,
+                query_distribution=query_distribution
+            )
 
             df = dataset.to_pandas()
             save_path = save_to_csv(df, output_path, filepath.stem, generate=True)
@@ -88,26 +108,25 @@ def generate_testset(filepath, output_path):
 
     except Exception as e:
         print(f'Unable to generate testset, error: {e}')
+        traceback.print_exc() 
         raise
-
 
 
 async def evaluate_testset(testset_path):
 
     try:
-        semaphore = asyncio.Semaphore(5)
 
         model = OpenAIModel()
-        generator_llm = model.get_chat_model()
-        embedding_model = model.get_embedding_model()
+
+        generator_llm,embedding_model = get_llms()
 
         df = pd.read_csv(testset_path)
         
         metrics = [
-            Faithfulness(llm=ragas_llm),
-            AnswerRelevancy(llm=ragas_llm, embeddings=ragas_embedding),
-            ContextPrecision(llm=ragas_llm),
-            ContextRecall(llm=ragas_llm)
+            Faithfulness(llm=generator_llm),
+            AnswerRelevancy(llm=generator_llm, embeddings=embedding_model),
+            ContextPrecision(llm=generator_llm),
+            ContextRecall(llm=generator_llm)
         ]
 
         async def evaluate_row(row_idx):
@@ -116,28 +135,27 @@ async def evaluate_testset(testset_path):
             question = row['user_input']
             ground_truth = row['reference']
 
-            query_vector = model.get_query_vector(question)
-            similar_chunks = get_similar_chunks(query_vector, limit=3)
+            query_vector = await model.get_query_vector(question)
+            similar_chunks = get_similar_chunks(query_vector)
             
-            contexts = [ContextMessage(chunk).get_message() for chunk in similar_chunks]
-            context_string = "\n".join(contexts)
+            supporting_information = [ContextMessage(chunk).get_message() for chunk in similar_chunks]
+            supporting_string = "\n".join(supporting_information)
             
-            answer = model.answer_question(question, context_string)
+            answer = await model.answer_question(question, supporting_string)
 
             tasks = [
-                metrics[0].ascore(response=answer, retrieved_contexts=contexts),
+                metrics[0].ascore(user_input=question, response=answer, retrieved_contexts=supporting_information),
                 metrics[1].ascore(user_input=question, response=answer),
-                metrics[2].ascore(user_input=question, retrieved_contexts=contexts, reference=ground_truth),
-                metrics[3].ascore(user_input=question, retrieved_contexts=contexts, reference=ground_truth)
+                metrics[2].ascore(user_input=question, retrieved_contexts=supporting_information, reference=ground_truth),
+                metrics[3].ascore(user_input=question, retrieved_contexts=supporting_information, reference=ground_truth)
             ]
             
             scores = await asyncio.gather(*tasks)
             
             return {
-                "question": question,
-                "answer": answer,
-                "contexts": contexts,
-                "ground_truth": ground_truth,
+                "user_input": question,
+                "answer" : answer,
+                "ground_truth" : ground_truth,
                 "faithfulness": float(scores[0].value),
                 "answer_relevancy": float(scores[1].value),
                 "context_precision": float(scores[2].value),
@@ -154,61 +172,40 @@ async def evaluate_testset(testset_path):
 
     except Exception as e:
         print(f'Unable to evaluate testset, error {e}')
+        traceback.print_exc()
+        raise
 
 
-@dataclass 
-class ExperimentResult():
-    faithfulness: float
-    answer_relevancy: float
-    context_precision: float
-    context_recall : float
+async def evaluate_pdfs(folder_path,testset_path):
+    try:
+        if folder_path.is_dir():
+            for file in folder_path.iterdir():
 
+                print(f'\nEvaluating {file.name}\n')
 
-@experiment(ExperimentResult)
-async def run_evaluation(row):
-    m_faith = Faithfulness(llm=ragas_llm)
-    m_relevancy = AnswerRelevancy(llm=ragas_llm)
-    m_precision = ContextPrecision(llm=ragas_llm)
-    m_recall = ContextRecall(llm=ragas_llm)
+                save_path = generate_testset(file,testset_path)
 
-    # Faithfulness: Needs Response + Contexts
-    faith_res = await m_faith.ascore(
-        response=row.response, 
-        retrieved_contexts=row.contexts
-    )
+                print(f'\tTestset generated\n')
 
-    # Relevancy: Needs User Input + Response
-    rel_res = await m_relevancy.ascore(
-        user_input=row.user_input, 
-        response=row.response
-    )
+                results_df = await evaluate_testset(save_path)
 
-    # Precision: Needs User Input + Contexts + Reference (Ground Truth)
-    prec_res = await m_precision.ascore(
-        user_input=row.user_input,
-        retrieved_contexts=row.contexts,
-        reference=row.reference
-    )
+                print(f'\tResults calculated\n')
 
-    # Recall: Needs User Input + Contexts + Reference
-    recall_res = await m_recall.ascore(
-        user_input=row.user_input,
-        retrieved_contexts=row.contexts,
-        reference=row.reference
-    )
+                print(f'\nFinished evaluating {file.name}\n')
 
-    return ExperimentResult(
-        faithfulness=faith_res,
-        answer_relevancy=rel_res,
-        context_precision=prec_res,
-        context_recall=recall_res
-    )
+            print(f'\nFinished evaluating all files\n\n')
+
+    except Exception as e:
+        print(f'Unable to evaluate pdfs, error {e}')
+        traceback.print_exc() 
+        raise
+
 
 
 
 if __name__ == '__main__':
-    filepath = Path(os.getenv('generate_testset_path'))
-    testset_path = Path(os.getenv('testset_path'))
 
-    save_path = generate_testset(filepath,testset_path)
-    results_df = evaluate_testset(save_path)
+    print(f'Running evaluation\n\n\n')
+    pdfs_path = Path(os.getenv('text_pdfs_path'))
+    testset_path = Path(os.getenv('testset_path'))
+    asyncio.run(evaluate_pdfs(pdfs_path,testset_path))

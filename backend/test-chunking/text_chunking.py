@@ -4,6 +4,9 @@ import os
 import dotenv
 import pymupdf4llm
 import pymupdf
+import asyncio
+import traceback
+
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 from llms_and_models import OpenAIModel
@@ -34,7 +37,30 @@ def clean_text(text):
     return cleaned_text.strip()
 
 
-def get_text_chunks(file):
+def get_page_numbers(chunks,starting_page_no=1,page_pattern = r"\s*--- end of page\.page_number=(\d+) ---\s*"):
+
+    final_text_chunks = []
+    
+    current_page_number = starting_page_no
+    
+    for chunk in chunks:
+        pages = set()
+        for match in re.finditer(page_pattern, chunk):
+            page = int(match.group(1))
+            current_page_number = page + 1
+            if match.start() != 0:
+                pages.add(page)
+            if match.end() != len(chunk):
+                pages.add(page+1)
+        if not pages:
+            pages = [current_page_number]
+ 
+        final_text_chunks.append(pages)
+
+    return final_text_chunks
+
+
+async def get_text_chunks(file):
     
     model = OpenAIModel()
 
@@ -45,54 +71,48 @@ def get_text_chunks(file):
     filename = str(file.stem) + '.md'
     save_to_file(filename,cleaned_markdown_text)
 
-    semantic_chunks = model.semantic_chunker(cleaned_markdown_text)
+    semantic_texts = model.semantic_chunker(cleaned_markdown_text)
+
+    # print(f'\n\nFile : {file.name}\n\n')
+    # for text in semantic_texts:
+    #     print(f'Semantic chunk : {text}\n\n')
     
     max_chunk_size = 1000
     chunk_overlap = 200
     splitter = RecursiveCharacterTextSplitter(
         chunk_size=max_chunk_size,
         chunk_overlap=chunk_overlap,
-        separators=["\n\n", "\n", ".", " "]
+        separators=["#","##","###","\n\n", "\n", "."]
     )
-    cleaned_chunks = []
-    for chunk in semantic_chunks:
-        if len(chunk) > max_chunk_size:
-            smaller_chunks = splitter.split_text(chunk)
-            cleaned_chunks.extend(smaller_chunks)
-        else:
-            cleaned_chunks.append(chunk)
+
+    final_texts = []
+    page_pattern = r"\s*--- end of page\.page_number=(\d+) ---\s*"
+    for text in semantic_texts:
+        if len(re.sub(page_pattern, '', text).strip()) > 0:
+            if len(text) > max_chunk_size:
+                split_texts = splitter.split_text(text)
+                final_texts.extend(split_texts)
+            else:
+                final_texts.append(text)
     
-    final_text_chunks = []
-    current_page_number = 1
-    for chunk in cleaned_chunks:
-        chunk = chunk.strip()
-        page_pattern = r"\s*--- end of page\.page_number=(\d+) ---\s*"
-        content = re.sub(page_pattern,'\n\n',chunk).strip()
-        if len(content) != 0:
-            text_chunk = TextChunk()
-            chunk_context = model.get_context(cleaned_markdown_text, chunk)
-            pages = set()
-            for match in re.finditer(page_pattern, chunk):
-                page = int(match.group(1))
-                current_page_number = page + 1
-                if match.start() != 0:
-                    pages.add(page)
-                if match.end() != len(chunk):
-                    pages.add(page+1)
-            if not pages:
-                pages = [current_page_number]
+    tasks = [model.get_context(cleaned_markdown_text,text) for text in final_texts]
+    texts_context = await asyncio.gather(*tasks)
 
-            text_chunk.document_name = file.name
-            text_chunk.context = chunk_context
-            text_chunk.content['text'] = content
-            text_chunk.metadata['pages'] = list(pages)
+    texts_page_numbers = get_page_numbers(final_texts)
 
-            final_text_chunks.append(text_chunk)
+    final_chunks = []
+    for i,text in enumerate(final_texts):
+        container = TextChunk()
+        container.document_name = file.name
+        container.context = texts_context[i]
+        container.content['text'] = text
+        container.metadata['pages'] = list(texts_page_numbers[i])
+        final_chunks.append(container)
 
-    return final_text_chunks
+    return final_chunks
 
 
-def embed_text_chunks(chunks):
+async def embed_text_chunks(chunks):
 
     model = OpenAIModel()
 
@@ -107,40 +127,51 @@ def embed_text_chunks(chunks):
 
         texts.append(text)
 
-    vectors = model.embed_texts(texts)
+    vectors = await model.embed_texts(texts)
 
     embeddings = format_embeddings(chunks,vectors)
 
     return embeddings
 
 
-def ingest_all_pdfs(folder_path):
+async def ingest_all_pdfs(folder_path):
     try:
         if folder_path.is_dir():
             for file in folder_path.iterdir():
 
-                print(f'Inserting {file.name} into pgsql\n\n')
+                print(f'Processing {file.name}\n\n')
 
                 with pymupdf.open(file) as doc:
                     metadata = doc.metadata.copy()
 
-                print(f'Finished inserting {file.name}\n\n')
+                print(f'\tFinished inserting pdf\n\n')
 
                 insert_pdf(file,metadata)
 
-                print(f'Processing {file.name}\n\n')
+                chunks = await get_text_chunks(file)
 
-                chunks = get_text_chunks(file)
-                save_document_chunks(file.name,chunks)
-                embeddings = embed_text_chunks(chunks)
+                print(f'\tFinished getting text chunks\n\n')
+
+                returned_chunks = save_document_chunks(file.name,chunks)
+
+                print(f'\tFinished saving chunks into postgresdb\n\n')
+
+                embeddings = await embed_text_chunks(returned_chunks)
+
+                print(f'\tFinished getting chunk embeddings\n\n')
+
                 upload_to_qdrant(embeddings)
 
-                print(f'Finished processing {file.name}\n\n')
+                print(f'\tFinished uploading chunk embeddings to qdrant\n\n')
 
-            print(f'Finished processing all files\n\n')
+                print(f'Finished processing\n\n')
+
+            print(f'\nFinished processing all files\n')
 
     except Exception as e:
-        print(f'Unable to ingest all pdfs from {folder_path.name}, error {e}')
+        print(f'Unable to ingest all pdfs, error {e}')
+        traceback.print_exc() 
+        raise
 
 
 
@@ -148,7 +179,7 @@ def ingest_all_pdfs(folder_path):
 if __name__ == '__main__':
     print(f'Ingestion running\n\n\n')
     text_pdfs = Path(os.getenv('text_pdfs_path'))
-    ingest_all_pdfs(text_pdfs)
+    asyncio.run(ingest_all_pdfs(text_pdfs))
 
 
 """
