@@ -172,7 +172,7 @@ def insert_pdf(file_path,metadata):
 
                 cur.execute(
                     """
-                    INSERT INTO pdfs (name,path,metadata) VALUES (%s,%s,%s)
+                    INSERT INTO pdfs (name,path,metadata) VALUES (%s,%s,%s) ON CONFLICT (name) DO NOTHING
                     """,
 
                     (name,path,metadata)

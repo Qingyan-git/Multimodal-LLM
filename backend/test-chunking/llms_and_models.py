@@ -2,9 +2,6 @@ from dotenv import load_dotenv
 import os
 import io
 import base64
-import torch
-from PIL import Image
-import open_clip
 import asyncio
 from transformers import CLIPModel, CLIPProcessor
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
@@ -104,6 +101,59 @@ class OpenAIModel:
         return response.content
 
 
+    async def get_image_context(self,document,image,surrounding_text):
+        image_bytes = image.tobytes("jpg")
+        base64_image = base64.b64encode(image_bytes).decode('utf-8')
+
+        system_message = f"You are an AI assistant specialising in document analysis. Your task is to provide brief, relevant context for a chunk of text from the given document."
+
+        human_message = [
+            {
+                "type" : "text",
+                "text" : f"""
+                Here is the main document :
+                <document>
+                {document}
+                </document>
+
+    
+                Here is the chunk we want to situate within the whole document:
+                <chunk>
+                {surrounding_text}
+                </chunk>
+
+                Here is the image that is attached to the above text:
+                """
+            },
+            {
+                "type" : "image_url",
+                "image_url" : {
+                    "url": f"data:image/jpeg;base64,{base64_image}",
+                    "detail": "low" 
+
+                }
+            },
+            {
+                "type": "text",
+                "text": "Provide a concise context (2-3 sentences) to situate this image and text within the document for search retrieval. Also provide a caption for the image provided and a short summary about what the chunk is describing."
+            }
+        ]
+
+        """
+        Maybe just do specific function for LLM to summarise image as text and use that to feed as chunk content
+        and just one specific function to get the context of the image and text and use that as context
+        """
+
+        prompt = [
+            SystemMessage(content=system_message),
+            HumanMessage(content=human_message)
+        ]
+
+        response = await self.chat_model.ainvoke(prompt)
+
+        return response.content
+
+
     async def get_query_vector(self,user_query):
 
         query_vector = await self.embedding_model.aembed_query(user_query)
@@ -143,90 +193,6 @@ class OpenAIModel:
         return answer.content
 
 
-
-    def caption_image(self,image_PIL):
-
-        buffer = io.BytesIO()
-        image_PIL.save(buffer, format="PNG")
-        img_str = base64.b64encode(buffer.getvalue()).decode("utf-8")
-
-        messages = [
-        SystemMessage(
-            content=('You are a helpful assistant who generates an image caption and summary of the content that is given to you. '
-                        'You are captioning the image to provide context and background information on the content that will be used in a RAG pipeline. '
-                        'Use only the information provided as your data source, and do not recall any other data from any other sources. '
-                        'The context for the photos is that they are used by the Singapore Government, hence the context is Singapore based. '
-        )),
-        HumanMessage(
-            content=[
-                {"type": "text", "text": "Please caption this image for a RAG database. Please be brief and do not provide a long response. Respond with a maximum of 2 sentences."},
-                {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{img_str}"}}
-            ]
-        )]
-
-        caption = self.chat_model.invoke(messages).content
-
-        return caption
-
-
-
-class OpenClipModel:
-
-    def __init__(self,model_id = "openai/clip-vit-large-patch14"):
-
-        self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        self.model = CLIPModel.from_pretrained(model_id).to(self.device)
-        self.processor = CLIPProcessor.from_pretrained(model_id)
-
-        self.labels = [
-            "A picture or photograph containing real-world objects or descriptive content", 
-            "Background images, Images that do not contain any meaningful content"
-        ]
-
-
-    def classify_images(self,images,batch_size=64):
-
-        results = []
-
-        for i in range(0, len(images), batch_size):
-            batch = images[i : i + batch_size]
-
-            inputs = self.processor(
-                text=self.labels, 
-                images=batch, 
-                return_tensors="pt", 
-                padding=True
-            ).to(self.device)
-
-            with torch.no_grad(), torch.autocast("cuda"):
-                outputs = self.model(**inputs)
-                
-                # Hugging Face models have built-in logit scaling
-                # .logits_per_image gives you the similarity scores
-                probs = outputs.logits_per_image.softmax(dim=1)
-
-                results.extend(probs.cpu().tolist())
-
-        return results
-
-    def classify_one_image(self,image):
-
-        result = []
-
-        inputs = self.processor(
-            text=self.labels, 
-            images=image, 
-            return_tensors="pt", 
-            padding=True
-        ).to(self.device)
-
-        with torch.no_grad(), torch.autocast("cuda"):
-            output = self.model(**inputs)
-            probs = output.logits_per_image.softmax(dim=1)
-
-            positive = probs.cpu().tolist()[0][0]
-
-        return positive
 
 
 

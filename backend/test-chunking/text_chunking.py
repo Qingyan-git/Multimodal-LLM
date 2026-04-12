@@ -112,7 +112,7 @@ async def get_text_chunks(file):
     return final_chunks
 
 
-async def embed_text_chunks(chunks):
+async def embed_chunks(chunks):
 
     model = OpenAIModel()
 
@@ -144,9 +144,9 @@ async def ingest_all_pdfs(folder_path):
                 with pymupdf.open(file) as doc:
                     metadata = doc.metadata.copy()
 
-                print(f'\tFinished inserting pdf\n\n')
-
                 insert_pdf(file,metadata)
+
+                print(f'\tFinished inserting pdf\n\n')
 
                 chunks = await get_text_chunks(file)
 
@@ -156,7 +156,7 @@ async def ingest_all_pdfs(folder_path):
 
                 print(f'\tFinished saving chunks into postgresdb\n\n')
 
-                embeddings = await embed_text_chunks(returned_chunks)
+                embeddings = await embed_chunks(returned_chunks)
 
                 print(f'\tFinished getting chunk embeddings\n\n')
 
