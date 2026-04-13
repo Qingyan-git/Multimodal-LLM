@@ -6,7 +6,8 @@ pymupdf
 pymupdf4llm
 pytesseract
 gdown
-dotenv
+pandas
+tablulate
 
 langchain
 langchain-huggingface

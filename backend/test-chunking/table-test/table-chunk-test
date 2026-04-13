@@ -1,0 +1,204 @@
+
+            Texts around tables : The views and recommendations expressed are those by the lead contributors and do not imply a 
+consensus view by market stakeholders across the spectrum of international debt capital markets.  
+ 
+Document Version  
+ 
+ 
+ 
+
+            Tables :
+
+              Version       Date                                    Author          Rationale
+0     1.0  July 2025  Guardian Foreign Exchange Industry Group  First publication
+            
+            Texts around tables : Table of Contents 
+ 
+
+            Tables :
+
+                                                                1 Introduction 5 ...............................................................................................................................
+0                                                   1  Risk considerations and mitigants ...............                                                                                            
+1   Introduction ....................................                                                5.1                                                                                            
+2                                                   2  Risk Considerations .............................                                                                                            
+3   Background ......................................                                                5.2                                                                                            
+4                                                 2.1  Risk Mitigants ..................................                                                                                            
+5   Cross-border payments and the FX market .........                                                  6                                                                                            
+6                                                 2.2  Case studies and examples .......................                                                                                            
+7   Differences between traditional transactions a...                                                6.1                                                                                            
+8   liabilities .....................................  Use-case 1: Ant International ...................                                                                                            
+9                                                   3                                                6.2                                                                                            
+10  Implementation of shared ledger and tokenised ...  Use-case 2: BNY and OCBC ........................                                                                                            
+11                                                3.1                                                6.3                                                                                            
+12  Key lifecycle stages of traditional cross-bord...  Use-case 3: HSBC ................................                                                                                            
+13                                                3.2                                                  7                                                                                            
+14  Design Considerations ...........................  Developing standardised documentation for toke...                                                                                            
+15                                                  4                                                7.1                                                                                            
+16  Operating models and considerations..............  Existing industry standards .....................                                                                                            
+17                                                4.1                                                7.2                                                                                            
+18  Changes in operating practices ..................  Ongoing industry initiatives and regulatory de...                                                                                            
+19                                                4.2                                                  8                                                                                            
+20  Potential operating models ......................  Conclusion ......................................                                                                                            
+21                                                  5                                                  9                                                                                            
+            
+            Texts around tables : Cross-border payments using tokenised bank liabilities can be implemented through 
+various models, which generally fall into a few broad categories. The table below 
+summarises these potential implementation models.  
+             Table 1: Potential implementation models for cross-border payments using tokenised bank liabilities 
+
+            Tables :
+
+                                            Implementation Model  ...                                  KeyConsiderations
+0                               Implementation Model  ...                                 Key Considerations
+1  Single Bank Shared Ledger Network (Single Curr...  ...  Operates within a single bank’s shared ledger ...
+2  Multi-Bank (Single Currency, Same Shared Ledge...  ...  Participating banks operate on a shared permis...
+3  Multi-Bank (Single Currency, Different Shared ...  ...  Participating banks operate on separate ledger...
+4             Cross-Currency (Single or Multi- bank)  ...  FX mechanism is required to support cross-curr...
+
+[5 rows x 4 columns]
+            
+            Texts around tables : To promote interoperability across different product frameworks and operating models for 
+tokenised assets, a set of standardised design principles for tokenised fixed income 
+products was developed under the Guardian Fixed Income Framework. 19  The design 
+principles are technology and jurisdiction-agnostic. Some of these design principles also 
+apply to tokenised bank liabilities and relate to smart contracts insofar as they are used to 
+create the tokens to which tokenised bank liabilities relate. These are as summarised below: 
+ 
+19 Project Guardian: Fixed income Framework, November 2024  
+
+ 
+20  These design principles use the generic term "ledger" to refer to ledgers built using shared ledger, whether such ledgers are   
+
+            Tables :
+
+                                                           #  ...                                        Description                                                   
+0                                              #  ...  At the time of issuance and during the life of...  which is typically a financial institution, is...
+1  1                                           1  ...  bank liabilities, the issuer of the tokenised ...  validly existing under the law under which it ...
+2                                              2  ...  compliance with all applicable laws. Any restr...  ledger should be able to accommodate disposals...
+3  2                                              ...  transferability should be embedded in the func...  of the tokenised bank liabilities and be publi...
+4  3                                              ...  the smart contract or be compatible with the t...  The ledger should have integrity and be fit fo...
+5  4  Validity of the tokenised bank liabilities  ...                                          platform.  The minimum features of smart contracts should...
+6  5                 Authorisations and consents  ...  The applicable ledger should comply with any a...  governance of the smart contract and should us...
+7  6                        Tokenisation process  ...  and have regard to any applicable principles, ...  and risk frameworks to mitigate smart contract...
+8  7                                  The ledger  ...  best practices developed and recognised by ind...  The transaction documentation should take into...
+9  #                                              ...  trade associations, or as commonly adopted in ...  be consistent with the governing law of the to...
+
+[10 rows x 9 columns]
+            
+            Texts around tables :           Table 2: Design principles for tokenised bank liabilities  
+
+            Tables :
+
+                  ...                                                   
+0     ...  contracts. Human intervention should be integr...
+1     ...   workflows at critical points for added security.
+2  8  ...                                                   
+3  9  ...                                                   
+4  #  ...                                                   
+
+[5 rows x 9 columns]
+            
+            Texts around tables : As adoption of shared ledger-based payments and settlement gain traction, they introduce 
+a new range of risks across the lifecycle—from adoption to operational maturity. While the 
+design principles outlined in Section 3 provide a robust baseline for managing these risks, 
+practical considerations must address real-world implementation and system evolution. 
+ 
+5.1 
+Risk Considerations  
+01/07/2025 
+
+01/07/2025 
+
+                  Table 3: Risk considerations in implementing shared ledger-based payments and settlement 
+
+            Tables :
+
+                                                                     Area  ...          PotentialSolutions                           
+0                               Operational Transition Issues  ...      various scenarios, and           assessments, and
+1   Strategic & Market Risks                   Liquidity Risk  ...  monitoring to identify and          adherence to best
+2        Technological Risks             Smart Contract Risks  ...     correct errors swiftly.  practices in cryptography
+3                       Area              Cybersecurity Risks  ...            Implement robust    for optimal protection.
+4                                        Data Integrity Risks  ...     cybersecurity measures,      Adopt reliable, well-
+5                                                    Sub-Area  ...       regular vulnerability          maintained ledger
+6                                                              ...       regulations, ensuring      intermediary roles to
+7                                                              ...      ongoing compliance and          improve trust and
+8          Operational Risks  Payment & Settlement Mechanisms  ...      minimising operational                           
+9   Legal & Regulatory Risks           Interoperability Risks  ...                disruptions.                           
+10               Disclosures      Third-Party Providers Risks  ...        Enhance transparency                           
+11                      Area       Jurisdictional Variability  ...          regarding platform                           
+12                                       Evolving Regulations  ...          governance and key                           
+13                                                       Area  ...                assessments.       consensus mechanisms
+14                                                             ...      Consider adopting more              and promoting
+15                                                             ...            energy-efficient   sustainability in shared
+
+[16 rows x 12 columns]
+            
+            Texts around tables : Drawing from the Guardian Fixed Income Framework paper published in 202424, this paper 
+also elaborates on and adapts key risk mitigants for broader application in tokenised 
+markets. 
+ 
+24     https://www.mas.gov.sg/publications/monographs-or-information-paper/2024/guardian-fixed-income-framework 
+
+            Tables :
+
+                  #     ...                                                       Description                                                   
+0     3  6  ...  Risk Mitigant  Develop and scale internal risk, compliance, a...  Write smart contracts in well-commented, trans...
+1  1  4  7  ...                 Establish clear, proportionate protocols to ad...  Conduct comprehensive simulations and stress t...
+2  2  5  #  ...                 Implement recognised audit frameworks and cond...  Utilise a unified approach that integrates aut...
+
+[3 rows x 9 columns]
+            
+            Texts around tables :            Table 4: Key risk mitigants for broader application in tokenised markets 
+
+            Tables :
+
+               8  ... When a technology solution is applied to derivatives trading therearerisksthattheresultingcontractmaylack , legalefficacy Toaddressthis ISDAhaspublishedaseriesof . , guidelines for smart derivatives contracts—including one on FX derivatives—that explain the core principles of the ISDA documentation and raise awareness of the key legal terms that must be maintained These guidelines also . highlightimportantissuesfortechnologydeveloperswhen designing solutions for trading processing FX or , , automating settlement and point to areas where further , industry collaboration is needed to resolve legal and regulatoryuncertainty .
+0  8  ...  When a technology solution is applied to deriv...                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+
+[1 rows x 3 columns]
+            
+            Texts around tables :  
+Figure 3: Illustration of payment flow. 
+ 
+01/07/2025 
+
+            Tables :
+
+                       Stage          Activity                                                   
+0    Issue Token  Stage             1. Issuer Bank A in Singapore off-chain debits...
+            
+            Texts around tables :                    Table 5: Description of payment flow. 
+
+            Tables :
+
+                TransferToken 3 SGD token is transferred to the liquidity provider’s . tokenaddress 4 The liquidity provider provides price quote checks for . , currency pair availability relevant screening and , performs token exchange (SGD token for USD token) . The liquidity provider then transfers USD token to Ant InternationalEntityB’stokenaddress
+0  Transfer Token  3. SGD token is transferred to the liquidity p...                                                                                                                                                                                                                                                                                  
+1    Redeem Token  5. Issuer Bank B burns USD token from Ant Inte...                                                                                                                                                                                                                                                                                  
+            
+            Texts around tables : Associated standards and frameworks have been developed in the FX market to ensure 
+transparency, efficiency and risk management. These standards are also applicable to 
+transaction banking involving FX payments. They play a crucial role in fostering user 
+confidence and the smooth functioning of the transaction banking market and will act as 
+the foundation for further development alongside the increased use of tokenised bank 
+liabilities. 
+ 
+28 The most effective netting solution is multilateral as provided by CLSSettlement which settles over USD 6.5TN of payments daily on 
+
+            Tables :
+
+                                            ...                                                   
+0                               ...  • Settlement cycles – T+2 for the vast majorit...
+1  Messaging and communication  ...  • Regulatory compliance and reporting are esse...
+
+[2 rows x 6 columns]
+            
+            Texts around tables :           Table 6: Current Standards and Frameworks Governing the FX Market 
+
+            Tables :
+
+                               Standards  ...                                           Examples                                                   
+0    Industry best practices  ...  - Business conduct disclosure standards, to wh...  • ISDA Master Agreement • The 1998 FX and Curr...
+1              Documentation  ...                                 • FX Global Code29  • SWIFT Messaging (notably for post-trade and ...
+
+[2 rows x 6 columns]
+            

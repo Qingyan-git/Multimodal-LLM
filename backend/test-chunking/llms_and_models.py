@@ -102,7 +102,14 @@ class OpenAIModel:
 
 
     async def get_image_context(self,document,image,surrounding_text):
-        image_bytes = image.tobytes("jpg")
+
+
+        """
+        Maybe this should not use the raw image bytes but just use the text summary and description of the image instead
+        so as to use less tokens
+        """
+
+
         base64_image = base64.b64encode(image_bytes).decode('utf-8')
 
         system_message = f"You are an AI assistant specialising in document analysis. Your task is to provide brief, relevant context for a chunk of text from the given document."
@@ -153,6 +160,57 @@ class OpenAIModel:
 
         return response.content
 
+    
+    async def get_image_description(self,image):
+        base64_image = base64.b64encode(image_bytes).decode('utf-8')
+
+        system_message = f"""
+        ### Role
+        You are an expert Vision-to-Text Analyst specialized in preparing data for RAG (Retrieval-Augmented Generation) systems. Your goal is to transform visual information into comprehensive, semantically rich text that can be indexed and retrieved by a vector database.
+
+        ### Task
+        You will be provided with an image. Your objective is to generate a detailed, objective summary and description. This text must serve as a proxy for the image in a text-based system, allowing a user to "find" this image by searching for its contents, context, or specific data points.
+
+        ### Output Requirements
+        1. **High-Level Summary**: A concise 2-3 sentence overview of what the image represents (e.g., "An infographic showing the 2024 quarterly revenue growth for the APAC region").
+        2. **Contextual Analysis**: Identify the setting, subjects, and intent of the image.
+        3. **Detail Inventory**: 
+        - **Text & OCR**: Extract all visible text, headers, and labels exactly as they appear.
+        - **Visual Elements**: Describe charts, diagrams, colors, symbols, or artistic styles.
+        - **Entities**: Identify specific people, brands, objects, or locations.
+        4. **Relationship Mapping**: Explain how the elements relate (e.g., "The arrow points from the database icon to the cloud icon, indicating a migration process").
+
+        ### Constraints
+        - **Be Objective**: Describe what is physically present. Do not invent details or assume hidden meanings.
+        - **Search-Friendly Language**: Use descriptive keywords and synonyms that a user might realistically use in a search query.
+        - **No Markdown Formatting in Descriptions**: Avoid complex markdown that might interfere with vector embeddings (use plain text or simple bullet points).
+        - **Tone**: Professional, analytical, and literal.
+        """
+
+        human_message = [
+            {
+                'type' : 'text',
+                'text' : 'Here is the image. Please provide a summary and description of the image for future use in a RAG application'
+            },
+            {
+                'type' : 'image_url',
+                "image_url" : {
+                    "url": f"data:image/jpeg;base64,{base64_image}",
+                    "detail": "high" 
+                }
+            }
+        ]
+
+
+        prompt = [
+            SystemMessage(content=system_message),
+            HumanMessage(content=human_message)
+        ]
+        
+        response = await self.chat_model.ainvoke(prompt)
+
+        return response.content
+
 
     async def get_query_vector(self,user_query):
 
@@ -199,11 +257,13 @@ class OpenAIModel:
 class ContextMessage:
     def __init__(self,chunk):
 
+        metadata_tags = " ".join([f"<{key}>{value}</{key}>" for key, value in metadata.items()])
+
         self.message = f"""
-        <source_context>
+        <data_item>
             <metadata>
                 <source>{chunk['document_name']}</source>
-                <pages>{chunk['pages']}</pages>
+                {metadata_tags}
             </metadata>
             <context>
                 {chunk['context']}
@@ -211,7 +271,7 @@ class ContextMessage:
             <content>
                 {chunk['content']}
             </content>
-        </source_context>
+        </data_item>
         """
 
     def get_message(self):

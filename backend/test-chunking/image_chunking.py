@@ -42,10 +42,15 @@ def get_surrounding_text(page,image_bbox,margin=3):
 
     blocks = page.get_text('blocks',sort=True)
 
-    image_block_no = 0
+    image_block_no = -1
     for i,block in enumerate(blocks):
-        if block[:4] == image_bbox:
+        block_rect = pymupdf.Rect(block[:4])
+        if block_rect.intersects(img_rect):
             image_block_no = i
+            break
+
+    if image_block_no == -1:
+        return "No surrounding text found"
 
     pre_text_limit = max(image_block_no-margin,0)
     post_text_limit = min(image_block_no+margin+1,len(blocks))
@@ -60,9 +65,26 @@ def get_surrounding_text(page,image_bbox,margin=3):
         if blocks[i][6] == 0: #Text block
             text += blocks[i][4] + " "
 
-
     return text
 
+
+async def process_single_image(model, document_text, page, image_bbox, image_bytes, filename, metadata):
+
+    surrounding_text = get_surrounding_text(page, image_bbox)
+    image_summary = await model.get_image_description(image_bytes)
+    image_context = await model.get_image_context(document_text, image_bytes, surrounding_text)
+
+    """
+    image_context should use the image_summary string form so that it takes less tokens?
+    """
+    
+    image_chunk = ImageChunk()
+    image_chunk.document_name = filename
+    image_chunk.context = image_context
+    image_chunk.content = image_summary
+    image_chunk.metadata = metadata
+
+    return image_chunk
 
 
 async def extract_images(filepath):
@@ -91,48 +113,29 @@ async def extract_images(filepath):
                 pass_filters = (not mask and digest not in seen_hashes and xref)
 
                 if pass_filters:
-                    seen_hashes.add(image['digest'])
-
+                    
                     pix = pymupdf.Pixmap(doc,xref)
                     pix = pymupdf.Pixmap(pymupdf.csRGB,pix)
+                    seen_hashes.add(image['digest'])
+
                     filename = f"{xref}_page_{page_no + 1}_image_{number}.jpg"
-
                     save_image(pix,filename)
-
-                    """
-                    Clarify functions to get context and get content so that image context is the LLM contextual placing
-                    of the image text summary and its surrounding text for contextual retrieval
-                    and that image content is the text summary and the surrounding text of the image itself
-                    """
                     
-                    surrounding_text = get_surrounding_text(page,image_bbox)
-                    task = asyncio.create_task(model.get_image_context(document_text,pix,surrounding_text))
-
-                    tasks.append(task)
-
-                    image_chunk = ImageChunk()
-                    image_chunk.document_name = filename
-                    image_chunk.content['text'] = surrounding_text
-                    image_chunk.content['image'] = pix.tobytes('jpg')
-                    image_chunk.content['metadata'] = {
-                        'xref' : xref,
-                        'pages' : [page_no],
-                        'digest' : digest,
-                        'number' : number,
-                        'bbox' : image_bbox
+                    image_bytes = pix.tobytes('jpg',jpg_quality=95)
+                    metadata = {
+                        'pages' : page_no,
+                        'xref': xref,
+                        'digest': digest,
+                        'number': image['number'],
+                        'bbox': image_bbox
                     }
 
-                    image_chunks.append(image_chunk)
+                    task = asyncio.create_task(
+                        process_single_image(model, document_text, page, image_bbox, image_bytes, filename, metadata)
+                    )
+                    tasks.append(task)
 
-    contexts = await asyncio.gather(*tasks)
-
-    for i,context in enumerate(contexts):
-        image_chunks[i].context = context
-
-    """
-    Like this is weird to see maybe just consolidate the creation to chunks to one part of the code then dont need
-    to set contents and contexts differently
-    """
+    image_chunks = await asyncio.gather(*tasks)
 
     return image_chunks
 
@@ -182,10 +185,14 @@ async def process_images(folder_path):
 
 if __name__ == "__main__":
 
-    image_pdfs = Path(os.getenv('image_pdfs'))
+    def main():
 
-    clear_folder()
+        image_pdfs = Path(os.getenv('image_pdfs'))
 
-    for file in image_pdfs.iterdir():
-        extract_images(file)
+        clear_folder()
+
+        for file in image_pdfs.iterdir():
+            await extract_images(file)
+
+    asyncio.run(main())
 

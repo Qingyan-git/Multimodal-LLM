@@ -2,7 +2,7 @@ import psycopg
 import os
 import json
 
-from chunks import TextChunk
+from chunks import Chunk
 
 def get_connection():
 
@@ -117,7 +117,7 @@ def create_db_tables():
                     document_name TEXT REFERENCES pdfs(name),
                     type TEXT,
                     context TEXT,
-                    content JSONB,
+                    content TEXT,
                     metadata JSONB DEFAULT '{}'
                     )
                     """
@@ -196,7 +196,7 @@ def save_document_chunks(document_name,document_chunks):
                     document_name,
                     chunk.type,
                     chunk.context,
-                    json.dumps(chunk.content),
+                    chunk.content,
                     json.dumps(chunk.metadata),
                     ) for chunk in document_chunks]
 
@@ -217,7 +217,7 @@ def save_document_chunks(document_name,document_chunks):
         raise
 
 
-def retrieve_text_chunks(document_name):
+def retrieve_document_chunks(document_name):
 
     try:
         with get_connection() as conn:
@@ -234,7 +234,7 @@ def retrieve_text_chunks(document_name):
 
                 chunks = []
                 for result in results:
-                    chunk = TextChunk()
+                    chunk = Chunk()
                     chunk.id = result[0]
                     chunk.document_name = result[1]
                     chunk.type = result[2]

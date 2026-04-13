@@ -20,7 +20,7 @@ def save_to_file(filename,content,filepath=os.getenv('markdown_texts_path')):
 
     save_path = Path(filepath) / filename
     save_path.parent.mkdir(parents=True, exist_ok=True)
-    with save_path.open('w', encoding='utf-8') as f:
+    with save_path.open('a', encoding='utf-8') as f:
         f.writelines(content)
 
 
@@ -72,10 +72,6 @@ async def get_text_chunks(file):
     save_to_file(filename,cleaned_markdown_text)
 
     semantic_texts = model.semantic_chunker(cleaned_markdown_text)
-
-    # print(f'\n\nFile : {file.name}\n\n')
-    # for text in semantic_texts:
-    #     print(f'Semantic chunk : {text}\n\n')
     
     max_chunk_size = 1000
     chunk_overlap = 200
@@ -105,7 +101,7 @@ async def get_text_chunks(file):
         container = TextChunk()
         container.document_name = file.name
         container.context = texts_context[i]
-        container.content['text'] = text
+        container.content = text
         container.metadata['pages'] = list(texts_page_numbers[i])
         final_chunks.append(container)
 
@@ -134,19 +130,10 @@ async def embed_chunks(chunks):
     return embeddings
 
 
-async def ingest_all_pdfs(folder_path):
+async def process_text(folder_path):
     try:
         if folder_path.is_dir():
             for file in folder_path.iterdir():
-
-                print(f'Processing {file.name}\n\n')
-
-                with pymupdf.open(file) as doc:
-                    metadata = doc.metadata.copy()
-
-                insert_pdf(file,metadata)
-
-                print(f'\tFinished inserting pdf\n\n')
 
                 chunks = await get_text_chunks(file)
 
@@ -158,11 +145,11 @@ async def ingest_all_pdfs(folder_path):
 
                 embeddings = await embed_chunks(returned_chunks)
 
-                print(f'\tFinished getting chunk embeddings\n\n')
+                print(f'\tFinished getting embeddings\n\n')
 
                 upload_to_qdrant(embeddings)
 
-                print(f'\tFinished uploading chunk embeddings to qdrant\n\n')
+                print(f'\tFinished uploading embeddings to qdrant\n\n')
 
                 print(f'Finished processing\n\n')
 
@@ -179,7 +166,7 @@ async def ingest_all_pdfs(folder_path):
 if __name__ == '__main__':
     print(f'Ingestion running\n\n\n')
     text_pdfs = Path(os.getenv('text_pdfs_path'))
-    asyncio.run(ingest_all_pdfs(text_pdfs))
+    asyncio.run(process_text(text_pdfs))
 
 
 """

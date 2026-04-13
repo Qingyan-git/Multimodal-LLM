@@ -112,9 +112,9 @@ def get_similar_chunks(query_vector,limit=5,filters=None):
                     item = {
                         'score' : result.score, 
                         'context' : result.payload['context'],
-                        'content' : result.payload['content']['text'], 
+                        'content' : result.payload['content'], 
                         'document_name' : result.payload['document_name'], 
-                        'pages' : result.payload['metadata']['pages'],
+                        'metadata' : result.payload['metadata']
                     }
 
                     similar_chunks.append(item)
