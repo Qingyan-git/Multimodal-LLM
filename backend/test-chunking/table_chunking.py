@@ -88,6 +88,8 @@ async def extract_tables(filepath):
 
             for i,table in enumerate(found_tables.tables):
 
+                print(f"\n{table.extract()}\n")
+
                 item = {
                         'table_texts' : [],
                         'tables' : [],
@@ -144,7 +146,24 @@ async def format_tables(filepath,all_tables):
             table_data = []
             table_pages = item['pages']
             
-            for i,table in enumerate(item['tables']):
+            for i,table in enumerate(item['tables']):        
+
+                # headers = table.header
+
+                # print('\n')
+                # print(f"headers : {headers.names}, external : {headers.external}")
+                # print('\n')
+
+
+                # rows = table.extract()
+                # first_two = rows[:2]
+
+                # for i in range(len(first_two)):
+                #     print('\n')
+                #     print(f"row {i}: {first_two[i]}")
+                #     print('\n')
+
+
                 num_cols = table.col_count
                 table_page = table_pages[i]
 
@@ -161,27 +180,19 @@ async def format_tables(filepath,all_tables):
 
                 num_rows = len(text)//len(headers)
                 columns = [text[i * num_rows : (i + 1) * num_rows] for i in range(len(headers))]
-
                 data = [list(row) for row in zip(*columns)]
 
                 if i == 0:
                     #First joining table need to extract headers to set table headers
                     table_headers = headers
 
-
-                """
-                I think some headers here are still slipping through the gaps despite trying to filter them out,
-                try tmr
-                """
-
-
                 #Other continuous tables in the sequence need to extract data
                 first_row_text = data[0]
-                if first_row_text == headers:
-                    #First row has same data as the header column, hence the data is not relevant
+                if [str(row).strip() for row in first_row_text] == [str(head).strip() for head in headers]:
+                    #First row has same data as the header column, hence the first row is not relevant
                     table_data.extend(data[1:])
                 else:
-                    #First row is different data then header column, data is real data
+                    #First row is different data then header column, first row is real data
                     table_data.extend(data)
 
             combined_table = pd.DataFrame(table_data,columns=table_headers).to_markdown(index=False)
@@ -239,18 +250,27 @@ if __name__ == "__main__":
 
     async def main():
 
-        test_pdf_path = Path(r'C:\Users\UserAdmin\Documents\Multimodal-LLM\pdfs\tables\Project Guardian FX workstream Transaction Banking.pdf')
+        test_pdf_path = Path(r"C:\Users\UserAdmin\Documents\Multimodal-LLM\pdfs\tables\Project Guardian FX workstream Transaction Banking.pdf")
         results_path = Path(os.getenv('test_results_path'))
         file = results_path / "tables-test.txt"
 
-        all_table_chunks = await extract_tables(test_pdf_path)
-        clean_chunks = await format_tables(test_pdf_path, all_table_chunks)
+
+
 
         filename = 'table-chunk-test'
         filepath = os.getenv('table_results_path')
 
-        for table in clean_chunks:
-            save_to_file(filename,table.content,filepath)
+        # with pymupdf.open(test_pdf_path) as doc:
+        #     save_to_file(filename,pymupdf4llm.to_markdown(doc),filepath)
+
+        all_table_chunks = await extract_tables(test_pdf_path)
+        clean_chunks = await format_tables(test_pdf_path, all_table_chunks)
+
+        # filename = 'table-chunk-test'
+        # filepath = os.getenv('table_results_path')
+
+        # for table in clean_chunks:
+        #     save_to_file(filename,table.content,filepath)
 
 
     asyncio.run(main())

@@ -100,12 +100,21 @@ def create_db_tables():
             with conn.cursor() as cur:
 
                 cur.execute(
+                """
+                DROP TABLE pdfs CASCADE
+                """) 
+
+                cur.execute(
+                """
+                DROP TABLE chunks CASCADE
+                """)
+
+                cur.execute(
                     """
                     CREATE TABLE IF NOT EXISTS pdfs(
                     id SERIAL PRIMARY KEY,
                     name TEXT NOT NULL UNIQUE,
-                    path TEXT NOT NULL,
-                    metadata JSONB NOT NULL
+                    path TEXT NOT NULL
                     )
                     """
                 )
@@ -155,45 +164,36 @@ def delete_rows():
 
 #Execution functions
 
-def insert_pdf(file_path,metadata):
-
-    '''
-    Inserts the pdfs found under the directory at folder_path into the postgresql database
-    '''
+def insert_pdfs(folder_path):
 
     try:
-
-        name = str(file_path.name)
-        path = str(file_path)
-        metadata = json.dumps(metadata)
-
         with get_connection() as conn:
             with conn.cursor() as cur:
+                if folder_path.is_dir():
+                    for file in folder_path.iterdir():
+                        name = file.name
+                        path = str(file)
 
-                cur.execute(
-                    """
-                    INSERT INTO pdfs (name,path,metadata) VALUES (%s,%s,%s) ON CONFLICT (name) DO NOTHING
-                    """,
-
-                    (name,path,metadata)
-                )
+                        cur.execute(
+                            """
+                            INSERT INTO pdfs (name,path) VALUES (%s,%s) ON CONFLICT (name) DO NOTHING
+                            """,
+                            (name,path)
+                        )
 
     except psycopg.Error as e:
         print(f'Failed to insert pdfs into database, error {e}\n\n')
         raise
 
 
-def save_document_chunks(document_name,document_chunks):
-    """
-    Saves chunks into postgres database
-    """
+def save_document_chunks(document_chunks):
 
     try:
         with get_connection() as conn:
             with conn.cursor() as cur:
 
                 prepared_chunks = [(
-                    document_name,
+                    chunk.document_name,
                     chunk.type,
                     chunk.context,
                     chunk.content,
@@ -231,7 +231,6 @@ def retrieve_document_chunks(document_name):
                 )
 
                 results = cur.fetchall()
-
                 chunks = []
                 for result in results:
                     chunk = Chunk()
@@ -251,5 +250,6 @@ def retrieve_document_chunks(document_name):
 
 
 if __name__ == '__main__':
+    # create_db_tables()
     delete_rows()
 

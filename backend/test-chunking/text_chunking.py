@@ -9,19 +9,57 @@ import traceback
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-from llms_and_models import OpenAIModel
+from llms_and_models import OpenAIModel, RecursiveSplitter
 from chunks import TextChunk,ImageChunk
-from postgres import save_document_chunks, insert_pdf
+from postgres import save_document_chunks, insert_pdfs
 from qdrant import upload_to_qdrant, format_embeddings
 
 dotenv.load_dotenv()
 
-def save_to_file(filename,content,filepath=os.getenv('markdown_texts_path')):
+
+
+def save_to_file(filename,content,filepath=os.getenv('markdown_texts_path'),method='w'):
 
     save_path = Path(filepath) / filename
     save_path.parent.mkdir(parents=True, exist_ok=True)
-    with save_path.open('a', encoding='utf-8') as f:
-        f.writelines(content)
+    with save_path.open(method, encoding='utf-8') as f:
+        if isinstance(content, list):
+            for item in content:
+                f.write(f"{item}\n\n")
+        else:
+            f.write(content)
+
+
+def delete_all_files_in_folder(folder_path):
+    '''
+    Deletes all files in the folder specified by folder_path
+    '''
+
+    if not Path.exists(folder_path):
+        raise FileNotFoundError("Please check that the path entered is correct")
+
+    count = 0
+    for file in folder_path.iterdir():
+        if file.is_file():
+            filename = file.name
+            print(f'Removing {filename}...\n')
+            file.unlink()
+            count += 1
+
+    if count == 0:
+        print(f'Folder was empty.')
+
+    else:
+        print(f'{count} files removed.\n\n')
+
+
+
+
+
+
+
+
+
 
 
 def clean_text(text):
@@ -37,7 +75,7 @@ def clean_text(text):
     return cleaned_text.strip()
 
 
-def get_page_numbers(chunks,starting_page_no=1,page_pattern = r"\s*--- end of page\.page_number=(\d+) ---\s*"):
+def get_page_numbers(chunks,starting_page_no=1,page_pattern=r"\s*--- end of page\.page_number=(\d+) ---\s*"):
 
     final_text_chunks = []
     
@@ -63,6 +101,7 @@ def get_page_numbers(chunks,starting_page_no=1,page_pattern = r"\s*--- end of pa
 async def get_text_chunks(file):
     
     model = OpenAIModel()
+    recursive_splitter = RecursiveSplitter()
 
     with pymupdf.open(file) as doc:
         markdown_text = pymupdf4llm.to_markdown(doc, header=False, footer=False, page_separators=True)
@@ -73,27 +112,16 @@ async def get_text_chunks(file):
 
     semantic_texts = model.semantic_chunker(cleaned_markdown_text)
     
-    max_chunk_size = 1000
-    chunk_overlap = 200
-    splitter = RecursiveCharacterTextSplitter(
-        chunk_size=max_chunk_size,
-        chunk_overlap=chunk_overlap,
-        separators=["#","##","###","\n\n", "\n", "."]
-    )
-
     final_texts = []
-    page_pattern = r"\s*--- end of page\.page_number=(\d+) ---\s*"
     for text in semantic_texts:
-        if len(re.sub(page_pattern, '', text).strip()) > 0:
-            if len(text) > max_chunk_size:
-                split_texts = splitter.split_text(text)
-                final_texts.extend(split_texts)
-            else:
-                final_texts.append(text)
+        if len(text) > max_chunk_size:
+            split_texts = recursive_splitter.recursive_split(text)
+            final_texts.extend(split_texts)
+        else:
+            final_texts.append(text)
     
     tasks = [model.get_context(cleaned_markdown_text,text) for text in final_texts]
     texts_context = await asyncio.gather(*tasks)
-
     texts_page_numbers = get_page_numbers(final_texts)
 
     final_chunks = []
@@ -165,8 +193,13 @@ async def process_text(folder_path):
 
 if __name__ == '__main__':
     print(f'Ingestion running\n\n\n')
-    text_pdfs = Path(os.getenv('text_pdfs_path'))
-    asyncio.run(process_text(text_pdfs))
+    text_pdfs_path = Path(os.getenv('text_pdfs_path'))
+    text_results_path = Path(os.getenv('text_results_path'))
+
+    insert_pdfs(text_pdfs_path)
+    delete_all_files_in_folder(text_results_path)
+    
+    asyncio.run(process_text(text_pdfs_path))
 
 
 """

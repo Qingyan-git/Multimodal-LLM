@@ -8,6 +8,8 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain.messages import SystemMessage, HumanMessage
 from langchain_experimental.text_splitter import SemanticChunker
 
+from qdrant import format_embeddings
+
 
 class OpenAIModel:
 
@@ -61,11 +63,23 @@ class OpenAIModel:
         return semantic_chunks
 
     
-    async def embed_texts(self,texts):
+    async def embed_texts(self,chunks):
 
-        vectors = await self.embedding_model.aembed_documents(texts)
+        texts = []
 
-        return vectors
+        for chunk in chunks:
+            text = f"""
+            Chunk from document : {chunk.document_name}
+            Chunk context : {chunk.context}
+            Chunk content : {chunk.content}
+            """
+            texts.append(text)
+
+        vectors = await model.embed_texts(texts)
+
+        embeddings = format_embeddings(chunks,vectors)
+
+        return embeddings
 
     
     async def get_context(self,document,chunk):
@@ -100,69 +114,9 @@ class OpenAIModel:
         response = await self.chat_model.ainvoke(prompt)
         return response.content
 
-
-    async def get_image_context(self,document,image,surrounding_text):
-
-
-        """
-        Maybe this should not use the raw image bytes but just use the text summary and description of the image instead
-        so as to use less tokens
-        """
-
-
-        base64_image = base64.b64encode(image_bytes).decode('utf-8')
-
-        system_message = f"You are an AI assistant specialising in document analysis. Your task is to provide brief, relevant context for a chunk of text from the given document."
-
-        human_message = [
-            {
-                "type" : "text",
-                "text" : f"""
-                Here is the main document :
-                <document>
-                {document}
-                </document>
-
-    
-                Here is the chunk we want to situate within the whole document:
-                <chunk>
-                {surrounding_text}
-                </chunk>
-
-                Here is the image that is attached to the above text:
-                """
-            },
-            {
-                "type" : "image_url",
-                "image_url" : {
-                    "url": f"data:image/jpeg;base64,{base64_image}",
-                    "detail": "low" 
-
-                }
-            },
-            {
-                "type": "text",
-                "text": "Provide a concise context (2-3 sentences) to situate this image and text within the document for search retrieval. Also provide a caption for the image provided and a short summary about what the chunk is describing."
-            }
-        ]
-
-        """
-        Maybe just do specific function for LLM to summarise image as text and use that to feed as chunk content
-        and just one specific function to get the context of the image and text and use that as context
-        """
-
-        prompt = [
-            SystemMessage(content=system_message),
-            HumanMessage(content=human_message)
-        ]
-
-        response = await self.chat_model.ainvoke(prompt)
-
-        return response.content
-
     
     async def get_image_description(self,image):
-        base64_image = base64.b64encode(image_bytes).decode('utf-8')
+        base64_image = base64.b64encode(image).decode('utf-8')
 
         system_message = f"""
         ### Role
@@ -251,7 +205,20 @@ class OpenAIModel:
         return answer.content
 
 
+class RecursiveSplitter:
+    def __init__(self,max_chunk_size=1000,chunk_overlap=200):
 
+        self.splitter = RecursiveCharacterTextSplitter(
+            chunk_size=max_chunk_size,
+            chunk_overlap=chunk_overlap,
+            separators=["#","##","###","\n\n", "\n", "."]
+        )
+
+
+    def recursive_split(self,text):
+        splits = self.splitter.split_text(text)
+
+        return splits
 
 
 class ContextMessage:
@@ -276,5 +243,3 @@ class ContextMessage:
 
     def get_message(self):
         return self.message
-
-
