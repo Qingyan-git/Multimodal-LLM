@@ -1,18 +1,20 @@
 
 from docling.document_converter import DocumentConverter
-from docling_core.types.doc.document import DocItemLabel, TextItem
+from docling_core.types.doc.document import DocItemLabel
 import asyncio
 from pathlib import Path
 import os
 import dotenv
 import pandas as pd
 import numpy as np
+from langchain_community.callbacks.manager import get_openai_callback
 
 from text_chunking import save_to_file,delete_all_files_in_folder
+from docling_image_chunking import get_surrounding_text
 from llms_and_models import OpenAIModel
 from chunks import TableChunk
 from postgres import save_document_chunks, insert_pdfs
-from qdrant import upload_to_qdrant, format_embeddings
+from qdrant import upload_to_qdrant
 
 
 
@@ -73,47 +75,41 @@ async def extract_tables(filepath):
     #Object that holds the document
     document = docling.convert(filepath).document
 
+    #All document tables
     document_tables = document.tables
-
-    # markdown_document = document.export_to_markdown()  
-    # save_to_file(f"{filepath.stem}-document",markdown_document,filepath=os.getenv('table_results_path'))
-    # save_to_file(f"{filepath.stem}-tables",document_tables,filepath=os.getenv('table_results_path'))
 
     all_tables = []
     last_seen_table = -1
 
     for table in document_tables:
-        item = {
-            'tables' : [],
-            'caption' : [],
-            #'surrounding_text' : [],
-            'pages' : [],
-        }
 
         page_no = table.prov[0].page_no
-        
-        if (page_no-last_seen_table) == 1:
-            #If pages differ by just 1, possible continutation
-            item = all_tables.pop()
-            prev_table = item['tables'][-1]
-            is_same_table = same_table(document,prev_table,table)
+        prev_text,post_text = get_surrounding_text(document,table)
+        caption = table.caption_text(doc=document)
 
-            if is_same_table:
-                item['tables'].append(table)
-                item['caption'].append(table.caption_text(doc=document))
-                #item['surrounding_text'].append()
-                item['pages'].append(page_no)
-                last_seen_table = page_no
-            
+        #One item is one final table
+        item = {
+            'tables' : [table],
+            'caption' : [caption],
+            'prev_text' : [prev_text],
+            'post_text' : [post_text],
+            'pages' : [page_no],
+        }
+
+        prev_table = all_tables[-1]['tables'][-1] if all_tables else None
+        is_same_table = prev_table and (page_no-last_seen_table==1) and same_table(document,prev_table,table)
+
+        if is_same_table:
+            #Same table, just continutation
+            prev_item = all_tables.pop()
+            for key in prev_item.keys():
+                prev_item[key].extend(item[key])
+            all_tables.append(prev_item)
         else:
-            #Impossible continuation
-            item['tables'].append(table)
-            item['caption'].append(table.caption_text(doc=document))
-            #item['surrounding_text'].append()
-            item['pages'].append(page_no)
-            last_seen_table = page_no
+            #Different table
+            all_tables.append(item)
 
-        all_tables.append(item)
+        last_seen_table = page_no
 
     return (all_tables,document)
 
@@ -160,25 +156,25 @@ async def format_tables(tables,document):
             table_data.append(df)
         
         combined_df = pd.concat(table_data,axis=0,ignore_index=True)
-        combined_df = combined_df.ffill()
-
-        clean_filename = Path(f"Table_{table_idx}_Frag_{i}_CLEAN.csv")
-        combined_df.to_csv(clean_filename, index=False)
-
-        # combined_df = combined_df.replace(r'^\s*$', np.nan, regex=True)
         # combined_df = combined_df.ffill()
-
         markdown_table = combined_df.to_markdown()
+
+        
+        clean_filename = Path(f"Table_{table_idx}_CLEAN.csv")
+        save_path = Path(os.getenv('table_results_path')) / clean_filename
+        combined_df.to_csv(save_path, index=False)
+
         caption = " ".join(item['caption']).strip()
-        chunk_text = f"Table : \n{markdown_table}\nCaption : \n{caption}\n"
+        chunk_text = f"Text before table : \n{item['prev_text']}\n Table : \n{markdown_table}\n Caption : \n{caption}\n Text after table : \n{item['post_text']}\n"
         chunk_context = await model.get_context(document.export_to_markdown(),chunk_text)
-        chunk_content = chunk_text
 
         chunk = TableChunk()
         chunk.document_name = document.origin.filename
         chunk.context = chunk_context
-        chunk.content = chunk_content
-        chunk.metadata = {'pages' : item['pages']}
+        chunk.content = chunk_text
+        chunk.metadata = {
+            'pages' : item['pages']
+            }
 
         all_tables.append(chunk)
 
@@ -187,21 +183,43 @@ async def format_tables(tables,document):
 
 async def process_tables(folder_path):
     try:
+
+        model = OpenAIModel()
+
         if folder_path.is_dir():
+
+            insert_pdfs(folder_path)
+
+            print(f'Finished inserting pdfs to postgresdb\n\n')
+
             for file in folder_path.iterdir():
 
-                all_table_chunks,document = await extract_tables(test_pdf_path)
-                clean_chunks = await format_tables(all_table_chunks,document)
+                with get_openai_callback() as cb:
 
-                print(f'\tFinished getting table chunks\n\n')
+                    all_table_chunks,document = await extract_tables(file)
+                    clean_chunks = await format_tables(all_table_chunks,document)
 
-                returned_chunks = save_document_chunks(clean_chunks)
+                    print(f'\tFinished getting table chunks\n\n')
+
+                    token_cost = f"Token cost to TABLE chunk {file.name} : {cb.total_tokens}"
+                    money_cost = f"Money cost to TABLE chunk {file.name} : {cb.total_cost}"
+                    total_cost = [token_cost,money_cost]
+
+                    save_to_file(filename=f'{file.stem}',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
+
+                returned_chunks = save_document_chunks(file.name,clean_chunks,type='table')
 
                 print(f'\tFinished saving chunks into postgresdb\n\n')
 
-                embeddings = await embed_chunks(returned_chunks)
+                embeddings,cost = await model.embed_texts(returned_chunks)
 
                 print(f'\tFinished getting embeddings\n\n')
+
+                token_cost = f"Token cost to EMBED TEXT {file.name} : {cost[0]}"
+                money_cost = f"Money cost to EMBED TEXT {file.name} : {cost[1]}"
+                total_cost = [token_cost,money_cost]
+
+                save_to_file(filename=f'{file.stem}',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
 
                 upload_to_qdrant(embeddings)
 
@@ -213,7 +231,6 @@ async def process_tables(folder_path):
 
     except Exception as e:
         print(f'Unable to ingest all pdfs, error {e}')
-        traceback.print_exc() 
         raise
 
 
@@ -223,7 +240,6 @@ if __name__ == "__main__":
     table_pdfs_path = Path(os.getenv('table_pdfs_path'))
     table_results_path = Path(os.getenv('table_results_path'))
 
-    insert_pdfs(table_results_path)
     delete_all_files_in_folder(table_results_path)
 
     asyncio.run(process_tables(table_pdfs_path))

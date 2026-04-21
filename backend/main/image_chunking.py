@@ -5,13 +5,12 @@ import dotenv
 import pymupdf4llm
 import pymupdf
 import asyncio
-import traceback
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-from text_chunking import embed_chunks,delete_all_files_in_folder
+from text_chunking import delete_all_files_in_folder,save_to_file
 from llms_and_models import OpenAIModel
-from chunks import TextChunk,ImageChunk
+from chunks import ImageChunk
 from postgres import save_document_chunks, insert_pdfs
 from qdrant import upload_to_qdrant, format_embeddings
 
@@ -37,6 +36,19 @@ def save_image(image,filename,path=Path(os.getenv('image_results_path'))):
     image.save(save_path, output='jpeg', jpg_quality=95)
 
 
+def useable_image(image_info, min_dim=50):
+    # image_info is the dict from page.get_image_info()
+    width = image_info['width']
+    height = image_info['height']
+    
+    if height < min_dim or width < min_dim:
+        return False
+
+    ratio = height / width 
+    if ratio > 5 or ratio < 0.2:
+        return False
+        
+    return True
 
 
 def get_surrounding_text(page, image_bbox, v_margin=200):
@@ -58,52 +70,8 @@ def get_surrounding_text(page, image_bbox, v_margin=200):
             elif block_y0 > img_y1 and (block_y0 - img_y1) < v_margin:
                 after_text.append(block_text.strip())
                 
-    return " ".join(before_text), " ".join(after_text)
+    return (" ".join(before_text), " ".join(after_text))
 
-
-
-# def get_surrounding_text(page,image_block_no,margin=3):
-
-#     blocks = page.get_text('blocks',sort=True)
-
-#     pre_text_limit = max(image_block_no-margin,0)
-#     post_text_limit = min(image_block_no+margin+1,len(blocks))
-
-#     before_text = f""
-#     for i in range(pre_text_limit,image_block_no):
-#         if blocks[i][6] == 0: #Text block
-#             before_text += blocks[i][4] + " "
-
-#     after_text += f""
-#     for i in range(image_block_no+1,post_text_limit):
-#         if blocks[i][6] == 0: #Text block
-#             after_text += blocks[i][4] + " "
-
-#     return before_text, after_text
-
-
-# async def process_single_image(model, document_text, filepath, page_no, image_bbox, image_bytes, metadata):
-
-#     with pymupdf.open(filepath) as doc:
-
-#         page = doc[page_no]
-
-#         before_text,after_text = get_surrounding_text(page, image_bbox)
-#         image_summary = await model.get_image_description(image_bytes)
-#         chunk_text = f"""
-#             Text before image : {before_text}
-#             Image description : {image_summary}
-#             Text after image : {after_text}
-#             """
-#         image_context = await model.get_context(document_text, chunk_text)
-        
-#         image_chunk = ImageChunk()
-#         image_chunk.document_name = filename
-#         image_chunk.context = image_context
-#         image_chunk.content = chunk_text
-#         image_chunk.metadata = metadata
-
-#         return image_chunk
 
 
 async def process_single_image(model,document_text,filepath,page_no,image):
@@ -112,19 +80,23 @@ async def process_single_image(model,document_text,filepath,page_no,image):
 
         page = doc[page_no]
         xref = image['xref']
-        number = image['number']
         image_bbox = image['bbox']
+        number = image['number']
+        margin=25
 
         #Get a pymupdf.Pixmap object from the image and convert to RGB colourspace
-        pix = pymupdf.Pixmap(doc,xref)
-        pix = pymupdf.Pixmap(pymupdf.csRGB,pix)
+        clip_rect = pymupdf.Rect(image_bbox) + (-margin, -margin, margin, margin)
+        pix = page.get_pixmap(
+            clip=clip_rect, 
+            colorspace=pymupdf.csRGB
+        )
 
         #Save to file to see what images were extracted
-        filename = f"{xref}_page_{page_no + 1}_block_{number}.jpg"
+        filename = f"xref_{xref}_page_{page_no + 1}_number_{number}.jpg"
         save_image(pix,filename)
 
         #Gets text around image
-        before_text,after_text = get_surrounding_text(page, image_bbox)
+        before_text,after_text = get_surrounding_text(page, clip_rect)
 
         #Gets text representation of image
         image_summary = await model.get_image_description(pix.tobytes("jpg", jpg_quality=95))
@@ -136,24 +108,22 @@ async def process_single_image(model,document_text,filepath,page_no,image):
             Text after image : {after_text}
             """
         
-        #Gets image context using "image chunk"
+        #Gets image context using chunk_text
         image_context = await model.get_context(document_text, chunk_text)
 
         metadata = {
             'xref': xref,
             'pages' : page_no,
-            'block': number,
-            'bbox': image_bbox
+            'bbox': list(clip_rect)
         }
         
         image_chunk = ImageChunk()
-        image_chunk.document_name = filename
+        image_chunk.document_name = filepath.name
         image_chunk.context = image_context
         image_chunk.content = chunk_text
         image_chunk.metadata = metadata
 
         return image_chunk
-
 
 
 
@@ -174,40 +144,14 @@ async def extract_images(filepath):
             for image in images:
 
                 mask = image['has-mask']
-                xref = image['xref']
-                
-                pass_filters = (not mask and xref)
+                xref = image['xref']                
+                pass_filters = (not mask and xref and useable_image(image))
 
                 if pass_filters:
-
                     task = asyncio.create_task(
                         process_single_image(model,document_text,filepath,page_no,image)
                     )
-
-                    # number = image['number']
-                    # image_bbox = image['bbox']
-                    
-                    # #Get a pymupdf.Pixmap object from the image and convert to RGB colourspace
-                    # pix = pymupdf.Pixmap(doc,xref)
-                    # pix = pymupdf.Pixmap(pymupdf.csRGB,pix)
-
-                    # #Save to file to see what images were extracted
-                    # filename = f"{xref}_page_{page_no + 1}_block_{number}.jpg"
-                    # save_image(pix,filename)
-                    
-                    # #Get bytes and metadata to pass to helper function
-                    # image_bytes = pix.tobytes('jpg',jpg_quality=95)
-                    # metadata = {
-                    #     'xref': xref,
-                    #     'pages' : page_no,
-                    #     'block': image['number'],
-                    #     'bbox': image_bbox
-                    # }
-
-                    # task = asyncio.create_task(
-                    #     process_single_image(model, document_text, filepath, page_no, image_bbox, image_bytes, metadata)
-                    # )
-                    # tasks.append(task)
+                    tasks.append(task)
 
     image_chunks = await asyncio.gather(*tasks)
 
@@ -218,23 +162,39 @@ async def extract_images(filepath):
 async def process_images(folder_path):
     try:
         if folder_path.is_dir():
+
+            model = OpenAIModel()
+
             for file in folder_path.iterdir():
 
                 image_chunks = await extract_images(file)
 
                 print(f'\tFinished getting image chunks\n\n')
 
-                # returned_chunks = save_document_chunks(image_chunks)
 
-                # print(f'\tFinished saving chunks into postgresdb\n\n')
+                datas = []
+                for chunk in image_chunks:
+                    data = f"""
+                    Chunk from : {chunk.document_name}\n
+                    Chunk context : {chunk.context}\n
+                    Chunk content : {chunk.content}\n
+                    Chunk metadata : {chunk.metadata}\n
+                    """
+                    datas.append(data)
 
-                # embeddings = await embed_chunks(returned_chunks)
+                save_to_file("image-chunks",datas,image_results_path,method='a')
 
-                # print(f'\tFinished getting embeddings\n\n')
+                returned_chunks = save_document_chunks(file.name,image_chunks)
 
-                # upload_to_qdrant(embeddings)
+                print(f'\tFinished saving chunks into postgresdb\n\n')
 
-                # print(f'\tFinished uploading embeddings to qdrant\n\n')
+                embeddings = await model.embed_texts(returned_chunks)
+
+                print(f'\tFinished getting embeddings\n\n')
+
+                upload_to_qdrant(embeddings)
+
+                print(f'\tFinished uploading embeddings to qdrant\n\n')
 
                 print(f'Finished processing\n\n')
 
@@ -242,7 +202,6 @@ async def process_images(folder_path):
 
     except Exception as e:
         print(f'Unable to ingest all pdfs, error {e}')
-        traceback.print_exc() 
         raise
 
 
@@ -257,18 +216,7 @@ if __name__ == "__main__":
     insert_pdfs(image_pdfs_path)
     delete_all_files_in_folder(image_results_path)
 
-    image_chunks = asyncio.run(process_images(image_pdfs_path))
-    datas = []
-    for chunk in image_chunks:
-        data = f"""
-        Chunk from : {document_name}\n
-        Chunk context : {chunk.context}\n
-        Chunk content : {chunk.content}\n
-        Chunk metadata : {chunk.metadata}\n
-        """
-        datas.append(data)
-
-    save_to_file("image-chunks",datas,image_results_path)
+    asyncio.run(process_images(image_pdfs_path))
 
 
 

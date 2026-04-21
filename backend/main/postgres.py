@@ -186,7 +186,7 @@ def insert_pdfs(folder_path):
         raise
 
 
-def save_document_chunks(document_chunks):
+def save_document_chunks(document_name,document_chunks,type):
 
     try:
         with get_connection() as conn:
@@ -208,7 +208,7 @@ def save_document_chunks(document_chunks):
                     prepared_chunks
                 )
 
-        retrieved_chunks = retrieve_text_chunks(document_name)
+        retrieved_chunks = retrieve_document_chunks(document_name,type)
 
         return retrieved_chunks
 
@@ -217,7 +217,7 @@ def save_document_chunks(document_chunks):
         raise
 
 
-def retrieve_document_chunks(document_name):
+def retrieve_document_chunks(document_name,type):
 
     try:
         with get_connection() as conn:
@@ -225,9 +225,9 @@ def retrieve_document_chunks(document_name):
                 
                 cur.execute(
                     """
-                    SELECT id,document_name,type,context,content,metadata FROM chunks WHERE document_name = %s
+                    SELECT id,document_name,type,context,content,metadata FROM chunks WHERE document_name = %s AND type = %s
                     """,
-                    (document_name,)
+                    (document_name,type,)
                 )
 
                 results = cur.fetchall()
@@ -250,6 +250,11 @@ def retrieve_document_chunks(document_name):
 
 
 if __name__ == '__main__':
-    # create_db_tables()
-    delete_rows()
+
+    reformat = 1
+
+    if reformat:
+        create_db_tables()
+    else:
+        delete_rows()
 

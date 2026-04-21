@@ -30,3 +30,8 @@ class ImageChunk(Chunk):
 @dataclass
 class TableChunk(Chunk):
     type : str = 'table'
+
+
+@dataclass
+class PageChunk(Chunk):
+    type : str = 'page'

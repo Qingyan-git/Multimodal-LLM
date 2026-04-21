@@ -5,35 +5,33 @@ import dotenv
 import pymupdf4llm
 import pymupdf
 import asyncio
-import traceback
-
-from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_community.callbacks.manager import get_openai_callback
 
 from llms_and_models import OpenAIModel, RecursiveSplitter
 from chunks import TextChunk,ImageChunk
 from postgres import save_document_chunks, insert_pdfs
-from qdrant import upload_to_qdrant, format_embeddings
+from qdrant import upload_to_qdrant
+
 
 dotenv.load_dotenv()
 
 
 
-def save_to_file(filename,content,filepath=os.getenv('markdown_texts_path'),method='w'):
+def save_to_file(filename,content,filepath=os.getenv('text_results_path'),method='w'):
 
     save_path = Path(filepath) / filename
     save_path.parent.mkdir(parents=True, exist_ok=True)
     with save_path.open(method, encoding='utf-8') as f:
+        f.write('\n')
         if isinstance(content, list):
             for item in content:
                 f.write(f"{item}\n\n")
         else:
             f.write(content)
+        f.write('\n')
 
 
 def delete_all_files_in_folder(folder_path):
-    '''
-    Deletes all files in the folder specified by folder_path
-    '''
 
     if not Path.exists(folder_path):
         raise FileNotFoundError("Please check that the path entered is correct")
@@ -46,11 +44,7 @@ def delete_all_files_in_folder(folder_path):
             file.unlink()
             count += 1
 
-    if count == 0:
-        print(f'Folder was empty.')
-
-    else:
-        print(f'{count} files removed.\n\n')
+    print(f'{count} files removed.\n\n')
 
 
 
@@ -98,13 +92,14 @@ def get_page_numbers(chunks,starting_page_no=1,page_pattern=r"\s*--- end of page
     return final_text_chunks
 
 
-async def get_text_chunks(file):
+async def extract_text(file):
     
     model = OpenAIModel()
     recursive_splitter = RecursiveSplitter()
+    max_chunk_size = recursive_splitter.get_max_chunk_size()
 
     with pymupdf.open(file) as doc:
-        markdown_text = pymupdf4llm.to_markdown(doc, header=False, footer=False, page_separators=True)
+        markdown_text = pymupdf4llm.to_markdown(doc, header=True, footer=True, page_separators=True)
 
     cleaned_markdown_text = clean_text(markdown_text)
     filename = str(file.stem) + '.md'
@@ -126,6 +121,10 @@ async def get_text_chunks(file):
 
     final_chunks = []
     for i,text in enumerate(final_texts):
+
+        save_text = f"Final chunk number {i}, content : \n{text}\n"
+        save_to_file(filename,save_text,method='a')
+
         container = TextChunk()
         container.document_name = file.name
         container.context = texts_context[i]
@@ -136,44 +135,45 @@ async def get_text_chunks(file):
     return final_chunks
 
 
-async def embed_chunks(chunks):
-
-    model = OpenAIModel()
-
-    texts = []
-
-    for chunk in chunks:
-
-        text = f"""
-        Context : {chunk.context}
-        Content : {chunk.content['text']}
-        """
-
-        texts.append(text)
-
-    vectors = await model.embed_texts(texts)
-
-    embeddings = format_embeddings(chunks,vectors)
-
-    return embeddings
-
-
 async def process_text(folder_path):
     try:
+
+        model = OpenAIModel()
+
         if folder_path.is_dir():
+
+            insert_pdfs(folder_path)
+
+            print(f'Finished inserting pdfs to postgresdb\n\n')
+
+
             for file in folder_path.iterdir():
 
-                chunks = await get_text_chunks(file)
+                with get_openai_callback() as cb:
 
-                print(f'\tFinished getting text chunks\n\n')
+                    chunks = await extract_text(file)
 
-                returned_chunks = save_document_chunks(file.name,chunks)
+                    print(f'\tFinished getting text chunks\n\n')
+
+                    token_cost = f"Token cost to TEXT chunk {file.name} : {cb.total_tokens}"
+                    money_cost = f"Money cost to TEXT chunk {file.name} : {cb.total_cost}"
+                    total_cost = [token_cost,money_cost]
+
+                    save_to_file(filename=f'{file.stem}',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
+
+                returned_chunks = save_document_chunks(file.name,chunks,type='text')
 
                 print(f'\tFinished saving chunks into postgresdb\n\n')
 
-                embeddings = await embed_chunks(returned_chunks)
+                embeddings,cost = await model.embed_texts(returned_chunks)
 
                 print(f'\tFinished getting embeddings\n\n')
+
+                token_cost = f"Token cost to EMBED TEXT {file.name} : {cost[0]}"
+                money_cost = f"Money cost to EMBED TEXT {file.name} : {cost[1]}"
+                total_cost = [token_cost,money_cost]
+
+                save_to_file(filename=f'{file.stem}',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
 
                 upload_to_qdrant(embeddings)
 
@@ -185,7 +185,6 @@ async def process_text(folder_path):
 
     except Exception as e:
         print(f'Unable to ingest all pdfs, error {e}')
-        traceback.print_exc() 
         raise
 
 
@@ -196,7 +195,6 @@ if __name__ == '__main__':
     text_pdfs_path = Path(os.getenv('text_pdfs_path'))
     text_results_path = Path(os.getenv('text_results_path'))
 
-    insert_pdfs(text_pdfs_path)
     delete_all_files_in_folder(text_results_path)
     
     asyncio.run(process_text(text_pdfs_path))

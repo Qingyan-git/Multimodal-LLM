@@ -3,10 +3,11 @@ import os
 import io
 import base64
 import asyncio
-from transformers import CLIPModel, CLIPProcessor
+import tiktoken
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain.messages import SystemMessage, HumanMessage
 from langchain_experimental.text_splitter import SemanticChunker
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 from qdrant import format_embeddings
 
@@ -40,22 +41,6 @@ class OpenAIModel:
         )
 
     
-    def get_ragas_llm(self):
-        return self.chat_model.bind(response_format={"type": "json_object"})
-
-
-    def get_chat_model(self):
-        return self.chat_model
-
-
-    def get_embedding_model(self):
-        return self.embedding_model
-
-
-    def get_text_splitter(self):
-        return self.text_splitter
-
-    
     def semantic_chunker(self,text):
 
         semantic_chunks = self.text_splitter.split_text(text)
@@ -66,7 +51,8 @@ class OpenAIModel:
     async def embed_texts(self,chunks):
 
         texts = []
-
+        token_cost = 0
+        money_cost = 0
         for chunk in chunks:
             text = f"""
             Chunk from document : {chunk.document_name}
@@ -75,11 +61,22 @@ class OpenAIModel:
             """
             texts.append(text)
 
-        vectors = await model.embed_texts(texts)
+        # --- TIKTOKEN INTEGRATION ---
+        # 1. Initialize the encoding for text-embedding-3 models
+        encoding = tiktoken.get_encoding("cl100k_base")
+        
+        # 2. Count tokens for each string in the list
+        tokens = sum(len(encoding.encode(text)) for text in texts)
+        
+        # 3. Calculate cost ($0.02 per 1,000,000 tokens as of 2026)
+        cost = (tokens / 1000000) * 0.02
+
+        vectors = await self.embedding_model.aembed_documents(texts)
+        total_cost = [tokens,cost]
 
         embeddings = format_embeddings(chunks,vectors)
 
-        return embeddings
+        return (embeddings,total_cost)
 
     
     async def get_context(self,document,chunk):
@@ -155,7 +152,6 @@ class OpenAIModel:
             }
         ]
 
-
         prompt = [
             SystemMessage(content=system_message),
             HumanMessage(content=human_message)
@@ -175,6 +171,10 @@ class OpenAIModel:
 
     async def answer_question(self,user_query,retrieved_context):
 
+        formatted_contexts = '\n\n'.join(
+            [F"Chunk {i}: {content}" for i,content in enumerate(retrieved_context)]
+        )
+
         messages = [
             SystemMessage(content=f"""
             You are a professional assistant. Your goal is to provide accurate answers based ONLY on the provided context chunks.
@@ -192,9 +192,9 @@ class OpenAIModel:
 
             The following database contains multiple labelled chunks from different pages of a document. 
             Use them to answer the question accurately.
-
+            The chunks are ordered by similarity scores to the question, and numbered numerically.
             <database>
-            {retrieved_context}
+            {formatted_contexts}
             </database>
 
             Question: {user_query}
@@ -214,6 +214,19 @@ class RecursiveSplitter:
             separators=["#","##","###","\n\n", "\n", "."]
         )
 
+        self.max_chunk_size = max_chunk_size
+
+        self.chunk_overlap = chunk_overlap
+
+
+    def get_max_chunk_size(self):
+
+        return self.max_chunk_size
+
+    def get_chunk_overlap(self):
+
+        return self.chunk_overlap
+
 
     def recursive_split(self,text):
         splits = self.splitter.split_text(text)
@@ -224,10 +237,13 @@ class RecursiveSplitter:
 class ContextMessage:
     def __init__(self,chunk):
 
-        metadata_tags = " ".join([f"<{key}>{value}</{key}>" for key, value in metadata.items()])
+        metadata_tags = " ".join([f"<{key}>{value}</{key}>" for key, value in chunk['metadata'].items()])
 
         self.message = f"""
         <data_item>
+            <similarity>
+                <score>{chunk['score']}</score>
+            </similarity>
             <metadata>
                 <source>{chunk['document_name']}</source>
                 {metadata_tags}
@@ -243,3 +259,8 @@ class ContextMessage:
 
     def get_message(self):
         return self.message
+
+
+
+
+

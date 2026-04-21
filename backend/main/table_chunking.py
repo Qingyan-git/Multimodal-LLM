@@ -217,6 +217,9 @@ async def process_tables(folder_path):
 
     try:
         if folder_path.is_dir():
+
+            model = OpenAIModel()
+
             for file in folder_path.iterdir():
 
                 chunks = await extract_tables(file)
@@ -227,7 +230,7 @@ async def process_tables(folder_path):
 
                 print(f'\tFinished saving chunks into postgresdb\n\n')
 
-                embeddings = await embed_chunks(returned_chunks)
+                embeddings = await model.embed_texts(returned_chunks)
 
                 print(f'\tFinished getting embeddings\n\n')
 
