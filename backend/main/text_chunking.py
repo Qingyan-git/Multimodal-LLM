@@ -108,12 +108,14 @@ async def extract_text(file):
     semantic_texts = model.semantic_chunker(cleaned_markdown_text)
     
     final_texts = []
-    for text in semantic_texts:
-        if len(text) > max_chunk_size:
-            split_texts = recursive_splitter.recursive_split(text)
-            final_texts.extend(split_texts)
-        else:
-            final_texts.append(text)
+    # for text in semantic_texts:
+    #     if len(text) > max_chunk_size:
+    #         split_texts = recursive_splitter.recursive_split(text)
+    #         final_texts.extend(split_texts)
+    #     else:
+    #         final_texts.append(text)
+
+    final_texts.extend(semantic_texts)
     
     tasks = [model.get_context(cleaned_markdown_text,text) for text in final_texts]
     texts_context = await asyncio.gather(*tasks)
@@ -142,12 +144,11 @@ async def process_text(folder_path):
 
         if folder_path.is_dir():
 
-            insert_pdfs(folder_path)
-
-            print(f'Finished inserting pdfs to postgresdb\n\n')
-
-
             for file in folder_path.iterdir():
+
+                insert_pdfs(file)
+
+                print(f'Finished inserting pdf to postgresdb\n\n')
 
                 with get_openai_callback() as cb:
 
@@ -161,23 +162,25 @@ async def process_text(folder_path):
 
                     save_to_file(filename=f'{file.stem}',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
 
-                returned_chunks = save_document_chunks(file.name,chunks,type='text')
+                if chunks:
 
-                print(f'\tFinished saving chunks into postgresdb\n\n')
+                    returned_chunks = save_document_chunks(file.name,chunks,type='text')
 
-                embeddings,cost = await model.embed_texts(returned_chunks)
+                    print(f'\tFinished saving chunks into postgresdb\n\n')
 
-                print(f'\tFinished getting embeddings\n\n')
+                    embeddings,cost = await model.embed_texts(returned_chunks)
 
-                token_cost = f"Token cost to EMBED TEXT {file.name} : {cost[0]}"
-                money_cost = f"Money cost to EMBED TEXT {file.name} : {cost[1]}"
-                total_cost = [token_cost,money_cost]
+                    print(f'\tFinished getting embeddings\n\n')
 
-                save_to_file(filename=f'{file.stem}',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
+                    token_cost = f"Token cost to EMBED TEXT {file.name} : {cost[0]}"
+                    money_cost = f"Money cost to EMBED TEXT {file.name} : {cost[1]}"
+                    total_cost = [token_cost,money_cost]
 
-                upload_to_qdrant(embeddings)
+                    save_to_file(filename=f'{file.stem}',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
 
-                print(f'\tFinished uploading embeddings to qdrant\n\n')
+                    upload_to_qdrant(embeddings)
+
+                    print(f'\tFinished uploading embeddings to qdrant\n\n')
 
                 print(f'Finished processing\n\n')
 
@@ -192,7 +195,8 @@ async def process_text(folder_path):
 
 if __name__ == '__main__':
     print(f'Ingestion running\n\n\n')
-    text_pdfs_path = Path(os.getenv('text_pdfs_path'))
+    text_pdfs_path = Path(os.getenv('all_pdfs_paths'))
+    print(text_pdfs_path)
     text_results_path = Path(os.getenv('text_results_path'))
 
     delete_all_files_in_folder(text_results_path)

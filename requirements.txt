@@ -7,7 +7,6 @@ pymupdf4llm
 pytesseract
 gdown
 pandas
-tabulate
 docling
 
 langchain
@@ -18,3 +17,5 @@ langchain_openai
 
 ragas
 rapidfuzz
+mteb
+vidore-benchmark

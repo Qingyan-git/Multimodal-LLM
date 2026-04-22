@@ -161,25 +161,42 @@ def delete_rows():
         print(f'Failed to delete rows from tables, {e}\n\n')
 
 
+def delete_chunks(type):
+    
+    try:
+        with get_connection() as conn:
+            with conn.cursor() as cur:
+
+                cur.execute(
+                    """
+                    DELETE FROM chunks WHERE type = %s
+                    """,
+                    (type,)
+                )
+
+                print(f'\nAll chunks of type : {type} deleted\n\n')
+
+    except psycopg.Error as e:
+        print(f'Failed to delete rows from tables, {e}\n\n')
+
+
 
 #Execution functions
 
-def insert_pdfs(folder_path):
+def insert_pdfs(filepath):
 
     try:
         with get_connection() as conn:
             with conn.cursor() as cur:
-                if folder_path.is_dir():
-                    for file in folder_path.iterdir():
-                        name = file.name
-                        path = str(file)
+                name = filepath.name
+                path = str(filepath)
 
-                        cur.execute(
-                            """
-                            INSERT INTO pdfs (name,path) VALUES (%s,%s) ON CONFLICT (name) DO NOTHING
-                            """,
-                            (name,path)
-                        )
+                cur.execute(
+                    """
+                    INSERT INTO pdfs (name,path) VALUES (%s,%s) ON CONFLICT (name) DO NOTHING
+                    """,
+                    (name,path)
+                )
 
     except psycopg.Error as e:
         print(f'Failed to insert pdfs into database, error {e}\n\n')
@@ -252,9 +269,17 @@ def retrieve_document_chunks(document_name,type):
 if __name__ == '__main__':
 
     reformat = 1
-
     if reformat:
         create_db_tables()
-    else:
-        delete_rows()
+
+    chunk_type = 0
+    chunks = {
+        0:None,
+        1:'text',
+        2:'image',
+        3:'tables'
+    }
+    if chunks[chunk_type]:
+        delete_chunks(chunk_type)
+
 

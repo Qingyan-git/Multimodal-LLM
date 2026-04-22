@@ -14,7 +14,7 @@ from qdrant import format_embeddings
 
 class OpenAIModel:
 
-    def __init__(self,chat_model='gpt-4o-mini',embedding_model='text-embedding-3-small'):
+    def __init__(self,chat_model=os.getenv('openai_chat_model'),embedding_model=os.getenv('openai_embedding_model')):
 
         api_key = os.getenv('openai_api_key')
 
@@ -48,7 +48,7 @@ class OpenAIModel:
         return semantic_chunks
 
     
-    async def embed_texts(self,chunks):
+    async def embed_texts(self,chunks,cost_per_million=0.02):
 
         texts = []
         token_cost = 0
@@ -58,6 +58,7 @@ class OpenAIModel:
             Chunk from document : {chunk.document_name}
             Chunk context : {chunk.context}
             Chunk content : {chunk.content}
+            Chunk metadata : {chunk.metadata}
             """
             texts.append(text)
 
@@ -69,7 +70,7 @@ class OpenAIModel:
         tokens = sum(len(encoding.encode(text)) for text in texts)
         
         # 3. Calculate cost ($0.02 per 1,000,000 tokens as of 2026)
-        cost = (tokens / 1000000) * 0.02
+        cost = (tokens / 1000000) * cost_per_million
 
         vectors = await self.embedding_model.aembed_documents(texts)
         total_cost = [tokens,cost]

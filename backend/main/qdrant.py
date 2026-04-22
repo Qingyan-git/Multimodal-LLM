@@ -5,6 +5,7 @@ import os
 import uuid
 from dataclasses import asdict
 
+
 def get_qdrant_client():
     """
     Returns a qdrant_client object
@@ -111,6 +112,8 @@ def get_similar_chunks(query_vector,limit=5,filters=None):
                     }
 
                     similar_chunks.append(item)
+
+                similar_chunks.sort(key=lambda item: item['score'], reverse=True)
 
                 return similar_chunks
         print('No results found for this query.\n\n')

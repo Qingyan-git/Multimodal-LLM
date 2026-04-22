@@ -1,7 +1,7 @@
 
 from docling.datamodel.document import DocItemLabel, TextItem
 from docling.datamodel.base_models import InputFormat
-from docling.datamodel.pipeline_options import PdfPipelineOptions
+from docling.datamodel.pipeline_options import PdfPipelineOptions, PictureDescriptionBaseOptions
 from docling.document_converter import DocumentConverter, PdfFormatOption
 from langchain_community.callbacks.manager import get_openai_callback
 
@@ -12,6 +12,8 @@ import dotenv
 import pandas as pd
 import numpy as np
 import io
+import re
+import unicodedata
 
 from text_chunking import save_to_file,delete_all_files_in_folder
 from llms_and_models import OpenAIModel
@@ -20,6 +22,26 @@ from postgres import save_document_chunks, insert_pdfs
 from qdrant import upload_to_qdrant
 
 
+
+def clean_image_text(text: str) -> str:
+    if not text:
+        return ""
+
+    # 1. Remove NUL bytes for Postgres
+    text = text.replace('\x00', '')
+
+    # 2. Normalize Unicode (Fixes ligatures like 'ﬁ' -> 'fi')
+    # NFKC decomposes combined characters and replaces them with their standard equivalents
+    text = unicodedata.normalize('NFKC', text)
+
+    # 3. Replace various whitespace (non-breaking spaces, tabs, etc.) with standard space
+    text = re.sub(r'\s+', ' ', text)
+
+    # 4. Strip control characters (except for newlines and tabs if you want them)
+    # This removes things like "Bell", "Escape", or "Backspace" characters
+    text = "".join(ch for ch in text if unicodedata.category(ch)[0] != "C" or ch in "\n\r\t")
+
+    return text.strip()
 
 
 def get_surrounding_text(document,item):
@@ -32,21 +54,27 @@ def get_surrounding_text(document,item):
     prev_text = ""
     post_text = ""
 
-    for i, (item,level) in enumerate(page_items):
-        if item.get_ref() == item_ref:
-            if i > 0:
-                for prev_idx in range(i-1,-1,-1):
-                    candidate_item = page_items[prev_idx][0]
-                    if isinstance(candidate_item,TextItem) and candidate_item.label == DocItemLabel.PARAGRAPH:
-                        prev_text = candidate_item.text
-                        break
+    for i, (curr_item,level) in enumerate(page_items):
+        if curr_item.get_ref() == item_ref:
+            item_idx = i
+            break
 
-            if i < len(page_items)-1:
-                for post_idx in range(i+1,len(page_items),1):
-                    candidate_item = page_items[post_idx][0]
-                    if isinstance(candidate_item,TextItem) and candidate_item.label == DocItemLabel.PARAGRAPH:
-                        post_text = candidate_item.text
-                        break
+    if item_idx > 0:
+        for prev_idx in range(i-1,-1,-1):
+            candidate_item = page_items[prev_idx][0]
+            if isinstance(candidate_item,TextItem): #and candidate_item.label == DocItemLabel.PARAGRAPH:
+                prev_text = candidate_item.text
+                break
+
+    if item_idx < len(page_items)-1:
+        for post_idx in range(i+1,len(page_items),1):
+            candidate_item = page_items[post_idx][0]
+            if isinstance(candidate_item,TextItem): #and candidate_item.label == DocItemLabel.PARAGRAPH:
+                post_text = candidate_item.text
+                break
+
+    prev_text = clean_image_text(prev_text)
+    post_text = clean_image_text(post_text)
 
     return (prev_text,post_text)
 
@@ -92,9 +120,10 @@ async def extract_images(filepath):
     # the rendered image resolution (scale=1 ~ 72 DPI). The `generate_*` toggles
     # decide which elements are enriched with images.
     pipeline_options = PdfPipelineOptions()
-    pipeline_options.images_scale = 2.0 
+    pipeline_options.images_scale = 1.0 
     pipeline_options.generate_page_images = True
     pipeline_options.generate_picture_images = True
+    pipeline_options.picture_description_options.picture_area_threshold = 0.20
 
     docling = DocumentConverter(
         format_options={
@@ -108,23 +137,28 @@ async def extract_images(filepath):
     #All document images
     document_images = document.pictures
 
-    tasks = []
-    for i,image in enumerate(document_images):
+    all_chunks = []
+    batch_size = 5
+    useable_images = [img for img in document_images if useable_image(img)]
 
-        if useable_image(image):
+    for batch_no in range(0,len(useable_images),batch_size):
+        batch = useable_images[batch_no:batch_no+batch_size]
+        batch_tasks = []
 
-            filename = f"{i}.jpg"
+        for i,image in enumerate(batch):
+            filename = f"{filepath.stem}_{batch_no}_{i}.jpg"
             image_PIL = image.get_image(doc=document)
             save_image(image_PIL,filename)
 
             task = asyncio.create_task(
                 process_single_image(model,document,image)
             )
-            tasks.append(task)
+            batch_tasks.append(task)
 
-    image_chunks = await asyncio.gather(*tasks)
+        image_chunks = await asyncio.gather(*batch_tasks)
+        all_chunks.extend(image_chunks)
 
-    return image_chunks
+    return all_chunks
 
 
 async def process_single_image(model,document,image):
@@ -142,10 +176,10 @@ async def process_single_image(model,document,image):
 
     #Build the text data that is the "image chunk"
     chunk_text = f"""
-    Text before image : {prev_text}
-    Image description : {image_summary}
-    Image caption : {image_caption}
-    Text after image : {post_text}
+    Text before image : {prev_text if prev_text.strip() else "No text before image"}
+    Image description : {image_summary if image_summary.strip() else "No image description"}
+    Image caption : {image_caption if image_caption.strip() else "No image caption"}
+    Text after image : {post_text if post_text.strip() else "No text after image"}
     """
 
     #Gets image context using chunk_text
@@ -174,11 +208,11 @@ async def process_images(folder_path):
 
             model = OpenAIModel()
 
-            insert_pdfs(folder_path)
-
-            print(f'Finished inserting pdfs to postgresdb\n\n')
-
             for file in folder_path.iterdir():
+
+                insert_pdfs(file)
+
+                print(f'Finished inserting pdf to postgresdb\n\n')
 
                 with get_openai_callback() as cb:
 
@@ -229,7 +263,7 @@ async def process_images(folder_path):
 if __name__ == "__main__":
 
     print(f'Ingestion running\n\n\n')
-    image_pdfs_path = Path(os.getenv('image_pdfs_path'))
+    image_pdfs_path = Path(os.getenv('all_pdfs_paths'))
     image_results_path = Path(os.getenv('image_results_path'))
 
     delete_all_files_in_folder(image_results_path)
