@@ -8,9 +8,9 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain.messages import SystemMessage, HumanMessage
 from langchain_experimental.text_splitter import SemanticChunker
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from fastembed import SparseTextEmbedding, LateInteractionTextEmbedding
 
-from qdrant import format_embeddings
-
+load_dotenv()
 
 class OpenAIModel:
 
@@ -20,7 +20,7 @@ class OpenAIModel:
 
         self.embedding_model = OpenAIEmbeddings(
             model=embedding_model,
-            dimensions=256,
+            dimensions=1536,
             api_key=api_key
         )
 
@@ -75,9 +75,7 @@ class OpenAIModel:
         vectors = await self.embedding_model.aembed_documents(texts)
         total_cost = [tokens,cost]
 
-        embeddings = format_embeddings(chunks,vectors)
-
-        return (embeddings,total_cost)
+        return (vectors,total_cost)
 
     
     async def get_context(self,document,chunk):
@@ -263,5 +261,59 @@ class ContextMessage:
 
 
 
+class SparseEmbedder:
+
+    def __init__(self, model_name=os.getenv('sparse_embedding_model'), use_threads=8):
+
+        self.model = SparseTextEmbedding(model_name=model_name, parallel=use_threads)
+
+    
+    def embed_texts(self, chunks):
+
+        formatted_chunks = []
+        for chunk in chunks:
+            message = f"Context : {chunk.context} | Content : {chunk.content}"
+            formatted_chunks.append(message)
+        
+        # Returns a list of sparse vectors for ingestion
+        embeddings = list(self.model.embed(formatted_chunks))
+        return [
+            {"indices": e.indices.tolist(), "values": e.values.tolist()} 
+            for e in embeddings
+            ]
 
 
+    def embed_query(self, text):
+
+        # Helper for single query strings
+        embedding = list(self.model.embed([text]))[0]
+        return {
+            "indices": embedding.indices.tolist(), 
+            "values": embedding.values.tolist()
+        }
+
+
+
+class ColBERTEmbedder:
+
+    def __init__(self, model_name=os.getenv('late_interaction_embedding_model'), use_threads=8):
+
+        self.model = LateInteractionTextEmbedding(model_name, parallel=use_threads)
+
+
+    def embed_texts(self, chunks):
+
+        formatted_chunks = []
+        for chunk in chunks:
+            message = f"Context : {chunk.context} | Content : {chunk.content}"
+            formatted_chunks.append(message)
+        # FastEmbed returns a generator, we convert to a list of ndarrays
+        # Qdrant accepts these numpy arrays directly
+        return list(self.model.embed(formatted_chunks))
+
+
+    def embed_query(self, query_text):
+
+        # Use .query_embed for search queries
+        # returns a generator, so we take the first item [0]
+        return list(self.model.query_embed(query_text))[0]

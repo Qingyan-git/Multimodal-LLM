@@ -7,7 +7,7 @@ import pymupdf
 import asyncio
 from langchain_community.callbacks.manager import get_openai_callback
 
-from llms_and_models import OpenAIModel, RecursiveSplitter
+from llms_and_models import OpenAIModel, RecursiveSplitter, SparseEmbedder, ColBERTEmbedder
 from chunks import TextChunk,ImageChunk
 from postgres import save_document_chunks, insert_pdfs
 from qdrant import upload_to_qdrant
@@ -45,15 +45,6 @@ def delete_all_files_in_folder(folder_path):
             count += 1
 
     print(f'{count} files removed.\n\n')
-
-
-
-
-
-
-
-
-
 
 
 def clean_text(text):
@@ -141,48 +132,53 @@ async def process_text(folder_path):
     try:
 
         model = OpenAIModel()
+        sparse_embedder = SparseEmbedder()
+        late_embedder = ColBERTEmbedder()
 
         if folder_path.is_dir():
 
             for file in folder_path.iterdir():
 
-                insert_pdfs(file)
+                if file.is_file():
 
-                print(f'Finished inserting pdf to postgresdb\n\n')
+                    insert_pdfs(file)
 
-                with get_openai_callback() as cb:
+                    print(f'Finished inserting pdf to postgresdb\n\n')
 
-                    chunks = await extract_text(file)
+                    with get_openai_callback() as cb:
 
-                    print(f'\tFinished getting text chunks\n\n')
+                        chunks = await extract_text(file)
 
-                    token_cost = f"Token cost to TEXT chunk {file.name} : {cb.total_tokens}"
-                    money_cost = f"Money cost to TEXT chunk {file.name} : {cb.total_cost}"
-                    total_cost = [token_cost,money_cost]
+                        print(f'\tFinished getting text chunks\n\n')
 
-                    save_to_file(filename=f'{file.stem}',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
+                        token_cost = f"Token cost to TEXT chunk {file.name} : {cb.total_tokens}"
+                        money_cost = f"Money cost to TEXT chunk {file.name} : {cb.total_cost}"
+                        total_cost = [token_cost,money_cost]
 
-                if chunks:
+                        save_to_file(filename=f'{file.stem}',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
 
-                    returned_chunks = save_document_chunks(file.name,chunks,type='text')
+                    if chunks:
 
-                    print(f'\tFinished saving chunks into postgresdb\n\n')
+                        returned_chunks = save_document_chunks(file.name,chunks,type='text')
 
-                    embeddings,cost = await model.embed_texts(returned_chunks)
+                        print(f'\tFinished saving chunks into postgresdb\n\n')
 
-                    print(f'\tFinished getting embeddings\n\n')
+                        dense_embeddings,cost = await model.embed_texts(returned_chunks)
+                        token_cost = f"Token cost to EMBED TEXT {file.name} : {cost[0]}"
+                        money_cost = f"Money cost to EMBED TEXT {file.name} : {cost[1]}"
+                        total_cost = [token_cost,money_cost]
+                        save_to_file(filename=f'{file.stem}',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
 
-                    token_cost = f"Token cost to EMBED TEXT {file.name} : {cost[0]}"
-                    money_cost = f"Money cost to EMBED TEXT {file.name} : {cost[1]}"
-                    total_cost = [token_cost,money_cost]
+                        sparse_embeddings = await asyncio.to_thread(sparse_embedder.embed_texts, returned_chunks)
+                        late_embeddings = await asyncio.to_thread(late_embedder.embed_texts, returned_chunks)
 
-                    save_to_file(filename=f'{file.stem}',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
+                        print(f'\tFinished getting embeddings\n\n')
 
-                    upload_to_qdrant(embeddings)
+                        upload_to_qdrant(returned_chunks,dense_embeddings,sparse_embeddings,late_embeddings)
 
-                    print(f'\tFinished uploading embeddings to qdrant\n\n')
+                        print(f'\tFinished uploading embeddings to qdrant\n\n')
 
-                print(f'Finished processing\n\n')
+                    print(f'Finished processing\n\n')
 
             print(f'\nFinished processing all files\n')
 
@@ -195,7 +191,7 @@ async def process_text(folder_path):
 
 if __name__ == '__main__':
     print(f'Ingestion running\n\n\n')
-    text_pdfs_path = Path(os.getenv('all_pdfs_paths'))
+    text_pdfs_path = Path(os.getenv('all_pdfs_path'))
     print(text_pdfs_path)
     text_results_path = Path(os.getenv('text_results_path'))
 

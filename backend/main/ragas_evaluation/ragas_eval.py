@@ -16,12 +16,37 @@ import pandas as pd
 from pathlib import Path
 import asyncio
 
-from ..main.llms_and_models import OpenAIModel, ContextMessage
-from ..main.text_chunking import clean_text, save_to_file
-from ..main.qdrant import get_similar_chunks
+
+# getting the name of the directory
+# where the this file is present.
+current = os.path.dirname(os.path.realpath(__file__))
+
+# Getting the parent directory name
+# where the current directory is present.
+parent = os.path.dirname(current)
+
+# adding the parent directory to 
+# the sys.path.
+sys.path.append(parent)
+
+# now we can import the module in the parent
+# directory.
+
+from llms_and_models import OpenAIModel, ContextMessage, SparseEmbedder, ColBERTEmbedder
+from text_chunking import clean_text, save_to_file
+from qdrant import get_similar_chunks
 
 
-#Copied directly from ragas "latest" docs btw, so any incompatibilities only can blame them already
+
+
+
+
+"""
+Haven't tested the new implementation yet
+"""
+
+
+
 
 def generate_testset(filepath, testset_size=5, max_tokens=4096):
     
@@ -50,20 +75,16 @@ def generate_testset(filepath, testset_size=5, max_tokens=4096):
     return df
 
 
-async def evaluate_testset(df,filename,max_tokens=4096):
+async def evaluate_testset(testset,filename,max_tokens=4096):
 
     # Single unified approach - works everywhere
     client = AsyncOpenAI(api_key=os.getenv('openai_api_key'))
 
-
-    """
-    Fix max tokens issue for openai API call
-    """
-
-
     llm = llm_factory(client=client, model=os.getenv('openai_chat_model'), max_tokens=max_tokens)
     embeddings = OpenAIEmbeddings(client=client, model=os.getenv('openai_embedding_model'))
     model = OpenAIModel()
+    sparse_embedder = SparseEmbedder()
+    late_embedder = ColBERTEmbedder()
 
     metrics = [
         Faithfulness(llm=llm),
@@ -72,13 +93,55 @@ async def evaluate_testset(df,filename,max_tokens=4096):
         ContextRecall(llm=llm)
     ]
 
-    eval_tasks = [evaluate_row(df,i,metrics,model) for i in range(len(df))]
-    results = await asyncio.gather(*eval_tasks)
+    results = []
+    for index, row in testset.iterrows():
+        user_input = row['user_input']
+        reference = row['reference']
+        reference_contexts = row['reference_contexts']
+
+        dense_vector = await model.get_query_vector(user_input)
+        sparse_vector = sparse_embedder.embed_query(user_input)
+        late_vector = late_embedder.embed_query(user_input)
+
+        similar_chunks = get_similar_chunks(dense_vector,sparse_vector,late_vector)
+        chunk_messages = [ContextMessage(chunk).get_message() for chunk in similar_chunks]
+
+        answer = await model.answer_question(user_input,chunk_messages)
+
+        tasks = [
+            metrics[0].ascore(user_input=user_input,response=answer,retrieved_contexts=chunk_messages),
+            metrics[1].ascore(user_input=user_input,response=answer),
+            metrics[2].ascore(user_input=user_input,retrieved_contexts=chunk_messages,reference=reference),
+            metrics[3].ascore(user_input=user_input,retrieved_contexts=chunk_messages,reference=reference)
+        ]
+        result = await asyncio.gather(*tasks)
+
+        item = {
+            #From testset
+            '--- TESTSET ---': '---',
+            'user_input' : user_input,
+            'reference' : reference,
+            'source' : reference_contexts,
+
+            #LLM answer
+            '--- LLM ANSWER ---': '---',
+            'chunk_messages' : chunk_messages,
+            'llm_answer' : answer,
+
+            #Metrics
+            '--- METRICS ---': '---',
+            'faithfulness' : float(result[0].value),
+            'answer_relevancy' : float(result[1].value),
+            'context precision' : float(result[2].value),
+            'context_recall' : float(result[3].value),
+        }
+
+        results.append(item)
 
     df = pd.DataFrame(results)
     column_order = [
         '--- TESTSET ---', 'user_input', 'reference', 'source',
-        '--- LLM ANSWER ---', 'similar_chunks', 'llm_answer',
+        '--- LLM ANSWER ---', 'chunk_messages', 'llm_answer',
         '--- METRICS ---', 'faithfulness', 'answer_relevancy', 'context precision', 'context_recall'
     ]
     df = df[column_order]
@@ -87,49 +150,6 @@ async def evaluate_testset(df,filename,max_tokens=4096):
     df.to_csv(path_or_buf=save_path,index=False)
 
     return df
-
-
-async def evaluate_row(df,idx,metrics,model):
-    row = df.iloc[idx]
-    user_input = row['user_input']
-    reference = row['reference']
-    reference_contexts = row['reference_contexts']
-
-    user_input_vector = await model.get_query_vector(user_input)
-    similar_chunks = get_similar_chunks(user_input_vector)
-    context_messages = [ContextMessage(chunk).get_message() for chunk in similar_chunks]
-    answer = await model.answer_question(user_input,context_messages)
-
-    tasks = [
-        metrics[0].ascore(user_input=user_input,response=answer,retrieved_contexts=context_messages),
-        metrics[1].ascore(user_input=user_input,response=answer),
-        metrics[2].ascore(user_input=user_input,retrieved_contexts=context_messages,reference=reference),
-        metrics[3].ascore(user_input=user_input,retrieved_contexts=context_messages,reference=reference)
-    ]
-
-    results = await asyncio.gather(*tasks)
-
-    item = {
-        #From testset
-        '--- TESTSET ---': '---',
-        'user_input' : user_input,
-        'reference' : reference,
-        'source' : reference_contexts,
-
-        #LLM answer
-        '--- LLM ANSWER ---': '---',
-        'similar_chunks' : context_messages,
-        'llm_answer' : answer,
-
-        #Metrics
-        '--- METRICS ---': '---',
-        'faithfulness' : float(results[0].value),
-        'answer_relevancy' : float(results[1].value),
-        'context precision' : float(results[2].value),
-        'context_recall' : float(results[3].value),
-    }
-
-    return item
 
 
 async def evaluate_pdfs(folder_path):

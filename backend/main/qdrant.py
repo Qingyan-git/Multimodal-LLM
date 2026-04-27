@@ -1,10 +1,14 @@
 from qdrant_client import QdrantClient, models
-from qdrant_client.models import PointStruct
-from chunks import Chunk
+from qdrant_client.models import PointStruct, Distance, VectorParams, models
+
 import os
-import uuid
 from dataclasses import asdict
 
+from chunks import Chunk
+
+
+
+# Creation functions
 
 def get_qdrant_client():
     """
@@ -27,11 +31,51 @@ def get_qdrant_client():
         print(f'Failed to connect to qdrant using parameters, error {e}\n\n')
 
 
-def delete_points(collection_name):
+def create_collection():
 
     try:
 
         qdrant_client = get_qdrant_client()
+        collection_name = os.getenv('qdrant_collection_name')
+
+        if qdrant_client.collection_exists(collection_name=collection_name):
+
+            print(f'Collection exists currently, deleting to reset\n')
+            qdrant_client.delete_collection(collection_name=collection_name)
+
+        qdrant_client.create_collection(
+            collection_name,
+            vectors_config={
+                "dense": models.VectorParams(
+                    size=1536,
+                    distance=models.Distance.COSINE,
+                ),
+                "multi": models.VectorParams(
+                    size=96,
+                    distance=models.Distance.COSINE,
+                    multivector_config=models.MultiVectorConfig(
+                        comparator=models.MultiVectorComparator.MAX_SIM,
+                    ),
+                    hnsw_config=models.HnswConfigDiff(m=0)  #  Disable HNSW for reranking
+                ),
+            },
+            sparse_vectors_config={
+                "sparse": models.SparseVectorParams(modifier=models.Modifier.IDF)
+            }
+        )
+
+        print(f'Collection created\n\n')
+
+    except Exception as e:
+        print(f'Unable to create collection on qdrant cloud, error {e}\n\n')
+
+
+def delete_points():
+
+    try:
+
+        qdrant_client = get_qdrant_client()
+        collection_name = os.getenv('qdrant_collection_name')
 
         print(f'Attempting to delete all points from cloud\n\n')
 
@@ -45,6 +89,9 @@ def delete_points(collection_name):
     except Exception as e:
         print(f'Unable to delete points from qdrant cloud, error {e}\n\n')
 
+
+
+# Execution functions
 
 def format_embeddings(chunks,vectors):
 
@@ -62,66 +109,115 @@ def format_embeddings(chunks,vectors):
     return embeddings
 
 
-def upload_to_qdrant(embeddings):
-    """
-    Uploads the embeddings into collection_name using qdrant_client
-    """
-    try : 
-        collection_name = os.getenv('qdrant_collection_name')
-        qdrant_client = get_qdrant_client()
+def upload_to_qdrant(chunks, dense, sparse, late):
 
-        if qdrant_client:
-            qdrant_client.upsert(
-                collection_name = collection_name,
-                points = embeddings
-            )
+    try : 
+        qdrant_client = get_qdrant_client()
+        collection_name = os.getenv('qdrant_collection_name')
+        
+        points=[
+            models.PointStruct(
+                id=chunk.id,
+                vector={
+                    # 1. Dense (OpenAI)
+                    "dense": dense[i], 
+                    
+                    # 2. Sparse (BM25/SPLADE) - Using the dict from your SparseEmbedder
+                    "sparse": models.SparseVector(
+                        indices=sparse[i]["indices"],
+                        values=sparse[i]["values"]
+                    ),
+                    
+                    # 3. Multi (ColBERT) - Ensure this is a list of lists (float)
+                    "multi": late[i]
+                },
+                payload=asdict(chunk)
+            ) for i, chunk in enumerate(chunks)]
+
+        # 3. Perform the upload
+        qdrant_client.upload_points(
+            collection_name=collection_name,
+            points=points,
+            parallel=4,
+            batch_size=32,
+            wait=True
+        )
 
     except Exception as e:
         print(f'Unable to upload embeddings to qdrant cloud, error {e}\n\n')
 
 
+def get_similar_chunks(dense,sparse,late,filters=None):
 
-
-
-def get_similar_chunks(query_vector,limit=5,filters=None):
+    """
+    Havent tested if this works yet
+    """
 
     try:
         collection_name = os.getenv('qdrant_collection_name')
-        qdrant_client = get_qdrant_client()
+        client = get_qdrant_client()
 
-        if qdrant_client:
-            results = qdrant_client.query_points(
-                collection_name=collection_name,
-                query=query_vector,
-                limit=limit,
-                query_filter=filters,
-                with_payload=True,
-                with_vectors=False
-            ).points
+        prefetch = [
+            models.Prefetch(
+                query=dense,
+                using="dense",
+                limit=10,
+            ),
+            models.Prefetch(
+                query=models.SparseVector(
+                    indices=sparse["indices"], 
+                    values=sparse["values"]
+                ),
+                using="sparse",
+                limit=10,
+            ),
+        ]
 
-            if results:
-                similar_chunks = []
-                for result in results:
+        results = client.query_points(
+            collection_name=collection_name,
+            prefetch=prefetch,
+            query=late, 
+            using="multi",
+            with_payload=True,
+            limit=3,
+            query_filter=filters
+        )
 
-                    item = {
-                        'score' : result.score, 
-                        'document_name' : result.payload['document_name'], 
-                        'context' : result.payload['context'],
-                        'content' : result.payload['content'], 
-                        'metadata' : result.payload['metadata']
-                    }
+        if results:
+            similar_chunks = []
+            for result in results.points:
 
-                    similar_chunks.append(item)
+                item = {
+                    'score' : result.score, 
+                    'document_name' : result.payload['document_name'], 
+                    'context' : result.payload['context'],
+                    'content' : result.payload['content'], 
+                    'metadata' : result.payload['metadata']
+                }
 
-                similar_chunks.sort(key=lambda item: item['score'], reverse=True)
+                similar_chunks.append(item)
 
-                return similar_chunks
-        print('No results found for this query.\n\n')
+            similar_chunks.sort(key=lambda item: item['score'], reverse=True)
+
+            return similar_chunks
+
+        else:
+            print('No results found for this query.\n\n')
+            return []
 
     except Exception as e:
         print(f'Unable to get similar chunks, error {e}\n\n')
         raise
 
 
+
 if __name__ == '__main__':
-    delete_points(os.getenv('qdrant_collection_name'))
+
+    recreate = 1
+
+    if recreate:
+        create_collection()
+
+    else:
+        delete_points()
+
