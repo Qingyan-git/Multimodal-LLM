@@ -6,7 +6,8 @@ pymupdf
 pymupdf4llm
 pytesseract
 gdown
-dotenv
+pandas
+docling
 
 langchain
 langchain-huggingface
@@ -16,3 +17,5 @@ langchain_openai
 
 ragas
 rapidfuzz
+mteb
+vidore-benchmark

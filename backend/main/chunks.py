@@ -12,21 +12,26 @@ class Chunk:
 
     context : Optional[str] = ""
 
-    content : Optional[dict] = field(default_factory=dict)
+    content : Optional[str] = ""
 
     metadata : Optional[dict] = field(default_factory=dict)
 
 
 @dataclass
 class TextChunk(Chunk):
-
     type : str = 'text'
-    content: dict = field(default_factory=lambda: {'text': ""})
 
 
 @dataclass
 class ImageChunk(Chunk):
-
     type : str = 'image'
-    content :  dict = field(default_factory=lambda: {'text': "", 'image': b""})
 
+
+@dataclass
+class TableChunk(Chunk):
+    type : str = 'table'
+
+
+@dataclass
+class PageChunk(Chunk):
+    type : str = 'page'

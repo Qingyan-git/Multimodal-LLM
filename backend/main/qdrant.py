@@ -5,6 +5,7 @@ import os
 import uuid
 from dataclasses import asdict
 
+
 def get_qdrant_client():
     """
     Returns a qdrant_client object
@@ -66,13 +67,10 @@ def upload_to_qdrant(embeddings):
     Uploads the embeddings into collection_name using qdrant_client
     """
     try : 
-
         collection_name = os.getenv('qdrant_collection_name')
-
         qdrant_client = get_qdrant_client()
 
         if qdrant_client:
-
             qdrant_client.upsert(
                 collection_name = collection_name,
                 points = embeddings
@@ -88,13 +86,10 @@ def upload_to_qdrant(embeddings):
 def get_similar_chunks(query_vector,limit=5,filters=None):
 
     try:
-
         collection_name = os.getenv('qdrant_collection_name')
-
         qdrant_client = get_qdrant_client()
 
         if qdrant_client:
-
             results = qdrant_client.query_points(
                 collection_name=collection_name,
                 query=query_vector,
@@ -106,24 +101,22 @@ def get_similar_chunks(query_vector,limit=5,filters=None):
 
             if results:
                 similar_chunks = []
-
                 for result in results:
 
                     item = {
                         'score' : result.score, 
-                        'context' : result.payload['context'],
-                        'content' : result.payload['content']['text'], 
                         'document_name' : result.payload['document_name'], 
-                        'pages' : result.payload['metadata']['pages'],
+                        'context' : result.payload['context'],
+                        'content' : result.payload['content'], 
+                        'metadata' : result.payload['metadata']
                     }
 
                     similar_chunks.append(item)
 
+                similar_chunks.sort(key=lambda item: item['score'], reverse=True)
+
                 return similar_chunks
-
-
         print('No results found for this query.\n\n')
-
 
     except Exception as e:
         print(f'Unable to get similar chunks, error {e}\n\n')

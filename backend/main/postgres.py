@@ -2,7 +2,7 @@ import psycopg
 import os
 import json
 
-from chunks import TextChunk
+from chunks import Chunk
 
 def get_connection():
 
@@ -100,12 +100,21 @@ def create_db_tables():
             with conn.cursor() as cur:
 
                 cur.execute(
+                """
+                DROP TABLE pdfs CASCADE
+                """) 
+
+                cur.execute(
+                """
+                DROP TABLE chunks CASCADE
+                """)
+
+                cur.execute(
                     """
                     CREATE TABLE IF NOT EXISTS pdfs(
                     id SERIAL PRIMARY KEY,
                     name TEXT NOT NULL UNIQUE,
-                    path TEXT NOT NULL,
-                    metadata JSONB NOT NULL
+                    path TEXT NOT NULL
                     )
                     """
                 )
@@ -117,7 +126,7 @@ def create_db_tables():
                     document_name TEXT REFERENCES pdfs(name),
                     type TEXT,
                     context TEXT,
-                    content JSONB,
+                    content TEXT,
                     metadata JSONB DEFAULT '{}'
                     )
                     """
@@ -152,30 +161,41 @@ def delete_rows():
         print(f'Failed to delete rows from tables, {e}\n\n')
 
 
-
-#Execution functions
-
-def insert_pdf(file_path,metadata):
-
-    '''
-    Inserts the pdfs found under the directory at folder_path into the postgresql database
-    '''
-
+def delete_chunks(type):
+    
     try:
-
-        name = str(file_path.name)
-        path = str(file_path)
-        metadata = json.dumps(metadata)
-
         with get_connection() as conn:
             with conn.cursor() as cur:
 
                 cur.execute(
                     """
-                    INSERT INTO pdfs (name,path,metadata) VALUES (%s,%s,%s)
+                    DELETE FROM chunks WHERE type = %s
                     """,
+                    (type,)
+                )
 
-                    (name,path,metadata)
+                print(f'\nAll chunks of type : {type} deleted\n\n')
+
+    except psycopg.Error as e:
+        print(f'Failed to delete rows from tables, {e}\n\n')
+
+
+
+#Execution functions
+
+def insert_pdfs(filepath):
+
+    try:
+        with get_connection() as conn:
+            with conn.cursor() as cur:
+                name = filepath.name
+                path = str(filepath)
+
+                cur.execute(
+                    """
+                    INSERT INTO pdfs (name,path) VALUES (%s,%s) ON CONFLICT (name) DO NOTHING
+                    """,
+                    (name,path)
                 )
 
     except psycopg.Error as e:
@@ -183,20 +203,17 @@ def insert_pdf(file_path,metadata):
         raise
 
 
-def save_document_chunks(document_name,document_chunks):
-    """
-    Saves chunks into postgres database
-    """
+def save_document_chunks(document_name,document_chunks,type):
 
     try:
         with get_connection() as conn:
             with conn.cursor() as cur:
 
                 prepared_chunks = [(
-                    document_name,
+                    chunk.document_name,
                     chunk.type,
                     chunk.context,
-                    json.dumps(chunk.content),
+                    chunk.content,
                     json.dumps(chunk.metadata),
                     ) for chunk in document_chunks]
 
@@ -208,7 +225,7 @@ def save_document_chunks(document_name,document_chunks):
                     prepared_chunks
                 )
 
-        retrieved_chunks = retrieve_text_chunks(document_name)
+        retrieved_chunks = retrieve_document_chunks(document_name,type)
 
         return retrieved_chunks
 
@@ -217,7 +234,7 @@ def save_document_chunks(document_name,document_chunks):
         raise
 
 
-def retrieve_text_chunks(document_name):
+def retrieve_document_chunks(document_name,type):
 
     try:
         with get_connection() as conn:
@@ -225,16 +242,15 @@ def retrieve_text_chunks(document_name):
                 
                 cur.execute(
                     """
-                    SELECT id,document_name,type,context,content,metadata FROM chunks WHERE document_name = %s
+                    SELECT id,document_name,type,context,content,metadata FROM chunks WHERE document_name = %s AND type = %s
                     """,
-                    (document_name,)
+                    (document_name,type,)
                 )
 
                 results = cur.fetchall()
-
                 chunks = []
                 for result in results:
-                    chunk = TextChunk()
+                    chunk = Chunk()
                     chunk.id = result[0]
                     chunk.document_name = result[1]
                     chunk.type = result[2]
@@ -251,5 +267,19 @@ def retrieve_text_chunks(document_name):
 
 
 if __name__ == '__main__':
-    delete_rows()
+
+    reformat = 1
+    if reformat:
+        create_db_tables()
+
+    chunk_type = 0
+    chunks = {
+        0:None,
+        1:'text',
+        2:'image',
+        3:'tables'
+    }
+    if chunks[chunk_type]:
+        delete_chunks(chunk_type)
+
 

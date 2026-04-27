@@ -13,6 +13,4 @@ __pycache__/
 # Ignore the data for the datasets
 data
 pdfs
-pdf_images
-**/markdown-texts/
-**/testsets/
+**/results
