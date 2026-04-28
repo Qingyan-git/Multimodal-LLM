@@ -15,6 +15,7 @@ import os
 import pandas as pd
 from pathlib import Path
 import asyncio
+import sys
 
 
 # getting the name of the directory
@@ -50,16 +51,21 @@ Haven't tested the new implementation yet
 
 def generate_testset(filepath, testset_size=5, max_tokens=4096):
     
-    page_texts = pymupdf4llm.to_markdown(filepath,page_separators=True,page_chunks=True)
+    # page_texts = pymupdf4llm.to_markdown(filepath,page_separators=True,page_chunks=True)
 
-    langchain_docs = []
-    for page in page_texts:
-        page_text = page['text']
-        cleaned_content = clean_text(page_text)
-        doc = Document(page_content=cleaned_content,metadata={'source':filepath})
-        langchain_docs.append(doc)
+    # langchain_docs = []
+    # for page in page_texts:
+    #     page_text = page['text']
+    #     cleaned_content = clean_text(page_text)
+    #     doc = Document(page_content=cleaned_content,metadata={'source':filepath})
+    #     langchain_docs.append(doc)
 
-    # docs = [Document(page_content=document_markdown,metadata={'source':filepath})]
+    full_text = pymupdf4llm.to_markdown(filepath)
+    cleaned_content = clean_text(full_text)
+    
+    # If the doc is short, one Document is actually better for Ragas 
+    # as it sees all the 'Must-Knows' at once.
+    langchain_docs = [Document(page_content=cleaned_content, metadata={'source': str(filepath)})]
 
     client = AsyncOpenAI(api_key=os.getenv('openai_api_key'))
     generator_llm = llm_factory(client=client,model=os.getenv('openai_chat_model'), max_tokens=max_tokens)
@@ -190,6 +196,6 @@ async def evaluate_pdfs(folder_path):
 
 if __name__ == "__main__":
 
-    evaluation_pdfs_path=Path(os.getenv('all_pdfs_paths'))
+    evaluation_pdfs_path=Path(os.getenv('all_pdfs_path'))
     asyncio.run(evaluate_pdfs(evaluation_pdfs_path))
 

@@ -1,0 +1,13 @@
+Question,Answer,Source
+What are the types of vendors that can register on Vendors@Gov?,"UEN Registered Entity, Foreign Entity Without UEN, SingPass Holder (individual), and Non-SingPass Holder (individual).",Process Flow Diagram
+How does a UEN Registered Entity log in to Vendors@Gov?,They log in under the 'Business' option using their SingPass or Singapore Foreign User Account (SFA).,Process Flow Diagram
+What happens after a UEN Registered Entity or Foreign Entity creates their vendor record?,Their vendor record will be auto-approved immediately after creation.,Process Flow Diagram
+What additional step must a Non-SingPass Holder complete before they can access Vendors@Gov?,They must submit a copy of the AGD Password form to AGD. Foreign individuals registering an EFT bank account must also submit the original DCA form with bank endorsement to AGD.,Process Flow Diagram
+How long does it take for a Non-SingPass Holder to receive their Vendors@Gov login credentials?,Instructions to set the Vendors@Gov password will be issued by email after 7 working days.,Process Flow Diagram
+What must an Individual SingPass Holder do if they register a TT bank account?,"They must submit a copy of a bank statement stating the account holder name and bank account details to AGD for vendor record approval, by lodging a helpdesk ticket.",Process Flow Diagram
+What is the preferred channel for e-invoice submission for entities?,InvoiceNow Network is the preferred channel for e-invoice submission. Vendors@Gov is also available as an alternative.,Process Flow Diagram
+How is the payment schedule date calculated for an e-invoice?,"It is calculated based on the payment term selected on the e-invoice. For example, if the payment term is 30 days, payment is made on the 30th day from the e-invoice date.",Process Flow Diagram
+What should a vendor do if they do not receive payment on the scheduled due date?,They should contact their client agency to check on their e-invoice status.,Process Flow Diagram
+Where can vendors retrieve remittance advices for payments made by AGD?,Remittance advices for payments paid by the Accountant-General's Department (AGD) can be retrieved at the Vendors@Gov portal.,Process Flow Diagram
+What special consideration applies to vendors transacting with Statutory Boards?,Vendors transacting with Statutory Boards need to separately inform their client agency of their bank details for the agency to process payment at their own financial system.,Process Flow Diagram
+What are the main stages of the Vendors@Gov process flow?,"Creating a Vendors@Gov Account / Login, Creating an E-Invoice, and receiving Payment / Remittance Advice.",Process Flow Diagram

@@ -1,0 +1,232 @@
+﻿Question,Answer
+What is the main problem with traditional cross-border FX payments that tokenised bank liabilities aim to solve?,"**Main Problem with Traditional Cross-Border FX Payments:**
+
+- **Complexity and Inefficiency:** Traditional cross-border payment systems are often complex, involving multiple intermediaries and disparate payment systems. This complexity can lead to high costs, slow processing times, and a lack of transparency in transactions.
+  
+- **Time Constraints:** Payments are affected by the operating hours of various payment systems, which are typically bound by local Real Time Gross Settlement (RTGS) cut-off times. This limits the ability to settle transactions outside of standard market hours.
+
+- **FX Risks:** Participants in cross-border transactions are exposed to foreign exchange risks, which can impact financial health and business goals.
+
+**Tokenised Bank Liabilities Solution:**
+
+Tokenised bank liabilities aim to simplify these processes by:
+- Reducing reliance on intermediaries.
+- Enabling 24/7 settlement through shared ledger technology.
+- Enhancing operational efficiency and liquidity management in the global FX market.
+
+These innovations are designed to alleviate the pain points associated with traditional transaction banking, ultimately improving the overall efficiency and effectiveness of cross-border payments.
+
+**Sources Used:** Project Guardian FX workstream Transaction Banking.pdf, 5; Project Guardian FX workstream Transaction Banking.pdf, 7"
+What is the current average cost of cross-border payments and what reduction targets has the FSB set?,"The current average costs for cross-border payments, as reported by the Financial Stability Board (FSB), are as follows:
+
+- **B2B cross-border payment transactions**: 1.6%
+- **B2P and P2B cross-border payment transactions**: 2%
+- **P2P transactions**: 2.6%
+
+The FSB has set a target to reduce the global average cost of retail cross-border payments to no more than **1%** by the end of **2027**, with no payment corridors having costs higher than **3%**.
+
+**Sources Used:** Project Guardian FX workstream Transaction Banking.pdf, Page 8"
+How do capital controls in certain countries affect cross-border tokenised payments?,"**Impact of Capital Controls on Cross-Border Tokenised Payments**
+
+- **Capital Flow Management Measures (CFMM)**: Certain countries implement currency-based CFMM to regulate financial flows. These measures can significantly influence the efficiency of cross-border settlements involving affected currencies.
+  
+- **Efficiency and Compliance**: The implementation of capital controls can restrict access to funds, which in turn affects the operational efficiency of cross-border payments. However, the use of tokenization can enhance compliance and operational efficiency by embedding these capital control policies within digital money transfers.
+
+- **Tokenization Benefits**: Tokenization allows for programmability in value transfer, which can facilitate the adherence to capital control policies during cross-border transactions. This can lead to greater efficiency and transparency in the payment process.
+
+- **Operational Considerations**: While tokenization offers potential improvements, the complexities of implementing these systems in the context of existing capital controls must be carefully managed to ensure effective operation.
+
+In summary, capital controls can hinder the efficiency of cross-border tokenised payments, but the integration of tokenization can help mitigate these effects by enhancing compliance and operational workflows.
+
+**Sources Used:** Project Guardian FX workstream Transaction Banking.pdf, 8, 9, 10"
+What are the main operating models explored for tokenised FX settlement?,"I do not have enough information in the provided documents.
+
+**Sources Used:** Project Guardian FX workstream Transaction Banking.pdf, 39, 36, 5"
+How does Ant International's multi-currency token exchange model work?,"Ant International's multi-currency token exchange model operates by utilizing a structured process involving liquidity providers to facilitate cross-border payments. Here’s a detailed breakdown of how it works:
+
+- **Token Transfer**: The model begins with the transfer of a token (e.g., SGD token) to the liquidity provider's token address.
+- **Liquidity Provider Role**: The liquidity provider plays a crucial role by:
+  - Providing a price quote.
+  - Checking for currency pair availability.
+  - Performing the token exchange (e.g., exchanging SGD token for USD token).
+- **Token Redemption**: After the exchange, the liquidity provider transfers the USD token to Ant International's designated token address.
+- **Finalization**: The Issuer Bank then ""burns"" the USD token from Ant International's address and credits Ant International's cash account with the equivalent USD fiat currency.
+
+This model emphasizes efficiency and security through the use of smart contracts and aims to enhance the overall process of cross-border payments by leveraging tokenized deposits and shared ledger technology.
+
+**Sources Used:** Project Guardian FX workstream Transaction Banking.pdf, 30; Project Guardian FX workstream Transaction Banking.pdf, 27"
+What are the requirements for an entity to become a liquidity provider in Ant International's token exchange model?,"To become a liquidity provider in Ant International's token exchange model, an entity must meet the following requirements:
+
+- **Legal Holder of Tokens**: The liquidity provider must be a legal holder of both tokens in the currency pair involved in the exchange.
+- **Token Quantity**: The liquidity provider must possess a certain amount of each token necessary for the transaction.
+- **Pricing Capability**: The liquidity provider must have the capability to offer token currency pair pricing securely, reliably, and in real-time.
+- **Use of Price Oracle**: The liquidity provider must utilize a price oracle to upload off-chain token pair exchange rates onto the shared ledger.
+
+These requirements ensure that the liquidity provider can effectively facilitate cross-border payments by performing token exchanges and providing accurate pricing information.
+
+**Sources Used:** Project Guardian FX workstream Transaction Banking.pdf, 28, 29, 30"
+"How does the price oracle work in Ant International's model, and what data sources does it rely on?","**Price Oracle Functionality in Ant International's Model:**
+
+- **Role of the Price Oracle:**
+  - The price oracle is integral to Ant International's model for facilitating cross-border payments using tokenized deposits. It provides off-chain foreign exchange (FX) pricing to support the liquidity provider in executing currency exchanges.
+
+- **Data Sources:**
+  - The oracle is fed by APIs that aggregate data from various sources at high frequency intervals. This ensures that the pricing information is updated regularly, maintaining data integrity and minimizing latency.
+  - The oracle integrates benchmark rates for each currency pair into the shared ledger network, which is crucial for real-time data transmission and liquidity management.
+
+- **Security Measures:**
+  - To prevent manipulation and ensure confidence in the pricing data, anti-manipulation measures, such as cryptographic tools, are implemented. This includes basic hash functions to verify data integrity without revealing sensitive information.
+
+In summary, the price oracle in Ant International's model acts as a bridge between off-chain FX pricing and the shared ledger, ensuring that liquidity providers have access to accurate and timely pricing information for cross-border transactions.
+
+**Sources Used:** Project Guardian FX workstream Transaction Banking.pdf, 28, 29, 30"
+What did the BNY and OCBC pilot demonstrate about shared ledger interoperability?,"The BNY and OCBC pilot demonstrated the technical feasibility of using shared ledger technology to achieve near-instantaneous settlement of cross-border foreign exchange (FX) transactions, which typically take up to two days to settle. The pilot highlighted the potential for faster transaction speeds and improved fraud mitigation capabilities through the use of Hash-Time Locked Contracts. It illustrated how interoperability between private, bank-owned ledgers could be achieved, allowing for efficient and secure transactions without the need for both banks to operate on the same underlying shared ledger technology. This initiative is part of a broader effort to enhance transaction banking efficiency and streamline cross-border payments.
+
+**Sources Used:** Project Guardian FX workstream Transaction Banking.pdf, 31, 32"
+How do Hash Time-Locked Contracts (HTLCs) work in the BNY and OCBC pilot?,"**Hash Time-Locked Contracts (HTLCs) in the BNY and OCBC Pilot:**
+
+- **Functionality**: HTLCs are utilized to enhance interoperability between private, bank-owned ledgers, facilitating faster transaction speeds in cross-border payments.
+- **Process**:
+  - The originating bank initiates a transaction and sends a payment message to the beneficiary's bank via a bilateral connection.
+  - This payment message includes a secret that unlocks the smart contract holding the funds in escrow.
+  - Once the funds are unlocked from escrow, they are credited to the beneficiary’s account in a tokenized deposit form.
+- **Benefits**:
+  - The pilot demonstrated the technical feasibility of achieving near-instantaneous settlements, significantly reducing the typical settlement time for cross-border FX transactions, which can take up to two days.
+  - HTLCs also introduce opportunities for fraud mitigation, allowing banks to identify and flag suspicious activities in near real-time.
+
+This innovative approach aims to streamline cross-border payments and enhance operational efficiency in the financial sector.
+
+**Sources Used:** Project Guardian FX workstream Transaction Banking.pdf, 31, 32"
+What fraud mitigation opportunities does the HTLC escrow model create for BNY and OCBC?,"The Hash-Time Locked Contracts (HTLC) escrow model creates several fraud mitigation opportunities for BNY and OCBC, including:
+
+- **Real-Time Monitoring**: The model allows for the identification and flagging of suspicious activity in near real-time, enhancing the banks' ability to detect potential fraud.
+- **Secure Transactions**: By using HTLC, funds are held in escrow until the transaction conditions are met, which adds a layer of security and reduces the risk of fraudulent transactions.
+- **Enhanced Operational Efficiency**: The implementation of shared ledger technology and smart contracts facilitates faster and more secure transactions, which can help in quickly addressing any fraudulent activities.
+
+Overall, the HTLC escrow model not only improves transaction speeds but also provides a framework for developing advanced fraud mitigation tools that can be integrated into the banks' operations.
+
+**Sources Used:** Project Guardian FX workstream Transaction Banking.pdf, 32, Project Guardian FX workstream Transaction Banking.pdf, 31, Project Guardian FX workstream Transaction Banking.pdf, 32"
+"How much has HSBC settled using its internal PvP shared ledger solution, and what are its key benefits?","HSBC has settled over 9.4 trillion USD using its internal Payment versus Payment (PvP) shared ledger solution. The key benefits of this solution include:
+
+- **Reliance on Fiat Money**: It utilizes existing bank account structures, which enhances stability and trust.
+- **Integration with Existing Systems**: The solution acts as an overlay to current industry systems, improving operational efficiency.
+- **Enhanced Risk Management**: The implementation of a shared ledger as a smart workflow and payment orchestration layer leverages existing risk and control frameworks, addressing interoperability challenges and reducing operational risks.
+
+These factors contribute to the successful operation of the PvP solution for over six years across 18 entities.
+
+**Sources Used:** Project Guardian FX workstream Transaction Banking.pdf, 33"
+"What legal and documentation gaps exist for tokenised FX transactions, and how is the industry addressing them?","The industry is addressing legal and documentation gaps for tokenized FX transactions through the development of standardized documentation and the establishment of an industry-wide framework. Key points include:
+
+- **Standardized Documentation**: There is a focus on creating standardized documentation for tokenized FX transactions, which is essential for enhancing transparency, efficiency, and risk management in transaction banking. This includes adherence to existing industry standards such as SWIFT Messaging and FIX Protocol, which are crucial for effective communication and regulatory compliance.
+
+- **Industry-Wide Framework**: The document emphasizes the necessity for a broadly accepted framework that facilitates technology adoption and mitigates legal uncertainties. This framework aims to standardize operations and improve operational efficiency, thereby supporting the integration of tokenized assets in financial markets.
+
+- **Regulatory Compliance**: The need for improved operational standards and frameworks is highlighted, which is vital for the adoption of tokenized solutions in the FX market. Regulatory bodies and existing standards play a significant role in ensuring compliance and addressing legal uncertainties.
+
+- **Examples of Standards**: The document mentions various standards and best practices, such as the FX Global Code and the ISDA Master Agreement, which are part of the ongoing efforts to address documentation and legal gaps in the FX market.
+
+In summary, the industry is actively working to close legal and documentation gaps through the establishment of standardized practices and frameworks that enhance compliance and operational efficiency in tokenized FX transactions.
+
+**Sources Used:** Project Guardian FX workstream Transaction Banking.pdf, 35, 36, 37"
+How does the existing ISDA Master Agreement framework need to be adapted for tokenised deposit settlements?,"To adapt the existing ISDA Master Agreement framework for tokenised deposit settlements, several amendments are necessary to accommodate the unique characteristics of tokenised models. The key adaptations include:
+
+- **Definition of Tokenised Deposits**: A clear definition of ""tokenised deposits"" must be included, clarifying that cash and currency transactions encompass these deposits.
+  
+- **Business Day Definition**: The definition of ""Business Day"" should be modified to allow for 24/7 settlement, reflecting the operational needs of tokenised transactions.
+
+- **Payment Clarifications**: There needs to be explicit clarification on how payments will be processed in the context of tokenised deposits.
+
+- **Contingency Provisions**: The framework should include contingency provisions to address platform-related events that may affect transactions.
+
+- **Counterparty Representations**: It is essential to include representations from counterparties regarding their continued access to the platform to facilitate settlement.
+
+These changes are part of the broader efforts outlined in the Project Guardian initiative, which aims to streamline and standardize processes in the evolving landscape of digital finance, particularly in enhancing cross-border payments and transaction banking through tokenisation and shared ledger technologies.
+
+**Sources Used:** Project Guardian FX workstream Transaction Banking.pdf, 38, 39"
+How does close-out netting enforceability apply to tokenised bank liabilities under the ISDA framework?,"**Close-Out Netting Enforceability and Tokenised Bank Liabilities**
+
+Close-out netting enforceability under the ISDA Master Agreement is crucial for the treatment of tokenised bank liabilities, particularly in the context of insolvency laws. The following points summarize the key aspects:
+
+- **Legal Framework**: The enforceability of close-out netting and collateral arrangements is significantly influenced by jurisdiction-specific insolvency laws. Each jurisdiction may have different regulations that affect how digital assets and tokenised deposits are treated in insolvency situations.
+
+- **Complexities of Tokenisation**: The integration of tokenised assets into traditional financial systems introduces complexities, particularly regarding the legal characterisation of these assets. The ISDA has published analyses that explore how close-out netting applies to digital asset derivatives, emphasizing the need for clarity in legal frameworks.
+
+- **Jurisdiction-Specific Regulations**: In jurisdictions with specific legislation for shared ledger-based tokens, the treatment of these tokens in insolvency may be explicitly defined. Conversely, jurisdictions lacking such legislation must rely on general insolvency principles, which can lead to uncertainty regarding the rights of customers and the enforceability of their claims.
+
+- **Implications for Transaction Banking**: The document highlights the necessity for robust legal frameworks to ensure that tokenised bank liabilities can be effectively managed within the context of insolvency, thereby facilitating the adoption of digital assets in transaction banking.
+
+In summary, the enforceability of close-out netting for tokenised bank liabilities under the ISDA framework is contingent upon the specific insolvency laws of each jurisdiction, necessitating a clear understanding of these laws to ensure legal certainty in transactions involving digital assets.
+
+**Sources Used:** Project Guardian FX workstream Transaction Banking.pdf, 39; Project Guardian FX workstream Transaction Banking.pdf, 40."
+What design principles govern the issuance and operation of tokenised bank liabilities?,"The design principles governing the issuance and operation of tokenised bank liabilities are as follows:
+
+1. **Valid Existence of the Issuer**: The issuer must be duly established and validly existing under the law of its organization at the time of issuance and throughout the life of the tokenised bank liabilities.
+
+2. **Validity of the Tokenised Bank Liabilities**: These liabilities must be duly issued and constitute legal, valid, and binding obligations of the issuer. They should be capable of being attached to or constitute a digital token recorded on a ledger, consistent with the governing law of the relevant jurisdiction.
+
+3. **Authorisations and Consents**: The issuer and any intermediaries or service providers must obtain and maintain all relevant authorisations and consents from supervisory or regulatory authorities.
+
+4. **Tokenisation Process**: The tokenisation process, including the use of shared ledger and smart contracts, should not alter the terms of the transaction documentation. Any inconsistencies must be addressed to ensure compliance with legal terms and applicable laws.
+
+5. **The Ledger**: The ledger must comply with applicable laws and adhere to recognized principles and best practices. It should be public, transparent, and capable of accommodating disposals and transfers of the tokenised bank liabilities.
+
+6. **Minimum Features of Smart Contracts**: Smart contracts should include governance features and utilize technology and risk frameworks to mitigate associated risks.
+
+7. **Tokenisation Terms**: Transaction documentation must align with the governing law of the tokenised bank liabilities, clearly outlining the rights of holders and disclosing associated risks.
+
+8. **Information on the Functioning of the Ledger and Smart Contract**: Issuers must provide holders with material information regarding the functioning of the ledger and smart contract, including security measures.
+
+9. **Risk Management**: A rigorous governance framework and effective control mechanisms should be in place to counter cyber security risks. Smart contracts must be extensively tested before deployment.
+
+These principles aim to enhance interoperability, security, and compliance in the use of tokenised bank liabilities within transaction banking.
+
+**Sources Used:** Project Guardian FX workstream Transaction Banking.pdf, 16, 17, 18"
+What are the key risks of adopting shared ledger-based payments and how can they be mitigated?,"**Key Risks of Adopting Shared Ledger-Based Payments:**
+
+1. **Operational Transition Issues:**
+   - **Mitigation:** Implement comprehensive change management strategies and training programs to facilitate smooth transitions.
+
+2. **Liquidity Risks:**
+   - **Mitigation:** Establish enhanced liquidity pools to ensure sufficient funds are available for transactions.
+
+3. **Smart Contract Risks:**
+   - **Mitigation:** Conduct thorough audits and continuous monitoring of smart contracts to identify and rectify vulnerabilities.
+
+4. **Cybersecurity Risks:**
+   - **Mitigation:** Employ robust cybersecurity measures, including encryption and regular security assessments, to protect against breaches.
+
+5. **Data Integrity Risks:**
+   - **Mitigation:** Implement strict data governance policies and validation processes to ensure the accuracy and reliability of data.
+
+**Summary of Mitigation Strategies:**
+The report emphasizes the importance of effective risk management strategies as the financial industry transitions to digital payment solutions. Each identified risk is linked to specific solutions, illustrating a structured approach to managing the challenges associated with shared ledger systems.
+
+**Sources Used:** Project Guardian FX workstream Transaction Banking.pdf, 23"
+What role could correspondent banks still play as tokenised payments grow?,"**Role of Correspondent Banks in the Context of Tokenised Payments**
+
+As tokenised payments become more prevalent, correspondent banks are likely to adapt their roles significantly. Here are some key points regarding their evolving function:
+
+- **Facilitating Transactions**: Correspondent banks will continue to play a crucial role in facilitating cross-border transactions, especially in scenarios where direct relationships between banks are not established. They will act as intermediaries to ensure that payments are processed smoothly across different currencies and jurisdictions.
+
+- **Compliance and Risk Management**: With the integration of tokenised bank liabilities, correspondent banks will still be responsible for conducting compliance checks, such as Anti-Money Laundering (AML) and Countering Financing of Terrorism (CFT). This will be essential to maintain regulatory standards and ensure the integrity of the financial system.
+
+- **Adapting to New Technologies**: As the financial landscape evolves with shared ledger technology and tokenisation, correspondent banks will need to adapt their services. This includes embracing new technologies and practices, such as standardising smart contracts and improving interoperability with tokenised assets.
+
+- **Operational Efficiency**: The adoption of tokenised payments may lead to the development of automated reconciliation mechanisms, which could enhance operational efficiency. Correspondent banks will need to integrate these technologies into their workflows to remain competitive and effective in managing tokenised liquidity.
+
+In summary, while the rise of tokenised payments may change the operational dynamics, correspondent banks will still be integral to the transaction banking ecosystem, ensuring compliance, facilitating transactions, and adapting to technological advancements.
+
+**Sources Used:** Project Guardian FX workstream Transaction Banking.pdf, 19"
+What international initiatives are exploring tokenised deposits and shared ledger settlement?,"**International Initiatives Exploring Tokenised Deposits and Shared Ledger Settlement:**
+
+- **Hong Kong**: The Hong Kong Government has launched **Project Ensemble**, a wholesale central bank digital currency (wCBDC) project aimed at supporting the development of the tokenisation market. One of its pilot strands encourages the use of tokenised deposits.
+
+- **Singapore**: The **Monetary Authority of Singapore (MAS)** is developing an **SGD Testnet** to facilitate financial institutions' access to common settlement assets for market testing purposes.
+
+- **South Korea**: A live pilot of **tokenised deposits** involving **100,000 individuals** began in South Korea during the October-December quarter of 2024.
+
+- **United Kingdom**: UK Finance is collaborating with various members and partners on a new **Regulated Liability Network (RLN)** experimentation phase, which is part of the broader efforts to standardise and innovate in the financial sector.
+
+These initiatives reflect a global movement towards enhancing cross-border payment systems and financial efficiency through the implementation of tokenised bank liabilities and shared ledger solutions.
+
+**Sources Used:** Project Guardian FX workstream Transaction Banking.pdf, 37; Project Guardian FX workstream Transaction Banking.pdf, 36."

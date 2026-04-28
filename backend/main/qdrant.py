@@ -93,22 +93,6 @@ def delete_points():
 
 # Execution functions
 
-def format_embeddings(chunks,vectors):
-
-    embeddings = []
-
-    for i, chunk in enumerate(chunks):
-        embedding = PointStruct(
-            id=chunk.id,
-            vector=vectors[i],
-            payload=asdict(chunk)
-        )
-
-        embeddings.append(embedding)
-
-    return embeddings
-
-
 def upload_to_qdrant(chunks, dense, sparse, late):
 
     try : 
@@ -139,7 +123,7 @@ def upload_to_qdrant(chunks, dense, sparse, late):
             collection_name=collection_name,
             points=points,
             parallel=4,
-            batch_size=32,
+            batch_size=64,
             wait=True
         )
 
@@ -147,11 +131,7 @@ def upload_to_qdrant(chunks, dense, sparse, late):
         print(f'Unable to upload embeddings to qdrant cloud, error {e}\n\n')
 
 
-def get_similar_chunks(dense,sparse,late,filters=None):
-
-    """
-    Havent tested if this works yet
-    """
+def get_similar_chunks(dense,sparse,late,limit1=10,limit2=3,filters=None):
 
     try:
         collection_name = os.getenv('qdrant_collection_name')
@@ -161,7 +141,7 @@ def get_similar_chunks(dense,sparse,late,filters=None):
             models.Prefetch(
                 query=dense,
                 using="dense",
-                limit=10,
+                limit=limit1,
             ),
             models.Prefetch(
                 query=models.SparseVector(
@@ -169,7 +149,7 @@ def get_similar_chunks(dense,sparse,late,filters=None):
                     values=sparse["values"]
                 ),
                 using="sparse",
-                limit=10,
+                limit=limit1,
             ),
         ]
 
@@ -179,7 +159,7 @@ def get_similar_chunks(dense,sparse,late,filters=None):
             query=late, 
             using="multi",
             with_payload=True,
-            limit=3,
+            limit=limit2,
             query_filter=filters
         )
 
@@ -188,6 +168,7 @@ def get_similar_chunks(dense,sparse,late,filters=None):
             for result in results.points:
 
                 item = {
+                    'id' : result.id,
                     'score' : result.score, 
                     'document_name' : result.payload['document_name'], 
                     'context' : result.payload['context'],
@@ -213,11 +194,18 @@ def get_similar_chunks(dense,sparse,late,filters=None):
 
 if __name__ == '__main__':
 
-    recreate = 1
+    sure = input('Are you sure? Enter Y to continue : ')
 
-    if recreate:
-        create_collection()
+    if sure == 'Y':
+
+        recreate = 1
+
+        if recreate:
+            create_collection()
+
+        else:
+            delete_points()
 
     else:
-        delete_points()
+        print('Aborted\n\n')
 

@@ -269,17 +269,24 @@ def retrieve_document_chunks(document_name,type):
 if __name__ == '__main__':
 
     reformat = 1
-    if reformat:
-        create_db_tables()
+    sure = input('Are you sure? Enter Y to continue : ')
 
-    chunk_type = 0
-    chunks = {
-        0:None,
-        1:'text',
-        2:'image',
-        3:'tables'
-    }
-    if chunks[chunk_type]:
-        delete_chunks(chunk_type)
+    if sure == 'Y':
+
+        if reformat:
+            create_db_tables()
+
+        chunk_type = 0
+        chunks = {
+            0:None,
+            1:'text',
+            2:'image',
+            3:'tables'
+        }
+        if chunks[chunk_type]:
+            delete_chunks(chunk_type)
+
+    else:
+        print('Aborted\n\n')
 
 

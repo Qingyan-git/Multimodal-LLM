@@ -16,7 +16,7 @@ import re
 import unicodedata
 
 from text_chunking import save_to_file,delete_all_files_in_folder
-from llms_and_models import OpenAIModel
+from llms_and_models import OpenAIModel, SparseEmbedder, ColBERTEmbedder
 from chunks import ImageChunk
 from postgres import save_document_chunks, insert_pdfs
 from qdrant import upload_to_qdrant
@@ -86,19 +86,28 @@ def save_image(image,filename,path=Path(os.getenv('image_results_path'))):
     image.save(save_path)
 
 
-def useable_image(image, min_dim=50):
-    bbox = image.prov[0].bbox
-    height = bbox.height
-    width = bbox.width
-
-    if height == 0 or width == 0:
+def is_useable_image(img, page_w, page_h, min_dim=100, area_threshold=0.15):
+    prov = img.prov[0]
+    bbox = prov.bbox
+    
+    # 1. Basic Dimension Check
+    if bbox.height == 0 or bbox.width == 0:
         return False
     
-    if height < min_dim or width < min_dim:
+    if bbox.height < min_dim or bbox.width < min_dim:
         return False
 
-    ratio = height / width 
+    # 2. Aspect Ratio Check (Your 0.2 to 5.0 range)
+    ratio = bbox.height / bbox.width 
     if ratio > 5 or ratio < 0.2:
+        return False
+        
+    # 3. Normalized Area Check
+    image_area = bbox.width * bbox.height
+    page_area = page_w * page_h
+    normalized_area = image_area / page_area
+    
+    if normalized_area < area_threshold:
         return False
         
     return True
@@ -115,7 +124,7 @@ async def extract_images(filepath):
     pipeline_options.images_scale = 1.0 
     pipeline_options.generate_page_images = True
     pipeline_options.generate_picture_images = True
-    pipeline_options.picture_description_options.picture_area_threshold = 0.20
+    pipeline_options.picture_description_options.picture_area_threshold = 0.15
 
     docling = DocumentConverter(
         format_options={
@@ -131,7 +140,23 @@ async def extract_images(filepath):
 
     all_chunks = []
     batch_size = 5
-    useable_images = [img for img in document_images if useable_image(img)]
+
+    useable_images = []
+    for img in document_images:
+        # 1. Get the page index from the image provenance
+        page_no = img.prov[0].page_no 
+        
+        # 2. Access the specific page item to get its dimensions
+        # Docling pages are 1-indexed in provenance but 0-indexed in the list
+        # Check if your version uses document.pages[page_no - 1] or [page_no]
+        page_item = document.pages[page_no] 
+        
+        page_w = page_item.size.width
+        page_h = page_item.size.height
+
+        # 3. Now pass these dynamic dimensions into your function
+        if is_useable_image(img, page_w, page_h):
+            useable_images.append(img)
 
     for batch_no in range(0,len(useable_images),batch_size):
         batch = useable_images[batch_no:batch_no+batch_size]
@@ -180,7 +205,7 @@ async def process_single_image(model,document,image):
     #Some image metadata
     metadata = {
         'source': image.source,
-        'pages' : [image.prov[0].page_no],
+        'pages' : list(image.prov[0].page_no),
     }
 
     #All into image_chunk object and return

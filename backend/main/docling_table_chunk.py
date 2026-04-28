@@ -11,7 +11,7 @@ from langchain_community.callbacks.manager import get_openai_callback
 
 from text_chunking import save_to_file,delete_all_files_in_folder
 from docling_image_chunking import get_surrounding_text
-from llms_and_models import OpenAIModel
+from llms_and_models import OpenAIModel, SparseEmbedder, ColBERTEmbedder
 from chunks import TableChunk
 from postgres import save_document_chunks, insert_pdfs
 from qdrant import upload_to_qdrant
@@ -81,39 +81,57 @@ async def format_tables(tables,document):
             df = table.export_to_dataframe(doc=document)
 
             if i > 0:
+                
+                """
+                Instead of only checking whether the first row should be a continuation of the previous page's table, 
+                should check while the first row only has 1 row of data to combine with the previous table
+                essentially broadening the table similarity definition
+                """
+
                 table_headers = table_data[0].columns.tolist()
                 df.columns = table_headers
 
                 #Check if first row is headers
                 first_row = df.iloc[0].tolist()
-                headers = table_data[0].columns.tolist()
+                headers = df.columns
                 if first_row == headers:
                     #Remove headers
                     df = df.iloc[1:]
 
-                text_row = df.iloc[0].tolist()
-                text_counter = 0
-                col = -1
-                for row_idx,row in enumerate(text_row):
-                    #Check how many text items first data row has
-                    if row.strip():
-                        text_counter += 1
-                        col = row_idx
+                while not df.empty:
+                    text_row = df.iloc[0].tolist()
+                    valid_rows = [i for i, val in enumerate(text_row) if str(val).strip()]
+                    text_counter = len(valid_rows)
 
-                if text_counter == 1:
-                    #If first data row has just 1 item, it is a straggler and will be added back to above df_fragment
-                    prev_df = table_data[-1]
-                    prev_df.iat[-1, col] = f"{prev_df.iat[-1, col]} {text_row[col]}"
-                    df = df.iloc[1:]
+                    if text_counter == 1:
+                        # 1. Access the previous DataFrame in the list
+                        prev_df = table_data[-1]
+                        col = valid_rows[0]
+
+                        # 2. Safely get the existing value (handle NaNs/None)
+                        # .iat is fast, but we need to ensure we don't f-string 'nan'
+                        raw_prev_val = prev_df.iat[-1, col]
+                        prev_val = str(raw_prev_val) if pd.notna(raw_prev_val) else ""
+
+                        # 3. Merge the text and update the last row of the previous DF
+                        # Using .strip() to avoid leading spaces if prev_val was empty
+                        new_val = f"{prev_val} {str(text_row[col])}".strip()
+                        prev_df.iat[-1, col] = new_val
+
+                        # 4. Remove the straggler row from the current fragment
+                        df = df.iloc[1:]
+
+                    else:
+                        break
 
             table_data.append(df)
         
         combined_df = pd.concat(table_data,axis=0,ignore_index=True)
-        # combined_df = combined_df.ffill()
         markdown_table = combined_df.to_markdown()
 
-        
-        clean_filename = Path(f"Table_{table_idx}_CLEAN.csv")
+        raw_name = document.origin.filename
+        document_name = Path(raw_name).stem
+        clean_filename = f"{document_name}_Table_{table_idx}.csv"
         save_path = Path(os.getenv('table_results_path')) / clean_filename
         combined_df.to_csv(save_path, index=False)
 
@@ -126,7 +144,7 @@ async def format_tables(tables,document):
         chunk.context = chunk_context
         chunk.content = chunk_text
         chunk.metadata = {
-            'pages' : item['pages']
+            'pages' : list(item['pages'])
             }
 
         all_tables.append(chunk)
@@ -145,13 +163,21 @@ async def extract_tables(filepath):
     document_tables = document.tables
 
     all_tables = []
-    last_seen_table = -1
+    last_seen_table = float('inf')
 
     for table in document_tables:
 
         page_no = table.prov[0].page_no
         prev_text,post_text = get_surrounding_text(document,table)
         caption = table.caption_text(doc=document)
+
+        """
+        Perhaps the condition to check of is_continuation table should be different.
+        Because even docling can have detection failures on non line demarcated table border tables.
+        Docling detects that there is one data "column" on the left and multiple data "rows" on the right, but sometimes doesnt assign the data
+        on the right to the column on the left still.
+        Perhaps check that if the current row detected only has 1 row of data, merge with previously detected table.
+        """
 
         #One item is one final table
         item = {
@@ -163,7 +189,7 @@ async def extract_tables(filepath):
         }
 
         prev_table = all_tables[-1]['tables'][-1] if all_tables else None
-        is_same_table = prev_table and (page_no-last_seen_table==1) and same_table(document,prev_table,table)
+        is_same_table = prev_table and (page_no-last_seen_table<=1) and same_table(document,prev_table,table)
 
         if is_same_table:
             #Same table, just continutation

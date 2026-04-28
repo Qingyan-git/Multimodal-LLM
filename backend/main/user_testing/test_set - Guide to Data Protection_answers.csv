@@ -1,0 +1,123 @@
+﻿Question,Answer
+What are examples of sensitive personal data that organisations should give extra protection to?,"**Examples of Sensitive Personal Data:**
+
+Organizations should provide extra protection to the following types of sensitive personal data:
+
+- **Transactional or Authentication Data:** This includes information such as credit card details.
+- **Health-Related Data:** Personal data that could adversely impact individuals if disclosed.
+- **Financial-Related Data:** Information that may result in negative consequences for individuals if exposed.
+- **Intellectual Property Data:** Any data that could adversely affect the organization if disclosed, such as proprietary information or client data.
+
+These categories of sensitive data require heightened security measures to mitigate risks associated with data breaches.
+
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, Page 8"
+What does the guide recommend as an example of a strong password format?,"The guide recommends that a strong password should be a minimum of 12 alphanumeric characters that include a mix of uppercase letters, lowercase letters, numeric characters, special characters, and commonly used phrases or paraphrases. This combination makes the password stronger and harder to decode. Examples provided include phrases like “Learn2bike@5” or “LetsGo2gym@7”.
+
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, Page 15"
+What is a non-production environment?,"A non-production environment refers to a network, operating system, or other systems that are used as a development area or test bed for new software or technologies. It is distinct from production environments where live data and applications are actively used.
+
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, Page 21"
+At which stages of the data lifecycle should organisations enforce regular password changes?,"**Enforcement of Regular Password Changes in the Data Lifecycle**
+
+Organizations should enforce regular password changes at the following stages of the data lifecycle:
+
+- **Use**
+- **Disclosure**
+- **Storage**
+- **Archival**
+
+This practice is essential to maintain security and mitigate risks associated with unauthorized access throughout these stages.
+
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, 15"
+Which data lifecycle stages does the practice of classifying and managing repositories by potential adverse impact apply to?,"The practice of classifying and managing repositories or datasets containing personal data applies to various stages of the data lifecycle, specifically:
+
+- **Collection**: Ensuring that data is classified correctly at the point of collection.
+- **Use**: Managing how the data is utilized based on its classification.
+- **Storage**: Maintaining proper classification while the data is stored.
+- **Archiving**: Ensuring that archived data remains classified and managed appropriately.
+- **Disposal**: Classifying data to determine the correct disposal methods based on its potential adverse impact.
+
+This comprehensive approach to classification is essential for effective data management and protection throughout the entire data lifecycle.
+
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, 9; Guide to Data Protection Practices for ICT Systems.pdf, 12"
+The guide says to conduct periodic checks for personal data stored in ICT systems and securely dispose of data no longer needed. Which lifecycle stages does this apply to?,"The guide indicates that conducting periodic checks for personal data stored in ICT systems and securely disposing of data that is no longer needed applies to the following lifecycle stages:
+
+- **Data Lifecycle.Storage**: This stage involves managing the storage of personal data and ensuring that unnecessary data is securely disposed of.
+- **Data Lifecycle.Disposal**: This stage specifically addresses the secure disposal of personal data that is no longer required.
+
+Additionally, if there is a need to retain data, it should be anonymized or aggregated for purposes such as data analytics.
+
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, [Page 10]"
+"The guide says to conduct data protection impact assessment, which lifecycle stages does this apply to?","The guide indicates that conducting a data protection impact assessment (DPIA) applies specifically to the **Data Lifecycle.Storage** stage. This is highlighted in the context where it mentions that a DPIA should be conducted before the development of a new ICT system to assess the types of personal data and the data processing activities required for achieving the purposes of that system.
+
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, [10]"
+What specific type of sensitive data should be excluded from user views,"I do not have enough information in the provided documents.
+
+**Sources Used:** None"
+What should my organisation do to prevent too much data from being exported or leaked out of our systems?,"To prevent excessive data export or leakage from your organization's systems, you should implement the following practices:
+
+- **Monitor Data Export Activities**: Regularly monitor data export activities to detect any unauthorized data exfiltration. This includes keeping track of data transfers and identifying any anomalies.
+  
+- **Configure Export Thresholds**: Consider setting thresholds for allowable data exports. This means defining limits on the amount of data that can be exported at any given time, which can help in controlling and preventing excessive data transfers.
+
+- **Conduct Network Penetration Testing**: Before launching any new ICT systems, conduct network penetration testing to identify and resolve vulnerabilities that could be exploited for data leakage.
+
+These measures align with the overarching goal of strengthening data protection measures and controls within ICT systems.
+
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, [23]"
+"At which stages of the data lifecycle should organisations maintain a list of whitlested connections to only specific, trusted hosts? ","Organizations should maintain a list of whitelisted connections to only specific, trusted hosts during the following stages of the data lifecycle:
+
+- **Collection**
+- **Use**
+- **Disclosure**
+- **Storage**
+- **Archival**
+- **Disposal**
+
+This practice is part of the enhanced security measures for computer networks, which emphasizes the importance of restricting access to only trusted connections throughout the entire data management process.
+
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, 17"
+What are the four key components of governance mentioned in the guide?,"The four key components of governance mentioned in the guide are:
+
+- **Clear Standards**
+- **Risk Classification**
+- **Accountability Policies**
+- **Management and Tracking Procedures**
+
+These components are essential for organizations to mitigate data breach risks throughout the data lifecycle, particularly in the context of managing personal data.
+
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, 8"
+What are the three main sections that data protection practices for ICT systems are grouped into?,"The three main sections that data protection practices for ICT systems are grouped into are:
+
+- **Policy/Risk Management**
+- **ICT Controls**
+- **SOP/IT Operations**
+
+Each of these sections contains specific sub-sections detailing various practices essential for safeguarding personal data.
+
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, 6"
+What guide should organisations refer to if they want to anonymise data beyond the retention period?,"Organizations should refer to the ""Guide to Data Protection Practices for ICT Systems"" for guidance on anonymizing data beyond the retention period. This guide outlines the importance of reviewing and anonymizing records to prevent re-identification of individuals when there is a need to keep data beyond its retention period.
+
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, Page 14"
+What checklist is the Incident Response Management checklist referenced from?,"The Incident Response Management checklist is referenced from the CSA's Incident Response Checklist. This checklist outlines essential practices organizations should implement to prepare for and respond to cyber incidents effectively.
+
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, [33]"
+What are the three key ICT policies that organisations are required to develop and implement?,"To ensure effective data protection, organizations are required to develop and implement the following three key ICT policies:
+
+- **Account and Access Control Policy**
+- **Backup/Retention Policy**
+- **Password Policy**
+
+These policies provide management with direction and guidance for all ICT system implementations and activities related to data protection in accordance with business objectives and relevant laws and regulations.
+
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, Page 9"
+What enhanced practice does the guide recommend for admin access to sensitive personal data?,"The guide recommends the following enhanced practice for admin access to sensitive personal data:
+
+- **Use a one-time password (OTP) or two-factor authentication (2FA)/multi-factor authentication (MFA)** for admin access to sensitive personal data records or large volumes of personal data.
+
+This practice is crucial for enhancing security and protecting sensitive information from unauthorized access.
+
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, Page 16"
+What resource should you consult if you are unsure whether you need a licence for providing financial advice?,"If you are unsure whether you need a licence for providing financial advice, you should consult the MAS Guidelines on Provision of Financial Advisory Service (FAAG17) or seek legal advice. 
+
+**Sources Used:** 7 Must-Knows When Sharing Financial Information Online.pdf, Page 1"

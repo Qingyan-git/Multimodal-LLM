@@ -7,7 +7,7 @@ import pymupdf
 import asyncio
 from langchain_community.callbacks.manager import get_openai_callback
 
-from llms_and_models import OpenAIModel
+from llms_and_models import OpenAIModel, SparseEmbedder, ColBERTEmbedder
 from chunks import PageChunk
 from postgres import save_document_chunks, insert_pdfs
 from qdrant import upload_to_qdrant
@@ -45,22 +45,27 @@ async def extract_pages(filepath):
     all_chunks = []
 
     with pymupdf.open(filepath) as doc:
-
-        full_text = pymupdf4llm.to_markdown(doc,header=True,footer=True)
-
-        for page_no,page in enumerate(doc):
-
+        full_text = pymupdf4llm.to_markdown(doc, header=True, footer=True)
+        
+        # Define a helper to process a single page
+        async def process_page(page_no, page):
             pix = page.get_pixmap() 
             image_bytes = pix.tobytes(output='jpg', jpg_quality=95)
+
             image_description = await model.get_image_description(image_bytes)
-            context = await model.get_context(full_text,image_description)
+            context = await model.get_context(full_text, image_description)
 
             page_chunk = PageChunk()
             page_chunk.document_name = filepath.name
             page_chunk.context = context
             page_chunk.content = image_description
-            page_chunk.metadata = {'pages' : page_no}
-            all_chunks.append(page_chunk)
+            page_chunk.metadata = {'pages': list(page_no)}
+
+            return page_chunk
+
+        # Create tasks for all pages and run them in parallel
+        tasks = [process_page(i, page) for i, page in enumerate(doc)]
+        all_chunks = await asyncio.gather(*tasks)
 
     return all_chunks
 
@@ -86,10 +91,10 @@ async def process_pages(folder_path):
 
                         chunks = await extract_pages(file)
 
-                        print(f'\tFinished getting text chunks\n\n')
+                        print(f'\tFinished getting page chunks\n\n')
 
-                        token_cost = f"Token cost to TEXT chunk {file.name} : {cb.total_tokens}"
-                        money_cost = f"Money cost to TEXT chunk {file.name} : {cb.total_cost}"
+                        token_cost = f"Token cost to PAGE chunk {file.name} : {cb.total_tokens}"
+                        money_cost = f"Money cost to PAGE chunk {file.name} : {cb.total_cost}"
                         total_cost = [token_cost,money_cost]
 
                         save_to_file(filename=f'{file.stem}',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
@@ -101,8 +106,8 @@ async def process_pages(folder_path):
                         print(f'\tFinished saving chunks into postgresdb\n\n')
 
                         dense_embeddings,cost = await model.embed_texts(returned_chunks)
-                        token_cost = f"Token cost to EMBED TEXT {file.name} : {cost[0]}"
-                        money_cost = f"Money cost to EMBED TEXT {file.name} : {cost[1]}"
+                        token_cost = f"Token cost to EMBED PAGE {file.name} : {cost[0]}"
+                        money_cost = f"Money cost to EMBED PAGE {file.name} : {cost[1]}"
                         total_cost = [token_cost,money_cost]
                         save_to_file(filename=f'{file.stem}',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
 

@@ -80,26 +80,35 @@ class OpenAIModel:
     
     async def get_context(self,document,chunk):
 
-        system_instructions = f"You are an AI assistant specialising in document analysis. Your task is to provide brief, relevant context for a chunk of text from the given document."
-        user_message = f"""
-        Here is the main document:
-        <document>
+        system_instructions = (
+            "You are a specialized Document Indexing Engine. Your sole purpose is to provide "
+            "semantic context for text chunks to improve their retrieval performance.\n\n"
+            
+            "OPERATIONAL MANDATES:\n"
+            "1. NO META-DISCOURSE: You must never acknowledge the user or use phrases like 'Sure, here is the context' or 'This chunk is about'.\n"
+            "2. STRICT BREVITY: Output must be exactly 2-3 declarative sentences.\n"
+            "3. SEMANTIC ENRICHMENT: You must inject critical global context (document title, author, date, or primary objective) into the description so the chunk becomes self-contained.\n"
+            "4. NO HALLUCINATION: Only use information explicitly present in the <document> tag.\n"
+            "5. OUTPUT FORMAT: Return the succinct context as plain text. Do not use Markdown, headers, or tags."
+        )
+
+        user_message = user_message = f"""
+        [TASK]
+        Situate the provided <chunk> within the <document> for a vector search index.
+
+        [DOCUMENT]
         {document}
-        </document>
 
-        Here is the chunk we want to situate within the whole document:
-        <chunk>
+        [CHUNK TO ENRICH]
         {chunk}
-        </chunk>
 
-        Provide a concise context (2-3 sentences) for this chunk, considering the following guidelines:
-        1. Identify the main topic or concept discussed in the chunk.
-        2. Mention any relevant information or comparisons from the broader document context.
-        3. If applicable, note how this information relates to the overall theme or purpose of the document.
-        4. Include any key figures, dates, or percentages that provide important context.
-        5. Do not use phrases like "This chunk discusses" or "This section provides". Instead, directly state the context.
+        [INSTRUCTIONS]
+        Write a 2-3 sentence situational prefix. 
+        - Sentence 1: Identify the document source and its high-level purpose.
+        - Sentence 2: Explain the specific role of this chunk within that purpose.
+        - Sentence 3: Include any necessary keywords from the document (dates, entities) that are absent from the chunk.
 
-        Please give a short succinct context to situate this chunk within the overall document for the purposes of improving search retrieval of the chunk. Answer only with the succinct context and nothing else.
+        [OUTPUT]
         """
 
         prompt = [
@@ -179,23 +188,30 @@ class OpenAIModel:
             You are a professional assistant. Your goal is to provide accurate answers based ONLY on the provided context chunks.
 
             RULES:
-            1. GROUNDING: If the answer is not contained within the provided database, state clearly that you do not have enough information. Do not use external knowledge.
-            2. DATABASE INTEGRATION: Treat the chunks as a unified database repository.
-            3. RELEVANCE: If you receive irrelevant chunks, silently ignore any information that does not directly contribute to answering the user's question.
-            4. TABLES: If the database contains Markdown tables, interpret row-to-column relationships strictly to ensure data accuracy.
-            5. FORMATTING: Use clear headings and bullet points for complex answers.
-            6. REASONING: Before answering, identify which specific chunks contain the facts needed for the answer. If multiple chunks provide different pieces of the answer, synthesise them into a single response.                          
+            1. GROUNDING: Answer ONLY using the provided chunks. If the information is missing, state: "I do not have enough information in the provided documents."
+            2. DATABASE INTEGRATION: Treat the chunks as a unified repository.
+            3. CITATIONS: Every answer must conclude with a "Sources Used" section. 
+            - Identify the document name and page number provided in the context headers.
+            - List them in a separate paragraph at the end of your response.
+            - If multiple sources were used, list them as a comma-separated list.
+            4. RELEVANCE: Ignore irrelevant chunks. Do not mention them.
+            5. TABLES: Interpret Markdown tables strictly by mapping row-to-column relationships.
+            6. FORMATTING: Use bold headings and bullet points for readability.
+            7. REASONING: First, scan the chunks for facts; then, synthesize them into a coherent response.
+
+            OUTPUT STRUCTURE:
+            [Your detailed answer here]
+
+            **Sources Used:** [Document Name], [Page Number]
             """),
 
             HumanMessage(content=f"""
-
             The following database contains multiple labelled chunks from different pages of a document. 
             Use them to answer the question accurately.
             The chunks are ordered by similarity scores to the question, and numbered numerically.
             <database>
             {formatted_contexts}
             </database>
-
             Question: {user_query}
             """)]
 

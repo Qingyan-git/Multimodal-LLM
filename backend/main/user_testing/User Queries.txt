@@ -1,0 +1,168 @@
+
+User query : What are the 7 must knows when sharing financial information online?, answer : ### 7 Must-Knows When Sharing Financial Information Online
+
+1. **Build Trust With Followers**
+   - Share accurate information and explain both risks and rewards clearly.
+   - Be mindful of your impact; avoid exploiting fear of missing out (FOMO) or inducing panic.
+   - Consider your followers' financial interests and well-being.
+
+2. **Understand Licensing Requirements**
+   - Know when you need a license for providing financial advice.
+   - Be aware of licensing requirements for dealing in capital markets products.
+
+3. **Choose Collaborations Carefully**
+   - Verify the legitimacy of financial institutions before promoting them.
+   - Ensure your promotional content is professional and compliant with advertising rules.
+   - Disclose any sponsored content appropriately.
+
+4. **Emphasize Ethical Communication**
+   - Promote responsible sharing practices to maintain credibility in the financial sector.
+
+5. **Encourage Informed Decision-Making**
+   - Help followers understand their personal risk tolerance and make informed choices.
+
+6. **Ensure Compliance with Regulations**
+   - Adhere to advertising regulations to maintain trust and credibility.
+
+7. **Utilize Helpful Resources**
+   - Access additional resources, such as QR codes for guidelines and directories, to enhance understanding and compliance.
+
+These guidelines are designed to promote ethical financial communication and responsible sharing of personal finance and wealth education online.
+
+User query : What is Smart Nation 2.0 trying to achieve?, answer : ### Goals of Smart Nation 2.0
+
+Smart Nation 2.0 aims to achieve three key goals:
+
+- **Trust**: Establishing reliable digital systems that empower citizens and ensure their safety online.
+- **Growth**: Fostering an environment that helps individuals and enterprises learn and excel through technology.
+- **Community**: Using technology to bring communities together and strengthen societal cohesion.
+
+These goals serve as a compass for how technology is utilized to improve citizens' lives and create a thriving digital future for all Singaporeans. The initiative is designed to be adaptive, evolving in response to technological advancements and citizen feedback.
+
+User query : For estimated procurement value exceeding 90,000, what is the procurement approach?, answer : ## Procurement Approach for Estimated Value Exceeding S$90,000
+
+For estimated procurement values exceeding S$90,000, the procurement approaches are as follows:
+
+- **Tender**
+  - **Tender Lite** (not exceeding S$1,000,000)
+  - **Tender** (exceeding S$1,000,000)
+
+### Description of Tender Approaches:
+1. **Open Tender**
+   - Tender notice published openly on GeBIZ inviting any interested supplier to bid according to the specified requirements.
+   
+2. **Selective Tender**
+   - A 2-stage process where interested suppliers are shortlisted based on their capabilities via an open pre-qualification exercise. Shortlisted suppliers are then invited to submit their bids.
+   
+3. **Limited Tender**
+   - One or a few selected suppliers will be invited to tender.
+
+This structured approach ensures transparency and value for money in public spending.
+
+User query : What percentage of goverment procurement is construction services?, answer : ### Answer
+
+- **Percentage of Government Procurement for Construction Services**: 60% 
+
+This information is derived from multiple chunks that highlight the distribution of procurement categories, specifically noting that construction services comprise 60% of the total government procurement in Singapore.
+
+User query : What is the maximum value for Tender Lite, and where on GeBIZ can I find these opportunities?, answer : ## Maximum Value for Tender Lite
+- The maximum value for Tender Lite is **not exceeding S$1 million**.
+
+## Finding Tender Lite Opportunities on GeBIZ
+- Tender Lite opportunities can be found on the **GeBIZ website** under the section for current business opportunities. For more information on how to search and participate in Tender Lite opportunities, a user guide is available at [Tender Lite User Guide](https://www.gebiz.gov.sg/docs/Supplier_Guide_Tender_Lite.pdf).
+
+User query : What does the guide recommend as an example of a strong password format?, answer : The guide recommends the following as an example of a strong password format:
+
+- A minimum of 12 alphanumeric characters
+- A mix of:
+  - Uppercase letters
+  - Lowercase letters
+  - Numeric characters
+  - Special characters
+- The use of commonly used phrases or paraphrases to help users remember their passwords more easily, such as "Learn2bike@5" or "LetsGo2gym@7".
+
+User query : Which data lifecycle stages does the practice of classifying and managing repositories by potential adverse impact apply to?, answer : The practice of classifying and managing repositories by potential adverse impact applies to the following data lifecycle stages:
+
+- **Collection**
+- **Use**
+- **Storage**
+- **Archiving**
+- **Disposal**
+
+This information is derived from the context provided in Chunk 0, which emphasizes the importance of classification and tracking of personal data throughout its lifecycle.
+
+User query : What happens if a supplier performs poorly or abandons a government contract?, answer : ### Consequences of Poor Performance or Abandonment of a Government Contract
+
+- **Debarment**: Suppliers who perform poorly or abandon a government contract may face debarment. This means they can be barred from participating in future government tenders.
+  
+- **Duration of Debarment**: If the Standing Committee on Debarment (SCOD) approves a recommendation for debarment, the supplier or employee will be informed and can be banned from participating in government tenders for a period ranging from **one to five years**, depending on the severity of the default.
+
+- **Grounds for Debarment**: Specific grounds for debarment include:
+  - Abandonment or termination of contract
+  - Poor performance reports
+  - Use of sub-standard materials
+  - Corruption and other serious infractions
+
+This process is part of the government's efforts to maintain accountability and integrity in procurement practices.
+
+User query : What happens if a supplier performs poorly or abandons a government contract?
+ Answer : ### Consequences of Poor Performance or Abandonment of a Government Contract
+
+- **Debarment**: Suppliers who perform poorly or abandon a government contract may face debarment. This means they can be barred from participating in future government tenders.
+  
+- **Duration of Debarment**: If the Standing Committee on Debarment (SCOD) approves a recommendation for debarment, the supplier can be banned from participating in government tenders for a period ranging from **one to five years**, depending on the severity of the default.
+
+- **Notification**: The affected company or individual will be informed of the outcome and the reasons for their debarment.
+
+- **Protection of Government Interests**: Debarment serves to protect the government's interests by preventing suppliers who have violated specific criteria from being awarded future contracts, ensuring accountability and integrity in the procurement process. 
+
+This information is derived from the guidelines outlined in the supplier guide published by the Ministry of Finance.
+ Documents and pages that were considered in answer : ['supplier_guide_detailed.pdf, [19, 20]', 'supplier_guide_detailed.pdf, [20]', 'supplier_guide_detailed.pdf, [19]']
+
+
+User query : Which specific procurement category in the area of business screenshot on page 12 should a supplier select if they want to pariticipate in the construction services sector shown in the figure 1 piechart?
+ Answer : To participate in the construction services sector, a supplier should select the following specific procurement category from the registration interface on page 12:
+
+- **Construction**
+
+This category aligns with the construction services sector, which comprises 60% of the procurement distribution as shown in Figure 1 of the document.
+ Documents and pages that were considered in answer : ['supplier_guide_detailed.pdf, [3]', 'supplier_guide_detailed.pdf, 2', 'supplier_guide_detailed.pdf, [12]']
+
+
+User query : How can a supplier find out about upcoming government procurement opportunities before they are officially called?
+Answer : To find out about upcoming government procurement opportunities before they are officially called, a supplier can utilize the following resources:
+
+- **GeBIZ Platform**: Suppliers can access the Government Electronic Business (GeBIZ) platform, which serves as a centralized electronic business center for transactions with government agencies. 
+
+- **Listing of Indicative Government Procurement Opportunities**: This listing outlines potential procurements that the public sector is likely to conduct in the upcoming financial year. It is published in April for each financial year (from 1 April to 31 March) and provides suppliers with advance notice of opportunities, allowing them to prepare their proposals and source necessary supplies or partners.
+
+- **Categories for Searching**: Suppliers can search for business opportunities through various categories such as:
+  - Description
+  - Financial Year
+  - Agencies
+  - Procurement Type (e.g., Construction Services, Goods, Services)
+  - Registration Heads
+  - Projected Procurement Value
+
+By leveraging these resources, suppliers can effectively identify and prepare for upcoming government contracts.
+Documents and pages that were considered in answer : ['supplier_guide_detailed.pdf, [8]', 'supplier_guide_detailed.pdf, 7', 'supplier_guide_detailed.pdf, [8, 7]']
+
+
+User query : What should a supplier do if they disagree with the outcome of a tender they participated in?
+Answer : To address a disagreement with the outcome of a tender, a supplier should follow these steps:
+
+- **Contact the Procuring Agency**: 
+  - Start by reaching out to the agency that conducted the procurement for clarifications regarding why their bid was not successful. The agency is obliged to provide an explanation upon receiving a written request.
+
+- **Provide Feedback to the Ministry of Finance (MOF)**: 
+  - If the supplier has concerns about the Quotation or Tender, they can direct their feedback to the MOF, which oversees procurement policy for the entire government. This can be done via email at mof_qsm@mof.gov.sg.
+
+- **Exhaust All Avenues**: 
+  - Suppliers must first attempt to resolve their concerns with the relevant agency before escalating the issue.
+
+- **Formal Complaint to the Government Procurement Adjudication Tribunal**: 
+  - If all other avenues have been exhausted and the supplier still wishes to pursue the matter, they may raise a formal complaint with the Government Procurement Adjudication Tribunal.
+
+These steps ensure that suppliers can voice their concerns and seek resolution in a structured manner.
+Documents and pages that were considered in answer : ['supplier_guide_detailed.pdf, [20]', 'supplier_guide_detailed.pdf, [15]', 'supplier_guide_detailed.pdf, [21, 22]']
+
