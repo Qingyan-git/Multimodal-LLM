@@ -59,7 +59,7 @@ async def extract_pages(filepath):
             page_chunk.document_name = filepath.name
             page_chunk.context = context
             page_chunk.content = image_description
-            page_chunk.metadata = {'pages': list(page_no)}
+            page_chunk.metadata = {'pages': [page_no]} #page_no is int so cannot list(), need to []
 
             return page_chunk
 

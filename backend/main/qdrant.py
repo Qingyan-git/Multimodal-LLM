@@ -22,7 +22,7 @@ def get_qdrant_client():
         qdrant_client = QdrantClient(
             url=qdrant_cluster_endpoint,
             api_key=qdrant_api_key,
-            timeout=30
+            timeout=120
         )
 
         return qdrant_client
@@ -70,7 +70,7 @@ def create_collection():
         print(f'Unable to create collection on qdrant cloud, error {e}\n\n')
 
 
-def delete_points():
+def delete_points(filters):
 
     try:
 
@@ -81,10 +81,10 @@ def delete_points():
 
         qdrant_client.delete(
             collection_name=collection_name,
-            points_selector=models.Filter(must=[])
+            points_selector=filters
         )
 
-        print(f'Finished deleteing all points from cloud\n\n')
+        print(f'Finished deleteing points from cloud\n\n')
 
     except Exception as e:
         print(f'Unable to delete points from qdrant cloud, error {e}\n\n')
@@ -123,7 +123,7 @@ def upload_to_qdrant(chunks, dense, sparse, late):
             collection_name=collection_name,
             points=points,
             parallel=4,
-            batch_size=64,
+            batch_size=32,
             wait=True
         )
 
@@ -204,7 +204,34 @@ if __name__ == '__main__':
             create_collection()
 
         else:
-            delete_points()
+            chunk_type = 2
+            chunks = {
+                0:None,
+                1:'text',
+                2:'image',
+                3:'tables'
+            }
+            # 1. Get the string value (e.g., 'image')
+            target = chunks.get(chunk_type)
+
+            if target:
+                # 2. Construct the Qdrant Filter
+                # Change "chunk_type" to the actual key name in your payload
+                delete_filter = models.Filter(
+                    must=[
+                        models.FieldCondition(
+                            key="type", 
+                            match=models.MatchValue(value=target)
+                        )
+                    ]
+                )
+
+                # 3. Call the delete function
+                delete_points(delete_filter)
+                print(f'Points of type {target} deleted\n')
+
+            else:
+                print(f'No type selected, not deleting anything\n')
 
     else:
         print('Aborted\n\n')

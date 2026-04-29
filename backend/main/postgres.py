@@ -1,6 +1,7 @@
 import psycopg
 import os
 import json
+from pathlib import Path
 
 from chunks import Chunk
 
@@ -200,6 +201,32 @@ def insert_pdfs(filepath):
 
     except psycopg.Error as e:
         print(f'Failed to insert pdfs into database, error {e}\n\n')
+        raise
+
+
+def retrieve_pdf(document_name):
+    try:
+        with get_conection() as conn:
+            with conn.cursor() as cur:
+
+                cur.execute(
+                    """
+                    SELECT path FROM pdfs WHERE name = %s
+                    """,
+                    (document_name,)
+                )
+
+                result = cur.fetchone()
+
+                if result:
+                    return Path(result[0])
+
+                else:
+                    print(f"Warning: Document '{document_name}' not found in database.")
+                    return None
+
+    except psycopg.Error as e:
+        print(f'Unable to retrieve pdf {document_name}, error {e}\n\n')
         raise
 
 

@@ -18,36 +18,63 @@ from qdrant import upload_to_qdrant
 
 
 
-def text_between(document,prev,curr):
+def text_between(document,prev,curr, threshold=50):
 
-    prev_index = prev.self_ref
-    curr_index = curr.self_ref
-    prev_page = prev.prov[0].page_no
-    curr_page = curr.prov[0].page_no
+    prev_ref = prev.self_ref
+    curr_ref = curr.self_ref
 
-    ignored_text_types = [
-        DocItemLabel.CAPTION,
-        DocItemLabel.REFERENCE,
-        DocItemLabel.FOOTNOTE,
-        DocItemLabel.PAGE_FOOTER,
-        DocItemLabel.PAGE_HEADER]
+    ignored_text_types = {
+        DocItemLabel.CAPTION, DocItemLabel.REFERENCE, 
+        DocItemLabel.FOOTNOTE, DocItemLabel.PAGE_FOOTER,
+        DocItemLabel.PAGE_HEADER, DocItemLabel.FORMULA, 
+        DocItemLabel.LIST_ITEM
+    }
+    
+    red_flags = {
+        DocItemLabel.TITLE, DocItemLabel.SECTION_HEADER,
+        DocItemLabel.PICTURE
+    }
 
-    for item,_level in reversed(list(document.iterate_items(page_no=prev_page))):
-        if item.self_ref == prev_index:
+    # Start checking only AFTER we see the previous table
+    found_prev = False
+    textlen = 0
+    for item, _ in document.iterate_items():
+
+        if not found_prev and item.prov[0].page_no < prev.prov[0].page_no:
+            continue
+
+        if item.self_ref == prev_ref:
+            found_prev = True
+            continue
+            
+        if item.self_ref == curr_ref:
+            # We reached the current table without finding real text
             break
-        if item.label not in ignored_text_types and hasattr(item, "text") and item.text.strip():
-            return True
-        
-    for item,_ in document.iterate_items(page_no=curr_page):
-        if item.self_ref == curr_index:
-            break
-        if item.label not in ignored_text_types and hasattr(item, "text") and item.text.strip():
-            return True
+            
+        if found_prev:
+            # We are now in the 'gap'
+            if item.label in red_flags:
+                return True
+            elif item.label not in ignored_text_types:
+                item_text = getattr(item, "text", "")
+                textlen += len(item.text.strip())
+                if textlen > threshold:
+                    return True # This is real body text! Split the table.
 
     return False
 
 
-def same_table(document,prev_table,curr_table,tolerance=2):
+def same_headers(prev,curr):
+
+    # Extract text from the first row of each table
+    header_a = [cell.text.strip() for cell in prev.data.grid[0]]
+    header_b = [cell.text.strip() for cell in curr.data.grid[0]]
+
+    # Compare the lists
+    return header_a == header_b
+
+
+def same_table(document,prev_table,curr_table,tolerance=3):
 
     #Column check (same number of columns)
     prev_table_cols = prev_table.data.num_cols
@@ -68,6 +95,41 @@ def same_table(document,prev_table,curr_table,tolerance=2):
     return True
 
 
+def merge_wrapped_rows(df):
+    if df.empty or len(df) < 2:
+        return df
+
+    new_rows = []
+    columns = df.columns
+    # Start with the first row as the anchor
+    anchor_row = df.iloc[0].copy()
+
+    for i in range(1, len(df)):
+        current_row = df.iloc[i]
+        
+        # Identify columns that actually have non-empty text
+        text_cols = [c for c in df.columns if str(current_row[c]).strip()]
+        
+        # If the row has data in only ONE column, it's a wrap-around
+        if len(text_cols) == 1:
+            col_idx = text_cols[0]
+            
+            # Append text to the anchor row in the correct column
+            prev_text = str(anchor_row[col_idx])
+            wrap_text = str(current_row[col_idx])
+            anchor_row[col_idx] = f"{prev_text} {wrap_text}".strip()
+
+        else:
+            # It's a full row of data, so save the previous anchor and start a new one
+            new_rows.append(anchor_row)
+            anchor_row = current_row.copy()
+
+    # Append the final anchor
+    new_rows.append(anchor_row)
+    
+    return pd.DataFrame([r.to_dict() for r in new_rows], columns=columns)
+
+
 async def format_tables(tables,document):
 
     model = OpenAIModel()
@@ -76,76 +138,97 @@ async def format_tables(tables,document):
     for table_idx, item in enumerate(tables):
         #One item is one table
         table_data = []
+        table_headers = []
         for i,table in enumerate(item['tables']):
 
             df = table.export_to_dataframe(doc=document)
 
-            if i > 0:
+            if i == 0:
+                table_headers = df.columns.tolist()
+
+            else:
+                # For continuation fragments, force them to use the master headers
+                # This prevents the first row of data from being treated as a header
+                df.columns = table_headers 
                 
-                """
-                Instead of only checking whether the first row should be a continuation of the previous page's table, 
-                should check while the first row only has 1 row of data to combine with the previous table
-                essentially broadening the table similarity definition
-                """
-
-                table_headers = table_data[0].columns.tolist()
-                df.columns = table_headers
-
-                #Check if first row is headers
-                first_row = df.iloc[0].tolist()
-                headers = df.columns
-                if first_row == headers:
-                    #Remove headers
+                # Check if the first row of this fragment is just a repetition of the header
+                first_row_text = df.iloc[0].astype(str).tolist()
+                if first_row_text == table_headers:
+                    # It's a repeated header, safe to remove
                     df = df.iloc[1:]
-
-                while not df.empty:
-                    text_row = df.iloc[0].tolist()
-                    valid_rows = [i for i, val in enumerate(text_row) if str(val).strip()]
-                    text_counter = len(valid_rows)
-
-                    if text_counter == 1:
-                        # 1. Access the previous DataFrame in the list
-                        prev_df = table_data[-1]
-                        col = valid_rows[0]
-
-                        # 2. Safely get the existing value (handle NaNs/None)
-                        # .iat is fast, but we need to ensure we don't f-string 'nan'
-                        raw_prev_val = prev_df.iat[-1, col]
-                        prev_val = str(raw_prev_val) if pd.notna(raw_prev_val) else ""
-
-                        # 3. Merge the text and update the last row of the previous DF
-                        # Using .strip() to avoid leading spaces if prev_val was empty
-                        new_val = f"{prev_val} {str(text_row[col])}".strip()
-                        prev_df.iat[-1, col] = new_val
-
-                        # 4. Remove the straggler row from the current fragment
-                        df = df.iloc[1:]
-
-                    else:
-                        break
-
+            
             table_data.append(df)
+
+            # df = table.export_to_dataframe(doc=document)
+
+            # if i > 0:
+                
+            #     """
+            #     Instead of only checking whether the first row should be a continuation of the previous page's table, 
+            #     should check while the first row only has 1 row of data to combine with the previous table
+            #     essentially broadening the table similarity definition
+            #     """
+
+            #     table_headers = table_data[0].columns.tolist()
+            #     df.columns = table_headers
+
+            #     #Check if first row is headers
+            #     first_row = df.iloc[0].tolist()
+            #     headers = df.columns
+            #     if first_row == headers.tolist():
+            #         #Remove headers
+            #         df = df.iloc[1:]
+
+            #     while not df.empty:
+            #         text_row = df.iloc[0].tolist()
+            #         valid_rows = [i for i, val in enumerate(text_row) if str(val).strip()]
+            #         text_counter = len(valid_rows)
+
+            #         if text_counter == 1:
+            #             # 1. Access the previous DataFrame in the list
+            #             prev_df = table_data[-1]
+            #             col = valid_rows[0]
+
+            #             # 2. Safely get the existing value (handle NaNs/None)
+            #             # .iat is fast, but we need to ensure we don't f-string 'nan'
+            #             raw_prev_val = prev_df.iat[-1, col]
+            #             prev_val = str(raw_prev_val) if pd.notna(raw_prev_val) else ""
+
+            #             # 3. Merge the text and update the last row of the previous DF
+            #             # Using .strip() to avoid leading spaces if prev_val was empty
+            #             new_val = f"{prev_val} {str(text_row[col])}".strip()
+            #             prev_df.iat[-1, col] = new_val
+
+            #             # 4. Remove the straggler row from the current fragment
+            #             df = df.iloc[1:]
+
+            #         else:
+            #             break
+
+            # table_data.append(df)
         
         combined_df = pd.concat(table_data,axis=0,ignore_index=True)
-        markdown_table = combined_df.to_markdown()
+        final_df = merge_wrapped_rows(combined_df)
+        final_df = final_df.drop_duplicates().reset_index(drop=True)
+        final_df.columns = table_headers
+        markdown_table = final_df.to_markdown()
 
         raw_name = document.origin.filename
         document_name = Path(raw_name).stem
         clean_filename = f"{document_name}_Table_{table_idx}.csv"
         save_path = Path(os.getenv('table_results_path')) / clean_filename
-        combined_df.to_csv(save_path, index=False)
+        final_df.to_csv(save_path, index=False)
 
         caption = " ".join(item['caption']).strip()
-        chunk_text = f"Text before table : \n{" ".join(item['prev_text']).strip() if item['prev_text'] else "No text before table"}\n Table : \n{markdown_table if markdown_table.strip() else "No table found"}\n Caption : \n{caption if caption.strip() else "No caption found"}\n Text after table : \n{" ".join(item['post_text']) if item['post_text'] else "No text after table"}\n"
+        # chunk_text = f"Text before table : \n{" ".join(item['prev_text']).strip() if item['prev_text'] else "No text before table"}\n Table : \n{markdown_table if markdown_table.strip() else "No table found"}\n Caption : \n{caption if caption.strip() else "No caption found"}\n Text after table : \n{" ".join(item['post_text']) if item['post_text'] else "No text after table"}\n"
+        chunk_text = f"Table : {markdown_table}\nCaption : {caption}"
         chunk_context = await model.get_context(document.export_to_markdown(),chunk_text)
 
         chunk = TableChunk()
         chunk.document_name = document.origin.filename
         chunk.context = chunk_context
         chunk.content = chunk_text
-        chunk.metadata = {
-            'pages' : list(item['pages'])
-            }
+        chunk.metadata = {'pages' : list(item['pages'])}
 
         all_tables.append(chunk)
 
@@ -153,6 +236,20 @@ async def format_tables(tables,document):
 
 
 async def extract_tables(filepath):
+    """
+    Case 1 : Two tables are detected on the same page. Need to determine whether they are the same table or not
+    How? : Check whether the two table headers are the same. If they are not the same, furthermore docling already detected them as separate,
+    then the tables are probably different already.
+
+    Case 2 : Table 1 on Page A, Table 2 on Page B. 
+    How? : Because the Table 2 fragment may or may not have a table header, check for same number of columns and x alignment.
+    Check whether there is any text between the tables on the separate pages. 
+    If there is text, most likely different tables. Else, more likely same table.
+
+    Case 3 : Tables separated by more than 1 page.
+    How? : Most likely unrelated tables
+
+    """
 
     docling = DocumentConverter()
 
@@ -165,47 +262,67 @@ async def extract_tables(filepath):
     all_tables = []
     last_seen_table = float('inf')
 
-    for table in document_tables:
+    for curr_table in document_tables:
 
-        page_no = table.prov[0].page_no
-        prev_text,post_text = get_surrounding_text(document,table)
-        caption = table.caption_text(doc=document)
-
-        """
-        Perhaps the condition to check of is_continuation table should be different.
-        Because even docling can have detection failures on non line demarcated table border tables.
-        Docling detects that there is one data "column" on the left and multiple data "rows" on the right, but sometimes doesnt assign the data
-        on the right to the column on the left still.
-        Perhaps check that if the current row detected only has 1 row of data, merge with previously detected table.
-        """
+        page_no = curr_table.prov[0].page_no
+        # prev_text,post_text = get_surrounding_text(document,table)
+        caption = curr_table.caption_text(doc=document)
 
         #One item is one final table
         item = {
-            'tables' : [table],
+            'tables' : [curr_table],
             'caption' : [caption],
-            'prev_text' : [prev_text],
-            'post_text' : [post_text],
+            # 'prev_text' : [prev_text],
+            # 'post_text' : [post_text],
             'pages' : [page_no],
         }
 
-        prev_table = all_tables[-1]['tables'][-1] if all_tables else None
-        is_same_table = prev_table and (page_no-last_seen_table<=1) and same_table(document,prev_table,table)
+        should_merge = False
+        if all_tables:
+            prev_table = all_tables[-1]['tables'][-1]
+            page_diff = page_no - last_seen_page
 
-        if is_same_table:
-            #Same table, just continutation
-            prev_item = all_tables.pop()
-            for key in prev_item.keys():
-                prev_item[key].extend(item[key])
-            all_tables.append(prev_item)
+            if page_diff == 0:
+                # Case 1: Same page - merge only if headers match
+                should_merge = same_headers(prev_table, curr_table)
+            
+            elif page_diff == 1:
+                # Case 2: Consecutive pages - use spatial/text logic
+                should_merge = same_table(document, prev_table, curr_table)
+
+            else:
+                # Case 3: page_diff > 1, should_merge remains False
+                pass
+
+        if should_merge:
+            # Unified Merge Logic
+            for key in item:
+                all_tables[-1][key].extend(item[key])
         else:
-            #Different table
+            # Unified New Table Logic
             all_tables.append(item)
 
-        last_seen_table = page_no
+        last_seen_page = page_no
 
     cleaned_chunks = await format_tables(all_tables,document)
 
     return cleaned_chunks
+
+
+        # prev_table = all_tables[-1]['tables'][-1] if all_tables else None
+        # is_same_table = prev_table and (page_no-last_seen_table<=1) and same_table(document,prev_table,table)
+
+        # if is_same_table:
+        #     #Same table, just continutation
+        #     prev_item = all_tables.pop()
+        #     for key in prev_item.keys():
+        #         prev_item[key].extend(item[key])
+        #     all_tables.append(prev_item)
+        # else:
+        #     #Different table
+        #     all_tables.append(item)
+
+        # last_seen_table = page_no
 
 
 async def process_tables(folder_path):
@@ -229,10 +346,10 @@ async def process_tables(folder_path):
 
                         chunks = await extract_tables(file)
 
-                        print(f'\tFinished getting text chunks\n\n')
+                        print(f'\tFinished getting table chunks\n\n')
 
-                        token_cost = f"Token cost to TEXT chunk {file.name} : {cb.total_tokens}"
-                        money_cost = f"Money cost to TEXT chunk {file.name} : {cb.total_cost}"
+                        token_cost = f"Token cost to TABLE chunk {file.name} : {cb.total_tokens}"
+                        money_cost = f"Money cost to TABLE chunk {file.name} : {cb.total_cost}"
                         total_cost = [token_cost,money_cost]
 
                         save_to_file(filename=f'{file.stem}',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
@@ -244,8 +361,8 @@ async def process_tables(folder_path):
                         print(f'\tFinished saving chunks into postgresdb\n\n')
 
                         dense_embeddings,cost = await model.embed_texts(returned_chunks)
-                        token_cost = f"Token cost to EMBED TEXT {file.name} : {cost[0]}"
-                        money_cost = f"Money cost to EMBED TEXT {file.name} : {cost[1]}"
+                        token_cost = f"Token cost to EMBED TABLE {file.name} : {cost[0]}"
+                        money_cost = f"Money cost to EMBED TABLE {file.name} : {cost[1]}"
                         total_cost = [token_cost,money_cost]
                         save_to_file(filename=f'{file.stem}',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
 

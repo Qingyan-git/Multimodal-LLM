@@ -220,6 +220,55 @@ class OpenAIModel:
         return answer.content
 
 
+    async def answer_questions_images(self,user_query,images):
+        pass
+
+        # 1. Construct the Image blocks for the Human Message
+        image_content = []
+        
+        for item in images:
+            # Add the text label so the LLM knows which image is which
+            image_content.append({
+                "type": "text", 
+                "text": f"--- START OF IMAGE ({item['source']}) ---"
+            })
+            # Add the actual image
+            image_content.append({
+                "type": "image_url",
+                "image_url": {
+                    "url": f"data:image/jpeg;base64,{item['image_data']}",
+                    "detail": "high" # Ensures the LLM looks at the high-res version for small text
+                }
+            })
+
+        # 2. Add the final user question
+        image_content.append({
+            "type": "text",
+            "text": f"\nUser Query: {user_query}"
+        })
+
+        messages = [
+            SystemMessage(content=f"""
+            You are a specialized Document Analysis Assistant. You will be provided with several images of document pages.
+            
+            YOUR TASKS:
+            1. Analyze the provided images (including text, tables, and charts) to answer the user's query.
+            2. For every fact you state, you MUST cite the source (Document Name and Page Number) provided in the label above the image.
+            3. If the answer is found in a chart or table, describe the visual evidence (e.g., 'As shown in the bar chart on Page 5...').
+            4. If the images do not contain enough information to answer the question accurately, state that you cannot find the answer in the provided pages.
+            
+            FORMATTING:
+            - Use clear, professional language.
+            - Use bullet points for complex data.
+            - Always use the citation format: [Document Name, Page X].
+            """),
+            HumanMessage(content=image_content)
+        ]
+
+        response = await self.chat_model.ainvoke(messages)
+        return response.content
+
+
 class RecursiveSplitter:
     def __init__(self,max_chunk_size=1000,chunk_overlap=200):
 

@@ -85,6 +85,8 @@ def save_image(image,filename,path=Path(os.getenv('image_results_path'))):
     save_path = path / filename
     image.save(save_path)
 
+    return
+
 
 def is_useable_image(img, page_w, page_h, min_dim=100, area_threshold=0.15):
     prov = img.prov[0]
@@ -121,7 +123,7 @@ async def extract_images(filepath):
     # the rendered image resolution (scale=1 ~ 72 DPI). The `generate_*` toggles
     # decide which elements are enriched with images.
     pipeline_options = PdfPipelineOptions()
-    pipeline_options.images_scale = 1.0 
+    pipeline_options.images_scale = 2.0 
     pipeline_options.generate_page_images = True
     pipeline_options.generate_picture_images = True
     pipeline_options.picture_description_options.picture_area_threshold = 0.15
@@ -139,7 +141,6 @@ async def extract_images(filepath):
     document_images = document.pictures
 
     all_chunks = []
-    batch_size = 5
 
     useable_images = []
     for img in document_images:
@@ -158,22 +159,25 @@ async def extract_images(filepath):
         if is_useable_image(img, page_w, page_h):
             useable_images.append(img)
 
-    for batch_no in range(0,len(useable_images),batch_size):
-        batch = useable_images[batch_no:batch_no+batch_size]
-        batch_tasks = []
+    for i, image in enumerate(useable_images):
+        # 1. Extract the PIL image from the Docling item
+        pil_img = image.get_image(doc=document)
+        # 2. Define a filename WITH an extension
+        clean_name = f"image_{i}.jpeg"
+        # 3. Call your save function
+        save_image(pil_img, filename=clean_name)
 
-        for i,image in enumerate(batch):
-            filename = f"{filepath.stem}_{batch_no}_{i}.jpg"
-            image_PIL = image.get_image(doc=document)
-            save_image(image_PIL,filename)
+    semaphore = asyncio.Semaphore(10)
 
-            task = asyncio.create_task(
-                process_single_image(model,document,image)
-            )
-            batch_tasks.append(task)
+    async def sem_task(img):
+        async with semaphore:
+            return await process_single_image(model, document, img)
 
-        image_chunks = await asyncio.gather(*batch_tasks)
-        all_chunks.extend(image_chunks)
+    # Create all tasks at once, but the semaphore will throttle them
+    tasks = [sem_task(img) for img in useable_images]
+    
+    # This will now run all images, but only 5 at a time
+    all_chunks = await asyncio.gather(*tasks)
 
     return all_chunks
 
@@ -205,7 +209,7 @@ async def process_single_image(model,document,image):
     #Some image metadata
     metadata = {
         'source': image.source,
-        'pages' : list(image.prov[0].page_no),
+        'pages' : [image.prov[0].page_no], #Cannot be list() because image.prov[0].page_no is an int which is not iterable
     }
 
     #All into image_chunk object and return
@@ -240,10 +244,10 @@ async def process_images(folder_path):
 
                         chunks = await extract_images(file)
 
-                        print(f'\tFinished getting text chunks\n\n')
+                        print(f'\tFinished getting image chunks\n\n')
 
-                        token_cost = f"Token cost to TEXT chunk {file.name} : {cb.total_tokens}"
-                        money_cost = f"Money cost to TEXT chunk {file.name} : {cb.total_cost}"
+                        token_cost = f"Token cost to IMAGE chunk {file.name} : {cb.total_tokens}"
+                        money_cost = f"Money cost to IMAGE chunk {file.name} : {cb.total_cost}"
                         total_cost = [token_cost,money_cost]
 
                         save_to_file(filename=f'{file.stem}',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
@@ -255,8 +259,8 @@ async def process_images(folder_path):
                         print(f'\tFinished saving chunks into postgresdb\n\n')
 
                         dense_embeddings,cost = await model.embed_texts(returned_chunks)
-                        token_cost = f"Token cost to EMBED TEXT {file.name} : {cost[0]}"
-                        money_cost = f"Money cost to EMBED TEXT {file.name} : {cost[1]}"
+                        token_cost = f"Token cost to EMBED IMAGE {file.name} : {cost[0]}"
+                        money_cost = f"Money cost to EMBED IMAGE {file.name} : {cost[1]}"
                         total_cost = [token_cost,money_cost]
                         save_to_file(filename=f'{file.stem}',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
 
