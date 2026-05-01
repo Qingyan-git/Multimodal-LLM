@@ -206,7 +206,7 @@ def insert_pdfs(filepath):
 
 def retrieve_pdf(document_name):
     try:
-        with get_conection() as conn:
+        with get_connection() as conn:
             with conn.cursor() as cur:
 
                 cur.execute(

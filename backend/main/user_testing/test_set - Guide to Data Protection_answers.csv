@@ -1,123 +1,1771 @@
-﻿Question,Answer
-What are examples of sensitive personal data that organisations should give extra protection to?,"**Examples of Sensitive Personal Data:**
+﻿Question,Answer,Sources
+What are examples of sensitive personal data that organisations should give extra protection to?,"**Answer:**
 
-Organizations should provide extra protection to the following types of sensitive personal data:
+I do not have enough information in the provided documents to identify specific examples of sensitive personal data that organisations should give extra protection to.
 
-- **Transactional or Authentication Data:** This includes information such as credit card details.
-- **Health-Related Data:** Personal data that could adversely impact individuals if disclosed.
-- **Financial-Related Data:** Information that may result in negative consequences for individuals if exposed.
-- **Intellectual Property Data:** Any data that could adversely affect the organization if disclosed, such as proprietary information or client data.
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, Page 14
+","
+Chunk Text : Conduct periodic checks for personal data stored in ICTsystems. For personal data that is not required in any formanymore, securely dispose of the data. If there is a need toretain the data but in anonymised or aggregated form, e.g.for performing data analytics, consider anonymising the data.||||•|•|•|
+|l.Conduct physical asset inventory checks regularly to ensurethat all computers and other electronic devices (e.g. portablehard drives, printers, fax machines) used to store or processpersonal data are accounted for.||•||•|||
 
-These categories of sensitive data require heightened security measures to mitigate risks associated with data breaches.
+--- end of page.page_number=10 ---
 
-**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, Page 8"
-What does the guide recommend as an example of a strong password format?,"The guide recommends that a strong password should be a minimum of 12 alphanumeric characters that include a mix of uppercase letters, lowercase letters, numeric characters, special characters, and commonly used phrases or paraphrases. This combination makes the password stronger and harder to decode. Examples provided include phrases like “Learn2bike@5” or “LetsGo2gym@7”.
+GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS   11 
 
-**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, Page 15"
-What is a non-production environment?,"A non-production environment refers to a network, operating system, or other systems that are used as a development area or test bed for new software or technologies. It is distinct from production environments where live data and applications are actively used.
+## **Collection of personal data** 
 
-**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, Page 21"
-At which stages of the data lifecycle should organisations enforce regular password changes?,"**Enforcement of Regular Password Changes in the Data Lifecycle**
+Personal data that are collected but not used will pose unnecessary data protection and cyber threat risks to the organisation. Collection of unnecessary personal data increases the risks and impact of data breaches. Additional resources needed to protect these unnecessary personal data can be avoided by simply not collecting them in the first place. Data minimisation is a good way for organisations to examine what personal data they really need. from Guide to Data Protection Practices for ICT Systems.pdf, page 9,10
 
-Organizations should enforce regular password changes at the following stages of the data lifecycle:
+Chunk Text : When personal data are storedin cookies, consider very carefully if they are really required.If sensitive data are persisted in the cookie, ensure that theentire cookie is encrypted and stored for the duration it isneeded by setting a short expiration time to secure the cookies.|•|•||•|||
+|k. Use a web application frewall (“**WAF**”) to defend againsttypical web application attacks such as SQL injection and XSSattacks. WAFs can act as another layer of security in additionto the application code level.||•|||||
 
-- **Use**
-- **Disclosure**
-- **Storage**
-- **Archival**
+7  Refer to OWASP’s website. --- end of page.page_number=20 ---
 
-This practice is essential to maintain security and mitigate risks associated with unauthorized access throughout these stages.
+GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS   21 
 
-**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, 15"
-Which data lifecycle stages does the practice of classifying and managing repositories by potential adverse impact apply to?,"The practice of classifying and managing repositories or datasets containing personal data applies to various stages of the data lifecycle, specifically:
+## **ICT security and testing** 
 
-- **Collection**: Ensuring that data is classified correctly at the point of collection.
-- **Use**: Managing how the data is utilized based on its classification.
-- **Storage**: Maintaining proper classification while the data is stored.
-- **Archiving**: Ensuring that archived data remains classified and managed appropriately.
-- **Disposal**: Classifying data to determine the correct disposal methods based on its potential adverse impact.
+Organisations should always ensure that the protection of the personal data and the security of the ICT system is the key design consideration at each stage of the system development lifecycle. from Guide to Data Protection Practices for ICT Systems.pdf, page 19,20
 
-This comprehensive approach to classification is essential for effective data management and protection throughout the entire data lifecycle.
+Chunk Text : A good way to minimise theserisks is for the organisation to assess whether the retention of personal data may be necessarybased on its business needs or legal purposes.|||||||
+|**Retention of Personal Data****Basic Practices**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**||||||
+|a. Have an appropriate personal data retention policy which setsout the varying minimum/maximum retention periods forrepositories/ICT systems containing personal data. ICT controlscould be implemented in ICT systems to enforce retentionperiods, especially for organisations that hold a large quantityof personal data.||||•|•|•|
+|b. Where there is a need to keep the data beyond the retentionperiod, review and anonymise records4to prevent re-identifcationto an individual.||||•|•||
+|c. Delete records that are no longer needed. The organisationmay implement ICT systems to fag records which have reachedthe end of the retention period.||||•|•|•|
+|d. Perform physical disposal of hard disks or other known methodsof destruction of storage media, such as degaussing andincinerating, when secure deletion, erasure or deletion ofpersonal data stored on the electronic media is not possible.This may be the case with faulty storage media.||||||•|
+|e. Before redeploying, exchanging or disposing of electronic (re-writable) media, always perform secure deletion, erasure, purgingor destruction of electronic personal data on storage media.|||||||
 
-**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, 9; Guide to Data Protection Practices for ICT Systems.pdf, 12"
-The guide says to conduct periodic checks for personal data stored in ICT systems and securely dispose of data no longer needed. Which lifecycle stages does this apply to?,"The guide indicates that conducting periodic checks for personal data stored in ICT systems and securely disposing of data that is no longer needed applies to the following lifecycle stages:
+The organisation should cease to retain personal data in their ICT systems once the purpose for which the personal data was collected no longer exists. Keeping the personal data for long periods increases the cybersecurity risks to the organisation. A good way to minimise these risks is for the organisation to assess whether the retention of personal data may be necessary based on its business needs or legal purposes. > 4 _Refer to PDPC’s Guide to Basic Data Anonymisation Techniques._ 
 
-- **Data Lifecycle.Storage**: This stage involves managing the storage of personal data and ensuring that unnecessary data is securely disposed of.
-- **Data Lifecycle.Disposal**: This stage specifically addresses the secure disposal of personal data that is no longer required.
+--- end of page.page_number=14 ---
 
-Additionally, if there is a need to retain data, it should be anonymized or aggregated for purposes such as data analytics.
+GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS   15 
 
-**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, [Page 10]"
-"The guide says to conduct data protection impact assessment, which lifecycle stages does this apply to?","The guide indicates that conducting a data protection impact assessment (DPIA) applies specifically to the **Data Lifecycle.Storage** stage. This is highlighted in the context where it mentions that a DPIA should be conducted before the development of a new ICT system to assess the types of personal data and the data processing activities required for achieving the purposes of that system.
+## **ICT CONTROLS** 
 
-**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, [10]"
-What specific type of sensitive data should be excluded from user views,"I do not have enough information in the provided documents.
+## **Authentication, authorisation and passwords** 
 
-**Sources Used:** None"
-What should my organisation do to prevent too much data from being exported or leaked out of our systems?,"To prevent excessive data export or leakage from your organization's systems, you should implement the following practices:
+Authentication and authorisation processes in ICT systems are commonly used to ensure that information is accessed only by the authorised persons performing the intended activities. It is a good practice to set appropriate access control rules, access rights and restrictions for specific user roles. It is also good to have stronger requirements for administrative accounts, such as complex passwords or 2-Factor Authentication (“ **2FA** ”) /Multi-Factor Authentication (“ **MFA** ”). Unauthorised access is one of the most common types of data breaches. from Guide to Data Protection Practices for ICT Systems.pdf, page 13,14
+"
+What does the guide recommend as an example of a strong password format?,"**Answer:**
 
-- **Monitor Data Export Activities**: Regularly monitor data export activities to detect any unauthorized data exfiltration. This includes keeping track of data transfers and identifying any anomalies.
-  
-- **Configure Export Thresholds**: Consider setting thresholds for allowable data exports. This means defining limits on the amount of data that can be exported at any given time, which can help in controlling and preventing excessive data transfers.
+Based on the provided documents, there is an example that suggests creating a strong password by combining memorable phrases with numbers and a mix of uppercase, lowercase, and special characters. Specific examples given include “Learn2bike@5” or “LetsGo2gym@7”.
 
-- **Conduct Network Penetration Testing**: Before launching any new ICT systems, conduct network penetration testing to identify and resolve vulnerabilities that could be exploited for data leakage.
+- This guidance appears in the PDPC Guide to Data Protection Practices for ICT Systems, within the section on authentication and password practices.
 
-These measures align with the overarching goal of strengthening data protection measures and controls within ICT systems.
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, page 15","
+Chunk Text : Regular review of user accounts to ensure that all the accountsare active and the rights assigned are necessary (i.e. removeuser accounts when a user has left the organisation or updatethe user’s rights when he/she has changed his/her role withinthe organisation).|•|•||•|•||
 
-**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, [23]"
-"At which stages of the data lifecycle should organisations maintain a list of whitlested connections to only specific, trusted hosts? ","Organizations should maintain a list of whitelisted connections to only specific, trusted hosts during the following stages of the data lifecycle:
+> 5 _Refer to CSA’s Guideline on “How to create a strong password”._ 
 
-- **Collection**
-- **Use**
-- **Disclosure**
-- **Storage**
-- **Archival**
-- **Disposal**
+> 6 _A commonly used phrase or paraphrase created by the user will help them to remember their own password more easily. When combined with numbers and uppercase, lowercase and special characters, the password becomes stronger and harder to decode. Examples are “Learn2bike@5” or “LetsGo2gym@7”._ 
 
-This practice is part of the enhanced security measures for computer networks, which emphasizes the importance of restricting access to only trusted connections throughout the entire data management process.
+--- end of page.page_number=15 ---
 
-**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, 17"
-What are the four key components of governance mentioned in the guide?,"The four key components of governance mentioned in the guide are:
+16   GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS 
 
-- **Clear Standards**
-- **Risk Classification**
-- **Accountability Policies**
-- **Management and Tracking Procedures**
+|**Authentication, Authorisation and Passwords****Basic Practices**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|
+|---|---|---|---|---|---|---|
+|f.Have clear policies that prohibit the sharing of passwordssuch as admin credentials, publicly displaying passwords onPost-it notes or storing passwords in public web folders(including Github).|•|•||•|•||
+|g. Log successful and failed logins in order to assist detectionor investigation into hacking attempts.|||||||
+|**Enhanced Practices**|||||||
+|h. Use a one-time password (“**OTP**”) or 2FA/MFA for adminaccess to sensitive personal data records or large volumes ofpersonal data.|•|•||•|•||
+|i.Implement segregation of duties where system tasks areseparated and performed by different groups. It is also desirableto have job rotation and cross training for security admin rolesand functions.|||||||
+|j.Log access to sensitive personal data.|||||||
+|k. from Guide to Data Protection Practices for ICT Systems.pdf, page 14,15
 
-These components are essential for organizations to mitigate data breach risks throughout the data lifecycle, particularly in the context of managing personal data.
+Chunk Text : High-Level Summary
+- A slide titled “4. Login for Individuals with AGD Password” showing a login form for foreign individuals, with a note on forgotten passwords. The layout includes a left-aligned login panel, a small help note on the right, and a pagination marker “29” at the bottom right.
 
-**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, 8"
-What are the three main sections that data protection practices for ICT systems are grouped into?,"The three main sections that data protection practices for ICT systems are grouped into are:
+Contextual Analysis
+- Setting: A presentation slide, likely part of a user guide or training deck about authentication for individuals with AGD password.
+- Subjects: A login interface mockup for “Log in for Foreign Individuals,” including fields for user ID, password, and a CAPTCHA-like code, plus a “Forgot password” note block.
+- Intent: To instruct viewers on how foreign individuals should log in or understand password-related guidance within the AGD (account/agency) system.
 
-- **Policy/Risk Management**
-- **ICT Controls**
-- **SOP/IT Operations**
+Detail Inventory
+- Text & OCR (exact text as appears):
+  - Slide title: “4. Login for Individuals with AGD Password”
+  - Subheading/description line: “This login method is applicable to vendors who are transacting as an individual for your personal payment matters (e.g. freelancers) but are not eligible for Singpass.”
+  - Left panel heading: “Log in for Foreign Individuals”
+  - Form fields (typical labels, approximate given visual):
+    - User ID
+    - Password
+  - CAPTCHA line: “Please enter the CAPTCHA Code (case sensitive):”
+  - CAPTCHA example: “8j8q” (with a small circular icon)
+  - Red-highlighted note area below: likely a warning or important note (text not fully legible in image)
+  - Action buttons at bottom: “Cancel” (gray) and “Login” (blue)
+  - Right panel heading: “NOTE”
+  - Note body: “If you have forgotten your password, you may click on ‘Forgot password’.”
+  - Page number: “29” (bottom right)
+- Visual Elements:
+  - Layout: Two-column or split panel; left shows a login form with input boxes and CAPTCHA; right shows a “NOTE” box with an icon.
+  - Colors: Primary blue for login button, gray for cancel button, light gray for input borders; orange vertical margin stripe on the far left edge (likely part of slide template).
+  - Typography: Sans-serif font; varying weights for title, subheading, and body text.
+  - Icons: Small circular icon near the CAPTCHA and a “NOTE” heading with an document-like icon in the note area.
+- Entities:
+  - No real people or brands identified.
+  - Generic terms: AGD Password, Singpass (mentioned in description), foreigners, vendors, freelancers.
 
-Each of these sections contains specific sub-sections detailing various practices essential for safeguarding personal data.
+Relationship Mapping
+- The left login form is the primary actionable element, with labels and a CAPTCHA field connected to a login button pair (Cancel and Login).
+- A visual divider exists between the login form and the right-side informational note.
+- The right-side “NOTE” provides supplementary guidance about password recovery, connected conceptually to the login process.
+- The bottom page number indicates this is slide 29 in a deck.
 
-**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, 6"
-What guide should organisations refer to if they want to anonymise data beyond the retention period?,"Organizations should refer to the ""Guide to Data Protection Practices for ICT Systems"" for guidance on anonymizing data beyond the retention period. This guide outlines the importance of reviewing and anonymizing records to prevent re-identification of individuals when there is a need to keep data beyond its retention period.
+Notes for indexing and retrieval
+- Include synonyms: login, login method, foreign individuals, vendors, freelancers, password, forgot password, CAPTCHA, Singpass (as a comparable system), AGD password.
+- Useful search phrases: “Login for Foreign Individuals,” “AGD Password Login,” “Forgot password” guidance, “CAPTCHA for login,” “two-button login form (Cancel, Login).”
+- Ensure OCR accuracy for exact strings: “Log in for Foreign Individuals,” “Please enter the CAPTCHA Code (case sensitive):,” “NOTE,” “If you have forgotten your password, you may click on ‘Forgot password’.”, and the slide title “4. Login for Individuals with AGD Password.” from LoginRegister.pdf, page 28
 
-**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, Page 14"
-What checklist is the Incident Response Management checklist referenced from?,"The Incident Response Management checklist is referenced from the CSA's Incident Response Checklist. This checklist outlines essential practices organizations should implement to prepare for and respond to cyber incidents effectively.
+Chunk Text : Enforce password controls such as a change of password uponfrst logon, a minimum password length, restricting reuse ofprevious passwords, mandating a minimum level of passwordcomplexity as well as a maximum validity period of a password.|||||||
+|d. from Guide to Data Protection Practices for ICT Systems.pdf, page 14
+"
+What is a non-production environment?,"**Answer:**
 
-**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, [33]"
-What are the three key ICT policies that organisations are required to develop and implement?,"To ensure effective data protection, organizations are required to develop and implement the following three key ICT policies:
+A non-production environment is defined as a network, operating system, or other systems that are used as a development area or test bed for new software or technologies. It is explicitly described in the material as non-production environments used for development and testing, where production data should not be used and synthetic data may be created using anonymisation techniques.
 
-- **Account and Access Control Policy**
-- **Backup/Retention Policy**
-- **Password Policy**
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, Page 21
+","
+Chunk Text : use of global variables) before coding.This provides an accurate understanding of the implications ofthe proposed changes, which helps in making informed businessdecisions about the areas of the system that may be affecteddue to the change in the features of the applications.|||||||
+|c. Conduct code review and rigorous unit testing which includescomplete testing of functional requirements to verify thecompliance with the requirements specifcations at the earlystage in the system development lifecycle.||•|||||
+|d. Ensure that adequate controls, such as fail-safe processing incoding under “if-then-else” exception conditions, are in placeto prevent improper error handling that may result in leakageof sensitive personal data.|||||||
+|e. Conduct regression testing and system integration testingwhich includes complete testing of both functional and non-functional requirements as well as verifying the integration ofthe interfaces to all its external systems in the middle stageof the system development lifecycle.|||||||
 
-These policies provide management with direction and guidance for all ICT system implementations and activities related to data protection in accordance with business objectives and relevant laws and regulations.
+> 8 _Non-production environments include a network, operating system or other systems that are used as a development area or test bed for new software or technologies._ 
 
-**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, Page 9"
-What enhanced practice does the guide recommend for admin access to sensitive personal data?,"The guide recommends the following enhanced practice for admin access to sensitive personal data:
+> 9 _Refer to Guide to Basic Data Anonymisation Techniques._ 
 
-- **Use a one-time password (OTP) or two-factor authentication (2FA)/multi-factor authentication (MFA)** for admin access to sensitive personal data records or large volumes of personal data.
+--- end of page.page_number=21 ---
 
-This practice is crucial for enhancing security and protecting sensitive information from unauthorized access.
+22   GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS 
 
-**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, Page 16"
-What resource should you consult if you are unsure whether you need a licence for providing financial advice?,"If you are unsure whether you need a licence for providing financial advice, you should consult the MAS Guidelines on Provision of Financial Advisory Service (FAAG17) or seek legal advice. 
+|**ICT Security and Testing****Basic Practices**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|
+|---|---|---|---|---|---|---|
+|f.Conduct user acceptance testing (“**UAT**”), load testing andstress testing at the near-end stage of the system developmentlifecycle to ensure robustness and security of the system.Ensure that the business requirements are properly capturedand documented during requirements gathering, as theserequirements will become the business logic in use casescenarios. It is important that the use case scenarios, performedand validated in the UAT, be properly planned to simulatereal-world usage and be as comprehensive as possible. TheUAT coverage should also include foreseeable exceptionhandling scenarios, especially when personal data are beingtransmitted or displayed in these ‘live’ scenarios.||•|||||
+|g. Post deployment, periodically conduct web applicationvulnerability scanning and assessments.|||||||
+|h. from Guide to Data Protection Practices for ICT Systems.pdf, page 20,21
 
-**Sources Used:** 7 Must-Knows When Sharing Financial Information Online.pdf, Page 1"
+Chunk Text : Table : |    | ICT Security and Testing.Basic Practices                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Data Lifecycle.Collection   | Data Lifecycle.Use   | Data Lifecycle.Disclosure   | Data Lifecycle.Storage   | Data Lifecycle.Archival   | Data Lifecycle.Disposal   |
+|---:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------|:---------------------|:----------------------------|:-------------------------|:--------------------------|:--------------------------|
+|  0 | a. Do not use or store production data that contains personal data in non-production 8 environments for testing or other purposes. Do not use production data for user acceptance tests. Organisations may consider creating synthetic data from production data using anonymisation techniques. 9                                                                                                                                                                                                                                                                                                              |                             |                      |                             |                          |                           |                           |
+|  1 | b. Perform thorough impact analysis of any software or code changes and design (e.g. use of global variables) before coding. This provides an accurate understanding of the implications of the proposed changes, which helps in making informed business decisions about the areas of the system that may be affected due to the change in the features of the applications. c. Conduct code review and rigorous unit testing which includes complete testing of functional requirements to verify the compliance with the requirements specifications at the early stage in the system development lifecycle. | •                           | •                    |                             | •                        |                           |                           |
+|  2 | d. Ensure that adequate controls, such as fail-safe processing in coding under 'if-then-else' exception conditions, are in place to prevent improper error handling that may result in leakage of sensitive personal data. e. Conduct regression testing and system integration testing which includes complete testing of both functional and non- functional requirements as well as verifying the integration of the interfaces to all its external systems in the middle stage of the system development lifecycle.                                                                                         |                             | •                    |                             |                          |                           |                           |
+Caption :  from Guide to Data Protection Practices for ICT Systems.pdf, page 21
+
+Chunk Text : High-Level Summary
+- A page from a guide on data protection practices for ICT systems, focusing on ICT security and testing within the data lifecycle.
+- It presents a structured table of basic practices and how they map to data lifecycle stages, accompanied by explanatory text and footnotes.
+
+Contextual Analysis
+- Setting: A printed or PDF-page from a discipline-specific manual or standard (likely an ICT security or data protection guide).
+- Subjects: Text blocks describing ICT security and testing practices; a table titled “ICT Security and Testing” with rows of practices and columns for data lifecycle stages; footnotes at the bottom.
+- Intent: To inform readers about recommended security practices during software development and data handling, and how these practices align with lifecycle stages such as collection, use, storage, archiving, disposal.
+
+Detail Inventory
+- Text & OCR (extracted text as it appears):
+  - Section header: “ICT security and testing”
+  - Paragraphs:
+    - “Organisations should always ensure that the protection of the personal data and the security of the ICT system is the key design consideration at each stage of the system development lifecycle. Otherwise, meaningful changes to the system to resolve any security breaches subsequently will incur more cost to the organisation.”
+    - “Coding issues have been raised as the main cause of a number of data breach incidents that occurred in the recent years. As such, software developers and others ICT personnel should always keep abreast of current and emerging ICT security threats in order to design, test and maintain ICT systems capable of protecting personal data stored.”
+  - Table header: “ICT Security and Testing” (blue header) and “Data Lifecycle” (green header)
+  - Table column headers (in Data Lifecycle area): likely “Collection,” “Use,” “Storage,” “Archive,” “Disposal” (exact labels partially visible)
+  - Table row items (visible portions):
+    - a. Do not use or store production data that contains personal data in non-production environments for testing or other purposes. Do not use production data for user acceptance tests. Organisations may consider creating synthetic data from production data using anonymisation techniques.
+    - b. Perform thorough impact analysis of any software or code changes and design (e.g., use of global variables) before coding. This provides an accurate understanding of the implications of the proposed changes, which helps in making informed business decisions about the areas affected due to the change in the features of the applications.
+    - c. Conduct code review and rigorous unit testing which includes complete testing of functional requirements to verify the compliance with the requirements specifications at the early stage in the system development lifecycle.
+    - d. Ensure that adequate controls, such as fail-safe processing in coding under “if-then-else” sections, are in place to prevent improper error handling that may result in leakage of sensitive personal data.
+    - e. Conduct regression testing and system integration testing which includes complete testing of both functional and non-functional requirements as well as verifying the integration of the interfaces to all its external systems in the middle stage of the system development lifecycle.
+  - Footnotes (partially visible):
+    - “Non-production environments include a network, operating system or other systems that are used as a development area or test bed for new software or technologies.”
+    - “Refer to Guide to Basic Data Anonymisation Techniques.”
+- Visual Elements:
+  - A two-tone colored table: blue left column “ICT Security and Testing” and green right column “Data Lifecycle.”
+  - Subtle grid lines and bullet-like labels (a.–e.) for the practices.
+  - Light pastel color palette (blue and green) with white text on headers.
+  - Small footer notes with additional guidance.
+- Entities:
+  - No specific people or brands are named.
+  - Mentions of generic concepts: production data, non-production environments, data anonymisation techniques.
+  - Locations/organizations not identified.
+
+Relationship Mapping
+- The table maps each basic ICT security/testing practice (rows a–e) to corresponding stages of the data lifecycle (columns in Data Lifecycle). This indicates how each practice should be applied across collection, use, storage, archiving, and disposal to protect personal data.
+- The introductory paragraphs establish the overarching rationale: security and privacy must be foundational during development to avoid costly post-breach fixes.
+- The footnotes provide clarifications about non-production environments and refer to anonymisation techniques, reinforcing best practices for data handling beyond the primary table.
+
+Search-Friendly Keywords
+- ICT security and testing, data protection, data lifecycle, non-production data, synthetic data, data anonymisation, production data, software development lifecycle, code review, regression testing, system integration testing, fail-safe processing, if-then-else controls, security threats, privacy by design. from Guide to Data Protection Practices for ICT Systems.pdf, page 20
+"
+At which stages of the data lifecycle should organisations enforce regular password changes?,"**Answer:**
+
+From the provided documents, it is indicated that regular password practices are part of the basic/enhanced password controls under the Authentication, Authorisation and Passwords section. The specific guidance mentions password policies and related practices, including prohibiting password sharing, logging logins, and considerations for admin access and login attempts. However, the chunks do not explicitly state a specific data lifecycle stage (e.g., Collection, Use, Disclosure, Storage, Archival, Disposal) when passwords must be changed regularly.
+
+- Chunk 1 (Authentication, Authorisation and Passwords) outlines password-related practices and logging, mapped to data lifecycle stages, but does not specify a required lifecycle stage for regular password changes.
+- Chunk 2 (Governance) lists policy areas (account and access control policy, password policy) and governance considerations, but again does not specify a lifecycle-stage timing for password changes.
+
+I do not have enough information in the provided documents to determine a precise lifecycle stage at which organisations should enforce regular password changes.
+
+Sources Used:
+Guide to Data Protection Practices for ICT Systems.pdf, Page 15
+Guide to Data Protection Practices for ICT Systems.pdf, Page 16","
+Chunk Text : Regular review of user accounts to ensure that all the accountsare active and the rights assigned are necessary (i.e. removeuser accounts when a user has left the organisation or updatethe user’s rights when he/she has changed his/her role withinthe organisation).|•|•||•|•||
+
+> 5 _Refer to CSA’s Guideline on “How to create a strong password”._ 
+
+> 6 _A commonly used phrase or paraphrase created by the user will help them to remember their own password more easily. When combined with numbers and uppercase, lowercase and special characters, the password becomes stronger and harder to decode. Examples are “Learn2bike@5” or “LetsGo2gym@7”._ 
+
+--- end of page.page_number=15 ---
+
+16   GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS 
+
+|**Authentication, Authorisation and Passwords****Basic Practices**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|
+|---|---|---|---|---|---|---|
+|f.Have clear policies that prohibit the sharing of passwordssuch as admin credentials, publicly displaying passwords onPost-it notes or storing passwords in public web folders(including Github).|•|•||•|•||
+|g. Log successful and failed logins in order to assist detectionor investigation into hacking attempts.|||||||
+|**Enhanced Practices**|||||||
+|h. Use a one-time password (“**OTP**”) or 2FA/MFA for adminaccess to sensitive personal data records or large volumes ofpersonal data.|•|•||•|•||
+|i.Implement segregation of duties where system tasks areseparated and performed by different groups. It is also desirableto have job rotation and cross training for security admin rolesand functions.|||||||
+|j.Log access to sensitive personal data.|||||||
+|k. from Guide to Data Protection Practices for ICT Systems.pdf, page 14,15
+
+Chunk Text : High-Level Summary
+- The image is a page excerpt from a guide on data protection practices for ICT systems. It features a section titled ""Authentication, Authorisation and Passwords"" with a table of basic and enhanced practices, plus data lifecycle columns. A descriptive paragraph on computer networks follows the table.
+
+Contextual Analysis
+- Setting: An informational, instructional document (likely a standards or compliance guide) page. 
+- Subjects: Data protection practices related to authentication, authorization, passwords, and general computer networks.
+- Intent: To outline recommended security practices and map them to data lifecycle stages, aiding readers in understanding and implementing ICT security measures.
+
+Detail Inventory
+- Text & OCR (exact phrases as visible):
+  - Top header: ""GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS"" (page number 16)
+  - Main section title: ""Authentication, Authorisation and Passwords""
+  - Data Lifecycle column header: ""Data Lifecycle"" with sub-columns: ""Collection"", ""Use"", ""Disclosure"", ""Storage"", ""Arrival"", ""Disposal"" (though some may be arranged vertically)
+  - Subsection: ""Basic Practices""
+    - f. Have clear policies that prohibit the sharing of passwords such as admin credentials, publicly displaying passwords on Post-it notes or storing passwords in public web folders (including Github).
+    - g. Log successful and failed logins in order to assist detection or investigation into hacking attempts.
+  - Subsection: ""Enhanced Practices""
+    - h. Use a one-time password (""OTP"") or 2FA/MFA for admin access to sensitive personal data records or large volumes of personal data.
+    - i. Implement segregation of duties where system tasks are separated and performed by different groups. It is also desirable to have job rotation and cross training for security admin roles and functions.
+    - j. Log access to sensitive personal data.
+    - k. Limit the number of failed logins to minimise brute force attacks. This can be configured under ""account lockout threshold"" via group policy at domain level as part of system management.
+  - Section: ""Computer networks""
+    - Paragraph text describing that computer networks allow communication between computers and devices, risks of unauthorized/unsecured network connections, and the importance of securing corporate networks to prevent cyber attacks and protection of personal data.
+- Visual Elements:
+  - A two-tone table with blue header for ""Authentication, Authorisation and Passwords"" and green header for ""Data Lifecycle"".
+  - Small blue bullet-like markers or dots in some cells (likely indicating applicability of practices to lifecycle stages).
+  - A block of descriptive text below the table about computer networks.
+- Entities:
+  - No person names are visible.
+  - Mentions of generic concepts: OTP, 2FA/MFA, admin access, login attempts, account lockout, job rotation, cross-training.
+  - Mentions of data lifecycle stages: collection, use, disclosure, storage, arrival, disposal.
+  - References to Github and Post-it notes as examples.
+
+Relationship Mapping
+- The table connects authentication practices (basic/enhanced) to data lifecycle stages. Dots indicate which lifecycle stages are affected by each practice.
+- The “Basic Practices” and “Enhanced Practices” rows define a progression of security measures applied to data and admin access.
+- The computer networks paragraph provides contextual background, explaining why these practices matter for securing networked ICT systems and protecting personal data.
+- The table’s structure visually associates practices with lifecycle phases, and the textual paragraph expands on network security implications.
+
+Notes for indexing and retrieval
+- Use keywords: authentication, authorization, passwords, OTP, 2FA, MFA, login logging, account lockout, segregation of duties, cross-training, brute force, data lifecycle (collection, use, disclosure, storage, arrival, disposal), computer networks, ICT security, password policy, admin access, Github.
+- Include phrases like “one-time password”, “account lockout threshold”, “log successful and failed logins”, “public web folders”, “security admin roles”, “data protection practices for ICT systems”. from Guide to Data Protection Practices for ICT Systems.pdf, page 15
+
+Chunk Text : High-Level Summary
+- A page from a governance and data protection guide, illustrating basic practices, standards, policies, and procedures for ICT data protection.
+- The layout shows a two-tone header (blue to green) with a horizontal table mapping governance practices to data lifecycle stages.
+
+Contextual Analysis
+- Setting: An informational, policy-oriented page likely from a handbook or guide titled “Guide to Data Protection Practices for ICT Systems.”
+- Subjects: Governance section with a focus on “Clear accountability” and related ICT security policies and procedures.
+- Intent: To communicate required practices and where they apply across data lifecycle stages (collection, use, disclosure, storage, archiving, disposal).
+
+Detail Inventory
+- Text & OCR (exact strings as visible):
+  - Header row: “Governance” (left) and a green header “Data Lifecycle” (right) with column labels along the top of the lifecycle: likely “Collection,” “Use,” “Disclosure,” “Storage,” “Archival,” “Disposal” (readers’ interpretation from vertical column headings in the image).
+  - Section title: “i. Clear accountability”
+  - Subsections: 
+    a. “The senior management of an organisation should provide clear direction on ICT security goals and policies for personal data protection within the organisation. The involvement and support of an organisation’s leadership is important in demonstrating commitment to ICT security for data protection.”
+    b. “Data protection risks may be managed through ICT controls. Close collaboration is necessary between data protection and ICT security functions within an organisation. This should be evidenced at appropriate levels of its governance structure.”
+  - Section II: “ii. Standards, policies and procedures”
+    c. “An organisation is required to develop and implement ICT security policies for data protection. Key ICT policies would include:”
+    - Bullet items:
+      - “Account and access control policy”
+      - “Backup/retention policy”
+      - “Password policy”
+    - Narrative: “The policies will help to provide management with the direction as well as guidance for all ICT system implementations and activities related to data protection in ICT systems in accordance with business objectives and relevant laws and regulations.”
+    - “Specifically, classification of data should not be conducted in the abstract. It is the repository or dataset that should be classified, based on their content. This will then allow management to decide the level of ICT, process or other controls that need to be implemented for the system.”
+    d. “Periodic review and update ICT security policies, standards and procedures to ensure continued relevance, adequacy and effectiveness. This will provide assurance that the data protection practices are kept up to date with regulatory and technological developments.”
+    e. “Communicate ICT security policies to both internal stakeholders (e.g., staff) and external parties (e.g., customers). This provides assurance to external stakeholders that data are adequately protected, and provides clarity to internal stakeholders on their responsibilities and security processes in handling personal data in their day-to-day work and business activities.”
+  - Footnote: “3 Refer to the Accountability Obligation under the Personal Data Protection Act (PDPA).” (blurred, but inferred)
+- Visual Elements:
+  - A multi-column governance table with a blue left header and a green Data Lifecycle header.
+  - A horizontal blue stripe for the “i. Clear accountability” section and a darker blue stripe for “ii. Standards, policies and procedures.”
+  - Dotted markers or bullet points under text explaining which lifecycle stages (columns on the right) are affected by each practice.
+  - The page has a light background with subtle grid/lines, typical of a policy manual.
+- Entities:
+  - Organization/Organisation (generic)
+  - ICT security, data protection, PDPA (Personal Data Protection Act)
+  - Policies: Account and access control policy, Backup/retention policy, Password policy
+  - Lifecycle stages: Collection, Use, Disclosure, Storage, Archival, Disposal (assumed from column headers)
+
+Relationship Mapping
+- The left-side governance sections (i. Clear accountability; ii. Standards, policies and procedures) align with the right-side Data Lifecycle columns to indicate applicability across data lifecycle stages.
+- The text describes a cause-effect relationship:
+  - Leadership direction and visible involvement (clear accountability) influence how ICT security for data protection is prioritized.
+  - Development of standards and policies directly guides ICT security practices (account/access control, backups, password policies).
+  - Regular reviews and communication ensure policies remain relevant and understood by stakeholders.
+- The footnote cross-references PDPA, linking accountability to legal obligations.
+
+Search-Friendly Keywords and Phrases
+- Data protection governance, ICT security policies, PDPA accountability, data classification, data protection policies, access control policy, backup policy, retention policy, password policy, data lifecycle, collection, storage, disposal, governance structure, organizational leadership, ICT security controls, policy review, stakeholder communication.
+
+Notes for indexing
+- Treat the page as a governance framework for ICT data protection with emphasis on accountability and standardization of policies.
+- Include explicit policy names as named entities for retrieval: Account and access control policy; Backup/retention policy; Password policy.
+- Capture cross-reference to legal framework: PDPA.
+- Map the two sections to lifecycle stages as they appear in the visualization (Collection, Use, Disclosure, Storage, Archival, Disposal). If exact labeling differs, use the likely standard lifecycle terms. from Guide to Data Protection Practices for ICT Systems.pdf, page 8
+"
+Which data lifecycle stages does the practice of classifying and managing repositories by potential adverse impact apply to?,"**Answer:**
+The practice of “Classify and manage repositories or datasets containing personal data by considering the potential adverse impact (e.g., reputational or financial) to the individuals involved should the data be compromised” applies to the following Data Lifecycle stages: Collection, Use, Disclosure, Storage, and possibly others indicated by the left-right mapping in the governance table. Based on the provided materials, it shows dots across the lifecycle columns, indicating applicability to multiple stages—specifically those listed (Collection, Use, Disclosure, Storage, Archival, Disposal) in the overall data lifecycle mapping context.
+
+Sources Used: Guide to Data Protection Practices for ICT Systems.pdf, [9]","
+Chunk Text : High-Level Summary
+- A page excerpt from a guide on data protection practices for ICT systems. It features a governance table focusing on risk management and classification/ tracking within the Data Lifecycle (Collection, Use, Disclosure, Storage, Archival, Disposal).
+
+Contextual Analysis
+- Setting: A formal, instructional page from a data protection or ICT governance handbook.
+- Subjects: Governance controls related to risk management and data classification/tracking.
+- Intent: To outline recommended practices and controls for protecting personal data across the data lifecycle, with an emphasis on risk management activities and lifecycle phase handling.
+
+Detail Inventory
+- Text & OCR (as visible exactly):
+  - Top header: ""GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS"" (page indicator “10” appears near top-left)
+  - Section header: ""Governance"" (blue header bar)
+  - Subsection label: ""iii. Risk Management"" (with blue background stripe)
+  - Subsection bullets (f, h, etc.):
+    - f. Institute a risk management framework to identify security threats to repositories or datasets containing personal data, assess the risks involved and determine the controls to mitigate or minimise such risks.
+    - h. Assess and mitigate the security risks involved in outsourcing or engaging external parties for ICT services.
+  - Subsection label: ""iv. Classification and tracking"" (blue header stripe)
+  - Subsection bullets (i, j, k, l):
+    - i. Classify and manage repositories or datasets containing personal data by considering the potential adverse impact (e.g., reputational or financial) to the individuals involved should the data be compromised.
+    - j. Conduct data protection impact assessment (“DPIA”) before development to assess the types of personal data and the data processing activities required for achieving the purposes of a new ICT system.
+    - k. Conduct periodic checks for personal data stored in ICT systems. For personal data that is not required in any form anymore, securely dispose of the data. If there is a need to retain the data but in anonymised or aggregated form, e.g., for performing data analytics, consider anonymising the data.
+    - l. Conduct physical asset inventory checks regularly to ensure that all computers and other electronic devices (e.g., portable hard drives, printers, fax machines) used to store or process personal data are accounted for.
+- Visual Elements:
+  - A tabular layout with a left column for governance topics and a right portion representing the Data Lifecycle with columns: Collection, Use, Disclosure, Storage, Archival, Disposal.
+  - Color scheme: blue shades for section headers, light blue for the risk management section rows, with a green gradient header for ""Data Lifecycle.""
+  - Dots (●) appear in the cells under each Data Lifecycle stage, indicating presence or mapping of controls to lifecycle phases.
+  - The table uses gridlines and rounded header blocks; text is left-aligned with row groupings for iii. Risk Management and iv. Classification and tracking.
+- Entities:
+  - Data lifecycle stages: Collection, Use, Disclosure, Storage, Archival, Disposal.
+  - Topics: Risk Management, Classification and Tracking, DPIA (Data Protection Impact Assessment).
+  - Personal data emphasis: safeguarding repositories/datasets containing personal data.
+- Notable design features:
+  - Hierarchical headings with blue background bands for sections.
+  - A multi-column data lifecycle header bar in green gradient.
+  - Bullet-like enumerated items (f, h, i, j, k, l) describing actions.
+
+Relationship Mapping
+- The leftmost column lists governance topics (iii. Risk Management, iv. Classification and tracking) with descriptive bullet items.
+- The right portion maps each governance item to data lifecycle stages (Collection, Use, Disclosure, Storage, Archival, Disposal) via blue dots, indicating which lifecycle phases are affected or governed by each practice.
+- Example relationships:
+  - The risk management items (f, h) are linked across relevant lifecycle stages with dots to show applicable control points.
+  - The DPIA item (j) links to data collection/use/disclosure/storage phases where impact assessment is required.
+  - The classification/tracking and asset inventory items (i, k, l) map to multiple lifecycle steps indicating ongoing management, disposal, and asset controls.
+
+Notes for indexing/search (search-friendly terms)
+- Data protection practices, ICT systems, governance, risk management, risk assessment, DPIA, data protection impact assessment, data classification, data lifecycle, collection, use, disclosure, storage, archival, disposal, personal data, datasets, repositories, security controls, outsourcing risks, asset inventory, data analytics, anonymisation, aggregation, secure disposal. from Guide to Data Protection Practices for ICT Systems.pdf, page 9
+
+Chunk Text : Classifcation and tracking**|||||||
+|i.Classify and manage repositories or datasets containingpersonal data by considering the potential adverse impact(e.g. reputational or fnancial) to the individuals involvedshould the data be compromised.|•|•|•|•|•|•|
+|j.Conduct data protection impact assessment (“**DPIA**”) beforedevelopment to assess the types of personal data and thedata processing activities required for achieving the purposesof a new ICT system.|||||||
+|k. from Guide to Data Protection Practices for ICT Systems.pdf, page 9
+
+Chunk Text : High-Level Summary
+- A page from a guide on data protection practices for ICT systems, focusing on housekeeping of personal data and retention. The page includes two sections: (1) Housekeeping of Personal Data with a Data Lifecycle table, and (2) Retention of Personal Data with its own Data Lifecycle table. Each table lists basic practices and indicates which lifecycle stages (Collection, Use, Disclosure, Storage, Arrival, Disposal) are relevant to each practice.
+
+Contextual Analysis
+- Setting: Educational/training manual or handbook page, likely part of a larger document on data protection or data privacy.
+- Subjects: Sections and tables describing practices for managing personal data, including retention strategies and data lifecycle considerations.
+- Intent: To convey recommended practices for handling and retaining personal data in ICT systems, with visual cues (tables and lifecycle columns) for quick reference.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Top header: ""GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS"" (page number 14)
+  - Section title: ""Housekeeping of Personal Data""
+  - Subheader column: ""Data Lifecycle"" with lifecycle stages listed vertically: Collection, Use, Disclosure, Storage, Arrival, Disposal
+  - Basic Practices (row labels):
+    - a. Protect temporary files such as interface files or data migration files while they exist and remove them once they are not required.
+    - b. Implement a routine schedule to identify and remove temporary files when these are no longer needed.
+  - Retention of personal data (section header)
+  - Paragraph text describing the organisation’s approach to retaining personal data and risks of retention.
+  - Section title: ""Retention of Personal Data"" and ""Data Lifecycle""
+  - Basic Practices (row labels, with lettered subpoints a–e):
+    - a. Have an appropriate personal data retention policy which sets out the varying minimum/maximum retention periods for repositories/ICT systems containing personal data. ICT controls could be implemented in ICT systems to enforce retention periods, especially for organisations that hold a large quantity of personal data.
+    - b. Where there is a need to keep the data beyond the retention period, review and anonymise records to prevent re-identification to an individual.
+    - c. Delete records that are no longer needed. The organisation may implement ICT systems to flag records which have reached the end of the retention period.
+    - d. Perform physical disposal of hard disks or other known methods of destruction of storage media, such as degaussing and incinerating, when secure deletion, erasure or deletion of personal data stored on the electronic media is not possible. This may be the case with the end of the retirement period.
+    - e. Before redeploying, exchanging or disposing of electronic (re-writable) media, always perform secure deletion, purging or destruction of electronic personal data on storage media.
+- Visual Elements:
+  - Two rounded header bars: blue for ""Housekeeping of Personal Data"" and light green for ""Data Lifecycle"" in the first table; similar blue header for ""Retention of Personal Data"" and ""Data Lifecycle"" in the second table.
+  - Tables with columns: left column for Basic Practices, right-side column for Data Lifecycle stages (Collection, Use, Disclosure, Storage, Arrival, Disposal) with check indicators (dots) showing applicability.
+  - Color blocks and dot markers indicating which lifecycle stages apply to each practice.
+  - Subheaders and bullet-like lines for each practice.
+- Entities:
+  - No people, brands, or specific locations identifiable.
+  - Topics: personal data, retention policy, ICT systems, data destruction methods (degaussing, incineration).
+
+Relationship Mapping
+- The two main sections mirror each other:
+  - Housekeeping of Personal Data lists practices to minimize and manage temporary files, with lifecycle stages showing where in the data lifecycle those practices apply.
+  - Retention of Personal Data expands to governance of retention, with practices detailing policy, review/anonymization, deletion, physical media destruction, and secure disposal before redeploying or disposing of media.
+- The lifecycle columns connect to each practice via dot markers, indicating when during collection, use, disclosure, storage, arrival, or disposal each practice is relevant.
+- The general flow: establish housekeeping to reduce unnecessary data -> define retention policy and controls -> enforce retention periods via ICT systems -> when data reaches end of retention, delete or anonymize -> securely dispose of physical/media as needed. from Guide to Data Protection Practices for ICT Systems.pdf, page 13
+"
+The guide says to conduct periodic checks for personal data stored in ICT systems and securely dispose of data no longer needed. Which lifecycle stages does this apply to?,"**Answer:**
+- The lifecycle stages are: Collection, Use, Disclosure, Storage, and Disposal.
+
+Explanation:
+- Chunk 0 describes “Conduct data protection… j. Conduct periodic checks for personal data stored in ICT systems. For personal data that is not required in any form anymore, securely dispose of the data.” This mapping shows these periodic checks and disposal activities span multiple lifecycle stages, including Collection, Use, Disclosure, Storage, and Disposal.
+- Chunk 1 reinforces the same disposal action within the broader housekeeping/retention context, aligning disposal with the Data Lifecycle stages shown (Collection, Use, Disclosure, Storage, Arrival, Disposal). The disposal action appears under the Disposal stage, and the corresponding lifecycle coverage includes the earlier stages as they relate to ongoing data handling. 
+
+Sources Used: Guide to Data Protection Practices for ICT Systems.pdf, page 10 and page 14","
+Chunk Text : High-Level Summary
+- A page excerpt from a guide on data protection practices for ICT systems. It features a governance table focusing on risk management and classification/ tracking within the Data Lifecycle (Collection, Use, Disclosure, Storage, Archival, Disposal).
+
+Contextual Analysis
+- Setting: A formal, instructional page from a data protection or ICT governance handbook.
+- Subjects: Governance controls related to risk management and data classification/tracking.
+- Intent: To outline recommended practices and controls for protecting personal data across the data lifecycle, with an emphasis on risk management activities and lifecycle phase handling.
+
+Detail Inventory
+- Text & OCR (as visible exactly):
+  - Top header: ""GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS"" (page indicator “10” appears near top-left)
+  - Section header: ""Governance"" (blue header bar)
+  - Subsection label: ""iii. Risk Management"" (with blue background stripe)
+  - Subsection bullets (f, h, etc.):
+    - f. Institute a risk management framework to identify security threats to repositories or datasets containing personal data, assess the risks involved and determine the controls to mitigate or minimise such risks.
+    - h. Assess and mitigate the security risks involved in outsourcing or engaging external parties for ICT services.
+  - Subsection label: ""iv. Classification and tracking"" (blue header stripe)
+  - Subsection bullets (i, j, k, l):
+    - i. Classify and manage repositories or datasets containing personal data by considering the potential adverse impact (e.g., reputational or financial) to the individuals involved should the data be compromised.
+    - j. Conduct data protection impact assessment (“DPIA”) before development to assess the types of personal data and the data processing activities required for achieving the purposes of a new ICT system.
+    - k. Conduct periodic checks for personal data stored in ICT systems. For personal data that is not required in any form anymore, securely dispose of the data. If there is a need to retain the data but in anonymised or aggregated form, e.g., for performing data analytics, consider anonymising the data.
+    - l. Conduct physical asset inventory checks regularly to ensure that all computers and other electronic devices (e.g., portable hard drives, printers, fax machines) used to store or process personal data are accounted for.
+- Visual Elements:
+  - A tabular layout with a left column for governance topics and a right portion representing the Data Lifecycle with columns: Collection, Use, Disclosure, Storage, Archival, Disposal.
+  - Color scheme: blue shades for section headers, light blue for the risk management section rows, with a green gradient header for ""Data Lifecycle.""
+  - Dots (●) appear in the cells under each Data Lifecycle stage, indicating presence or mapping of controls to lifecycle phases.
+  - The table uses gridlines and rounded header blocks; text is left-aligned with row groupings for iii. Risk Management and iv. Classification and tracking.
+- Entities:
+  - Data lifecycle stages: Collection, Use, Disclosure, Storage, Archival, Disposal.
+  - Topics: Risk Management, Classification and Tracking, DPIA (Data Protection Impact Assessment).
+  - Personal data emphasis: safeguarding repositories/datasets containing personal data.
+- Notable design features:
+  - Hierarchical headings with blue background bands for sections.
+  - A multi-column data lifecycle header bar in green gradient.
+  - Bullet-like enumerated items (f, h, i, j, k, l) describing actions.
+
+Relationship Mapping
+- The leftmost column lists governance topics (iii. Risk Management, iv. Classification and tracking) with descriptive bullet items.
+- The right portion maps each governance item to data lifecycle stages (Collection, Use, Disclosure, Storage, Archival, Disposal) via blue dots, indicating which lifecycle phases are affected or governed by each practice.
+- Example relationships:
+  - The risk management items (f, h) are linked across relevant lifecycle stages with dots to show applicable control points.
+  - The DPIA item (j) links to data collection/use/disclosure/storage phases where impact assessment is required.
+  - The classification/tracking and asset inventory items (i, k, l) map to multiple lifecycle steps indicating ongoing management, disposal, and asset controls.
+
+Notes for indexing/search (search-friendly terms)
+- Data protection practices, ICT systems, governance, risk management, risk assessment, DPIA, data protection impact assessment, data classification, data lifecycle, collection, use, disclosure, storage, archival, disposal, personal data, datasets, repositories, security controls, outsourcing risks, asset inventory, data analytics, anonymisation, aggregation, secure disposal. from Guide to Data Protection Practices for ICT Systems.pdf, page 9
+
+Chunk Text : Conduct periodic checks for personal data stored in ICTsystems. For personal data that is not required in any formanymore, securely dispose of the data. If there is a need toretain the data but in anonymised or aggregated form, e.g.for performing data analytics, consider anonymising the data.||||•|•|•|
+|l.Conduct physical asset inventory checks regularly to ensurethat all computers and other electronic devices (e.g. portablehard drives, printers, fax machines) used to store or processpersonal data are accounted for.||•||•|||
+
+--- end of page.page_number=10 ---
+
+GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS   11 
+
+## **Collection of personal data** 
+
+Personal data that are collected but not used will pose unnecessary data protection and cyber threat risks to the organisation. Collection of unnecessary personal data increases the risks and impact of data breaches. Additional resources needed to protect these unnecessary personal data can be avoided by simply not collecting them in the first place. Data minimisation is a good way for organisations to examine what personal data they really need. from Guide to Data Protection Practices for ICT Systems.pdf, page 9,10
+
+Chunk Text : High-Level Summary
+- A page from a guide on data protection practices for ICT systems, focusing on housekeeping of personal data and retention. The page includes two sections: (1) Housekeeping of Personal Data with a Data Lifecycle table, and (2) Retention of Personal Data with its own Data Lifecycle table. Each table lists basic practices and indicates which lifecycle stages (Collection, Use, Disclosure, Storage, Arrival, Disposal) are relevant to each practice.
+
+Contextual Analysis
+- Setting: Educational/training manual or handbook page, likely part of a larger document on data protection or data privacy.
+- Subjects: Sections and tables describing practices for managing personal data, including retention strategies and data lifecycle considerations.
+- Intent: To convey recommended practices for handling and retaining personal data in ICT systems, with visual cues (tables and lifecycle columns) for quick reference.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Top header: ""GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS"" (page number 14)
+  - Section title: ""Housekeeping of Personal Data""
+  - Subheader column: ""Data Lifecycle"" with lifecycle stages listed vertically: Collection, Use, Disclosure, Storage, Arrival, Disposal
+  - Basic Practices (row labels):
+    - a. Protect temporary files such as interface files or data migration files while they exist and remove them once they are not required.
+    - b. Implement a routine schedule to identify and remove temporary files when these are no longer needed.
+  - Retention of personal data (section header)
+  - Paragraph text describing the organisation’s approach to retaining personal data and risks of retention.
+  - Section title: ""Retention of Personal Data"" and ""Data Lifecycle""
+  - Basic Practices (row labels, with lettered subpoints a–e):
+    - a. Have an appropriate personal data retention policy which sets out the varying minimum/maximum retention periods for repositories/ICT systems containing personal data. ICT controls could be implemented in ICT systems to enforce retention periods, especially for organisations that hold a large quantity of personal data.
+    - b. Where there is a need to keep the data beyond the retention period, review and anonymise records to prevent re-identification to an individual.
+    - c. Delete records that are no longer needed. The organisation may implement ICT systems to flag records which have reached the end of the retention period.
+    - d. Perform physical disposal of hard disks or other known methods of destruction of storage media, such as degaussing and incinerating, when secure deletion, erasure or deletion of personal data stored on the electronic media is not possible. This may be the case with the end of the retirement period.
+    - e. Before redeploying, exchanging or disposing of electronic (re-writable) media, always perform secure deletion, purging or destruction of electronic personal data on storage media.
+- Visual Elements:
+  - Two rounded header bars: blue for ""Housekeeping of Personal Data"" and light green for ""Data Lifecycle"" in the first table; similar blue header for ""Retention of Personal Data"" and ""Data Lifecycle"" in the second table.
+  - Tables with columns: left column for Basic Practices, right-side column for Data Lifecycle stages (Collection, Use, Disclosure, Storage, Arrival, Disposal) with check indicators (dots) showing applicability.
+  - Color blocks and dot markers indicating which lifecycle stages apply to each practice.
+  - Subheaders and bullet-like lines for each practice.
+- Entities:
+  - No people, brands, or specific locations identifiable.
+  - Topics: personal data, retention policy, ICT systems, data destruction methods (degaussing, incineration).
+
+Relationship Mapping
+- The two main sections mirror each other:
+  - Housekeeping of Personal Data lists practices to minimize and manage temporary files, with lifecycle stages showing where in the data lifecycle those practices apply.
+  - Retention of Personal Data expands to governance of retention, with practices detailing policy, review/anonymization, deletion, physical media destruction, and secure disposal before redeploying or disposing of media.
+- The lifecycle columns connect to each practice via dot markers, indicating when during collection, use, disclosure, storage, arrival, or disposal each practice is relevant.
+- The general flow: establish housekeeping to reduce unnecessary data -> define retention policy and controls -> enforce retention periods via ICT systems -> when data reaches end of retention, delete or anonymize -> securely dispose of physical/media as needed. from Guide to Data Protection Practices for ICT Systems.pdf, page 13
+"
+"The guide says to conduct data protection impact assessment, which lifecycle stages does this apply to?","**Answer**
+
+The guide states to conduct a Data Protection Impact Assessment (DPIA) before development to assess the types of personal data and the data processing activities required for achieving the purposes of a new ICT system. This DPIA activity is linked to the Data Lifecycle stages of Collection, Use, Storage, Archival, and Disposal. In other words, DPIA considerations apply across all stages of the data lifecycle, focusing on how personal data is collected, used, stored, archived, and eventually disposed of.
+
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, Page 10","
+Chunk Text : High-Level Summary
+- A page excerpt from a guide on data protection practices for ICT systems. It features a governance table focusing on risk management and classification/ tracking within the Data Lifecycle (Collection, Use, Disclosure, Storage, Archival, Disposal).
+
+Contextual Analysis
+- Setting: A formal, instructional page from a data protection or ICT governance handbook.
+- Subjects: Governance controls related to risk management and data classification/tracking.
+- Intent: To outline recommended practices and controls for protecting personal data across the data lifecycle, with an emphasis on risk management activities and lifecycle phase handling.
+
+Detail Inventory
+- Text & OCR (as visible exactly):
+  - Top header: ""GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS"" (page indicator “10” appears near top-left)
+  - Section header: ""Governance"" (blue header bar)
+  - Subsection label: ""iii. Risk Management"" (with blue background stripe)
+  - Subsection bullets (f, h, etc.):
+    - f. Institute a risk management framework to identify security threats to repositories or datasets containing personal data, assess the risks involved and determine the controls to mitigate or minimise such risks.
+    - h. Assess and mitigate the security risks involved in outsourcing or engaging external parties for ICT services.
+  - Subsection label: ""iv. Classification and tracking"" (blue header stripe)
+  - Subsection bullets (i, j, k, l):
+    - i. Classify and manage repositories or datasets containing personal data by considering the potential adverse impact (e.g., reputational or financial) to the individuals involved should the data be compromised.
+    - j. Conduct data protection impact assessment (“DPIA”) before development to assess the types of personal data and the data processing activities required for achieving the purposes of a new ICT system.
+    - k. Conduct periodic checks for personal data stored in ICT systems. For personal data that is not required in any form anymore, securely dispose of the data. If there is a need to retain the data but in anonymised or aggregated form, e.g., for performing data analytics, consider anonymising the data.
+    - l. Conduct physical asset inventory checks regularly to ensure that all computers and other electronic devices (e.g., portable hard drives, printers, fax machines) used to store or process personal data are accounted for.
+- Visual Elements:
+  - A tabular layout with a left column for governance topics and a right portion representing the Data Lifecycle with columns: Collection, Use, Disclosure, Storage, Archival, Disposal.
+  - Color scheme: blue shades for section headers, light blue for the risk management section rows, with a green gradient header for ""Data Lifecycle.""
+  - Dots (●) appear in the cells under each Data Lifecycle stage, indicating presence or mapping of controls to lifecycle phases.
+  - The table uses gridlines and rounded header blocks; text is left-aligned with row groupings for iii. Risk Management and iv. Classification and tracking.
+- Entities:
+  - Data lifecycle stages: Collection, Use, Disclosure, Storage, Archival, Disposal.
+  - Topics: Risk Management, Classification and Tracking, DPIA (Data Protection Impact Assessment).
+  - Personal data emphasis: safeguarding repositories/datasets containing personal data.
+- Notable design features:
+  - Hierarchical headings with blue background bands for sections.
+  - A multi-column data lifecycle header bar in green gradient.
+  - Bullet-like enumerated items (f, h, i, j, k, l) describing actions.
+
+Relationship Mapping
+- The leftmost column lists governance topics (iii. Risk Management, iv. Classification and tracking) with descriptive bullet items.
+- The right portion maps each governance item to data lifecycle stages (Collection, Use, Disclosure, Storage, Archival, Disposal) via blue dots, indicating which lifecycle phases are affected or governed by each practice.
+- Example relationships:
+  - The risk management items (f, h) are linked across relevant lifecycle stages with dots to show applicable control points.
+  - The DPIA item (j) links to data collection/use/disclosure/storage phases where impact assessment is required.
+  - The classification/tracking and asset inventory items (i, k, l) map to multiple lifecycle steps indicating ongoing management, disposal, and asset controls.
+
+Notes for indexing/search (search-friendly terms)
+- Data protection practices, ICT systems, governance, risk management, risk assessment, DPIA, data protection impact assessment, data classification, data lifecycle, collection, use, disclosure, storage, archival, disposal, personal data, datasets, repositories, security controls, outsourcing risks, asset inventory, data analytics, anonymisation, aggregation, secure disposal. from Guide to Data Protection Practices for ICT Systems.pdf, page 9
+
+Chunk Text : High-Level Summary
+- A page from a data protection guide (ICT systems) focusing on the “Collection of personal data.” It presents best practices and a structured table outlining data collection practices, their purpose, and lifecycle stages.
+
+Contextual Analysis
+- Setting: Informational handbook or training document on data protection practices.
+- Subjects: The section titled “Collection of personal data” with a two-column layout: a blue left column listing practices and a green header row for the “Data Lifecycle” stages.
+- Intent: To educate readers about minimizing personal data collection, awareness of metadata, and avoiding unnecessary automated collection; provide actionable guidance for IT/system administrators.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Title: Collection of personal data
+  - Paragraph: Personal data that are collected but not used will pose unnecessary data protection and cyber threat risks to the organisation. Collection of unnecessary personal data increases the risks and impact of data breaches. Additional resources needed to protect these unnecessary personal data can be avoided by simply not collecting them in the first place. Data minimisation is a good way for organisations to examine what personal data they really need.
+  - Section header: Collection of Personal Data
+  - Data Lifecycle header: Data Lifecycle (with subcolumns: Collection, Use, Storage, Archival, Disposal)
+  - Subsection i. Minimise collection of personal data
+    - a. Do not collect personal data unless it will be used and there is valid purpose for doing it. Trace every data element that you are collecting to identify which internal department uses it and whether it is used and whether it is necessary.
+    - b. When different types of personal data can be used to achieve the same purpose, collect the least sensitive types of personal data (e.g., collect approximate location data of users rather than their exact locations).
+  - Subsection ii. Be aware of metadata
+    - c. Personal data may be inadvertently collected in the form of metadata (e.g., EXIF data in image files). Consider not collecting such data or removing them if they are not needed.
+  - Subsection iii. Avoid continuous automatic collection of personal data
+    - d. Collect personal data only when needed, instead of continuously. For example, provide the option for users to allow their geolocation data to be collected only when the app they are using requires such data, rather than to be automatically obtained continuously.
+- Visual Elements:
+  - A two-column table with a blue left side (Collection of Personal Data) and a green data lifecycle header on top (Collection, Use, Storage, Archival, Disposal).
+  - Section headings with blue horizontal rules and white text.
+  - Bulleted subpoints labeled a., b., c., d. inside blue-highlighted rows.
+  - Small blue circular icons (possibly bullet indicators) in the Data Lifecycle columns to indicate applicability or status.
+  - Color scheme: blue for sections, gradient blue/green for headers, light gray background for text area, and teal/green accents in the table.
+- Entities:
+  - No specific people or brands identified.
+  - Concepts: data minimisation, metadata, anonymous/approximate data, EXIF metadata, geolocation data.
+  - Location: likely a corporate or governmental ICT data protection guide.
+
+Relationship Mapping
+- The left column presents best-practice statements about minimizing data collection, while the right side (Data Lifecycle) indicates the phases (Collection, Use, Storage, Archival, Disposal) where these practices apply, possibly showing dots to indicate applicability.
+- The subpoints (a, b, c, d) connect to the overarching goal of restricting unnecessary personal data collection, awareness of metadata, and avoiding continuous automatic collection.
+- Overall flow: The document instructs readers to (1) minimize data collection, (2) be mindful of metadata, (3) avoid continuous automatic collection, with emphasis that lifecycle stages should reflect these practices.
+
+Notes for indexing and search optimization
+- Use keywords: data protection, personal data collection, data minimisation, metadata, EXIF data, geolocation, automatic collection, data lifecycle, storage, archival, disposal, privacy, ICT systems.
+- Include synonyms: limit, reduce, least data, unnecessary data, privacy by design, data retention, data elements, location data, continuous collection.
+- Ensure OCR-ready phrases for exact matches from the text (as listed above). from Guide to Data Protection Practices for ICT Systems.pdf, page 10
+
+Chunk Text : High-Level Summary
+- A page from a guide on data protection practices for ICT systems, focusing on ICT security and testing within the data lifecycle.
+- It presents a structured table of basic practices and how they map to data lifecycle stages, accompanied by explanatory text and footnotes.
+
+Contextual Analysis
+- Setting: A printed or PDF-page from a discipline-specific manual or standard (likely an ICT security or data protection guide).
+- Subjects: Text blocks describing ICT security and testing practices; a table titled “ICT Security and Testing” with rows of practices and columns for data lifecycle stages; footnotes at the bottom.
+- Intent: To inform readers about recommended security practices during software development and data handling, and how these practices align with lifecycle stages such as collection, use, storage, archiving, disposal.
+
+Detail Inventory
+- Text & OCR (extracted text as it appears):
+  - Section header: “ICT security and testing”
+  - Paragraphs:
+    - “Organisations should always ensure that the protection of the personal data and the security of the ICT system is the key design consideration at each stage of the system development lifecycle. Otherwise, meaningful changes to the system to resolve any security breaches subsequently will incur more cost to the organisation.”
+    - “Coding issues have been raised as the main cause of a number of data breach incidents that occurred in the recent years. As such, software developers and others ICT personnel should always keep abreast of current and emerging ICT security threats in order to design, test and maintain ICT systems capable of protecting personal data stored.”
+  - Table header: “ICT Security and Testing” (blue header) and “Data Lifecycle” (green header)
+  - Table column headers (in Data Lifecycle area): likely “Collection,” “Use,” “Storage,” “Archive,” “Disposal” (exact labels partially visible)
+  - Table row items (visible portions):
+    - a. Do not use or store production data that contains personal data in non-production environments for testing or other purposes. Do not use production data for user acceptance tests. Organisations may consider creating synthetic data from production data using anonymisation techniques.
+    - b. Perform thorough impact analysis of any software or code changes and design (e.g., use of global variables) before coding. This provides an accurate understanding of the implications of the proposed changes, which helps in making informed business decisions about the areas affected due to the change in the features of the applications.
+    - c. Conduct code review and rigorous unit testing which includes complete testing of functional requirements to verify the compliance with the requirements specifications at the early stage in the system development lifecycle.
+    - d. Ensure that adequate controls, such as fail-safe processing in coding under “if-then-else” sections, are in place to prevent improper error handling that may result in leakage of sensitive personal data.
+    - e. Conduct regression testing and system integration testing which includes complete testing of both functional and non-functional requirements as well as verifying the integration of the interfaces to all its external systems in the middle stage of the system development lifecycle.
+  - Footnotes (partially visible):
+    - “Non-production environments include a network, operating system or other systems that are used as a development area or test bed for new software or technologies.”
+    - “Refer to Guide to Basic Data Anonymisation Techniques.”
+- Visual Elements:
+  - A two-tone colored table: blue left column “ICT Security and Testing” and green right column “Data Lifecycle.”
+  - Subtle grid lines and bullet-like labels (a.–e.) for the practices.
+  - Light pastel color palette (blue and green) with white text on headers.
+  - Small footer notes with additional guidance.
+- Entities:
+  - No specific people or brands are named.
+  - Mentions of generic concepts: production data, non-production environments, data anonymisation techniques.
+  - Locations/organizations not identified.
+
+Relationship Mapping
+- The table maps each basic ICT security/testing practice (rows a–e) to corresponding stages of the data lifecycle (columns in Data Lifecycle). This indicates how each practice should be applied across collection, use, storage, archiving, and disposal to protect personal data.
+- The introductory paragraphs establish the overarching rationale: security and privacy must be foundational during development to avoid costly post-breach fixes.
+- The footnotes provide clarifications about non-production environments and refer to anonymisation techniques, reinforcing best practices for data handling beyond the primary table.
+
+Search-Friendly Keywords
+- ICT security and testing, data protection, data lifecycle, non-production data, synthetic data, data anonymisation, production data, software development lifecycle, code review, regression testing, system integration testing, fail-safe processing, if-then-else controls, security threats, privacy by design. from Guide to Data Protection Practices for ICT Systems.pdf, page 20
+"
+What specific type of sensitive data should be excluded from user views,"- Exclude sensitive data such as credit card numbers from user views.
+
+Sources Used: Guide to Data Protection Practices for ICT Systems.pdf, 19","
+Chunk Text : For example, the database canbe confgured to restrict users from viewing data by excludingcolumns containing sensitive data such as credit card numbers.|•|•||•|•||
+
+## **Web applications and website security** 
+
+Websites and web applications are often used to communicate or provide services to customers or the public with activities such as member logins, rewards redemption, event registration and feedback. Organisations that have public-facing websites should take precautions against common threats to websites and web applications, which include malicious file uploads, cross-site scripting (“ **XSS** ”), SQL injection and URL manipulation. Organisations should thus ensure that the protection of personal data and the security of the website are key design considerations at the start of any project implementation. |**Web Applications and Website Security****Basic Practices**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|
+|---|---|---|---|---|---|---|
+|a. Ensure that the system validates all data input by users so that nounexpected inputs can be keyed in through the user interface.|•|•|||||
+|b. Scan user uploaded fles for malware and perform follow-upaction upon detection of malware. Restrict user uploads tocertain whitelisted fle types that the organisation may havein use, as whitelisted fles types may vary from one organisationto another.|•|•||•|||
+|c. Avoid storing personal data in a cookie as a safeguard againsthackers reading the contents of the cookies.|||||||
+|d. Perform cookie data validation, as well as URL validation, tocorrespond with the session in use to prevent man-in-the-middle attacks.|•|•|||||
+
+--- end of page.page_number=19 ---
+
+20   GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS 
+
+Web Applications and Website Security Data Lifecycle
+
+|**Web Applications and Website Security**|**Data Lifecycle**|**Data Lifecycle**|**Data Lifecycle**|**Data Lifecycle**|**Data Lifecycle**|**Data Lifecycle**|
+|---|---|---|---|---|---|---|
+|**Basic Practices**|**Collection**|**Use**|**Disclosure**|**Storage**|**Archival**|**Disposal**|
+|e. Ensure that fles containing personal data are not accidentallymade available on a website or through a web application. Forexample, avoid storing personal data in public folders or disabledirectory browsing to prevent hackers from fnding those fles.Enable periodic scans for the presence of public folders on thewebsite and conduct periodic reviews of public folder contents.Apply automatic purging of contents within a public folder aftera pre-defned retention period.|•|•||•|||
+|f.Do not allow ‘backdoors’ in the form of ‘secret’ URLs ordebugging logs that allow access to personal data withoutuser authentication. Do not rely on the robots exclusionprotocol (robots.txt) to hide webpages.|||||||
+|g. from Guide to Data Protection Practices for ICT Systems.pdf, page 18,19
+
+Chunk Text : ## _Protect sensitive data when distributing via email_ 
+
+- 59 Agencies should ensure that sensitive data is protected from unintended disclosure when sending via email. ## 60 Agencies should: 
+
+- a) Ensure that emails containing sensitive data are addressed to the correct recipients; 
+
+- b) Use a mailing list for regular mass communication to specific groups; and 
+
+- c) Send emails via Blind Carbon Copy (BCC) when mass emailing parties outside of the Whole-of-Government. ## 61 Agencies should ensure users: 
+
+- a) Password-protect and encrypt files containing sensitive data; and 
+
+- b) Perform data file integrity verification for files where integrity is critical. Government Data Security Policies |   �16 
+
+--- end of page.page_number=16 ---
+
+Government Data Security Policies (Annex A) |   A�1 
+
+--- end of page.page_number=17 ---
+
+## _Technical measures and the process measures_ 
+
+|**Technical Measures**|**Clause Number**|
+|---|---|
+|Volume limited and time limited data access|22|
+|Automatic Identity and Access Management tools|24|
+|Log and monitor data transactions to detect high-risk or suspicious activity|28|
+|Digital watermarking of fle|30|
+|Email data protection tools|35|
+|Data Loss Protection (DLP) tools|36|
+|Hashing with Salt|40|
+|Field Level Encryption|42|
+|Tokenisation|44|
+|Obfuscation/ masking/ removal of entity attributes|49|
+|Dataset partitioning|51|
+|Password protecting and encrypting fles when distributing fles through unsecuredchannels|53|
+|Data fle integrity verifcation|55|
+
+|**Process Measures**|**Clause number**|
+|---|---|
+|Collect datasets only where necessary|8|
+|Limit retention period of data|9|
+|Secured isolated environments for high-risk users|12|
+|Retrieve only the data required instead of data dumps|15|
+|Access sensitive fles on secured platforms|18|
+|Limit and monitor authorised and privileged access to sensitive data in ICT systems|25|
+|Maintain data lineage for data to support data incident management|29|
+|Manage keys to data protection technical safeguards|45|
+|Securely distribute passwords out-of-band|54|
+|Distribute fles through approved secure channels|57|
+|Protect sensitive data when distributing via email|59|
+
+Government Data Security Policies (Annex A) |   A�2 
+
+--- end of page.page_number=18 ---
+
+_Technical measures and the complementary process measures_ 
+
+|**Technical Measures**|**Complementary Process Measures**|
+|---|---|
+|Volume limited and time limited data access|Limit retention period of data|
+|Automatic Identity and Access Management tools|Limit and monitor authorised and privileged accessto sensitive data in ICT systems|
+|Log and monitor data transactions to detect high-risk or suspicious activity||
+|Digital watermarking of fle|-|
+|Email data protection tools|Protect sensitive data when distributing via email|
+|Data Loss Protection tools|Distribute fles through approved secure channels|
+|Hashing with Salt|Manage keys to data protection technicalsafeguards|
+|Field Level Encryption||
+|Tokenisation||
+|Obfuscation/ masking/ removal of entity attributes|-|
+|Dataset partitioning|-|
+|Password protecting and encrypting fles whendistributing fles through unsecured channels|Securely distribute passwords out-of-band|
+|Data fle integrity verifcation|-|
+
+Government Data Security Policies (Annex A) |   A�3 
+
+--- end of page.page_number=19 ---
+
+_Glossary of Terms_ 
+
+|**Terms**|**Defnition**|
+|---|---|
+|Agency|Agency refers to Organs of State, Ministries, Departments and StatutoryBoards.|
+|Collection|Collection refers to the act of gathering, acquiring, or obtaining data fromany source, and whether directly or indirectly by any means.|
+|Business data|Business data refers to data, whether true or not, which are related to anidentifed or identifable company or other incorporated or unincorporatedbody of persons|
+|Data|Data refers to the representation of information that can be used forcommunications or processing. Broad categories of data are structured andunstructured data.|
+|Dataset|A dataset refers to a collection of data which can exist in digital documents(such as Excel fles), be stored in ICT systems (such as in databases) orrecorded in hardcopy.|
+|Data query|A data query is a request for specifc data felds and data records.|
+|Data Security RiskAssessmentMethodology|The Data Security Risk Assessment Methodology guides agencies in theidentifcation, analysis and treatment of data security risks inherent indatasets.As part of the methodology, agencies perform risk assessments to identifydata security risks, evaluate the risks, determine the controls to mitigate therisks, assess the efectiveness of the controls implemented and manage therisks within acceptable limits to the agency.|
+|Disclosure|Disclosure refers to making data available to others.|
+|Document|Document refers to information recorded in any form.|
+
+Government Data Security Policies (Annex A) |   A�4 
+
+--- end of page.page_number=20 ---
+
+|Endpoint devices|Endpoint Devices refer to end-user devices designed for individual use (canbe used by one or more users), such as personal computers, mobile devices,IP phones used to store, process or access Government data.|
+|---|---|
+|Entity|Entity refers to a company or other incorporated or unincorporatedbody of persons.|
+|Entity data|Entity data refers to any data, whether true or not, which are relatedto an identifed or identifable entity.|
+|Government ICTRiskManagementMethodology|The Government ICT Risk Management Methodology guidesagencies in the identifcation, analysis and treatment of cybersecurityand data security risks inherent in systems.Under the methodology framework, agencies perform riskassessments to identify the ICT risks, such as ICT security and datarisks to their systems, assess the consequent risks to the Agency,determine the controls to mitigate the risks, and assess theefectiveness of the controls implemented.|
+|Government RiskManagementPolicy|The Government Risk Management Policy defnes:1)The Government ICT Risk Management methodology;2)The standards for managing ICT risks, such as frequencies ofaudits; and3)The thresholds for Agencies risk exposures.|
+|ICT system|ICT System refers to a set of interacting, interrelated, orinterdependent ICT hardware, software and data created, accessed,stored, processed or transmitted to serve business functions andsupport business operations.|
+|Individual|Individual refers to a natural person, whether living or deceased.|
+|Personal data|Personal data refers to any data, whether true or not, which arerelated to an identifed or identifable person.|
+|Privileged access|Privileged access refers to access granted to any user withprivileged accounts or holding privileged data roles.|
+
+Government Data Security Policies (Annex A) |   A�5 
+
+--- end of page.page_number=21 ---
+
+|Privilegedaccounts|Privileged accounts refers to accounts used by personnel forperforming network, system, application-wide, agency-wide, orWhole-of-Government-wide administrative/security activities such asthe following:• Creating, modifying, or deleting accounts and their privileges;• Creating, modifying, or deleting security tokens;• Setting, modifying, and removing confgurations;• Installing or uninstalling software; or• Accessing, creating, modifying, or deleting system-restricted data.Examples of personnel that uses privileged accounts are systemadministrators, database administrators, and personnel whoadministrates for the entire application. These personnel useprivileged accounts to perform activities such as accountmanagement, cryptographic key management, databaseadministration, network administration, and system administration.|
+|---|---|
+|Privileged datarole|Privileged data roles refer to user roles that are able to access,create, modify, or delete data where the data access has not beenpersonally and explicitly granted but gained by the virtue of the roles’job functions that require access to the data platforms and systemsthat contain the data.Examples of privileged data roles are data scientists and dataengineers who have access to data on data platforms and systemsfor the purpose of data processing etc. System administrators anddatabase administrators who have access to privileged accounts willalso be considered as having privileged data roles.|
+|Security classifcation|Security Classifcation refers to classifying information according to thesecurity levels that measure the damage done to national security, or nationalor Agency interest, in the event of an unauthorised disclosure.|
+|Sensitive|Sensitive refers to data if leaked could give rise to discrimination or othernegative impact on a data subject (e.g. the person’s insurability,employability, reputation, etc.).|
+|Sensitivity classifcation|Sensitivity Classifcation refers to classifying information according tosensitivity levels that measure the damage done to an individual or anorganisation, in the event of an unauthorised disclosure.|
+|Use|Use refers to the treatment and handling of data within an agency.|
+|User|Users refers to all Government ofcers and non-Government personnel whoare granted access to Government Resources to perform ofcial work for theGovernment.|
+
+Government Data Security Policies (Annex A) |   A�6 
+
+--- end of page.page_number=22 --- from government-data-security-policies.pdf, page 15,16,17,18,19,20,21
+
+Chunk Text : High-Level Summary
+- A page from a government document titled “Section 5: Protect the data directly when it is stored and distributed to render the data unusable even if extracted.”
+- The page outlines protective measures and options for rendering sensitive data unusable to attackers in the event of storage or exfiltration, including specific subsections and bullet points.
+
+Contextual Analysis
+- Setting: A formal, government- or policy-facing document page, likely from a printed or PDF report on data security policies.
+- Subjects: Section headers, numbered subsections, and bullet list items describing data protection approaches.
+- Intent: To formally prescribe methods and choices for protecting sensitive data in storage and during transit/exfiltration, including recommended techniques (hashing with salt, field-level encryption, tokenisation).
+
+Detail Inventory
+- Text & OCR:
+  - Title: Section 5: Protect the data directly when it is stored and distributed to render the data unusable even if extracted
+  - Page reference: 38
+  - Paragraph: Agencies should protect the data directly to render the data unusable to an attacker if extracted from ICT systems. This provides an additional layer of defence on top of the other cyber security and data security measures.
+  - Section 5.3 (implied by structure): The 3 approaches that Agencies may take to protect data in this manner are:
+    a) Render sensitive data unusable to an attacker, even if exfiltrated from storage;
+    b) Partially hide the full data. Even if the exfiltrated data is exfiltrated, the damage would be limited as the attacker would not have access to the full data;
+    c) Protect the data during distribution. This reduces the risk of accidental data compromises due to human error when sending emails with sensitive data.
+  - Subsection: Section 5.1: Render sensitive data unusable to an attacker, even if exfiltrated from storage
+  - Paragraph: Agencies may choose one of the following technical measures to protect sensitive data and render the data unusable to an attacker even if exfiltrated from storage:
+    a) Hashing with salt;
+    b) Field Level Encryption; or
+    c) Tokenisation.
+  - Page footer: Government Data Security Policies | 12
+- Visual Elements:
+  - Clean, two-column-like document layout with blue section headers.
+  - Page number at bottom right.
+  - Blue title text and lighter body text, typical of official policy documents.
+- Entities:
+  - No people or brands visible.
+  - General references: Agencies, ICT systems, emails, security measures.
+
+Relationship Mapping
+- The main heading introduces the protective goal: rendering data unusable if stored, distributed, or exfiltrated.
+- The three approaches (a–c) are alternatives or complementary strategies for achieving this goal.
+- Section 5.1 details one specific approach (render unusable even if exfiltrated from storage) and lists concrete technical measures (hashing with salt, field-level encryption, tokenisation).
+- The flow is: goal → approaches → detailed method options → specific techniques.
+
+Search-Friendly Keywords
+- data protection, render data unusable, exfiltration protection, storage security, ICT security, government data security policies, hashing with salt, field-level encryption, tokenisation, data distribution protection, sensitive data protection, post-exfiltration risk reduction. from government-data-security-policies.pdf, page 11
+"
+What should my organisation do to prevent too much data from being exported or leaked out of our systems?,"**Answer**
+
+- Implement strong ICT access controls and authentication measures to limit who can export or access personal data. Use appropriate access rights and restrictions for user roles, and strengthen administrative account security with complex passwords and 2-Factor/Multifactor Authentication (2FA/MFA). This helps prevent unauthorized data exports and leaks.
+
+- Conduct regular housekeeping and data minimisation. Limit collection to what is necessary, and regularly review and purge data that is no longer needed. For data that must be retained, consider anonymising or aggregating it to reduce re-identification risk before any potential export or sharing.
+
+- Manage retention and disposal properly. Enforce a personal data retention policy with defined minimum/maximum retention periods, and ensure secure deletion, erasure, or destruction of data when it is no longer needed. Perform secure deletion before redeploying or disposing of storage media.
+
+- Maintain awareness of secondary storage locations. Protect not only primary databases but also secondary sources (e.g., files on user devices or network drives) to reduce risks of hidden data exports.
+
+- Implement routines to identify and remove temporary files and data remnants after they are no longer required, and perform regular asset inventory checks to ensure devices storing personal data are accounted for.
+
+- If you must retain data for analytics, convert it to anonymised or aggregated forms before export.
+
+Sources Used: Guide to Data Protection Practices for ICT Systems.pdf, pages 9-11, 12-13, 13-14","
+Chunk Text : A good way to minimise theserisks is for the organisation to assess whether the retention of personal data may be necessarybased on its business needs or legal purposes.|||||||
+|**Retention of Personal Data****Basic Practices**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**||||||
+|a. Have an appropriate personal data retention policy which setsout the varying minimum/maximum retention periods forrepositories/ICT systems containing personal data. ICT controlscould be implemented in ICT systems to enforce retentionperiods, especially for organisations that hold a large quantityof personal data.||||•|•|•|
+|b. Where there is a need to keep the data beyond the retentionperiod, review and anonymise records4to prevent re-identifcationto an individual.||||•|•||
+|c. Delete records that are no longer needed. The organisationmay implement ICT systems to fag records which have reachedthe end of the retention period.||||•|•|•|
+|d. Perform physical disposal of hard disks or other known methodsof destruction of storage media, such as degaussing andincinerating, when secure deletion, erasure or deletion ofpersonal data stored on the electronic media is not possible.This may be the case with faulty storage media.||||||•|
+|e. Before redeploying, exchanging or disposing of electronic (re-writable) media, always perform secure deletion, erasure, purgingor destruction of electronic personal data on storage media.|||||||
+
+The organisation should cease to retain personal data in their ICT systems once the purpose for which the personal data was collected no longer exists. Keeping the personal data for long periods increases the cybersecurity risks to the organisation. A good way to minimise these risks is for the organisation to assess whether the retention of personal data may be necessary based on its business needs or legal purposes. > 4 _Refer to PDPC’s Guide to Basic Data Anonymisation Techniques._ 
+
+--- end of page.page_number=14 ---
+
+GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS   15 
+
+## **ICT CONTROLS** 
+
+## **Authentication, authorisation and passwords** 
+
+Authentication and authorisation processes in ICT systems are commonly used to ensure that information is accessed only by the authorised persons performing the intended activities. It is a good practice to set appropriate access control rules, access rights and restrictions for specific user roles. It is also good to have stronger requirements for administrative accounts, such as complex passwords or 2-Factor Authentication (“ **2FA** ”) /Multi-Factor Authentication (“ **MFA** ”). Unauthorised access is one of the most common types of data breaches. from Guide to Data Protection Practices for ICT Systems.pdf, page 13,14
+
+Chunk Text : This minimisesthe possibility of human error as well as reduces employeeeffort and time.|•|•|•||||
+
+To increase consumer trust in the organisation, organisations should always make reasonable efforts to ensure accuracy and completeness of personal data in their possession, especially when the data are likely to be used to make a decision that will affect the individual. Access and correction requests are intended to help ensure accuracy and completeness. ## **Housekeeping of personal data** 
+
+Organisations usually focus on protecting their main source of personal data (e.g. their database) but may neglect to protect secondary storage locations of personal data, which are often temporary or one-time in nature. These include files that have been created for an ad hoc purpose which are often not stored in central repositories but on user devices or random network drives. Hence, housekeeping is especially relevant to these secondary sources which are often forgotten and may result in a data breach. --- end of page.page_number=13 ---
+
+14   GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS 
+
+|**Housekeeping of Personal Data****Basic Practices**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|
+|---|---|---|---|---|---|---|
+|a. Protect temporary fles such as interface fles or data migrationfles while they exist and remove them once they are not required.||•|•|•||•|
+|b. Implement a routine schedule to identify and remove temporaryfles when these are no longer needed.|•|•|•|•|||
+|**Retention of personal data**The organisation should cease to retain personal data in their ICT systems once the purposefor which the personal data was collected no longer exists. Keeping the personal data for longperiods increases the cybersecurity risks to the organisation. from Guide to Data Protection Practices for ICT Systems.pdf, page 12,13
+
+Chunk Text : Conduct periodic checks for personal data stored in ICTsystems. For personal data that is not required in any formanymore, securely dispose of the data. If there is a need toretain the data but in anonymised or aggregated form, e.g.for performing data analytics, consider anonymising the data.||||•|•|•|
+|l.Conduct physical asset inventory checks regularly to ensurethat all computers and other electronic devices (e.g. portablehard drives, printers, fax machines) used to store or processpersonal data are accounted for.||•||•|||
+
+--- end of page.page_number=10 ---
+
+GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS   11 
+
+## **Collection of personal data** 
+
+Personal data that are collected but not used will pose unnecessary data protection and cyber threat risks to the organisation. Collection of unnecessary personal data increases the risks and impact of data breaches. Additional resources needed to protect these unnecessary personal data can be avoided by simply not collecting them in the first place. Data minimisation is a good way for organisations to examine what personal data they really need. from Guide to Data Protection Practices for ICT Systems.pdf, page 9,10
+"
+"At which stages of the data lifecycle should organisations maintain a list of whitlested connections to only specific, trusted hosts? ","**Answer:**
+Organisations should maintain a list of whitelisted connections to allow connections to only specific, trusted hosts during the Data Lifecycle stage of Use and Disclosure. This is specified under the Enhanced Practices in the Computer Networks section, which maps the practice “Maintain a list of whitelisted connections to allow connections to only specific, trusted hosts” to data lifecycle considerations in the guide.
+
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, Page 17","
+Chunk Text : Maintain a list of whitelisted connections to allow connectionsto only specifc, trusted hosts.|||||||
+|h. Assess the need for remote access to servers such as confguringremote desktop protocol (“**RDP**”) to be open in the organisation’snetwork and exposed to the Internet. Consider applying additionalcontrols where possible, such as restricting access to specifedexternal IP addresses and ensuring remote desktop is usedbehind a secure virtual private network (“**VPN**”).|||||||
+|i.Log and review all RDP login attempts.|||||||
+|**Enhanced Practices**|||||||
+|j.Implement an intrusion prevention system (“**IPS**”) solution, whichis a device or software application that monitors network or systemactivities and prevents malicious activities or policy violations.|•|•||•|•||
+|k. Implement an intrusion detection system (“**IDS**”), which is anetwork security appliance that monitors network and systemactivities for malicious activities and may raise alerts upondetecting unusual activities.|||||||
+
+--- end of page.page_number=17 ---
+
+18   GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS 
+
+|**Computer Networks****Enhanced Practices**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|
+|---|---|---|---|---|---|---|
+|l.Install security devices that prevent the unauthorised transferof data out from a computer or network.|•|•||•|•||
+|m. Monitor LAN/WiFi regularly and remove unauthorised clientsand WiFi access points.|||||||
+|n. Use 2FA and strong encryption for remote access. from Guide to Data Protection Practices for ICT Systems.pdf, page 16,17
+
+Chunk Text : High-Level Summary
+- A page from a guide titled “Guide to Data Protection Practices for ICT Systems” focusing on Computer Networks and Data Lifecycle practices.
+- The image presents a structured table listing basic and enhanced practices for securing networks, with column headings related to data lifecycle stages and usage.
+
+Contextual Analysis
+- Setting: Page from a technical or policy document, likely part of a larger handbook or standard.
+- Subjects: Computer networks security practices, categorized into basic and enhanced practices; data lifecycle components (Collection, Use, Disclosure, Storage, Archival, Disposal) shown as column headers.
+- Intent: To enumerate and organize recommended security controls for ICT network environments, mapping each practice to relevant data lifecycle stages.
+
+Detail Inventory
+- Text & OCR (exact content as visible):
+  - Top header: “GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS 17”
+  - Section title: “Computer Networks” (blue header) and “Data Lifecycle” (green header)
+  - Subheaders: “Basic Practices” and “Enhanced Practices”
+  - Listed items under Basic Practices:
+    a. “Equip networks with defence devices such as firewalls to protect your computer network connected to the Internet.”
+    b. “Install endpoint security solutions as defence against malware and maintain up-to-date defence software such as web-proxies, anti-virus/anti-malware and anti-spyware solutions on the servers to protect your computer network against malicious attacks. Specify follow-up on malware detection.”
+    c. “Document configuration settings and review/test these regularly to ensure that they correspond to current requirements such as allowed services, protocols, ports and compensating controls.”
+    d. “Monitor, encrypt and restrict communications between environments to only authenticated and authorised connections as justified by the business.”
+    e. “Ensure that the firewall ports are closed by default and open them when necessary for operational purposes. Conduct periodic reviews of firewall rules to restrict connectivity to only authorised/whitelisted servers/IP addresses and close all unused ports.”
+    f. “Configure web servers securely by turning off services that are not in use (i.e. disable directory listing, disable banner display, disable/block all unnecessary listener services, turn off unused modules and open ports, avoid using default passwords, and restrict access to specific external IP ranges).”
+    g. “Maintain a list of whitelisted connections to allow connections to only specific, trusted hosts.”
+    h. “Assess the need for remote access to servers such as configuring remote desktop protocol (‘RDP’) to be open in the organisation’s network and exposed to the Internet. Consider applying additional controls where possible, such as restricting access to specified external IP addresses and ensuring remote desktop is used behind a secure virtual private network (‘VPN’).”
+    i. “Log and review all RDP login attempts.”
+  - Items under Enhanced Practices:
+    j. “Implement an intrusion prevention system (‘IPS’) solution, which is a device or software solution that monitors network or system activities and prevents malicious activities or policy violations.”
+    k. “Implement an intrusion detection system (‘IDS’), which is a network security appliance that monitors network and system activities for malicious activities and may raise alerts upon detecting unusual activities.”
+  - Visual elements:
+    - A two-column layout with a blue left column for “Computer Networks” and a green right column for “Data Lifecycle.”
+    - Headers for Data Lifecycle stages likely listed vertically or as sub-columns: Collection, Use, Disclosure, Storage, Archival, Disposal.
+    - A dotted line or series of blue circular indicators marking where each basic/enhanced practice aligns with lifecycle stages.
+    - Light blue gradient cells and a grid-like table structure.
+
+Entities
+- Categories: Computer Networks, Data Lifecycle.
+- Data lifecycle stages listed: Collection, Use, Disclosure, Storage, Archive (Archival), Disposal.
+- No person names or brands explicitly named beyond generic terms (firewalls, RDP, VPN, IPS, IDS).
+
+Relationship Mapping
+- Each practice item (a–k) corresponds to specific security controls related to network protection and data lifecycle management.
+- Relationship example: A practice about closing firewall ports by default (e) relates to the Storage/Disclosure/Collection lifecycle controls by limiting exposure and access; the chart visually maps these practices across lifecycle stages using markers.
+- Another example: Implementing IPS/IDS (j, k) relates to monitoring and preventing malicious activities across the lifecycle, indicated by markers aligning to “Use” and “Disclosure/Storage” as applicable.
+
+Search-Friendly Keywords
+- data protection practices, ICT security, computer networks, firewall, endpoint security, malware protection, firewall rules, web servers security, remote access security, RDP, VPN, intrusion prevention system, IPS, intrusion detection system, IDS, network monitoring, authorized connections, whitelisting, network authentication, data lifecycle, collection, use, disclosure, storage, archival, disposal. from Guide to Data Protection Practices for ICT Systems.pdf, page 16
+
+Chunk Text : 
+    Text before image : 01 Evaluation and Selection
+    Image description : High-Level Summary
+- A circular infographic titled “Third-Party Management Framework” illustrating a continuous four-step process for third-party management. Each step is represented by an icon and a short label around a central circle.
+
+Contextual Analysis
+- Setting: A corporate or enterprise diagram used in policy or vendor management presentations.
+- Subjects: Four icons representing key components, arranged around a circular flow with connecting segments. The central text indicates the framework theme.
+- Intent: To convey the ongoing cycle of third-party management activities, emphasizing end-to-end lifecycle stages.
+
+Detail Inventory
+- Text & OCR (visible text exactly as appears):
+  - Third-Party Management Framework (center)
+  - 02 Contracting and On-boarding (right side)
+  - 03 Service Management (bottom)
+  - Transition Out (left side)
+- Visual Elements:
+  - A circular ring with alternating blue shades forming a cycle.
+  - Four gray circular icons positioned at approximately top, right, bottom, and left:
+    - Top icon: three people and a checkmark (approval or evaluation).
+    - Right icon: a checklist on a clipboard with a pen.
+    - Bottom icon: a handshake with a gear (service or operations).
+    - Left icon: two people with arrows indicating communication or transition.
+  - Color palette: blues and grays, with gradient blue segments in the cycle.
+- Entities:
+  - No specific people names or brands are visible.
+  - General business concepts: evaluation/approval, contracting/on-boarding, service management, and transition out.
+
+Relationship Mapping
+- The circular flow connects four stages indicating a looped process:
+  - The right-side stage (02 Contracting and On-boarding) leads into the circular blue arc toward the top-stage icon (approval/evaluation).
+  - The top stage appears to feed into the bottom stage (Service Management) via the circular path.
+  - The left stage (Transition Out) continues the cycle back toward the top, completing the loop.
+  - The central label “Third-Party Management Framework” anchors the diagram, with each peripheral icon representing a lifecycle component: evaluation/approval, contracting/on-boarding, service management, and transition out.
+
+Notes for indexing
+- Useful search keywords: third-party management, vendor risk, supplier onboarding, contracting, onboarding, service management, transition out, circular workflow, lifecycle diagram, checklist, approval, handover.
+- If embedding in a vector store, include tags for: framework, governance, vendor management lifecycle, onboarding, offboarding, operations, procurement, risk management.
+    Image caption : No image caption
+    Text after image : Out
+     from key-policies-third-party-framework.pdf, page 3
+"
+What are the four key components of governance mentioned in the guide?,"**Answer:**
+The four key components of governance are:
+- Clear accountability
+- Standards, policies and procedures
+- Risk management
+- Classification and tracking
+
+Sources Used: Guide to Data Protection Practices for ICT Systems.pdf, 8","
+Chunk Text : High-Level Summary
+- An infographic page from a guide on data protection practices for ICT systems, focusing on policy and risk management. It presents governance concepts and four key components with icons.
+
+Contextual Analysis
+- Setting: Page from a formal document or booklet, likely an ICT security or data protection guide.
+- Subjects: Text sections about governance for ICT systems, with a heading “POLICY AND RISK MANAGEMENT FOR ICT SYSTEMS” and four governance components illustrated with icons.
+- Intent: To inform readers about governance foundations and the four key governance components and how they support data lifecycle protection and risk management.
+
+Detail Inventory
+- Text & OCR (exact phrases as visible):
+  - Page header: “GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS” (part of a larger document title)
+  - Paragraph block describing recommendations for ICT and data protection practices, handling personal data, and enhanced practices for large quantities of data.
+  - Section title: “POLICY AND RISK MANAGEMENT FOR ICT SYSTEMS”
+  - Subheading: “Governance”
+  - Paragraph: “Good governance enables your organisation to control and direct the approach and resources to mitigate data breach risks throughout the data lifecycle. In doing so, organisations should consider the following four key components of governance:”
+  - Four components represented by blue circular icons with captions underneath:
+    1) “Clear accountability”
+    2) “Standards, policies and procedures”
+    3) “Risk management”
+    4) “Classification and tracking”
+  - Visuals: On the left, a stacked server icon with a green document/flag overlay; four blue circular icons aligned horizontally with white internal symbols.
+  - Footer notes (small text, numeric references 1 and 2) detailing personal data definitions and standards context (partial view, but present as footnotes).
+- Visual Elements:
+  - Color scheme: blue for icons/text, green accent on the server/document icon.
+  - Layout: text blocks on the right with a left-side illustration; bold blue title; row of four circular icons with captions.
+  - Typography: bold section title; smaller body text; bullet-like icon captions.
+- Entities:
+  - No people depicted.
+  - Objects: ICT server illustration, green document/flag, four circular governance icons.
+  - General location: Office/guide page context; no geographic indicators.
+
+Relationship Mapping
+- The left-side server-related graphic visually anchors the topic of ICT governance.
+- The main heading “POLICY AND RISK MANAGEMENT FOR ICT SYSTEMS” identifies the topic, followed by “Governance” as a sub-topic.
+- The four circular icons represent the four governance components and are directly connected to the sentence introducing “the following four key components of governance.”
+- The icons’ order implies a sequence or emphasis: Clear accountability → Standards/policies/procedures → Risk management → Classification and tracking.
+- Footnotes at the bottom provide additional definitions related to personal data and standards, supporting the main governance content.
+
+Search-Friendly Keywords and Phrases
+- ICT systems governance, data protection governance, policy and risk management, data lifecycle, data breach risk, clear accountability, standards and procedures, risk management, data classification, data tracking, ICT security guide, information security governance, data protection practices. from Guide to Data Protection Practices for ICT Systems.pdf, page 7
+
+Chunk Text : The design and implementation of these protection measures should always take into consideration the extent of the sensitivity of the data based on the nature of business and types of services offered. ## **POLICY AND RISK MANAGEMENT FOR ICT SYSTEMS** 
+
+## **Governance** 
+
+Good governance enables your organisation to control and direct the approach and resources to mitigate data breach risks throughout the data lifecycle. In doing so, organisations should consider the following four key components of governance: 
+
+Clear Standards,[2] Risk Classification accountability policies and management and tracking procedures 
+
+> 1 _These personal data could include:_ 
+
+> _- Personal data used for transactional or authentication purposes, e.g. credit card info;_ 
+
+> _- Personal data that may result in adverse impact to individuals if disclosed, e.g. health-related data or financial-related data;_ 
+
+> _- Any other data that might result in adverse impact to the organisation if disclosed, e.g. data related to its intellectual property or client base._ 
+
+> 2 _Standards refer to a set of reliable and common standards in the information technology industry, such as ISO standards or other relevant international standards._ 
+
+--- end of page.page_number=8 ---
+
+GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS   9 
+
+Governance Data Lifecycle
+
+|**Governance**|**Data Lifecycle**|**Data Lifecycle**|**Data Lifecycle**|**Data Lifecycle**|**Data Lifecycle**|**Data Lifecycle**|
+|---|---|---|---|---|---|---|
+|**Basic Practices**|**Collection**|**Use**|**Disclosure**|**Storage**|**Archival**|**Disposal**|
+|**i.****Clear accountability**|||||||
+|a. The senior management of an organisation should provideclear direction on ICT security goals and policies for personaldata protection within the organisation. The involvement andsupport of an organisation’s leadership is important indemonstrating commitment to ICT security for data protection.|•|•|•|•|•|•|
+|b. Data protection risks may be managed through ICT controls.Close collaboration is necessary between data protection andICT security functions within an organisation. from Guide to Data Protection Practices for ICT Systems.pdf, page 8,7
+
+Chunk Text : High-Level Summary
+- An infographic titled “Lifecycle of the Third-Party Management Framework” that outlines four stages in a circular flow: Evaluation and Selection, Contracting and On-boarding, Service Management, and Transition Out.
+- Central diagram labeled “Third-Party Management Framework” with circular arrows connecting the stages, plus a definitions section at the bottom.
+
+Contextual Analysis
+- Setting: A business or governance slide, likely from a presentation about risk management or procurement processes.
+- Subjects: A cycle diagram representing the lifecycle of third-party management, with four labeled stages and a central framework icon. Includes a definitions section explaining what “Third Party” means in this context.
+- Intent: To educate the reader about the steps involved in managing third-party relationships and to define key terms for policy or compliance purposes.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Title: Lifecycle of the Third-Party Management Framework
+  - Stage labels around the circle (in order, approximated by position):
+    1. 01 Evaluation and Selection
+    2. 02 Contracting and On-boarding
+    03 Service Management
+    04 Transition Out
+  - Center label: Third-Party Management Framework
+  - Section header (below diagram): DEFINITION
+  - Definition text (as visible):
+    - 1 Third Party is defined as a party (other than a data subject or an Agency) which:
+      (i) delivers, develops, implements, operates, provides or otherwise supplies ICT systems or services to an Agency, or
+      (ii) collects, stores or otherwise processes data for an Agency.
+    - a Data subject refers to the individual or entity to which the data relates.
+    - b Agency refers to Organs of State, Ministries, Departments and Statutory Boards.
+  - Footer line (small): Key Policies of the Government’s Third-Party Management Framework | 02
+- Visual Elements:
+  - Circular blue ring segments with four icons around the circle (each in a light gray circle):
+    - An icon with people and a checkmark (Evaluation and Selection)
+    - A clipboard/checklist (Contracting and On-boarding)
+    - A hand with a gear (Service Management)
+    - A two-person figure with a conversation icon (Transition Out)
+  - Color scheme: blue tones (various blues for ring segments and headers), gray icon backgrounds, white page background.
+  - Typography: clean, sans-serif; headings in blue, section headers in darker blue.
+- Entities:
+  - No specific company names or real individuals are shown.
+  - General references: Third Party, Agency, data subject, ICT systems or services, government context.
+
+Relationship Mapping
+- The four stages form a continuous loop around the central “Third-Party Management Framework,” indicating an ongoing lifecycle.
+- The arrows or circular ring connect the stages in sequence:
+  - 01 Evaluation and Selection -> 02 Contracting and On-boarding -> 03 Service Management -> 04 Transition Out -> back to 01 for continuous improvement (implied by cyclic design).
+- The central label anchors the diagram, indicating that all four stages are components of a unified framework.
+- The Definition section provides terminology to support understanding of the circular process and its governance context.
+
+Search-Friendly Keywords
+- Third-Party Management Framework
+- Lifecycle stages: Evaluation and Selection, Contracting and On-boarding, Service Management, Transition Out
+- ICT systems and services for agencies
+- Government third-party policy
+- Data processing by third parties
+- Agency, data subject definitions
+- Policy diagram, governance framework, procurement lifecycle
+
+Notes for indexing
+- This image is best described as a circular lifecycle diagram for third-party management within a governmental or agency context, including a formal definition section about terms like Third Party, Agency, and Data Subject. from key-policies-third-party-framework.pdf, page 2
+"
+What are the three main sections that data protection practices for ICT systems are grouped into?,"**Answer:**
+The three main sections are:
+- Policy/Risk Management for ICT Systems
+- ICT Controls
+- SOP/IT Operations
+
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, Page 6; Guide to Data Protection Practices for ICT Systems.pdf, Page 7; Guide to Data Protection Practices for ICT Systems.pdf, Page 17","
+Chunk Text : High-Level Summary
+- An infographic illustrating data protection practices for ICT systems. It presents three main sections (Policy/Risk Management, ICT Controls, and SOP/IT Operations) connected to a central circle labeled “Data Protection Practices for ICT Systems,” with a circular diagram and supporting text.
+
+Contextual Analysis
+- Setting: A formal, educational or informational graphic likely from a guide or manual on data protection practices for ICT systems.
+- Subjects: The central concept of data protection practices and three subcategories (Policy/Risk Management for ICT systems, ICT Controls, and SOP/IT Operations) depicted as adjacent panels.
+- Intent: To convey the organizational structure of data protection practices and outline key components within each category for easy reference and training.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Header/Intro: The data protection practices for ICT systems are grouped into three main sections and their respective sub-sections as shown below.
+  - Central circle: Data Protection Practices for ICT Systems
+  - Three vertical panels (left to right):
+    - Policy/Risk Management for ICT systems
+      - Governance
+      - Collection of personal data
+      - Notification of purpose
+      - Managing consent
+      - Access, correction and accuracy of personal data
+      - Housekeeping of personal data
+      - Retention of personal data
+    - ICT Controls
+      - Authentication, authorisation and passwords
+      - Computer networks
+      - Database security
+      - Web applications/ website security
+      - ICT security and testing
+    - SOP/IT Operations
+      - Security awareness
+      - Personal computers and other computing devices
+      - Portable computing devices and removable storage media
+      - Compliance, monitoring, alerts, testing and audits
+      - Cloud computing
+  - Subheading at top of left area: The data protection practices for ICT systems are grouped into three main sections and their respective sub-sections as shown below.
+- Visual Elements:
+  - Central circular diagram with three colored arcs (blue, green, teal) labeled around the circle: Policy/Risk Management for ICT Systems, SOP/IT Operations, ICT Controls.
+  - Three vertical panels beneath the circle, each with a colored header:
+    - Left panel: blue header, titled Policy/Risk Management for ICT systems
+    - Middle panel: blue-green header, titled ICT Controls
+    - Right panel: green header, titled SOP/IT Operations
+  - A shield-and-certificate style icon to the left, representing protection.
+  - Overall color scheme: blue, teal, and green tones; clean, formal typography.
+- Entities:
+  - No specific people, brands, or locations are present.
+  - The central concept is generic: data protection practices for ICT systems.
+
+Relationship Mapping
+- The central circle (“Data Protection Practices for ICT Systems”) is connected to the three panels via vertical lines, indicating that Policy/Risk Management, ICT Controls, and SOP/IT Operations collectively form the overall data protection framework.
+- The three colored arcs around the circle denote the three main sections in a cyclical relationship, suggesting an integrated, overlapping set of practices.
+- Each panel’s bullet list represents the subcomponents or focus areas within that category, showing hierarchical relationships from broad category to specific practices.
+
+Search-Friendly Keywords
+- data protection practices ICT systems
+- ICT security controls
+- policy risk management ICT
+- SOP IT operations
+- data protection governance
+- personal data handling
+- authentication authorization passwords
+- database security
+- cloud computing compliance
+- security awareness training
+
+If you want, I can tailor this into a plain-text dataset with fields (title, category, bullets, keywords) for easy ingestion into a RAG pipeline. from Guide to Data Protection Practices for ICT Systems.pdf, page 6
+
+Chunk Text : 
+    Text before image : ADER
+    Image description : High-Level Summary
+- An infographic illustrating data protection practices for ICT systems. It presents a circular framework labeled “Data Protection Practices for ICT Systems” connected to three main areas: Policy/Risk Management for ICT systems, ICT Controls, and SOP/IT Operations.
+
+Contextual Analysis
+- Setting: An educational/organizational poster or diagram used to convey data protection concepts.
+- Subjects: Three grouped sections (Policy/Risk Management, ICT Controls, SOP/IT Operations) linked to a central circular framework.
+- Intent: To communicate the components and responsibilities of data protection within ICT environments, including governance, technical controls, and operational practices.
+
+Detail Inventory
+- Text & OCR (as visible):
+  - Center circle: Data Protection Practices for ICT Systems
+  - Outer circular segments (from top, clockwise): SOP/IT Operations, ICT Controls, Policy/Risk Management for ICT systems
+  - Left column (blue header): Policy/Risk Management for ICT systems
+    - Governance
+    - Collection of personal data
+    - Notification of purpose
+    - Managing consent
+    - Access, correction and accuracy of personal data
+    - Housekeeping of personal data
+    - Retention of personal data
+  - Middle column (teal header): ICT Controls
+    - Authentication, authorisation and passwords
+    - Computer networks
+    - Database security
+    - Web applications/ website security
+    - ICT security and testing
+  - Right column (green header): SOP/IT Operations
+    - Security awareness
+    - Personal computers and other computing devices
+    - Portable computing devices and removable storage media
+    - Compliance, monitoring, alerts, testing and audits
+    - Cloud computing
+- Visual Elements:
+  - A central circular motif with three colored segments (blue, teal, green) forming a cycle around the text.
+  - Three vertical panels below the circle: Policy/Risk Management for ICT systems (blue), ICT Controls (teal), SOP/IT Operations (green).
+  - Colors: blue, teal, and green with white backgrounds and bullet lists.
+  - Bullet point lists for each category.
+- Entities:
+  - Concepts: data protection practices, ICT systems, governance, authentication, security, compliance.
+  - Objects: personal data, computing devices, cloud computing, databases, networks, web applications.
+
+Relationship Mapping
+- The three lower panels are linked to the central circular framework, indicating that Policy/Risk Management, ICT Controls, and SOP/IT Operations collectively constitute Data Protection Practices for ICT Systems.
+- The circular arc suggests an ongoing, cyclical relationship among the three main areas.
+- Each column lists specific topics that map to the overarching domains:
+  - Policy/Risk Management for ICT systems governs governance, data collection, consent, and retention.
+  - ICT Controls covers technical safeguards such as authentication, networks, databases, security testing.
+  - SOP/IT Operations encompasses operational practices like security awareness, device management, compliance, cloud computing, and audits.
+- The layout implies a flow from governance and policy into technical controls and operational procedures, all feeding into the central data protection framework.
+
+Notes for indexing/search
+- Use keywords: data protection, ICT systems, governance, data privacy, personal data, authentication, database security, web security, cloud computing, security awareness, compliance, audits, ICT controls, SOP/IT operations, policy management, risk management.
+- Include synonyms: data privacy practices, information security, IT governance, cyber security controls, IT operations, security policies, data retention, consent management.
+    Image caption : No image caption
+    Text after image : No text after image
+     from Guide to Data Protection Practices for ICT Systems.pdf, page 7
+
+Chunk Text : High-Level Summary
+- A page from a guide on data protection practices for ICT systems. It includes two labeled tables (Computer Networks and Database security) with rows of best practices and a Data Lifecycle column showing stages (Collection, Use, Disclosure, Storage, Archival, Disposal).
+
+Contextual Analysis
+- Setting: An informational document or handbook page, likely part of a standard or training material on cybersecurity/data protection.
+- Subjects: Best practices for securing computer networks and databases, including control measures and lifecycle considerations.
+- Intent: To educate readers on recommended security practices and how they align with different data lifecycle stages.
+
+Detail Inventory
+- Text & OCR (exact phrasing as visible):
+  - Page header: “GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS”
+  - Section header: “Computer Networks”
+  - Subheader: “Enhanced Practices”
+  - Listed items (lettered):
+    - i. Install security devices that prevent the unauthorized transfer of data out from a computer or network.
+    - m. Monitor LAN/WiFi regularly and remove unauthorised clients and WiFi access points.
+    - n. Use 2FA and strong encryption for remote access. Review the method of encryption (e.g. algorithm and key length) periodically to ensure that it is recognised by the industry as relevant and secure.
+    - o. Use network proxies to restrict employee access to known malicious websites.
+    - p. Design and implement the internal network with multi-tier or network zones, segregating the internal network according to function, physical location, access type, etc.
+  - Column headers: “Collection”, “Use”, “Disclosure”, “Storage”, “Arrival” (likely “Archival”), “Disposal” (though there is a slight misreading; the visible header reads “Data Lifecycle” with vertical labels for lifecycle stages)
+  - Section header: “Database security”
+  - Subheader: “Basic Practices”
+  - Listed items:
+    - a. Enforce strict control over users’ activities such as limiting their direct access to the database, ability to execute arbitrary SQL commands or access the database schema.
+    - b. Log all database activities such as any changes to the database and data access activities to track unauthorised activities or anomalies.
+    - c. Check that the database is secured and not placed in a vulnerable spot within the network. For example, the database should be placed behind a firewall.
+- Visual Elements:
+  - Two rounded-rectangle blocks containing lists in a gradient blue-to-green color scheme.
+  - A grid-like table with vertical columns for Data Lifecycle stages and horizontal rows of practices.
+  - Blue bullet markers within the cells indicating applicability of each practice to lifecycle stages.
+  - Overall layout resembles an infographic/table hybrid with light blue headers and pale green lifecycle column headers.
+- Entities:
+  - Concepts: data protection, security practices, data lifecycle.
+  - No real person names or brands are visible.
+  - No geographic/location data is present.
+
+Relationship Mapping
+- The Enhanced Practices in Computer Networks are aligned with stages of the Data Lifecycle via check marks (blue dots) to indicate applicability to Collection, Use, Disclosure, Storage, Archival, Disposal.
+- The Database Security section similarly maps Basic Practices to lifecycle stages, showing which practices apply to each stage.
+- The two sections together illustrate a framework for implementing security controls across different network/database domains and across data lifecycle phases.
+
+Notes for indexing and search
+- Use synonyms and related terms: data protection, ICT security, network security, database security, access controls, encryption, two-factor authentication, data lifecycle, collection, storage, disposal, archiving, firewall, logging, least privilege, network segmentation.
+- Possible indexable phrases: “data protection practices for ICT systems”, “computer networks enhanced practices”, “database security basic practices”, “data lifecycle stages: collection, use, disclosure, storage, archival, disposal”, “2FA and encryption for remote access”, “network proxies to restrict access”, “internal network segmentation”, “database activity logging”, “firewall placement for databases”.
+- Ensure OCR-extracted text is preserved exactly for exact matches where possible, especially the listed practice items. from Guide to Data Protection Practices for ICT Systems.pdf, page 17
+"
+What guide should organisations refer to if they want to anonymise data beyond the retention period?,"**Answer:**
+
+Organisations should refer to the Guide to Data Protection Practices for ICT Systems (PDPC Singapore). Specifically, for anonymising data beyond the retention period, the guidance notes to review and anonymise records to prevent re-identification when there is a need to keep the data beyond the retention period. This is described in the Retention of Personal Data section of the guide.
+
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, page 14","
+Chunk Text : A good way to minimise theserisks is for the organisation to assess whether the retention of personal data may be necessarybased on its business needs or legal purposes.|||||||
+|**Retention of Personal Data****Basic Practices**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**||||||
+|a. Have an appropriate personal data retention policy which setsout the varying minimum/maximum retention periods forrepositories/ICT systems containing personal data. ICT controlscould be implemented in ICT systems to enforce retentionperiods, especially for organisations that hold a large quantityof personal data.||||•|•|•|
+|b. Where there is a need to keep the data beyond the retentionperiod, review and anonymise records4to prevent re-identifcationto an individual.||||•|•||
+|c. Delete records that are no longer needed. The organisationmay implement ICT systems to fag records which have reachedthe end of the retention period.||||•|•|•|
+|d. Perform physical disposal of hard disks or other known methodsof destruction of storage media, such as degaussing andincinerating, when secure deletion, erasure or deletion ofpersonal data stored on the electronic media is not possible.This may be the case with faulty storage media.||||||•|
+|e. Before redeploying, exchanging or disposing of electronic (re-writable) media, always perform secure deletion, erasure, purgingor destruction of electronic personal data on storage media.|||||||
+
+The organisation should cease to retain personal data in their ICT systems once the purpose for which the personal data was collected no longer exists. Keeping the personal data for long periods increases the cybersecurity risks to the organisation. A good way to minimise these risks is for the organisation to assess whether the retention of personal data may be necessary based on its business needs or legal purposes. > 4 _Refer to PDPC’s Guide to Basic Data Anonymisation Techniques._ 
+
+--- end of page.page_number=14 ---
+
+GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS   15 
+
+## **ICT CONTROLS** 
+
+## **Authentication, authorisation and passwords** 
+
+Authentication and authorisation processes in ICT systems are commonly used to ensure that information is accessed only by the authorised persons performing the intended activities. It is a good practice to set appropriate access control rules, access rights and restrictions for specific user roles. It is also good to have stronger requirements for administrative accounts, such as complex passwords or 2-Factor Authentication (“ **2FA** ”) /Multi-Factor Authentication (“ **MFA** ”). Unauthorised access is one of the most common types of data breaches. from Guide to Data Protection Practices for ICT Systems.pdf, page 13,14
+
+Chunk Text : Conduct periodic checks for personal data stored in ICTsystems. For personal data that is not required in any formanymore, securely dispose of the data. If there is a need toretain the data but in anonymised or aggregated form, e.g.for performing data analytics, consider anonymising the data.||||•|•|•|
+|l.Conduct physical asset inventory checks regularly to ensurethat all computers and other electronic devices (e.g. portablehard drives, printers, fax machines) used to store or processpersonal data are accounted for.||•||•|||
+
+--- end of page.page_number=10 ---
+
+GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS   11 
+
+## **Collection of personal data** 
+
+Personal data that are collected but not used will pose unnecessary data protection and cyber threat risks to the organisation. Collection of unnecessary personal data increases the risks and impact of data breaches. Additional resources needed to protect these unnecessary personal data can be avoided by simply not collecting them in the first place. Data minimisation is a good way for organisations to examine what personal data they really need. from Guide to Data Protection Practices for ICT Systems.pdf, page 9,10
+
+Chunk Text : High-Level Summary
+- A page from a guide on data protection practices for ICT systems, focusing on housekeeping of personal data and retention. The page includes two sections: (1) Housekeeping of Personal Data with a Data Lifecycle table, and (2) Retention of Personal Data with its own Data Lifecycle table. Each table lists basic practices and indicates which lifecycle stages (Collection, Use, Disclosure, Storage, Arrival, Disposal) are relevant to each practice.
+
+Contextual Analysis
+- Setting: Educational/training manual or handbook page, likely part of a larger document on data protection or data privacy.
+- Subjects: Sections and tables describing practices for managing personal data, including retention strategies and data lifecycle considerations.
+- Intent: To convey recommended practices for handling and retaining personal data in ICT systems, with visual cues (tables and lifecycle columns) for quick reference.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Top header: ""GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS"" (page number 14)
+  - Section title: ""Housekeeping of Personal Data""
+  - Subheader column: ""Data Lifecycle"" with lifecycle stages listed vertically: Collection, Use, Disclosure, Storage, Arrival, Disposal
+  - Basic Practices (row labels):
+    - a. Protect temporary files such as interface files or data migration files while they exist and remove them once they are not required.
+    - b. Implement a routine schedule to identify and remove temporary files when these are no longer needed.
+  - Retention of personal data (section header)
+  - Paragraph text describing the organisation’s approach to retaining personal data and risks of retention.
+  - Section title: ""Retention of Personal Data"" and ""Data Lifecycle""
+  - Basic Practices (row labels, with lettered subpoints a–e):
+    - a. Have an appropriate personal data retention policy which sets out the varying minimum/maximum retention periods for repositories/ICT systems containing personal data. ICT controls could be implemented in ICT systems to enforce retention periods, especially for organisations that hold a large quantity of personal data.
+    - b. Where there is a need to keep the data beyond the retention period, review and anonymise records to prevent re-identification to an individual.
+    - c. Delete records that are no longer needed. The organisation may implement ICT systems to flag records which have reached the end of the retention period.
+    - d. Perform physical disposal of hard disks or other known methods of destruction of storage media, such as degaussing and incinerating, when secure deletion, erasure or deletion of personal data stored on the electronic media is not possible. This may be the case with the end of the retirement period.
+    - e. Before redeploying, exchanging or disposing of electronic (re-writable) media, always perform secure deletion, purging or destruction of electronic personal data on storage media.
+- Visual Elements:
+  - Two rounded header bars: blue for ""Housekeeping of Personal Data"" and light green for ""Data Lifecycle"" in the first table; similar blue header for ""Retention of Personal Data"" and ""Data Lifecycle"" in the second table.
+  - Tables with columns: left column for Basic Practices, right-side column for Data Lifecycle stages (Collection, Use, Disclosure, Storage, Arrival, Disposal) with check indicators (dots) showing applicability.
+  - Color blocks and dot markers indicating which lifecycle stages apply to each practice.
+  - Subheaders and bullet-like lines for each practice.
+- Entities:
+  - No people, brands, or specific locations identifiable.
+  - Topics: personal data, retention policy, ICT systems, data destruction methods (degaussing, incineration).
+
+Relationship Mapping
+- The two main sections mirror each other:
+  - Housekeeping of Personal Data lists practices to minimize and manage temporary files, with lifecycle stages showing where in the data lifecycle those practices apply.
+  - Retention of Personal Data expands to governance of retention, with practices detailing policy, review/anonymization, deletion, physical media destruction, and secure disposal before redeploying or disposing of media.
+- The lifecycle columns connect to each practice via dot markers, indicating when during collection, use, disclosure, storage, arrival, or disposal each practice is relevant.
+- The general flow: establish housekeeping to reduce unnecessary data -> define retention policy and controls -> enforce retention periods via ICT systems -> when data reaches end of retention, delete or anonymize -> securely dispose of physical/media as needed. from Guide to Data Protection Practices for ICT Systems.pdf, page 13
+"
+What checklist is the Incident Response Management checklist referenced from?,"**Answer:**
+The Incident Response Management checklist is referenced from CSA’s Incident Response Checklist.
+
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, 32; Guide to Data Protection Practices for ICT Systems.pdf, 33","
+Chunk Text : High-Level Summary
+- The image is a page from a guide titled Annex, presenting a checklist of good ICT practices for incident response management. It includes a table with sections for preparation and detection/analysis, and columns for Practice Met (Not Met/Not Applicable) and Action Plan.
+
+Contextual Analysis
+- Setting: A formal instructional document or manual page, likely part of a larger data protection or ICT security governance guide.
+- Subjects: An Annex section containing a checklist titled “Checklist for Incident Response Management,” with a color-graded table and bullet-like items.
+- Intent: To provide organizations with actionable practices to prepare for and analyze incidents, and to indicate whether each practice is met and what the action plan is.
+
+Detail Inventory
+- Text & OCR (exact phrases as visible):
+  - Title: ANNEX
+  - Subheading: Below is a checklist of good practices that organisations should include in the development of their data breach management plan.
+  - Section title: Checklist for Incident Response Management
+  - Table header: Good ICT Practices | Practice Met | Action Plan
+  - Subsection headings within table: Basic Practices, Preparation (blue row), Detection and Analysis (blue row)
+  - Under Preparation:
+    - a. Identify key contact information such as designated internal incident response handler, appointed third-party incident response provider, regulatory bodies, law enforcement agencies, SingCERT, etc.
+    - b. Identify crucial investigation resources such as network diagrams, current baseline of IT systems' activities, backups of important data, etc.
+    - c. Develop relevant plans such as prevention and detection plans, crisis management and communication plan, business continuity plan, etc.
+    - d. Identify and understand common types of attacks that could affect your organisation and develop action plans to deal with attacks such as malware, phishing, ransomware, data breaches, etc.
+    - e. Action plans developed to respond to common incidents are accessible and any updates are communicated to the relevant parties.
+  - Under Detection and Analysis:
+    - f. Prepare to handle any incident, in particular those involving common attack vectors such as system misconfigurations, human lapses, internet downloads, etc.
+    - g. Regularly review and check for possible incident precursors and indicators from internal and external sources such as system and network logs, SingCERT alerts, etc.
+    - h. Able to make an initial assessment and prioritise the next steps when affected by a cyber incident.
+  - Footer note: 18 This checklist is referenced from CSA’s Incident Response Checklist. Please access the full checklist from CSA’s website.
+- Visual Elements:
+  - A two-tone blue/green color scheme with a gradient header for the table.
+  - A large table with columns: Good ICT Practices, Practice Met, Action Plan.
+  - Subsections with bold blue headers for Preparation and Detection and Analysis.
+  - A page labeled Annex with margin text at bottom.
+- Entities:
+  - Organizations/terms mentioned: SingCERT, CSA’s Incident Response Checklist (CSA stands for a cybersecurity organization, possibly) (not explicit in image beyond “CSA”).
+  - No people or real-world brands depicted beyond the textual references.
+
+Relationship Mapping
+- The table organizes practices by category (Basic Practices → Preparation; Detection and Analysis) and evaluates each practice against “Practice Met” and “Action Plan,” implying a workflow from identifying contacts and resources to developing plans, then to ongoing review and incident handling readiness.
+- The Preparation section items (a–e) describe inputs and documents needed for incident response readiness, while Detection and Analysis (f–h) covers ongoing monitoring and initial assessment.
+- The note at bottom connects this checklist to CSA’s Incident Response Checklist, indicating source/reference and encouraging users to consult the full external checklist.
+
+Search-Friendly Keywords
+- Annex, incident response management, ICT practices, data protection, data breach, incident response plan, preparation, detection and analysis, contact information, incident response handler, third-party response provider, network diagrams, IT system baseline, backups, crisis management, communication plan, business continuity, attack vectors, malware, phishing, ransomware, data breaches, incident precursors, indicators, system misconfigurations, logs, SingCERT, CSA checklist. from Guide to Data Protection Practices for ICT Systems.pdf, page 32
+
+Chunk Text : - h. Able to make an initial assessment and prioritise the next steps when affected by a cyber incident. > 18 _This checklist is referenced from CSA’s Incident Response Checklist. Please access the full checklist from CSA’s website._ 
+
+--- end of page.page_number=33 ---
+
+34   GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS 
+
+Good ICT Practices Practice Met Action Plan
+
+Comply Partial Comply Not Comply Not Applicable
+
+## **Basic Practices** 
+
+## **Detection and Analysis** 
+
+- i. The organisation has an SOP for gathering forensic and operational evidence for the purposes of incident resolution and legal proceedings. - j. Possess knowledge of stakeholders and fiduciary obligations regarding incident reporting when a cyber incident occurs. from Guide to Data Protection Practices for ICT Systems.pdf, page 32,33
+
+Chunk Text : Table : |    | Good ICT Practices.Basic Practices                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Practice Met.Comply   | Practice Met.Partial Comply   | Practice Met.Not Comply   | Practice Met.Not Applicable   | Action Plan.   |
+|---:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------|:------------------------------|:--------------------------|:------------------------------|:---------------|
+|  0 | Preparation a. Identify key contact information such as designated internal incident response handler, appointed third-party incident response provider, regulatory bodies, law enforcement agencies, SingCERT, etc. b. Identify crucial investigation resources such as network diagrams, current baseline of IT systems' activities, backups of important data, etc. c. Develop relevant plans such as prevention and detection plans, crisis management and communication plan, business continuity plan, etc. d. Identify and understand common types of attacks that could affect your organisation and develop action plans to deal with attacks such as malware, phishing,ransomware, data breaches, etc. e. Action plans developed to respond to commonincidents are accessible and any updates are communicated to the relevant parties. Detection and Analysis f. Prepare to handleanyincident, in particular thoseinvolving common attack vectors such as system misconfigurations, human lapses, internet downloads, etc. g. Regularly review andcheckforpossibleincidentprecursors and indicators from internal and external sources such as system and network logs, SingCERT alerts, etc. h. Able to make an initial assessment and prioritise the next steps when affected by a cyber incident. |                       |                               |                           |                               |                |
+Caption :  from Guide to Data Protection Practices for ICT Systems.pdf, page 33
+"
+What are the three key ICT policies that organisations are required to develop and implement?,"**Answer:**
+
+The three key ICT policies that an organisation is required to develop and implement are:
+- Account and access control policy
+- Backup/retention policy
+- Password policy
+
+Sources Used: Guide to Data Protection Practices for ICT Systems.pdf, [8]","
+Chunk Text : This should beevidenced at appropriate levels of its governance structure.|||||||
+|**ii. Standards, policies and procedures**|||||||
+|c. An organisation is required to develop and implement ICT securitypolicies for data protection. Key ICT policies would include:•Account and access control policy•Backup/retention policy•Password policyThe policies will help to provide management with the directionas well as guidance for all ICT system implementations andactivities related to data protection in ICT systems in accordancewith business objectives and relevant laws and regulations.Specifcally, classifcation of data should not be conducted inthe abstract. It is the repository or dataset that should beclassifed, based on their content. This will then allow managementto decide the level of ICT, process or other controls that needto be implemented for the system.|•|•|•|•|•|•|
+|d. Periodically review and update ICT security policies, standardsand procedures to ensure continued relevance, adequacyand effectiveness. from Guide to Data Protection Practices for ICT Systems.pdf, page 8
+
+Chunk Text : The design and implementation of these protection measures should always take into consideration the extent of the sensitivity of the data based on the nature of business and types of services offered. ## **POLICY AND RISK MANAGEMENT FOR ICT SYSTEMS** 
+
+## **Governance** 
+
+Good governance enables your organisation to control and direct the approach and resources to mitigate data breach risks throughout the data lifecycle. In doing so, organisations should consider the following four key components of governance: 
+
+Clear Standards,[2] Risk Classification accountability policies and management and tracking procedures 
+
+> 1 _These personal data could include:_ 
+
+> _- Personal data used for transactional or authentication purposes, e.g. credit card info;_ 
+
+> _- Personal data that may result in adverse impact to individuals if disclosed, e.g. health-related data or financial-related data;_ 
+
+> _- Any other data that might result in adverse impact to the organisation if disclosed, e.g. data related to its intellectual property or client base._ 
+
+> 2 _Standards refer to a set of reliable and common standards in the information technology industry, such as ISO standards or other relevant international standards._ 
+
+--- end of page.page_number=8 ---
+
+GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS   9 
+
+Governance Data Lifecycle
+
+|**Governance**|**Data Lifecycle**|**Data Lifecycle**|**Data Lifecycle**|**Data Lifecycle**|**Data Lifecycle**|**Data Lifecycle**|
+|---|---|---|---|---|---|---|
+|**Basic Practices**|**Collection**|**Use**|**Disclosure**|**Storage**|**Archival**|**Disposal**|
+|**i.****Clear accountability**|||||||
+|a. The senior management of an organisation should provideclear direction on ICT security goals and policies for personaldata protection within the organisation. The involvement andsupport of an organisation’s leadership is important indemonstrating commitment to ICT security for data protection.|•|•|•|•|•|•|
+|b. Data protection risks may be managed through ICT controls.Close collaboration is necessary between data protection andICT security functions within an organisation. from Guide to Data Protection Practices for ICT Systems.pdf, page 8,7
+
+Chunk Text : A good way to minimise theserisks is for the organisation to assess whether the retention of personal data may be necessarybased on its business needs or legal purposes.|||||||
+|**Retention of Personal Data****Basic Practices**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**||||||
+|a. Have an appropriate personal data retention policy which setsout the varying minimum/maximum retention periods forrepositories/ICT systems containing personal data. ICT controlscould be implemented in ICT systems to enforce retentionperiods, especially for organisations that hold a large quantityof personal data.||||•|•|•|
+|b. Where there is a need to keep the data beyond the retentionperiod, review and anonymise records4to prevent re-identifcationto an individual.||||•|•||
+|c. Delete records that are no longer needed. The organisationmay implement ICT systems to fag records which have reachedthe end of the retention period.||||•|•|•|
+|d. Perform physical disposal of hard disks or other known methodsof destruction of storage media, such as degaussing andincinerating, when secure deletion, erasure or deletion ofpersonal data stored on the electronic media is not possible.This may be the case with faulty storage media.||||||•|
+|e. Before redeploying, exchanging or disposing of electronic (re-writable) media, always perform secure deletion, erasure, purgingor destruction of electronic personal data on storage media.|||||||
+
+The organisation should cease to retain personal data in their ICT systems once the purpose for which the personal data was collected no longer exists. Keeping the personal data for long periods increases the cybersecurity risks to the organisation. A good way to minimise these risks is for the organisation to assess whether the retention of personal data may be necessary based on its business needs or legal purposes. > 4 _Refer to PDPC’s Guide to Basic Data Anonymisation Techniques._ 
+
+--- end of page.page_number=14 ---
+
+GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS   15 
+
+## **ICT CONTROLS** 
+
+## **Authentication, authorisation and passwords** 
+
+Authentication and authorisation processes in ICT systems are commonly used to ensure that information is accessed only by the authorised persons performing the intended activities. It is a good practice to set appropriate access control rules, access rights and restrictions for specific user roles. It is also good to have stronger requirements for administrative accounts, such as complex passwords or 2-Factor Authentication (“ **2FA** ”) /Multi-Factor Authentication (“ **MFA** ”). Unauthorised access is one of the most common types of data breaches. from Guide to Data Protection Practices for ICT Systems.pdf, page 13,14
+"
+What enhanced practice does the guide recommend for admin access to sensitive personal data?,"**Answer**
+
+The guide recommends using a one-time password (OTP) or 2FA/MFA for admin access to sensitive personal data records or large volumes of personal data.
+
+**Sources Used:** Guide to Data Protection Practices for ICT Systems.pdf, [16], [24]","
+Chunk Text : High-Level Summary
+- The image is a page excerpt from a guide on data protection practices for ICT systems. It features a section titled ""Authentication, Authorisation and Passwords"" with a table of basic and enhanced practices, plus data lifecycle columns. A descriptive paragraph on computer networks follows the table.
+
+Contextual Analysis
+- Setting: An informational, instructional document (likely a standards or compliance guide) page. 
+- Subjects: Data protection practices related to authentication, authorization, passwords, and general computer networks.
+- Intent: To outline recommended security practices and map them to data lifecycle stages, aiding readers in understanding and implementing ICT security measures.
+
+Detail Inventory
+- Text & OCR (exact phrases as visible):
+  - Top header: ""GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS"" (page number 16)
+  - Main section title: ""Authentication, Authorisation and Passwords""
+  - Data Lifecycle column header: ""Data Lifecycle"" with sub-columns: ""Collection"", ""Use"", ""Disclosure"", ""Storage"", ""Arrival"", ""Disposal"" (though some may be arranged vertically)
+  - Subsection: ""Basic Practices""
+    - f. Have clear policies that prohibit the sharing of passwords such as admin credentials, publicly displaying passwords on Post-it notes or storing passwords in public web folders (including Github).
+    - g. Log successful and failed logins in order to assist detection or investigation into hacking attempts.
+  - Subsection: ""Enhanced Practices""
+    - h. Use a one-time password (""OTP"") or 2FA/MFA for admin access to sensitive personal data records or large volumes of personal data.
+    - i. Implement segregation of duties where system tasks are separated and performed by different groups. It is also desirable to have job rotation and cross training for security admin roles and functions.
+    - j. Log access to sensitive personal data.
+    - k. Limit the number of failed logins to minimise brute force attacks. This can be configured under ""account lockout threshold"" via group policy at domain level as part of system management.
+  - Section: ""Computer networks""
+    - Paragraph text describing that computer networks allow communication between computers and devices, risks of unauthorized/unsecured network connections, and the importance of securing corporate networks to prevent cyber attacks and protection of personal data.
+- Visual Elements:
+  - A two-tone table with blue header for ""Authentication, Authorisation and Passwords"" and green header for ""Data Lifecycle"".
+  - Small blue bullet-like markers or dots in some cells (likely indicating applicability of practices to lifecycle stages).
+  - A block of descriptive text below the table about computer networks.
+- Entities:
+  - No person names are visible.
+  - Mentions of generic concepts: OTP, 2FA/MFA, admin access, login attempts, account lockout, job rotation, cross-training.
+  - Mentions of data lifecycle stages: collection, use, disclosure, storage, arrival, disposal.
+  - References to Github and Post-it notes as examples.
+
+Relationship Mapping
+- The table connects authentication practices (basic/enhanced) to data lifecycle stages. Dots indicate which lifecycle stages are affected by each practice.
+- The “Basic Practices” and “Enhanced Practices” rows define a progression of security measures applied to data and admin access.
+- The computer networks paragraph provides contextual background, explaining why these practices matter for securing networked ICT systems and protecting personal data.
+- The table’s structure visually associates practices with lifecycle phases, and the textual paragraph expands on network security implications.
+
+Notes for indexing and retrieval
+- Use keywords: authentication, authorization, passwords, OTP, 2FA, MFA, login logging, account lockout, segregation of duties, cross-training, brute force, data lifecycle (collection, use, disclosure, storage, arrival, disposal), computer networks, ICT security, password policy, admin access, Github.
+- Include phrases like “one-time password”, “account lockout threshold”, “log successful and failed logins”, “public web folders”, “security admin roles”, “data protection practices for ICT systems”. from Guide to Data Protection Practices for ICT Systems.pdf, page 15
+
+Chunk Text : High-Level Summary
+- The image appears to be a page from a guide on data protection practices for ICT systems. It shows a table titled “Personal Computers and Other Computing Devices” with a green “Data Lifecycle” header, listing recommended practices and their associations with lifecycle stages.
+
+Contextual Analysis
+- Setting: A formal document or handbook page, likely from a data protection or IT security manual.
+- Subjects: A table of enhanced practices related to data protection on personal devices; blue left column contains practice descriptions, right portion maps practices to data lifecycle stages (Collection, Use, Disclosure, Storage, Arrival, Disposal) with markers.
+- Intent: To communicate recommended security practices for personal computing devices and indicate which data lifecycle phases they apply to.
+
+Detail Inventory
+- Text & OCR (visible text exactly as appears):
+  - Section header: “Personal Computers and Other Computing Devices”
+  - Subheader: “Data Lifecycle”
+  - Sub-columns under Data Lifecycle: “Collection”, “Use”, “Disclosure”, “Storage”, “Arrival”, “Disposal”
+  - Main header line: “Enhanced Practices”
+  - Individual practices (labeled f, g, h, i with bullet-style descriptions):
+    - f. Periodically review the method of encryption (e.g., AES algorithm and a minimum of 128-bits key length) to ensure it is recognised by the industry as relevant and secure. Typically the longer the encryption key length, the more secure the encryption. It is also important to manage and protect the encryption keys by keeping them secure and separate from the encrypted data.
+    - g. Disallow anonymous or guest logins where the computer is deemed to contain confidential documents about company assets or sensitive personal data records.
+    - h. Disallow non-administrator users from booting up a computer using external or removable storage media.
+    - i. Disallow non-administrator employees from installing software or changing security settings, except on a need-to-basis. Keep administrator accounts for administrator use only.
+- Visual Elements:
+  - A two-tone layout: blue-shaded left column with practice text; light blue/green right side for the Data Lifecycle with vertical columns.
+  - A horizontal header strip with green tones and small dot/line visual accent near the page margin.
+  - Dots or markers placed under certain Data Lifecycle columns to indicate applicability of each practice (blue dots appear under some columns, possibly other marks under others).
+  - The overall page style is a formal, boxed table with rounded left column header area and pale grid lines.
+- Entities:
+  - No people or brands are named.
+  - Entities include: AES encryption, data lifecycle stages (Collection, Use, Disclosure, Storage, Arrival, Disposal), and IT security roles (administrators, non-administrator employees).
+
+Relationship Mapping
+- The left column lists distinct “Enhanced Practices” (f, g, h, i) as actionable rules.
+- The right column(s) map each practice to the Data Lifecycle stages, indicating during which lifecycle phases the practice is relevant or enforced. The dots mark applicability for stages like Collection, Use, Storage, and possibly others.
+- Example relationships:
+  - Encryption practice (f) relates to multiple lifecycle stages, highlighting that encryption and key management impact the secure handling of data across collection, storage, and potentially other stages.
+  - Access control (g) primarily supports confidentiality during collection, use, and disclosure by limiting anonymous or guest logins.
+  - Media protection (h) relates to preventing unauthorized booting from external/removable media, affecting the storage and arrival/disposal of data depending on the context.
+  - Software/Settings control (i) ties to limiting installation and configuration changes, impacting storage, disposal, and overall data handling integrity through the lifecycle.
+
+Notes for search indexing
+- Include keywords: data protection, ICT systems, personal computers, computing devices, encryption, AES, 128-bit, key management, data lifecycle, collection, use, disclosure, storage, arrival, disposal, administrative rights, user permissions, boot from external media, removable storage, security settings, administrator accounts, confidential documents, access control, guest logins.
+- Use synonyms: device security, endpoint protection, data confidentiality, encryption standards, key management practices, privileged access, user privilege, software installation restrictions.
+
+If you’d like, I can adapt this into a flattened, searchable text snippet or create an indexed YAML/JSON representation suitable for ingestion into a RAG pipeline. from Guide to Data Protection Practices for ICT Systems.pdf, page 24
+
+Chunk Text : Considerations should include identifying the types of personal data to be stored and the risk of adverse impact to the individual should such data be compromised. |**Database Security****Basic Practices**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|
+|---|---|---|---|---|---|---|
+|a. Enforce strict control over users’ activities such as limitingtheir direct access to the database, ability to execute arbitrarySQL commands or access the database schema.||•||•|•||
+|b. Log all database activities such as any changes to thedatabase and data access activities to track unauthorisedactivities or anomalies.|||||||
+|c. Check that the database is secured and not placed in a vulnerablespot within the network. For example, the database should beplaced behind a frewall.|||||||
+
+--- end of page.page_number=18 ---
+
+GUIDE TO DATA PROTECTION PRACTICES FOR ICT SYSTEMS   19 
+
+|**Database Security****Enhanced Practices**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|**Data Lifecycle****Collection****Use****Disclosure****Storage****Archival****Disposal**|
+|---|---|---|---|---|---|---|
+|d. Consider database repositories encryption or encrypt datasetscontaining sensitive personal data that have a higher risk ofadversely affecting the individual should they be compromised.Review the method of encryption (e.g. algorithm and keylength) periodically to ensure that it is recognised by theindustry as relevant and secure.||•||•|•||
+|e. Implement tight control over access to personal data basedon the sensitivity of the data. from Guide to Data Protection Practices for ICT Systems.pdf, page 17,18
+"
+What resource should you consult if you are unsure whether you need a licence for providing financial advice?,"**Answer:**
+If you are unsure, consult the MAS Guidelines on Provision of Financial Advisory Service (FAA-G17) or seek legal advice.
+
+**Sources Used:** 7 Must-Knows When Sharing Financial Information Online.pdf, [Page 0]","
+Chunk Text : Conduct independent research; get professional advice when needed. Encourage budgeting and caution against overspending. Advise reading the fine print and T&Cs. ## **The Licence Lane: Where Do You Stand?** 
+
+**WHEN DO I NEED TO HAVE A LICENCE FOR PROVIDING** 3 **FINANCIAL ADVICE?** You may need a licence by the Monetary Authority of Singapore (MAS) when you: Recommend to buy, sell or hold specific investment products; or Tailor the information to an individual’s circumstances. _**Note: Simply disclaiming ""this is not financial advice"" does not absolve you from legal liabilities.** If you are unsure, please consult the MAS Guidelines on Provision of Financial Advisory Service (FAAG17) or seek legal advice._ **WHEN DO I NEED TO HAVE A LICENCE FOR DEALING IN CAPITAL MARKETS PRODUCTS?** 4 
+
+You may need a licence by MAS when you: 
+
+Help investors submit their buy/sell orders for capital markets products to another person; or Solicit or induce investors to buy/sell capital markets products from/to another person. ## **Choose Collaborations Carefully** 
+
+**HOW DO I CHECK IF A FINANCIAL INSTITUTION IS LEGIT TO PROMOTE?** 5 Verify credibility and look into business viability. Check that it is listed in MAS’ Financial Institutions Directory. Exercise caution when asked to promote for entities flagged on MAS' Investor Alert List. from 7 Must-Knows When Sharing Financial Information Online.pdf, page 0
+
+Chunk Text : High-Level Summary
+- An infographic titled “7 Must-Knows When Sharing Financial Information Online” produced by MAS and ASAS that provides a step-by-step checklist for responsible sharing of personal finance information.
+- The layout uses numbered rounded-rectangle panels with distinct pastel colors, icons, and section headings to guide the reader through safe sharing practices, licensing considerations, collaboration checks, and where to access resources.
+
+Contextual Analysis
+- Setting: A visually designed educational poster likely used for public awareness or training in Singapore’s financial regulatory context.
+- Subjects: Financial information sharers (general audience), with emphasis on responsible sharing, licensing, advertising compliance, and collaboration.
+- Intent: To educate readers on best practices, legal/licensing considerations, and resources related to sharing financial information online.
+
+Detail Inventory
+- Text & OCR (exact excerpts as visible):
+  - Title: “7 Must-Knows When Sharing Financial Information Online”
+  - Subtitle: “Use this checklist to make a positive impact sharing personal finance and wealth education!”
+  - Section header: “Build Trust With Followers”
+  - Step 1: 
+    - Heading: “HOW DO I SHARE RESPONSIBLY?”
+    - Bullets:
+      - “Present accurate information, explain both risks and rewards clearly.”
+      - “Be mindful of your impact; don’t exploit FOMO or induce panic.”
+      - “Consider your followers' financial interests and well-being.”
+  - Step 2:
+    - Heading: “WHAT ARE SOME FINANCIAL TIPS THAT I CAN CONSIDER SHARING WITH MY FOLLOWERS?”
+    - Bullets:
+      - “Encourage informed decision making.”
+      - “Emphasise fundamentals like understanding personal risk tolerance.”
+      - “Conduct independent research; get professional advice when needed.”
+      - “Encourage budgeting and caution against overspending.”
+      - “Advise reading the fine print and T&Cs.”
+    - Visual: A speech-bubble icon with the word “TIPS.”
+  - Section header: “The Licence Lane: Where Do You Stand?”
+  - Step 3:
+    - Heading: “WHEN DO I NEED TO HAVE A LICENCE FOR PROVIDING FINANCIAL ADVICE?”
+    - Bullets:
+      - “You may need a licence by the Monetary Authority of Singapore (MAS) when you:”
+      - “Recommend to buy, sell or hold specific investment products; or”
+      - “Tailor the information to an individual’s circumstances.”
+    - Note (formatted paragraph): “Note: Simply disclaiming 'this is not financial advice' does not absolve you from legal liabilities. If you are unsure, please consult the MAS Guidelines on Provision of Financial Advisory Service (FAA-G17) or seek legal advice.”
+    - Small disclaimer text appears in bold for emphasis.
+  - Step 4:
+    - Heading: “WHEN DO I NEED TO HAVE A LICENCE FOR DEALING IN CAPITAL MARKETS PRODUCTS?”
+    - Bullets:
+      - “Help investors submit their buy/sell orders for capital markets products to another person; or”
+      - “Solicit or induce investors to buy/sell capital markets products from/to another person.”
+    - Visual: A handshake or related icons on the right.
+  - Section: “Choose Collaborations Carefully”
+  - Step 5:
+    - Heading: “HOW DO I CHECK IF A FINANCIAL INSTITUTION IS LEGIT TO PROMOTE?”
+    - Bullets:
+      - “Verify credibility and look into business viability.”
+      - “Check that it is listed in MAS’ Financial Institutions Directory.”
+      - “Exercise caution when asked to promote for entities flagged on MAS’ Investor Alert List.”
+    - Visual: A stamp-like “VERIFIED” badge.
+  - Step 6:
+    - Heading: “HOW DO I KEEP MY PROMOTIONAL CONTENT PROFESSIONAL AND COMPLIANT WITH ADVERTISING RULES?”
+    - Bullets:
+      - “Follow the Singapore Code of Advertising Practice (see QR code below).”
+      - “Check with the MAS-licensed financial institution when promoting for them.”
+    - Visual: Clipboard/check-list icon.
+  - Step 7:
+    - Heading: “SHOULD I DISCLOSE SPONSORED CONTENT?”
+    - Bullets:
+      - “Be transparent with any form of compensation. This will build trust with your followers.”
+    - Visual: ICON representing sponsorship (coins or network).
+  - Lower Section:
+    - Heading: “Access helpful resources”
+    - Five QR code panels with labels:
+      - “MAS FAA-G17”
+      - “MAS Financial Institutions Directory”
+      - “MAS Investor Alert List”
+      - “ASAS Singapore Code of Advertising Practice”
+      - “ASAS Social Media Guidelines”
+- Visual Elements:
+  - Color scheme: pastel blues, greens, teals, purples, and oranges per section, with each step in a rounded capsule.
+  - Icons: speech bubbles (tips), handshake, stamp (verified), clipboard, QR-code area, and small decorative illustrations.
+  - Typography: Bold headings, smaller bulleted text, clear readability for an educational poster.
+- Entities:
+  - Organizations: Monetary Authority of Singapore (MAS) and ASAS (Association of Stock and Advertising/ASAS logo present at top left).
+  - Audience: general online content creators sharing financial information.
+
+Relationship Mapping
+- The numbered steps (1-7) are sequential guidelines spanning trust, content tips, licensing/licensing thresholds, collaboration decisions, verification of institutions, advertising compliance, and sponsorship disclosure.
+- The visual icons align with each step to reinforce the concept (tips bubble for Step 2, handshake for Step 4, verification stamp for Step 5, etc.).
+- The bottom resource section provides quick-access QR codes corresponding to regulatory and professional guidelines, linking to external resources that support the guidance provided above.
+- The main title anchors the poster, with a subtitle clarifying purpose; each section flows logically from responsible sharing to licensing considerations, then to professional conduct and disclosure.
+
+Notes for indexing and search
+- Use keywords: financial information online, responsible sharing, licensing MAS, financial advice licensing, capital markets, advertising guidelines, disclosure of sponsored content, investor alert list, financial institutions directory, ASAS guidelines, MAS FAA-G17.
+- Include entities: MAS, ASAS, Monetary Authority of Singapore, MAS FAA-G17, MAS Financial Institutions Directory, MAS Investor Alert List.
+- Include format cues: infographic poster, step-by-step checklist, pastel rounded-corner panels, QR codes, verification stamp, tips speech bubble, capitalization emphasis.
+- Ensure OCR-extracted text preserved exactly where possible for exact-match search queries.
+
+If you’d like, I can produce a shorter 2-3 sentence high-level summary plus a machine-friendly JSON payload containing extracted headers, bullets, and section labels for direct ingestion into a RAG pipeline. from 7 Must-Knows When Sharing Financial Information Online.pdf, page 0
+
+Chunk Text : Check with the MAS-licensed financial institution when promoting for them. **SHOULD I DISCLOSE SPONSORED CONTENT?** 7 Be transparent with any form of compensation. This will build trust with your followers. Access helpful resources iMAS Financial MAS Investor ASAS Singapore Code ASAS SocialMAS FAA-G17Institutions Directory Alert List of Advertising Practice Media Guidelines
+
+--- end of page.page_number=1 --- from 7 Must-Knows When Sharing Financial Information Online.pdf, page 0
+"

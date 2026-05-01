@@ -1,0 +1,971 @@
+﻿Question,Answer,Sources
+"How does the Government define a ""Third Party"" under this framework?","**Answer**
+
+The Government defines a Third Party as a party (other than a data subject or an Agency) which:
+- (i) delivers, develops, implements, operates, provides or otherwise supplies ICT systems or services to an Agency, or
+- (ii) collects, stores or otherwise processes data for an Agency.
+
+Additional context from the framework notes that a Data subject refers to the individual or entity to which the data relates, and an Agency refers to Organs of State, Ministries, Departments and Statutory Boards.
+
+**Sources Used:** key-policies-third-party-framework.pdf, Page 2; key-policies-third-party-framework.pdf, Page 3; key-policies-third-party-framework.pdf, Page 1","
+Chunk Text : High-Level Summary
+- An infographic titled “Lifecycle of the Third-Party Management Framework” that outlines four stages in a circular flow: Evaluation and Selection, Contracting and On-boarding, Service Management, and Transition Out.
+- Central diagram labeled “Third-Party Management Framework” with circular arrows connecting the stages, plus a definitions section at the bottom.
+
+Contextual Analysis
+- Setting: A business or governance slide, likely from a presentation about risk management or procurement processes.
+- Subjects: A cycle diagram representing the lifecycle of third-party management, with four labeled stages and a central framework icon. Includes a definitions section explaining what “Third Party” means in this context.
+- Intent: To educate the reader about the steps involved in managing third-party relationships and to define key terms for policy or compliance purposes.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Title: Lifecycle of the Third-Party Management Framework
+  - Stage labels around the circle (in order, approximated by position):
+    1. 01 Evaluation and Selection
+    2. 02 Contracting and On-boarding
+    03 Service Management
+    04 Transition Out
+  - Center label: Third-Party Management Framework
+  - Section header (below diagram): DEFINITION
+  - Definition text (as visible):
+    - 1 Third Party is defined as a party (other than a data subject or an Agency) which:
+      (i) delivers, develops, implements, operates, provides or otherwise supplies ICT systems or services to an Agency, or
+      (ii) collects, stores or otherwise processes data for an Agency.
+    - a Data subject refers to the individual or entity to which the data relates.
+    - b Agency refers to Organs of State, Ministries, Departments and Statutory Boards.
+  - Footer line (small): Key Policies of the Government’s Third-Party Management Framework | 02
+- Visual Elements:
+  - Circular blue ring segments with four icons around the circle (each in a light gray circle):
+    - An icon with people and a checkmark (Evaluation and Selection)
+    - A clipboard/checklist (Contracting and On-boarding)
+    - A hand with a gear (Service Management)
+    - A two-person figure with a conversation icon (Transition Out)
+  - Color scheme: blue tones (various blues for ring segments and headers), gray icon backgrounds, white page background.
+  - Typography: clean, sans-serif; headings in blue, section headers in darker blue.
+- Entities:
+  - No specific company names or real individuals are shown.
+  - General references: Third Party, Agency, data subject, ICT systems or services, government context.
+
+Relationship Mapping
+- The four stages form a continuous loop around the central “Third-Party Management Framework,” indicating an ongoing lifecycle.
+- The arrows or circular ring connect the stages in sequence:
+  - 01 Evaluation and Selection -> 02 Contracting and On-boarding -> 03 Service Management -> 04 Transition Out -> back to 01 for continuous improvement (implied by cyclic design).
+- The central label anchors the diagram, indicating that all four stages are components of a unified framework.
+- The Definition section provides terminology to support understanding of the circular process and its governance context.
+
+Search-Friendly Keywords
+- Third-Party Management Framework
+- Lifecycle stages: Evaluation and Selection, Contracting and On-boarding, Service Management, Transition Out
+- ICT systems and services for agencies
+- Government third-party policy
+- Data processing by third parties
+- Agency, data subject definitions
+- Policy diagram, governance framework, procurement lifecycle
+
+Notes for indexing
+- This image is best described as a circular lifecycle diagram for third-party management within a governmental or agency context, including a formal definition section about terms like Third Party, Agency, and Data Subject. from key-policies-third-party-framework.pdf, page 2
+
+Chunk Text : With this in mind, the Government has introduced policies to guide Agencies in ensuring that Third Parties adequately safeguard data. These policies are organised based on the lifecycle of the relationship between the Agency and the Third Party, namely: Evaluation and Selection, Contracting and On-boarding, Service Management and Transition Out (as shown in Diagram below). When working with Third Parties, Agencies will define the data security requirements that each Third Party has to comply with based on the Government’s data security policies. Key Policies of the Government’s Third-Party Management Framework    | 
+
+01 
+
+--- end of page.page_number=2 ---
+
+## Lifecycle of the Third-Party1 Management Framework 
+
+01[  Evaluation and Selection] 
+
+Third-Party04  Transition Management        Out 02   [Contracting]Framework          and On-boarding
+
+03[  Service Management] 
+
+- 1 Third Party is defined as a party (other than a data subject[a] or an Agency[b] ) which: 
+
+- **(i)** delivers, develops, implements, operates, provides or otherwise supplies ICT systems or services to an Agency, or 
+
+**(ii)** collects, stores or otherwise processes data for an Agency. **a** Data subject refers to the individual or entity to which the data relates. **b** Agency refers to Organs of State, Ministries, Departments and Statutory Boards. Key Policies of the Government’s Third-Party Management Framework    | 
+
+02 
+
+--- end of page.page_number=3 ---
+
+## Key Policies of the Third-Party Management Framework 
+
+> Stage 1 01[    To ensure that the Government ] adequately manages its security, data **Evaluation** and project risks when engaging Third **and Selection** Parties, Agencies shall identify, assess, prioritise and mitigate the risks when outsourcing work to Third Parties during the evaluation and selection process. from key-policies-third-party-framework.pdf, page 1,2,3
+
+Chunk Text : High-Level Summary
+- A government document page titled “Introduction” presenting the overview of policies governing Third-Party Management Framework. It discusses the government’s recognition of agencies working with third parties to deliver services, safeguard data, and outline lifecycle-based policies for risk and data security.
+
+Contextual Analysis
+- Setting: A formal, government policy document page with a blue header accent and a clean, white layout.
+- Subjects: The Government, Agencies, and Third Parties involved in data handling and service delivery.
+- Intent: To inform readers about the existence, purpose, and scope of policies that guide how agencies manage third-party relationships and protect data.
+
+Detail Inventory
+- Text & OCR (as visible):
+  - Header: Introduction
+  - Body text:
+    - ""The Government recognises that Agencies work extensively with Third Parties to deliver services to citizens, carry out operational functions, and plan and analyse policies. When doing so, these Third Parties may handle large volumes of data from the Government. Hence, the high standards of data protection that the Government places on itself must also extend to these Third Parties.
+      With this in mind, the Government has introduced policies to guide Agencies in ensuring that Third Parties adequately safeguard data. These policies are organised based on the lifecycle of the relationship between the Agency and the Third Party, namely: Evaluation and Selection, Contracting and On-boarding, Service Management and Transition Out (as shown in Diagram below). When working with Third Parties, Agencies will define the data security requirements that each Third Party has to comply with based on the Government’s data security policies.""
+  - Footer: ""Key Policies of the Government’s Third-Party Management Framework | 01""
+- Visual Elements:
+  - A blue gradient header bar at the top.
+  - Clean, sans-serif typography typical of official documents.
+  - Structured paragraph blocks with standard margins.
+- Entities:
+  - Government (agency-level), Agencies, Third Parties.
+  - Topics: data protection, data security policies, lifecycle stages (Evaluation and Selection, Contracting and On-boarding, Service Management and Transition Out).
+  - Diagram reference (not visible in the image but mentioned): indicates a lifecycle diagram related to processes.
+  
+Relationship Mapping
+- The text explains a flow: Government standards apply to Third Parties that handle government data. Policies are organized by lifecycle phases (Evaluation and Selection, Contracting and On-boarding, Service Management, Transition Out). The arrows or diagram likely show progression from evaluation to onboarding to ongoing service management and eventual transition out, illustrating how data security requirements are defined and enforced for each phase.
+
+Notes for indexing and search
+- Keywords: government policy, third-party management, data protection, data security, agencies, third parties, lifecycle, evaluation, selection, contracting, onboarding, service management, transition out, diagram, framework.
+- Useful search synonyms: public sector, vendor management, data governance, external partner, contractual security requirements, regulatory compliance. from key-policies-third-party-framework.pdf, page 1
+"
+"What is a ""data subject""?","**Answer**
+
+- A data subject is an individual who is the subject of personal data. The chunks portray a data subject as the person to whom personal data relates and who may make requests or be involved in processing and consent contexts within the policy framework.
+
+- In the provided documents, the term is used in contexts related to personal data handling, consent, and rights, where the data subject is the person whose data is being collected, disclosed, or processed by agencies.
+
+**Sources Used:** Government Personal Data Protection Policies, 14; Government Personal Data Protection Policies (Jul 2021), 24","
+Chunk Text : High-Level Summary
+- A page from a government document detailing provisions related to Preservation of Copies of Personal Data under a data protection policy. It includes article numbers (43-46), section headers, and a highlighted subsection title.
+
+Contextual Analysis
+- Setting: A formal, legal/policy document page with a clean layout, numbered articles, and a blue gradient header for a section.
+- Subjects: Provisions and obligations around personal data corrections, notifications, and preservation copies.
+- Intent: To communicate statutory requirements and agency responsibilities for handling personal data, corrections, notifications, and preservation.
+
+Detail Inventory
+- Text & OCR (verbatim excerpts as visible):
+  - Numbers and article references:
+    - 43
+    - 44
+    - 45
+    - 46
+  - 43: “In relation to a request made under paragraph 38, if no correction is made, the agency shall annotate the personal data with the correction that was requested but not made.”
+  - 44: “When an agency is notified of a correction of personal data by another agency or any other organisation, the receiving agency shall correct the personal data in the agency’s possession or under the agency’s control unless the agency is satisfied on reasonable grounds that the correction should not be made.”
+  - Section header: “Preservation of Copies of Personal Data” (with a blue gradient bar).
+  - 45: Subsection start “Where –” followed by (a) and (b) clauses:
+    - (a) “an individual, on or after 1 July 2021, makes a request under paragraph 27(a) to an agency to provide personal data about the individual that is in the possession or under the control of the agency; and”
+    - (b) “the agency rejects the request to provide that personal data,”
+    - “the agency shall preserve, for not less than 30 days from the agency’s rejection, a copy of the personal data concerned.”
+  - 46: “The agency shall ensure that the copy of the personal data it preserves for the purposes of paragraph 45 is a complete and accurate copy of the personal data concerned.”
+  - Footer: “Government Personal Data Protection Policies | 24” (page number 24).
+- Visual Elements:
+  - Layout with two-column-like article markers on left (43, 44, 45, 46) in blue.
+  - A blue gradient section header for “Preservation of Copies of Personal Data.”
+  - Body text in standard black, multi-line paragraphs.
+  - Page footer with small grey text showing document title and page number.
+- Entities:
+  - Agencies (government agencies)
+  - Individuals (data subjects)
+  - Other organisations
+  - Personal data
+
+Relationship Mapping
+- 43 explains the consequence when a correction request is not implemented (annotation of the requested correction).
+- 44 describes synchronized correction obligations when data is corrected by another entity, unless valid reason to refrain.
+- 45 introduces the condition under which an agency must preserve a copy of personal data after a request by the individual, with a minimum 30-day preservation window from rejection.
+- 46 establishes the requirement that the preserved copy must be complete and accurate.
+- The section header highlights the overarching theme of preserving data copies, tying 45 and 46 together, while 43 and 44 relate to correction processes that influence what is preserved and annotated.
+
+Search-Friendly Keywords
+- government policy, personal data protection, data correction, data preservation, preservation of copies, 30-day preservation, data subject request, agency responsibility, data accuracy, government policies, data control, annotation of corrections. from government-personal-data-protection-policies-jul21.pdf, page 23
+
+Chunk Text : High-Level Summary
+- A page from a government document outlining data security policies related to email and file integrity. It lists specific agency requirements (numbers 55-61) with section headers and bullet points.
+
+Contextual Analysis
+- Setting: A formal document or report page, likely from a government publication on data security policies.
+- Subjects: Policy items for agencies regarding data file integrity, secure channels, and protecting sensitive data when distributing via email.
+- Intent: To communicate mandatory or recommended security practices and procedures to agencies and users.
+
+Detail Inventory
+- Text & OCR (exact wording as appears):
+  - Section header line in blue: Data file integrity verification
+  - 55 Agencies should adopt data file integrity verification measures to ensure the integrity of a file containing sensitive data, when the file is being transferred between users.
+  - 56 Agencies should verify the file integrity using cryptographic hash standards.
+  - Section header line in blue: Distribute files through approved secure channels
+  - 57 Agencies should distribute files containing data via proper channels that are safeguarded by required security measures commensurate with the security classification of the data.
+  - 58 Agencies should ensure that the distribution channels are encrypted.
+  - Section header line in blue: Protect sensitive data when distributing via email
+  - 59 Agencies should ensure that sensitive data is protected from unintended disclosure when sending via email.
+  - 60 Agencies should:
+    - a) Ensure that emails containing sensitive data are addressed to the correct recipients;
+    - b) Use a mailing list for regular mass communication to specific groups; and
+    - c) Send emails via Blind Carbon Copy (BCC) when mass emailing parties outside of the Whole-of-Government.
+  - 61 Agencies should ensure users:
+    - a) Password-protect and encrypt files containing sensitive data; and
+    - b) Perform data file integrity verification for files where integrity is critical.
+- Visual Elements:
+  - Clean, two-column-ish document layout with light blue section headers.
+  - Numbers 55-61 listed on the left, each followed by explanatory text.
+  - Page footer shows “Government Data Security Policies” and page number 16.
+  - Overall design is minimal, with blue accents and standard serif/sans-serif typography.
+- Entities:
+  - Agencies (government agencies)
+  - No specific agency names or individuals are visible.
+  - Whole-of-Government concept referenced in item 60c.
+  - No brands or logos clearly identifiable beyond generic government styling.
+
+Relationship Mapping
+- The blue header lines introduce topical sections:
+  - “Data file integrity verification” leads to items 55-56 about ensuring and verifying integrity of data during transfer.
+  - “Distribute files through approved secure channels” leads to items 57-58 about secure channels and encryption.
+  - “Protect sensitive data when distributing via email” leads to items 59-61 about email handling, recipient targeting, distribution lists, BCC usage, and user responsibilities.
+- Each numbered item provides a policy directive. Sub-bullets under item 60a-b describe concrete operational steps for mass emailing.
+- The sections collectively define a policy framework for secure data handling, transfer, and email distribution within government contexts.
+- The footer indicates this is part of a larger document series on Government Data Security Policies. from government-data-security-policies.pdf, page 15
+
+Chunk Text : High-Level Summary
+- This image is a page from a government document outlining sections 13–15 of a policy on personal data protection. It appears to be part of a larger booklet, with page numbering and a footer indicating “Government Personal Data Protection Policies | 14.”
+
+Contextual Analysis
+- Setting: A formal, printed policy document or manual, likely a government publication.
+- Subjects: The text of sections 13–15, dealing with conditions under which personal data may be disclosed to or used by agencies, and related consents and conditions.
+- Intent: To specify legal criteria for sharing personal data between entities (A, B, C, etc.), timeframes, and consents required for processing or transferring data.
+
+Detail Inventory
+- Text & OCR (as visible):
+  - Page numbers and headers:
+    - Left margin: large blue page numbers 13, 14, 15 for sections.
+    - Footer: “Government Personal Data Protection Policies | 14” (for the page shown; indicates this is page 14 of the document).
+  - Section 13 (partial visible text):
+    - “Where an agency collects personal data disclosed to it by B under paragraph 12(c), both paragraphs 12(b) and (c) apply to the agency as if the personal data were disclosed by A to the agency under paragraph 12(a).”
+  - Section 14 (substantive content):
+    - “Paragraphs 12 and 13 apply to personal data provided before 1 July 2021 by an individual to an agency with a view to the individual entering into a contract with the agency – 
+      (a) on or after 1 July 2021; or
+      (b) which contract was entered into before 1 July 2021 and remains in force on that date (i.e. 1 July 2021),
+      as if paragraphs 12 and 13 – 
+      (c) were in force when the personal data was so provided; and
+      (d) had continued in force until 1 July 2021.”
+  - Section 15 (partial content):
+    - “Without limiting paragraph 11 and subject to paragraph 18, an individual (P) who enters into a contract with an agency (A) and provides personal data to A pursuant or in relation to that contract is deemed to consent to the following:
+      (a) the disclosure of that personal data by A to another agency or NGE (such agency or NGE referred to as ‘B’), where the disclosure is reasonably necessary –
+        (i) for the performance of the contract between P and A; or
+        (ii) for the conclusion or performance of a contract between A and B which is entered into at P’s request, or which a reasonable person would consider to be in P’s interest;
+      (b) the collection and use of that personal data by B, where the collection and use are reasonably necessary for any purpose mentioned in paragraph (a);
+      (c) the disclosure of that personal data by B to another agency or NGE, where the disclosure is reasonably necessary for any purpose mentioned in paragraph (a).”
+- Visual Elements:
+  - Clean, two-column-like layout with section numbers in blue (13, 14, 15) on the left.
+  - Dense legal text with subsections labeled (a), (b), (c), etc.
+  - A light blue gradient header area at the top.
+- Entities:
+  - Agencies labeled as A, B, C, and possibly NGE.
+  - Individual referred to as P (data subject).
+  - References to paragraphs 11, 12, 12(a)-(c), 13, 18, etc.
+  - Document footer: “Government Personal Data Protection Policies” and page number 14.
+
+Relationship Mapping
+- How elements relate:
+  - Section 13 describes how certain paragraph conditions apply when data was disclosed under paragraph 12(c), effectively extending the applicability of 12(b) & 12(c) to that agency as if disclosed under 12(a).
+  - Section 14 clarifies transitional rules for data provided before 1 July 2021 and how paragraphs 12 and 13 apply depending on timing of contracts (before or after 1 July 2021) and whether contracts remain in force.
+  - Section 15 establishes deemed consent for an individual engaging in a contract with agency A, allowing disclosure to another agency B or NGE when necessary for contract performance, contract between A and B, or for purposes stated in (a), and governs data collection/use by B and downstream disclosures to other agencies per the same purposes.
+  - The consent and disclosure provisions create a chain of data flow (P -> A -> B/NGE) with conditions for necessity and purpose alignment.
+
+Search-Friendly Keywords
+- Government, Personal Data Protection Policies
+- Data disclosure between agencies, Section 12, 13, 14, 15
+- Contract with agency, deemed consent, data subject P
+- Data transfer to A, B, NGE, privacy policy, transitional provisions
+- Pre- and post-July 1, 2021 data sharing rules
+- Paragraph 11, 18 references
+
+Notes
+- The text is partial in places due to cropping, but the visible content provides the main sections 13–15 and their substantive gist.
+- The page appears to be a formal legal/ regulatory document intended for official reference. from government-personal-data-protection-policies-jul21.pdf, page 13
+"
+"What counts as an ""Agency""?","**Answer:**
+
+- Based on the provided chunks, an “Agency” is referenced in the context of government or public sector bodies such as organs of state, ministries, departments, and statutory boards. This is implied by the definitions in Chunk 1 (Lifecycle Diagram for the Government’s Third-Party Management Framework) which defines an “Agency” and its relationships to data subjects and “Third Party,” and explicitly states:
+  - “Agency refers to Organs of State, Ministries, Departments and Statutory Boards.”
+- The same concept appears in the Government Personal Data Protection Policies materials, where activities of agencies are described in relation to handling personal data in employment or government contexts, reinforcing that “Agency” in this policy framework means a government entity within the public sector.
+
+If you need a direct quotation or page reference, the documents use the term within:
+- Government Personal Data Protection Policies (Annex A) | Page references include 31, 35, 36, 37 for definitions and context, including “Agency” as described above, and
+- Government’s Third-Party Management Framework (Document on Third-Party Lifecycle) defining “Agency” within its governance context.
+
+Sources Used:
+- government-personal-data-protection-policies-jul21.pdf, Page 31; Page 35-37
+- key-policies-third-party-framework.pdf, Page 2
+
+Notes:
+- If you require an exact sentence defining “Agency,” I can extract the precise wording from the provided chunks. The current answer synthesizes the defined meaning from the context sections.","
+Chunk Text : In this Part — 
+
+“ **applicable individual** ”, in relation to an agency or NGE, includes a contractor, a customer, a director, an employee, an officer or a shareholder (where applicable) of the agency or NGE; 
+
+## “ **business asset transaction** ” — 
+
+- (a) means the purchase, sale, lease, merger or amalgamation or any other acquisition, disposal or financing of — 
+
+   - (i) an organisation or a portion of an organisation; 
+
+   - (ii) an interest in an organisation; or 
+
+   - (iii) any of the business or assets of an organisation, other than any personal data to be disclosed under paragraph 1(1) or 2(1), as the case may be; and 
+
+Government Personal Data Protection Policies _(Annex A)_ | **35** 
+
+--- end of page.page_number=35 ---
+
+- (b) includes — 
+
+   - (i) the amalgamation of a corporation with one or more related corporations; and 
+
+   - (ii) the transfer or disposal of any of the business or assets of a corporation to a related corporation; 
+
+**“business trust”** has the meaning given by section 2 of the Business Trusts Act (Cap. 31A); 
+
+**“corporation”** and **“related corporation”** have the meanings given by section 4(1) of the Companies Act (Cap. 50); 
+
+## **“interest”** means — 
+
+- (a) in relation to a corporation — a share in that corporation; 
+
+- (b) in relation to an entity other than a corporation — any right or interest (whether legal or equitable) in that entity, by whatever name called; 
+
+- (c) in relation to a business trust — a unit in that business trust; and 
+
+- (d) in relation to a trust other than a business trust — any right or interest (whether legal or equitable) in that trust, by whatever name called. Government Personal Data Protection Policies _(Annex A)_ | **36** 
+
+--- end of page.page_number=36 ---
+
+## Annex B -  Additional Bases for Collection, Use and Disclosure of Personal Data Without Consent 
+
+PART 1: COLLECTION AND/OR USE OFPERSONAL DATA
+
+## **Division 1 — Research** 
+
+01 
+
+The use of personal data about an individual for a research purpose (including historical or statistical research), if — 
+
+- (a) the research purpose cannot reasonably be accomplished unless the personal data is used in an individually identifiable form; 
+
+- (b) there is a clear public interest to using the personal data for the research purpose; 
+
+- (c) the results of the research will not be used to make any decision that affects the individual; and 
+
+- (d) in the event that the results of the research are published, the agency publishes the results in a form that does not identify the individual. ## **Division 2 — Public interest** 
+
+01 
+
+The collection or use of personal data about an individual who is a current or former student of an educational institution by an agency for the purposes of policy formulation or review. Government Personal Data Protection Policies _(Annex B)_ | **37** 
+
+--- end of page.page_number=37 ---
+
+02 
+
+The collection or use of personal data about an individual who is a current or former patient of any of the following by a public agency for the purposes of policy formulation or review: 
+
+- (a) a healthcare institution licensed under the Private Hospitals and Medical Clinics Act (Cap. 248); 
+
+- (b) a licensee under the Healthcare Services Act 2020 (Act 3 of 2020); 
+
+- (c) a prescribed healthcare body. from government-personal-data-protection-policies-jul21.pdf, page 34,35,36,37
+
+Chunk Text : High-Level Summary
+- An infographic titled “Lifecycle of the Third-Party Management Framework” that outlines four stages in a circular flow: Evaluation and Selection, Contracting and On-boarding, Service Management, and Transition Out.
+- Central diagram labeled “Third-Party Management Framework” with circular arrows connecting the stages, plus a definitions section at the bottom.
+
+Contextual Analysis
+- Setting: A business or governance slide, likely from a presentation about risk management or procurement processes.
+- Subjects: A cycle diagram representing the lifecycle of third-party management, with four labeled stages and a central framework icon. Includes a definitions section explaining what “Third Party” means in this context.
+- Intent: To educate the reader about the steps involved in managing third-party relationships and to define key terms for policy or compliance purposes.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Title: Lifecycle of the Third-Party Management Framework
+  - Stage labels around the circle (in order, approximated by position):
+    1. 01 Evaluation and Selection
+    2. 02 Contracting and On-boarding
+    03 Service Management
+    04 Transition Out
+  - Center label: Third-Party Management Framework
+  - Section header (below diagram): DEFINITION
+  - Definition text (as visible):
+    - 1 Third Party is defined as a party (other than a data subject or an Agency) which:
+      (i) delivers, develops, implements, operates, provides or otherwise supplies ICT systems or services to an Agency, or
+      (ii) collects, stores or otherwise processes data for an Agency.
+    - a Data subject refers to the individual or entity to which the data relates.
+    - b Agency refers to Organs of State, Ministries, Departments and Statutory Boards.
+  - Footer line (small): Key Policies of the Government’s Third-Party Management Framework | 02
+- Visual Elements:
+  - Circular blue ring segments with four icons around the circle (each in a light gray circle):
+    - An icon with people and a checkmark (Evaluation and Selection)
+    - A clipboard/checklist (Contracting and On-boarding)
+    - A hand with a gear (Service Management)
+    - A two-person figure with a conversation icon (Transition Out)
+  - Color scheme: blue tones (various blues for ring segments and headers), gray icon backgrounds, white page background.
+  - Typography: clean, sans-serif; headings in blue, section headers in darker blue.
+- Entities:
+  - No specific company names or real individuals are shown.
+  - General references: Third Party, Agency, data subject, ICT systems or services, government context.
+
+Relationship Mapping
+- The four stages form a continuous loop around the central “Third-Party Management Framework,” indicating an ongoing lifecycle.
+- The arrows or circular ring connect the stages in sequence:
+  - 01 Evaluation and Selection -> 02 Contracting and On-boarding -> 03 Service Management -> 04 Transition Out -> back to 01 for continuous improvement (implied by cyclic design).
+- The central label anchors the diagram, indicating that all four stages are components of a unified framework.
+- The Definition section provides terminology to support understanding of the circular process and its governance context.
+
+Search-Friendly Keywords
+- Third-Party Management Framework
+- Lifecycle stages: Evaluation and Selection, Contracting and On-boarding, Service Management, Transition Out
+- ICT systems and services for agencies
+- Government third-party policy
+- Data processing by third parties
+- Agency, data subject definitions
+- Policy diagram, governance framework, procurement lifecycle
+
+Notes for indexing
+- This image is best described as a circular lifecycle diagram for third-party management within a governmental or agency context, including a formal definition section about terms like Third Party, Agency, and Data Subject. from key-policies-third-party-framework.pdf, page 2
+
+Chunk Text : High-Level Summary
+- A page from a government document listing sections 09, 10, and 11 related to personal data protection. It appears to be part of a larger policy manual (Annex A), with text blocks describing personal data handling by agencies.
+
+Contextual Analysis
+- Setting: Printed or digital page of a formal government policy document on privacy and personal data protection.
+- Subjects: The document content focuses on definitions and conditions under which personal data about an individual is provided, collected, or used by agencies.
+- Intent: To specify procedural and legal definitions for handling personal data within government agencies, including when data is provided by or to others, and when it is included in documents or used in employment contexts.
+
+Detail Inventory
+- Text & OCR (as visible):
+  - Section 09:
+    - ""The personal data about an individual —""
+    - ""(a) is provided to the agency by another individual to enable the agency to provide a service for the personal or domestic purposes of that other individual; and""
+    - ""(b) is collected, used or disclosed (as the case may be) by the agency solely for the purpose in sub-paragraph (a).""
+  - Section 10:
+    - ""The personal data about an individual —""
+    - ""(a) is included in a document produced in the course, and for the purposes, of the individual's employment, business or profession; and""
+    - ""(b) is collected, used or disclosed (as the case may be) for purposes consistent with the purpose for which the document was produced.""
+  - Section 11:
+    - ""The personal data about an individual is collected, used or disclosed (as the case may be) by the agency, and the collection, use or disclosure (as the case may be) of the personal data is reasonable for the purpose of or in relation to the agency —""
+    - ""(a) entering into an employment relationship with the individual or appointing the individual to any office; or""
+    - ""(b) managing or terminating the employment relationship with or appointment of the individual.""
+- Visual Elements:
+  - Minimalistic, sans-serif typography typical of government manuals.
+  - Left margin shows section numbers ""09"", ""10"", ""11"" vertically aligned.
+  - Top has a blue gradient visual header band.
+  - Page footer shows ""Government Personal Data Protection Policies (Annex A) | 31"" with page number styling.
+  - Text is structured as bullet-like subpoints (a), (b).
+- Entities:
+  - No specific people named.
+  - No brands; generic government agency and data protection policy.
+
+Relationship Mapping
+- The sections form a sequence of conditions governing handling of personal data:
+  - Section 09 describes data provided by another individual to enable service provision and the agency’s use solely for that purpose.
+  - Section 10 covers data included in documents produced in the course of employment and the alignment of data usage with the document’s purpose.
+  - Section 11 addresses general collection, use, or disclosure in the context of agency purposes, particularly relating to employment relationships and terminations.
+- The arrow-like relationships are implicit: data flows (provided by another, included in documents, and general collection) are tied to the intended purpose, ensuring actions are reasonable and purposive within agency operations. from government-personal-data-protection-policies-jul21.pdf, page 30
+"
+What are the stages of the Third-Party Management Framework lifecycle?,"**Stages of the Third-Party Management Framework lifecycle**
+
+- Evaluation and Selection
+- Contracting and On-boarding
+- Service Management
+- Transition Out
+
+Sources Used: key-policies-third-party-framework.pdf, page 2; key-policies-third-party-framework.pdf, page 3","
+Chunk Text : High-Level Summary
+- An infographic titled “Lifecycle of the Third-Party Management Framework” that outlines four stages in a circular flow: Evaluation and Selection, Contracting and On-boarding, Service Management, and Transition Out.
+- Central diagram labeled “Third-Party Management Framework” with circular arrows connecting the stages, plus a definitions section at the bottom.
+
+Contextual Analysis
+- Setting: A business or governance slide, likely from a presentation about risk management or procurement processes.
+- Subjects: A cycle diagram representing the lifecycle of third-party management, with four labeled stages and a central framework icon. Includes a definitions section explaining what “Third Party” means in this context.
+- Intent: To educate the reader about the steps involved in managing third-party relationships and to define key terms for policy or compliance purposes.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Title: Lifecycle of the Third-Party Management Framework
+  - Stage labels around the circle (in order, approximated by position):
+    1. 01 Evaluation and Selection
+    2. 02 Contracting and On-boarding
+    03 Service Management
+    04 Transition Out
+  - Center label: Third-Party Management Framework
+  - Section header (below diagram): DEFINITION
+  - Definition text (as visible):
+    - 1 Third Party is defined as a party (other than a data subject or an Agency) which:
+      (i) delivers, develops, implements, operates, provides or otherwise supplies ICT systems or services to an Agency, or
+      (ii) collects, stores or otherwise processes data for an Agency.
+    - a Data subject refers to the individual or entity to which the data relates.
+    - b Agency refers to Organs of State, Ministries, Departments and Statutory Boards.
+  - Footer line (small): Key Policies of the Government’s Third-Party Management Framework | 02
+- Visual Elements:
+  - Circular blue ring segments with four icons around the circle (each in a light gray circle):
+    - An icon with people and a checkmark (Evaluation and Selection)
+    - A clipboard/checklist (Contracting and On-boarding)
+    - A hand with a gear (Service Management)
+    - A two-person figure with a conversation icon (Transition Out)
+  - Color scheme: blue tones (various blues for ring segments and headers), gray icon backgrounds, white page background.
+  - Typography: clean, sans-serif; headings in blue, section headers in darker blue.
+- Entities:
+  - No specific company names or real individuals are shown.
+  - General references: Third Party, Agency, data subject, ICT systems or services, government context.
+
+Relationship Mapping
+- The four stages form a continuous loop around the central “Third-Party Management Framework,” indicating an ongoing lifecycle.
+- The arrows or circular ring connect the stages in sequence:
+  - 01 Evaluation and Selection -> 02 Contracting and On-boarding -> 03 Service Management -> 04 Transition Out -> back to 01 for continuous improvement (implied by cyclic design).
+- The central label anchors the diagram, indicating that all four stages are components of a unified framework.
+- The Definition section provides terminology to support understanding of the circular process and its governance context.
+
+Search-Friendly Keywords
+- Third-Party Management Framework
+- Lifecycle stages: Evaluation and Selection, Contracting and On-boarding, Service Management, Transition Out
+- ICT systems and services for agencies
+- Government third-party policy
+- Data processing by third parties
+- Agency, data subject definitions
+- Policy diagram, governance framework, procurement lifecycle
+
+Notes for indexing
+- This image is best described as a circular lifecycle diagram for third-party management within a governmental or agency context, including a formal definition section about terms like Third Party, Agency, and Data Subject. from key-policies-third-party-framework.pdf, page 2
+
+Chunk Text : 
+    Text before image : 01 Evaluation and Selection
+    Image description : High-Level Summary
+- A circular infographic titled “Third-Party Management Framework” illustrating a continuous four-step process for third-party management. Each step is represented by an icon and a short label around a central circle.
+
+Contextual Analysis
+- Setting: A corporate or enterprise diagram used in policy or vendor management presentations.
+- Subjects: Four icons representing key components, arranged around a circular flow with connecting segments. The central text indicates the framework theme.
+- Intent: To convey the ongoing cycle of third-party management activities, emphasizing end-to-end lifecycle stages.
+
+Detail Inventory
+- Text & OCR (visible text exactly as appears):
+  - Third-Party Management Framework (center)
+  - 02 Contracting and On-boarding (right side)
+  - 03 Service Management (bottom)
+  - Transition Out (left side)
+- Visual Elements:
+  - A circular ring with alternating blue shades forming a cycle.
+  - Four gray circular icons positioned at approximately top, right, bottom, and left:
+    - Top icon: three people and a checkmark (approval or evaluation).
+    - Right icon: a checklist on a clipboard with a pen.
+    - Bottom icon: a handshake with a gear (service or operations).
+    - Left icon: two people with arrows indicating communication or transition.
+  - Color palette: blues and grays, with gradient blue segments in the cycle.
+- Entities:
+  - No specific people names or brands are visible.
+  - General business concepts: evaluation/approval, contracting/on-boarding, service management, and transition out.
+
+Relationship Mapping
+- The circular flow connects four stages indicating a looped process:
+  - The right-side stage (02 Contracting and On-boarding) leads into the circular blue arc toward the top-stage icon (approval/evaluation).
+  - The top stage appears to feed into the bottom stage (Service Management) via the circular path.
+  - The left stage (Transition Out) continues the cycle back toward the top, completing the loop.
+  - The central label “Third-Party Management Framework” anchors the diagram, with each peripheral icon representing a lifecycle component: evaluation/approval, contracting/on-boarding, service management, and transition out.
+
+Notes for indexing
+- Useful search keywords: third-party management, vendor risk, supplier onboarding, contracting, onboarding, service management, transition out, circular workflow, lifecycle diagram, checklist, approval, handover.
+- If embedding in a vector store, include tags for: framework, governance, vendor management lifecycle, onboarding, offboarding, operations, procurement, risk management.
+    Image caption : No image caption
+    Text after image : Out
+     from key-policies-third-party-framework.pdf, page 3
+
+Chunk Text : High-Level Summary
+- A page from a document outlining key policies of the Government’s Third-Party Management Framework. It presents a three-stage process focusing on evaluation and selection, contracting and onboarding, and onboarding preparation.
+
+Contextual Analysis
+- Setting: A formal, corporate-style page from a policy or governance booklet.
+- Subjects: The Third-Party Management Framework, specifically Stage 1 (Evaluation and Selection) and Stage 2 (Contracting and On-boarding), with mention of Stage 3 content in the text.
+- Intent: To communicate the sequential policy steps and responsibilities for government agencies when engaging third parties.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Title: Key Policies of the Third-Party Management Framework
+  - Stage 1
+    - Evaluation and Selection
+    - 01 To ensure that the Government adequately manages its security, data and project risks when engaging Third Parties, Agencies shall identify, assess, prioritise and mitigate the risks when outsourcing work to Third Parties during the evaluation and selection process.
+  - Stage 2
+    - Contracting and On-boarding
+    - 02 To ensure that the security, data and project risks involved in assigning work to Third Parties are addressed, Agencies shall establish contracts or other equivalent instruments with their Third Parties to govern how the Third Parties should perform the assigned work in a manner that addresses all identified risks involved.
+  - Stage 3 (visible in text)
+    - 03 To ensure that the appointed Third Parties (and their personnel) are adequately assessed, cleared and prepared for the assigned work, Agencies shall implement an on-boarding process which includes briefings on applicable data security requirements, security clearance and obtaining undertakings from Third-Party personnel, where necessary.
+  - Footer: Key Policies of the Government’s Third-Party Management Framework | 03
+- Visual Elements:
+  - Vertical blue gradient bar outlining Stage 1 and Stage 2 sections.
+  - Stage titles in bold blue text.
+  - Stage numbers in light gray (01, 02, 03) with body text in smaller gray font.
+  - Two main sections aligned left (stage labels) with corresponding descriptive paragraphs to the right.
+  - A clean, minimalist, corporate layout with ample white space.
+- Entities:
+  - Government (implied)
+  - Third Parties
+  - Agencies
+  - Stage 1: Evaluation and Selection
+  - Stage 2: Contracting and On-boarding
+  - Stage 3: On-boarding preparation (personnel, data security, clearances)
+- Colors and Style:
+  - Blue accent colors (various shades) and light gray text.
+  - Sans-serif typography, structured columns, and numbered steps.
+
+Relationship Mapping
+- The design uses a left-aligned stage label with a vertical blue bar as a visual cue, connecting to the corresponding descriptive text on the right. The numbered steps (01, 02, 03) indicate a sequential process. Stage 1 focuses on evaluating risks and selecting third parties; Stage 2 centers on contracting and onboarding to manage risks; Stage 3 (as described) emphasizes assessing and preparing third-party personnel and onboarding with security briefings and clearances. The footer reiterates the policy title and page number, indicating this is a multi-page document.
+
+Search-Friendly Keywords
+- Third-Party Management Framework, government policy, evaluation and selection, contracting and onboarding, on-boarding, risk management, data security, project risks, third-party contracts, security clearance, policy stages, governance, agencies. from key-policies-third-party-framework.pdf, page 3
+"
+What must agencies do before engaging a Third Party?,"**Answer:**
+- Agencies must identify, assess, prioritise, and mitigate the risks when outsourcing work to Third Parties during the evaluation and selection process. They should set data security requirements and ensure appropriate risk management before engaging a Third Party. This is described as part of Stage 1: Evaluation and Selection in the Government’s Third-Party Management Framework.
+
+**Sources Used:** key-policies-third-party-framework.pdf, Page 3","
+Chunk Text : 05[    Agencies shall perform regular ] checks or audits on their Third Parties throughout the period of engagement to ensure that the Third Parties carry out their assigned work in compliance with contractual obligations and applicable public sector policies and standards. More stringent requirements will be imposed on Third Parties dealing with systems and services of a higher risk. |Stage 4**Transition Out**|06To ensure business continuity and theproper transfer and disposal of dataand assets back to Agencies upon|
+|---|---|
+||the exit of the Third Parties, Agencies|
+||shall put in place and maintain|
+||up-to-date exit management plans|
+||for all Third Parties’ work and services,|
+||which shall include the conduct of|
+||exit checks or audits before the Third|
+||Parties discontinue their services.|
+
+Key Policies of the Government’s Third-Party Management Framework    | 
+
+04 
+
+--- end of page.page_number=5 --- from key-policies-third-party-framework.pdf, page 4
+
+Chunk Text : With this in mind, the Government has introduced policies to guide Agencies in ensuring that Third Parties adequately safeguard data. These policies are organised based on the lifecycle of the relationship between the Agency and the Third Party, namely: Evaluation and Selection, Contracting and On-boarding, Service Management and Transition Out (as shown in Diagram below). When working with Third Parties, Agencies will define the data security requirements that each Third Party has to comply with based on the Government’s data security policies. Key Policies of the Government’s Third-Party Management Framework    | 
+
+01 
+
+--- end of page.page_number=2 ---
+
+## Lifecycle of the Third-Party1 Management Framework 
+
+01[  Evaluation and Selection] 
+
+Third-Party04  Transition Management        Out 02   [Contracting]Framework          and On-boarding
+
+03[  Service Management] 
+
+- 1 Third Party is defined as a party (other than a data subject[a] or an Agency[b] ) which: 
+
+- **(i)** delivers, develops, implements, operates, provides or otherwise supplies ICT systems or services to an Agency, or 
+
+**(ii)** collects, stores or otherwise processes data for an Agency. **a** Data subject refers to the individual or entity to which the data relates. **b** Agency refers to Organs of State, Ministries, Departments and Statutory Boards. Key Policies of the Government’s Third-Party Management Framework    | 
+
+02 
+
+--- end of page.page_number=3 ---
+
+## Key Policies of the Third-Party Management Framework 
+
+> Stage 1 01[    To ensure that the Government ] adequately manages its security, data **Evaluation** and project risks when engaging Third **and Selection** Parties, Agencies shall identify, assess, prioritise and mitigate the risks when outsourcing work to Third Parties during the evaluation and selection process. from key-policies-third-party-framework.pdf, page 1,2,3
+
+Chunk Text : High-Level Summary
+- A page from a document outlining key policies of the Government’s Third-Party Management Framework. It presents a three-stage process focusing on evaluation and selection, contracting and onboarding, and onboarding preparation.
+
+Contextual Analysis
+- Setting: A formal, corporate-style page from a policy or governance booklet.
+- Subjects: The Third-Party Management Framework, specifically Stage 1 (Evaluation and Selection) and Stage 2 (Contracting and On-boarding), with mention of Stage 3 content in the text.
+- Intent: To communicate the sequential policy steps and responsibilities for government agencies when engaging third parties.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Title: Key Policies of the Third-Party Management Framework
+  - Stage 1
+    - Evaluation and Selection
+    - 01 To ensure that the Government adequately manages its security, data and project risks when engaging Third Parties, Agencies shall identify, assess, prioritise and mitigate the risks when outsourcing work to Third Parties during the evaluation and selection process.
+  - Stage 2
+    - Contracting and On-boarding
+    - 02 To ensure that the security, data and project risks involved in assigning work to Third Parties are addressed, Agencies shall establish contracts or other equivalent instruments with their Third Parties to govern how the Third Parties should perform the assigned work in a manner that addresses all identified risks involved.
+  - Stage 3 (visible in text)
+    - 03 To ensure that the appointed Third Parties (and their personnel) are adequately assessed, cleared and prepared for the assigned work, Agencies shall implement an on-boarding process which includes briefings on applicable data security requirements, security clearance and obtaining undertakings from Third-Party personnel, where necessary.
+  - Footer: Key Policies of the Government’s Third-Party Management Framework | 03
+- Visual Elements:
+  - Vertical blue gradient bar outlining Stage 1 and Stage 2 sections.
+  - Stage titles in bold blue text.
+  - Stage numbers in light gray (01, 02, 03) with body text in smaller gray font.
+  - Two main sections aligned left (stage labels) with corresponding descriptive paragraphs to the right.
+  - A clean, minimalist, corporate layout with ample white space.
+- Entities:
+  - Government (implied)
+  - Third Parties
+  - Agencies
+  - Stage 1: Evaluation and Selection
+  - Stage 2: Contracting and On-boarding
+  - Stage 3: On-boarding preparation (personnel, data security, clearances)
+- Colors and Style:
+  - Blue accent colors (various shades) and light gray text.
+  - Sans-serif typography, structured columns, and numbered steps.
+
+Relationship Mapping
+- The design uses a left-aligned stage label with a vertical blue bar as a visual cue, connecting to the corresponding descriptive text on the right. The numbered steps (01, 02, 03) indicate a sequential process. Stage 1 focuses on evaluating risks and selecting third parties; Stage 2 centers on contracting and onboarding to manage risks; Stage 3 (as described) emphasizes assessing and preparing third-party personnel and onboarding with security briefings and clearances. The footer reiterates the policy title and page number, indicating this is a multi-page document.
+
+Search-Friendly Keywords
+- Third-Party Management Framework, government policy, evaluation and selection, contracting and onboarding, on-boarding, risk management, data security, project risks, third-party contracts, security clearance, policy stages, governance, agencies. from key-policies-third-party-framework.pdf, page 3
+"
+How does the Government ensure Third-Party personnel are prepared before work begins?,"**Answer:**
+
+The Government requires that Third-Party personnel be adequately assessed, cleared, and prepared for the assigned work before starting. This is achieved through an on-boarding process that includes briefings on applicable data security requirements, security clearance where necessary, and obtaining undertakings from the Third-Party personnel.
+
+- This guidance is described under Stage 3: On-boarding (and related onboarding preparation) in the Government’s Third-Party Management Framework.
+
+**Sources Used:** key-policies-third-party-framework.pdf, page 4; key-policies-third-party-framework.pdf, page 5","
+Chunk Text : Stage 2 02[    To ensure that the security, data and ] project risks involved in assigning work **Contracting** to Third Parties are addressed, **and** Agencies shall establish contracts or other equivalent instruments with their **On-boarding** Third Parties to govern how the Third Parties should perform the assigned work in a manner that addresses all identified risks involved. 03[    To ensure that the appointed Third ] Parties (and their personnel) are adequately assessed, cleared and prepared for the assigned work, Agencies shall implement an on-boarding process which includes briefings on applicable data security requirements, security clearance and obtaining undertakings from Third-Party personnel, where necessary. Key Policies of the Government’s Third-Party Management Framework    | 
+
+03 
+
+--- end of page.page_number=4 ---
+
+> Stage 3 04[   Agencies shall regularly monitor and ] review the Third Parties’ performance **Service** and compliance with applicable **Management** public sector policies and standards which are incorporated in the contracts or equivalent instruments established with the Third Parties. from key-policies-third-party-framework.pdf, page 3,4
+
+Chunk Text : High-Level Summary
+- A page from a document outlining key policies of the Government’s Third-Party Management Framework. It presents a three-stage process focusing on evaluation and selection, contracting and onboarding, and onboarding preparation.
+
+Contextual Analysis
+- Setting: A formal, corporate-style page from a policy or governance booklet.
+- Subjects: The Third-Party Management Framework, specifically Stage 1 (Evaluation and Selection) and Stage 2 (Contracting and On-boarding), with mention of Stage 3 content in the text.
+- Intent: To communicate the sequential policy steps and responsibilities for government agencies when engaging third parties.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Title: Key Policies of the Third-Party Management Framework
+  - Stage 1
+    - Evaluation and Selection
+    - 01 To ensure that the Government adequately manages its security, data and project risks when engaging Third Parties, Agencies shall identify, assess, prioritise and mitigate the risks when outsourcing work to Third Parties during the evaluation and selection process.
+  - Stage 2
+    - Contracting and On-boarding
+    - 02 To ensure that the security, data and project risks involved in assigning work to Third Parties are addressed, Agencies shall establish contracts or other equivalent instruments with their Third Parties to govern how the Third Parties should perform the assigned work in a manner that addresses all identified risks involved.
+  - Stage 3 (visible in text)
+    - 03 To ensure that the appointed Third Parties (and their personnel) are adequately assessed, cleared and prepared for the assigned work, Agencies shall implement an on-boarding process which includes briefings on applicable data security requirements, security clearance and obtaining undertakings from Third-Party personnel, where necessary.
+  - Footer: Key Policies of the Government’s Third-Party Management Framework | 03
+- Visual Elements:
+  - Vertical blue gradient bar outlining Stage 1 and Stage 2 sections.
+  - Stage titles in bold blue text.
+  - Stage numbers in light gray (01, 02, 03) with body text in smaller gray font.
+  - Two main sections aligned left (stage labels) with corresponding descriptive paragraphs to the right.
+  - A clean, minimalist, corporate layout with ample white space.
+- Entities:
+  - Government (implied)
+  - Third Parties
+  - Agencies
+  - Stage 1: Evaluation and Selection
+  - Stage 2: Contracting and On-boarding
+  - Stage 3: On-boarding preparation (personnel, data security, clearances)
+- Colors and Style:
+  - Blue accent colors (various shades) and light gray text.
+  - Sans-serif typography, structured columns, and numbered steps.
+
+Relationship Mapping
+- The design uses a left-aligned stage label with a vertical blue bar as a visual cue, connecting to the corresponding descriptive text on the right. The numbered steps (01, 02, 03) indicate a sequential process. Stage 1 focuses on evaluating risks and selecting third parties; Stage 2 centers on contracting and onboarding to manage risks; Stage 3 (as described) emphasizes assessing and preparing third-party personnel and onboarding with security briefings and clearances. The footer reiterates the policy title and page number, indicating this is a multi-page document.
+
+Search-Friendly Keywords
+- Third-Party Management Framework, government policy, evaluation and selection, contracting and onboarding, on-boarding, risk management, data security, project risks, third-party contracts, security clearance, policy stages, governance, agencies. from key-policies-third-party-framework.pdf, page 3
+
+Chunk Text : 05[    Agencies shall perform regular ] checks or audits on their Third Parties throughout the period of engagement to ensure that the Third Parties carry out their assigned work in compliance with contractual obligations and applicable public sector policies and standards. More stringent requirements will be imposed on Third Parties dealing with systems and services of a higher risk. |Stage 4**Transition Out**|06To ensure business continuity and theproper transfer and disposal of dataand assets back to Agencies upon|
+|---|---|
+||the exit of the Third Parties, Agencies|
+||shall put in place and maintain|
+||up-to-date exit management plans|
+||for all Third Parties’ work and services,|
+||which shall include the conduct of|
+||exit checks or audits before the Third|
+||Parties discontinue their services.|
+
+Key Policies of the Government’s Third-Party Management Framework    | 
+
+04 
+
+--- end of page.page_number=5 --- from key-policies-third-party-framework.pdf, page 4
+"
+What ongoing checks does the Government require during a Third Party's engagement?,"**Answer:**
+
+The Government requires agencies to perform regular checks or audits on their Third Parties throughout the period of engagement to ensure the Third Parties carry out their assigned work in compliance with contractual obligations and applicable public sector policies and standards. More stringent requirements may be imposed on Third Parties handling higher-risk systems and services. Agencies should also monitor and review Third Parties’ performance and compliance with these policies during the engagement.
+
+**Sources Used:** key-policies-third-party-framework.pdf, Page 4","
+Chunk Text : 05[    Agencies shall perform regular ] checks or audits on their Third Parties throughout the period of engagement to ensure that the Third Parties carry out their assigned work in compliance with contractual obligations and applicable public sector policies and standards. More stringent requirements will be imposed on Third Parties dealing with systems and services of a higher risk. |Stage 4**Transition Out**|06To ensure business continuity and theproper transfer and disposal of dataand assets back to Agencies upon|
+|---|---|
+||the exit of the Third Parties, Agencies|
+||shall put in place and maintain|
+||up-to-date exit management plans|
+||for all Third Parties’ work and services,|
+||which shall include the conduct of|
+||exit checks or audits before the Third|
+||Parties discontinue their services.|
+
+Key Policies of the Government’s Third-Party Management Framework    | 
+
+04 
+
+--- end of page.page_number=5 --- from key-policies-third-party-framework.pdf, page 4
+
+Chunk Text : High-Level Summary
+- A page from a government or organizational document detailing Stage 3 and Stage 4 themes of Third-Party Management. It outlines Service Management (Stage 3) and Transition Out (Stage 4) with associated policy statements about monitoring, audits, and data/assets exit procedures.
+
+Contextual Analysis
+- Setting: A formal, professional document page likely from a policy handbook or framework (the bottom caption indicates “Key Policies of the Government’s Third-Party Management Framework” and a page number 04). The layout uses stage labels on the left with vertical blue accents and right-side text blocks for each clause.
+- Subjects: Stage 3: Service Management; Stage 4: Transition Out. Each stage includes numbered paragraphs (04, 05 for Stage 3; 06 for Stage 4) describing requirements for agencies.
+- Intent: To articulate compliance expectations for agencies in third-party relationships, focusing on performance monitoring, audits, and data/asset exit processes.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Stage 3
+    - Service Management
+  - 04 Agencies shall regularly monitor and review the Third Parties’ performance and compliance with applicable public sector policies and standards which are incorporated in the contracts or equivalent instruments established with the Third Parties.
+  - 05 Agencies shall perform regular checks or audits on their Third Parties throughout the period of engagement to ensure that the Third Parties carry out their assigned work in compliance with contractual obligations and applicable public sector policies and standards. More stringent requirements will be imposed on Third Parties dealing with systems and services of a higher risk.
+  - Stage 4
+    - Transition Out
+  - 06 To ensure business continuity and the proper transfer and disposal of data and assets back to Agencies upon the exit of the Third Parties, Agencies shall put in place and maintain up-to-date exit management plans for all Third Parties’ work and services, which shall include the conduct of exit checks or audits before the Third Parties discontinue their services.
+- Visual Elements:
+  - Left column with stage title in blue text: Stage 3, Service Management; Stage 4, Transition Out.
+  - A vertical blue gradient bar to the left of each stage’s text block.
+  - Right-side text blocks with numbered policy statements (04, 05, 06) in light gray numerals.
+  - Overall clean, corporate typography with ample white space.
+- Entities:
+  - Third Parties (vendors/contractors)
+  - Agencies (government or organizational units)
+  - Public sector policies and standards
+  - Contracts or equivalent instruments
+  - Data and assets
+
+Relationship Mapping
+- The left-aligned stage titles and vertical bars visually categorize content into stages.
+- Each stage contains sequential policy items (04, 05 for Stage 3; 06 for Stage 4) that describe activities (monitoring, audits) and outcomes (compliance, data/asset exit planning).
+- The policy items link monitoring and audits to contractual obligations and public sector standards, and connect exit management to business continuity and asset/data transfer.
+
+Notes for indexing (search-friendly keywords)
+- Third-Party Management framework
+- Stage 3: Service Management
+- Stage 4: Transition Out
+- agency monitoring, performance review, audits
+- contractual obligations, public sector standards
+- exit management plans, data disposal, asset transfer
+- data and asset exit, business continuity, exit checks
+- government policies, third-party contracts
+- high-risk systems and services
+
+If you want, I can tailor this into a concise metadata snippet or generate a search-optimized index entry for a vector store. from key-policies-third-party-framework.pdf, page 4
+
+Chunk Text : High-Level Summary
+- A page from a document outlining key policies of the Government’s Third-Party Management Framework. It presents a three-stage process focusing on evaluation and selection, contracting and onboarding, and onboarding preparation.
+
+Contextual Analysis
+- Setting: A formal, corporate-style page from a policy or governance booklet.
+- Subjects: The Third-Party Management Framework, specifically Stage 1 (Evaluation and Selection) and Stage 2 (Contracting and On-boarding), with mention of Stage 3 content in the text.
+- Intent: To communicate the sequential policy steps and responsibilities for government agencies when engaging third parties.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Title: Key Policies of the Third-Party Management Framework
+  - Stage 1
+    - Evaluation and Selection
+    - 01 To ensure that the Government adequately manages its security, data and project risks when engaging Third Parties, Agencies shall identify, assess, prioritise and mitigate the risks when outsourcing work to Third Parties during the evaluation and selection process.
+  - Stage 2
+    - Contracting and On-boarding
+    - 02 To ensure that the security, data and project risks involved in assigning work to Third Parties are addressed, Agencies shall establish contracts or other equivalent instruments with their Third Parties to govern how the Third Parties should perform the assigned work in a manner that addresses all identified risks involved.
+  - Stage 3 (visible in text)
+    - 03 To ensure that the appointed Third Parties (and their personnel) are adequately assessed, cleared and prepared for the assigned work, Agencies shall implement an on-boarding process which includes briefings on applicable data security requirements, security clearance and obtaining undertakings from Third-Party personnel, where necessary.
+  - Footer: Key Policies of the Government’s Third-Party Management Framework | 03
+- Visual Elements:
+  - Vertical blue gradient bar outlining Stage 1 and Stage 2 sections.
+  - Stage titles in bold blue text.
+  - Stage numbers in light gray (01, 02, 03) with body text in smaller gray font.
+  - Two main sections aligned left (stage labels) with corresponding descriptive paragraphs to the right.
+  - A clean, minimalist, corporate layout with ample white space.
+- Entities:
+  - Government (implied)
+  - Third Parties
+  - Agencies
+  - Stage 1: Evaluation and Selection
+  - Stage 2: Contracting and On-boarding
+  - Stage 3: On-boarding preparation (personnel, data security, clearances)
+- Colors and Style:
+  - Blue accent colors (various shades) and light gray text.
+  - Sans-serif typography, structured columns, and numbered steps.
+
+Relationship Mapping
+- The design uses a left-aligned stage label with a vertical blue bar as a visual cue, connecting to the corresponding descriptive text on the right. The numbered steps (01, 02, 03) indicate a sequential process. Stage 1 focuses on evaluating risks and selecting third parties; Stage 2 centers on contracting and onboarding to manage risks; Stage 3 (as described) emphasizes assessing and preparing third-party personnel and onboarding with security briefings and clearances. The footer reiterates the policy title and page number, indicating this is a multi-page document.
+
+Search-Friendly Keywords
+- Third-Party Management Framework, government policy, evaluation and selection, contracting and onboarding, on-boarding, risk management, data security, project risks, third-party contracts, security clearance, policy stages, governance, agencies. from key-policies-third-party-framework.pdf, page 3
+"
+What happens when a Third Party's contract ends?,"**Answer:**
+
+- When a Third Party’s contract ends, agencies should ensure the proper transfer and disposal of data and assets back to the Agencies. Agencies must put in place and maintain up-to-date exit management plans for all Third Parties’ work and services, which shall include the conduct of exit checks or audits before the Third Parties discontinue their services.
+
+- This is described under Stage 4: Transition Out in the Government’s Third-Party Management Framework.
+
+**Sources Used:** key-policies-third-party-framework.pdf, Page 5","
+Chunk Text : 05[    Agencies shall perform regular ] checks or audits on their Third Parties throughout the period of engagement to ensure that the Third Parties carry out their assigned work in compliance with contractual obligations and applicable public sector policies and standards. More stringent requirements will be imposed on Third Parties dealing with systems and services of a higher risk. |Stage 4**Transition Out**|06To ensure business continuity and theproper transfer and disposal of dataand assets back to Agencies upon|
+|---|---|
+||the exit of the Third Parties, Agencies|
+||shall put in place and maintain|
+||up-to-date exit management plans|
+||for all Third Parties’ work and services,|
+||which shall include the conduct of|
+||exit checks or audits before the Third|
+||Parties discontinue their services.|
+
+Key Policies of the Government’s Third-Party Management Framework    | 
+
+04 
+
+--- end of page.page_number=5 --- from key-policies-third-party-framework.pdf, page 4
+
+Chunk Text : High-Level Summary
+- A page from a government or organizational document detailing Stage 3 and Stage 4 themes of Third-Party Management. It outlines Service Management (Stage 3) and Transition Out (Stage 4) with associated policy statements about monitoring, audits, and data/assets exit procedures.
+
+Contextual Analysis
+- Setting: A formal, professional document page likely from a policy handbook or framework (the bottom caption indicates “Key Policies of the Government’s Third-Party Management Framework” and a page number 04). The layout uses stage labels on the left with vertical blue accents and right-side text blocks for each clause.
+- Subjects: Stage 3: Service Management; Stage 4: Transition Out. Each stage includes numbered paragraphs (04, 05 for Stage 3; 06 for Stage 4) describing requirements for agencies.
+- Intent: To articulate compliance expectations for agencies in third-party relationships, focusing on performance monitoring, audits, and data/asset exit processes.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Stage 3
+    - Service Management
+  - 04 Agencies shall regularly monitor and review the Third Parties’ performance and compliance with applicable public sector policies and standards which are incorporated in the contracts or equivalent instruments established with the Third Parties.
+  - 05 Agencies shall perform regular checks or audits on their Third Parties throughout the period of engagement to ensure that the Third Parties carry out their assigned work in compliance with contractual obligations and applicable public sector policies and standards. More stringent requirements will be imposed on Third Parties dealing with systems and services of a higher risk.
+  - Stage 4
+    - Transition Out
+  - 06 To ensure business continuity and the proper transfer and disposal of data and assets back to Agencies upon the exit of the Third Parties, Agencies shall put in place and maintain up-to-date exit management plans for all Third Parties’ work and services, which shall include the conduct of exit checks or audits before the Third Parties discontinue their services.
+- Visual Elements:
+  - Left column with stage title in blue text: Stage 3, Service Management; Stage 4, Transition Out.
+  - A vertical blue gradient bar to the left of each stage’s text block.
+  - Right-side text blocks with numbered policy statements (04, 05, 06) in light gray numerals.
+  - Overall clean, corporate typography with ample white space.
+- Entities:
+  - Third Parties (vendors/contractors)
+  - Agencies (government or organizational units)
+  - Public sector policies and standards
+  - Contracts or equivalent instruments
+  - Data and assets
+
+Relationship Mapping
+- The left-aligned stage titles and vertical bars visually categorize content into stages.
+- Each stage contains sequential policy items (04, 05 for Stage 3; 06 for Stage 4) that describe activities (monitoring, audits) and outcomes (compliance, data/asset exit planning).
+- The policy items link monitoring and audits to contractual obligations and public sector standards, and connect exit management to business continuity and asset/data transfer.
+
+Notes for indexing (search-friendly keywords)
+- Third-Party Management framework
+- Stage 3: Service Management
+- Stage 4: Transition Out
+- agency monitoring, performance review, audits
+- contractual obligations, public sector standards
+- exit management plans, data disposal, asset transfer
+- data and asset exit, business continuity, exit checks
+- government policies, third-party contracts
+- high-risk systems and services
+
+If you want, I can tailor this into a concise metadata snippet or generate a search-optimized index entry for a vector store. from key-policies-third-party-framework.pdf, page 4
+
+Chunk Text : Stage 2 02[    To ensure that the security, data and ] project risks involved in assigning work **Contracting** to Third Parties are addressed, **and** Agencies shall establish contracts or other equivalent instruments with their **On-boarding** Third Parties to govern how the Third Parties should perform the assigned work in a manner that addresses all identified risks involved. 03[    To ensure that the appointed Third ] Parties (and their personnel) are adequately assessed, cleared and prepared for the assigned work, Agencies shall implement an on-boarding process which includes briefings on applicable data security requirements, security clearance and obtaining undertakings from Third-Party personnel, where necessary. Key Policies of the Government’s Third-Party Management Framework    | 
+
+03 
+
+--- end of page.page_number=4 ---
+
+> Stage 3 04[   Agencies shall regularly monitor and ] review the Third Parties’ performance **Service** and compliance with applicable **Management** public sector policies and standards which are incorporated in the contracts or equivalent instruments established with the Third Parties. from key-policies-third-party-framework.pdf, page 3,4
+"

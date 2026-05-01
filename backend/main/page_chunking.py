@@ -97,7 +97,7 @@ async def process_pages(folder_path):
                         money_cost = f"Money cost to PAGE chunk {file.name} : {cb.total_cost}"
                         total_cost = [token_cost,money_cost]
 
-                        save_to_file(filename=f'{file.stem}',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
+                        save_to_file(filename=f'{file.stem}.txt',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
 
                     if chunks:
 
@@ -109,7 +109,7 @@ async def process_pages(folder_path):
                         token_cost = f"Token cost to EMBED PAGE {file.name} : {cost[0]}"
                         money_cost = f"Money cost to EMBED PAGE {file.name} : {cost[1]}"
                         total_cost = [token_cost,money_cost]
-                        save_to_file(filename=f'{file.stem}',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
+                        save_to_file(filename=f'{file.stem}.txt',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
 
                         sparse_embeddings = await asyncio.to_thread(sparse_embedder.embed_texts, returned_chunks)
                         late_embeddings = await asyncio.to_thread(late_embedder.embed_texts, returned_chunks)

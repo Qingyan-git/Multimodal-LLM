@@ -5,6 +5,11 @@ import sys
 import pandas as pd
 from pathlib import Path
 from collections import defaultdict
+import pymupdf
+import pymupdf4llm
+import base64
+from langchain_community.callbacks import get_openai_callback
+
 
 # getting the name of the directory
 # where the this file is present.
@@ -57,7 +62,7 @@ def get_relevant_chunks_images(dense,sparse,late):
         document_path = retrieve_pdf(document_name)
         with pymupdf.open(document_path) as doc:
             for page_no in pages:
-                page = doc[page_no]
+                page = doc[page_no-1]
                 jpeg_base64 = get_page_as_jpeg(page)
                 images.append({
                     "image_data": jpeg_base64,
@@ -78,11 +83,11 @@ async def answer_testset_images(filepath,model,sparse,late):
         sparse_vector = sparse.embed_query(question)
         late_vector = late.embed_query(question)
 
-        images, sources = get_relevant_chunks(dense_vector,sparse_vector,late_vector)
+        images, sources = get_relevant_chunks_images(dense_vector,sparse_vector,late_vector)
 
         answer = await model.answer_questions_images(question,images)
 
-        results.append({'Question' : question ,'Answer': answer, 'Sources' : sources})
+        results.append({'Question' : question ,'Answer': answer, 'Sources' : str(dict(sources))})
 
     results_df = pd.DataFrame(results)
 
@@ -153,10 +158,28 @@ async def answer_all(folder_path):
         if folder_path.is_dir():
             for file in folder_path.iterdir():
                 if file.is_file() and file.suffix == '.csv':
-                    
-                    await answer_testset(file,model,sparse_embedder,late_embedder)
 
-                    await answer_testset_images(file,model,sparse_embedder,late_embedder)
+                    with get_openai_callback() as cb_text:
+                    
+                        await answer_testset(file,model,sparse_embedder,late_embedder)
+
+                        token_cost = f"Token cost to ANSWER QUESTIONS for {file.name} : {cb_text.total_tokens}"
+                        money_cost = f"Money cost to ANSWER QUESTIONS for {file.name} : {cb_text.total_cost}"
+                        total_cost = [token_cost,money_cost]
+
+                        save_to_file(filename=f'{file.stem}.txt',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
+
+                    with get_openai_callback() as cb_image:
+
+                        await answer_testset_images(file,model,sparse_embedder,late_embedder)
+
+                        token_cost = f"Token cost to ANSWER IMAGE QUESTIONS for {file.name} : {cb_image.total_tokens}"
+                        money_cost = f"Money cost to ANSWER IMAGE QUESTIONS for {file.name} : {cb_image.total_cost}"
+                        total_cost = [token_cost,money_cost]
+
+                        save_to_file(filename=f'{file.stem}.txt',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
+
+                       
 
                     print(f"\tFinished processing {file.stem}\n\n")
             
@@ -164,7 +187,8 @@ async def answer_all(folder_path):
 
     
     except Exception as e:
-        print(f'Unable to verify all testsetes, error {e}\n\n')
+        print(f'Unable to verify all testsets, error {e}\n\n')
+        raise
 
 
 async def answer_user_query():
@@ -193,6 +217,7 @@ async def answer_user_query():
             save_to_file(filename=f"User Queries.txt",content=response,filepath=os.getenv('user_results_path'),method='a')
         except Exception as e:
             print(f'An error occured : {e}\n\n')
+            raise
 
 
 

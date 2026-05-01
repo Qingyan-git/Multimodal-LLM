@@ -1,148 +1,2075 @@
-﻿Question,Answer
-What laws govern data management in Singapore's public sector?,"In Singapore's public sector, data management is governed primarily by the following laws:
+﻿Question,Answer,Sources
+What laws govern data management in Singapore's public sector?,"- The governing laws and framework referenced in the provided documents include:
+  - Public Sector (Governance) Act (PSGA)
+  - Data protection and consent provisions within the Government Personal Data Protection Policies (Jul 2021)
+  - Quality Service Manager framework as part of agency processes for handling personal data
+  - The IM on ICT&SS Management (Information Management on ICT & Security and Safety Management)
+  - An agency’s obligation to align with up-to-date policies and processes, and to provide privacy statements in digital services
 
-- **Public Sector (Governance) Act**: This act outlines the conditions under which public sector agencies may collect, use, and disclose personal data. It emphasizes the necessity of obtaining consent and specifies exceptions where data can be shared without consent, such as for public interest or compliance with other laws.
+- In particular, the documents mention that:
+  - Before collecting, using, or disclosing personal data, agencies must check for applicable laws governing or prohibiting such actions, and act in accordance with Section 4 of the PSGA and ministerial directions under the PSGA
 
-- **Personal Data Protection Act**: This act complements the Public Sector (Governance) Act by establishing broader principles for the protection of personal data across various sectors, including the public sector.
+Sources Used: government-personal-data-protection-policies-jul21.pdf, 10; government-personal-data-protection-policies-jul21.pdf, 9-10","
+Chunk Text : Table : |    |   0 | 1                                                                                                                                                                                                          |
+|---:|----:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  0 |  01 | An agency shall ensure that up-to-date policies and processes that adhere to all the provisions in this policy are implemented within the agency and when transferring data to any other organisation.     |
+|  1 |  02 | An agency shall implement processes to receive and address, within a reasonable time, enquiries or feedback about the agency's policies and processes relating to the processing of personal data.         |
+|  2 |  03 | An agency shall make available information about its policies and processes with respect to the processing of personal data through a privacy statement to be displayed on its digital services.           |
+|  3 |  04 | An agency shall allow an individual to seek clarification on the agency's policies and processes relating to the processing of personal data through the agency's Quality Service Manager (or equivalent). |
+Caption :  from government-personal-data-protection-policies-jul21.pdf, page 10
 
-These laws collectively ensure that public sector agencies adhere to strict guidelines regarding personal data handling, emphasizing the importance of consent and transparency in data management practices.
+Chunk Text : such collection or use is authorised by any law or required by order of court; 
 
-**Sources Used:** government-personal-data-protection-policies-jul21.pdf, 10, 11"
-Why does Singapore have separate legal frameworks for public and private sector data management?,"I do not have enough information in the provided documents.
+- iii. from government-personal-data-protection-policies-jul21.pdf, page 10
 
-**Sources Used:** None"
-What criminal penalties does the PSGA impose on public officers?,"The Public Sector Governance Act (PSGA) imposes criminal penalties on public officers for the following violations:
+Chunk Text : 04 
 
-- **Knowingly or recklessly disclosing data without authorization.**
-- **Misusing data that results in personal gain for the public officer or another person, or harm or loss to another person.**
-- **Knowingly or recklessly re-identifying anonymised information without authorization.**
+An agency shall allow an individual to seek clarification on the agency’s policies and processes relating to the processing of personal data through the agency’s Quality Service Manager (or equivalent). Government Personal Data Protection Policies   | **10** 
 
-These penalties are part of the framework established to strengthen public sector data governance and ensure accountability in the handling of personal data.
+--- end of page.page_number=10 ---
 
-**Sources Used:** government-personal-data-protection-policies-jul21.pdf, 3"
-Since when have the Government's data security policies been formally documented?,"The Government's data security policies have been formally documented since 2001. This is outlined in the Government Instruction Manual on Infocomm Technology and Smart Systems Management.
+## Collection, Use and Disclosure of Personal Data 
 
-**Sources Used:** government-data-security-policies.pdf, Page 1"
-What types of personal data do these government policies cover?,"The ""Government Personal Data Protection Policies"" cover all forms of personal data managed by government agencies, which includes:
+Consent
 
-- **Electronic Forms**: Both structured and unstructured data.
-- **Non-Electronic Forms**: Any personal data that is not in electronic format.
+05 
 
-However, there are exceptions to this coverage:
-- **Personal Data of Deceased Individuals**: The policies apply to the personal data of individuals who have been deceased for 10 years or less, with certain provisions for disclosure and protection.
-- **Business Contact Information**: This type of data is excluded from the policies.
+Before an agency collects, uses or discloses personal data, the agency shall check whether there are any laws governing or prohibiting such collection, use or disclosure. Subject to any such laws, the agency shall not: 
 
-These guidelines are part of a broader framework established by the Public Sector (Governance) Act and aim to ensure comprehensive management and protection of personal data within the public sector.
+(a) collect or use personal data, as the case may be, unless: 
 
-**Sources Used:** government-personal-data-protection-policies-jul21.pdf, 4, 5, 6"
-What are the general obligations of a government agency regarding personal data policies?,"**General Obligations of a Government Agency Regarding Personal Data Policies:**
+- i. such collection or use is for any of the purposes in Section 4 of the Public Sector (Governance) Act and to the extent required by any Ministerial Direction issued under the Act, and the agency that is collecting or using the personal data is a Singapore public sector agency as defined in Section 2 of the Act; 
 
-- **Implementation of Policies:**
-  - Agencies must ensure that up-to-date policies and processes are in place that comply with the provisions of personal data protection policies.
-  
-- **Addressing Inquiries:**
-  - Agencies are required to implement processes to receive and address inquiries or feedback regarding their policies and processes related to personal data within a reasonable timeframe.
+- ii. from government-personal-data-protection-policies-jul21.pdf, page 9,10
+"
+Why does Singapore have separate legal frameworks for public and private sector data management?,"I do not have enough information in the provided documents to explain why Singapore has separate legal frameworks for public and private sector data management. The chunks you supplied describe the Government Personal Data Protection Policies, including rules for agency policies, consent, and disclosure within the public sector, but they do not address or compare frameworks for the private sector or explain the rationale for separate frameworks.
 
-- **Transparency in Data Collection:**
-  - Agencies must inform individuals about the purposes for which their personal data is being collected, used, or disclosed. This includes providing contact information for a representative who can answer questions about the data handling.
+Sources Used:
+government-personal-data-protection-policies-jul21.pdf, Page 10
+government-personal-data-protection-policies-jul21.pdf, Page 11
+government-personal-data-protection-policies-jul21.pdf, Page 12","
+Chunk Text : Table : |    |   0 | 1                                                                                                                                                                                                          |
+|---:|----:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  0 |  01 | An agency shall ensure that up-to-date policies and processes that adhere to all the provisions in this policy are implemented within the agency and when transferring data to any other organisation.     |
+|  1 |  02 | An agency shall implement processes to receive and address, within a reasonable time, enquiries or feedback about the agency's policies and processes relating to the processing of personal data.         |
+|  2 |  03 | An agency shall make available information about its policies and processes with respect to the processing of personal data through a privacy statement to be displayed on its digital services.           |
+|  3 |  04 | An agency shall allow an individual to seek clarification on the agency's policies and processes relating to the processing of personal data through the agency's Quality Service Manager (or equivalent). |
+Caption :  from government-personal-data-protection-policies-jul21.pdf, page 10
 
-- **Documentation Maintenance:**
-  - Agencies are obligated to maintain accurate and up-to-date documentation of the purposes for which personal data is collected, used, and disclosed, ensuring accountability and transparency in data management.
+Chunk Text : such collection or use is authorised by any law or required by order of court; 
 
-These obligations are part of a broader framework established under the Public Sector (Governance) Act and the Personal Data Protection Act, reflecting the government's commitment to responsible data management and the protection of personal data.
+- iii. from government-personal-data-protection-policies-jul21.pdf, page 10
 
-**Sources Used:** government-personal-data-protection-policies-jul21.pdf, 10; government-personal-data-protection-policies-jul21.pdf, 17"
-How can an individual seek clarification on how a government agency handles their personal data?,"An individual can seek clarification on how a government agency handles their personal data by contacting the agency's Quality Service Manager or an equivalent designated personnel. This process is part of the agency's responsibilities to ensure transparency regarding their personal data processing policies.
+Chunk Text : High-Level Summary
+- A page from a government-level document detailing personal data protection policies. The visible sections discuss conditions under which personal data can be disclosed and consent requirements, with numbered sections (06, 07) and a footer indicating “Government Personal Data Protection Policies.”
 
-**Sources Used:** government-personal-data-protection-policies-jul21.pdf, 10"
-When can a government agency collect or use personal data without an individual's consent?,"**Conditions for Collecting or Using Personal Data Without Consent:**
+Contextual Analysis
+- Setting: A formal, regulatory document, likely part of a larger Act or policy manual dealing with personal data protection.
+- Subjects: Policy text, with emphasis on disclosure exceptions, consent, and processing for public sector needs.
+- Intent: To inform readers about lawful bases and procedures for disclosing personal data and obtaining consent, as part of compliance guidance.
 
-A government agency can collect or use personal data without an individual's consent under the following conditions:
+Detail Inventory
+- Text & OCR (exact phrases as visible):
+  - ""(b) disclose personal data unless:""
+  - ""i. such disclosure is for any of the purposes in Section 4 of the Public Sector (Governance) Act and to the extent required by any Ministerial Direction issued under the Act, and the disclosing agency is a Singapore public sector agency as defined in Section 2 of the Act;""
+  - ""ii. such disclosure is authorised by any other law or required by order of court;""
+  - ""iii. such disclosure is necessary in the public interest (including without limitation national interest);""
+  - ""iv. such disclosure is permitted without consent by the exclusions in Annex A or Part 2 of Annex B, and such disclosure complies with all applicable legal obligations; or""
+  - ""v. the individual that the personal data relates to, gives, or is deemed to give, his consent to the disclosure of his personal data by the agency for the purposes set out in paragraph 21.""
+  - ""06 Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, the agency shall obtain the consent at or before the time of processing. Where the agency wants to use data for a purpose not previously identified, consent to the use for that purpose may be obtained after the data is collected but before use. Where the data collected may be shared with another agency for another function or purpose, the agency shall notify the individual as such at the point of collection.""
+  - ""07 Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, the agency shall not, as a condition of the supply of a product or service or the administration of a public programme or scheme, require an individual to consent to the collection, use or disclosure of personal data about the individual beyond what is reasonable to supply the product or service to the individual, or to administer the public programme or scheme.""
+  - ""Government Personal Data Protection Policies | 12"" (footer)
+- Visual Elements:
+  - Text is in a clean sans serif document layout.
+  - Page numbers in blue vertical numerals (06, 07) on the left.
+  - Footer with page title and page number.
+  - Minimalistic, formal styling with bullet-like indentation for subsections (i–v).
+- Entities:
+  - References to government acts: Public Sector (Governance) Act; annexes; sections 2, 4, 21.
+  - No person names or brands visible beyond generic government policy terms.
+  - Likely location: Singapore, given explicit mention of Singapore public sector agency.
 
-- **Vital Interests**: The collection, use, or disclosure of personal data is necessary for purposes that are clearly in the interests of the individual, particularly in emergencies that threaten the life, health, or safety of the individual or another individual.
-  - Consent cannot be obtained in a timely manner.
-  - The individual would not reasonably be expected to withhold consent.
+Relationship Mapping
+- The list (i–v) defines conditions under which disclosure is allowed, linking to sections and acts for legal basis.
+- Section 06 states the process for obtaining express consent, including timing relative to processing and use of data for new purposes.
+- Section 07 restricts coercive consent for access to products or public services; emphasizes necessity and reasonableness of data collection.
+- Footer indicates the document is part of a larger set called Government Personal Data Protection Policies, page 12, reinforcing it as a formal policy document. from government-personal-data-protection-policies-jul21.pdf, page 11
+"
+What criminal penalties does the PSGA impose on public officers?,"**Answer:**
 
-- **Notification Requirement**: If personal data is collected, used, or disclosed without consent under these circumstances, the agency must notify the individual of such actions as soon as practicable, including the purpose for the collection, use, or disclosure.
+The PSGA imposes criminal penalties on public officers for:
+- knowingly or recklessly disclosing data without authorisation;
+- misusing data in a way that results in personal gain for the public officer or for another person, or harm or loss to another person; and
+- knowingly or recklessly re-identifying anonymised information without authorisation.
 
-These provisions are part of a broader government policy aimed at balancing individual rights with public safety needs, as outlined in the ""Annex A - Collection, Use and Disclosure of Personal Data without Consent.""
+These penalties stem from the document’s statements about criminal offences under the Public Sector (Governance) Act and the related obligations of officers. 
 
-**Sources Used:** government-personal-data-protection-policies-jul21.pdf, 27"
-What conditions must an agency meet before collecting personal data with an individual's express consent?,"To collect personal data with an individual's express consent, an agency must meet the following conditions:
+**Sources Used:** government-personal-data-protection-policies-jul21.pdf, page 4; government-personal-data-protection-policies-jul21.pdf, page 26","
+Chunk Text : The PSGA imposes criminal penalties on public officers who (a) knowingly or recklessly disclose data without authorisation; (b) misuse data that results in personal gain for the public officer or another person, or harm or loss to another person; and (c) knowingly or recklessly re-identify anonymised information without authorisation. This document sets out the key policies in the IM on ICT&SS Management that govern how personal data is managed and protected by agencies. These policies apply to all personal data (in electronic (structured and unstructured) and non-electronic forms) possessed, controlled, or processed by an agency, except: 
 
-- **Obtain Consent Directly**: The agency must obtain consent directly from the individual or from a person validly acting on behalf of that individual.
-- **No Deceptive Practices**: The agency shall not obtain consent through deception or by providing misleading or incomplete information.
-- **Timing of Consent**: Consent must be obtained at or before the time of processing the personal data.
-- **Notification of Purpose**: The agency must inform the individual of the purposes for which the personal data is being collected, used, or disclosed at or before the time of collection.
+- (a) Personal data of a deceased individual (However, provisions relating to the disclosure of personal data and protection of personal data shall apply in respect of the personal data of an individual who has been dead for 10 or less years.); and 
 
-Additionally, if the agency wishes to use the data for a purpose not previously identified, consent for that new purpose may be obtained after the data is collected but before it is used.
+- (b) Business contact information. Government Personal Data Protection Policies   | **4** 
 
-**Sources Used:** government-personal-data-protection-policies-jul21.pdf, 12, 13, 14, 15, 16, 17"
-"What is ""deemed consent"" under the government's data protection policies?","**Deemed Consent under Government's Data Protection Policies**
+--- end of page.page_number=4 ---
 
-""Deemed consent"" refers to the circumstances under which individuals are considered to have consented to the collection, use, or disclosure of their personal data by agencies without explicitly giving consent. The key points regarding deemed consent are as follows:
+## Glossary of Terms 
 
-- **Voluntary Provision of Data**: An individual is deemed to consent if they voluntarily provide their personal data to an agency for a specific purpose, and it is reasonable to assume that they would do so without needing to give explicit consent.
-  
-- **Disclosure Between Agencies**: If an individual is deemed to have consented to the disclosure of their personal data from one agency to another agency or a non-Government entity (NGE) for a particular purpose, they are also deemed to consent to the collection, use, or disclosure of that data by the receiving agency or NGE for that same purpose.
+01 Benefit plan 
 
-- **Contractual Context**: When an individual provides personal data to an agency with the intention of entering into a contract, they are deemed to consent to the necessary disclosure of that data to another agency or NGE for the conclusion of that contract.
+An insurance policy, a pension plan, an annuity, a provident fund plan or other similar plan 
 
-These provisions are part of a broader framework established by the Public Sector (Governance) Act and the Personal Data Protection Act, which emphasizes responsible data handling and the protection of individual privacy rights.
+- 02 Business Includes the activity of any organisation, whether or not carried out for the purposes of gain, or conducted on a regular, repetitive or continuous basis, but does not include an individual acting in his personal or domestic capacity 
 
-**Sources Used:** government-personal-data-protection-policies-jul21.pdf, 12; government-personal-data-protection-policies-jul21.pdf, 13"
-Can an individual withdraw their consent for an agency to use their personal data?,"Yes, an individual can withdraw their consent for an agency to use their personal data. The document outlines the responsibilities of agencies regarding the process for individuals to withdraw consent and emphasizes that agencies must inform individuals of the consequences of such actions. This is detailed in paragraphs 16-19, which highlight the rights of individuals and the obligations of agencies in managing personal data.
+- 03 Business contact An individual’s name, position name or title, information business telephone number, business address, business electronic mail address or business fax number and any other similar information about the individual, not provided by the individual solely for his personal purposes 
 
-**Sources Used:** government-personal-data-protection-policies-jul21.pdf, 14; government-personal-data-protection-policies-jul21.pdf, 15"
-What happens to an individual's personal data after they withdraw consent?,"When an individual withdraws consent regarding their personal data, the agency is obligated to cease collecting that data. The document outlines that the agency must inform the individual about the consequences of withdrawing consent, which includes stopping any further collection, use, or disclosure of their personal data. This is in line with the legal and ethical guidelines established under the Public Sector (Governance) Act and the Personal Data Protection Act.
+- 04 Domestic Related to home or family 05 Education institution Any organisation that provides education, including instruction, training or teaching, whether by itself or in association or collaboration with or by affiliation with any other person 
 
-**Key Points:**
-- Agencies must stop collecting personal data if consent is withdrawn.
-- Individuals must be informed of the consequences of their withdrawal of consent.
+Government Personal Data Protection Policies   | **5** 
 
-**Sources Used:** government-personal-data-protection-policies-jul21.pdf, 14; government-personal-data-protection-policies-jul21.pdf, 15"
-What rights does an individual have to access their personal data held by a government agency?,"**Rights to Access Personal Data:**
+--- end of page.page_number=5 ---
 
-Individuals have the right to request access to their personal data held by government agencies. The key points regarding this right are:
+06 Evaluative purpose 
 
-- **Right to Access**: According to Paragraph 27 of the Government Personal Data Protection Policies, individuals can request their personal data from an agency. The agency is obligated to provide this data as soon as reasonably possible.
-  
-- **Information on Usage**: Along with the personal data, individuals are entitled to receive information about how their data has been used or disclosed by the agency in the past 12 months.
+Evaluative purpose means: 
 
-- **Exceptions to Access**: There are specific exceptions outlined in Paragraphs 28 and 29, where an agency may refuse to comply with a request for access. These exceptions include situations where providing the data could:
-  - Threaten the safety or health of the individual making the request or others.
-  - Cause immediate or grave harm to the safety or health of the individual making the request.
+- (a) for the purpose of determining the suitability, eligibility or qualifications of the individual to whom the data relates 
 
-This framework aims to balance individual rights with public safety and agency responsibilities, as established by the Public Sector (Governance) Act and the Personal Data Protection Act.
+   - (i) for employment or for appointment to office; 
 
-**Sources Used:** government-personal-data-protection-policies-jul21.pdf, 18"
-What must an agency do if it rejects an individual's request to access their personal data?,"When an agency rejects an individual's request to access their personal data, it must:
+   - (ii) for promotion in employment or office or for continuance in employment or office; 
 
-- Notify the individual of the rejection within the stated time and in accordance with the specified requirements.
-- Preserve a copy of the personal data that was the subject of the request.
+(iii) for removal from employment or office; 
 
-These obligations are part of the updates introduced on July 1, 2021, aimed at enhancing transparency and accountability in personal data management.
+   - (iv) for admission to an education institution; 
 
-**Sources Used:** government-personal-data-protection-policies-jul21.pdf, 43, 44"
-What are the five characteristics of quality data that agencies must strive to maintain?,"The five characteristics of quality data that agencies must strive to maintain are:
+   - (v) for the awarding of contracts, awards, bursaries, scholarships, honours or other similar benefits; 
 
-- **Accuracy**
-- **Consistency**
-- **Timeliness**
-- **Relevance**
-- **Completeness**
+   - (vi) for selection for an athletic or artistic purpose; or 
 
-These characteristics are essential for ensuring that personal data is managed effectively and fulfills its intended purposes.
+   - (vii)for grant of financial or social assistance, or the delivery of appropriate health services, under any scheme administered by an agency; 
 
-**Sources Used:** government-personal-data-protection-policies-jul21.pdf, 24"
-How long should government agencies retain personal data?,"Government agencies should retain personal data for the following durations:
+- (b) for the purpose of determining whether any contract, award, bursary, scholarship, honour or other similar benefit should be continued, modified or cancelled; 
 
-- **Decision-Making Data**: Personal data that has been used to make a decision about an individual must be retained long enough to allow the individual access to that data after the decision has been made.
-- **General Retention**: Agencies should retain personal data only for the period necessary to fulfill the purposes for which it was collected. This retention period can be extended only if specified by legislation or for archival purposes as outlined in the relevant management guidelines.
+- (c) for the purpose of deciding whether to insure any individual or property or to continue or renew the insurance of any individual or property; or 
 
-These policies ensure compliance with legal obligations and promote responsible data management practices.
+- (d) for such other similar purposes for which a data-sharing direction is issued under Section 4 of the Public Sector (Governance) Act 2018. Government Personal Data Protection Policies   | **6** 
 
-**Sources Used:** government-personal-data-protection-policies-jul21.pdf, 24, 25"
-What are public officers personally liable for under Singapore's data protection laws?,"I do not have enough information in the provided documents.
+--- end of page.page_number=6 ---
 
-**Sources Used:** None"
+07 
+
+- Individual 
+
+   - A natural person, whether living or deceased 
+
+- 08 Investigation 
+
+An investigation relating to: 
+
+   - (a) a breach of an agreement; 
+
+   - (b) a contravention of any written law, or any rule of professional conduct or other requirement imposed by any regulatory authority in exercise of its powers under any written law; or 
+
+   - (c) a circumstance or conduct that may result in a remedy or relief being available under any law. - 09 National interest 
+
+   - Includes national defence, national security, public security, the maintenance of essential services and the conduct of international affairs 
+
+- 10 Non-Government entity Refers to a person other than an agency 
+
+- 11 Organisation 
+
+- Any individual, company, association or body of persons, corporate or unincorporated, whether or not — 
+
+- (a) formed or recognised under the law of Singapore; or 
+
+- (b) resident, or having an office or a place of business, in Singapore. Government Personal Data Protection Policies   | **7** 
+
+--- end of page.page_number=7 ---
+
+- 12 Personal data 
+
+Data, whether true or not, about an individual who can be identified – 
+
+- (a) from that data, or 
+
+- (b) from that data and other information to which the agency has or is likely to have access. from government-personal-data-protection-policies-jul21.pdf, page 3,4,5,6,7
+
+Chunk Text : In addition, officers shall be mindful of their obligations set out in the Public Sector (Governance) Act, which criminalises the acts of knowing or reckless unauthorised disclosure of data, misuse of data for a gain to himself/other individual or for a harm or loss to another individual and knowing or reckless unauthorised re-identification of anonymised data. 51 
+
+An agency shall ensure that all their officers are informed of their responsibilities and liabilities (i.e. that they should not access, use, disclose or retain personal data for purposes other than the performance of their duties of employment, and that failure to comply may be criminal offence and may rise to disciplinary action against the officer). Government Personal Data Protection Policies   | **26** 
+
+--- end of page.page_number=26 ---
+
+## Annexes 
+
+Annex A 
+
+Collection, Use and Disclosure of Personal Data without Consent 
+
+Annex B 
+
+Additional Bases for Collection, Use and Disclosure of Personal Data Without Consent 
+
+Annex C 
+
+Exceptions from Access Requirement 
+
+Annex D 
+
+Exceptions from Correction Requirement 
+
+Government Personal Data Protection Policies   | **27** 
+
+--- end of page.page_number=27 ---
+
+## Annex A - Collection, Use and Disclosure of Personal Data without Consent 
+
+PART 1 - VITAL INTERESTS OF INDIVIDUALS
+
+01 
+
+- (1) Subject to sub-paragraph (2), the collection, use or disclosure (as the case may be) of personal data about an individual is necessary for any purpose which is clearly in the interests of the individual, and — 
+
+   - (a) consent for the collection, use or disclosure (as the case may be) cannot be obtained in a timely way; or 
+
+   - (b) the individual would not reasonably be expected to withhold consent. - (2) Where the agency collects, uses or discloses (as the case may be) personal data about the individual under sub-paragraph (1), the agency must, as soon as is practicable, notify the individual of the collection, use or disclosure (as the case may be) and the purpose for the collection, use or disclosure, as the case may be. 02 
+
+The collection, use or disclosure (as the case may be) of personal data about an individual is necessary to respond to an emergency that threatens the life, health or safety of the individual or another individual. Government Personal Data Protection Policies _(Annex A)_ | **28** 
+
+--- end of page.page_number=28 ---
+
+03 
+
+The collection, use or disclosure (as the case may be) of personal data about an individual, where — 
+
+- (a) consent for the collection, use or disclosure (as the case may be) cannot be obtained in a timely way; and 
+
+- (b) there are reasonable grounds to believe that the health or safety of the individual or another individual will be seriously affected. from government-personal-data-protection-policies-jul21.pdf, page 25,26,27,28
+
+Chunk Text : Quality data is: 
+
+(a) accurate; 
+
+(b) consistent; 
+
+(c) timely; 
+
+(d) relevant; and 
+
+(e) complete. Retention of Personal Data
+
+48 
+
+Subject to paragraph 49, an agency shall retain personal data that has been used to make a decision about an individual for a long enough period to allow the individual access to the data after the decision has been made. 49 
+
+An agency shall retain personal data only for the period necessary for the fulfilment of the purposes for which it was collected unless there is a requirement specified in legislation or in the IM on Office Admin: Management of Public Records to retain the personal data for archival or any other purposes. Government Personal Data Protection Policies   | **25** 
+
+--- end of page.page_number=25 ---
+
+Responsibilities of Public Officers
+
+50 
+
+Officers shall be mindful of the requirements of the Official Secrets Act and Statutory Bodies and Government Companies (Protection of Secrecy) Act, which prohibit unauthorised disclosure of certain information held by virtue of a person’s office or position in the Government or such entity. (These prohibitions apply regardless of whether the information was obtained directly from the public or from another agency). from government-personal-data-protection-policies-jul21.pdf, page 24,25
+"
+Since when have the Government's data security policies been formally documented?,"- The Government’s data security policies have been formally documented since 2001, with updates incorporated after a 2019 review.
+
+Sources Used: government-data-security-policies.pdf, 0; government-data-security-policies.pdf, 2","
+Chunk Text : ## _Obfuscation/ masking/ removal of entity attributes_ 
+
+- 49 Agencies should ensure users who do not need to access the exact data values of sensitive data are presented with partially hidden data values that are less sensitive but sufficient for usage and exploitation to complete their assigned tasks. - 50 Agencies should consider hiding the true value of the attributes by adding noise, banding the data, or masking portions of the value. Attributes not relevant for data usage should be removed. Government Data Security Policies |   �14 
+
+--- end of page.page_number=14 ---
+
+## _Dataset partitioning_ 
+
+- 51 Agencies should reduce data concentration risk by partitioning sensitive data into smaller datasets. This can be done by segmenting out selected entities, individuals or attributes and applying different access controls to each of the partitions. This reduces the likelihood of compromise of the selected entities, individuals or attributes should the larger dataset be compromised. - 52 Agencies should consider partitioning the dataset by either: 
+
+   - a) Physically partitioning the dataset in different storage locations; or 
+
+   - b) Virtually partitioning the datasets in different virtually isolated partitions. from government-data-security-policies.pdf, page 13,14
+
+Chunk Text : Where the dataset includes data on individuals, Agencies should also collect the data in accordance with the Government’s personal data protection policies. from government-data-security-policies.pdf, page 4
+
+Chunk Text : Government Data Security Policies |   �1 
+
+--- end of page.page_number=1 ---
+
+## The Government takes its responsibility as a custodian of data very seriously. Since 2001, the Government’s data security policies have been set out in the Government Instruction Manual (IM) on Infocomm Technology and Smart Systems (ICT&SS) Management. In 2019, the Public Sector Data Security Review Committee recommended additional technical and process measures to protect data and prevent data compromise. The recommended measures have since been incorporated into the IM on ICT&SS Management. This document sets out the key policies in the IM on ICT&SS Management that govern how data security is managed by agencies. The policies prescribe data security requirements, including technical and process measures, to safeguard data against security threats. The technical and process measures described in this document are implemented using a riskbased approach. Agencies should select the measures based on the data security risk level, after taking into account their operating contexts. from government-data-security-policies.pdf, page 0,1
+"
+What types of personal data do these government policies cover?,"I do not have enough information in the provided documents to specify the exact types of personal data covered. The chunks describe the existence of policies, their scope, and procedures for access to personal data, but they do not enumerate specific data categories or types.
+
+Sources Used: government-personal-data-protection-policies-jul21.pdf, page 2","
+Chunk Text : The policies operate subject to the requirements of law, contract, and other Government policies and rules governing data in general. The Government may, in its sole discretion, update the policies set out in this document without publishing such updates. The Government will not be liable for any loss or damage that may be incurred on account of relying on any information contained in this document. --- end of page.page_number=1 ---
+
+|**Foreword**|**3**|
+|---|---|
+|**Glossary of Terms**|**5**|
+|**General rules with Respect to Protection of Personal Data**|**10**|
+|**Collection, Use and Disclosure of Personal Data**|**11**|
+|Consent|11|
+|Deemed Consent|13|
+|Withdrawal of Consent|15|
+|Purpose|16|
+|Notifcation of Purpose|17|
+|**Access to and Correction of Personal Data**|**19**|
+|Access to Personal Data|19|
+|Correction of Personal Data|22|
+|Preservation of Copies of Personal Data|24|
+|Care of Personal Data|25|
+|Retention of Personal Data|25|
+|Responsibilities of Public Ofcers|26|
+|**Annexes**|**27**|
+|Annex A - Collection, Use and Disclosure ofPersonal Data without Consent|28|
+|Annex B – Additional Bases for Collection, Useand Disclosure of Personal Data Without Consent|37|
+|Annex C – Exceptions fromAccess Requirement|40|
+|Annex D – Exceptions fromCorrection Requirement|42|
+|**Change Log**|**43**|
+
+Government Personal Data Protection Policies   | **2** 
+
+--- end of page.page_number=2 ---
+
+## The Government takes its responsibility as a custodian of data very seriously. Data management in the public sector is governed by the **Public Sector (Governance) Act** (“PSGA”) and the **Government Instruction Manual on Infocomm Technology & Smart Systems Management** (""IM on ICT&SS Management""). The **Personal Data Protection Act** (“PDPA”) applies to the private sector. The need for two different legal frameworks governing data management in the public and private sectors arises because the public has different expectations of the services provided by the Government and the private sector. from government-personal-data-protection-policies-jul21.pdf, page 0,1,2
+
+Chunk Text : High-Level Summary
+- A government document cover titled “Government Personal Data Protection Policies,” dated July 2021. It appears to be a publication by a national digital government office (Smart Nation / Digital Government Office).
+
+Contextual Analysis
+- Setting: Official government publication cover with a blue gradient background.
+- Subjects: The title text, a brief disclaimer paragraph, a date, and an emblem/logo at the bottom right.
+- Intent: To present and publicly communicate policies related to personal data protection within government operations.
+
+Detail Inventory
+- Text & OCR (exact phrases as visible):
+  - Main title: Government Personal Data Protection Policies
+  - Date: Jul 2021
+  - Disclaimer paragraph (summarized): This publication is for information of the public. Policies subject to law, contract, and other Government policies and rules governing data in general. Government may update policies at its discretion without publishing such updates. The Government will not be liable for any loss or damage from reliance on information contained in this document.
+  - Logo text (near bottom right): SMART NATION & DIGITAL GOVERNMENT OFFICE
+  - Small graphic: A geometric network/mesh icon near the logo.
+- Visual Elements:
+  - Blue gradient background transitioning from darker blue at the top to lighter blue at the bottom.
+  - Large, white, multi-line typographic headline aligned toward the right side.
+  - A small horizontal white dash near the top-right corner.
+  - A small block of white disclaimer text near the lower-middle area.
+  - A white network/mesh illustration logo at the lower-right with accompanying text.
+- Entities:
+  - Government body: Smart Nation & Digital Government Office (as indicated by the logo).
+  - Topic: Personal Data Protection Policies.
+  - Date: July 2021.
+  - No individuals or other brands shown.
+
+Relationship Mapping
+- The title is the focal point, indicating the document’s subject: government policies on personal data protection.
+- The disclaimer paragraph provides legal context about the document’s purpose and updates, positioned below the date to reassure readers.
+- The logo and “Smart Nation & Digital Government Office” branding establish authorship and authority, placed at the bottom-right to anchor the page.
+- The gradient background and minimalist design are stylistic choices to convey a professional, official tone, with the white text contrasting for readability.
+
+Search-Friendly Keywords
+- Government data protection policies
+- Personal data protection
+- Official publication
+- Smart Nation
+- Digital Government Office
+- July 2021
+- Public information document
+- Data governance policies
+- Government privacy policy cover
+
+Notes for indexing
+- Treat the document as a government policy/public information cover from July 2021.
+- Include branding: Smart Nation & Digital Government Office.
+- Index both the main topic (personal data protection) and the broader context (government data policies, public information disclaimer). from government-personal-data-protection-policies-jul21.pdf, page 0
+
+Chunk Text : High-Level Summary
+- A page from a government document detailing sections 34 to 36 of a Personal Data Protection policy. It outlines procedures for providing applicant access to personal data, timelines for compliance, and criteria for responding to requests.
+
+Contextual Analysis
+- Setting: Printed document page, likely from an official government policy or handbook on data protection.
+- Subjects: Policy text with section numbers (34, 35, 36) and subparagraphs (a, b, c; i, ii; etc.).
+- Intent: To specify rights and procedures for applicants requesting access to personal data, agency obligations, and how and when agencies should respond.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Section 34:
+    ""An agency shall provide an applicant access to the applicant's personal data requested under paragraph 27 on or after 1 July 2021 —
+    (a) by providing the applicant with a copy of the personal data and use and disclosure information in documentary form;
+    (b) if sub-paragraph (a) is impracticable in any particular case, by allowing the applicant a reasonable opportunity to examine the personal data and use and disclosure information; or
+    (c) in any other form requested by the applicant as is acceptable to the agency.""
+  - Section 35:
+    ""Subject to the requirement to comply with paragraph 27 as soon as reasonably possible, if an agency is unable to comply with that requirement within 30 days after receiving a request made in accordance with paragraph 36, the agency shall within that time inform the applicant in writing of the time by which it will respond to the request.""
+  - Section 36:
+    ""An agency shall only respond to requests which meet the following requirements:
+    (a) The request is made in writing and includes sufficient detail to enable the agency, with a reasonable effort, to identify –
+      (i) the applicant making the request; and
+      (ii) in relation to a request under paragraph 27, the personal data and use and disclosure information requested by the applicant.
+      and
+    (b) The request is sent to the agency —
+      (i) by sending the request to the agency's Quality Service Manager (or equivalent); or
+      (ii) in any other manner that is acceptable to the agency.""
+  - Footer: ""Government Personal Data Protection Policies | 21""
+
+- Visual Elements:
+  - Layout: Two-column-like structure with large blue section numbers (34, 35, 36) aligned left.
+  - Text: Dense, formal policy language, bullet-like subparagraphs labeled (a), (b), (c), and sub-items (i), (ii).
+  - Colors: Predominantly black text on white background; blue accent for section numbers; subtle blue gradient header at top.
+  - Typography: Serif-like body text with clear numeric section markers; standard legal document formatting.
+
+- Entities:
+  - Government policy document (data protection related).
+  - No people or brands present; no specific agency names beyond generic references (Quality Service Manager).
+
+Relationship Mapping
+- Structural relationships:
+  - Section 34 establishes the mechanism for providing access to personal data, with three methods (a: documentary copy, b: examination, c: other form).
+  - Section 35 describes timelines and notification if compliance cannot be met within 30 days.
+  - Section 36 sets prerequisites for valid requests and outlines how a request must be submitted and processed (in writing, sufficient detail, identification, where to send).
+- Functional flow:
+  - A request under paragraph 27 triggers Section 34 for access provision.
+  - If 34a cannot be fulfilled, 34b offers examination; if not possible, 34c accepts alternative form.
+  - If timelines cannot be met, 35 requires written notice of revised timing.
+  - To be eligible, a request must meet 36’s requirements and be properly directed to the agency (36b), possibly to the Quality Service Manager (36b(i)) or an acceptable method (36b(ii)).
+- Visual-to-text cues:
+  - Large blue numbers (34, 35, 36) guide the reader through sequential policy provisions.
+  - Subsections (a), (b), (c) and items (i), (ii) clarify granular steps for processing requests. from government-personal-data-protection-policies-jul21.pdf, page 20
+"
+What are the general obligations of a government agency regarding personal data policies?,"**Answer**
+
+- Agencies must implement up-to-date policies and processes that adhere to the provisions of the policy, including when transferring data to other organisations.
+- Agencies must implement processes to receive and address enquiries or feedback about their personal data policies and processing within a reasonable time.
+- Agencies must make information about their data processing policies and processes available through a privacy statement displayed on their digital services.
+- Agencies must allow individuals to seek clarification on the policies and processes relating to personal data processing through the agency’s Quality Service Manager (or equivalent).
+- Officers within agencies are reminded of their responsibilities and liabilities under the Public Sector (Governance) Act, including prohibitions on unauthorised access, use, disclosure, or retention of personal data, with potential criminal penalties and disciplinary action for non-compliance.
+
+Sources Used: Government Personal Data Protection Policies, 10; Government Personal Data Protection Policies, 26, 27, 28","
+Chunk Text : High-Level Summary
+- A formal policy page titled “General rules with Respect to Protection of Personal Data.” It lists four numbered rules (01–04) in a clean, two-column style, likely from a government document about personal data protection.
+
+Contextual Analysis
+- Setting: A professional document or policy handbook page, likely part of a larger booklet on Government Personal Data Protection Policies. The design uses a blue accent color and a minimalist layout.
+- Subjects: The four rules/ruleset for agencies regarding handling personal data.
+- Intent: To communicate official guidelines or obligations for agencies on policies and processes related to personal data protection and transparency.
+
+Detail Inventory
+- Text & OCR (exact phrasing as visible):
+  - Title: General rules with Respect to Protection of Personal Data
+  - Rule 01: An agency shall ensure that up-to-date policies and processes that adhere to all the provisions in this policy are implemented within the agency and when transferring data to any other organisation.
+  - Rule 02: An agency shall implement processes to receive and address, within a reasonable time, enquiries or feedback about the agency’s policies and processes relating to the processing of personal data.
+  - Rule 03: An agency shall make available information about its policies and processes with respect to the processing of personal data through a privacy statement to be displayed on its digital services.
+  - Rule 04: An agency shall allow an individual to seek clarification on the agency’s policies and processes relating to the processing of personal data through the agency’s Quality Service Manager (or equivalent).
+  - Footer text (small, at bottom of page): Government Personal Data Protection Policies | 10
+- Visual Elements:
+  - Layout: Two-column alignment with a vertical list of four numbered rules on the left, each preceded by a blue numeral (01–04) and a spacer line.
+  - Typography: Clean sans-serif font, blue color for numbers and title, black/dark text for body.
+  - Color accents: Blue hue used for numbers and heading; top edge features a gradient blue bar.
+  - Style: Minimalist, official/document-style; ample white space; page footer with organization name and page number.
+- Entities:
+  - Topic: Personal data protection policies.
+  - Organization type: Government/agency document.
+  - No person names or external brands appear.
+- Accessibility/Edge Details:
+  - Text is legible with clearly separated rules; no images beyond typography and header bar.
+  - Page number indicated (10), suggesting this is part of a multi-page document.
+
+Relationship Mapping
+- How elements relate:
+  - The title introduces the overarching theme of the four rules.
+  - Each rule (01–04) is a discrete policy directive addressing procedures: implementation of up-to-date policies, handling enquiries/feedback, publishing privacy information, and enabling individuals to seek clarification via a designated manager.
+  - The blue numerals and left alignment visually connect each rule as a numbered item in a sequence.
+  - The privacy statement (Rule 03) ties to digital services, indicating a relationship between policy documentation and online presence.
+  - The footer anchors the document as part of a broader policy collection (“Government Personal Data Protection Policies”) and provides a page reference.
+
+Search-Friendly Keywords
+- General rules, personal data protection, government policy, agency data processing, privacy statements, data handling procedures, enquiries and feedback, privacy policy display, quality service manager, digital services, data protection guidelines, governance, government policies. from government-personal-data-protection-policies-jul21.pdf, page 9
+
+Chunk Text : Table : |    |   0 | 1                                                                                                                                                                                                          |
+|---:|----:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  0 |  01 | An agency shall ensure that up-to-date policies and processes that adhere to all the provisions in this policy are implemented within the agency and when transferring data to any other organisation.     |
+|  1 |  02 | An agency shall implement processes to receive and address, within a reasonable time, enquiries or feedback about the agency's policies and processes relating to the processing of personal data.         |
+|  2 |  03 | An agency shall make available information about its policies and processes with respect to the processing of personal data through a privacy statement to be displayed on its digital services.           |
+|  3 |  04 | An agency shall allow an individual to seek clarification on the agency's policies and processes relating to the processing of personal data through the agency's Quality Service Manager (or equivalent). |
+Caption :  from government-personal-data-protection-policies-jul21.pdf, page 10
+
+Chunk Text : In addition, officers shall be mindful of their obligations set out in the Public Sector (Governance) Act, which criminalises the acts of knowing or reckless unauthorised disclosure of data, misuse of data for a gain to himself/other individual or for a harm or loss to another individual and knowing or reckless unauthorised re-identification of anonymised data. 51 
+
+An agency shall ensure that all their officers are informed of their responsibilities and liabilities (i.e. that they should not access, use, disclose or retain personal data for purposes other than the performance of their duties of employment, and that failure to comply may be criminal offence and may rise to disciplinary action against the officer). Government Personal Data Protection Policies   | **26** 
+
+--- end of page.page_number=26 ---
+
+## Annexes 
+
+Annex A 
+
+Collection, Use and Disclosure of Personal Data without Consent 
+
+Annex B 
+
+Additional Bases for Collection, Use and Disclosure of Personal Data Without Consent 
+
+Annex C 
+
+Exceptions from Access Requirement 
+
+Annex D 
+
+Exceptions from Correction Requirement 
+
+Government Personal Data Protection Policies   | **27** 
+
+--- end of page.page_number=27 ---
+
+## Annex A - Collection, Use and Disclosure of Personal Data without Consent 
+
+PART 1 - VITAL INTERESTS OF INDIVIDUALS
+
+01 
+
+- (1) Subject to sub-paragraph (2), the collection, use or disclosure (as the case may be) of personal data about an individual is necessary for any purpose which is clearly in the interests of the individual, and — 
+
+   - (a) consent for the collection, use or disclosure (as the case may be) cannot be obtained in a timely way; or 
+
+   - (b) the individual would not reasonably be expected to withhold consent. - (2) Where the agency collects, uses or discloses (as the case may be) personal data about the individual under sub-paragraph (1), the agency must, as soon as is practicable, notify the individual of the collection, use or disclosure (as the case may be) and the purpose for the collection, use or disclosure, as the case may be. 02 
+
+The collection, use or disclosure (as the case may be) of personal data about an individual is necessary to respond to an emergency that threatens the life, health or safety of the individual or another individual. Government Personal Data Protection Policies _(Annex A)_ | **28** 
+
+--- end of page.page_number=28 ---
+
+03 
+
+The collection, use or disclosure (as the case may be) of personal data about an individual, where — 
+
+- (a) consent for the collection, use or disclosure (as the case may be) cannot be obtained in a timely way; and 
+
+- (b) there are reasonable grounds to believe that the health or safety of the individual or another individual will be seriously affected. from government-personal-data-protection-policies-jul21.pdf, page 25,26,27,28
+"
+How can an individual seek clarification on how a government agency handles their personal data?,"**Answer**
+
+- An individual can seek clarification on the agency’s policies and processes relating to the processing of personal data through the agency’s Quality Service Manager (or equivalent).
+
+- This is stated in the policy under the section that describes how an agency shall allow an individual to seek clarification on its policies and processes via the Quality Service Manager (or equivalent).
+
+**Sources Used:** government-personal-data-protection-policies-jul21.pdf, Page 10","
+Chunk Text : 04 
+
+An agency shall allow an individual to seek clarification on the agency’s policies and processes relating to the processing of personal data through the agency’s Quality Service Manager (or equivalent). Government Personal Data Protection Policies   | **10** 
+
+--- end of page.page_number=10 ---
+
+## Collection, Use and Disclosure of Personal Data 
+
+Consent
+
+05 
+
+Before an agency collects, uses or discloses personal data, the agency shall check whether there are any laws governing or prohibiting such collection, use or disclosure. Subject to any such laws, the agency shall not: 
+
+(a) collect or use personal data, as the case may be, unless: 
+
+- i. such collection or use is for any of the purposes in Section 4 of the Public Sector (Governance) Act and to the extent required by any Ministerial Direction issued under the Act, and the agency that is collecting or using the personal data is a Singapore public sector agency as defined in Section 2 of the Act; 
+
+- ii. from government-personal-data-protection-policies-jul21.pdf, page 9,10
+
+Chunk Text : Table : |    |   0 | 1                                                                                                                                                                                                          |
+|---:|----:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  0 |  01 | An agency shall ensure that up-to-date policies and processes that adhere to all the provisions in this policy are implemented within the agency and when transferring data to any other organisation.     |
+|  1 |  02 | An agency shall implement processes to receive and address, within a reasonable time, enquiries or feedback about the agency's policies and processes relating to the processing of personal data.         |
+|  2 |  03 | An agency shall make available information about its policies and processes with respect to the processing of personal data through a privacy statement to be displayed on its digital services.           |
+|  3 |  04 | An agency shall allow an individual to seek clarification on the agency's policies and processes relating to the processing of personal data through the agency's Quality Service Manager (or equivalent). |
+Caption :  from government-personal-data-protection-policies-jul21.pdf, page 10
+
+Chunk Text : High-Level Summary
+- A page from a government document (likely on personal data protection) showing sections 30–33 withBlue page numbers and text blocks. It appears to be part of a formal policy or act discussing data privacy practices.
+
+Contextual Analysis
+- Setting: A scanned or digital page from a government policy manual or legislation, formatted with numbered sections and margin numbers. The page footer indicates a title “Government Personal Data Protection Policies” and a page number (20), suggesting this is part of a larger document.
+- Subjects: The text discusses procedures related to personal data, agency obligations, and consent, including what an agency may or must not disclose and how it should respond to data requests.
+- Intent: To communicate legal requirements and procedural guidance regarding personal data protection, access, and refusals by agencies.
+
+Detail Inventory
+- Text & OCR (exact strings shown as they appear):
+  - (c) reveal personal data about another individual;
+  - (d) reveal the identity of an individual who has provided personal data about another individual and the individual providing the personal data does not consent to the disclosure of his identity; or
+  - (e) be contrary to the national interest.
+  - 30 If an agency is able to provide the individual with the individual’s personal data and other information requested under paragraph 27 without providing the personal data and other information excluded under paragraphs 28, 29 and 31, the agency shall do so.
+  - 31 An agency shall not inform any individual under paragraph 27(b) that the agency has disclosed personal data about the individual to a law enforcement agency if the disclosure was made under any written law without the consent of the individual.
+  - 32 Where – (a) an individual makes a request under paragraph 27 to an agency on or after 1 July 2021; and (b) the agency, by reason of paragraphs 28 or 29, does not provide an individual with the individual’s personal data or other information requested under paragraph 27, the agency shall, within the time stated in paragraphs 27 and 35, and in accordance with the stated requirements in paragraph 33, notify the individual of the rejection.
+  - 33 Subject to paragraphs 28, 29 and 31, an agency shall respond to each request made to it under paragraph 27 on or after 1 July 2021 as accurately and completely as necessary and reasonably possible.
+  - Footer: Government Personal Data Protection Policies | 20
+- Visual Elements:
+  - Vertical blue page number style on the left (30, 31, 32, 33) in light blue.
+  - Clean, serif font typical of official documents.
+  - Page header or decorative blue gradient bar at top edge (not full header content shown).
+  - Dense text blocks with subpoints (a), (b) within section 32.
+- Entities:
+  - No specific people or brands named.
+  - Mentions: “paragraph 27,” “paragraph 28,” “paragraph 29,” “paragraph 31,” “paragraph 33,” “1 July 2021” date.
+  - Broad concepts: agency, personal data, disclosure, consent, national interest, law enforcement, rejection notification.
+- Colors: Primarily black text on white background with blue section numbers and a blue gradient at the top.
+
+Relationship Mapping
+- The blue numbers (30–33) anchor the sections, each containing procedural rules about handling personal data requests.
+- Section 30 describes the agency’s obligation to provide personal data if available and not excluded by certain paragraphs.
+- Section 31 restricts disclosure to law enforcement contexts without consent.
+- Section 32 outlines the process when an agency cannot provide data due to other paragraphs, including notification timelines and references to paragraph 33 for proper wording.
+- Section 33 mandates accurate and complete responses within the timelines, subject to other paragraphs.
+- The top blue bar and page footer indicate this is part of a formal, continuous policy document, likely organized by topic with cross-references to other sections (paragraphs 27–35).
+- Overall, this page defines rights and duties of agencies in handling requests for personal data under a national data protection framework, including timeframes, consent, and exceptions.
+
+If you need this converted into a more structured data format for a vector database (e.g., JSON with sections, text, and entities), I can generate a schema-ready version. from government-personal-data-protection-policies-jul21.pdf, page 19
+"
+When can a government agency collect or use personal data without an individual's consent?,"- A government agency may collect, use or disclose personal data without an individual’s consent in the following situations:
+
+  - When the collection or use is for any of the purposes in Section 4 of the Public Sector (Governance) Act and is to the extent required by any Ministerial Direction, and the agency collecting or using the data is a Singapore public sector agency (Consent section interpretation). (From Chunk 1)
+
+  - When the collection, use or disclosure is necessary for the purposes set out in Annex A, Part 1 (Vital Interests of Individuals), specifically:
+    - 01(1): The collection, use or disclosure is necessary for any purpose clearly in the interests of the individual, and either (a) consent cannot be obtained in a timely way, or (b) the individual would not reasonably be expected to withhold consent.
+    - 02: The collection, use or disclosure is necessary to respond to an emergency that threatens the life, health or safety of the individual or another individual. (From Chunk 2)
+
+  - Additionally, under Annex A Part 1, if sub-paragraph (1) is invoked, the agency must notify the individual as soon as practicable about the collection, use or disclosure and the purpose. (From Chunk 2)
+
+- Note: The policy also requires consideration of applicable laws and public-interest constraints, and there are other prerequisites in the Consent section (but the core non-consensual bases are the emergency/vital-interests provisions described above). (From Chunk 1 and Chunk 2)
+
+Sources Used:
+Government Personal Data Protection Policies, Page 15-16, 18; Annex A (Part 1), Page 28","
+Chunk Text : Withdrawal of Consent
+
+19 
+
+Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, and where the individual gives reasonable notice to the agency, the agency shall allow the individual to withdraw consent at any time, subject to legal or contractual restrictions or public interest requirements. On receipt of such notice, the agency shall inform the individual of the likely consequences of withdrawing his consent. Government Personal Data Protection Policies   | **15** 
+
+--- end of page.page_number=15 ---
+
+20 
+
+Subject to the requirements of the retention of personal data, if the agency allows the individual to withdraw consent to the collection, use or disclosure of personal data about the individual pursuant to paragraph 19, the agency shall cease collecting, using or disclosing the personal data, as the case may be, unless such collection, use or disclosure, as the case may be, without the consent of the individual is pursuant to paragraph 5. Purpose
+
+21 
+
+An agency shall collect, use or disclose personal data about an individual only for purposes: — 
+
+## (a) that: 
+
+   - (i) are aligned to the purposes for which a Ministerial Direction is issued under the Public Sector (Governance) Act; or 
+
+   - (ii) are authorised by law or required by order of court; or 
+
+   - (iii)are necessary in the public interest (including without limitation national interest); or 
+
+   - (iv)are permitted without consent by the exclusions in Annex A and Annex B and the collection, use or disclosure complies with all applicable legal obligations; or 
+
+   - (v) the individual has given, or is deemed to have given, consent to, and 
+
+- (b) that the individual has been informed of under paragraph 22, if applicable. Government Personal Data Protection Policies   | **16** 
+
+--- end of page.page_number=16 ---
+
+Notification of Purpose
+
+22 
+
+An agency shall inform the individual of: — 
+
+- (a) the purposes for the collection, use or disclosure of the personal data, as the case may be, on or before collecting the personal data; and 
+
+- (b) any other purpose of the use or disclosure of the personal data of which the individual has not been informed under paragraph (a), before the use or disclosure of the personal data for that purpose. 23 
+
+The requirement to inform the individual of the purposes shall not apply if: – 
+
+- (a) the individual is deemed to have consented to the collection, use or disclosure, as the case may be, for such purposes; or 
+
+- (b) the agency collects, uses or discloses the personal data without the express consent of the individual in accordance with paragraph 5. 24 
+
+Despite paragraph 23, an agency shall comply with paragraph 25 on or before collecting, using or disclosing personal data about an individual for the purpose of or in relation to the agency — 
+
+- (a) entering into an employment relationship with the individual or appointing the individual to any office; or 
+
+- (b) managing or terminating the employment relationship with or appointment of the individual. Government Personal Data Protection Policies   | **17** 
+
+--- end of page.page_number=17 ---
+
+25 
+
+For the purposes of paragraph 24, the agency shall inform the individual of the following: 
+
+- (a) the purpose for which the agency is collecting, using or disclosing (as the case may be) the personal data about the individual; 
+
+- (b) on request by the individual, the contact information of a person who is able to answer the individual’s questions about that collection, use or disclosure (as the case may be) on behalf of the agency. 26 
+
+An agency shall take reasonable and practical steps to keep up-to-date documentation of the purposes for which personal data is collected, used and disclosed. Government Personal Data Protection Policies   | **18** 
+
+--- end of page.page_number=18 ---
+
+## Access to and Correction of Personal Data 
+
+Access to Personal Data
+
+27 
+
+Subject to paragraphs 28, 29 and 31, on request of an individual, an agency shall, as soon as reasonably possible, provide the individual with: — 
+
+- (a) personal data about the individual that the individual has earlier provided to the agency; and 
+
+- (b) information about the ways in which the personal data referred to in paragraph (a) has been or may have been used or disclosed by the agency in the last 12 months prior to the date of the request. 28 
+
+An agency shall not be required to comply with paragraph 27 if any of the exceptions in Annex C apply. from government-personal-data-protection-policies-jul21.pdf, page 14,15,16,17,18
+
+Chunk Text : High-Level Summary
+- A page from a governmental document on Personal Data Protection, specifically focusing on Consent. 
+- The page outlines conditions under which an agency may collect, use, or disclose personal data.
+
+Contextual Analysis
+- Setting: A formal policy document or booklet, likely a government resource on data protection.
+- Subjects: The section titled “Consent” within a larger text about collection, use, and disclosure of personal data.
+- Intent: To specify legal or regulatory conditions and prohibitions related to collecting or using personal data without consent.
+
+Detail Inventory
+- Text & OCR (verbatim snippets as they appear):
+  - Title area: “Collection, Use and Disclosure of Personal Data”
+  - Section header: “Consent”
+  - Page indicator: “05” (left column)
+  - Paragraph start: “Before an agency collects, uses or discloses personal data, the agency shall check whether there are any laws governing or prohibiting such collection, use or disclosure. Subject to any such laws, the agency shall not:”
+  - Enumerated items (a) through (v) with roman numerals:
+    - i. such collection or use is for any of the purposes in Section 4 of the Public Sector (Governance) Act and to the extent required by any Ministerial Direction issued under the Act, and the agency that is collecting or using the personal data is a Singapore public sector agency as defined in Section 2 of the Act;
+    - ii. such collection or use is authorised by any law or required by order of court;
+    - iii. such collection or use is necessary in the public interest (including without limitation national interest);
+    - iv. such collection or use is permitted without consent by the exclusions in Annex A or Part I of Annex B and complies with all applicable legal obligations; or
+    - v. the individual that the personal data relates to, gives, or is deemed to give, his consent to the collection or use (as applicable) of his personal data by the agency for the purposes set out in paragraph 21;
+- Visual Elements:
+  - Clean, professional layout typical of policy documents.
+  - Blue color scheme with a gradient bar for the section header “Consent.”
+  - Left-aligned page numbers and section numbers.
+  - Small footer text with document title and page number “11.”
+- Entities:
+  - Government policy document on Personal Data Protection.
+  - References to Singapore public sector framework: Public Sector (Governance) Act, Ministerial Direction, Annexes A and B, Annex B.
+  - Section 21 reference within the enumerated items.
+
+Relationship Mapping
+- The main heading “Collection, Use and Disclosure of Personal Data” sets the broader topic.
+- The subheading “Consent” narrows to legal prerequisites for data handling.
+- The numbered items (i–v) delineate specific permissible or required conditions under which agencies may collect or use personal data without violating policy.
+- The introductory sentence connects the obligation to check for applicable laws before data handling, with the caveat that laws may prohibit certain actions.
+- The page appears as page 11 of the document, indicating it is part of a longer sequence of policies or guidelines.
+
+Notes for indexing and retrieval
+- Keywords: consent, personal data, data collection, data use, data disclosure, government policy, Singapore, Public Sector (Governance) Act, Ministerial Direction, Annex A, Annex B, public interest, legal obligations, authorization, court order, data protection.
+- Useful search phrases: “Consent requirements for personal data Singapore,” “Public Sector Governance Act data collection,” “annex exclusions consent personal data,” “government personal data protection policies.” from government-personal-data-protection-policies-jul21.pdf, page 10
+
+Chunk Text : High-Level Summary
+- A page from a government document labeled “Annex A - Collection, Use and Disclosure of Personal Data without Consent” focusing on the “Part 1 - Vital Interests of Individuals.” It appears to be part of a policy or privacy manual outlining legal requirements for collecting, using, or disclosing personal data without consent.
+
+Contextual Analysis
+- Setting: A formal document or booklet page, likely from a government privacy or data protection policy.
+- Subjects: Government policy text about personal data collection without consent; section headings and numbered paragraphs.
+- Intent: To convey legal conditions and requirements for processing personal data in emergencies or vital-interest scenarios.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Title: Annex A - Collection, Use and Disclosure of Personal Data without Consent
+  - Subheading: PART 1 - VITAL INTERESTS OF INDIVIDUALS
+  - Section numbers and text:
+    - 01 (1) Subject to sub-paragraph (2), the collection, use or disclosure (as the case may be) of personal data about an individual is necessary for any purpose which is clearly in the interests of the individual, and —
+      - (a) consent for the collection, use or disclosure (as the case may be) cannot be obtained in a timely way; or
+      - (b) the individual would not reasonably be expected to withhold consent.
+    - (2) Where the agency collects, uses or discloses (as the case may be) personal data about the individual under sub-paragraph (1), the agency must, as soon as is practicable, notify the individual of the collection, use or disclosure (as the case may be) and the purpose for the collection, use or disclosure, as the case may be.
+    - 02 The collection, use or disclosure (as the case may be) of personal data about an individual is necessary to respond to an emergency that threatens the life, health or safety of the individual or another individual.
+  - Footer text: Government Personal Data Protection Policies (Annex A) [page] 28
+- Visual Elements:
+  - A clean, professional layout with a blue gradient header at the top.
+  - Grey ribbon-like section header for PART 1 - VITAL INTERESTS OF INDIVIDUALS.
+  - Two-column style with section numbers (01, 02) and dense paragraph text.
+  - Subtle typographic emphasis (bold headings, smaller body text).
+- Entities:
+  - No individuals or brands visible.
+  - References to government privacy policy and Annex A.
+  - Page number 28.
+
+Relationship Mapping
+- The header “Annex A” introduces a policy on collection, use, and disclosure without consent.
+- PART 1 focuses specifically on vital interests of individuals.
+- Paragraph 01 outlines conditions under which data collection/use/disclosure is necessary without consent, including timeliness and expectation factors.
+- Paragraph 02 specifies notification requirements when data is collected/used/disclosed under sub-paragraph (1).
+- Paragraph 02 (emergency) states necessity to respond to emergencies threatening life/health/safety.
+- The footer identifies the document as part of Government Personal Data Protection Policies (Annex A) and the page number, indicating this is a formal standard or guideline.
+
+Search-Friendly Keywords
+- Annex A, collection without consent, personal data, data protection, vital interests, emergency, government policy, privacy, use and disclosure, notification, agency, health and safety, life-threatening, withhold consent, timeliness. from government-personal-data-protection-policies-jul21.pdf, page 27
+"
+What conditions must an agency meet before collecting personal data with an individual's express consent?,"- The agency must obtain express consent from the individual pursuant to paragraph 5, and must do so at or before the time of processing.
+- The agency must ensure that the consent is not obtained through deception or by providing misleading or incomplete information.
+- The consent must be obtained directly from the individual or from any person validly acting on behalf of the individual.
+- The agency should not require consent beyond what is reasonably necessary to supply the product or service or to administer the public programme or scheme as a condition of supply or administration.
+
+Sources Used: government-personal-data-protection-policies-jul21.pdf (page 12)","
+Chunk Text : High-Level Summary
+- The image is a page from a government document detailing personal data consent policies. It includes numbered sections (08–12) and a highlighted subsection titled “Deemed Consent,” with formal text outlining conditions under which consent is or isn’t obtained and how personal data may be used.
+
+Contextual Analysis
+- Setting: A formal, printed policy document (likely a government or regulatory report) with a clean layout, blue accents, and section numbers along the left margin.
+- Subjects: The document text about express consent, deemed consent, and related procedures for personal data collection, use, and disclosure.
+- Intent: To convey legal or policy requirements for obtaining and deeming consent for personal data processing, including conditions and exceptions.
+
+Detail Inventory
+- Text & OCR (as visible):
+  - Section numbers and headers:
+    - 08: “Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, the agency shall not obtain the consent through deception or by providing misleading or incomplete information.”
+    - 09: “Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, the agency shall obtain consent directly from the individual or any person validly acting on behalf of that individual.”
+    - Deemed Consent (header with a gradient blue banner)
+    - 10: “An individual is deemed to consent to the collection, use or disclosure of personal data about the individual by an agency for a purpose if: — (a) the individual, without actually giving consent, voluntarily provides the personal data to the agency for that purpose; and (b) it is reasonable that the individual would voluntarily provide the data.”
+    - 11: “If an individual gives, or is deemed to have given, consent to the disclosure of personal data about the individual by one agency to another agency or NGE for a particular purpose, the individual is deemed to consent to the collection, use or disclosure of the personal data for that particular purpose by that other agency or NGE.”
+    - 12: “Without prejudice to paragraph 11 and subject to paragraph 18, an individual (P) who provides personal data to an agency (A) with a view to P entering into a contract with A is deemed to consent to the following where reasonably necessary for the conclusion of the contract between P and A: (a) the disclosure of that personal data by A to another agency or NGE (such agency or NGE referred to as “B”); (b) the collection and use of that personal data by B; (c) the disclosure of that personal data by B to another agency or NGE.”
+  - Bottom footer: “Government Personal Data Protection Policies  |  13”
+- Visual Elements:
+  - Left-aligned blue section numbers (08, 09, 10, 11, 12) with a clean sans-serif font.
+  - A gradient blue banner with the title “Deemed Consent.”
+  - Minimalistic, professional layout with ample white space.
+  - Blue color accents used for emphasis (numbers, header bar, footer text).
+- Entities:
+  - Mentions of agencies, personal data, consent concepts (express consent, deemed consent), and terms like NGE (likely a government entity).
+  - No identifiable people or brands depicted.
+
+Relationship Mapping
+- The page presents a hierarchical structure:
+  - 08 and 09 discuss requirements for express consent (how it must be obtained and from whom).
+  - The Deemed Consent section (title banner) introduces a distinct concept where consent is inferred under certain conditions.
+  - Section 10 defines deemed consent criteria for collection, use, or disclosure.
+  - Section 11 extends deemed consent to cross-agency disclosures between A and B or NGE.
+  - Section 12 covers scenarios involving pre-contract data submission and subsequent data sharing/processing necessary to fulfill a contract, including disclosures to other agencies or NGEs.
+- The visual elements reinforce the progression: numbered sections followed by a clearly highlighted Deemed Consent section, indicating a shift from explicit consent requirements to conditions where consent is legally inferred.
+
+Notes for indexing
+- Keywords: personal data, consent, express consent, deemed consent, agency, disclosure, collection, use, NGE, contract, government policy, data protection, privacy.
+- Useful search queries: “deemed consent personal data government policy,” “express consent requirements for agencies,” “cross-agency data disclosure consent,” “government personal data protection policies page 13.” from government-personal-data-protection-policies-jul21.pdf, page 12
+
+Chunk Text : High-Level Summary
+- The image appears to be a page from a formal document or policy report titled ""Notification of Purpose."" It presents sections numbered 22, 23, and 24, each containing formal statements about informing individuals and conditions under which information may be collected, used, or disclosed. The page includes a footer indicating it is from a Government Personal Data Protection Policies document, page 17.
+
+Contextual Analysis
+- Setting: A printed or PDF-style policy document, likely part of a data protection or privacy manual.
+- Subjects: Textual content describing legal/administrative requirements for notifying individuals about purposes of personal data collection and related conditions.
+- Intent: To communicate procedures and conditions for informing individuals about the purposes for data collection and the agency’s handling of personal data.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Header: Notification of Purpose
+  - Left margin numbers: 22, 23, 24 (in blue)
+  - Section 22: 
+    An agency shall inform the individual of: —
+    (a) the purposes for the collection, use or disclosure of the personal data, as the case may be, on or before collecting the personal data; and
+    (b) any other purpose of the use or disclosure of the personal data of which the individual has not been informed under paragraph (a), before the use or disclosure of the personal data for that purpose.
+  - Section 23:
+    The requirement to inform the individual of the purposes shall not apply if: —
+    (a) the individual is deemed to have consented to the collection, use or disclosure, as the case may be, for such purposes; or
+    (b) the agency collects, uses or discloses the personal data without the express consent of the individual in accordance with paragraph 5.
+  - Section 24:
+    Despite paragraph 23, an agency shall comply with paragraph 25 on or before collecting, using or disclosing personal data about an individual for the purpose of or in relation to the agency —
+    (a) entering into an employment relationship with the individual or appointing the individual to any office; or
+    (b) managing or terminating the employment relationship with or appointment of the individual.
+  - Footer: Government Personal Data Protection Policies | 17
+- Visual Elements:
+  - Clean, professional layout with a blue gradient header banner reading ""Notification of Purpose.""
+  - Left-aligned, blue numbered section markers (22, 23, 24) with body text in black.
+  - Minimalistic typographic style typical of government documents.
+- Entities:
+  - No individuals or brands aside from generic agency and government language.
+  - Mentions generic ""agency"" and ""Government Personal Data Protection Policies.""
+
+Relationship Mapping
+- The blue section numbers (22–24) introduce a sequential set of rules about informing individuals of purposes.
+- Each section builds on the concept of informing at collection and conditions under which such informing is not required or overridden.
+- The header “Notification of Purpose” sets the overarching topic; the body paragraphs provide subconditions, exceptions, and cross-references to other paragraphs (e.g., paragraph 5, paragraph 25) in the document.
+- The footer ties the page to a larger policy document, indicating this page is part of a structured government policy on personal data protection.
+
+Notes for indexing/search
+- Keywords: notification of purpose, personal data, collection, use, disclosure, consent, government policy, data protection, privacy, employment relationship, agency.
+- Potential queries: “government personal data protection policies notification of purpose,” “informing individuals about purposes of data collection,” “consent exceptions data privacy,” “employment data collection policy.” from government-personal-data-protection-policies-jul21.pdf, page 16
+
+Chunk Text : the individual that the personal data relates to, gives, or is deemed to give, his consent to the disclosure of his personal data by the agency for the purposes set out in paragraph 21. Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, the agency shall obtain the consent at or before the time of processing. Where the agency wants to use data for a purpose not previously identified, consent to the use for that purpose may be obtained after the data is collected but before use. Where the data collected may be shared with another agency for another function or purpose, the agency shall notify the individual as such at the point of collection. 07 
+
+Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, the agency shall not, as a condition of the supply of a product or service or the administration of a public programme or scheme, require an individual to consent to the collection, use or disclosure of personal data about the individual beyond what is reasonable to supply the product or service to the individual, or to administer the public programme or scheme. Government Personal Data Protection Policies   | **12** 
+
+--- end of page.page_number=12 ---
+
+08 
+
+Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, the agency shall not obtain the consent through deception or by providing misleading or incomplete information. 09 
+
+Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, the agency shall obtain consent directly from the individual or any person validly acting on behalf of that individual. Deemed Consent
+
+10 
+
+An individual is deemed to consent to the collection, use or disclosure of personal data about the individual by an agency for a purpose if: — 
+
+- (a) the individual, without actually giving consent, voluntarily provides the personal data to the agency for that purpose; and 
+
+(b) it is reasonable that the individual would voluntarily provide the data. 11 
+
+If an individual gives, or is deemed to have given, consent to the disclosure of personal data about the individual by one agency to another agency or a nonGovernment entity (NGE) for a particular purpose, the individual is deemed to consent to the collection, use or disclosure of the personal data for that particular purpose by that other agency or NGE. 12 
+
+Without prejudice to paragraph 11 and subject to paragraph 18, an individual (P) who provides personal data to an agency (A) with a view to P entering into a contract with A is deemed to consent to the following where reasonably necessary for the conclusion of the contract between P and A: 
+
+- (a) the disclosure of that personal data by A to another agency or NGE (such agency or NGE referred to as “B”); 
+
+- (b) the collection and use of that personal data by B; 
+
+- (c) the disclosure of that personal data by B to another agency or NGE. Government Personal Data Protection Policies   | **13** 
+
+--- end of page.page_number=13 ---
+
+13 
+
+Where an agency collects personal data disclosed to it by B under paragraph 12(c), both paragraphs 12(b) and (c) apply to the agency as if the personal data were disclosed by A to the agency under paragraph 12(a). 14 
+
+Paragraphs 12 and 13 apply to personal data provided before 1 July 2021 by an individual to an agency with a view to the individual entering into a contract with the agency — 
+
+- (a) on or after 1 July 2021; or 
+
+- (b) which contract was entered into before 1 July 2021 and remains in force on that date (i.e. 1 July 2021), 
+
+as if paragraphs 12 and 13 – 
+
+- (c) were in force when the personal data was so provided; and 
+
+- (d) had continued in force until 1 July 2021. 15 
+
+Without limiting paragraph 11 and subject to paragraph 18, an individual (P) who enters into a contract with an agency (A) and provides personal data to A pursuant or in relation to that contract is deemed to consent to the following: 
+
+- (a) the disclosure of that personal data by A to another agency or NGE (such agency or NGE referred to as “B”), where the disclosure is reasonably necessary — 
+
+   - (i) for the performance of the contract between P and A; or 
+
+   - (ii) for the conclusion or performance of a contract between A and B which is entered into at P’s request, or which a reasonable person would consider to be in P’s interest; 
+
+- (b) the collection and use of that personal data by B, where the collection and use are reasonably necessary for any purpose mentioned in paragraph (a); 
+
+- (c) the disclosure of that personal data by B to another agency or NGE, where the disclosure is reasonably necessary for any purpose mentioned in paragraph (a). Government Personal Data Protection Policies   | **14** 
+
+--- end of page.page_number=14 ---
+
+16 
+
+Where an agency collects personal data disclosed to it by B under paragraph 15(c), both paragraphs 15(b) and (c) apply to the agency as if the personal data were disclosed by A to the agency under paragraph 15(a). 17 
+
+Paragraphs 15 and 16 apply to personal data provided before 1 July 2021 by an individual to an agency in relation to a contract that the individual entered into before that date with the agency, and which remains in force on that date, as if paragraphs 15 and 16 — 
+
+- (a) were in force when the personal data was so provided; and 
+
+- (b) had continued in force until 1 July 2021. 18 
+
+Paragraphs 12, 13, 14, 15, 16 and 17 do not affect any obligation under the contract between P and A that specifies or restricts — 
+
+- (a) the personal data provided by P that A may disclose to another agency or NGE; or 
+
+- (b) the purposes for which A may disclose the personal data provided by P to another agency or NGE. from government-personal-data-protection-policies-jul21.pdf, page 11,12,13,14
+"
+"What is ""deemed consent"" under the government's data protection policies?","**Answer:**
+
+“Deemed consent” in the Government Personal Data Protection Policies refers to situations where an individual’s consent to the collection, use, or disclosure of their personal data is considered to exist without the individual explicitly providing it. This can occur when:
+- the individual voluntarily provides the data for a stated purpose and it is reasonable to assume they would do so (consent by voluntary provision),
+- or when consent is implied for cross-agency disclosures or for data processing necessary to fulfill a contract (consent deemed for specific purposes, including transfers to other agencies or non-government entities), as set out in the deemed consent sections (e.g., paragraphs 10–12, and related provisions in paragraphs 11–12, 15–16, etc.).
+
+Key aspects from the policy indicate that deemed consent can apply to:
+- collection, use, or disclosure for a stated purpose when the individual provides data voluntarily (without an explicit affirmative act),
+- disclosure between agencies or to an NGE for a particular purpose, where the individual is deemed to consent to subsequent collection, use, or disclosure by the other entity for that purpose, and
+- contractual contexts where data provided to an agency in connection with a contract may be disclosed or processed as reasonably necessary to conclude or perform the contract, including disclosures to other agencies or NGEs.
+
+Sources Used: government-personal-data-protection-policies-jul21.pdf (Pages 12–14, 42)","
+Chunk Text : High-Level Summary
+- The image is a page from a government document detailing personal data consent policies. It includes numbered sections (08–12) and a highlighted subsection titled “Deemed Consent,” with formal text outlining conditions under which consent is or isn’t obtained and how personal data may be used.
+
+Contextual Analysis
+- Setting: A formal, printed policy document (likely a government or regulatory report) with a clean layout, blue accents, and section numbers along the left margin.
+- Subjects: The document text about express consent, deemed consent, and related procedures for personal data collection, use, and disclosure.
+- Intent: To convey legal or policy requirements for obtaining and deeming consent for personal data processing, including conditions and exceptions.
+
+Detail Inventory
+- Text & OCR (as visible):
+  - Section numbers and headers:
+    - 08: “Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, the agency shall not obtain the consent through deception or by providing misleading or incomplete information.”
+    - 09: “Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, the agency shall obtain consent directly from the individual or any person validly acting on behalf of that individual.”
+    - Deemed Consent (header with a gradient blue banner)
+    - 10: “An individual is deemed to consent to the collection, use or disclosure of personal data about the individual by an agency for a purpose if: — (a) the individual, without actually giving consent, voluntarily provides the personal data to the agency for that purpose; and (b) it is reasonable that the individual would voluntarily provide the data.”
+    - 11: “If an individual gives, or is deemed to have given, consent to the disclosure of personal data about the individual by one agency to another agency or NGE for a particular purpose, the individual is deemed to consent to the collection, use or disclosure of the personal data for that particular purpose by that other agency or NGE.”
+    - 12: “Without prejudice to paragraph 11 and subject to paragraph 18, an individual (P) who provides personal data to an agency (A) with a view to P entering into a contract with A is deemed to consent to the following where reasonably necessary for the conclusion of the contract between P and A: (a) the disclosure of that personal data by A to another agency or NGE (such agency or NGE referred to as “B”); (b) the collection and use of that personal data by B; (c) the disclosure of that personal data by B to another agency or NGE.”
+  - Bottom footer: “Government Personal Data Protection Policies  |  13”
+- Visual Elements:
+  - Left-aligned blue section numbers (08, 09, 10, 11, 12) with a clean sans-serif font.
+  - A gradient blue banner with the title “Deemed Consent.”
+  - Minimalistic, professional layout with ample white space.
+  - Blue color accents used for emphasis (numbers, header bar, footer text).
+- Entities:
+  - Mentions of agencies, personal data, consent concepts (express consent, deemed consent), and terms like NGE (likely a government entity).
+  - No identifiable people or brands depicted.
+
+Relationship Mapping
+- The page presents a hierarchical structure:
+  - 08 and 09 discuss requirements for express consent (how it must be obtained and from whom).
+  - The Deemed Consent section (title banner) introduces a distinct concept where consent is inferred under certain conditions.
+  - Section 10 defines deemed consent criteria for collection, use, or disclosure.
+  - Section 11 extends deemed consent to cross-agency disclosures between A and B or NGE.
+  - Section 12 covers scenarios involving pre-contract data submission and subsequent data sharing/processing necessary to fulfill a contract, including disclosures to other agencies or NGEs.
+- The visual elements reinforce the progression: numbered sections followed by a clearly highlighted Deemed Consent section, indicating a shift from explicit consent requirements to conditions where consent is legally inferred.
+
+Notes for indexing
+- Keywords: personal data, consent, express consent, deemed consent, agency, disclosure, collection, use, NGE, contract, government policy, data protection, privacy.
+- Useful search queries: “deemed consent personal data government policy,” “express consent requirements for agencies,” “cross-agency data disclosure consent,” “government personal data protection policies page 13.” from government-personal-data-protection-policies-jul21.pdf, page 12
+
+Chunk Text : the individual that the personal data relates to, gives, or is deemed to give, his consent to the disclosure of his personal data by the agency for the purposes set out in paragraph 21. Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, the agency shall obtain the consent at or before the time of processing. Where the agency wants to use data for a purpose not previously identified, consent to the use for that purpose may be obtained after the data is collected but before use. Where the data collected may be shared with another agency for another function or purpose, the agency shall notify the individual as such at the point of collection. 07 
+
+Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, the agency shall not, as a condition of the supply of a product or service or the administration of a public programme or scheme, require an individual to consent to the collection, use or disclosure of personal data about the individual beyond what is reasonable to supply the product or service to the individual, or to administer the public programme or scheme. Government Personal Data Protection Policies   | **12** 
+
+--- end of page.page_number=12 ---
+
+08 
+
+Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, the agency shall not obtain the consent through deception or by providing misleading or incomplete information. 09 
+
+Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, the agency shall obtain consent directly from the individual or any person validly acting on behalf of that individual. Deemed Consent
+
+10 
+
+An individual is deemed to consent to the collection, use or disclosure of personal data about the individual by an agency for a purpose if: — 
+
+- (a) the individual, without actually giving consent, voluntarily provides the personal data to the agency for that purpose; and 
+
+(b) it is reasonable that the individual would voluntarily provide the data. 11 
+
+If an individual gives, or is deemed to have given, consent to the disclosure of personal data about the individual by one agency to another agency or a nonGovernment entity (NGE) for a particular purpose, the individual is deemed to consent to the collection, use or disclosure of the personal data for that particular purpose by that other agency or NGE. 12 
+
+Without prejudice to paragraph 11 and subject to paragraph 18, an individual (P) who provides personal data to an agency (A) with a view to P entering into a contract with A is deemed to consent to the following where reasonably necessary for the conclusion of the contract between P and A: 
+
+- (a) the disclosure of that personal data by A to another agency or NGE (such agency or NGE referred to as “B”); 
+
+- (b) the collection and use of that personal data by B; 
+
+- (c) the disclosure of that personal data by B to another agency or NGE. Government Personal Data Protection Policies   | **13** 
+
+--- end of page.page_number=13 ---
+
+13 
+
+Where an agency collects personal data disclosed to it by B under paragraph 12(c), both paragraphs 12(b) and (c) apply to the agency as if the personal data were disclosed by A to the agency under paragraph 12(a). 14 
+
+Paragraphs 12 and 13 apply to personal data provided before 1 July 2021 by an individual to an agency with a view to the individual entering into a contract with the agency — 
+
+- (a) on or after 1 July 2021; or 
+
+- (b) which contract was entered into before 1 July 2021 and remains in force on that date (i.e. 1 July 2021), 
+
+as if paragraphs 12 and 13 – 
+
+- (c) were in force when the personal data was so provided; and 
+
+- (d) had continued in force until 1 July 2021. 15 
+
+Without limiting paragraph 11 and subject to paragraph 18, an individual (P) who enters into a contract with an agency (A) and provides personal data to A pursuant or in relation to that contract is deemed to consent to the following: 
+
+- (a) the disclosure of that personal data by A to another agency or NGE (such agency or NGE referred to as “B”), where the disclosure is reasonably necessary — 
+
+   - (i) for the performance of the contract between P and A; or 
+
+   - (ii) for the conclusion or performance of a contract between A and B which is entered into at P’s request, or which a reasonable person would consider to be in P’s interest; 
+
+- (b) the collection and use of that personal data by B, where the collection and use are reasonably necessary for any purpose mentioned in paragraph (a); 
+
+- (c) the disclosure of that personal data by B to another agency or NGE, where the disclosure is reasonably necessary for any purpose mentioned in paragraph (a). Government Personal Data Protection Policies   | **14** 
+
+--- end of page.page_number=14 ---
+
+16 
+
+Where an agency collects personal data disclosed to it by B under paragraph 15(c), both paragraphs 15(b) and (c) apply to the agency as if the personal data were disclosed by A to the agency under paragraph 15(a). 17 
+
+Paragraphs 15 and 16 apply to personal data provided before 1 July 2021 by an individual to an agency in relation to a contract that the individual entered into before that date with the agency, and which remains in force on that date, as if paragraphs 15 and 16 — 
+
+- (a) were in force when the personal data was so provided; and 
+
+- (b) had continued in force until 1 July 2021. 18 
+
+Paragraphs 12, 13, 14, 15, 16 and 17 do not affect any obligation under the contract between P and A that specifies or restricts — 
+
+- (a) the personal data provided by P that A may disclose to another agency or NGE; or 
+
+- (b) the purposes for which A may disclose the personal data provided by P to another agency or NGE. from government-personal-data-protection-policies-jul21.pdf, page 11,12,13,14
+
+Chunk Text : Introduced new provision on deemed consent bycontractual necessityb. from government-personal-data-protection-policies-jul21.pdf, page 42
+"
+Can an individual withdraw their consent for an agency to use their personal data?,"**Answer:**
+
+Yes. The documents describe that an individual can withdraw their express consent to the collection, use, or disclosure of their personal data, and the agency must respond accordingly. Specifically:
+- Paragraph 19 (Withdrawal of Consent): If an individual gives reasonable notice to withdraw consent, the agency must allow withdrawal at any time, subject to legal or contractual restrictions or public interest requirements, and must inform the individual of the likely consequences of withdrawing consent. This is described in the sections labeled under “Withdrawal of Consent” (pages around 15–18 in the policy).
+
+Additionally:
+- Paragraph 20 states that if consent is withdrawn (per paragraph 19) the agency shall cease collecting, using, or disclosing the personal data, unless such collection, use, or disclosure without consent is permitted under paragraph 5.
+
+- Paragraph 21 outlines the purposes for which an agency may collect, use, or disclose personal data, reinforcing that processing should be for authorized purposes, which contextualizes how withdrawal can affect ongoing data handling.
+
+In short: yes, you may withdraw, and the agency should stop processing your data unless there is a lawful exception.
+
+Sources Used: government-personal-data-protection-policies-jul21.pdf, page 15; government-personal-data-protection-policies-jul21.pdf, page 16","
+Chunk Text : Withdrawal of Consent
+
+19 
+
+Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, and where the individual gives reasonable notice to the agency, the agency shall allow the individual to withdraw consent at any time, subject to legal or contractual restrictions or public interest requirements. On receipt of such notice, the agency shall inform the individual of the likely consequences of withdrawing his consent. Government Personal Data Protection Policies   | **15** 
+
+--- end of page.page_number=15 ---
+
+20 
+
+Subject to the requirements of the retention of personal data, if the agency allows the individual to withdraw consent to the collection, use or disclosure of personal data about the individual pursuant to paragraph 19, the agency shall cease collecting, using or disclosing the personal data, as the case may be, unless such collection, use or disclosure, as the case may be, without the consent of the individual is pursuant to paragraph 5. Purpose
+
+21 
+
+An agency shall collect, use or disclose personal data about an individual only for purposes: — 
+
+## (a) that: 
+
+   - (i) are aligned to the purposes for which a Ministerial Direction is issued under the Public Sector (Governance) Act; or 
+
+   - (ii) are authorised by law or required by order of court; or 
+
+   - (iii)are necessary in the public interest (including without limitation national interest); or 
+
+   - (iv)are permitted without consent by the exclusions in Annex A and Annex B and the collection, use or disclosure complies with all applicable legal obligations; or 
+
+   - (v) the individual has given, or is deemed to have given, consent to, and 
+
+- (b) that the individual has been informed of under paragraph 22, if applicable. Government Personal Data Protection Policies   | **16** 
+
+--- end of page.page_number=16 ---
+
+Notification of Purpose
+
+22 
+
+An agency shall inform the individual of: — 
+
+- (a) the purposes for the collection, use or disclosure of the personal data, as the case may be, on or before collecting the personal data; and 
+
+- (b) any other purpose of the use or disclosure of the personal data of which the individual has not been informed under paragraph (a), before the use or disclosure of the personal data for that purpose. 23 
+
+The requirement to inform the individual of the purposes shall not apply if: – 
+
+- (a) the individual is deemed to have consented to the collection, use or disclosure, as the case may be, for such purposes; or 
+
+- (b) the agency collects, uses or discloses the personal data without the express consent of the individual in accordance with paragraph 5. 24 
+
+Despite paragraph 23, an agency shall comply with paragraph 25 on or before collecting, using or disclosing personal data about an individual for the purpose of or in relation to the agency — 
+
+- (a) entering into an employment relationship with the individual or appointing the individual to any office; or 
+
+- (b) managing or terminating the employment relationship with or appointment of the individual. Government Personal Data Protection Policies   | **17** 
+
+--- end of page.page_number=17 ---
+
+25 
+
+For the purposes of paragraph 24, the agency shall inform the individual of the following: 
+
+- (a) the purpose for which the agency is collecting, using or disclosing (as the case may be) the personal data about the individual; 
+
+- (b) on request by the individual, the contact information of a person who is able to answer the individual’s questions about that collection, use or disclosure (as the case may be) on behalf of the agency. 26 
+
+An agency shall take reasonable and practical steps to keep up-to-date documentation of the purposes for which personal data is collected, used and disclosed. Government Personal Data Protection Policies   | **18** 
+
+--- end of page.page_number=18 ---
+
+## Access to and Correction of Personal Data 
+
+Access to Personal Data
+
+27 
+
+Subject to paragraphs 28, 29 and 31, on request of an individual, an agency shall, as soon as reasonably possible, provide the individual with: — 
+
+- (a) personal data about the individual that the individual has earlier provided to the agency; and 
+
+- (b) information about the ways in which the personal data referred to in paragraph (a) has been or may have been used or disclosed by the agency in the last 12 months prior to the date of the request. 28 
+
+An agency shall not be required to comply with paragraph 27 if any of the exceptions in Annex C apply. from government-personal-data-protection-policies-jul21.pdf, page 14,15,16,17,18
+
+Chunk Text : High-Level Summary
+- A page from a government document titled “Withdrawal of Consent” appears, focusing on sections 16–19 of personal data protection policies. It presents legal text related to how agencies handle personal data, consent, and obligations under the contract with P or A.
+
+Contextual Analysis
+- Setting: A formal government or regulatory document, likely a policy or act, laid out in a structured legal format.
+- Subjects: Sections 16 through 19, with subsections (a), (b), etc., and a highlighted banner for “Withdrawal of Consent.”
+- Intent: To specify conditions under which agencies may collect, use, or withdraw consent for personal data, and to outline related obligations and consequences.
+
+Detail Inventory
+- Text & OCR (as visible):
+  - Section 16: “Where an agency collects personal data disclosed to it by B under paragraph 15(c), both paragraphs 15(b) and (c) apply to the agency as if the personal data were disclosed by A to the agency under paragraph 15(a).”
+  - Section 17: “Paragraphs 15 and 16 apply to personal data provided before 1 July 2021 by an individual to an agency in relation to a contract that the individual entered into before that date with the agency, and which remains in force on that date, as if paragraphs 15 and 16 – (a) were in force when the personal data was so provided; and (b) had continued in force until 1 July 2021.”
+    - (a) and (b) as subpoints under 17 (presumably referencing conditions).
+  - Section 18: “Paragraphs 12, 13, 14, 15, 16 and 17 do not affect any obligation under the contract between P and A that specifies or restricts – (a) the personal data provided by P that A may disclose to another agency or NGE; or; or (b) the purposes for which A may disclose the personal data provided by P to another agency or NGE.”
+  - Section 19: Heading/Label “Withdrawal of Consent” (with a blue gradient banner).
+  - Section 19 text: “Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, and where the individual gives reasonable notice to the agency, the agency shall allow the individual to withdraw consent at any time, subject to legal or contractual restrictions or public interest requirements. On receipt of such notice, the agency shall inform the individual of the likely consequences of withdrawing his consent.”
+- Visual Elements:
+  - Page number “15” at bottom right.
+  - A blue gradient banner labeled “Withdrawal of Consent” between sections 18 and 19.
+  - Left margin shows numbers 16, 17, 18 in vertical alignment with blue numerals.
+  - Clean, formal typography with section headers and subpoints.
+- Entities:
+  - Abbreviations: A, B, P, NGE, C (implied roles in data transfer).
+  - References to paragraphs 5, 12–17, 15, 16, 18, etc. (legal cross-references).
+  - No real person names visible in the excerpt.
+
+Relationship Mapping
+- The sections describe sequential cross-references:
+  - Section 16 links data disclosed by B to be treated as if disclosed by A, via paragraphs 15(b) and 15(c).
+  - Section 17 extends the applicability of paragraphs 15 and 16 to pre- July 1, 2021 data, treating it as if the conditions were in force at the time and continuing to that date.
+  - Section 18 clarifies that certain obligations under contract between P and A override or modify application of earlier paragraphs (12–17), specifically about disclosures to other agencies or purposes.
+  - Section 19 introduces the concept of withdrawing consent, stating agencies must permit withdrawal upon reasonable notice, unless restricted by law or contract or public interest; upon withdrawal, the agency must inform the individual of consequences.
+- The sections collectively define how consent, data disclosure, and contractual restrictions interact, and how withdrawal of consent is operationalized within the policy framework.
+
+Notes for indexing / search queries
+- Keywords: personal data, consent withdrawal, data disclosure, contract obligations, cross-references, government data protection, express consent, public interest, agency, A, B, P, NGE, paragraph cross-references, withdrawal of consent.
+- Phrases users might search: “withdrawal of consent government policy,” “data protection paragraphs 15-19,” “consent withdrawal notice consequences,” “agency disclosure to other agencies,” “pre-1 July 2021 data policy,” “government personal data protection policies.” from government-personal-data-protection-policies-jul21.pdf, page 14
+
+Chunk Text : High-Level Summary
+- A page from a government privacy document (likely personal data protection policies) showing sections on data retention and purposes for collection, with a header “Purpose” and numbered paragraphs.
+- The page is page 16 of the document, featuring a blue gradient header, and a two-column style with page numbers and headings.
+
+Contextual Analysis
+- Setting: A formal governmental or regulatory publication, designed for policy reference.
+- Subjects: The text content of sections 20 and 21, focusing on retention requirements and purposes for collecting/purpose of personal data.
+- Intent: To inform readers about legal requirements for personal data retention and permissible purposes for data collection, usage, and disclosure.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Page element: “20” (page marker on left)
+  - Paragraphs: “Subject to the requirements of the retention of personal data, if the agency allows the individual to withdraw consent to the collection, use or disclosure of personal data about the individual pursuant to paragraph 19, the agency shall cease collecting, using or disclosing the personal data, as the case may be, unless such collection, use or disclosure, as the case may be, without the consent of the individual is pursuant to paragraph 5.”
+  - Section heading: “Purpose”
+  - Page element: “21” (page marker on left)
+  - Section text: “An agency shall collect, use or disclose personal data about an individual only for purposes: —”
+  - Sub-points (a) that:
+    - (i) are aligned to the purposes for which a Ministerial Direction is issued under the Public Sector (Governance) Act; or
+    - (ii) are authorised by law or required by order of court; or
+    - (iii) are necessary in the public interest (including without limitation national interest); or
+    - (iv) are permitted without consent by the exclusions in Annex A and Annex B and the collection, use or disclosure complies with all applicable legal obligations; or
+    - (v) the individual has given, or is deemed to have given, consent to, and
+  - Sub-point (b): “that the individual has been informed of under paragraph 22, if applicable.”
+- Visual Elements:
+  - Blue gradient header bar with “Purpose” label on left.
+  - Left-side page numbers 20 and 21 in blue.
+  - Body text in black, standard sans-serif.
+  - Footer shows “Government Personal Data Protection Policies | 16”.
+- Entities:
+  - Government agency (unspecified)
+  - Ministerial Direction
+  - Public Sector Governance Act
+  - Annex A and Annex B
+  - Paragraph 22 (reference)
+  - National interest (as a concept)
+  - General legal obligations
+
+Relationship Mapping
+- The retention paragraph (20) governs when data collection/disclosure must cease if consent is withdrawn.
+- The purpose section (21) defines that data collection/disclosure should only occur for listed authorized purposes, then enumerates specific legal authorities and conditions (i, ii, iii, iv, v) that justify or permit processing without violation.
+- The sub-point (a) lists the four conditions under which purposes must align with directions, law, public interest, or legal exclusions, while (b) notes informing the individual about paragraph 22.
+- The page footer and header provide document context and pagination, tying these sections to a larger policy document.
+
+Search-Friendly Keywords
+- Government personal data protection, retention requirements, consent withdrawal, data collection purposes, Ministerial Direction, Public Sector Governance Act, Annex A, Annex B, legal obligations, data disclosure, national interest, informed consent, paragraph 22, government policy document. from government-personal-data-protection-policies-jul21.pdf, page 15
+"
+What happens to an individual's personal data after they withdraw consent?,"**Answer:**
+
+- After an individual withdraws consent, the agency shall cease collecting, using or disclosing the personal data about the individual, as the case may be, unless such collection, use or disclosure, as the case may be, is pursuant to paragraph 5. This is stated under the “Purpose” section referenced in Paragraph 20.
+
+- Additionally, the policy requires that, when withdrawal occurs, the agency inform the individual of the likely consequences of withdrawing consent (as described in the Withdrawal of Consent section).
+
+- The continuation of processing only applies if specifically permitted by other legal provisions (e.g., under paragraph 5), but otherwise processing should stop per the withdrawal.
+
+Sources Used: government-personal-data-protection-policies-jul21.pdf, 20; government-personal-data-protection-policies-jul21.pdf, 19-21","
+Chunk Text : Withdrawal of Consent
+
+19 
+
+Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, and where the individual gives reasonable notice to the agency, the agency shall allow the individual to withdraw consent at any time, subject to legal or contractual restrictions or public interest requirements. On receipt of such notice, the agency shall inform the individual of the likely consequences of withdrawing his consent. Government Personal Data Protection Policies   | **15** 
+
+--- end of page.page_number=15 ---
+
+20 
+
+Subject to the requirements of the retention of personal data, if the agency allows the individual to withdraw consent to the collection, use or disclosure of personal data about the individual pursuant to paragraph 19, the agency shall cease collecting, using or disclosing the personal data, as the case may be, unless such collection, use or disclosure, as the case may be, without the consent of the individual is pursuant to paragraph 5. Purpose
+
+21 
+
+An agency shall collect, use or disclose personal data about an individual only for purposes: — 
+
+## (a) that: 
+
+   - (i) are aligned to the purposes for which a Ministerial Direction is issued under the Public Sector (Governance) Act; or 
+
+   - (ii) are authorised by law or required by order of court; or 
+
+   - (iii)are necessary in the public interest (including without limitation national interest); or 
+
+   - (iv)are permitted without consent by the exclusions in Annex A and Annex B and the collection, use or disclosure complies with all applicable legal obligations; or 
+
+   - (v) the individual has given, or is deemed to have given, consent to, and 
+
+- (b) that the individual has been informed of under paragraph 22, if applicable. Government Personal Data Protection Policies   | **16** 
+
+--- end of page.page_number=16 ---
+
+Notification of Purpose
+
+22 
+
+An agency shall inform the individual of: — 
+
+- (a) the purposes for the collection, use or disclosure of the personal data, as the case may be, on or before collecting the personal data; and 
+
+- (b) any other purpose of the use or disclosure of the personal data of which the individual has not been informed under paragraph (a), before the use or disclosure of the personal data for that purpose. 23 
+
+The requirement to inform the individual of the purposes shall not apply if: – 
+
+- (a) the individual is deemed to have consented to the collection, use or disclosure, as the case may be, for such purposes; or 
+
+- (b) the agency collects, uses or discloses the personal data without the express consent of the individual in accordance with paragraph 5. 24 
+
+Despite paragraph 23, an agency shall comply with paragraph 25 on or before collecting, using or disclosing personal data about an individual for the purpose of or in relation to the agency — 
+
+- (a) entering into an employment relationship with the individual or appointing the individual to any office; or 
+
+- (b) managing or terminating the employment relationship with or appointment of the individual. Government Personal Data Protection Policies   | **17** 
+
+--- end of page.page_number=17 ---
+
+25 
+
+For the purposes of paragraph 24, the agency shall inform the individual of the following: 
+
+- (a) the purpose for which the agency is collecting, using or disclosing (as the case may be) the personal data about the individual; 
+
+- (b) on request by the individual, the contact information of a person who is able to answer the individual’s questions about that collection, use or disclosure (as the case may be) on behalf of the agency. 26 
+
+An agency shall take reasonable and practical steps to keep up-to-date documentation of the purposes for which personal data is collected, used and disclosed. Government Personal Data Protection Policies   | **18** 
+
+--- end of page.page_number=18 ---
+
+## Access to and Correction of Personal Data 
+
+Access to Personal Data
+
+27 
+
+Subject to paragraphs 28, 29 and 31, on request of an individual, an agency shall, as soon as reasonably possible, provide the individual with: — 
+
+- (a) personal data about the individual that the individual has earlier provided to the agency; and 
+
+- (b) information about the ways in which the personal data referred to in paragraph (a) has been or may have been used or disclosed by the agency in the last 12 months prior to the date of the request. 28 
+
+An agency shall not be required to comply with paragraph 27 if any of the exceptions in Annex C apply. from government-personal-data-protection-policies-jul21.pdf, page 14,15,16,17,18
+
+Chunk Text : High-Level Summary
+- A page from a government document titled “Withdrawal of Consent” appears, focusing on sections 16–19 of personal data protection policies. It presents legal text related to how agencies handle personal data, consent, and obligations under the contract with P or A.
+
+Contextual Analysis
+- Setting: A formal government or regulatory document, likely a policy or act, laid out in a structured legal format.
+- Subjects: Sections 16 through 19, with subsections (a), (b), etc., and a highlighted banner for “Withdrawal of Consent.”
+- Intent: To specify conditions under which agencies may collect, use, or withdraw consent for personal data, and to outline related obligations and consequences.
+
+Detail Inventory
+- Text & OCR (as visible):
+  - Section 16: “Where an agency collects personal data disclosed to it by B under paragraph 15(c), both paragraphs 15(b) and (c) apply to the agency as if the personal data were disclosed by A to the agency under paragraph 15(a).”
+  - Section 17: “Paragraphs 15 and 16 apply to personal data provided before 1 July 2021 by an individual to an agency in relation to a contract that the individual entered into before that date with the agency, and which remains in force on that date, as if paragraphs 15 and 16 – (a) were in force when the personal data was so provided; and (b) had continued in force until 1 July 2021.”
+    - (a) and (b) as subpoints under 17 (presumably referencing conditions).
+  - Section 18: “Paragraphs 12, 13, 14, 15, 16 and 17 do not affect any obligation under the contract between P and A that specifies or restricts – (a) the personal data provided by P that A may disclose to another agency or NGE; or; or (b) the purposes for which A may disclose the personal data provided by P to another agency or NGE.”
+  - Section 19: Heading/Label “Withdrawal of Consent” (with a blue gradient banner).
+  - Section 19 text: “Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, and where the individual gives reasonable notice to the agency, the agency shall allow the individual to withdraw consent at any time, subject to legal or contractual restrictions or public interest requirements. On receipt of such notice, the agency shall inform the individual of the likely consequences of withdrawing his consent.”
+- Visual Elements:
+  - Page number “15” at bottom right.
+  - A blue gradient banner labeled “Withdrawal of Consent” between sections 18 and 19.
+  - Left margin shows numbers 16, 17, 18 in vertical alignment with blue numerals.
+  - Clean, formal typography with section headers and subpoints.
+- Entities:
+  - Abbreviations: A, B, P, NGE, C (implied roles in data transfer).
+  - References to paragraphs 5, 12–17, 15, 16, 18, etc. (legal cross-references).
+  - No real person names visible in the excerpt.
+
+Relationship Mapping
+- The sections describe sequential cross-references:
+  - Section 16 links data disclosed by B to be treated as if disclosed by A, via paragraphs 15(b) and 15(c).
+  - Section 17 extends the applicability of paragraphs 15 and 16 to pre- July 1, 2021 data, treating it as if the conditions were in force at the time and continuing to that date.
+  - Section 18 clarifies that certain obligations under contract between P and A override or modify application of earlier paragraphs (12–17), specifically about disclosures to other agencies or purposes.
+  - Section 19 introduces the concept of withdrawing consent, stating agencies must permit withdrawal upon reasonable notice, unless restricted by law or contract or public interest; upon withdrawal, the agency must inform the individual of consequences.
+- The sections collectively define how consent, data disclosure, and contractual restrictions interact, and how withdrawal of consent is operationalized within the policy framework.
+
+Notes for indexing / search queries
+- Keywords: personal data, consent withdrawal, data disclosure, contract obligations, cross-references, government data protection, express consent, public interest, agency, A, B, P, NGE, paragraph cross-references, withdrawal of consent.
+- Phrases users might search: “withdrawal of consent government policy,” “data protection paragraphs 15-19,” “consent withdrawal notice consequences,” “agency disclosure to other agencies,” “pre-1 July 2021 data policy,” “government personal data protection policies.” from government-personal-data-protection-policies-jul21.pdf, page 14
+
+Chunk Text : High-Level Summary
+- A page from a government privacy document (likely personal data protection policies) showing sections on data retention and purposes for collection, with a header “Purpose” and numbered paragraphs.
+- The page is page 16 of the document, featuring a blue gradient header, and a two-column style with page numbers and headings.
+
+Contextual Analysis
+- Setting: A formal governmental or regulatory publication, designed for policy reference.
+- Subjects: The text content of sections 20 and 21, focusing on retention requirements and purposes for collecting/purpose of personal data.
+- Intent: To inform readers about legal requirements for personal data retention and permissible purposes for data collection, usage, and disclosure.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Page element: “20” (page marker on left)
+  - Paragraphs: “Subject to the requirements of the retention of personal data, if the agency allows the individual to withdraw consent to the collection, use or disclosure of personal data about the individual pursuant to paragraph 19, the agency shall cease collecting, using or disclosing the personal data, as the case may be, unless such collection, use or disclosure, as the case may be, without the consent of the individual is pursuant to paragraph 5.”
+  - Section heading: “Purpose”
+  - Page element: “21” (page marker on left)
+  - Section text: “An agency shall collect, use or disclose personal data about an individual only for purposes: —”
+  - Sub-points (a) that:
+    - (i) are aligned to the purposes for which a Ministerial Direction is issued under the Public Sector (Governance) Act; or
+    - (ii) are authorised by law or required by order of court; or
+    - (iii) are necessary in the public interest (including without limitation national interest); or
+    - (iv) are permitted without consent by the exclusions in Annex A and Annex B and the collection, use or disclosure complies with all applicable legal obligations; or
+    - (v) the individual has given, or is deemed to have given, consent to, and
+  - Sub-point (b): “that the individual has been informed of under paragraph 22, if applicable.”
+- Visual Elements:
+  - Blue gradient header bar with “Purpose” label on left.
+  - Left-side page numbers 20 and 21 in blue.
+  - Body text in black, standard sans-serif.
+  - Footer shows “Government Personal Data Protection Policies | 16”.
+- Entities:
+  - Government agency (unspecified)
+  - Ministerial Direction
+  - Public Sector Governance Act
+  - Annex A and Annex B
+  - Paragraph 22 (reference)
+  - National interest (as a concept)
+  - General legal obligations
+
+Relationship Mapping
+- The retention paragraph (20) governs when data collection/disclosure must cease if consent is withdrawn.
+- The purpose section (21) defines that data collection/disclosure should only occur for listed authorized purposes, then enumerates specific legal authorities and conditions (i, ii, iii, iv, v) that justify or permit processing without violation.
+- The sub-point (a) lists the four conditions under which purposes must align with directions, law, public interest, or legal exclusions, while (b) notes informing the individual about paragraph 22.
+- The page footer and header provide document context and pagination, tying these sections to a larger policy document.
+
+Search-Friendly Keywords
+- Government personal data protection, retention requirements, consent withdrawal, data collection purposes, Ministerial Direction, Public Sector Governance Act, Annex A, Annex B, legal obligations, data disclosure, national interest, informed consent, paragraph 22, government policy document. from government-personal-data-protection-policies-jul21.pdf, page 15
+"
+What rights does an individual have to access their personal data held by a government agency?,"**Answer**
+
+- An individual has the right to request access to their personal data held by an agency. If the request is valid, the agency shall, as soon as reasonably possible, provide the individual with:
+  - (a) the personal data about the individual that the individual has previously provided to the agency; and
+  - (b) information about how that personal data has been or may have been used or disclosed by the agency in the last 12 months prior to the date of the request.
+- This right to access is subject to certain conditions and possible exceptions:
+  - The agency is required to comply with the access request under paragraph 27, but it may refrain if any exceptions listed in Annex C apply (i.e., the agency “shall not be required to comply with paragraph 27 if any of the exceptions in Annex C apply”).
+  - Additional restrictions may apply if providing the data could reasonably be expected to threaten the safety or health of the requester or others, among other potential limitations described in the related policy sections.
+
+In short: upon request, you can access your own personal data held by the agency and receive information on its use and disclosures, subject to specified exceptions and safety considerations.
+
+**Sources Used:** Government Personal Data Protection Policies, Page 27–29 and Annex C; Government Personal Data Protection Policies, Pages 23–24","
+Chunk Text : High-Level Summary
+- A page from a governmental document titled “Access to and Correction of Personal Data.” The layout indicates a section on “Access to Personal Data,” with numbered subsections 27–29 and descriptive text.
+
+Contextual Analysis
+- Setting: A formal government or official policy document, likely a privacy or personal data protection policy.
+- Subjects: The page presents statutory provisions or policy requirements related to access to personal data, including conditions for providing data and limitations.
+- Intent: To inform readers about rights, procedures, and exceptions for accessing or correcting personal data held by an agency.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Title: Access to and Correction of Personal Data
+  - Subheading (button-like): Access to Personal Data
+  - Page/section numbers displayed on the left: 27, 28, 29
+  - 27: “Subject to paragraphs 28, 29 and 31, on request of an individual, an agency shall, as soon as reasonably possible, provide the individual with: — (a) personal data about the individual that the individual has earlier provided to the agency; and (b) information about the ways in which the personal data referred to in paragraph (a) has been or may have been used or disclosed by the agency in the last 12 months prior to the date of the request.”
+  - 28: “An agency shall not be required to comply with paragraph 27 if any of the exceptions in Annex C apply.”
+  - 29: “An agency shall not provide an individual with the individual’s personal data or the information about the ways in which the personal data has been or may have been used or disclosed if the provision of that personal data or other information, as the case may be, could reasonably be expected to be — (a) threaten the safety or physical or mental health of an individual other than the individual who made the request; (b) cause immediate or grave harm to the safety or to the physical or mental health of the individual who made the request;” (likely continues beyond image)
+- Visual Elements:
+  - Clean, professional document design with blue accents.
+  - Large title at top left, blue gradient header bar with “Access to Personal Data.”
+  - Left-aligned, blue section numbers (27, 28, 29) with body text to the right.
+  - Footer shows “Government Personal Data Protection Policies | 19” in small text.
+  - Overall color scheme: white background, blue headings, black body text.
+- Entities:
+  - Government or agency referenced by policy context.
+  - Annex C (mentioned in 28).
+  - Personal data, individuals (data subjects), and an agency as the data holder.
+
+Relationship Mapping
+- The page organizes legal requirements in a numbered sequence:
+  - 27 establishes the obligation to provide an individual with their personal data and related usage/disclosure information upon request.
+  - 28 describes an exception: compliance may be avoided if Annex C exceptions apply.
+  - 29 sets additional restrictions: the agency may withhold data if providing it could threaten safety or cause harm to the requester or another person.
+- The heading “Access to Personal Data” serves as a navigational anchor for readers seeking rights and procedures, with the body text elaborating on the procedural flow and constraints.
+- The visual hierarchy (title, subheading, numbered clauses) supports quick scanning for search and retrieval in a RAG system. from government-personal-data-protection-policies-jul21.pdf, page 18
+
+Chunk Text : Withdrawal of Consent
+
+19 
+
+Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, and where the individual gives reasonable notice to the agency, the agency shall allow the individual to withdraw consent at any time, subject to legal or contractual restrictions or public interest requirements. On receipt of such notice, the agency shall inform the individual of the likely consequences of withdrawing his consent. Government Personal Data Protection Policies   | **15** 
+
+--- end of page.page_number=15 ---
+
+20 
+
+Subject to the requirements of the retention of personal data, if the agency allows the individual to withdraw consent to the collection, use or disclosure of personal data about the individual pursuant to paragraph 19, the agency shall cease collecting, using or disclosing the personal data, as the case may be, unless such collection, use or disclosure, as the case may be, without the consent of the individual is pursuant to paragraph 5. Purpose
+
+21 
+
+An agency shall collect, use or disclose personal data about an individual only for purposes: — 
+
+## (a) that: 
+
+   - (i) are aligned to the purposes for which a Ministerial Direction is issued under the Public Sector (Governance) Act; or 
+
+   - (ii) are authorised by law or required by order of court; or 
+
+   - (iii)are necessary in the public interest (including without limitation national interest); or 
+
+   - (iv)are permitted without consent by the exclusions in Annex A and Annex B and the collection, use or disclosure complies with all applicable legal obligations; or 
+
+   - (v) the individual has given, or is deemed to have given, consent to, and 
+
+- (b) that the individual has been informed of under paragraph 22, if applicable. Government Personal Data Protection Policies   | **16** 
+
+--- end of page.page_number=16 ---
+
+Notification of Purpose
+
+22 
+
+An agency shall inform the individual of: — 
+
+- (a) the purposes for the collection, use or disclosure of the personal data, as the case may be, on or before collecting the personal data; and 
+
+- (b) any other purpose of the use or disclosure of the personal data of which the individual has not been informed under paragraph (a), before the use or disclosure of the personal data for that purpose. 23 
+
+The requirement to inform the individual of the purposes shall not apply if: – 
+
+- (a) the individual is deemed to have consented to the collection, use or disclosure, as the case may be, for such purposes; or 
+
+- (b) the agency collects, uses or discloses the personal data without the express consent of the individual in accordance with paragraph 5. 24 
+
+Despite paragraph 23, an agency shall comply with paragraph 25 on or before collecting, using or disclosing personal data about an individual for the purpose of or in relation to the agency — 
+
+- (a) entering into an employment relationship with the individual or appointing the individual to any office; or 
+
+- (b) managing or terminating the employment relationship with or appointment of the individual. Government Personal Data Protection Policies   | **17** 
+
+--- end of page.page_number=17 ---
+
+25 
+
+For the purposes of paragraph 24, the agency shall inform the individual of the following: 
+
+- (a) the purpose for which the agency is collecting, using or disclosing (as the case may be) the personal data about the individual; 
+
+- (b) on request by the individual, the contact information of a person who is able to answer the individual’s questions about that collection, use or disclosure (as the case may be) on behalf of the agency. 26 
+
+An agency shall take reasonable and practical steps to keep up-to-date documentation of the purposes for which personal data is collected, used and disclosed. Government Personal Data Protection Policies   | **18** 
+
+--- end of page.page_number=18 ---
+
+## Access to and Correction of Personal Data 
+
+Access to Personal Data
+
+27 
+
+Subject to paragraphs 28, 29 and 31, on request of an individual, an agency shall, as soon as reasonably possible, provide the individual with: — 
+
+- (a) personal data about the individual that the individual has earlier provided to the agency; and 
+
+- (b) information about the ways in which the personal data referred to in paragraph (a) has been or may have been used or disclosed by the agency in the last 12 months prior to the date of the request. 28 
+
+An agency shall not be required to comply with paragraph 27 if any of the exceptions in Annex C apply. from government-personal-data-protection-policies-jul21.pdf, page 14,15,16,17,18
+
+Chunk Text : 42 
+
+An agency shall not be required to comply with paragraphs 41, 43 and 44 in respect to the matters specified in Annex D. Government Personal Data Protection Policies   | **23** 
+
+--- end of page.page_number=23 ---
+
+43 
+
+In relation to a request made under paragraph 38, if no correction is made, the agency shall annotate the personal data with the correction that was requested but not made. 44 
+
+When an agency is notified of a correction of personal data by another agency or any other organisation, the receiving agency shall correct the personal data in the agency’s possession or under the agency’s control unless the agency is satisfied on reasonable grounds that the correction should not be made. Preservation of Copies of Personal Data
+
+45 
+
+Where – 
+
+(a) an individual, on or after 1 July 2021, makes a request under paragraph 27(a) to an agency to provide personal data about the individual that is in the possession or under the control of the agency; and 
+
+(b) the agency rejects the request to provide that personal data, 
+
+the agency shall preserve, for not less than 30 days from the agency’s rejection, a copy of the personal data concerned. 46 
+
+The agency shall ensure that the copy of the personal data it preserves for the purposes of paragraph 45 is a complete and accurate copy of the personal data concerned. Government Personal Data Protection Policies   | **24** 
+
+--- end of page.page_number=24 ---
+
+47 
+
+Care of Personal Data
+
+An agency shall take reasonable and practical steps to ensure that all data, including personal data, in their possession exhibit the characteristics of quality data, as necessary for the purpose for which they are used. from government-personal-data-protection-policies-jul21.pdf, page 24,22,23
+"
+What must an agency do if it rejects an individual's request to access their personal data?,"- If an agency rejects a request to provide an individual with the individual’s personal data, the agency must notify the individual of the rejection within the timeframes stated in the policy, in accordance with the requirements in paragraph 32 and paragraph 33. Specifically, the agency should notify the individual of the rejection when it cannot provide the personal data due to the applicable paragraphs (28 or 29), as described in Section 32, and ensure the response is accurate and complete as required by Section 33.
+
+- The agency is also required to preserve a copy of the personal data for not less than 30 days from the rejection, to facilitate any potential review or follow-up, under the preservation provision described in Annex D (paragraph 45 and 46).
+
+Sources Used: government-personal-data-protection-policies-jul21.pdf, 24","
+Chunk Text : High-Level Summary
+- A page from a government document discussing personal data and conditions under which data access requests may be refused. It appears to be from a section titled “Government Personal Data Protection Policies (Annex C)” with page number 41.
+
+Contextual Analysis
+- Setting: A formal policy document, likely a government whitepaper or compliance manual.
+- Subjects: Text discussing criteria for handling personal data access requests and potential reasons for denial.
+- Intent: To outline conditions under which access to personal data can be refused and to reference the agency’s discretion in determining requests.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - (i) the personal data was collected or created by a mediator or arbitrator in the conduct of a mediation or arbitration for which he was appointed to act —
+  - (i) under a collective agreement under the Industrial Relations Act (Cap. 136) or by agreement between the parties to the mediation or arbitration;
+  - (ii) under any written law; or
+  - (iii) by a court, arbitral institution or mediation centre; or
+  - (0) any request —
+  - (i) that would unreasonably interfere with the operations of the agency because of the repetitious or systematic nature of the requests;
+  - (ii) if the burden or expense of providing access would be unreasonable to the agency or disproportionate to the individual’s interests;
+  - (iii) for information that does not exist or cannot be found;
+  - (iv) for information that is trivial; or
+  - (v) that is otherwise frivolous or vexatious.
+  - 02 The Agency may make the determination in paragraph 1)(i)(i) above based on the number and frequency of requests received.
+  - Footer: Government Personal Data Protection Policies (Annex C) | 41
+- Visual Elements:
+  - Plain, text-heavy page with numbered items and bullet-like indentation.
+  - Small page number indicator on the left (02) and large page number 41 in the footer alongside policy title.
+  - Minimal decoration; a blue gradient header at top edge.
+- Entities:
+  - References to government policy framework, Industrial Relations Act (Cap. 136), and generic agencies in the context of data protection.
+  - No person names or brands identifiable in the visible portion.
+
+Relationship Mapping
+- The enumerated list describes conditions under which personal data access requests may be restricted or refused.
+- Subpoints (i)-(v) align with justifications: interference with agency operations, impractical burden or cost, non-existent data, trivial data, or frivolous/vexatious requests.
+- Paragraph 2 indicates the agency’s discretionary mechanism to determine refusals based on the frequency and number of requests.
+- The overall structure connects legal bases (acts, written law) to operational considerations (burdens, repetition) within a formal policy framework.
+
+Notes for indexing and retrieval
+- Use keywords: personal data, data protection, access requests, refusal, unreasonable interference, repetitious, frivolous, vexatious, burden, cost, Industrial Relations Act, mediation, arbitration, government policy, Annex C.
+- Include phrases for searchability: “refusal of data access,” “unreasonable interference,” “repetitive requests,” “cost burden,” “data existence,” “trivial information,” “frivolous requests.” 
+- Ensure OCR text is stored verbatim for exact matching where possible. from government-personal-data-protection-policies-jul21.pdf, page 40
+
+Chunk Text : High-Level Summary
+- A page from a government document (likely on personal data protection) showing sections 30–33 withBlue page numbers and text blocks. It appears to be part of a formal policy or act discussing data privacy practices.
+
+Contextual Analysis
+- Setting: A scanned or digital page from a government policy manual or legislation, formatted with numbered sections and margin numbers. The page footer indicates a title “Government Personal Data Protection Policies” and a page number (20), suggesting this is part of a larger document.
+- Subjects: The text discusses procedures related to personal data, agency obligations, and consent, including what an agency may or must not disclose and how it should respond to data requests.
+- Intent: To communicate legal requirements and procedural guidance regarding personal data protection, access, and refusals by agencies.
+
+Detail Inventory
+- Text & OCR (exact strings shown as they appear):
+  - (c) reveal personal data about another individual;
+  - (d) reveal the identity of an individual who has provided personal data about another individual and the individual providing the personal data does not consent to the disclosure of his identity; or
+  - (e) be contrary to the national interest.
+  - 30 If an agency is able to provide the individual with the individual’s personal data and other information requested under paragraph 27 without providing the personal data and other information excluded under paragraphs 28, 29 and 31, the agency shall do so.
+  - 31 An agency shall not inform any individual under paragraph 27(b) that the agency has disclosed personal data about the individual to a law enforcement agency if the disclosure was made under any written law without the consent of the individual.
+  - 32 Where – (a) an individual makes a request under paragraph 27 to an agency on or after 1 July 2021; and (b) the agency, by reason of paragraphs 28 or 29, does not provide an individual with the individual’s personal data or other information requested under paragraph 27, the agency shall, within the time stated in paragraphs 27 and 35, and in accordance with the stated requirements in paragraph 33, notify the individual of the rejection.
+  - 33 Subject to paragraphs 28, 29 and 31, an agency shall respond to each request made to it under paragraph 27 on or after 1 July 2021 as accurately and completely as necessary and reasonably possible.
+  - Footer: Government Personal Data Protection Policies | 20
+- Visual Elements:
+  - Vertical blue page number style on the left (30, 31, 32, 33) in light blue.
+  - Clean, serif font typical of official documents.
+  - Page header or decorative blue gradient bar at top edge (not full header content shown).
+  - Dense text blocks with subpoints (a), (b) within section 32.
+- Entities:
+  - No specific people or brands named.
+  - Mentions: “paragraph 27,” “paragraph 28,” “paragraph 29,” “paragraph 31,” “paragraph 33,” “1 July 2021” date.
+  - Broad concepts: agency, personal data, disclosure, consent, national interest, law enforcement, rejection notification.
+- Colors: Primarily black text on white background with blue section numbers and a blue gradient at the top.
+
+Relationship Mapping
+- The blue numbers (30–33) anchor the sections, each containing procedural rules about handling personal data requests.
+- Section 30 describes the agency’s obligation to provide personal data if available and not excluded by certain paragraphs.
+- Section 31 restricts disclosure to law enforcement contexts without consent.
+- Section 32 outlines the process when an agency cannot provide data due to other paragraphs, including notification timelines and references to paragraph 33 for proper wording.
+- Section 33 mandates accurate and complete responses within the timelines, subject to other paragraphs.
+- The top blue bar and page footer indicate this is part of a formal, continuous policy document, likely organized by topic with cross-references to other sections (paragraphs 27–35).
+- Overall, this page defines rights and duties of agencies in handling requests for personal data under a national data protection framework, including timeframes, consent, and exceptions.
+
+If you need this converted into a more structured data format for a vector database (e.g., JSON with sections, text, and entities), I can generate a schema-ready version. from government-personal-data-protection-policies-jul21.pdf, page 19
+
+Chunk Text : 42 
+
+An agency shall not be required to comply with paragraphs 41, 43 and 44 in respect to the matters specified in Annex D. Government Personal Data Protection Policies   | **23** 
+
+--- end of page.page_number=23 ---
+
+43 
+
+In relation to a request made under paragraph 38, if no correction is made, the agency shall annotate the personal data with the correction that was requested but not made. 44 
+
+When an agency is notified of a correction of personal data by another agency or any other organisation, the receiving agency shall correct the personal data in the agency’s possession or under the agency’s control unless the agency is satisfied on reasonable grounds that the correction should not be made. Preservation of Copies of Personal Data
+
+45 
+
+Where – 
+
+(a) an individual, on or after 1 July 2021, makes a request under paragraph 27(a) to an agency to provide personal data about the individual that is in the possession or under the control of the agency; and 
+
+(b) the agency rejects the request to provide that personal data, 
+
+the agency shall preserve, for not less than 30 days from the agency’s rejection, a copy of the personal data concerned. 46 
+
+The agency shall ensure that the copy of the personal data it preserves for the purposes of paragraph 45 is a complete and accurate copy of the personal data concerned. Government Personal Data Protection Policies   | **24** 
+
+--- end of page.page_number=24 ---
+
+47 
+
+Care of Personal Data
+
+An agency shall take reasonable and practical steps to ensure that all data, including personal data, in their possession exhibit the characteristics of quality data, as necessary for the purpose for which they are used. from government-personal-data-protection-policies-jul21.pdf, page 24,22,23
+"
+What are the five characteristics of quality data that agencies must strive to maintain?,"**Answer:** The five characteristics of quality data are that data must be:
+- Accurate
+- Consistent
+- Timely
+- Relevant
+- Complete
+
+These are defined under the “Quality data” section in the Government Personal Data Protection Policies documents.
+
+**Sources Used:** government-personal-data-protection-policies-jul21.pdf, 47-49","
+Chunk Text : High-Level Summary
+- A page from a government document about Personal Data protection. It features sections titled “Care of Personal Data,” “Retention of Personal Data,” and “Personal Data” related policies, with numbered paragraphs 47, 48, and 49.
+
+Contextual Analysis
+- Setting: A formal policy or handbook page, likely from a government or official regulatory document on data protection.
+- Subjects: The document sections and their labeled numbers; text blocks describing duties around care, retention, and purpose of personal data.
+- Intent: To communicate standards and requirements for handling personal data, including accuracy, consistency, timeliness, and retention limitations.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Section header: Care of Personal Data
+  - Paragraph number 47:
+    - “An agency shall take reasonable and practical steps to ensure that all data, including personal data, in their possession exhibit the characteristics of quality data, as necessary for the purpose for which they are used. Quality data is:
+      (a) accurate;
+      (b) consistent;
+      (c) timely;
+      (d) relevant; and
+      (e) complete.”
+  - Section header: Retention of Personal Data
+  - Paragraph number 48:
+    - “Subject to paragraph 49, an agency shall retain personal data that has been used to make a decision about an individual for a long enough period to allow the individual access to the data after the decision has been made.”
+  - Paragraph number 49:
+    - “An agency shall retain personal data only for the period necessary for the fulfilment of the purposes for which it was collected unless there is a requirement specified in legislation or in the IM on Office Admin: Management of Public Records to retain the personal data for archival or any other purposes.”
+  - Footer: “Government Personal Data Protection Policies | 25” (page number)
+- Visual Elements:
+  - Section titles have blue gradient bars: “Care of Personal Data” and “Retention of Personal Data.”
+  - Section numbers in blue (47, 48, 49) aligned to the left.
+  - Body text in a standard sans-serif, black.
+  - Page layout is two-column-like with ample white space and a clean, official design.
+- Entities:
+  - No people pictured.
+  - Institutions referenced: a generic government agency, Office Admin (partial phrasing), Public Records system.
+  - No brands or logos visible beyond generic government styling.
+
+Relationship Mapping
+- The numbered sections map to policy requirements:
+  - 47 defines quality characteristics of data that must be maintained.
+  - 48 describes retention duration related to decisions about individuals and the right to access data after a decision.
+  - 49 clarifies the necessity-based retention period and exceptions for archival or legal requirements.
+- The gradient blue headers visually separate topics and guide the reader through the data care lifecycle: creation/quality, then retention/availability.
+- The footer indicates this page is part of a larger document on Government Personal Data Protection Policies and identifies its page number.
+
+Search-Friendly Keywords
+- Personal data protection, data quality, accuracy, consistency, timeliness, relevance, completeness, retention period, data retention, access to data, government policy, archival retention, public records, data governance, privacy policies. from government-personal-data-protection-policies-jul21.pdf, page 24
+
+Chunk Text : 42 
+
+An agency shall not be required to comply with paragraphs 41, 43 and 44 in respect to the matters specified in Annex D. Government Personal Data Protection Policies   | **23** 
+
+--- end of page.page_number=23 ---
+
+43 
+
+In relation to a request made under paragraph 38, if no correction is made, the agency shall annotate the personal data with the correction that was requested but not made. 44 
+
+When an agency is notified of a correction of personal data by another agency or any other organisation, the receiving agency shall correct the personal data in the agency’s possession or under the agency’s control unless the agency is satisfied on reasonable grounds that the correction should not be made. Preservation of Copies of Personal Data
+
+45 
+
+Where – 
+
+(a) an individual, on or after 1 July 2021, makes a request under paragraph 27(a) to an agency to provide personal data about the individual that is in the possession or under the control of the agency; and 
+
+(b) the agency rejects the request to provide that personal data, 
+
+the agency shall preserve, for not less than 30 days from the agency’s rejection, a copy of the personal data concerned. 46 
+
+The agency shall ensure that the copy of the personal data it preserves for the purposes of paragraph 45 is a complete and accurate copy of the personal data concerned. Government Personal Data Protection Policies   | **24** 
+
+--- end of page.page_number=24 ---
+
+47 
+
+Care of Personal Data
+
+An agency shall take reasonable and practical steps to ensure that all data, including personal data, in their possession exhibit the characteristics of quality data, as necessary for the purpose for which they are used. from government-personal-data-protection-policies-jul21.pdf, page 24,22,23
+
+Chunk Text : Quality data is: 
+
+(a) accurate; 
+
+(b) consistent; 
+
+(c) timely; 
+
+(d) relevant; and 
+
+(e) complete. Retention of Personal Data
+
+48 
+
+Subject to paragraph 49, an agency shall retain personal data that has been used to make a decision about an individual for a long enough period to allow the individual access to the data after the decision has been made. 49 
+
+An agency shall retain personal data only for the period necessary for the fulfilment of the purposes for which it was collected unless there is a requirement specified in legislation or in the IM on Office Admin: Management of Public Records to retain the personal data for archival or any other purposes. Government Personal Data Protection Policies   | **25** 
+
+--- end of page.page_number=25 ---
+
+Responsibilities of Public Officers
+
+50 
+
+Officers shall be mindful of the requirements of the Official Secrets Act and Statutory Bodies and Government Companies (Protection of Secrecy) Act, which prohibit unauthorised disclosure of certain information held by virtue of a person’s office or position in the Government or such entity. (These prohibitions apply regardless of whether the information was obtained directly from the public or from another agency). from government-personal-data-protection-policies-jul21.pdf, page 24,25
+"
+How long should government agencies retain personal data?,"**Answer:**
+
+- Agencies shall retain personal data only for the period necessary for the fulfilment of the purposes for which it was collected, unless there is a legislative requirement or an IM on Office Admin: Management of Public Records to retain it for archival or other purposes. They should retain long enough to allow the individual access to the data after the decision has been made.
+
+- Additionally, in the context of a data subject request, an agency must preserve a copy of the personal data for not less than 30 days from the agency’s rejection, to allow the data subject access or review.
+
+**Sources Used:** government-personal-data-protection-policies-jul21.pdf, page 25; government-personal-data-protection-policies-jul21.pdf, page 24","
+Chunk Text : 42 
+
+An agency shall not be required to comply with paragraphs 41, 43 and 44 in respect to the matters specified in Annex D. Government Personal Data Protection Policies   | **23** 
+
+--- end of page.page_number=23 ---
+
+43 
+
+In relation to a request made under paragraph 38, if no correction is made, the agency shall annotate the personal data with the correction that was requested but not made. 44 
+
+When an agency is notified of a correction of personal data by another agency or any other organisation, the receiving agency shall correct the personal data in the agency’s possession or under the agency’s control unless the agency is satisfied on reasonable grounds that the correction should not be made. Preservation of Copies of Personal Data
+
+45 
+
+Where – 
+
+(a) an individual, on or after 1 July 2021, makes a request under paragraph 27(a) to an agency to provide personal data about the individual that is in the possession or under the control of the agency; and 
+
+(b) the agency rejects the request to provide that personal data, 
+
+the agency shall preserve, for not less than 30 days from the agency’s rejection, a copy of the personal data concerned. 46 
+
+The agency shall ensure that the copy of the personal data it preserves for the purposes of paragraph 45 is a complete and accurate copy of the personal data concerned. Government Personal Data Protection Policies   | **24** 
+
+--- end of page.page_number=24 ---
+
+47 
+
+Care of Personal Data
+
+An agency shall take reasonable and practical steps to ensure that all data, including personal data, in their possession exhibit the characteristics of quality data, as necessary for the purpose for which they are used. from government-personal-data-protection-policies-jul21.pdf, page 24,22,23
+
+Chunk Text : Quality data is: 
+
+(a) accurate; 
+
+(b) consistent; 
+
+(c) timely; 
+
+(d) relevant; and 
+
+(e) complete. Retention of Personal Data
+
+48 
+
+Subject to paragraph 49, an agency shall retain personal data that has been used to make a decision about an individual for a long enough period to allow the individual access to the data after the decision has been made. 49 
+
+An agency shall retain personal data only for the period necessary for the fulfilment of the purposes for which it was collected unless there is a requirement specified in legislation or in the IM on Office Admin: Management of Public Records to retain the personal data for archival or any other purposes. Government Personal Data Protection Policies   | **25** 
+
+--- end of page.page_number=25 ---
+
+Responsibilities of Public Officers
+
+50 
+
+Officers shall be mindful of the requirements of the Official Secrets Act and Statutory Bodies and Government Companies (Protection of Secrecy) Act, which prohibit unauthorised disclosure of certain information held by virtue of a person’s office or position in the Government or such entity. (These prohibitions apply regardless of whether the information was obtained directly from the public or from another agency). from government-personal-data-protection-policies-jul21.pdf, page 24,25
+
+Chunk Text : High-Level Summary
+- A page from a government document detailing provisions related to Preservation of Copies of Personal Data under a data protection policy. It includes article numbers (43-46), section headers, and a highlighted subsection title.
+
+Contextual Analysis
+- Setting: A formal, legal/policy document page with a clean layout, numbered articles, and a blue gradient header for a section.
+- Subjects: Provisions and obligations around personal data corrections, notifications, and preservation copies.
+- Intent: To communicate statutory requirements and agency responsibilities for handling personal data, corrections, notifications, and preservation.
+
+Detail Inventory
+- Text & OCR (verbatim excerpts as visible):
+  - Numbers and article references:
+    - 43
+    - 44
+    - 45
+    - 46
+  - 43: “In relation to a request made under paragraph 38, if no correction is made, the agency shall annotate the personal data with the correction that was requested but not made.”
+  - 44: “When an agency is notified of a correction of personal data by another agency or any other organisation, the receiving agency shall correct the personal data in the agency’s possession or under the agency’s control unless the agency is satisfied on reasonable grounds that the correction should not be made.”
+  - Section header: “Preservation of Copies of Personal Data” (with a blue gradient bar).
+  - 45: Subsection start “Where –” followed by (a) and (b) clauses:
+    - (a) “an individual, on or after 1 July 2021, makes a request under paragraph 27(a) to an agency to provide personal data about the individual that is in the possession or under the control of the agency; and”
+    - (b) “the agency rejects the request to provide that personal data,”
+    - “the agency shall preserve, for not less than 30 days from the agency’s rejection, a copy of the personal data concerned.”
+  - 46: “The agency shall ensure that the copy of the personal data it preserves for the purposes of paragraph 45 is a complete and accurate copy of the personal data concerned.”
+  - Footer: “Government Personal Data Protection Policies | 24” (page number 24).
+- Visual Elements:
+  - Layout with two-column-like article markers on left (43, 44, 45, 46) in blue.
+  - A blue gradient section header for “Preservation of Copies of Personal Data.”
+  - Body text in standard black, multi-line paragraphs.
+  - Page footer with small grey text showing document title and page number.
+- Entities:
+  - Agencies (government agencies)
+  - Individuals (data subjects)
+  - Other organisations
+  - Personal data
+
+Relationship Mapping
+- 43 explains the consequence when a correction request is not implemented (annotation of the requested correction).
+- 44 describes synchronized correction obligations when data is corrected by another entity, unless valid reason to refrain.
+- 45 introduces the condition under which an agency must preserve a copy of personal data after a request by the individual, with a minimum 30-day preservation window from rejection.
+- 46 establishes the requirement that the preserved copy must be complete and accurate.
+- The section header highlights the overarching theme of preserving data copies, tying 45 and 46 together, while 43 and 44 relate to correction processes that influence what is preserved and annotated.
+
+Search-Friendly Keywords
+- government policy, personal data protection, data correction, data preservation, preservation of copies, 30-day preservation, data subject request, agency responsibility, data accuracy, government policies, data control, annotation of corrections. from government-personal-data-protection-policies-jul21.pdf, page 23
+"
+What are public officers personally liable for under Singapore's data protection laws?,"**Answer:**
+
+Public officers are personally liable for disclosing or retaining personal data not in the performance of their duties, and for knowing or reckless unauthorised disclosure or re-identification of data. They may face criminal offences and disciplinary action for breaches, including misuse of data for personal gain or to cause harm, and failure to comply with duties can lead to liability. Agencies must inform officers of these duties and liabilities.
+
+**Sources Used:** Government Personal Data Protection Policies, 26; Government Personal Data Protection Policies, 12
+","
+Chunk Text : High-Level Summary
+- A page from a government-level document detailing personal data protection policies. The visible sections discuss conditions under which personal data can be disclosed and consent requirements, with numbered sections (06, 07) and a footer indicating “Government Personal Data Protection Policies.”
+
+Contextual Analysis
+- Setting: A formal, regulatory document, likely part of a larger Act or policy manual dealing with personal data protection.
+- Subjects: Policy text, with emphasis on disclosure exceptions, consent, and processing for public sector needs.
+- Intent: To inform readers about lawful bases and procedures for disclosing personal data and obtaining consent, as part of compliance guidance.
+
+Detail Inventory
+- Text & OCR (exact phrases as visible):
+  - ""(b) disclose personal data unless:""
+  - ""i. such disclosure is for any of the purposes in Section 4 of the Public Sector (Governance) Act and to the extent required by any Ministerial Direction issued under the Act, and the disclosing agency is a Singapore public sector agency as defined in Section 2 of the Act;""
+  - ""ii. such disclosure is authorised by any other law or required by order of court;""
+  - ""iii. such disclosure is necessary in the public interest (including without limitation national interest);""
+  - ""iv. such disclosure is permitted without consent by the exclusions in Annex A or Part 2 of Annex B, and such disclosure complies with all applicable legal obligations; or""
+  - ""v. the individual that the personal data relates to, gives, or is deemed to give, his consent to the disclosure of his personal data by the agency for the purposes set out in paragraph 21.""
+  - ""06 Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, the agency shall obtain the consent at or before the time of processing. Where the agency wants to use data for a purpose not previously identified, consent to the use for that purpose may be obtained after the data is collected but before use. Where the data collected may be shared with another agency for another function or purpose, the agency shall notify the individual as such at the point of collection.""
+  - ""07 Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, the agency shall not, as a condition of the supply of a product or service or the administration of a public programme or scheme, require an individual to consent to the collection, use or disclosure of personal data about the individual beyond what is reasonable to supply the product or service to the individual, or to administer the public programme or scheme.""
+  - ""Government Personal Data Protection Policies | 12"" (footer)
+- Visual Elements:
+  - Text is in a clean sans serif document layout.
+  - Page numbers in blue vertical numerals (06, 07) on the left.
+  - Footer with page title and page number.
+  - Minimalistic, formal styling with bullet-like indentation for subsections (i–v).
+- Entities:
+  - References to government acts: Public Sector (Governance) Act; annexes; sections 2, 4, 21.
+  - No person names or brands visible beyond generic government policy terms.
+  - Likely location: Singapore, given explicit mention of Singapore public sector agency.
+
+Relationship Mapping
+- The list (i–v) defines conditions under which disclosure is allowed, linking to sections and acts for legal basis.
+- Section 06 states the process for obtaining express consent, including timing relative to processing and use of data for new purposes.
+- Section 07 restricts coercive consent for access to products or public services; emphasizes necessity and reasonableness of data collection.
+- Footer indicates the document is part of a larger set called Government Personal Data Protection Policies, page 12, reinforcing it as a formal policy document. from government-personal-data-protection-policies-jul21.pdf, page 11
+
+Chunk Text : High-Level Summary
+- A page from a governance or policy document, presenting definitions and terms with their descriptions. It appears to be part of a section on personal data protection policies, listing terms 07–11 (Individual, Investigation, National interest, Non-Government entity, Organisation) with accompanying text.
+
+Contextual Analysis
+- Setting: A formatted document page, likely from a government or organizational policy handbook. The header area shows a blue gradient banner; the footer includes ""Government Personal Data Protection Policies"" and a page number.
+- Subjects: The definitions of several terms related to data protection or governance.
+- Intent: To provide precise, statutory-style definitions and descriptions for terms used in privacy or data protection policies, facilitating understanding and standardization.
+
+Detail Inventory
+- Text & OCR (exact phrasing as visible):
+  - 07 Individual
+    A natural person, whether living or deceased
+  - 08 Investigation
+    An investigation relating to:
+    (a) a breach of an agreement;
+    (b) a contravention of any written law, or any rule of professional conduct or other requirement imposed by any regulatory authority in exercise of its powers under any written law; or
+    (c) a circumstance or conduct that may result in a remedy or relief being available under any law.
+  - 09 National interest
+    Includes national defence, national security, public security, the maintenance of essential services and the conduct of international affairs
+  - 10 Non-Government entity
+    Refers to a person other than an agency
+  - 11 Organisation
+    Any individual, company, association or body of persons, corporate or unincorporated, whether or not —
+      (a) formed or recognised under the law of Singapore; or
+      (b) resident, or having an office or a place of business, in Singapore.
+- Visual Elements: 
+  - Left column shows numbers 07–11 with term names (Individual, Investigation, National interest, Non-Government entity, Organisation).
+  - Right column contains the definitions and bullet-like lettered subpoints.
+  - A light, clean, two-column layout with ample white space; subtle grey text; blue gradient header; small page footer text.
+- Entities:
+  - Geographic/reference: Singapore (law of Singapore).
+  - General categories: natural person, agency, organisation, government policy terms.
+
+Relationship Mapping
+- Structure: The left column term numbers align with their definitions in the right column. Subpoints (a), (b), (c) under Investigation provide examples of the types of investigations described.
+- The terms collectively define participants (Individual, Non-Government entity, Organisation), processes (Investigation), and contexts (National interest) relevant to government personal data protection policies.
+- The footer caption links the page to the broader document section on Government Personal Data Protection Policies.
+
+Notes for Indexing/Search
+- Keywords: individual, natural person, investigation, breach, written law, regulatory authority, national interest, national defence, public security, essential services, international affairs, non-government entity, agency, organisation, Singapore, law of Singapore, data protection, governance.
+- Useful search queries: ""Singapore personal data protection policies definitions"", ""Investigation definition in data protection"", ""National interest Singapore policy"", ""Non-Government entity meaning"", ""Organisation definition policy document"". from government-personal-data-protection-policies-jul21.pdf, page 6
+
+Chunk Text : High-Level Summary
+- The image is a page from a government document titled “Responsibilities of Public Officers.” It presents policy text items numbered 50 and 51 related to official secrets acts, data protection, and officers’ responsibilities.
+
+Contextual Analysis
+- Setting: A formal government policy or handbook page, likely part of a larger document on Government Personal Data Protection Policies.
+- Subjects: Public officers and government agencies; text sections outline legal obligations and conduct.
+- Intent: Inform and guide public officers on compliance with data protection, secrecy, and disciplinary obligations.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Page header: ""Responsibilities of Public Officers""
+  - Section number 50:
+    - Text: ""Officers shall be mindful of the requirements of the Official Secrets Act and Statutory Bodies and Government Companies (Protection of Secrecy) Act, which prohibit unauthorised disclosure of certain information held by virtue of a person’s office or position in the Government or such entity. (These prohibitions apply regardless of whether the information was obtained directly from the public or from another agency). In addition, officers shall be mindful of their obligations set out in the Public Sector (Governance) Act, which criminalises the acts of knowing or reckless unauthorised disclosure of data, misuse of data for a gain to himself/other individual or for a harm or loss to another individual and knowing or reckless unauthorised re-identification of anonymised data.""
+  - Section number 51:
+    - Text: ""An agency shall ensure that all their officers are informed of their responsibilities and liabilities (i.e. that they should not access, use, disclose or retain personal data for purposes other than the performance of their duties of employment, and that failure to comply may be criminal offence and may rise to disciplinary action against the officer).""
+  - Page footer: ""Government Personal Data Protection Policies | 26"" (page number)
+- Visual Elements:
+  - A blue gradient banner at top with the section title.
+  - Large blue/indigo page number indicators ""50"" and ""51"" aligned to the left in a vertical list.
+  - Paragraph blocks of dense legal text with standard serif-like body text.
+  - Clean white page with ample margins; small page footer text.
+- Entities:
+  - Official Secrets Act
+  - Statutory Bodies and Government Companies (Protection of Secrecy) Act
+  - Public Sector (Governance) Act
+  - Government Personal Data Protection Policies (document series)
+  - Public officers, agencies (general terms)
+
+Relationship Mapping
+- The section header “Responsibilities of Public Officers” introduces two subsections (50 and 51).
+- Section 50 delineates legal prohibitions on disclosure and misuse of data by officers, referencing specific acts and the scope (official information, both direct and indirect sources).
+- Section 51 follows by requiring agencies to inform officers of their duties and potential liabilities, linking to compliance, penalties, and disciplinary consequences.
+- The gradient header visually ties the sections as part of a cohesive policy chapter.
+
+Notes for RAG indexing
+- Use keywords: responsibilities, public officers, Official Secrets Act, Protection of Secrecy Act, statutory bodies, government companies, protection of secrecy, data disclosure, governance, governance act, unauthorised disclosure, data misuse, anonymised data, agencies, duties, liabilities, personal data protection, disciplinary action, criminal offence.
+- Entities for linking: government acts, agencies, public sector governance, data protection policies.
+- Context phrases: confidentiality, unauthorized disclosure, personal data, performance of duties, disciplinary consequences. from government-personal-data-protection-policies-jul21.pdf, page 25
+"

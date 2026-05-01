@@ -59,26 +59,33 @@ def clean_text(text):
 
     return cleaned_text.strip()
 
-
-def get_page_numbers(chunks,starting_page_no=1,page_pattern=r"\s*--- end of page\.page_number=(\d+) ---\s*"):
-
+def get_page_numbers(chunks, starting_page_no=0, page_pattern=r"\s*--- end of page\.page_number=(\d+) ---\s*"):
     final_text_chunks = []
     
+    # If starting_page_no is passed as 1-based, you might want to subtract 1 here too
     current_page_number = starting_page_no
     
     for chunk in chunks:
         pages = set()
         for match in re.finditer(page_pattern, chunk):
-            page = int(match.group(1))
-            current_page_number = page + 1
+            # 1. Convert human-readable (1-based) to 0-based
+            page_0_indexed = int(match.group(1)) - 1
+            
+            # 2. Update the tracker for chunks that don't have tags
+            current_page_number = page_0_indexed + 1
+            
+            # 3. Logic for split chunks
             if match.start() != 0:
-                pages.add(page)
+                # Text existed before the tag, so it belongs to the page that just ended
+                pages.add(page_0_indexed)
             if match.end() != len(chunk):
-                pages.add(page+1)
+                # Text exists after the tag, so it belongs to the next page
+                pages.add(page_0_indexed + 1)
+        
         if not pages:
             pages = [current_page_number]
  
-        final_text_chunks.append(pages)
+        final_text_chunks.append(list(pages))
 
     return final_text_chunks
 
@@ -155,7 +162,7 @@ async def process_text(folder_path):
                         money_cost = f"Money cost to TEXT chunk {file.name} : {cb.total_cost}"
                         total_cost = [token_cost,money_cost]
 
-                        save_to_file(filename=f'{file.stem}',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
+                        save_to_file(filename=f'{file.stem}.txt',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
 
                     if chunks:
 
@@ -167,7 +174,7 @@ async def process_text(folder_path):
                         token_cost = f"Token cost to EMBED TEXT {file.name} : {cost[0]}"
                         money_cost = f"Money cost to EMBED TEXT {file.name} : {cost[1]}"
                         total_cost = [token_cost,money_cost]
-                        save_to_file(filename=f'{file.stem}',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
+                        save_to_file(filename=f'{file.stem}.txt',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
 
                         sparse_embeddings = await asyncio.to_thread(sparse_embedder.embed_texts, returned_chunks)
                         late_embeddings = await asyncio.to_thread(late_embedder.embed_texts, returned_chunks)

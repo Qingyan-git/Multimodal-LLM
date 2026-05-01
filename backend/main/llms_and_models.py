@@ -26,9 +26,9 @@ class OpenAIModel:
 
         self.text_splitter = SemanticChunker(
             self.embedding_model, 
-            breakpoint_threshold_type="standard_deviation",
-            breakpoint_threshold_amount=1.0,
-            buffer_size=1
+            breakpoint_threshold_type="percentile",
+            breakpoint_threshold_amount=80,
+            buffer_size=3
         )
 
         self.chat_model = ChatOpenAI(
@@ -38,6 +38,7 @@ class OpenAIModel:
             timeout=None,
             max_retries=2,
             api_key=api_key,
+            reasoning_effort="minimal"
         )
 
     

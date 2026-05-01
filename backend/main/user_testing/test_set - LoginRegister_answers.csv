@@ -1,115 +1,865 @@
-﻿Question,Answer
-"What are the login methods available on the Vendors@Gov portal, and who is each applicable to?","**Login Methods Available on the Vendors@Gov Portal:**
+﻿Question,Answer,Sources
+"What are the login methods available on the Vendors@Gov portal, and who is each applicable to?","**Answer**
 
-1. **For UEN Registered Company/Organisation**
-   - **Applicable to:** UEN registered vendors transacting as a Company/Organisation, Sole Proprietors, or Societies.
-   - **Requirement:** Must register for Corppass to access the portal.
+The Vendors@Gov portal offers four login methods, each aligned to a specific entity type or user category:
 
-2. **For Individuals with Singpass**
-   - **Applicable to:** Individuals transacting for personal payment matters (e.g., freelancers).
+- For UEN Registered Company/Organisation
+  - Applicable to: UEN-registered vendors transacting as a Company/Organisation, Sole Proprietors, or Societies.
 
-3. **For Foreign Companies/Organisations without UEN**
-   - **Applicable to:** Non-UEN registered vendors transacting as a Foreign Company/Organisation.
+- For Foreign Company/Organisation without UEN
+  - Applicable to: Non-UEN registered vendors transacting as a Foreign Company/Organisation.
 
-4. **For Foreign Individuals with AGD Password**
-   - **Applicable to:** Individuals transacting for personal payment matters (e.g., freelancers) who are not eligible for Singpass.
+- For Individuals with Singpass
+  - Applicable to: Vendors transacting as an individual for personal payment matters (e.g., freelancers) who are eligible to use Singpass.
 
-5. **For Individuals with AGD Password**
-   - **Applicable to:** Individuals transacting for personal payment matters (e.g., freelancers) who are not eligible for Singpass.
-   - **Login Steps:**
-     - Click on the login link for foreign individuals with an AGD password.
-     - Enter login details (User ID, Password, and CAPTCHA).
-     - Use two-factor authentication via Google Authenticator.
+- For Foreign Individuals with AGD Password
+  - Applicable to: Vendors transacting as an individual for personal payment matters (e.g., freelancers) who are not eligible for Singpass.
 
-These methods ensure that various types of vendors can effectively access government services through the Vendors@Gov portal.
+Sources Used: LoginRegister.pdf, Page 1; LoginRegister.pdf, Pages 24-25, 23, 12","
+Chunk Text : freelancers)._ 
 
-**Sources Used:** LoginRegister.pdf, 1, 2, 26, 27, 28, 29, 30"
-"What prerequisite must a UEN-registered vendor complete before logging into Vendors@Gov, and what are the steps involved?","To log into the Vendors@Gov portal, a UEN-registered vendor must complete the prerequisite of registering for Corppass. The steps involved in the login process for UEN-registered vendors are as follows:
+## **4. For Individuals with AGD Password** 
 
-1. **Registration**: The organization must first register for Corppass.
-2. **Login Selection**: 
-   - For business users, select the ‘For Business Users’ option to log in.
-   - For individual users, select the ‘For Individual Users’ option.
+_This login method is applicable to vendors who are transacting as an individual for your personal payment matters (e.g. freelancers) but are not eligible for Singpass._ 
 
-These steps ensure that the vendor can access the necessary government services through the Vendors@Gov platform.
+12 
 
-**Sources Used:** LoginRegister.pdf, 2; LoginRegister.pdf, 3"
-"What are the rules around Corppass Admin accounts, and what happens if a user is neither a Registered Officer nor an appointed Admin?","**Rules Around Corppass Admin Accounts:**
+--- end of page.page_number=12 ---
 
-- **Eligibility**: 
-  - Only the Registered Officer (RO) of an entity can appoint themselves or approve another user to become a Corppass Admin.
-  - Each entity is limited to a maximum of two Corppass Admins.
+## **2. Login for Foreign Company/ Organisation without UEN** 
 
-- **Process for Non-RO Users**: 
-  - If a user is not the RO of their entity, they can submit a registration request to become a Corppass Admin, but this is subject to the approval of the RO.
-  - If a user is neither the RO nor an appointed Corppass Admin, they cannot register as an Admin and will instead need a Corppass User account to access the Vendors@Gov e-service.
+_This login method is applicable to non-UEN registered vendors who are transacting as a Foreign Company/ Organisation._ 
 
-**Consequences for Non-RO Users**:
-- Users who do not hold the RO position or are not appointed as Admins must approach their Corppass Admin to create a Corppass User account, which will allow them to access the necessary services.
+Your organisation will first need to register for Corppass to access Vendors@Gov. For more information on Corppass registration, please click here for Guide. from LoginRegister.pdf, page 11,12
 
-**Sources Used:** LoginRegister.pdf, 6, 7, 8"
-How should a UEN-registered vendor handle the Vendor ID field when setting up the Vendors@Gov e-service on Corppass?,"To handle the Vendor ID field when setting up the Vendors@Gov e-service on Corppass, a UEN-registered vendor should follow these instructions:
+Chunk Text : 24 
 
-- If the entity has only **one Vendor ID**, and that Vendor ID is the **UEN**, the vendor should **leave the Vendor ID field blank**.
-- If the entity has **multiple Vendor IDs**, including the UEN, all Vendor IDs should be indicated in the field.
+--- end of page.page_number=24 ---
 
-These guidelines ensure compliance with government requirements and facilitate proper registration for government transactions.
+## **3. Login for Individuals with Singpass** 
 
-**Sources Used:** LoginRegister.pdf, 8"
-"What is the login process for a foreign individual without Singpass, and what security measures are required?","The login process for a foreign individual without Singpass to access the Vendors@Gov portal using an AGD password involves the following steps:
+_This login method is applicable to vendors who are transacting as an individual for your personal payment matters (e.g. freelancers)._ 
 
-1. **Access the Login Page**: The user must navigate to the login interface specifically designed for foreign individuals.
-2. **Enter Credentials**:
-   - **User ID**: The user must input their User ID in the designated field.
-   - **Password**: The user must enter their password in the corresponding field.
-3. **CAPTCHA Verification**: The user is required to enter a CAPTCHA code to verify that they are not a bot. This step is crucial for enhancing security and preventing unauthorized access.
-4. **Login Action**: After filling in the required fields and the CAPTCHA, the user clicks the ""Login"" button to complete the process.
+**Step 2** –  Enter your Singpass login details (Singpass ID and Password), then click ‘Login’. 25 
 
-**Security Measures**:
-- The inclusion of a CAPTCHA code is a key security feature designed to prevent spam and unauthorized access.
-- The login interface is structured to ensure that only individuals with the correct credentials can access the portal, thereby safeguarding sensitive information related to personal payment matters.
+--- end of page.page_number=25 ---
 
-This process is specifically tailored for freelancers and foreign entities who are not eligible for Singpass, ensuring secure access to government services.
+## **Vendors@Gov Log In User Guide** 
 
-**Sources Used:** LoginRegister.pdf, 28; LoginRegister.pdf, 29; LoginRegister.pdf, 26"
-"How does a foreign individual set up 2FA for the AGD Password login, and how can it be reset on a new device?","To set up Two-Factor Authentication (2FA) for the AGD Password login as a foreign individual, follow these steps:
+## Select your entity type: 
 
-### **Steps to Set Up 2FA:**
+## **1. For UEN Registered Company/ Organisation** 
 
-1. **Download Google Authenticator App:**
-   - Download the Google Authenticator App on your mobile device from the App Store or Play Store.
+_This login method is applicable to UEN registered vendors who are transacting as a Company/ Organisation, Sole Proprietors, or Societies._ 
 
-2. **Log In via AGD Password:**
-   - On the Vendors@Gov portal, click to log in as a foreign individual using your AGD password.
+## **2. For Foreign Company/ Organisation without UEN** 
 
-3. **Register for 2FA:**
-   - Click on “Register for Two-Factor Authentication (2FA)”.
+_This login method is applicable to non-UEN registered vendors who are transacting as a Foreign Company/ Organisation._ 
 
-4. **Enter Your Login Details:**
-   - Input your User ID (your AGD Password login User ID) and your AGD Password, then click “Validate”.
+## **3. from LoginRegister.pdf, page 24,25,23
 
-5. **Scan the QR Code and Input OTP:**
-   - Open the Google Authenticator App, select “Get started”, and then choose “Scan a QR code”.
-   - Scan the QR code displayed on the Vendors@Gov portal.
-   - A 6-digit One-Time Password (OTP) will appear on your mobile device. Enter this OTP and click “Validate”.
-   - If the OTP is successfully verified, the setup is complete. You can then return to the Vendors@Gov homepage to log into your account.
+Chunk Text : High-Level Summary
+- A user guide page for Vendors@Gov Login. The document outlines four login methods for different entity types and user categories in a government vendor portal.
 
-### **Resetting 2FA on a New Device:**
-I do not have enough information in the provided documents regarding the process for resetting 2FA on a new device.
+Contextual Analysis
+- Setting: A formal instructional page, likely part of a government procurement or vendor management system (Vendors@Gov). Branding shows vendors@gov and AGD logos.
+- Subjects: Users of the portal, including UEN registered companies/organizations, foreign companies/organizations, individuals with Singpass, and foreign individuals with AGD password.
+- Intent: To inform users which login method applies to their entity type and provide a concise description of each option.
 
-**Sources Used:** LoginRegister.pdf, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39"
-What additional steps are required for a Non-UEN registered foreign entity compared to a UEN-registered entity when setting up Corppass access to Vendors@Gov?,"To set up Corppass access to Vendors@Gov, Non-UEN registered foreign entities have additional steps compared to UEN-registered entities. Here are the differences:
+Detail Inventory
+- Text & OCR (exact text as visible):
+  - Header: ""Vendors@Gov Log In User Guide""
+  - Subheader: ""Select your entity type:""
+  - 1. For UEN Registered Company/ Organisation
+    - This login method is applicable to UEN registered vendors who are transacting as a Company/ Organisation, Sole Proprietors, or Societies.
+  - 2. For Foreign Company/ Organisation without UEN
+    - This login method is applicable to non-UEN registered vendors who are transacting as a Foreign Company/ Organisation.
+  - 3. For Individuals with Singpass
+    - This login method is applicable to vendors who are transacting as an individual for your personal payment matters (e.g. freelancers).
+  - 4. For Foreign Individuals with AGD Password
+    - This login method is applicable to vendors who are transacting as an individual for your personal payment matters (e.g. freelancers) but are not eligible for Singpass.
+- Visual Elements:
+  - Branding: ""vendors@gov"" logo on the top left, ""AGD"" logo on the top right.
+  - Colors: Blue text for headings, orange/blue branding accents.
+  - Typography: Bold, large headings for each of the four options; smaller descriptive subtext in grey.
+  - Layout: A numbered list (1–4) with distinct bold titles for each login method; descriptive paragraphs beneath each title.
+- Entities:
+  - Organizations: UEN Registered Company/Organisation; Foreign Company/Organisation without UEN.
+  - Individuals: Singpass users; Foreign Individuals with AGD Password.
+  - Payment context: References to personal payment matters and freelancers.
 
-**Additional Steps for Non-UEN Registered Foreign Entities:**
-- **Activation of Singpass Account for Corppass Admin**: 
-  - For foreign entities, there is a specific step to activate the Singpass account for the Corppass Admin, which is only applicable to users with a foreign ID. This step is not required for UEN-registered entities if the Corppass Admin has a Singpass account.
-  
-- **Creation of Singpass Foreign User Account (SFA)**: 
-  - When registering via foreign ID, a Singpass Foreign User Account (SFA) is automatically created for the appointed administrator. This is an additional step that does not apply to UEN-registered entities.
+Relationship Mapping
+- The four numbered options are parallel pathways, each describing a distinct login method aligned to a specific entity type.
+- The general structure implies a decision flow: determine your entity type first (UEN vs non-UEN vs individual) and then use the corresponding login method.
+- The descriptive sentences clarify eligibility and scope, linking entity type to the appropriate authentication method.
+- Branding elements frame the document as an official government portal, with logos indicating affiliation to Vendors@Gov and AGD.
 
-**Steps Common to Both Entity Types**:
-- Both types of entities must nominate a Corppass Admin, set up the Vendors@Gov e-service, create a Corppass User account, and activate the Corppass User account.
+Notes for indexing / retrieval
+- Include keywords: Vendors@Gov, login methods, UEN, UEN Registered Company, Foreign Company without UEN, Singpass, AGD Password, vendors@gov, government procurement portal, login guide, individuals, freelancers, personal payment matters.
+- Use synonyms for search: government vendor portal login, vendor registration login, enterprise vs individual login, UEN vs non-UEN, Singpass authentication, AGD password authentication. from LoginRegister.pdf, page 1
+"
+"What prerequisite must a UEN-registered vendor complete before logging into Vendors@Gov, and what are the steps involved?","**Answer:**
 
-In summary, the key additional steps for Non-UEN registered foreign entities involve the activation of the Singpass account specifically for foreign ID users and the creation of the SFA.
+- Prerequisite: A UEN-registered entity must register for Corppass and have the Vendors@gov e-service assigned to the entity on Corppass (and have a Singpass account). This enables login to Vendors@gov for the UEN-registered entity.
 
-**Sources Used:** LoginRegister.pdf, 15, 16, 17, 18, 19"
+- Steps involved (as described across the chunks):
+  - Step 1: Register for Corppass and set up a Corppass Admin account.
+  - Step 2: Set up the Vendors@gov e-service.
+  - Step 3: Create Corppass User accounts and assign the Vendors@gov e-service to those users.
+  - Step 4: Activate the Corppass User accounts.
+  - Step 5: Activate Singpass accounts (only for foreign ID users).
+
+- Additional context: Corppass Admin can be assigned the Vendors@gov e-service and, if you are the Corppass Admin appointed to perform transactions on Vendors@Gov for your entity, you may log in using the For Business Users path after the setup.
+
+Sources Used: Corppass Registration Guide for UEN Registered Entity (pages referenced: 6, 8, 9)","
+Chunk Text : High-Level Summary
+- An instructional slide titled “1. Login for UEN Registered Company/ Organisation” showing a step-by-step login process for vendors/entities. The left side features a stylized illustration of an invoice and a login UI, while the right side contains a note with steps for logging in and accessing a note/document.
+
+Contextual Analysis
+- Setting: A training or user guide presentation slide, likely part of a manual or onboarding deck for the UEN (Unified Electronic Network) vendor registration.
+- Subjects: The user is a business/vendor registering or logging in; the slide includes an illustrated graphic and a textual note section.
+- Intent: To instruct users on how to login or register to access vendor services, specifically for “For Business Users” and “For Individual Users,” and to provide a link for more information.
+
+Detail Inventory
+- Text & OCR (as visible):
+  - Title: “1. Login for UEN Registered Company/ Organisation”
+  - Subtext: “This login method is applicable to UEN registered vendors who are transacting as a Company/ Organisation, Sole Proprietors, or Societies.”
+  - Left illustration labels (approximate, exact phrasing may vary in image):
+    - “Get started by logging in.”
+    - “For Business Users”
+    - “For Individual Users”
+    - “Login with Singpass”
+    - “Login with Singpass” (duplicate phrase appears)
+    - “For Local & Foreign Entities”
+    - “For Individuals”
+    - “Invoices” (embedded in the illustration)
+    - “Submit Invoices”
+    - “Monitor Payment Status”
+    - “Update Vendor Details”
+  - Right note block heading: “NOTE”
+  - Right note block body:
+    - “Your organisation will first need to register for Corppass to access Vendors@gov.”
+    - “For more information on Corppass registration, please click here.”
+  - Stepwise instruction:
+    - “Step 1 – Select ‘For Business Users’ option to login to Vendors@gov.”
+- Visual Elements:
+  - A stylized, flat-design illustration of an invoice and a small group of people interacting with it.
+  - Colors: soft blues, grays, with yellow and orange trees in the foreground; overall a corporate, friendly aesthetic.
+  - Layout: Left column illustration; right column text with a bold NOTE header; clean, professional slide design with a thin horizontal divider line between header and body.
+- Entities:
+  - Corppass (a government authentication portal)
+  - Vendors@gov (a government vendor portal)
+  - UEN (Unified Entity Number) registered company/organisation
+  - Singpass (identity verification method)
+  - For Business Users, For Individual Users (login paths)
+
+Relationship Mapping
+- The left illustration visually represents an invoicing workflow and user login options; it connects to the right-side instructions via the overall slide purpose (login for UEN-registered entities).
+- The textual note explains prerequisite registration (Corppass) to access Vendors@gov, linking the concept of identity/authentication (Corppass, Singpass) to the vendor portal access.
+- Step 1 directs users to choose the “For Business Users” login path, which is connected to the Vendors@gov access flow described on the right.
+
+Notes for indexing/search
+- Keywords: UEN login, registered company, organization login, vendors.gov, Corppass, Vendors@gov, Singpass, business users, individual users, invoicing, login steps, government portal, onboarding, vendor registration, step-by-step login.
+- Phrases to preserve exact matches: “Login for UEN Registered Company/ Organisation,” “For Business Users,” “Login with Singpass,” “Corppass,” “Vendors@gov,” “For more information on Corppass registration, please click here.”
+- Visual descriptors: invoice illustration, two login paths, corporate color scheme, note box. from LoginRegister.pdf, page 2
+
+Chunk Text : High-Level Summary
+- A synthetic, instructional slide titled “Corppass Registration Guide for UEN Registered Entity” presenting a step-by-step procedure to enable login to Vendors@gov e-service. The layout resembles an official guide or training slide with a blue header box and a light blue content block containing steps and notes.
+
+Contextual Analysis
+- Setting: A formal, educational slide or page from a user guide or training deck used for government e-services onboarding.
+- Subjects: The guide text itself, with emphasis on Corppass registration, UEN registered entity users, Singpass accounts, and the Vendors@gov e-service.
+- Intent: To inform users about the prerequisites and sequential steps for registering and activating Corppass Admin and related accounts to access the Vendors@gov e-service.
+
+Detail Inventory
+- Text & OCR (exact strings visible):
+  - Title: Corppass Registration Guide for UEN Registered Entity
+  - Blue header text (within rounded blue box): Overview of steps to perform on Corppass to enable login to the Vendors@gov e-service
+  - Paragraph block (light blue background):
+    - For a user to be able to access the Vendors@gov e-service, the user must have a Singpass account and be assigned the Vendors@gov e-service for the UEN Registered Entity on Corppass (www.corppass.gov.sg).
+    - The following outlines the steps required for a user to access Vendors@gov. User guides for each individual step can be found here.
+  - Steps list (bold-ish or bullet-like):
+    - Step 1: Register for Corppass and set up Corppass Admin account
+    - Step 2: Set up the Vendors@gov e-service
+    - Step 3: Create Corppass User account and assign the Vendors@gov e-service to users
+    - Step 4: Activate the Corppass User account
+    - Step 5: Activate Singpass account (only for foreign ID users)
+  - Page element: a small pagination indicator at bottom right showing “6”
+- Visual Elements:
+  - Color scheme: white background with blue-gray content blocks; header uses a darker blue; left edge has an orange vertical stripe (likely a page marker or gutter).
+  - Layout: title at top, a thin gray horizontal rule, then a blue highlighted overview box, followed by a light-blue content box containing text.
+  - Typography: clear sans-serif fonts, with a hierarchical emphasis on steps.
+- Entities:
+  - Organizations/entities: Vendors@gov e-service, Corppass, Singpass (Singapore government login), UEN (Unique Entity Number) Registered Entity.
+  - Platform URLs: www.corppass.gov.sg (as visible in the text).
+
+Relationship Mapping
+- The header introduces the overall topic: Corppass Registration Guide for UEN Registered Entity.
+- The blue overview box provides the purpose: steps to perform on Corppass to enable login to Vendors@gov e-service.
+- The paragraph block explains prerequisites: Singpass account and assignment of Vendors@gov e-service to the UEN Registered Entity on Corppass.
+- The steps list shows a linear sequence from registration and setup (Step 1) to activation (Steps 4-5).
+- The steps connect to specific actions:
+  - Step 1 establishes administrative control (Corppass Admin).
+  - Step 2 enables the e-service (Vendors@gov).
+  - Step 3 creates user accounts and assigns e-service.
+  - Step 4 activates the user account.
+  - Step 5 activates Singpass for foreign ID users.
+- Iconography or diagrams are not present; the content relies on textual steps.
+
+Notes for indexing or search
+- Keywords: Corppass, Vendors@gov, Singpass, UEN, Registered Entity, e-service, activation, admin, user account, Corppass Admin, foreign ID users, Singapore government services, corppass.gov.sg.
+- Suitable search queries: “Corppass registration steps”, “Vendors@gov e-service access”, “UEN entity Corppass”, “activate Singpass foreign ID users”, “Corppass Admin setup”, “Vendors@gov user account creation”. from LoginRegister.pdf, page 5
+
+Chunk Text : This might be the case if your entity has preexisting transactions with government agencies. 9 
+
+--- end of page.page_number=9 ---
+
+## **Corppass Registration Guide for UEN Registered Entity** 
+
+**Step 3: Create Corppass User account and assign the Vendors@Gov e-service to users** 
+
+Corppass Admin can be assigned the Vendors@Gov e-service. **If you are a Corppass Admin and you are appointed to perform transactions on Vendors@Gov on behalf of your entity** , you do not need to create any Corppass User accounts. You should instead proceed to assign yourself the Vendors@Gov e-service. Once done, you will be able to log into Vendors@Gov using the ‘For Business Users’ option. from LoginRegister.pdf, page 8,9
+"
+"What are the rules around Corppass Admin accounts, and what happens if a user is neither a Registered Officer nor an appointed Admin?","**Answer**
+
+- Rules around Corppass Admin accounts
+  - Each entity can have a maximum of two Corppass Admins.
+  - If you are the Registered Officer (RO) of your entity, you may either appoint yourself as a Corppass Admin or approve another user to be the Corppass Admin. The RO (e.g., Owner, Partner, Director, Corporate Secretary) has the authority to appoint or approve an Admin.
+  - If you are not the RO, you can submit a registration to become a Corppass Admin, but this is subject to approval by your RO.
+  - If you are neither the RO nor an appointed Corppass Admin, this step is non-applicable to you. In that case, you will need a Corppass User account to access Vendors@Gov e-service, and you should approach your Corppass Admin to create your Corppass User account and assign the Vendors@gov e-service to it.
+
+- What happens if a user is neither a RO nor an appointed Admin
+  - The user cannot perform the Corppass Admin registration steps.
+  - They should obtain a Corppass User account (not an Admin account) to access Vendors@Gov e-service.
+  - Their access would be facilitated by the Corppass Admin who creates the user account and assigns the Vendors@gov e-service.
+
+Sources Used: Corppass Registration Guide for UEN Registered Entity, Page 6; Corppass Registration Guide for UEN Registered Entity, Page 7; Corppass Registration Guide for Non-UEN Registered Entity, Page 17","
+Chunk Text : High-Level Summary
+- A screenshot from a Corppass registration guide titled “Corppass Registration Guide for UEN Registered Entity.” 
+- The image shows Step 1: Register for Corppass and set up Corppass Admin account, with a block of instructional text and a small screenshot of the Corppass interface.
+
+Contextual Analysis
+- Setting: An instructional document or slide, likely part of a user guide or training material for registering a UEN (Unique Entity Number) entity with Corppass.
+- Subjects: The Corppass platform and its Admin account creation process; the user is instructed on whether they are the RO (Registered Officer) or not, and how to proceed.
+- Intent: To guide users through the initial step of registering for Corppass and creating an administrator account, including conditions for RO and non-RO scenarios.
+
+Detail Inventory
+- Text & OCR (exact phrasing as visible):
+  - Title: Corppass Registration Guide for UEN Registered Entity
+  - Step label: Step 1: Register for Corppass and set up Corppass Admin account
+  - Descriptive paragraph (partial, as seen):
+    - After obtaining a Corppass ID from Corppass, proceed to Corppass to create a Corppass Administrator(Admin) account.
+    - Welcome to Corppass
+    - If you are the Registered Officer (RO) of your entity, you can either appoint yourself as a Corppass Admin or approve another user to be the Corppass Admin. Examples of RO include the Owner, Partner, Director or Corporate Secretary of the entity.
+    - If you are not the RO of your entity, you can submit a registration to be a Corppass Admin on Corppass, subject to the approval of your RO.
+    - If you are neither the RO nor were you appointed as a Corppass Admin, this step is non-applicable to you. You will instead require a Corppass User account to access the Vendors@Gov e-service. You should approach your Corppass Admin to create your Corppass User account and assign the Vendors@gov e-service to your Corppass User account.
+    - Note: Each entity can have a maximum of two Corppass Admins.
+- Visual Elements:
+  - A light blue content box containing the instructional text.
+  - A small inset image of the Corppass interface showing a “Register as Corppass Admin” button (highlighted in red in the screenshot).
+  - A blue step banner at the top of the content box.
+  - The page has a light blue background within the content area and a simple header with the title text.
+  - A thin horizontal gray line separates the header from the body content.
+- Entities:
+  - Corppass platform
+  - UEN Registered Entity
+  - RO (Registered Officer)
+  - Corppass Admin
+  - Vendors@gov e-service
+  - Note about maximum two admins per entity
+  - Visual: small screenshot of the Corppass UI
+
+Relationship Mapping
+- The step header (Step 1) introduces the action: Register for Corppass and set up Admin account.
+- The main paragraph explains conditional paths based on whether the user is the RO, not the RO, or neither:
+  - If RO: either appoint yourself or approve another user as Admin.
+  - If not RO: submit to be Admin, subject to RO’s approval.
+  - If neither RO nor Admin appointment: use a Corppass User account to access Gov e-services; need Admin to create user account and assign services.
+- The note clarifies a limit: a maximum of two Corppass Admins per entity.
+- The inset image visually reinforces the action to “Register as Corppass Admin,” linking to the textual instruction.
+- The overall structure guides the user from obtaining a Corppass ID to creating an Admin account and outlines role-based access paths.
+
+Keywords for Search/Indexing
+Corppass, UEN, registered entity, registration guide, Step 1, Corppass Admin account, Registered Officer, RO, admin appointment, Vendors@gov e-service, two admins, UI screenshot, registration workflow, Corppass User account. from LoginRegister.pdf, page 6
+
+Chunk Text : High-Level Summary
+- A slide titled “Corppass Registration Guide for Non-UEN Registered Entity” that outlines Step 1: Nominate a Corppass Admin to register Corppass on behalf of the entity.
+- The slide includes explanatory paragraphs, a screenshot of the registration interface, and a closing note about processing time.
+
+Contextual Analysis
+- Setting: A presentation slide, likely from a training or onboarding deck, describing administrative steps for registering Corppass for a non-UEN registered entity.
+- Subjects: The entity’s administrator, the Corppass account, and the Singpass/singpass workflow for foreign ID registration.
+- Intent: To instruct users on who should register, what accounts are created, how the registration is performed, and timing expectations.
+
+Detail Inventory
+- Text & OCR (exact as visible):
+  - Title: Corppass Registration Guide for Non-UEN Registered Entity
+  - Step heading: Step 1: Nominate a Corppass Admin who will register for Corpass on behalf of the entity
+  - Body paragraphs (summarized):
+    - Your entity will need to appoint an administrator for the Corpass account. The appointed person will register for Corppass on behalf of the entity. The appointed person’s Corppass Admin account will be registered together with the entity’s Corppass account.
+    - The registration is done on Corppass (www.corppass.gov.sg). If the appointed administrator has Singpass, proceed to register for Corppass via Singpass. Otherwise, register via foreign ID.
+    - When registering via foreign ID, Singpass Foreign user Account (SFA) will also be automatically created for the appointed administrator.
+  - Image caption (embedded in slide): A screenshot of the registration UI showing menu paths (e.g., Home, About Us, Services, Help) and options such as Register for Corppass, UEN Registered Entity, Activate Corppass Account, Manage Admin, Find Your Corppass Admin, etc.
+  - Note (bottom line): Note: Once the registration is submitted, Corppass will take 5 to 10 working days to process your registration.
+- Visual Elements:
+  - A blue-bordered content area on a slide with a light blue background.
+  - A navigation screenshot within the slide showing a web interface with menu items and a drop-down indicating registration options.
+  - The slide includes a small note area and a slide number (17) at the bottom right.
+  - Primary colors: blue accents, white content areas, orange accent on left margin.
+- Entities:
+  - Corppass (registration system for entities)
+  - Singpass (authentication for Singapore government services)
+  - Foreign ID (alternative registration path)
+  - UEN Registered Entity (terminology indicating eligible entity type)
+  - The screenshot shows generic UI labels: Home, About Us, Services, Help, Log in with Singpass, Register for Corppass, UEN Registered Entity, Register via Singpass, Activate Corppass Account, Manage Admin, Find Your Corppass Admin.
+
+Relationship Mapping
+- The main relationship: The slide explains that Step 1 is to nominate a Corppass Admin who will perform the registration on behalf of the entity.
+- The textual content links registration path choices to authentication method:
+  - If the administrator has Singpass, use Singpass to register for Corppass.
+  - If not, register via foreign ID, which automatically creates a Singpass Foreign user Account for the administrator.
+- The visual screenshot illustrates the actual navigation path within the Corppass web UI that the administrator would use to register.
+- The closing note sets processing expectation (5 to 10 working days) after submission.
+
+Search-Friendly Keywords
+- Corppass registration, Non-UEN registered entity, nominate Corppass Admin, Corppass Admin account, Singpass registration, foreign ID registration, Singpass Foreign user Account, UEN Registered Entity, register via Singpass, register for Corppass, admin management, Corppass processing time, government e-services Singapore, Corppass guide, admin nomination workflow. from LoginRegister.pdf, page 16
+
+Chunk Text : **If you are neither the RO nor were you appointed as a Corppass Admin** , this step is non-applicable to you. You will instead require a Corppass User account to access the Vendors@Gov e-service. You should approach your Corppass Admin to create your Corppass User account and assign the Vendors@Gov e-service to your Corppass User account. **Note** : Each entity can have a maximum of two Corppass Admins. 7 
+
+--- end of page.page_number=7 ---
+
+## **Corppass Registration Guide for UEN Registered Entity** 
+
+## **Step 2: Set up the Vendors@Gov e-service** 
+
+The Corppass Admin will need to set up the Vendors@Gov e-service for the entity on Corppass. Corppass Users should approach their Corppass Admin to check that the setup was properly completed. 8 
+
+--- end of page.page_number=8 ---
+
+## **Corppass Registration Guide for UEN Registered Entity** 
+
+## **Step 2: Set up the Vendors@Gov e-service** 
+
+## **Important:** 
+
+- If your entity has only 1 Vendor ID, and the Vendor ID is UEN, please leave the Vendor ID field **blank** . This will likely be the case if your entity had never transacted with the Singapore Government. - If your entity has Vendor ID(s) that is _not_ UEN, please indicate all the Vendor ID(s), including your UEN if it is also a Vendor ID (i.e. you have a Vendors@Gov account under your UEN). from LoginRegister.pdf, page 8,6,7
+"
+How should a UEN-registered vendor handle the Vendor ID field when setting up the Vendors@Gov e-service on Corppass?,"**Answer**
+
+- For a UEN-registered entity, when setting up the Vendors@Gov e-service (Step 2), if the entity has only 1 Vendor ID and that Vendor ID is the UEN, you should leave the Vendor ID field blank. This situation is described as common when the entity has never transacted with the Singapore Government.  
+- If the entity has Vendor IDs that are not UEN, you should enter all the Vendor IDs (and include your UEN if it is also a Vendor ID, i.e., if you have a Vendors@Gov account under your UEN).
+
+This guidance appears in the Corppass Registration Guide for UEN Registered Entity, Step 2: Set up the Vendors@Gov e-service.
+
+- If there is a non-UEN Vendor ID present, enter all Vendor IDs (including the UEN if applicable).  
+- The “Important” note explicitly covers the blank-vs-filled decision based on whether the Vendor ID is UEN or non-UEN.
+
+Sources Used: LoginRegister.pdf, Page 8","
+Chunk Text : High-Level Summary
+- A slide from a user guide titled “Corppass Registration Guide for UEN Registered Entity” focusing on Step 2: Set up the Vendors@Gov e-service.
+- The slide provides instructions and an example form for entering Vendor IDs, with an emphasis on clarifying when Vendor IDs are blank or not applicable.
+
+Contextual Analysis
+- Setting: An instructional presentation slide, likely part of a training or onboarding deck for government e-services.
+- Subjects: A user interface mockup or screenshot illustrating the Vendors@Gov e-service setup process, including a highlighted form area for Vendor IDs.
+- Intent: To guide users through selecting entity e-services and entering necessary vendor identifiers, and to warn about cases where Vendor IDs may be blank or not applicable.
+
+Detail Inventory
+- Text & OCR (exact textual elements visible):
+  - Title: “Corppass Registration Guide for UEN Registered Entity”
+  - Section: “Step 2: Set up the Vendors@Gov e-service”
+  - A red “Important:” block with bulleted guidance:
+    - “If your entity has only 1 Vendor ID, and the Vendor ID is UEN, please leave the Vendor ID field blank. This will likely be the case if your entity has never transacted with the Singapore Government.”
+    - “If your entity has Vendor IDs that is not UEN, please indicate all the Vendor IDs(s), including your UEN if it is also a Vendor ID (i.e., you have a Vendors@gov account under your UEN). This might be the case if your entity has pre-existing transactions with government agencies.”
+  - Visual: A blue-gray banner or panel with a light-blue background area containing a screenshot or diagram.
+  - A highlighted red-outlined rectangular section containing a form with fields for “Vendor ID” entries (multiple lines) and an “Add new” button.
+  - A small navigation: “Back” and “Next” buttons at the bottom of the screenshot.
+  - A caption or label area at the bottom of the inset image that says something like “1 e-Services selected” (partial text visible).
+- Visual Elements:
+  - Color scheme: light blue background for the main content area, dark blue header text, red highlighted “Important” section, and a red rectangle around the form area.
+  - Diagram style: A UI mockup of a form with multiple input fields arranged vertically inside the highlighted area.
+  - Fonts: Sans-serif typical of presentation slides.
+  - Icons/graphics: Small UI labels and a checkbox-style appearance near the Vendor IDs.
+- Entities:
+  - Platform: Vendors@Gov e-service (government-related vendor registration feature).
+  - Entities/IDs: Vendor ID fields (potentially multiple), UEN (Unique Entity Number), and references to Singapore Government transactions.
+  - Entity types: UEN Registered Entity, government agency interactions.
+
+Relationship Mapping
+- The red-outlined Vendor IDs form is presented as the actionable portion of Step 2 in the flow, indicating that users must input or add Vendor IDs.
+- The “Important” notes explain conditional behavior:
+  - If there is only 1 Vendor ID and it is a UEN, the Vendor ID field should be left blank.
+  - If there are multiple Vendor IDs or non-UEN IDs, all IDs (and the UEN if it doubles as a Vendor ID) should be entered.
+- The two navigation buttons (Back, Next) indicate a guided, linear workflow through the registration process.
+- The inset form likely interacts with a larger entity/e-service selection panel shown behind the red outline, suggesting a multi-step UI where vendors are added to services.
+
+Notes for Indexing/Search
+- Include keywords: Corppass, Registration Guide, UEN, Vendor ID, Vendors@Gov, e-service, step 2, setup, government, Singapore, Vendor IDs, UEN field, pre-existing transactions, government agencies.
+- Capture exact phrases: “Step 2: Set up the Vendors@Gov e-service”, “Important: If your entity has only 1 Vendor ID, and the Vendor ID is UEN, please leave the Vendor ID field blank.”, “If your entity has Vendor IDs that is not UEN, please indicate all the Vendor IDs(s), including your UEN if it is also a Vendor ID (i.e., you have a Vendors@gov account under your UEN).”
+- Visual descriptors: blue content area, red “Important” block, red outlined form, UI screenshot, blue header font. from LoginRegister.pdf, page 8
+
+Chunk Text : **If you are neither the RO nor were you appointed as a Corppass Admin** , this step is non-applicable to you. You will instead require a Corppass User account to access the Vendors@Gov e-service. You should approach your Corppass Admin to create your Corppass User account and assign the Vendors@Gov e-service to your Corppass User account. **Note** : Each entity can have a maximum of two Corppass Admins. 7 
+
+--- end of page.page_number=7 ---
+
+## **Corppass Registration Guide for UEN Registered Entity** 
+
+## **Step 2: Set up the Vendors@Gov e-service** 
+
+The Corppass Admin will need to set up the Vendors@Gov e-service for the entity on Corppass. Corppass Users should approach their Corppass Admin to check that the setup was properly completed. 8 
+
+--- end of page.page_number=8 ---
+
+## **Corppass Registration Guide for UEN Registered Entity** 
+
+## **Step 2: Set up the Vendors@Gov e-service** 
+
+## **Important:** 
+
+- If your entity has only 1 Vendor ID, and the Vendor ID is UEN, please leave the Vendor ID field **blank** . This will likely be the case if your entity had never transacted with the Singapore Government. - If your entity has Vendor ID(s) that is _not_ UEN, please indicate all the Vendor ID(s), including your UEN if it is also a Vendor ID (i.e. you have a Vendors@Gov account under your UEN). from LoginRegister.pdf, page 8,6,7
+
+Chunk Text : High-Level Summary
+- A screenshot from a user guide titled “Corppass Registration Guide for Non-UEN Registered Entity.” 
+- The content focuses on Step 3: Set up the Vendors@Gov e-service, including an important notice box and a screenshot of a form where vendor IDs are entered.
+
+Contextual Analysis
+- Setting: Software onboarding or registration guide, likely a government e-service portal (Vendors@Gov) used for entities to register for government e-services.
+- Subjects: The guide’s step header, an “Important” red notice box with instructions, and a screenshot of a form within the portal showing Vendor ID fields.
+- Intent: To instruct users on how to set up or map vendor IDs for the e-service, including what to do if an entity already has a Vendor ID and what information to provide to AGD Helpdesk if needed.
+
+Detail Inventory
+- Text & OCR (as shown in the image):
+  - Title: “Corppass Registration Guide for Non-UEN Registered Entity”
+  - Section header: “Step 3: Set up the Vendors@Gov e-service”
+  - Important box content (red text; exact wording truncated here but includes lines like):
+    - “If your entity has an existing Vendor ID on Vendors@Gov or has been awarded invoicing Instructions through your GeBIZ ID e.g. 12345, please indicate the Vendor ID or GeBIZ ID in the vendor ID field. Otherwise, leave the field blank.”
+    - “If you had indicated a value in the Vendor ID field, please submit a ticket and provide the following details at AGD Helpdesk, so that AGD can do the vendor mapping at Vendors@Gov:”
+    - “Entity ID (provided by Corppass upon registration, e.g. C12345678X)”
+    - “Existing Vendor ID (e.g. Y123456)”
+  - Visual: A blue highlighted header “Step 3: Set up the Vendors@Gov e-service” with an orange Important marker.
+  - Screenshot region: A UI panel showing a list or table of agencies and a right-side form with labeled fields for “Vendor ID” and multiple text inputs (three values shown) with a vertical arrangement; a red bounding box around the Vendor ID area.
+  - UI elements: Back/Next buttons at bottom; left navigation tabs in the dimmed screenshot; light blue background box around the screenshot area.
+  - Page indication: “20” in bottom-right corner (page number).
+- Visual Elements:
+  - Color scheme: blue and white UI, red emphasis for Important note, light blue training backdrop, orange left border strip.
+  - Diagram style: Screen capture of an application form with a red rectangle to highlight the Vendor ID field.
+  - Typography: Bold headers and standard system font; red bold “Important” label.
+- Entities:
+  - Vendors@Gov e-service
+  - GeBIZ ID
+  - AGD Helpdesk
+  - Entity ID (Corppass-provided)
+  - Vendor ID (existing or to be entered)
+  - C12345678X style example (Entity ID)
+  - Y123456 (example existing Vendor ID)
+
+Relationship Mapping
+- The arrow/relationship implied by the screenshot shows:
+  - The user enters a Vendor ID (or GeBIZ ID) into the Vendor ID field on the Vendors@Gov setup page.
+  - If a value is already present (existing Vendor ID or GeBIZ ID), the user should indicate it in the vendor ID field; otherwise, leave blank.
+  - If a value was previously entered, the user must submit a helpdesk ticket (AGD Helpdesk) providing required details (Entity ID and Existing Vendor ID) so AGD can map the vendor on Vendors@Gov.
+  - The UI flow progresses from this Step 3 to presumably Step 4 via the Next button.
+
+Notes for Indexing and Retrieval
+- Use keywords: Corppass, Registration Guide, Vendors@Gov, e-service, Non-UEN, registered entity, Vendor ID, GeBIZ ID, AGD Helpdesk, mapping, Entity ID, Corppass registration, government e-services.
+- Include potential search phrases: “Vendors@Gov setup”, “Vendor ID field”, “AGD Helpdesk vendor mapping”, “Corppass Non-UEN entity registration”, “Step 3 Vendors@Gov e-service”.
+- Preserve exact text for critical fields and labels to support precise matching (e.g., Vendor ID, Entity ID, AGD Helpdesk).
+
+If you want, I can tailor a condensed metadata block or create a structured JSON representation for ingestion into a vector store. from LoginRegister.pdf, page 19
+"
+"What is the login process for a foreign individual without Singpass, and what security measures are required?","**Answer**
+
+- Login process for a foreign individual without Singpass:
+  - Access the AGD Password login path labeled “Log in for Foreign Individuals.”
+  - Enter the following on the left panel:
+    - User ID
+    - Password
+    - CAPTCHA code shown (example: 8j8q) in the CAPTCHA input field
+  - If needed, use the CAPTCHA refresh icon to regenerate a new code.
+  - Click the blue Login button to submit credentials.
+  - If you forget your password, use the “Forgot Password” link to recover access.
+  - Optional: There is mention of a Two-Factor Authentication (2FA) registration in the surrounding notes, suggesting an eventual 2FA step may be involved.
+
+- Security measures described:
+  - CAPTCHA is used to ensure the user is human (case sensitive entry).
+  - There are Forgot Password and 2FA-related links indicating password recovery and additional authentication may be required.
+  - The login flow is presented as part of a multi-step authentication sequence (Step 2 instructions reference entering login details and CAPTCHA, then Login).
+
+Sources Used: LoginRegister.pdf, [28], LoginRegister.pdf, [29]","
+Chunk Text : 
+    Text before image : This login method is applicable to vendors who are transacting as an individual for your personal payment matters (e.g. freelancers) but are not eligible for Singpass.
+    Image description : High-Level Summary
+- The image shows a login screen titled “Log in for Foreign Individuals,” including a User ID field, a Password field, and a CAPTCHA prompt with the code shown (8j8q) and a refresh icon. There are two visual action buttons at the bottom: a gray “Cancels” button and a blue “Login” button. A side panel contains Step 2 instructions about entering login details and CAPTCHA, indicating a multi-step guide.
+
+Contextual Analysis
+- Setting: A software or web portal login page, likely a government or corporate site that uses a password option for foreign individuals without Singpass.
+- Subjects: User interface elements such as text fields, CAPTCHA, and action buttons.
+- Intent: To instruct the user to input login credentials and CAPTCHA and then click Login; this is part of a step-by-step guide (Step 2) for authentication.
+
+Detail Inventory
+- Text & OCR (exact strings as visible):
+  - Title: Log in for Foreign Individuals
+  - Subtext under title: This AGD Password option is only applicable for foreign individuals without Singpass.
+  - Field labels: User ID *
+  - Password *
+  - Caption above CAPTCHA: Please enter the CAPTCHA Code (case sensitive):
+  - CAPTCHA code image: 8j8q
+  - CAPTCHA refresh icon (circular arrow)
+  - (Below CAPTCHA) A blank input field (assumed for CAPTCHA entry)
+  - Note text (partially visible): Note: This is a security feature to prevent spam.
+  - External links/text (partially visible): Register for Two-Factor Authentication (2FA), Forgot Password
+  - Buttons at bottom: Cances (likely a misspelling of Cancel) and Login
+- Visual Elements:
+  - White login form area framed by a red outline (emphasized in the image): contains User ID, Password, and CAPTCHA input fields.
+  - CAPTCHA section with a light grey background for the code block and a small circular refresh icon.
+  - A blue “Login” button and a grey “Cancels” button at the bottom, with the Login button more prominent.
+  - Right-side text block labeled “Step 2 – Enter your login details (User ID and Password) and CAPTCHA code, then click ‘Login’.”
+- Entities:
+  - No real person names or brands visible.
+  - The page refers to general security/authentication features such as 2FA and Forgot Password links.
+  - Location/Context: Likely a government or enterprise authentication portal.
+
+Relationship Mapping
+- The left red-outlined form elements (User ID, Password, CAPTCHA input) are the input targets for the authentication flow. The CAPTCHA code 8j8q is intended to be entered into the CAPTCHA input field. The refresh icon indicates regenerating the CAPTCHA. The bottom buttons map to actions: “Cancel” aborts, “Login” submits credentials. The right-side Step 2 text provides a narrative guide that matches the inputs on the left, indicating the sequence: enter User ID, Password, CAPTCHA, then click Login. Additional notes (2FA, Forgot Password) are auxiliary options placed nearby.
+
+Notes for indexing
+- Keywords: login, foreign individuals, Singapore Singpass, CAPTCHA, CAPTCHA code, 2FA, Forgot Password, authentication, user ID, password, login button, cancel button, security feature, web portal, step-by-step guide.
+- Possible search phrases: “foreign login portal,” “CAPTCHA login form,” “Enter User ID and Password and CAPTCHA,” “Login page with CAPTCHA refresh,” “Two-Factor Authentication registration”
+    Image caption : No image caption
+    Text after image : No text after image
+     from LoginRegister.pdf, page 28
+
+Chunk Text : 
+    Text before image : This login method is applicable to vendors who are transacting as an individual for your personal payment matters (e.g. freelancers) but are not eligible for Singpass.
+    Image description : High-Level Summary
+- A two-panel login screen: on the left, a “Log in for Foreign Individuals” form with fields and a CAPTCHA; on the right, a note icon and text explaining a forgotten password option.
+
+Contextual Analysis
+- Setting: A web login page, likely part of a government or secure service portal targeted at foreign individuals.
+- Subjects: A user login form (username, password, CAPTCHA) and a side note about password recovery.
+- Intent: Provide authentication access for foreign individuals and offer guidance for password recovery.
+
+Detail Inventory
+- Text & OCR (exact strings as visible):
+  - Header: Log in for Foreign Individuals
+  - Subheader (small text): This AGD Password option is only applicable for foreign individuals without Singpass.
+  - Field labels: User ID *
+  - Field label: Password *
+  - Caption under CAPTCHA: Please enter the CAPTCHA Code (case sensitive):
+  - CAPTCHA value (approximate as seen): 8j8q
+  - CAPTCHA refresh icon: circular arrow in a small square
+  - Note line: Note: This is a security feature to prevent spam.
+  - Link text (colored, underlined): Forgot Password
+  - Additional link text (orange/red, smaller): Register for Two-Factor Authentication (2FA)
+  - Another line under right panel: If you have forgotten your password, you may click on ‘Forgot password’.
+  - Bottom buttons (left to right): Cancel (gray) and Login (blue)
+- Visual Elements:
+  - Left panel: Standard login form with three input fields (User ID, Password, CAPTCHA) and a CAPTCHA display box with a refresh icon.
+  - CAPTCHA image showing alphanumeric characters, light gray background, text “8j8q” in bold.
+  - Right panel: Note icon and the word “NOTE” stylized, then text about forgot password.
+  - Color scheme: Blue heading color, blue Login button, gray Cancel button, red/orange highlighted links for actions like 2FA or Forgot Password.
+  - Layout: Split-screen design with left form taking majority width; right column contains informational note.
+- Entities:
+  - User ID field (no actual user data visible)
+  - Password field
+  - CAPTCHA (text: 8j8q)
+  - Links: Forgot Password, Register for Two-Factor Authentication (2FA)
+  - Buttons: Cancel, Login
+  - Icon: Note with document and pencil motif on the right
+  - Security cue: CAPTCHA, two-factor authentication mention
+
+Relationship Mapping
+- The left panel collects credentials: User ID, Password, and CAPTCHA. The CAPTCHA validates human input via an image and refresh option.
+- The CAPTCHA value (8j8q) is paired with a refresh icon to regenerate the CAPTCHA.
+- The bottom area provides navigation actions: Cancel aborts the login, Login submits credentials.
+- The highlighted “Forgot Password” and “Register for Two-Factor Authentication (2FA)” links provide recovery and security options, likely linked to separate flows.
+- The right panel serves as a support note: If password is forgotten, click the Forgot password link.
+
+Notes for Indexing and Retrieval
+- Keywords: login form, foreign individuals, AGD password, Singpass, User ID, Password, CAPTCHA, 8j8q, refresh CAPTCHA, forgot password, 2FA, two-factor authentication, Cancel, Login, security feature.
+- Possible search queries: “foreign individuals login,” “AGD password login,” “CAPTCHA code 8j8q,” “forgot password link,” “2FA registration.”
+- Image features: split-screen login page, blue headers, CAPTCHA image with refresh icon, note icon with document illustration.
+
+If you want, I can tailor the description to a specific schema or export style (e.g., JSON for a vector database, or a more concise 1-2 sentence metadata).
+    Image caption : No image caption
+    Text after image : No text after image
+     from LoginRegister.pdf, page 29
+
+Chunk Text : **Step 1** – Select ‘For Business Users’ option to login to Vendors@Gov. 13 
+
+--- end of page.page_number=13 ---
+
+## **2. Login for Foreign Company/ Organisation without UEN** 
+
+_This login method is applicable to non-UEN registered vendors who are transacting as a Foreign Company/ Organisation._ 
+
+**Step 2** – Enter your Singpass login details. 14 
+
+--- end of page.page_number=14 ---
+
+## **2. Login for Foreign Company/ Organisation without UEN** 
+
+_This login method is applicable to non-UEN registered vendors who are transacting as a Foreign Company/ Organisation._ 
+
+This step is only applicable to users who have been assigned to transact with multiple vendor IDs on behalf of your organisation. **Step 3** – Select the ‘Vendor ID/account’ you would like to access and click ‘Continue’ to login. 15 
+
+--- end of page.page_number=15 ---
+
+## **Corppass Registration Guide for Non-UEN Registered Entity** 
+
+**Overview of steps to perform on Corppass to enable login to the Vendors@Gov e-service** 
+
+For a user to be able to access the Vendors@Gov e-service, the user must have a Singpass account and be assigned the Vendors@Gov e-service for the foreign Registered Entity on Corppass (www.corppass.gov.sg). The following outlines the steps required for a user to access Vendors@Gov. User guides for each individual step can be found here. **Step 1: Nominate a Corppass Admin who will register for Corppass on behalf of the entity Step 2: Activate Singpass account for Corppass Admin (only for foreign ID users) Step 3: Set up the Vendors@Gov e-service** 
+
+**Step 4: Create Corppass User account and assign the Vendors@Gov e-service to users Step 5: Activate the Corppass User account Step 6: Activate Singpass account for Corppass User (only for foreign ID users)** 
+
+16 
+
+--- end of page.page_number=16 ---
+
+## **Corppass Registration Guide for Non-UEN Registered Entity** 
+
+## **Step 1: Nominate a Corppass Admin who will register for Corppass on behalf of the entity** 
+
+Your entity will need to appoint an administrator for the Corppass account. The appointed person will register for Corppass on behalf of the entity. The appointed person’s Corppass Administrator (Admin) account will be registered together with the entity’s Corppass account. The registration is done on Corppass (www.corppass.gov.sg). from LoginRegister.pdf, page 12,13,14,15,16
+"
+"How does a foreign individual set up 2FA for the AGD Password login, and how can it be reset on a new device?","**Answer:**
+
+To set up 2FA for the AGD Password login as a foreign individual:
+- Step 1: Download the Google Authenticator App on your mobile device.
+- Step 2: On the Vendors@Gov portal, log in as a foreign individual via AGD Password.
+- Step 3: Click to Register for Two-Factor Authentication (2FA).
+- Step 4: Enter your login details (User ID refers to your AGD Password login User ID; Password is the AGD Password).
+- Step 5: Open Google Authenticator, select “Get started,” then “Scan a QR code,” scan the QR code shown on the screen, and input the OTP (one-time password). Validate to complete setup. The setup is considered complete when the OTP is successfully verified.
+
+If you need to reset 2FA on a new device:
+- Download the Google Authenticator App on the new device.
+- Follow steps 2–5 again: log in, go to 2FA setup, and register/validate the OTP on the new device to re-establish 2FA.
+
+Additional note from the guide: If you encounter issues, you can reset by downloading Google Authenticator on your new device and following steps 2 to 5.
+
+**Sources Used:** LoginRegister.pdf, Page 30; LoginRegister.pdf, Pages 31–40","
+Chunk Text : 37 
+
+--- end of page.page_number=37 ---
+
+## **Set Up Two-Factor Authentication (2FA) with Google Authenticator for Foreign Individuals** 
+
+**Step 5: Scan the QR code and input OTP (continued)** 
+
+- A 6 Digit OTP should appear on your mobile device. 38 
+
+--- end of page.page_number=38 ---
+
+## **Set Up Two-Factor Authentication (2FA) with Google Authenticator for Foreign Individuals** 
+
+**Step 5: Scan the QR code and input OTP (continued)** 
+
+- Enter the OTP and click “Validate”. 39 
+
+--- end of page.page_number=39 ---
+
+## **Set Up Two-Factor Authentication (2FA) with Google Authenticator for Foreign Individuals** 
+
+## **Step 5: Scan the QR code and input OTP (continued)** 
+
+- Setup is complete if OTP is successfully verified. - Return to the Vendors@Gov homepage to log into your account. - To reset your 2FA, simply download the Google Administrator App on your new mobile device and follow steps 2 to 5. 40 
+
+--- end of page.page_number=40 ---
+
+## **- END -** 
+
+Updated on 02 August 2024 
+
+41 
+
+--- end of page.page_number=41 --- from LoginRegister.pdf, page 36,37,38,39,40
+
+Chunk Text : 31 
+
+--- end of page.page_number=31 ---
+
+## **Set Up Two-Factor Authentication (2FA) with Google Authenticator for Foreign Individuals** 
+
+**Step 3: Click to Register for 2FA** 
+
+- Click on “Register for Two-Factor Authentication (2FA)”. 32 
+
+--- end of page.page_number=32 ---
+
+## **Set Up Two-Factor Authentication (2FA) with Google Authenticator for Foreign Individuals** 
+
+## **Step 4: Enter Your Login Details** 
+
+- Enter your login details and click “Validate”. - “User ID” refers to your AGD Password login User ID and “Password” refers to the Password you have set for your 
+
+   - AGD Password 
+
+33 
+
+--- end of page.page_number=33 ---
+
+## **Set Up Two-Factor Authentication (2FA) with Google Authenticator for Foreign Individuals** 
+
+**Step 5: Scan the QR code and input OTP** 
+
+- Upon clicking “Validate”, you will be navigated to the following page. 34 
+
+--- end of page.page_number=34 ---
+
+## **Set Up Two-Factor Authentication (2FA) with Google Authenticator for Foreign Individuals** 
+
+**Step 5: Scan the QR code and input OTP (continued)** 
+
+- Open the Google Authenticator App on your mobile device and select “Get started”. 35 
+
+--- end of page.page_number=35 ---
+
+## **Set Up Two-Factor Authentication (2FA) with Google Authenticator for Foreign Individuals** 
+
+**Step 5: Scan the QR code and input OTP (continued)** 
+
+- Select “Scan a QR code”. 36 
+
+--- end of page.page_number=36 ---
+
+## **Set Up Two-Factor Authentication (2FA) with Google Authenticator for Foreign Individuals** 
+
+**Step 5: Scan the QR code and input OTP (continued)** 
+
+- Scan the QR code using your mobile device. from LoginRegister.pdf, page 32,33,34,35,36,30,31
+
+Chunk Text : freelancers) but are not eligible for Singpass._ 
+
+If you have forgotten your password, you may click on ‘Forgot password’. 29 
+
+--- end of page.page_number=29 ---
+
+## **4. Login for Individuals with AGD Password** 
+
+_This login method is applicable to vendors who are transacting as an individual for your personal payment matters (e.g. freelancers) but are not eligible for Singpass._ 
+
+**Step 3** –  Enter the OTP indicated in the Google Authenticator App on your mobile device and click “Validate”. Please click here for more information about setting up Two-Factor Authentication (2FA) using Google Authenticator. 30 
+
+--- end of page.page_number=30 ---
+
+## **Set Up Two-Factor Authentication (2FA) with Google Authenticator for Foreign Individuals** 
+
+**Step 1: Download Google Authenticator App** 
+
+- Download the Google Authenticator App on your mobile device from the App Store or Play Store. ## **Step 2: Click to Log In via AGD Password** 
+
+- On the Vendors@Gov portal, click to login as a foreign individual via AGD password. from LoginRegister.pdf, page 28,29,30
+"
+What additional steps are required for a Non-UEN registered foreign entity compared to a UEN-registered entity when setting up Corppass access to Vendors@Gov?,"- For non-UEN registered foreign entities, additional steps include activating a Singpass account specifically for Corppass Admin who uses a foreign ID, and the creation/activation flow of a Singpass Foreign Account (SFA) after Corppass Admin approval. The guide states: Step 2: Activate Singpass account for Corppass Admin (only for foreign ID users); if admin has foreign ID, an SFA is created post-approval and an activation email is sent before you can login to Corppass via Singpass to set up Vendors@Gov-e-service. This contrasts with UEN entities, where the admin uses Singpass login directly and the step is not applicable for foreign ID users.
+
+- Additionally, registration via foreign ID for non-UEN entities leads to a processing period of 5 to 10 working days to complete the registration before proceeding to login/setup (as part of the Corppass Admin registration path).
+
+- After activation, the same flow applies: login to Corppass via Singpass to set up the Vendors@Gov-e-service.
+
+- The overall steps highlighted in the documents for non-UEN registered foreign entities include: nominating a Corppass Admin, activating the Singpass account for Corppass Admin (foreign ID), and then setting up Vendors@Gov e-service, with subsequent steps for creating and activating user accounts and additional Singpass activations as needed.
+
+Sources Used: LoginRegister.pdf, Page 17; LoginRegister.pdf, Pages 12–16","
+Chunk Text : High-Level Summary
+- A slide from a presentation titled “Corppass Registration Guide for Non-UEN Registered Entity” focusing on Step 2: Activate Singpass account for Corppass Admin (only for foreign ID users). The slide appears to explain how admins should login or activate accounts, with an embedded screenshot of a web interface.
+
+Contextual Analysis
+- Setting: A training or instructional slide deck, likely a government or public sector guide. The orange vertical bar on the left and slide number 18 suggest a PPT or PDF presentation format.
+- Subjects: Text describing steps for activating Singpass accounts; a screenshot of a website header (Corppass) and a login button.
+- Intent: To instruct users (likely admin users of Corppass) on the process to activate Singpass accounts for Corppass Admin when the user has a foreign ID.
+
+Detail Inventory
+- Text & OCR (as visible exactly):
+  - Title on the slide: “Corppass Registration Guide for Non-UEN Registered Entity”
+  - Step heading: “Step 2: Activate Singpass account for Corppass Admin (only for foreign ID users)”
+  - Subtext blocks:
+    - “For Corppass Admin with Singpass, this step is not applicable. Proceed to login to Corppass via Singpass to set up the Vendors@Gov-e-service.”
+    - “For Corppass Admin with foreign ID, your Singpass Foreign user Account (SFA) will be created once your Corppass Admin account is approved. An email will be sent to you to inform you to activate your SFA. Once you have activated your SFA, you may proceed to login to Corppass via Singpass to set up the Vendors@Gov-e-service.”
+  - Visual/Interface elements within the screenshot:
+    - A dark horizontal navigation bar with tabs: “Home About Us Services Help” (and a right-aligned orange button labeled “Log in with Singpass”)
+    - A header line “Welcome to Corppass”
+    - Descriptive paragraph about Corppass as the authorization system for entities to manage digital service access of employees who need to perform corporate transactions, with a note: “Sign up now to prevent any disruption to your business transactions. Find out more.”
+    - A partial image of a hand holding a device (likely a smartphone) on a light background
+  - Page/footer: A small page number at bottom right “18”
+- Visual Elements:
+  - Color scheme: Blues and grays with an orange login button
+  - Layout: Text blocks above a large embedded screenshot
+  - Graphics: A screenshot of a web portal (Corppass) with a “Log in with Singpass” button
+- Entities:
+  - Corppass (system/portal)
+  - Singpass (authentication service)
+  - Vendors@Gov-e-service (service within the portal)
+  - Foreign ID / Singpass Foreign account / SFA (concepts)
+  - Gov-e-service (implied government service)
+  - The screenshot shows a smartphone illustration and a website header
+
+Relationship Mapping
+- The Step 2 instruction explains a conditional flow:
+  - If Corppass Admin has Singpass: step not applicable; proceed to login via Singpass to set up Vendors@Gov-e-service.
+  - If Corppass Admin has foreign ID: a Singpass Foreign account (SFA) will be created after admin account approval; an email informs activation; after activation, login via Singpass to set up Vendors@Gov-e-service.
+- The embedded screenshot reinforces the process by showing the web portal header, a login button (Log in with Singpass), and introductory text about Corppass and its purpose.
+- The text blocks describe account creation, activation, notifications, and the purpose of Corppass as a government authorization system enabling employees to perform digital transactions.
+
+Search-friendly keywords and phrases
+- Corppass Registration Guide
+- Non-UEN registered entity
+- Singpass login
+- Corppass Admin
+- Foreign ID Singpass
+- Singpass Foreign Account (SFA)
+- Vendors@Gov-e-service
+- Government digital services login
+- Welcome to Corppass
+- Corppass portal screenshot
+- Step 2 Activate Singpass account
+
+Note: All text is transcribed as appears; no interpretation beyond what is visible. from LoginRegister.pdf, page 17
+
+Chunk Text : If the appointed administrator has Singpass, proceed to register for Corppass via Singpass. Otherwise, register via foreign ID. When registering via foreign ID, Singpass Foreign user Account (SFA) will also be automatically created for the appointed administrator. **Note:** Once the registration is submitted, Corppass will take 5 to 10 working days to process your registration. 17 
+
+--- end of page.page_number=17 ---
+
+## **Corppass Registration Guide for Non-UEN Registered Entity** 
+
+**Step 2: Activate Singpass account for Corppass Admin (only for foreign ID users)** 
+
+**For Corppass Admin with Singpass** , this step is not applicable. Proceed to login to Corppass via Singpass to set up the Vendors@Gov e-service. from LoginRegister.pdf, page 16,17
+
+Chunk Text : **Step 1** – Select ‘For Business Users’ option to login to Vendors@Gov. 13 
+
+--- end of page.page_number=13 ---
+
+## **2. Login for Foreign Company/ Organisation without UEN** 
+
+_This login method is applicable to non-UEN registered vendors who are transacting as a Foreign Company/ Organisation._ 
+
+**Step 2** – Enter your Singpass login details. 14 
+
+--- end of page.page_number=14 ---
+
+## **2. Login for Foreign Company/ Organisation without UEN** 
+
+_This login method is applicable to non-UEN registered vendors who are transacting as a Foreign Company/ Organisation._ 
+
+This step is only applicable to users who have been assigned to transact with multiple vendor IDs on behalf of your organisation. **Step 3** – Select the ‘Vendor ID/account’ you would like to access and click ‘Continue’ to login. 15 
+
+--- end of page.page_number=15 ---
+
+## **Corppass Registration Guide for Non-UEN Registered Entity** 
+
+**Overview of steps to perform on Corppass to enable login to the Vendors@Gov e-service** 
+
+For a user to be able to access the Vendors@Gov e-service, the user must have a Singpass account and be assigned the Vendors@Gov e-service for the foreign Registered Entity on Corppass (www.corppass.gov.sg). The following outlines the steps required for a user to access Vendors@Gov. User guides for each individual step can be found here. **Step 1: Nominate a Corppass Admin who will register for Corppass on behalf of the entity Step 2: Activate Singpass account for Corppass Admin (only for foreign ID users) Step 3: Set up the Vendors@Gov e-service** 
+
+**Step 4: Create Corppass User account and assign the Vendors@Gov e-service to users Step 5: Activate the Corppass User account Step 6: Activate Singpass account for Corppass User (only for foreign ID users)** 
+
+16 
+
+--- end of page.page_number=16 ---
+
+## **Corppass Registration Guide for Non-UEN Registered Entity** 
+
+## **Step 1: Nominate a Corppass Admin who will register for Corppass on behalf of the entity** 
+
+Your entity will need to appoint an administrator for the Corppass account. The appointed person will register for Corppass on behalf of the entity. The appointed person’s Corppass Administrator (Admin) account will be registered together with the entity’s Corppass account. The registration is done on Corppass (www.corppass.gov.sg). from LoginRegister.pdf, page 12,13,14,15,16
+"

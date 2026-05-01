@@ -1,0 +1,75 @@
+﻿Question,Answer,Sources
+"What are the login methods available on the Vendors@Gov portal, and who is each applicable to?","- Login methods available on Vendors@Gov portal:
+  - For Business Users: Login with Singpass (via “For Business Users” option) [Document: LoginRegister.pdf, Page 25].
+  - For Individual Users with Singpass: Login with Singpass (via “For Individual Users” option) [Document: LoginRegister.pdf, Page 25].
+  - For UEN Registered Company/ Organisation: Login options include login methods described as applicable to UEN registered vendors (section 1) – though the slide text is faded on the page, the overall guide enumerates this as a login path for UEN registered companies/organisations [Document: LoginRegister.pdf, Page 12; Page 23-25 context].
+  - For Foreign Company/ Organisation without UEN: Login methods applicable to non-UEN registered vendors who are transacting as a Foreign Company/ Organisation [Document: LoginRegister.pdf, Page 12; Page 23-25 context].
+  - For Individuals with Singpass: Login with Singpass (explicitly listed as option 3) [Document: LoginRegister.pdf, Page 24-25].
+  - For Individuals with AGD Password: Login with AGD Password (explicitly listed as option 4) [Document: LoginRegister.pdf, Page 24-25].
+
+Note: The slides labeled “1. For UEN Registered Company/Organisation,” “2. For Foreign Company/ Organisation without UEN,” “3. For Individuals with Singpass,” and “4. For Individuals with AGD Password” indicate the applicable user types for each login method [Document: LoginRegister.pdf, Page 12; Page 23-25]. The clearest, explicit entries shown in the visible pages are:
+- For Business Users: Login with Singpass (business users) [Document: LoginRegister.pdf, Page 25].
+- For Individuals with Singpass: Login with Singpass [Document: LoginRegister.pdf, Page 25].
+- For AGD Password: Login with AGD Password (individuals) [Document: LoginRegister.pdf, Page 24-25].","{'LoginRegister.pdf': {1, 11, 12, 23, 24, 25}}"
+"What prerequisite must a UEN-registered vendor complete before logging into Vendors@Gov, and what are the steps involved?","- Prerequisite: A UEN-registered vendor must complete the login setup by selecting and configuring their vendor ID/account (the Vendors@Gov e-service setup) before logging in. This is indicated in the Step 2 pages showing the e-Service Access setup and the requirement to assign a Vendor ID(s) and related details. [Document: LoginRegister.pdf, Page 8]
+
+- Steps involved:
+  - Step 2: Set up the Vendors@gov e-service (to configure the entity’s e-services and vendor IDs) [Document: LoginRegister.pdf, Page 8]
+  - Step 3: After the setup, select the 'Vendor ID/account' you would like to access and click 'Continue' to login [Document: LoginRegister.pdf, Page 5]
+
+Note: The page excerpts show the setup screen with vendor IDs and the subsequent login button labeled Continue. [Document: LoginRegister.pdf, Page 8], [Document: LoginRegister.pdf, Page 5]","{'LoginRegister.pdf': {8, 9, 2, 5}}"
+"What are the rules around Corppass Admin accounts, and what happens if a user is neither a Registered Officer nor an appointed Admin?","- Corppass Admin accounts:
+  - Each entity can have a maximum of two Corppass Admins. [Corppass Registration Guide for UEN Registered Entity, Page 16]
+  - The steps mention registering for Corppass and setting up a Corppass Admin account, plus notes that an RO (Registered Officer) or an appointed admin may act in related roles. The note states: each entity can have a maximum of two Corppass Admins. [Corppass Registration Guide for UEN Registered Entity, Page 7]
+
+- If a user is neither the Registered Officer (RO) of the entity nor appointed as a Corppass Admin:
+  - A user who is not the RO or not appointed as a Corppass Admin is ineligible to access or administer the Corppass e-service for the entity. This is discussed under Step 1 of registering for Corppass and setting up a Corppass Admin account, which explains roles and the need for RO or Admin designation. [Corppass Registration Guide for UEN Registered Entity, Page 6]","{'LoginRegister.pdf': {16, 8, 6, 7}}"
+How should a UEN-registered vendor handle the Vendor ID field when setting up the Vendors@Gov e-service on Corppass?,"- The Vendor ID field is not explicitly described in the visible pages for UEN-registered vendors. However, the pages show steps for setting up Vendors@Gov e-service and note that the Corppass Admin will need to set up the Vendors@Gov e-service for the entity. There is no specific instruction on how to handle or enter a Vendor ID in the provided pages. Therefore, I cannot determine the exact handling of the Vendor ID field from these pages alone. [Document: LoginRegister.pdf, Page 8]","{'LoginRegister.pdf': {8, 19, 6, 7}}"
+"What is the login process for a foreign individual without Singpass, and what security measures are required?","- Answer: For Foreign Individuals without Singpass, the login process involves selecting the account to proceed into Vendors@Gov, then continuing to log in with an AGD login sequence. The process emphasizes using a non-UEN registered entity login path and requires entering login details (User ID and Password) along with solving a CAPTCHA code. A note mentions that this step is only applicable to users who have been assigned multiple vendor IDs on behalf of their organization.
+
+- Visual references:
+  - The section titled “2. Login for Foreign Company/ Organisation without UEN” explains the login method and flow [LoginRegister.pdf, Page 13].
+  - The diagram shows a login screen with account options, a CAPTCHA field, and a highlighted “Continue” button, indicating the need to select the appropriate account and proceed with login details and CAPTCHA [LoginRegister.pdf, Page 15].
+  - The accompanying notes specify that the step is for users with multiple vendor IDs and that CAPTCHAs are required during login [LoginRegister.pdf, Page 16].
+
+- Security measures:
+  - Enter login details (User ID and Password) and CAPTCHA code, then click Login/Continue to proceed [LoginRegister.pdf, Page 16].
+  - The process includes a CAPTCHA to verify human interaction [LoginRegister.pdf, Page 16].
+  - The note indicates this login method is restricted to users assigned multiple vendor IDs on behalf of the organization, implying controlled access and identity verification [LoginRegister.pdf, Page 16].","{'LoginRegister.pdf': {12, 13, 14, 15, 16, 28, 29}}"
+"How does a foreign individual set up 2FA for the AGD Password login, and how can it be reset on a new device?","- Overview: The steps describe setting up two-factor authentication (2FA) with Google Authenticator for Foreign Individuals and how to proceed if login details or devices change.
+
+- How a foreign individual sets up 2FA (as shown in the document):
+  - Step 1: Download Google Authenticator App to your mobile device.
+    - Source: [LoginRegister.pdf, Page 31].
+  - Step 2: Click to Log in via AGD Password for Foreign Individuals (Login with Singpass option shown in the guide’s screenshots).
+    - Source: [LoginRegister.pdf, Page 31].
+  - Step 3: Click to Register for Two-Factor Authentication (2FA) within the login flow.
+    - Source: [LoginRegister.pdf, Page 32].
+  - Step 4: Enter Your Login Details (User ID and Password) and perform the CAPTCHA as prompted, then proceed to the 2FA enrollment screen.
+    - Source: [LoginRegister.pdf, Page 32].
+  - Step 5: In Google Authenticator, scan the QR code shown on the screen to add the account, then enter the OTP (the 6-digit code) from the app into the provided field and click Validate.
+    - Source: [LoginRegister.pdf, Page 33 to 36].
+
+- How to reset 2FA on a new device:
+  - If you need to reset 2FA, you would reinstall the Google Authenticator app on your new mobile device, and then re-enter or re-scan the QR code (the guide shows steps for installing and linking to the new device via scanning the QR code and entering OTP).
+    - Visual guidance is shown in the later steps (Step 5 continued) where the QR code is scanned into Google Authenticator on a new device and the OTP is entered for verification.
+    - Source: [LoginRegister.pdf, Page 37 to 39].
+
+- Additional notes present in the guide:
+  - After successful OTP verification, a “Code Successfully Verified” status is shown, confirming 2FA setup on the new device.
+    - Source: [LoginRegister.pdf, Page 40].
+
+If you need a concise sequence:
+- On your new device: install Google Authenticator → scan the QR code provided during 2FA setup → enter the 6-digit code to verify. This process is demonstrated across Steps 5 (Screenshots of QR code scanning and OTP entry) in the document. [LoginRegister.pdf, Pages 33–40].","{'LoginRegister.pdf': {32, 33, 34, 35, 36, 37, 38, 39, 40, 28, 29, 30, 31}}"
+What additional steps are required for a Non-UEN registered foreign entity compared to a UEN-registered entity when setting up Corppass access to Vendors@Gov?,"- Additional steps for a Non-UEN registered foreign entity (compared to a UEN-registered entity) when setting up Corppass access to Vendors@Gov:
+  - Non-UEN entities must follow a multi-step Corppass registration process that includes nominating a Corppass Admin to register for Corppass on behalf of the entity, activating the Corppass Admin account, and activating the Corppass User account for Vendors@Gov e-service. This sequence is described in the Corppass Registration Guide for Non-UEN Registered Entity.
+
+  - Specifically, the guide outlines:
+    - Step 1: Nominate a Corppass Admin who will register for Corppass on behalf of the entity.
+    - Step 2: Activate the Singpass account for Corppass Admin.
+    - Step 3: Set up the Vendors@Gov e-service for the entity.
+    - Step 4: Create Corppass User account and assign the Vendors@Gov e-service to users.
+    - Step 5: Activate the Corppass User account.
+    - Step 6: Activate Singpass account for Corppass User (for foreign ID users).
+
+  This contrasts with the UEN-registered entity path, which is described in the corresponding section for UEN entities. [Document: Corppass Registration Guide for Non-UEN Registered Entity, Page 16-17]","{'LoginRegister.pdf': {12, 13, 14, 15, 16, 17}}"

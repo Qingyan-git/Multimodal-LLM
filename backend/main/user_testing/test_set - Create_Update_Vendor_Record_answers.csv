@@ -1,63 +1,1435 @@
-﻿Question,Answer
-"When updating vendor details as an individual with Singpass, what happens if the government database connectivity fails?","When updating vendor details as an individual with Singpass, if the connectivity to the government database fails, the name field will then be available for updating. However, if the user chooses not to do the manual update, the name will be retrieved from the government database (MyInfo) when the connectivity is restored.
+﻿Question,Answer,Sources
+"When updating vendor details as an individual with Singpass, what happens if the government database connectivity fails?","- If the government database connectivity fails, the Vendor Name field becomes editable, allowing manual updates. Once connectivity is restored, the system will fetch the name from the government database (MyInfo) again.
 
-**Sources Used:** Create_Update_Vendor_Record.pdf, Page 21"
-"During vendor record creation, where is the vendor name sourced from for an individual with Singpass?","During vendor record creation for an individual using Singpass, the vendor name is sourced from the MyInfo government database. This name is auto-populated in the vendor record and is non-editable, emphasizing the importance of data accuracy and verification.
+Sources Used: Create_Update_Vendor_Record.pdf, 21, 19-21","
+Chunk Text : Vendor Record Status**_ 
 
-**Sources Used:** Create_Update_Vendor_Record.pdf, Page 5"
-What is the difference between how the Official Name and Vendor Name fields are populated for a local company?,"The difference between how the Official Name and Vendor Name fields are populated for a local company is as follows:
+_Vendor record status include Approved, Unapproved, Inactive._ 
 
-- **Official Name**: 
-  - The Official Name is retrieved directly from the government database known as the Enterprise Data Hub (EDH). This name is the official registration of the company and is not editable by the user.
+18 
 
-- **Vendor Name**: 
-  - The Vendor Name is auto-populated from the Official Name, specifically using only the first 80 characters of the Official Name. Like the Official Name, the Vendor Name is also not editable by the user. If the Vendor Name appears inaccurate, users are advised to verify the Official Name registered with their Unique Entity Number (UEN) issuance agency.
+--- end of page.page_number=18 ---
 
-This structured relationship ensures that the Vendor Name reflects the Official Name accurately, maintaining consistency in vendor records.
+## **2. View/ Update Vendor Record Details** 
 
-**Sources Used:** Create_Update_Vendor_Record.pdf, 6; Create_Update_Vendor_Record.pdf, 7"
-Under what three conditions will a vendor record be made inactive?,"A vendor record will be made inactive under the following three conditions:
+_Login to Vendors@Gov portal (www.vendors.gov.sg)._ 
 
-- There was no activity for more than 2 years.
-- There was a failed interbank GIRO (IBG) payment to the vendor's bank account.
-- The vendor or their client agency has requested for the vendor record to be inactivated.
+_For more information on how to login, please refer to ‘Vendors@Gov Login and Registration User Guide’._ 
 
-**Sources Used:** Create_Update_Vendor_Record.pdf, 35"
-What must an unapproved vendor ensure before their record can be approved?,"To have their vendor record approved, an unapproved vendor must ensure the following:
+19 
 
-- Their vendor record 'Name' and 'Bank details' are updated correctly in the Vendors@Gov portal.
-- They have selected the correct login option. 
+--- end of page.page_number=19 ---
 
-For more information on how to log in, vendors are advised to refer to the 'Login and Registration User Guide'.
+## **2. View/ Update Vendor Record Details** 
 
-**Sources Used:** Create_Update_Vendor_Record.pdf, 35"
-What can a vendor do to reactivate an inactive vendor record?,"To reactivate an inactive vendor record, a vendor can click on the ‘Reactivate’ button after successfully logging into the Vendors@Gov portal. Once the vendor record is activated, the vendor will then be able to update their record details in the portal.
+_For existing vendor, please navigate to ‘_ _**Update Vendor Details** ’ to view or update your vendor record details._ 
 
-**Sources Used:** Create_Update_Vendor_Record.pdf, 34"
-What are the five steps shown in the Create New Vendor progress bar?,"The five steps shown in the Create New Vendor progress bar are:
+20 
 
-1. Authorisation
-2. Vendor Details
-3. Bank Details
-4. Summary
-5. Complete
+--- end of page.page_number=20 ---
 
-**Sources Used:** Create_Update_Vendor_Record.pdf, Page 3"
-What are the three authorisation clauses a new vendor agrees to when creating a vendor record?,"The three authorization clauses a new vendor agrees to when creating a vendor record are:
+## **2. View/ Update Vendor Record Details** 
 
-1. ""I/We hereby authorise the Government and Statutory Boards to credit payments due to me/us to the stated account. Amounts so credited would constitute valid discharge of obligations due to me/us.""
-2. ""This authorisation shall continue to be in force until I/we have notified you in writing.""
-3. ""I/We hereby request and authorise the Government and Statutory Boards to obtain confirmation/verification of information relating to me/us and/or to my/our account(s) from/with the bank where the Account is maintained as stated in the form.""
+1 _**Upon each login, vendor name is retrieved from Government database- MyInfo and is not editable**_ 
 
-**Sources Used:** Create_Update_Vendor_Record.pdf, Page 3"
-Can a foreign individual without Singpass update their vendor record details directly on Vendors@Gov?,"No, a foreign individual without Singpass cannot update their vendor record details directly on Vendors@Gov. They are required to approach the liaison officer at their client agency to update their vendor details in the Government Financial System (NFS@Gov).
+## _**Individuals with Singpass**_ 
 
-**Sources Used:** Create_Update_Vendor_Record.pdf, 34"
-What are the system maintenance windows during which vendor details cannot be updated?,"**System Maintenance Windows:**
+➢ _Your name will be auto-populated from the government database - MyInfo hence, it will not be allowed for edit._ 
 
-- Vendor details cannot be updated during the following times:
-  - Between **0500hrs to 0600hrs** (GMT+8)
-  - Between **1900hrs to 1930hrs** (GMT+8)
-- These maintenance windows are applicable from **Monday to Saturday** for routine system maintenance.
+_If the name which was reflected at the Vendor Name field is inaccurate, you may wish to verify your name registered at MyInfo/ICA._ 
 
-**Sources Used:** Create_Update_Vendor_Record.pdf, 33"
+_In the unlikely event where the connectivity to the government database fails, the name field will then be available for updating. However, if you choose not to do the manual update, your name will be retrieved from MyInfo when the connectivity is restored._ 
+
+21 
+
+--- end of page.page_number=21 ---
+
+## **2. View/ Update Vendor Record Details (Local Companies)** 
+
+Official name registered and retrieved from the government database - Enterprise Data Hub (EDH) 
+
+First 80 characters is populated from your official name. - 1 _**Upon each login, vendor name is retrieved from Government database - Enterprise Datahub (EDH) and is not editable**_ 
+
+## _**UEN Registered Company/ Organisation**_ 
+
+- ➢ _Your name will be auto-populated from the government database-Enterprise Datahub (EDH), hence, it will not be allowed for edit._ 
+
+_Do note that only the first 80 characters are retrieved and displayed under the vendor name field._ 
+
+_If the name which was reflected at the Vendor Name field is inaccurate, you may wish to verify your name registered at your UEN issuance agency._ 
+
+_In the unlikely event where the connectivity to the government database fails, the name field will then be available for updating. from Create_Update_Vendor_Record.pdf, page 17,18,19,20,21
+
+Chunk Text : High-Level Summary
+- A slide or page from a software or process manual titled “2. View/ Update Vendor Record Details.”
+- The layout shows a header, a central area with a highlighted “Vendor Name” field, some status text, and a blue informational box describing data behavior.
+
+Contextual Analysis
+- Setting: Looks like a training, user guide, or workflow documentation screen for a vendor management system.
+- Subjects: A vendor record, including Vendor ID, Vendor Name, and Vendor Record Status (e.g., Approved). Emphasis on how vendor names are retrieved and whether the field is editable.
+- Intent: To instruct users on how to view and/or update vendor details, and to explain data handling rules (e.g., automatic population from government databases, editability).
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Title/heading: “2. View/ Update Vendor Record Details”
+  - Labels: “Vendor ID” (with a blurred or obfuscated value), “Vendor Name” (in a highlighted orange-bordered box), and “Vendor Record Status” with value “Approved” (likely propped to the right).
+  - Informational note (blue badge style with number 1):
+    - “Upon each login, vendor name is retrieved from Government database- MyInfo and is not editable”
+    - Subheading: “Individuals with Singpass”
+    - Supporting text:
+      - “Your name will be auto-populated from the government database - MyInfo hence, it will not be allowed for edit.”
+      - “If the name which was reflected at the Vendor Name field is inaccurate, you may wish to verify your name registered at MyInfo/ICA-”
+      - “In the unlikely event where the connectivity to the government database fails, the name field will then be available for updating. However, if you choose not to do the manual update, your name will be retrieved from MyInfo when the connectivity is restored.”
+- Visual Elements:
+  - Central rectangle around the Vendor Name field with an orange border, likely indicating the field in focus or of importance.
+  - A small circular blue icon with the number 1 inside at the start of the informational box.
+  - Gray-blue informational panel with text and a subtle border.
+  - Subsection header “Individuals with Singpass.”
+- Entities:
+  - Vendor ID (value blurred)
+  - Vendor Name (value blurred within orange border)
+  - Vendor Record Status: “Approved”
+  - References to government databases MyInfo and ICA (likely Singaporean government services)
+  - Mention of Singpass (Singapore's digital identity)
+  - Possible connectivity condition between MyInfo/ICA and the system
+
+Relationship Mapping
+- The orange-bordered Vendor Name field appears to be an important read-only value with a conditional editability:
+  - If the government database (MyInfo/ICA) cannot be reached, the Vendor Name field becomes editable for manual entry.
+  - On login, the Vendor Name is automatically populated from MyInfo and remains non-editable by default.
+  - Upon connectivity restoration, the system will fetch and populate from MyInfo; otherwise, manual update remains possible during outage.
+- The Vendor Record Status (Approved) indicates the current state of the vendor record, possibly influencing whether updates are permitted.
+- The structure implies a sequence: login -> fetch vendor name from government DB -> display read-only unless outage -> potential manual edit fallback -> save/update vendor details.
+
+Search-Oriented Keywords (for indexing)
+- Vendor record details, vendor name, vendor ID, vendor status, Approved, MyInfo, Singpass, ICA, government database, auto-populated, non-editable field, connectivity failure, manual update, vendor management, vendor data retrieval, government identity services, orange border field, user guide, training slide. from Create_Update_Vendor_Record.pdf, page 20
+
+Chunk Text : After your vendor record is activated, you may update your vendor record details at the portal._ 
+
+- ➢ **Your vendor record was created under a specific agency’s SET ID (Eg: MOF10)** . _Vendors with vendor ID tagged to a specific agency business unit (Eg: MOF10) are unable to update their vendor record in Vendors@Gov. You are required to approach the liaison officer at your client agency to update your vendor details in the Government Financial System (NFS@Gov)._ 
+
+- ➢ _**You are a foreign individual who do not have Singpass.**_ 
+
+_Update of vendor record details is not available for foreign individual who do not have Singpass. You are required to approach the liaison officer at your client agency to update your vendor details in the Government Financial System (NFS@Gov)._ 
+
+34 
+
+--- end of page.page_number=34 ---
+
+## **Vendor Record User Guides** 
+
+## Select the topics below to learn more about: 
+
+## _**1. Create Vendor Record**_ 
+
+_New vendors will be directed to ‘Create New Vendor’ page to create a vendor record._ 
+
+## _**2. View/ Update Vendor Record Details**_ 
+
+_Existing vendor may navigate to ‘Update Vendor Details’ to update your name, contact, GST registration and bank details._ 
+
+## _**3. Vendor Record Status**_ 
+
+_Vendor record status include Approved, Unapproved, Inactive._ 
+
+35 
+
+--- end of page.page_number=35 ---
+
+## **3. from Create_Update_Vendor_Record.pdf, page 33,34,35
+"
+"During vendor record creation, where is the vendor name sourced from for an individual with Singpass?","**Answer:**
+For an individual with Singpass, the vendor name is retrieved from the government database MyInfo and is not editable.
+
+**Sources Used:** Create_Update_Vendor_Record.pdf, Page 6; Create_Update_Vendor_Record.pdf, Page 5
+","
+Chunk Text : 1) High-Level Summary
+- A slide from a process or training document showing how to create a Vendor Record for individuals with a Singpass.
+- The image focuses on the Vendor Name field being highlighted and a note explaining that the Vendor name is retrieved from a government database (MyInfo) and is not editable.
+
+2) Contextual Analysis
+- Setting: A printed or digital training/guide slide, likely part of an instructional manual for data entry or vendor onboarding.
+- Subjects: The user (interacting with a vendor management system) and the system behavior for individuals with Singpass.
+- Intent: To instruct users that Vendor Name is auto-populated from a government database (MyInfo) and cannot be edited, and to provide guidance about verification if the shown name is inaccurate.
+
+3) Detail Inventory
+- Text & OCR (as visible, exact phrasing):
+  - Title: ""1. Create Vendor Record (Individuals with Singpass)""
+  - Section/Label: ""Vendor ID"" followed by blurred/blocked text (not legible)
+  - Highlighted field label: ""Vendor Name *"" (boxed in orange)
+  - Statement block (inside a light gray box):
+    - Heading: ""2"" with a small icon-like blue square
+    - ""Vendor name is retrieved from Government database- MyInfo and is not editable""
+    - Subheading: ""Individuals with Singpass""
+    - Bullet content: ""Your name will be auto-populated from the government database - MyInfo hence, it will not be allowed for edit.""
+    - Note: ""If the name which was reflected at the Vendor Name field is inaccurate, you may wish to verify your name registered at MyInfo/ICA.""
+  - Page footer: ""6""
+- Visual Elements:
+  - Orange vertical margin on the left.
+  - A blue-gray header line and title typography.
+  - The Vendor Name field is outlined in orange to indicate an important field.
+  - A gray instructional callout box with a numbered step indicator (2) and bold/italic emphasis on certain phrases (e.g., not editable).
+  - The Vendor ID area shows a blurred/obscured string.
+- Entities:
+  - Government database: MyInfo
+  - Related system/agency: ICA (Immigration and Checkpoints Authority)
+  - User group: Individuals with Singpass
+  - Field: Vendor Name
+  - Field type: Auto-populated / non-editable
+
+4) Relationship Mapping
+- The arrow/relationship concept (implied, not drawn): The Vendor Name field is automatically populated from the MyInfo government database, not editable by the user.
+- The Vendor ID is a separate identifier (blurred in the image) and presumably linked to the vendor record, while Vendor Name is derived automatically.
+- If the reflected name is inaccurate, users are advised to verify their MyInfo/ICA records, implying a lookup/verification workflow outside direct editing of the Vendor Name field.
+
+Notes for indexing and search
+- Use keywords: vendor record, individuals with Singpass, Vendor Name, auto-populated, MyInfo, government database, not editable, ICA, Singapore, vendor onboarding, data entry, vendor management system.
+- Include phrases to support queries like ""MyInfo auto-populates vendor name,"" ""Singpass vendor onboarding,"" ""Vendor Name field non-editable,"" and ""verify name in MyInfo/ICA."" from Create_Update_Vendor_Record.pdf, page 5
+
+Chunk Text : Create Vendor Record** 
+
+1 Vendor ID is not editable. _The vendor ID is a unique identifier that identifies your vendor record. The vendor ID is assigned as follows:_ 
+
+## _**Company/ Organisation**_ 
+
+- ➢ _**UEN Registered Entity** – The vendor ID will be your organization’s UEN._ 
+
+- ➢ _**Foreign Entity** – The vendor ID will be your Corppass Entity ID/ GeBIZ trading partner reference._ 
+
+## _**Individual**_ 
+
+- ➢ _**NRIC/ FIN Holder** – The vendor ID will be your NRIC/ FIN._ 
+
+- ➢ _**Non-NRIC/ FIN Holder** – The vendor ID will be your passport number._ 
+
+_The vendor ID may appear incorrectly if you have selected the wrong login option._ 
+
+5 
+
+--- end of page.page_number=5 ---
+
+## **1. Create Vendor Record (Individuals with Singpass)** 
+
+2 _**Vendor name is retrieved from Government database- MyInfo and is not editable**_ 
+
+## _**Individuals with Singpass**_ 
+
+➢ _Your name will be auto-populated from the government database - MyInfo hence, it will not be allowed for edit._ 
+
+_If the name which was reflected at the Vendor Name field is inaccurate, you may wish to verify your name registered at MyInfo/ICA._ 
+
+6 
+
+--- end of page.page_number=6 ---
+
+## **1. Create Vendor Record (Local Companies)** 
+
+Official name registered and retrieved from the government database - Enterprise Data Hub (EDH) 
+
+First 80 characters is populated from your official name. 2 _**Vendor name is retrieved from Government database - Enterprise Datahub (EDH) and is not editable**_ 
+
+## _**UEN Registered Company/ Organisation**_ 
+
+- ➢ _Your name will be auto-populated from the government database-Enterprise Datahub (EDH), hence, it will not be allowed for edit._ 
+
+_Do note that only the first 80 characters are retrieved and displayed under the vendor name field._ 
+
+_If the name which was reflected at the Vendor Name field is inaccurate, you may wish to verify your name registered at your UEN issuance agency._ 
+
+7 
+
+--- end of page.page_number=7 ---
+
+## **1. Create Vendor Record (Foreign Companies)** 
+
+Name that is retrieved from First 80 characters retrieved Corppass from Corppass 
+
+2 _**Name is retrieved from Corppass and is not editable**_ 
+
+## _**Non-UEN Registered Company/ Organisation**_ 
+
+➢ _Your company name will be auto-populated according to your Corppass registered name. If the name which was reflected at the Vendor Name field is inaccurate, you may wish to contact Corppass._ 
+
+_Do note that only the first 80 characters are retrieved and displayed under the vendor name field._ 
+
+8 
+
+--- end of page.page_number=8 ---
+
+## **1. Create Vendor Record – Contact Details** 
+
+## _**Your Contact Details and Address will be populated from MyInfo for individuals and EDH for companies. However, you**_ 3 _**may amend your details if they are inaccurately reflected. To amend your address, you may click on the ‘Clear Address’ button**_ 
+
+- _**Email address:** All Vendors@Gov updates and softcopy remittance advices will be sent to this email address. Only one email address is allowed for each vendor record._ 
+
+- _**Contact No.:** Please provide/verify your contact information._ 
+
+- _**Country, Postal Code, State, City, Address:**_ 
+
+   - _**Company/ Organisation –** Please provide/verify your business registered address._ _**Individual** – Please provide/verify your residential address._ 
+
+   - _*Your address will be auto-populated according to the postal code you have input for Singapore addresses._ 
+
+_After you have entered the contact details and address, click on ‘Next’ to proceed to the bank details page._ 
+
+9 
+
+--- end of page.page_number=9 ---
+
+## **1. Create Vendor Record – Bank Details** 
+
+4 _**Select your payment mode and enter your bank details.**_ 
+
+## _**Payment Mode:**_ 
+
+_**Inter-Bank Giro (IBG)** – Select this option if you are receiving Singapore dollars (SGD) payment with a local bank account._ 
+
+_**Paynow (PAYN) –** Select this option if you are receiving Singapore dollars (SGD) payment via PayNow. Please ensure that all agencies you are transacting with are PayNow ready._ 
+
+_**Telegraphic Transfer (TT)** – Select this option if you are receiving:_ 
+
+- _a) Foreign currency payment; or_ 
+
+- _b) Singapore dollars (SGD) payment with a foreign bank account._ 
+
+- _**IBG option** is not available for foreign vendors. Foreign vendor may submit a hardcopy Direct Credit Authorisation (DCA) form with bank endorsement to AGD and subsequently lodge a helpdesk ticket for assistance to update your IBG bank details._ 
+
+- _**PAYN option** is sole payment mode for SGD payments to CAYE-eligible self-employed vendors._ 
+
+- _**TT option** is not available for vendors who are transacting as an individual. Individuals may lodge a helpdesk ticket for assistance to update your TT bank details._ 
+
+10 
+
+--- end of page.page_number=10 ---
+
+## **1. Create Vendor Record – Bank Details (IBG)** 
+
+_**Inter-Bank Giro (IBG) option selected.**_ 
+
+## _**Select your bank and branch code, enter your account number.**_ 
+
+_The bank account provided must be registered under the entity’s name and ID. Bank details (Eg: Bank & Branch code, Bank account) must be updated correctly. from Create_Update_Vendor_Record.pdf, page 4,5,6,7,8,9,10
+
+Chunk Text : Vendor Record Status**_ 
+
+_Vendor record status include Approved, Unapproved, Inactive._ 
+
+18 
+
+--- end of page.page_number=18 ---
+
+## **2. View/ Update Vendor Record Details** 
+
+_Login to Vendors@Gov portal (www.vendors.gov.sg)._ 
+
+_For more information on how to login, please refer to ‘Vendors@Gov Login and Registration User Guide’._ 
+
+19 
+
+--- end of page.page_number=19 ---
+
+## **2. View/ Update Vendor Record Details** 
+
+_For existing vendor, please navigate to ‘_ _**Update Vendor Details** ’ to view or update your vendor record details._ 
+
+20 
+
+--- end of page.page_number=20 ---
+
+## **2. View/ Update Vendor Record Details** 
+
+1 _**Upon each login, vendor name is retrieved from Government database- MyInfo and is not editable**_ 
+
+## _**Individuals with Singpass**_ 
+
+➢ _Your name will be auto-populated from the government database - MyInfo hence, it will not be allowed for edit._ 
+
+_If the name which was reflected at the Vendor Name field is inaccurate, you may wish to verify your name registered at MyInfo/ICA._ 
+
+_In the unlikely event where the connectivity to the government database fails, the name field will then be available for updating. However, if you choose not to do the manual update, your name will be retrieved from MyInfo when the connectivity is restored._ 
+
+21 
+
+--- end of page.page_number=21 ---
+
+## **2. View/ Update Vendor Record Details (Local Companies)** 
+
+Official name registered and retrieved from the government database - Enterprise Data Hub (EDH) 
+
+First 80 characters is populated from your official name. - 1 _**Upon each login, vendor name is retrieved from Government database - Enterprise Datahub (EDH) and is not editable**_ 
+
+## _**UEN Registered Company/ Organisation**_ 
+
+- ➢ _Your name will be auto-populated from the government database-Enterprise Datahub (EDH), hence, it will not be allowed for edit._ 
+
+_Do note that only the first 80 characters are retrieved and displayed under the vendor name field._ 
+
+_If the name which was reflected at the Vendor Name field is inaccurate, you may wish to verify your name registered at your UEN issuance agency._ 
+
+_In the unlikely event where the connectivity to the government database fails, the name field will then be available for updating. from Create_Update_Vendor_Record.pdf, page 17,18,19,20,21
+"
+What is the difference between how the Official Name and Vendor Name fields are populated for a local company?,"**Answer:**
+
+- Official Name: This field is populated from the government database – Enterprise Data Hub (EDH) – and the info is retrieved automatically for Local Companies.
+- Vendor Name: This field is auto-populated from the Official Name and is not editable. It reflects the first 80 characters of the Official Name.
+
+In short, Official Name comes from EDH, while Vendor Name is a read-only field derived from Official Name (limited to 80 characters). If EDH connectivity fails, there may be manual updates, but normally Vendor Name is auto-filled from EDH.
+
+Sources Used: Create_Update_Vendor_Record.pdf, Page 22","
+Chunk Text : High-Level Summary:
+- The image appears to be a slide from a training or procedure document about viewing or updating vendor records for local companies. It focuses on retrieving and populating a vendor name field from government and enterprise data sources, with a highlighted example of a Vendor Name field.
+
+Contextual Analysis:
+- Setting: A presentation slide, likely part of a user manual or SOP for data management or ERP/vendor master data workflow.
+- Subjects: Local company vendor records, government data (Enterprise Data Hub), and fields such as Vendor ID, Official Name, and Vendor Name.
+- Intent: To instruct the user on how the vendor name is auto-populated from government databases and the implications for editing permissions and data accuracy.
+
+Detail Inventory:
+- Text & OCR (exact text as visible):
+  - Title: ""2. View/ Update Vendor Record Details (Local Companies)""
+  - Small callout boxes:
+    - ""Official name registered and retrieved from the government database - Enterprise Data Hub (EDH)""
+    - ""First 80 characters is populated from your official name.""
+  - Visuals/Labels in the diagram (likely a row of fields): 
+    - ""Vendor ID""
+    - ""Official name""
+    - ""Vendor Name"" (highlighted with an orange box)
+    - ""Vendor Record Status"" with subtext ""Approved"" (in green)
+- Visual Elements:
+  - A light grey content area with a diagram showing a sequence of fields (Vendor ID → Official name → Vendor Name → Vendor Record Status).
+  - An orange highlight around the Vendor Name field to emphasize it.
+  - Two callout text boxes describing data sources and character limit for the official name.
+  - A page number in bottom-right corner: ""22""
+- Entities:
+  - Government database – Enterprise Data Hub (EDH)
+  - Vendors: local company vendors
+  - Fields: Vendor ID, Official name, Vendor Name, Vendor Record Status
+  - Status: Approved
+
+Relationship Mapping:
+- Flow: Vendor ID and Official name are retrieved from the government database (EDH). The Vendor Name field is populated from the official name, limited to the first 80 characters. The Vendor Record Status indicates approval. If connectivity to EDH fails, the name may be manually updated, but normal behavior auto-populates from EDH when available.
+- Emphasis: The Vendor Name field is the key element that reflects the official government-registered name after retrieval, and the status shows whether the record is approved.
+
+Notes for indexing/search:
+- Include synonyms: vendor master data, vendor record, vendor name auto-population, government data hub, EDH, official name, local companies, vendor status, dataset integration, enterprise data hub.
+- Keywords: Vendor ID, Official name, Vendor Name, Government database, EDH, 80 characters, Approved, manual update, connectivity.
+
+If you want, I can tailor this into a shorter 2-3 sentence abstract or expand the detail inventory with exact punctuation and line breaks for precise indexing. from Create_Update_Vendor_Record.pdf, page 21
+
+Chunk Text : High-Level Summary
+- The image appears to be a page from a training or instructional document about creating a Vendor Record (Local Companies) in a system, likely a government or ERP portal.
+- It shows field layout for Vendor ID, Official Name, and Vendor Name, with emphasis on how the first 80 characters are populated from official name and that the vendor name field is not editable.
+
+Contextual Analysis
+- Setting: A formal, step-by-step procedural guide, likely a user manual or training deck for data entry in a government database (Enterprise Data Hub - EDH).
+- Subjects: A user performing data entry for local vendor records; interface elements such as fields and notes.
+- Intent: To instruct users on how vendor names are populated from the government database and to warn that the vendor name field is not editable.
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Title: ""1. Create Vendor Record (Local Companies)""
+  - A note area with three small callouts:
+    - ""Official name registered and retrieved from the government database - Enterprise Data Hub (EDH)""
+    - ""First 80 characters is populated from your official name.""
+  - Field labels and placeholders (horizontally aligned):
+    - ""Vendor ID"" (with a vertical label on the left)
+    - ""Official Name"" (likely a field with a placeholder)
+    - ""Vendor Name *"" (highlighted with an orange border indicating a required or protected field)
+  - A boxed section that appears to be step 2:
+    - ""2 Vendor name is retrieved from Government database - Enterprise Datahub (EDH) and is not editable""
+    - A subheading: ""UEN Registered Company / Organisation"" (or similar)
+    - Paragraph noting: 
+      - ""Your name will be auto-populated from the government database-Enterprise Datahub (EDH), hence, it will not be allowed for edit.""
+      - ""Do note that only the first 80 characters are retrieved and displayed under the vendor name field. If the name which was reflected at the Vendor Name field is inaccurate, you may wish to verify your name registered at your UEN issuance agency.""
+  - Page footer indicator: ""7"" (page number)
+- Visual Elements:
+  - Clean, professional layout with a light gray background block for step content.
+  - Orange accent color highlighting the Vendor Name field and the left margin stripe.
+  - Three small informational callouts at the top describing data sources and character limit.
+  - Simple form-like arrangement with Vendor ID, Official Name, and Vendor Name fields.
+- Entities:
+  - Government database – Enterprise Data Hub (EDH)
+  - UEN (Unified Entity Number) or registered company/organization
+  - Vendor ID, Official Name, Vendor Name (fields)
+
+Relationship Mapping
+- The diagram indicates a data flow where:
+  - Official Name is sourced from the government EDH and used to populate the Vendor Name field.
+  - The Vendor Name field is auto-filled (read-only) and constrained by the first 80 characters of the official name.
+  - The Vendor Name field is visually highlighted to show its special status (not editable, system-populated).
+  - A note explains that if the vendor name displayed is inaccurate, verification via the UEN issuance agency is advised.
+- The top callouts reinforce data provenance (official name from EDH) and the character limit (80 chars) as constraints guiding the user.
+
+Notes for Searchability (Keywords to index)
+- Create Vendor Record, Local Companies, Vendor ID, Official Name, Vendor Name, EDH, Enterprise Data Hub, government database, UEN, auto-populated, non-editable, first 80 characters, data entry, vendor registration, government-issued name, organization, corporate registry, data entry guidelines.
+
+If you want, I can tailor the description to a specific schema or add alternative search phrases. from Create_Update_Vendor_Record.pdf, page 6
+
+Chunk Text : Create Vendor Record** 
+
+1 Vendor ID is not editable. _The vendor ID is a unique identifier that identifies your vendor record. The vendor ID is assigned as follows:_ 
+
+## _**Company/ Organisation**_ 
+
+- ➢ _**UEN Registered Entity** – The vendor ID will be your organization’s UEN._ 
+
+- ➢ _**Foreign Entity** – The vendor ID will be your Corppass Entity ID/ GeBIZ trading partner reference._ 
+
+## _**Individual**_ 
+
+- ➢ _**NRIC/ FIN Holder** – The vendor ID will be your NRIC/ FIN._ 
+
+- ➢ _**Non-NRIC/ FIN Holder** – The vendor ID will be your passport number._ 
+
+_The vendor ID may appear incorrectly if you have selected the wrong login option._ 
+
+5 
+
+--- end of page.page_number=5 ---
+
+## **1. Create Vendor Record (Individuals with Singpass)** 
+
+2 _**Vendor name is retrieved from Government database- MyInfo and is not editable**_ 
+
+## _**Individuals with Singpass**_ 
+
+➢ _Your name will be auto-populated from the government database - MyInfo hence, it will not be allowed for edit._ 
+
+_If the name which was reflected at the Vendor Name field is inaccurate, you may wish to verify your name registered at MyInfo/ICA._ 
+
+6 
+
+--- end of page.page_number=6 ---
+
+## **1. Create Vendor Record (Local Companies)** 
+
+Official name registered and retrieved from the government database - Enterprise Data Hub (EDH) 
+
+First 80 characters is populated from your official name. 2 _**Vendor name is retrieved from Government database - Enterprise Datahub (EDH) and is not editable**_ 
+
+## _**UEN Registered Company/ Organisation**_ 
+
+- ➢ _Your name will be auto-populated from the government database-Enterprise Datahub (EDH), hence, it will not be allowed for edit._ 
+
+_Do note that only the first 80 characters are retrieved and displayed under the vendor name field._ 
+
+_If the name which was reflected at the Vendor Name field is inaccurate, you may wish to verify your name registered at your UEN issuance agency._ 
+
+7 
+
+--- end of page.page_number=7 ---
+
+## **1. Create Vendor Record (Foreign Companies)** 
+
+Name that is retrieved from First 80 characters retrieved Corppass from Corppass 
+
+2 _**Name is retrieved from Corppass and is not editable**_ 
+
+## _**Non-UEN Registered Company/ Organisation**_ 
+
+➢ _Your company name will be auto-populated according to your Corppass registered name. If the name which was reflected at the Vendor Name field is inaccurate, you may wish to contact Corppass._ 
+
+_Do note that only the first 80 characters are retrieved and displayed under the vendor name field._ 
+
+8 
+
+--- end of page.page_number=8 ---
+
+## **1. Create Vendor Record – Contact Details** 
+
+## _**Your Contact Details and Address will be populated from MyInfo for individuals and EDH for companies. However, you**_ 3 _**may amend your details if they are inaccurately reflected. To amend your address, you may click on the ‘Clear Address’ button**_ 
+
+- _**Email address:** All Vendors@Gov updates and softcopy remittance advices will be sent to this email address. Only one email address is allowed for each vendor record._ 
+
+- _**Contact No.:** Please provide/verify your contact information._ 
+
+- _**Country, Postal Code, State, City, Address:**_ 
+
+   - _**Company/ Organisation –** Please provide/verify your business registered address._ _**Individual** – Please provide/verify your residential address._ 
+
+   - _*Your address will be auto-populated according to the postal code you have input for Singapore addresses._ 
+
+_After you have entered the contact details and address, click on ‘Next’ to proceed to the bank details page._ 
+
+9 
+
+--- end of page.page_number=9 ---
+
+## **1. Create Vendor Record – Bank Details** 
+
+4 _**Select your payment mode and enter your bank details.**_ 
+
+## _**Payment Mode:**_ 
+
+_**Inter-Bank Giro (IBG)** – Select this option if you are receiving Singapore dollars (SGD) payment with a local bank account._ 
+
+_**Paynow (PAYN) –** Select this option if you are receiving Singapore dollars (SGD) payment via PayNow. Please ensure that all agencies you are transacting with are PayNow ready._ 
+
+_**Telegraphic Transfer (TT)** – Select this option if you are receiving:_ 
+
+- _a) Foreign currency payment; or_ 
+
+- _b) Singapore dollars (SGD) payment with a foreign bank account._ 
+
+- _**IBG option** is not available for foreign vendors. Foreign vendor may submit a hardcopy Direct Credit Authorisation (DCA) form with bank endorsement to AGD and subsequently lodge a helpdesk ticket for assistance to update your IBG bank details._ 
+
+- _**PAYN option** is sole payment mode for SGD payments to CAYE-eligible self-employed vendors._ 
+
+- _**TT option** is not available for vendors who are transacting as an individual. Individuals may lodge a helpdesk ticket for assistance to update your TT bank details._ 
+
+10 
+
+--- end of page.page_number=10 ---
+
+## **1. Create Vendor Record – Bank Details (IBG)** 
+
+_**Inter-Bank Giro (IBG) option selected.**_ 
+
+## _**Select your bank and branch code, enter your account number.**_ 
+
+_The bank account provided must be registered under the entity’s name and ID. Bank details (Eg: Bank & Branch code, Bank account) must be updated correctly. from Create_Update_Vendor_Record.pdf, page 4,5,6,7,8,9,10
+"
+Under what three conditions will a vendor record be made inactive?,"- There was no activity for more than 2 years.
+- There was a failed interbank GIRO (IBG) payment to your bank account.
+- You or your client agency has requested the vendor record inactivation.
+
+Sources Used: Create_Update_Vendor_Record.pdf (page 35/36)","
+Chunk Text : High-Level Summary
+- A slide titled “Why am I unable to update my vendor details?” presenting a bullet-point explanation of conditions and rules that block updates to vendor records. The content appears to be part of a formal training or policy deck.
+
+Contextual Analysis
+- Setting: A presentation slide, likely from an internal enterprise training or governance document.
+- Subject: Procedures and restrictions related to updating vendor details in a government or enterprise financial system.
+- Intent: To inform users why updates may be blocked and under what conditions updates are not possible, including guidance on activation and agency-specific rules.
+- Audience: Employees or contractors responsible for vendor data maintenance within a government/enterprise context.
+
+Detail Inventory
+- Text & OCR (verbatim as visible):
+  - Title: ""Why am I unable to update my vendor details?""
+  - Main points (numbered list):
+    1. ""Update of vendor details will not be available between 0500hrs to 0600hrs, and 1900hrs to 1930hrs (GMT+8) from Monday to Saturday for routine system maintenance.""
+    2. ""You will not be able to update your vendor record details if:""
+       - Subbullet: ""Your vendor record is currently inactive.""
+         - Note (italicized/indented): ""If you would like to activate your vendor record, you may do so by clicking on the ‘Reactivate’ button upon successful login. After your vendor record is activated, you may update your vendor record details at the portal.""
+       - Subbullet: ""Your vendor record was created under a specific agency’s SET ID (E.g: MOF10).""
+         - Note: ""Vendors with vendor ID tagged to a specific agency business unit (E.g: MOF10) are unable to update their vendor record in Vendors@Gov. You are required to approach the liaison officer at your client agency to update your vendor details in the Government Financial System (NFS@Gov).""
+       - Subbullet: ""You are a foreign individual who do not have Singpass.""
+         - Note: ""Update of vendor record details is not available for foreign individual who do not have Singpass. You are required to approach the liaison officer at your client agency to update your vendor details in the Government Financial System (NFS@Gov).""
+- Visual elements:
+  - Professional slide layout with a light background.
+  - Blue/gray text, darker for headings and bullet points.
+  - An orange vertical strip on the left edge (design motif).
+  - Page number 34 at bottom-right.
+  - A subtle horizontal rule under the title.
+- Entities:
+  - Time windows: 0500hrs–0600hrs, 1900hrs–1930hrs, GMT+8, Monday to Saturday.
+  - System terms: vendor details, vendor record, Reactivate button, portal, NFS@Gov (Government Financial System), Singpass, MOF10 (example agency SET ID), Vendors@Gov (system name).
+  - Roles: liaison officer, client agency.
+  - Abbreviations: SET ID, MOF, NFS@Gov, Singpass, GMT+8.
+
+Relationship Mapping
+- The slide communicates rules about availability and permissions:
+  - There is a systemic maintenance window (time-based constraint) that makes updates unavailable.
+  - There are conditional blocks detailing when updates are impossible: inactive vendor, agency-set ID restrictions, and foreign individuals without Singpass.
+  - Each condition includes a suggested workaround or required action (reactivation, liaison with agency, etc.).
+  - The notes emphasize that certain vendor records cannot be updated within the standard portal and require alternative steps via liaison officers or specific systems.
+
+Notes for indexing / search queries
+- Keywords: vendor details update, maintenance window, inactive vendor, Reactivate button, portal, SET ID, agency business unit, MOF10, Vendors@Gov, Government Financial System, Singpass, foreign individual, liaison officer, client agency, NFS@Gov, time windows, GMT+8.
+- Phrases to capture: “between 0500hrs to 0600hrs, and 1900hrs to 1930hrs (GMT+8) from Monday to Saturday,” “not available,” “reactivate,” “agency SET ID,” “Vendors@Gov,” “Government Financial System (NFS@Gov).”
+- Visual cues: left orange border, emphasized title, bullet indentation, bottom-right slide number. from Create_Update_Vendor_Record.pdf, page 33
+
+Chunk Text : High-Level Summary
+- The image shows a slide titled “3. Vendor Record Status” presenting a table that defines three status categories (Approved, Unapproved, Inactive) and their descriptions and requirements. The slide appears to be part of a larger presentation or a user guide related to vendor records in a government or enterprise system.
+
+Contextual Analysis
+- Setting: A presentation slide with a light-themed layout, blue header row in the table, and an orange vertical margin on the left. Page number visible (36) suggests it is part of a longer document or deck.
+- Subjects: Vendor records and their status states; guidelines and required actions for each status.
+- Intent: To inform users about how vendor records are categorized, what each status means, and what actions or data are required to manage those statuses.
+
+Detail Inventory
+- Text & OCR (exact strings as visible):
+  - Title: “3. Vendor Record Status”
+  - Table header: “Status” and “Description”
+  - Status rows and descriptions:
+    - Approved
+      - “Vendors will be able to submit e-Invoices to Government agencies in Vendors@Gov portal after their vendor record is approved.”
+    - Unapproved
+      - “Please ensure the following:
+        1. Your vendor record ‘Name’ and ‘Bank details’ are updated correctly in Vendors@Gov.
+        2. You have selected the correct login option. For more information on how to login, please refer to ‘Login and Registration User Guide’.”
+    - Inactive
+      - “Your vendor record will be inactivated if:
+        1. There was no activity for more than 2 years; or
+        2. There was a failed interbank GIRO (IBG) payment to your bank account; or
+        3. You or your client agency has requested for the vendor record inactivation.
+      If you would like to activate your vendor record, you may do so by clicking on the ‘Reactive’ button upon successful login. After your vendor record is activated, you may update your vendor record details in the portal.”
+- Visual Elements:
+  - A two-column table with a blue header row.
+  - Blue-shaded left column for Status and descriptive text in a light blue/gray background for rows.
+  - The slide uses a white background with an orange vertical gutter on the left edge and a page number “36” at the bottom right.
+- Entities:
+  - Vendor records in a government portal context (Vendors@Gov).
+  - Actions/buttons such as “Reactive” and references to “Login and Registration User Guide.”
+  - Terms: e-Invoices, government agencies, GIRO (IBG) payment.
+
+Relationship Mapping
+- The table maps statuses to their definitions and required actions:
+  - Approved leads to enabling e-Invoices submission in the Vendors@Gov portal.
+  - Unapproved requires verification of vendor name, bank details, and login option with a reference to a user guide.
+  - Inactive indicates inactivation criteria (time since last activity, payment failure, or active request by user/agency) and notes that activation is possible via a Reactive button after login, followed by the ability to update vendor details in the portal.
+- The visual cue of a blue header and left-aligned status column organizes the information to quickly differentiate status categories and their corresponding instructions.
+
+Notes for indexing/search
+- Keywords: Vendor record status, Approved, Unapproved, Inactive, Vendors@Gov, e-Invoices, government portal, name and bank details, login option, Login and Registration User Guide, GIRO IBG, inactivation, reactive button, portal, vendor management, government agencies.
+- Possible search phrases: “vendor record status approved” “Vendors@Gov e-Invoices” “inactive vendor record criteria” “reactive vendor record” “login options vendor portal” from Create_Update_Vendor_Record.pdf, page 35
+
+Chunk Text : Vendor Record Status** 
+
+|**Status**|**Description**|
+|---|---|
+|**Approved**|Vendors will be able to submit e-Invoices to Government agencies in Vendors@Gov portal after their vendorrecord is approved.|
+|**Unapproved**|Please ensure the following:1.Your vendor record ‘Name’and‘Bank details’ are updated correctly in Vendors@Gov.2.You have selected the correct login option. For more information on how to login, please refer to ‘LoginandRegistrationUser Guide’.|
+|**Inactive**|Your vendor record will be inactivated if:1.There was no activity for more than 2 years; or2.There was a failed interbank GIRO (IBG) payment to your bank account; or3.You or your client agency has requested for the vendor record inactivation.If you would like to activate your vendor record, you may do so by clicking on the ‘Reactivate’ button uponsuccessful login. After your vendor record is activated, you may update your vendor record details in the portal.|
+
+36 
+
+--- end of page.page_number=36 ---
+
+## **- END -** 
+
+Updated on 19 August 2024 
+
+37 
+
+--- end of page.page_number=37 --- from Create_Update_Vendor_Record.pdf, page 35,36
+"
+What must an unapproved vendor ensure before their record can be approved?,"- They must ensure that their vendor record “Name” and “Bank details” are updated correctly in Vendors@Gov, and that they have selected the correct login option. For more information on how to login, they should refer to the Login and Registration User Guide.
+
+Sources Used: Create_Update_Vendor_Record.pdf, Page 36","
+Chunk Text : High-Level Summary
+- The image shows a slide titled “3. Vendor Record Status” presenting a table that defines three status categories (Approved, Unapproved, Inactive) and their descriptions and requirements. The slide appears to be part of a larger presentation or a user guide related to vendor records in a government or enterprise system.
+
+Contextual Analysis
+- Setting: A presentation slide with a light-themed layout, blue header row in the table, and an orange vertical margin on the left. Page number visible (36) suggests it is part of a longer document or deck.
+- Subjects: Vendor records and their status states; guidelines and required actions for each status.
+- Intent: To inform users about how vendor records are categorized, what each status means, and what actions or data are required to manage those statuses.
+
+Detail Inventory
+- Text & OCR (exact strings as visible):
+  - Title: “3. Vendor Record Status”
+  - Table header: “Status” and “Description”
+  - Status rows and descriptions:
+    - Approved
+      - “Vendors will be able to submit e-Invoices to Government agencies in Vendors@Gov portal after their vendor record is approved.”
+    - Unapproved
+      - “Please ensure the following:
+        1. Your vendor record ‘Name’ and ‘Bank details’ are updated correctly in Vendors@Gov.
+        2. You have selected the correct login option. For more information on how to login, please refer to ‘Login and Registration User Guide’.”
+    - Inactive
+      - “Your vendor record will be inactivated if:
+        1. There was no activity for more than 2 years; or
+        2. There was a failed interbank GIRO (IBG) payment to your bank account; or
+        3. You or your client agency has requested for the vendor record inactivation.
+      If you would like to activate your vendor record, you may do so by clicking on the ‘Reactive’ button upon successful login. After your vendor record is activated, you may update your vendor record details in the portal.”
+- Visual Elements:
+  - A two-column table with a blue header row.
+  - Blue-shaded left column for Status and descriptive text in a light blue/gray background for rows.
+  - The slide uses a white background with an orange vertical gutter on the left edge and a page number “36” at the bottom right.
+- Entities:
+  - Vendor records in a government portal context (Vendors@Gov).
+  - Actions/buttons such as “Reactive” and references to “Login and Registration User Guide.”
+  - Terms: e-Invoices, government agencies, GIRO (IBG) payment.
+
+Relationship Mapping
+- The table maps statuses to their definitions and required actions:
+  - Approved leads to enabling e-Invoices submission in the Vendors@Gov portal.
+  - Unapproved requires verification of vendor name, bank details, and login option with a reference to a user guide.
+  - Inactive indicates inactivation criteria (time since last activity, payment failure, or active request by user/agency) and notes that activation is possible via a Reactive button after login, followed by the ability to update vendor details in the portal.
+- The visual cue of a blue header and left-aligned status column organizes the information to quickly differentiate status categories and their corresponding instructions.
+
+Notes for indexing/search
+- Keywords: Vendor record status, Approved, Unapproved, Inactive, Vendors@Gov, e-Invoices, government portal, name and bank details, login option, Login and Registration User Guide, GIRO IBG, inactivation, reactive button, portal, vendor management, government agencies.
+- Possible search phrases: “vendor record status approved” “Vendors@Gov e-Invoices” “inactive vendor record criteria” “reactive vendor record” “login options vendor portal” from Create_Update_Vendor_Record.pdf, page 35
+
+Chunk Text : Vendor Record Status** 
+
+|**Status**|**Description**|
+|---|---|
+|**Approved**|Vendors will be able to submit e-Invoices to Government agencies in Vendors@Gov portal after their vendorrecord is approved.|
+|**Unapproved**|Please ensure the following:1.Your vendor record ‘Name’and‘Bank details’ are updated correctly in Vendors@Gov.2.You have selected the correct login option. For more information on how to login, please refer to ‘LoginandRegistrationUser Guide’.|
+|**Inactive**|Your vendor record will be inactivated if:1.There was no activity for more than 2 years; or2.There was a failed interbank GIRO (IBG) payment to your bank account; or3.You or your client agency has requested for the vendor record inactivation.If you would like to activate your vendor record, you may do so by clicking on the ‘Reactivate’ button uponsuccessful login. After your vendor record is activated, you may update your vendor record details in the portal.|
+
+36 
+
+--- end of page.page_number=36 ---
+
+## **- END -** 
+
+Updated on 19 August 2024 
+
+37 
+
+--- end of page.page_number=37 --- from Create_Update_Vendor_Record.pdf, page 35,36
+
+Chunk Text : High-Level Summary
+- The image is a slide from a presentation about “Vendor Record User Guides” under the vendors@gov branding (and AGD logo). It outlines three topics for learning: Create Vendor Record, View/Update Vendor Record Details, and Vendor Record Status, with the third topic highlighted in blue as the current focus.
+
+Contextual Analysis
+- Setting: An instructional slide likely used in a government procurement or vendor management training deck.
+- Subjects: Vendor record user guides, with emphasis on the third topic (Vendor Record Status).
+- Intent: To inform viewers about the topics available in the vendor record guides and indicate the current section being covered.
+
+Detail Inventory
+- Text & OCR:
+  - Header: “Vendor Record User Guides”
+  - Subheading: “Select the topics below to learn more about:”
+  - Topic 1 (bold, gray): “1. Create Vendor Record”
+  - Subtext under Topic 1 (gray, italic): “New vendors will be directed to ‘Create New Vendor’ page to create a vendor record.”
+  - Topic 2 (bold, gray, italic): “2. View/ Update Vendor Record Details”
+  - Subtext under Topic 2 (gray, italic): “Existing vendor may navigate to ‘Update Vendor Details’ to update your name, contact, GST registration and bank details.”
+  - Topic 3 (bold blue): “3. Vendor Record Status”
+  - Subtext under Topic 3 (gray, italic): “Vendor record status include Approved, Unapproved, Inactive.”
+  - Page footer number: “35”
+- Visual Elements:
+  - Logos: “vendors@gov” on the top left, “AGD” on the top right.
+  - Typography: Mix of bold headers, gray italic descriptive text, with Topic 3 highlighted in blue.
+  - Layout: Centered content with a clean, minimal design on a white background.
+- Entities:
+  - Organization: vendors@gov (branding)
+  - Government department: AGD (logo)
+  - Topics: Create Vendor Record, View/Update Vendor Record Details, Vendor Record Status
+  - Status terms: Approved, Unapproved, Inactive
+
+Relationship Mapping
+- The slide presents a sequence of topics to learn about vendor records. The list is numbered, with Topic 3 visually emphasized (blue), indicating the current focus. Each topic includes a bold title and an accompanying gray italic description that provides a brief explanation or action for that topic. The logos frame the slide, establishing brand context for a government procurement training material.
+
+Notes for indexing/search
+- Use keywords: Vendor Record User Guides, Create Vendor Record, View Vendor Record Details, Update Vendor Details, Vendor Record Status, Approved, Unapproved, Inactive, government procurement, AGD, vendors@gov, training slide.
+- Search phrases: “Vendor Record Status,” “Create Vendor Record page,” “Update Vendor Details,” “Approved vendor status.” from Create_Update_Vendor_Record.pdf, page 34
+"
+What can a vendor do to reactivate an inactive vendor record?,"**Answer:**
+
+- A vendor can reactivate an inactive vendor record by clicking on the “Reactivate” button upon successful login.
+
+- After activation, the vendor may update their vendor record details in the portal.
+
+**Sources Used:** Create_Update_Vendor_Record.pdf, Page 33; Create_Update_Vendor_Record.pdf, Page 36","
+Chunk Text : Vendor Record Status** 
+
+|**Status**|**Description**|
+|---|---|
+|**Approved**|Vendors will be able to submit e-Invoices to Government agencies in Vendors@Gov portal after their vendorrecord is approved.|
+|**Unapproved**|Please ensure the following:1.Your vendor record ‘Name’and‘Bank details’ are updated correctly in Vendors@Gov.2.You have selected the correct login option. For more information on how to login, please refer to ‘LoginandRegistrationUser Guide’.|
+|**Inactive**|Your vendor record will be inactivated if:1.There was no activity for more than 2 years; or2.There was a failed interbank GIRO (IBG) payment to your bank account; or3.You or your client agency has requested for the vendor record inactivation.If you would like to activate your vendor record, you may do so by clicking on the ‘Reactivate’ button uponsuccessful login. After your vendor record is activated, you may update your vendor record details in the portal.|
+
+36 
+
+--- end of page.page_number=36 ---
+
+## **- END -** 
+
+Updated on 19 August 2024 
+
+37 
+
+--- end of page.page_number=37 --- from Create_Update_Vendor_Record.pdf, page 35,36
+
+Chunk Text : High-Level Summary
+- A slide titled “Why am I unable to update my vendor details?” presenting a bullet-point explanation of conditions and rules that block updates to vendor records. The content appears to be part of a formal training or policy deck.
+
+Contextual Analysis
+- Setting: A presentation slide, likely from an internal enterprise training or governance document.
+- Subject: Procedures and restrictions related to updating vendor details in a government or enterprise financial system.
+- Intent: To inform users why updates may be blocked and under what conditions updates are not possible, including guidance on activation and agency-specific rules.
+- Audience: Employees or contractors responsible for vendor data maintenance within a government/enterprise context.
+
+Detail Inventory
+- Text & OCR (verbatim as visible):
+  - Title: ""Why am I unable to update my vendor details?""
+  - Main points (numbered list):
+    1. ""Update of vendor details will not be available between 0500hrs to 0600hrs, and 1900hrs to 1930hrs (GMT+8) from Monday to Saturday for routine system maintenance.""
+    2. ""You will not be able to update your vendor record details if:""
+       - Subbullet: ""Your vendor record is currently inactive.""
+         - Note (italicized/indented): ""If you would like to activate your vendor record, you may do so by clicking on the ‘Reactivate’ button upon successful login. After your vendor record is activated, you may update your vendor record details at the portal.""
+       - Subbullet: ""Your vendor record was created under a specific agency’s SET ID (E.g: MOF10).""
+         - Note: ""Vendors with vendor ID tagged to a specific agency business unit (E.g: MOF10) are unable to update their vendor record in Vendors@Gov. You are required to approach the liaison officer at your client agency to update your vendor details in the Government Financial System (NFS@Gov).""
+       - Subbullet: ""You are a foreign individual who do not have Singpass.""
+         - Note: ""Update of vendor record details is not available for foreign individual who do not have Singpass. You are required to approach the liaison officer at your client agency to update your vendor details in the Government Financial System (NFS@Gov).""
+- Visual elements:
+  - Professional slide layout with a light background.
+  - Blue/gray text, darker for headings and bullet points.
+  - An orange vertical strip on the left edge (design motif).
+  - Page number 34 at bottom-right.
+  - A subtle horizontal rule under the title.
+- Entities:
+  - Time windows: 0500hrs–0600hrs, 1900hrs–1930hrs, GMT+8, Monday to Saturday.
+  - System terms: vendor details, vendor record, Reactivate button, portal, NFS@Gov (Government Financial System), Singpass, MOF10 (example agency SET ID), Vendors@Gov (system name).
+  - Roles: liaison officer, client agency.
+  - Abbreviations: SET ID, MOF, NFS@Gov, Singpass, GMT+8.
+
+Relationship Mapping
+- The slide communicates rules about availability and permissions:
+  - There is a systemic maintenance window (time-based constraint) that makes updates unavailable.
+  - There are conditional blocks detailing when updates are impossible: inactive vendor, agency-set ID restrictions, and foreign individuals without Singpass.
+  - Each condition includes a suggested workaround or required action (reactivation, liaison with agency, etc.).
+  - The notes emphasize that certain vendor records cannot be updated within the standard portal and require alternative steps via liaison officers or specific systems.
+
+Notes for indexing / search queries
+- Keywords: vendor details update, maintenance window, inactive vendor, Reactivate button, portal, SET ID, agency business unit, MOF10, Vendors@Gov, Government Financial System, Singpass, foreign individual, liaison officer, client agency, NFS@Gov, time windows, GMT+8.
+- Phrases to capture: “between 0500hrs to 0600hrs, and 1900hrs to 1930hrs (GMT+8) from Monday to Saturday,” “not available,” “reactivate,” “agency SET ID,” “Vendors@Gov,” “Government Financial System (NFS@Gov).”
+- Visual cues: left orange border, emphasized title, bullet indentation, bottom-right slide number. from Create_Update_Vendor_Record.pdf, page 33
+
+Chunk Text : - _If you would like to activate your vendor record, you may do so by clicking on the ‘Reactivate’ button upon successful login. from Create_Update_Vendor_Record.pdf, page 33
+"
+What are the five steps shown in the Create New Vendor progress bar?,"- Authorisation
+- Vendor Details
+- Bank Details
+- Summary
+- Complete
+
+Sources Used: Create_Update_Vendor_Record.pdf, 3","
+Chunk Text : 1) High-Level Summary
+- A screenshot from a software interface showing the first step titled “Create Vendor Record.” It appears to be part of a guided process with a multi-step progress bar and a highlighted action button “Create New Vendor.”
+
+2) Contextual Analysis
+- Setting: Digital form/wizard within a web application related to vendor management or supplier onboarding.
+- Subjects: A new vendor user or administrator proceeding through a setup workflow.
+- Intent: To guide the user to create a new vendor record, confirm authorisation, and complete the initial step in a vendor setup process.
+
+3) Detail Inventory
+- Text & OCR (visible text exactly as appears):
+  - Header: ""1. Create Vendor Record""
+  - Subtext: ""If you are a new vendor, you will be directed to ‘Create New Vendor’ page.""
+  - Breadcrumb-like line: ""Home » Create New Vendor""
+  - Button label: ""Create New Vendor""
+  - Section labels on the progress bar: ""Authorisation"", ""Vendor Details"", ""Bank Details"", ""Summary"", ""Complete""
+  - Title of section: ""Authorisation""
+  - Paragraph lines (three listed items):
+    1. ""I/We hereby authorise the Government and Statutory Boards to credit payments due to me/us to the stated account. Amounts so credited would constitute valid discharge of obligations due to me/us.""
+    2. ""This authorisation shall continue to be in force until I/we have notified you in writing.""
+    3. ""I/We hereby request and authorise the Government and Statutory Boards to obtain confirmation/verification of information relating to me/us and/or to my account(s) from/with the bank where the Account is maintained as stated in the form.""
+- Visual Elements:
+  - A horizontal multi-step progress bar with five or six steps; the first step (Authorisation) is highlighted with a green checkmark indication on the left, and subsequent steps show dots connected by a blue line.
+  - A highlighted orange border around the ""Create New Vendor"" button.
+  - A light grey breadcrumb area above the button.
+  - A thin orange vertical strip along the left edge of the page.
+  - Overall color scheme: blue, green, orange accents; clean, corporate UI style.
+- Entities:
+  - No specific people or real-world brands are named.
+  - Vendors, Government/Statutory Boards (as described in the authorisation text).
+  - Banks referenced implicitly (for account verification).
+
+4) Relationship Mapping
+- The UI flow indicates a step-by-step wizard. The leftmost step “Authorisation” is active/complete (green check), followed by steps “Vendor Details,” “Bank Details,” “Summary,” and “Complete,” connected by a horizontal blue line, implying sequential progression.
+- The action button “Create New Vendor” likely navigates to the actual form for entering vendor details, launching the first step after authorisation.
+- The authorisation text links the user’s action to permissions for payments and data verification, indicating terms of authorisation are required before proceeding.
+
+Notes for indexing and retrieval
+- Keywords: Create Vendor Record, Create New Vendor, Vendor onboarding, vendor management, authorisation, government payments, statutory boards, account verification, bank details, supplier onboarding workflow, multi-step wizard, UI breadcrumb, progress bar.
+- Use variants: ""new vendor creation,"" ""vendor authorisation,"" ""create vendor record page,"" ""onboarding flow for vendors,"" ""authorization terms for payments."" from Create_Update_Vendor_Record.pdf, page 3
+
+Chunk Text : 
+    Text before image : If your entity has Vendor ID(s) that is not UEN, please indicate all the Vendor ID(s), including your UEN if it is also a Vendor ID (i.e. you have a Vendors@Gov account under your UEN). This might be the case if your entity has preexisting transactions with government agencies.
+    Image description : High-Level Summary
+- A user interface screen for selecting an entity’s e-Services, showing a multi-step process (steps 1/2/3). The right side highlights a form panel for entering vendor invoice IDs, suggesting an additional information step for e-Service setup.
+
+Contextual Analysis
+- Setting: A software or web application wizard, likely part of a government or enterprise system for e-Services enrollment or configuration.
+- Subjects: The screen displays a list of e-Services on the left with a selected item, and a detail entry panel on the right for vendor invoices to government (AGD).
+- Intent: To collect or verify required details for an e-Service submission, including mandatory fields and additional agency check details, enabling progress to the next step.
+
+Detail Inventory
+- Text & OCR (exact strings as visible):
+  - Title/top: ""Select Entity's e-Services""
+  - Step indicators: a sequence showing orange check mark for Step 1, orange circle for Step 2 labeled ""Enter Details"", grey circle for Step 3 labeled ""Review & Submit""
+  - Instruction: ""Some e-Services require additional information. Enter details to proceed.""
+  - Legend: ""* denotes mandatory fields"" (represented as an asterisk in the instruction line)
+  - Left panel header (blue bar): ""Govt Agency"" and ""e-Service"" with subheaders ""Additional Agency Check"" and ""Additional Details Required"" in a blue row
+  - Left list item: ""ACCOUNTANT-GENERAL'S DEPARTMENT (AGD)"" and ""VENDORS GOV - VENDORS ELECTRONIC INVOICES TO GOVERNMENT"" (likely on two lines due to width)
+  - Right panel header (within red box): ""ACCOUNTANT-GENERAL'S DEPARTMENT (AGD) - VENDORSOGV - VENDORS ELECTRONIC INVOICES TO GOVERNMENT"" (slightly garbled line in screenshot)
+  - Right panel fields:
+    - ""Vendor ID"" label
+    - Three text input rows with sample values: ""1234567"", ""1234568"", ""1234569""
+  - Right panel actions: A small trash icon next to each input row (delete option) and a button labeled ""+ Add New""
+  - Bottom area: A status bar or line: ""1 e-Service(s) Selected""
+  - Bottom controls: ""Back"" button and ""Next"" button (Next is blue)
+
+- Visual Elements:
+  - Left: a list or table with two e-Services, a blue header row, and a light grey content area.
+  - Right: a red-outlined panel (highlighted in the screenshot) containing fields and action icons.
+  - Colors: blue header for the left panel, orange indicators for steps, red outline around the right panel, white input fields with grey borders.
+  - Symbols: trash icons for delete; a plus button for adding new entries; small checkmarks/indicators for required fields.
+
+- Entities:
+  - Government agencies: Accountant-General's Department (AGD), Government Vendors or VENDORS ELECTRONIC INVOICES TO GOVERNMENT
+  - Fields: Vendor ID entries (three example IDs)
+  - Buttons: Add New, Back, Next
+
+Relationship Mapping
+- The left panel lists eligible e-Services; selecting one appears to require additional details on the right panel.
+- The right panel collects Vendor IDs for the selected e-Service, with the ability to add or remove IDs.
+- The stepper above indicates a guided workflow: selecting e-Services (Step 1), entering details (Step 2), and review/submit (Step 3).
+- The “Next” button likely becomes enabled after mandatory fields are filled; the asterisk legend indicates required fields.
+
+Notes for search indexing
+- Useful keywords: ""Select Entity's e-Services"", ""e-Services selection"", ""Vendor ID"", ""Accountant-General's Department"", ""AGD"", ""Vendors electronic invoices to government"", ""government invoicing"", ""Add New"", ""Back"", ""Next"", ""stepper"", ""mandatory fields"".
+- Include synonyms: ""e-Service enrollment"", ""government e-invoicing"", ""vendor IDs"", ""AGD vendors"", ""invoice submission to government"".
+
+If you want, I can tailor this into a plain-text record suitable for a specific vector schema (e.g., fields for title, summary, text blocks, features, entities, relations).
+    Image caption : No image caption
+    Text after image : No text after image
+     from LoginRegister.pdf, page 9
+
+Chunk Text : High-Level Summary
+- The image shows a page titled “1. Create Vendor Record – Contact Details,” likely from a software onboarding or data-entry guide. It features a large form area for contact information with an emphasized orange border, a “Next” button, a “Clear Address Fields” button, and a guidance/instruction block below.
+
+Contextual Analysis
+- Setting: A user interface screen from a vendor management or enterprise resource planning (ERP) application, focusing on entering contact details for a vendor record.
+- Subjects: A form labeled “Contact Details,” with fields for email address, contact number, address, country, postal code, state, city, and multiple address lines. There is a multi-step process indicator in the lower section (step 3) describing data population behavior and validation notes.
+- Intent: To collect and validate vendor contact information before proceeding to the next step in the vendor creation workflow.
+
+Detail Inventory
+- Text & OCR (exact phrasing as visible):
+  - Title: “1. Create Vendor Record – Contact Details”
+  - Section header: “Contact Details” (inside the form)
+  - Field labels and placeholders (as visible):
+    - Email Address: 
+    - Contact No. *
+    - Address
+    - Country *
+    - Postal Code *
+    - State
+    - City *
+    - Address* (appears as a multi-line field)
+    - There are two action buttons:
+      - “Clear Address Fields” (outlined/blue button) on the right side of the form
+      - “Next” (blue button) near the bottom-right of the form
+- Visual Elements:
+  - A large white form area bordered with a thick orange outline.
+  - Simple, clean form layout with labeled fields in multiple rows (likely a two-column arrangement for some fields such as Email Address and Contact No., Country and Postal Code, etc.).
+  - A separate grey instruction block beneath the form containing bullet points and block text.
+  - Step indicator area in the instruction block begins with a bold number “3” and describes data population and validation behavior.
+- Entities:
+  - No real people or brands are named; generic vendor/contact data fields.
+  - Locations: City field is prefilled with “SINGAPORE” in the example; country dropdown present.
+  - No logos aside from standard UI elements; page footer shows a small page number “9” in the bottom-right corner of the instruction block.
+
+Relationship Mapping
+- The orange-bordered form is the primary input area for vendor contact details. It relates to the instruction block below which explains data behavior:
+  - The “Next” button links to the subsequent step (likely bank details) in the vendor creation workflow.
+  - The “Clear Address Fields” button is used to reset the address-related inputs.
+  - The instruction block references how data is populated from Mymo or similar sources and clarifies constraints (e.g., only one email address is allowed per vendor, required fields indicated with asterisks, and that address fields auto-populate or verify).
+  - The City field shows a preset value (Singapore), implying a default or example entry for a city in a given country.
+
+Search-Friendly Keywords (for indexing)
+- Vendor creation, vendor record, contact details, address form, email address, contact number, country, postal code, state, city, address lines, clear address fields, next button, ERP, CRM, vendor onboarding, data entry form, Singapore, multi-step workflow, bank details step, validation notes, required fields, auto-populate addresses.
+
+Notes for RAG usage
+- If indexing, include both the visible field labels and the action controls to enable query resolution such as “vendor contact details form,” “clear address fields,” “next step into bank details,” and “Singapore city example.”
+- Keep exact textual tokens where possible for OCR-based search (e.g., “Create Vendor Record – Contact Details,” “Clear Address Fields,” “Next,” “Country,” “Postal Code,” “State,” “City,” “Email Address,” “Contact No.”). from Create_Update_Vendor_Record.pdf, page 8
+"
+What are the three authorisation clauses a new vendor agrees to when creating a vendor record?,"**Answer:**
+
+The three authorisation clauses are:
+- I/We hereby authorise the Government and Statutory Boards to credit payments due to me/us to the stated account. Amounts so credited would constitute valid discharge of obligations due to me/us.
+- This authorisation shall continue to be in force until I/we have notified you in writing.
+- I/We hereby request and authorise the Government and Statutory Boards to obtain confirmation/verification of information relating to me/us and/or to my account(s) from/with the bank where the Account is maintained as stated in the form.
+
+Sources Used: Create_Update_Vendor_Record.pdf, Page 3","
+Chunk Text : 1) High-Level Summary
+- A screenshot from a software interface showing the first step titled “Create Vendor Record.” It appears to be part of a guided process with a multi-step progress bar and a highlighted action button “Create New Vendor.”
+
+2) Contextual Analysis
+- Setting: Digital form/wizard within a web application related to vendor management or supplier onboarding.
+- Subjects: A new vendor user or administrator proceeding through a setup workflow.
+- Intent: To guide the user to create a new vendor record, confirm authorisation, and complete the initial step in a vendor setup process.
+
+3) Detail Inventory
+- Text & OCR (visible text exactly as appears):
+  - Header: ""1. Create Vendor Record""
+  - Subtext: ""If you are a new vendor, you will be directed to ‘Create New Vendor’ page.""
+  - Breadcrumb-like line: ""Home » Create New Vendor""
+  - Button label: ""Create New Vendor""
+  - Section labels on the progress bar: ""Authorisation"", ""Vendor Details"", ""Bank Details"", ""Summary"", ""Complete""
+  - Title of section: ""Authorisation""
+  - Paragraph lines (three listed items):
+    1. ""I/We hereby authorise the Government and Statutory Boards to credit payments due to me/us to the stated account. Amounts so credited would constitute valid discharge of obligations due to me/us.""
+    2. ""This authorisation shall continue to be in force until I/we have notified you in writing.""
+    3. ""I/We hereby request and authorise the Government and Statutory Boards to obtain confirmation/verification of information relating to me/us and/or to my account(s) from/with the bank where the Account is maintained as stated in the form.""
+- Visual Elements:
+  - A horizontal multi-step progress bar with five or six steps; the first step (Authorisation) is highlighted with a green checkmark indication on the left, and subsequent steps show dots connected by a blue line.
+  - A highlighted orange border around the ""Create New Vendor"" button.
+  - A light grey breadcrumb area above the button.
+  - A thin orange vertical strip along the left edge of the page.
+  - Overall color scheme: blue, green, orange accents; clean, corporate UI style.
+- Entities:
+  - No specific people or real-world brands are named.
+  - Vendors, Government/Statutory Boards (as described in the authorisation text).
+  - Banks referenced implicitly (for account verification).
+
+4) Relationship Mapping
+- The UI flow indicates a step-by-step wizard. The leftmost step “Authorisation” is active/complete (green check), followed by steps “Vendor Details,” “Bank Details,” “Summary,” and “Complete,” connected by a horizontal blue line, implying sequential progression.
+- The action button “Create New Vendor” likely navigates to the actual form for entering vendor details, launching the first step after authorisation.
+- The authorisation text links the user’s action to permissions for payments and data verification, indicating terms of authorisation are required before proceeding.
+
+Notes for indexing and retrieval
+- Keywords: Create Vendor Record, Create New Vendor, Vendor onboarding, vendor management, authorisation, government payments, statutory boards, account verification, bank details, supplier onboarding workflow, multi-step wizard, UI breadcrumb, progress bar.
+- Use variants: ""new vendor creation,"" ""vendor authorisation,"" ""create vendor record page,"" ""onboarding flow for vendors,"" ""authorization terms for payments."" from Create_Update_Vendor_Record.pdf, page 3
+
+Chunk Text : High-Level Summary
+- The image appears to be a page from a software or training manual describing how to Create a Vendor Record. It includes a header “1. Create Vendor Record,” a row of small field indicators (Vendor ID, Official Name, Vendor Name), and a highlighted note box explaining that the Vendor ID is not editable, along with examples of possible ID formats. The page layout uses a light gray content area with an orange vertical margin accent.
+
+Contextual Analysis
+- Setting: A step-by-step instructional slide or documentation page, likely from an ERP or vendor management system training module.
+- Subjects: UI field labels for vendor creation (Vendor ID, Official Name, Vendor Name), a prominent “Vendor ID is not editable” caution box, and a numbered explanation with bullet points distinguishing different entity types (Company/Organisation vs Individual) and their corresponding ID formats.
+- Intent: To educate users on the rules of creating a vendor record, specifically the immutability of the Vendor ID and how IDs are assigned for different entity types.
+
+Detail Inventory
+- Text & OCR (exact literals as visible):
+  - Header: ""1. Create Vendor Record""
+  - Sub-header area with field placeholders/icons: 
+    - ""Vendor ID"" (boxed with orange outline)
+    - ""Official Name"" (with a small blue circle icon)
+    - ""Vendor Name *"" (with a small blue circle icon)
+  - Boxed note titled “1” (blue badge) followed by:
+    - ""Vendor ID is not editable.""
+    - The vendor ID is a unique identifier that identifies your vendor record. The vendor ID is assigned as follows:
+    - Company / Organisation
+      - → UEN Registered Entity – The vendor ID will be your organization’s UEN.
+      - → Foreign Entity – The vendor ID will be your Corppass Entity ID / GeBIZ trading partner reference.
+    - Individual
+      - → NRIC/ FIN Holder – The vendor ID will be your NRIC/ FIN.
+      - → Non-NRIC/ FIN Holder – The vendor ID will be your passport number.
+    - The vendor ID may appear incorrectly if you have selected the wrong login option.
+- Visual Elements:
+  - A clean, professional slide with a white/very light gray background.
+  - An orange vertical bar on the left edge.
+  - A horizontal line beneath the header area.
+  - Small row of field placeholders/icons at the top center: Vendor ID, Official Name, Vendor Name, with small circular icons.
+  - A gray-highlighted information box containing the “Vendor ID is not editable” content, including bullet-style indentation and sub-bullets.
+- Entities:
+  - Vendor ID (as a field)
+  - Official Name (field)
+  - Vendor Name (field)
+  - Note box content explaining ID assignment rules
+  - Entity types: Company/Organisation and Individual
+  - Examples: UEN, Corppass Entity ID, GeBIZ, NRIC/FIN, passport
+
+Relationship Mapping
+- The page communicates a single workflow step: Create Vendor Record.
+- Visual hierarchy: Header and field labels lead to a caution note about ID immutability, implying the ID is auto-assigned based on the selected entity type.
+- The arrow-like or bullet structure in the note shows the mapping from entity type to specific ID formats:
+  - Company/Organisation → UEN or Corppass/GeBIZ IDs
+  - Individual → NRIC/FIN or Passport
+- The highlighted caution box reinforces that the Vendor ID is not editable and may indicate potential errors if the wrong login option is chosen.
+
+Search-Friendly Keywords (for indexing)
+- Vendor record creation
+- Vendor ID not editable
+- Vendor ID assignment rules
+- UEN Vendor ID
+- NRIC FIN Holder ID
+- Corppass Entity ID
+- GeBIZ trading partner reference
+- UEN Registered Entity
+- Foreign Entity vendor ID
+- Passport number as vendor ID
+- ERP vendor management tutorial
+- Vendor Name field
+- Official Name field
+- Entity type mapping to IDs
+
+Note: All content is described objectively as observed. No hidden meanings or interpretations beyond what is visible in the image. from Create_Update_Vendor_Record.pdf, page 4
+
+Chunk Text : ## Vendor Record User Guide 
+
+A guide to create, view and update vendor record details at Vendors@Gov. --- end of page.page_number=1 ---
+
+## **Vendor Record User Guide** 
+
+## Select the topics below to learn more about: 
+
+## **1. Create Vendor Record** 
+
+_New vendors will be directed to ‘Create New Vendor’ page to create a vendor record._ 
+
+## **2. View/ Update Vendor Record Details** 
+
+_Existing vendor may navigate to ‘Update Vendor Details’ to update your name, contact, GST registration and bank details._ 
+
+## **3. Vendor Record Status** 
+
+_Vendor record status include Approved, Unapproved, Inactive._ 
+
+2 
+
+--- end of page.page_number=2 ---
+
+## **1. Create Vendor Record** 
+
+_Login to Vendors@Gov portal (www.vendors.gov.sg)._ 
+
+_For more information on how to login, please refer to ‘Vendors@Gov Login User Guide’._ 
+
+3 
+
+--- end of page.page_number=3 ---
+
+## **1. Create Vendor Record** 
+
+_If you are a new vendor, you will be directed to ‘_ _**Create New Vendor** ’ page._ 
+
+4 
+
+--- end of page.page_number=4 ---
+
+## **1. from Create_Update_Vendor_Record.pdf, page 0,1,2,3,4
+"
+Can a foreign individual without Singpass update their vendor record details directly on Vendors@Gov?,"- No. If you are a foreign individual who does not have Singpass, updating vendor record details is not available. You are required to approach the liaison officer at your client agency to update your vendor details in the Government Financial System (NFS@Gov).
+
+Sources Used: Create_Update_Vendor_Record.pdf, 34","
+Chunk Text : After your vendor record is activated, you may update your vendor record details at the portal._ 
+
+- ➢ **Your vendor record was created under a specific agency’s SET ID (Eg: MOF10)** . _Vendors with vendor ID tagged to a specific agency business unit (Eg: MOF10) are unable to update their vendor record in Vendors@Gov. You are required to approach the liaison officer at your client agency to update your vendor details in the Government Financial System (NFS@Gov)._ 
+
+- ➢ _**You are a foreign individual who do not have Singpass.**_ 
+
+_Update of vendor record details is not available for foreign individual who do not have Singpass. You are required to approach the liaison officer at your client agency to update your vendor details in the Government Financial System (NFS@Gov)._ 
+
+34 
+
+--- end of page.page_number=34 ---
+
+## **Vendor Record User Guides** 
+
+## Select the topics below to learn more about: 
+
+## _**1. Create Vendor Record**_ 
+
+_New vendors will be directed to ‘Create New Vendor’ page to create a vendor record._ 
+
+## _**2. View/ Update Vendor Record Details**_ 
+
+_Existing vendor may navigate to ‘Update Vendor Details’ to update your name, contact, GST registration and bank details._ 
+
+## _**3. Vendor Record Status**_ 
+
+_Vendor record status include Approved, Unapproved, Inactive._ 
+
+35 
+
+--- end of page.page_number=35 ---
+
+## **3. from Create_Update_Vendor_Record.pdf, page 33,34,35
+
+Chunk Text : Vendor Record Status**_ 
+
+_Vendor record status include Approved, Unapproved, Inactive._ 
+
+18 
+
+--- end of page.page_number=18 ---
+
+## **2. View/ Update Vendor Record Details** 
+
+_Login to Vendors@Gov portal (www.vendors.gov.sg)._ 
+
+_For more information on how to login, please refer to ‘Vendors@Gov Login and Registration User Guide’._ 
+
+19 
+
+--- end of page.page_number=19 ---
+
+## **2. View/ Update Vendor Record Details** 
+
+_For existing vendor, please navigate to ‘_ _**Update Vendor Details** ’ to view or update your vendor record details._ 
+
+20 
+
+--- end of page.page_number=20 ---
+
+## **2. View/ Update Vendor Record Details** 
+
+1 _**Upon each login, vendor name is retrieved from Government database- MyInfo and is not editable**_ 
+
+## _**Individuals with Singpass**_ 
+
+➢ _Your name will be auto-populated from the government database - MyInfo hence, it will not be allowed for edit._ 
+
+_If the name which was reflected at the Vendor Name field is inaccurate, you may wish to verify your name registered at MyInfo/ICA._ 
+
+_In the unlikely event where the connectivity to the government database fails, the name field will then be available for updating. However, if you choose not to do the manual update, your name will be retrieved from MyInfo when the connectivity is restored._ 
+
+21 
+
+--- end of page.page_number=21 ---
+
+## **2. View/ Update Vendor Record Details (Local Companies)** 
+
+Official name registered and retrieved from the government database - Enterprise Data Hub (EDH) 
+
+First 80 characters is populated from your official name. - 1 _**Upon each login, vendor name is retrieved from Government database - Enterprise Datahub (EDH) and is not editable**_ 
+
+## _**UEN Registered Company/ Organisation**_ 
+
+- ➢ _Your name will be auto-populated from the government database-Enterprise Datahub (EDH), hence, it will not be allowed for edit._ 
+
+_Do note that only the first 80 characters are retrieved and displayed under the vendor name field._ 
+
+_If the name which was reflected at the Vendor Name field is inaccurate, you may wish to verify your name registered at your UEN issuance agency._ 
+
+_In the unlikely event where the connectivity to the government database fails, the name field will then be available for updating. from Create_Update_Vendor_Record.pdf, page 17,18,19,20,21
+
+Chunk Text : **Step 1** – Select ‘For Business Users’ option to login to Vendors@Gov. 13 
+
+--- end of page.page_number=13 ---
+
+## **2. Login for Foreign Company/ Organisation without UEN** 
+
+_This login method is applicable to non-UEN registered vendors who are transacting as a Foreign Company/ Organisation._ 
+
+**Step 2** – Enter your Singpass login details. 14 
+
+--- end of page.page_number=14 ---
+
+## **2. Login for Foreign Company/ Organisation without UEN** 
+
+_This login method is applicable to non-UEN registered vendors who are transacting as a Foreign Company/ Organisation._ 
+
+This step is only applicable to users who have been assigned to transact with multiple vendor IDs on behalf of your organisation. **Step 3** – Select the ‘Vendor ID/account’ you would like to access and click ‘Continue’ to login. 15 
+
+--- end of page.page_number=15 ---
+
+## **Corppass Registration Guide for Non-UEN Registered Entity** 
+
+**Overview of steps to perform on Corppass to enable login to the Vendors@Gov e-service** 
+
+For a user to be able to access the Vendors@Gov e-service, the user must have a Singpass account and be assigned the Vendors@Gov e-service for the foreign Registered Entity on Corppass (www.corppass.gov.sg). The following outlines the steps required for a user to access Vendors@Gov. User guides for each individual step can be found here. **Step 1: Nominate a Corppass Admin who will register for Corppass on behalf of the entity Step 2: Activate Singpass account for Corppass Admin (only for foreign ID users) Step 3: Set up the Vendors@Gov e-service** 
+
+**Step 4: Create Corppass User account and assign the Vendors@Gov e-service to users Step 5: Activate the Corppass User account Step 6: Activate Singpass account for Corppass User (only for foreign ID users)** 
+
+16 
+
+--- end of page.page_number=16 ---
+
+## **Corppass Registration Guide for Non-UEN Registered Entity** 
+
+## **Step 1: Nominate a Corppass Admin who will register for Corppass on behalf of the entity** 
+
+Your entity will need to appoint an administrator for the Corppass account. The appointed person will register for Corppass on behalf of the entity. The appointed person’s Corppass Administrator (Admin) account will be registered together with the entity’s Corppass account. The registration is done on Corppass (www.corppass.gov.sg). from LoginRegister.pdf, page 12,13,14,15,16
+"
+What are the system maintenance windows during which vendor details cannot be updated?,"- The system maintenance windows during which vendor details cannot be updated are:
+  - 05:00 to 06:00 (GMT+8), Monday to Saturday
+  - 19:00 to 19:30 (GMT+8), Monday to Saturday
+
+Sources Used: Create_Update_Vendor_Record.pdf, Page 34; Create_Update_Vendor_Record.pdf, Page 33","
+Chunk Text : High-Level Summary
+- A slide titled “Why am I unable to update my vendor details?” presenting a bullet-point explanation of conditions and rules that block updates to vendor records. The content appears to be part of a formal training or policy deck.
+
+Contextual Analysis
+- Setting: A presentation slide, likely from an internal enterprise training or governance document.
+- Subject: Procedures and restrictions related to updating vendor details in a government or enterprise financial system.
+- Intent: To inform users why updates may be blocked and under what conditions updates are not possible, including guidance on activation and agency-specific rules.
+- Audience: Employees or contractors responsible for vendor data maintenance within a government/enterprise context.
+
+Detail Inventory
+- Text & OCR (verbatim as visible):
+  - Title: ""Why am I unable to update my vendor details?""
+  - Main points (numbered list):
+    1. ""Update of vendor details will not be available between 0500hrs to 0600hrs, and 1900hrs to 1930hrs (GMT+8) from Monday to Saturday for routine system maintenance.""
+    2. ""You will not be able to update your vendor record details if:""
+       - Subbullet: ""Your vendor record is currently inactive.""
+         - Note (italicized/indented): ""If you would like to activate your vendor record, you may do so by clicking on the ‘Reactivate’ button upon successful login. After your vendor record is activated, you may update your vendor record details at the portal.""
+       - Subbullet: ""Your vendor record was created under a specific agency’s SET ID (E.g: MOF10).""
+         - Note: ""Vendors with vendor ID tagged to a specific agency business unit (E.g: MOF10) are unable to update their vendor record in Vendors@Gov. You are required to approach the liaison officer at your client agency to update your vendor details in the Government Financial System (NFS@Gov).""
+       - Subbullet: ""You are a foreign individual who do not have Singpass.""
+         - Note: ""Update of vendor record details is not available for foreign individual who do not have Singpass. You are required to approach the liaison officer at your client agency to update your vendor details in the Government Financial System (NFS@Gov).""
+- Visual elements:
+  - Professional slide layout with a light background.
+  - Blue/gray text, darker for headings and bullet points.
+  - An orange vertical strip on the left edge (design motif).
+  - Page number 34 at bottom-right.
+  - A subtle horizontal rule under the title.
+- Entities:
+  - Time windows: 0500hrs–0600hrs, 1900hrs–1930hrs, GMT+8, Monday to Saturday.
+  - System terms: vendor details, vendor record, Reactivate button, portal, NFS@Gov (Government Financial System), Singpass, MOF10 (example agency SET ID), Vendors@Gov (system name).
+  - Roles: liaison officer, client agency.
+  - Abbreviations: SET ID, MOF, NFS@Gov, Singpass, GMT+8.
+
+Relationship Mapping
+- The slide communicates rules about availability and permissions:
+  - There is a systemic maintenance window (time-based constraint) that makes updates unavailable.
+  - There are conditional blocks detailing when updates are impossible: inactive vendor, agency-set ID restrictions, and foreign individuals without Singpass.
+  - Each condition includes a suggested workaround or required action (reactivation, liaison with agency, etc.).
+  - The notes emphasize that certain vendor records cannot be updated within the standard portal and require alternative steps via liaison officers or specific systems.
+
+Notes for indexing / search queries
+- Keywords: vendor details update, maintenance window, inactive vendor, Reactivate button, portal, SET ID, agency business unit, MOF10, Vendors@Gov, Government Financial System, Singpass, foreign individual, liaison officer, client agency, NFS@Gov, time windows, GMT+8.
+- Phrases to capture: “between 0500hrs to 0600hrs, and 1900hrs to 1930hrs (GMT+8) from Monday to Saturday,” “not available,” “reactivate,” “agency SET ID,” “Vendors@Gov,” “Government Financial System (NFS@Gov).”
+- Visual cues: left orange border, emphasized title, bullet indentation, bottom-right slide number. from Create_Update_Vendor_Record.pdf, page 33
+
+Chunk Text : High-Level Summary
+- A slide or page from a software or process manual titled “2. View/ Update Vendor Record Details.”
+- The layout shows a header, a central area with a highlighted “Vendor Name” field, some status text, and a blue informational box describing data behavior.
+
+Contextual Analysis
+- Setting: Looks like a training, user guide, or workflow documentation screen for a vendor management system.
+- Subjects: A vendor record, including Vendor ID, Vendor Name, and Vendor Record Status (e.g., Approved). Emphasis on how vendor names are retrieved and whether the field is editable.
+- Intent: To instruct users on how to view and/or update vendor details, and to explain data handling rules (e.g., automatic population from government databases, editability).
+
+Detail Inventory
+- Text & OCR (exact wording as visible):
+  - Title/heading: “2. View/ Update Vendor Record Details”
+  - Labels: “Vendor ID” (with a blurred or obfuscated value), “Vendor Name” (in a highlighted orange-bordered box), and “Vendor Record Status” with value “Approved” (likely propped to the right).
+  - Informational note (blue badge style with number 1):
+    - “Upon each login, vendor name is retrieved from Government database- MyInfo and is not editable”
+    - Subheading: “Individuals with Singpass”
+    - Supporting text:
+      - “Your name will be auto-populated from the government database - MyInfo hence, it will not be allowed for edit.”
+      - “If the name which was reflected at the Vendor Name field is inaccurate, you may wish to verify your name registered at MyInfo/ICA-”
+      - “In the unlikely event where the connectivity to the government database fails, the name field will then be available for updating. However, if you choose not to do the manual update, your name will be retrieved from MyInfo when the connectivity is restored.”
+- Visual Elements:
+  - Central rectangle around the Vendor Name field with an orange border, likely indicating the field in focus or of importance.
+  - A small circular blue icon with the number 1 inside at the start of the informational box.
+  - Gray-blue informational panel with text and a subtle border.
+  - Subsection header “Individuals with Singpass.”
+- Entities:
+  - Vendor ID (value blurred)
+  - Vendor Name (value blurred within orange border)
+  - Vendor Record Status: “Approved”
+  - References to government databases MyInfo and ICA (likely Singaporean government services)
+  - Mention of Singpass (Singapore's digital identity)
+  - Possible connectivity condition between MyInfo/ICA and the system
+
+Relationship Mapping
+- The orange-bordered Vendor Name field appears to be an important read-only value with a conditional editability:
+  - If the government database (MyInfo/ICA) cannot be reached, the Vendor Name field becomes editable for manual entry.
+  - On login, the Vendor Name is automatically populated from MyInfo and remains non-editable by default.
+  - Upon connectivity restoration, the system will fetch and populate from MyInfo; otherwise, manual update remains possible during outage.
+- The Vendor Record Status (Approved) indicates the current state of the vendor record, possibly influencing whether updates are permitted.
+- The structure implies a sequence: login -> fetch vendor name from government DB -> display read-only unless outage -> potential manual edit fallback -> save/update vendor details.
+
+Search-Oriented Keywords (for indexing)
+- Vendor record details, vendor name, vendor ID, vendor status, Approved, MyInfo, Singpass, ICA, government database, auto-populated, non-editable field, connectivity failure, manual update, vendor management, vendor data retrieval, government identity services, orange border field, user guide, training slide. from Create_Update_Vendor_Record.pdf, page 20
+
+Chunk Text : ## OCBC Bank 
+
+OCBC Bank code: 7339 – Oversea-Chinese Banking Corporation Ltd 
+
+The first numbers of your OCBC account number are branch codes. Your OCBC account number should either be 10 digits or 12 digits. ## HSBC Bank 
+
+There are two bank codes (7232 & 9548) available for HSBC bank account, , and you are required to contact your bank to confirm the correct bank details (E.g.: Bank and Branch code, Bank Account) before updating it at Vendors@Gov portal. - (a) 7232- The Hongkong & Shanghai Banking Corporation Ltd 
+
+- (b) 9548- HSBC Bank (Singapore) Limited (for retail account) 
+
+33 
+
+--- end of page.page_number=33 ---
+
+## **Why am I unable to update my vendor details?** 
+
+1. Update of vendor details will not be available between 0500hrs to 0600hrs, and 1900hrs to 1930hrs (GMT+8) from Monday to Saturday for routine system maintenance. 2. You will not be able to update your vendor record details if: 
+
+## ➢ **Your vendor record is currently inactive** . from Create_Update_Vendor_Record.pdf, page 32,33
+"
