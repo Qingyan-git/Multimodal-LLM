@@ -1,0 +1,48 @@
+
+Token cost to TEXT chunk Project Guardian FX workstream Transaction Banking.pdf : 954295
+
+Money cost to TEXT chunk Project Guardian FX workstream Transaction Banking.pdf : 0.01219973
+
+
+
+Token cost to EMBED TEXT Project Guardian FX workstream Transaction Banking.pdf : 26763
+
+Money cost to EMBED TEXT Project Guardian FX workstream Transaction Banking.pdf : 0.00053526
+
+
+
+Token cost to IMAGE chunk Project Guardian FX workstream Transaction Banking.pdf : 6711
+
+Money cost to IMAGE chunk Project Guardian FX workstream Transaction Banking.pdf : 0.0005952500000000001
+
+
+
+Token cost to EMBED IMAGE Project Guardian FX workstream Transaction Banking.pdf : 818
+
+Money cost to EMBED IMAGE Project Guardian FX workstream Transaction Banking.pdf : 1.6360000000000003e-05
+
+
+
+Token cost to TABLE chunk Project Guardian FX workstream Transaction Banking.pdf : 49286
+
+Money cost to TABLE chunk Project Guardian FX workstream Transaction Banking.pdf : 0.00218325
+
+
+
+Token cost to EMBED TABLE Project Guardian FX workstream Transaction Banking.pdf : 4812
+
+Money cost to EMBED TABLE Project Guardian FX workstream Transaction Banking.pdf : 9.624000000000001e-05
+
+
+
+Token cost to PAGE chunk Project Guardian FX workstream Transaction Banking.pdf : 1040876
+
+Money cost to PAGE chunk Project Guardian FX workstream Transaction Banking.pdf : 0.025899949999999998
+
+
+
+Token cost to EMBED PAGE Project Guardian FX workstream Transaction Banking.pdf : 31475
+
+Money cost to EMBED PAGE Project Guardian FX workstream Transaction Banking.pdf : 0.0006295000000000001
+
+

@@ -1,0 +1,4 @@
+Status,Description
+Approved,Vendors will be able to submit e-Invoices to Government agencies in Vendors@Gov portal after their vendor record is approved.
+Unapproved,"Please ensure the following: 1. Your vendor record 'Name' and 'Bank details ' are updated correctly in Vendors@Gov. 2. You have selected the correct login option. For more information on how to login, please refer to ' Login and Registration User Guide ' ."
+Inactive,"Your vendor record will be inactivated if: 1. There was no activity for more than 2 years; or 2. There was a failed interbank GIRO (IBG) payment to your bank account; or 3. You or your client agency has requested for the vendor record inactivation. If you would like to activate your vendor record, you may do so by clicking on the 'Reactivate' button upon successful login. After your vendor record is activated, you may update your vendor record details in the portal."

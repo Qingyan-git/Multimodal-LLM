@@ -1,0 +1,7 @@
+Standards,Examples
+Messaging and communication,• SWIFT Messaging (notably for post-trade and asset servicing). • FIX Protocol (notably for trading) • Adoption of ISO 20022 XML format for trade reporting
+Standard identifiers for trades and parties,• Examples of instrument identifiers include Unique Trade Identifiers (UTI) and Unique Product Identifiers (UPI) • Legal Entity Identifier (LEI).
+Settlements,"• Settlement cycles - T+2 for the vast majority of currencies and T+1 for USD/CAD, USD/TRY, USD/PHP and USD/RUB. • Ideally, PVP settlement and ideally net settlement to alleviate daylight (or Herstatt) risk. 28"
+Regulatory compliance and reporting obligations,"• Regulatory compliance and reporting are essential for market integrity, customer protection, and financial stability. Examples include: - Trade reporting for example the MFID II pre and post trade reporting in the EU and Dodd-Frank Act in the US OTC derivatives products, for which ISDA has developed the Digital Regulatory Reporting solution using the common domain model - Business conduct disclosure standards, to which end ISDA has published the Foreign Exchange Disclosure Annex to the DFA Disclosure and other standards."
+Industry best practices,• FX Global Code 29
+Documentation,"• ISDA Master Agreement • The 1998 FX and Currency Option Definitions jointly published by ISDA, EMTA and the Foreign Exchange Committee."

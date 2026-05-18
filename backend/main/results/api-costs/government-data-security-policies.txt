@@ -1,0 +1,42 @@
+
+Token cost to TEXT chunk government-data-security-policies.pdf : 94472
+
+Money cost to TEXT chunk government-data-security-policies.pdf : 0.00227805
+
+
+
+Token cost to EMBED TEXT government-data-security-policies.pdf : 8323
+
+Money cost to EMBED TEXT government-data-security-policies.pdf : 0.00016646
+
+
+
+Token cost to IMAGE chunk government-data-security-policies.pdf : 0
+
+Money cost to IMAGE chunk government-data-security-policies.pdf : 0.0
+
+
+
+Token cost to TABLE chunk government-data-security-policies.pdf : 15191
+
+Money cost to TABLE chunk government-data-security-policies.pdf : 0.00063564
+
+
+
+Token cost to EMBED TABLE government-data-security-policies.pdf : 2582
+
+Money cost to EMBED TABLE government-data-security-policies.pdf : 5.164e-05
+
+
+
+Token cost to PAGE chunk government-data-security-policies.pdf : 204934
+
+Money cost to PAGE chunk government-data-security-policies.pdf : 0.009131130000000001
+
+
+
+Token cost to EMBED PAGE government-data-security-policies.pdf : 13711
+
+Money cost to EMBED PAGE government-data-security-policies.pdf : 0.00027422
+
+

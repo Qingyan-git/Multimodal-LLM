@@ -1,0 +1,12 @@
+
+Token cost to ANSWER QUESTIONS for test_set - Vendors@Gov Process Flow.csv : 27588
+
+Money cost to ANSWER QUESTIONS for test_set - Vendors@Gov Process Flow.csv : 0.0023356
+
+
+
+Token cost to ANSWER IMAGE QUESTIONS for test_set - Vendors@Gov Process Flow.csv : 36663
+
+Money cost to ANSWER IMAGE QUESTIONS for test_set - Vendors@Gov Process Flow.csv : 0.0023340000000000006
+
+

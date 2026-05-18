@@ -1,0 +1,14 @@
+Technical Measures,Complementary Process Measures
+Volume limited and time limited data access,Limit retention period of data
+Automatic Identity and Access Management tools,Limit and monitor authorised and privileged access to sensitive data in ICT systems
+Log and monitor data transactions to detect high- risk or suspicious activity,Limit and monitor authorised and privileged access to sensitive data in ICT systems
+Digital watermarking of file,-
+Email data protection tools,Protect sensitive data when distributing via email
+Data Loss Protection tools,Distribute files through approved secure channels
+Hashing with Salt,Manage keys to data protection technical safeguards
+Field Level Encryption,Manage keys to data protection technical safeguards
+Tokenisation,Manage keys to data protection technical safeguards
+Obfuscation/ masking/ removal of entity attributes,-
+Dataset partitioning,-
+Password protecting and encrypting files when distributing files through unsecured channels,Securely distribute passwords out-of-band
+Data file integrity verification,-

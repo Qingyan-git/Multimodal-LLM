@@ -63,8 +63,12 @@ async def extract_pages(filepath):
 
             return page_chunk
 
-        # Create tasks for all pages and run them in parallel
-        tasks = [process_page(i, page) for i, page in enumerate(doc)]
+        semaphore = asyncio.Semaphore(5)
+        async def sem_task(i,page):
+            async with semaphore:
+                return await process_page(i, page)
+
+        tasks = [sem_task(i,page) for i, page in enumerate(doc)]
         all_chunks = await asyncio.gather(*tasks)
 
     return all_chunks
@@ -83,9 +87,11 @@ async def process_pages(folder_path):
 
                 if file.is_file():
 
+                    print(f'Processing {file.stem}\n\n')
+
                     insert_pdfs(file)
 
-                    print(f'Finished inserting pdf to postgresdb\n\n')
+                    print(f'\tFinished inserting pdf to postgresdb\n\n')
 
                     with get_openai_callback() as cb:
 
@@ -120,7 +126,7 @@ async def process_pages(folder_path):
 
                         print(f'\tFinished uploading embeddings to qdrant\n\n')
 
-                    print(f'Finished processing\n\n')
+                    print(f'Finished processing {file.stem}\n\n')
 
             print(f'\nFinished processing all files\n')
 

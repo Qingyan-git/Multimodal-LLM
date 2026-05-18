@@ -1,0 +1,14 @@
+Technical Measures,Clause Number
+Volume limited and time limited data access,22
+Automatic Identity and Access Management tools,24
+Log and monitor data transactions to detect high-risk or suspicious activity,28
+Digital watermarking of file,30
+Email data protection tools,35
+Data Loss Protection (DLP) tools,36
+Hashing with Salt,40
+Field Level Encryption,42
+Tokenisation,44
+Obfuscation/ masking/ removal of entity attributes,49
+Dataset partitioning,51
+Password protecting and encrypting files when distributing files through unsecured channels,53
+Data file integrity verification,55

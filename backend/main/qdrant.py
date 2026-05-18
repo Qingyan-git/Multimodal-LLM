@@ -131,7 +131,7 @@ def upload_to_qdrant(chunks, dense, sparse, late):
         print(f'Unable to upload embeddings to qdrant cloud, error {e}\n\n')
 
 
-def get_similar_chunks(dense,sparse,late,limit1=10,limit2=3,filters=None):
+def get_similar_chunks(dense,sparse,late,limit1=20,limit2=3,filters=None):
 
     try:
         collection_name = os.getenv('qdrant_collection_name')

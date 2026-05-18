@@ -1,0 +1,28 @@
+Industry.,Top Three Incident Types.1 st,Top Three Incident Types.2 nd,Top Three Incident Types.3 rd
+All Industries (Excluding PWs),STF,MAC,OESM
+Manufacturing,MAC,STF,SBMO
+Metalworking,MAC,STF,SBMO
+"Manufacture of Food, Beverages &Tobacco",STF,MAC,SBFO
+"Manufacture of Computer, Electronic &Optical Products",STF,MAC,"SBMO, SAO"
+Construction,STF,MAC,SBFO
+Accommodation &Food Service Activities,STF,MAC,ETET
+Food &Beverage Service Activities,STF,MAC,ETET
+Accommodation,STF,SBMO,MAC
+Transportation& Storage,STF,VEH,OESM
+Logistics &Transport,STF,VEH,OESM
+Administrative& Support Service Activities,STF,VEH,SBMO
+Cleaning &Landscape Maintenance Activities,STF,"SBMO, SBFO",-
+Security & Investigation Activities,STF,VEH,OESM
+Wholesale& Retail Trade,STF,MAC,SBFO
+Wholesale Trade,STF,MAC,OESM
+Retail Trade,STF,MAC,SBMO
+"Professional, Scientific& Technical Activities",STF,OESM,MAC
+Marine,STF,MAC,CIBO
+Real Estate Activities,STF,OESM,"CSBO, MAC"
+Financial& Insurance Services,STF,"SAO, OESM",-
+"Water Supply; Sewerage, Waste Management& Remediation Activities",STF,OESM,MAC
+"Community, Social & Personal Services",STF,PA,OESM
+Health &Social Services,STF,PA,OESM
+Education,STF,SBMO,OESM
+Other Services Activities,STF,MAC,OESM
+"Arts, Entertainment &Recreation",STF,ETBM,"OESM, SAO"

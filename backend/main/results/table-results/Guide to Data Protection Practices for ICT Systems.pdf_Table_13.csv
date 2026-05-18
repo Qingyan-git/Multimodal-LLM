@@ -1,0 +1,10 @@
+Web Applications and Website Security.Basic Practices,Web Applications and Website Security.Basic Practices,Data Lifecycle.Collection,Data Lifecycle.Use,Data Lifecycle.Disclosure,Data Lifecycle.Storage Archival,Data Lifecycle.Disposal
+Ensure that the system validates all data input by users so thatno unexpected inputs can be keyed in through the user interface.,Ensure that the system validates all data input by users so thatno unexpected inputs can be keyed in through the user interface.,•,•,,,
+"Scan user uploaded files for malware and perform follow-up action upon detection of malware. Restrict user uploads to certain whitelisted file types that the organisation may have in use, as whitelisted files types may vary from one organisation to another.","Scan user uploaded files for malware and perform follow-up action upon detection of malware. Restrict user uploads to certain whitelisted file types that the organisation may have in use, as whitelisted files types may vary from one organisation to another.",•,•,,•,
+Avoid storing personal data in a cookie as a safeguard against hackers reading the contents of the cookies.,Avoid storing personal data in a cookie as a safeguard against hackers reading the contents of the cookies.,,,,,
+"Perform cookie data validation, as well as URL validation, to correspond with the session in use to prevent man-in-the- middle attacks.","Perform cookie data validation, as well as URL validation, to correspond with the session in use to prevent man-in-the- middle attacks.",•,•,,,
+Collection,Collection,Use,Disclosure,Storage,Archival,Disposal
+•,•,•,,•,,
+,,,,,,
+•,•,•,,,,
+,,•,,,,

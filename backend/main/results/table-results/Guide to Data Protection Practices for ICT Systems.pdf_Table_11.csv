@@ -1,0 +1,4 @@
+Computer Networks.Enhanced Practices,Data Lifecycle.Collection,Data Lifecycle.Use,Data Lifecycle.Disclosure,Data Lifecycle.Storage,Data Lifecycle.Archival,Data Lifecycle.Disposal
+l. Install security devices that prevent the unauthorised transfer of data out from a computer or network. m. Monitor LAN/WiFi regularly and remove unauthorised clients and WiFi access points.,•,•,,•,•,
+n. Use 2FA and strong encryption for remote access. Review the method of encryption (e.g. algorithm and key length) periodically to ensure that it is recognised by the industry as relevant and secure. o. Use network proxies to restrict employee access to known malicious websites.,•,•,,,,
+"p. Design and implement the internal network with multi-tier or network zones, segregating the internal network according to function, physical location, access type, etc.",•,•,,•,•,

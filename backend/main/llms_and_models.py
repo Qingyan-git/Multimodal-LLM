@@ -21,14 +21,15 @@ class OpenAIModel:
         self.embedding_model = OpenAIEmbeddings(
             model=embedding_model,
             dimensions=1536,
-            api_key=api_key
+            api_key=api_key,
+            chunk_size=16
         )
 
         self.text_splitter = SemanticChunker(
             self.embedding_model, 
-            breakpoint_threshold_type="percentile",
-            breakpoint_threshold_amount=80,
-            buffer_size=3
+            breakpoint_threshold_type="interquartile",
+            breakpoint_threshold_amount=1.2,
+            buffer_size=2
         )
 
         self.chat_model = ChatOpenAI(
@@ -124,27 +125,23 @@ class OpenAIModel:
     async def get_image_description(self,image):
         base64_image = base64.b64encode(image).decode('utf-8')
 
-        system_message = f"""
-        ### Role
-        You are an expert Vision-to-Text Analyst specialized in preparing data for RAG (Retrieval-Augmented Generation) systems. Your goal is to transform visual information into comprehensive, semantically rich text that can be indexed and retrieved by a vector database.
+        system_message = """
+        ### Role & Goal
+        You are an expert visual analyst describing an image for someone who cannot see it. Your description will be indexed in a search engine, so it needs to be detailed, literal, and written in natural, fluid prose. Write as if you are explaining the image to a colleague in a professional, clear conversation.
 
         ### Task
-        You will be provided with an image. Your objective is to generate a detailed, objective summary and description. This text must serve as a proxy for the image in a text-based system, allowing a user to "find" this image by searching for its contents, context, or specific data points.
+        Observe the provided image and write a comprehensive, narrative-style breakdown. Instead of making disjointed bulleted lists or using rigid section headers, weave all the visual data, text, and relationships into a seamless, natural description.
 
-        ### Output Requirements
-        1. **High-Level Summary**: A concise 2-3 sentence overview of what the image represents (e.g., "An infographic showing the 2024 quarterly revenue growth for the APAC region").
-        2. **Contextual Analysis**: Identify the setting, subjects, and intent of the image.
-        3. **Detail Inventory**: 
-        - **Text & OCR**: Extract all visible text, headers, and labels exactly as they appear.
-        - **Visual Elements**: Describe charts, diagrams, colors, symbols, or artistic styles.
-        - **Entities**: Identify specific people, brands, objects, or locations.
-        4. **Relationship Mapping**: Explain how the elements relate (e.g., "The arrow points from the database icon to the cloud icon, indicating a migration process").
+        ### Writing Guidelines
+        - **Narrative Flow**: Start naturally with a high-level sentence explaining what the image is (e.g., "This image is a flowchart outlining..."). Then, smoothly transition into the details, describing the setting, key subjects, and the core purpose of the visual.
+        - **Natural Data Integration**: Weave any visible text, labels, chart data, or specific data points directly into your sentences. For example, instead of listing "Header: Q3 Results", write "At the top of the page, a prominent header reads 'Q3 Results'..."
+        - **Visual & Structural Relationships**: Describe how things connect or relate in the same sentence. Explain how elements are grouped, what arrows point to, or how colors differentiate information, maintaining a logical reading order (e.g., top-to-bottom or left-to-right).
+        - **Search-Friendly Vocabulary**: Write using a diverse, descriptive vocabulary with realistic keywords and synonyms that someone might type into a search query to find this exact asset.
 
         ### Constraints
-        - **Be Objective**: Describe what is physically present. Do not invent details or assume hidden meanings.
-        - **Search-Friendly Language**: Use descriptive keywords and synonyms that a user might realistically use in a search query.
-        - **No Markdown Formatting in Descriptions**: Avoid complex markdown that might interfere with vector embeddings (use plain text or simple bullet points).
-        - **Tone**: Professional, analytical, and literal.
+        - **Stay Literal and Objective**: Only describe what is visibly present. Do not interpret abstract meanings, hypothesize, or add creative assumptions. 
+        - **No Heavy Formatting**: Write in clean, continuous prose or simple paragraphs. Do not use markdown headers, bolding inside sentences, or tables, as this description must serve as clean text for embedding models.
+        - **Tone**: Professional, analytical, conversational, and direct.
         """
 
         human_message = [
@@ -180,41 +177,39 @@ class OpenAIModel:
 
     async def answer_question(self,user_query,retrieved_context):
 
-        formatted_contexts = '\n\n'.join(
-            [F"Chunk {i}: {content}" for i,content in enumerate(retrieved_context)]
-        )
+        formatted_contexts = '\n\n'.join(retrieved_context)
 
         messages = [
-            SystemMessage(content=f"""
-            You are a professional assistant. Your goal is to provide accurate answers based ONLY on the provided context chunks.
+            SystemMessage(content="""
+            You are a professional assistant. Your goal is to provide accurate answers based ONLY on the provided context items.
 
             RULES:
-            1. GROUNDING: Answer ONLY using the provided chunks. If the information is missing, state: "I do not have enough information in the provided documents."
-            2. DATABASE INTEGRATION: Treat the chunks as a unified repository.
-            3. CITATIONS: Every answer must conclude with a "Sources Used" section. 
-            - Identify the document name and page number provided in the context headers.
-            - List them in a separate paragraph at the end of your response.
-            - If multiple sources were used, list them as a comma-separated list.
-            4. RELEVANCE: Ignore irrelevant chunks. Do not mention them.
+            1. GROUNDING & FALLBACK: 
+            - Try your best to answer the user's question directly using the facts found inside the <content> tags of the provided <data_item> elements.
+            - FALLBACK: If you cannot find a direct answer, cannot glean a deeper meaning, or the exact information requested is missing, DO NOT say "I do not have enough information" or "I do not know". Instead, clearly state that a direct answer isn't available, and then repeat back, paraphrase, or summarize the related content that *is* present in the documents so the user can see the raw data.
+            2. DATABASE INTEGRATION: Treat the data items as a unified repository.
+            3. CITATIONS: You must extract and cite the source file name and page numbers found within the corresponding <metadata> tags for every fact or piece of text you reference or repeat.
+            4. RELEVANCE: Prioritize relevant items, but use closest matching items for your fallback summary if a direct match isn't found.
             5. TABLES: Interpret Markdown tables strictly by mapping row-to-column relationships.
-            6. FORMATTING: Use bold headings and bullet points for readability.
-            7. REASONING: First, scan the chunks for facts; then, synthesize them into a coherent response.
+            6. FORMATTING: Use clean layout structures, bold headings, and bullet points for readability.
 
-            OUTPUT STRUCTURE:
-            [Your detailed answer here]
+            OUTPUT FORMAT:
+            [Provide your detailed direct answer OR your structured fallback summary of the provided text here]
 
-            **Sources Used:** [Document Name], [Page Number]
+            **Sources Used:** [Insert Document Names and Pages here]
             """),
 
             HumanMessage(content=f"""
-            The following database contains multiple labelled chunks from different pages of a document. 
-            Use them to answer the question accurately.
-            The chunks are ordered by similarity scores to the question, and numbered numerically.
+            The following database contains multiple structured context data items.
+            Use them to answer the question accurately or provide a summary breakdown if a direct answer cannot be deduced.
+            
             <database>
             {formatted_contexts}
             </database>
+            
             Question: {user_query}
-            """)]
+            """)
+        ]
 
         answer = await self.chat_model.ainvoke(messages)
 
@@ -313,9 +308,9 @@ class ContextMessage:
                 <source>{chunk['document_name']}</source>
                 {metadata_tags}
             </metadata>
-            <context>
+            <chunk_context>
                 {chunk['context']}
-            </context>
+            </chunk_context>
             <content>
                 {chunk['content']}
             </content>

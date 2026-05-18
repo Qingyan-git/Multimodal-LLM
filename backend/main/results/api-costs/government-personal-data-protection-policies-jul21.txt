@@ -1,0 +1,42 @@
+
+Token cost to TEXT chunk government-personal-data-protection-policies-jul21.pdf : 199374
+
+Money cost to TEXT chunk government-personal-data-protection-policies-jul21.pdf : 0.0045744
+
+
+
+Token cost to EMBED TEXT government-personal-data-protection-policies-jul21.pdf : 14716
+
+Money cost to EMBED TEXT government-personal-data-protection-policies-jul21.pdf : 0.00029432
+
+
+
+Token cost to IMAGE chunk government-personal-data-protection-policies-jul21.pdf : 0
+
+Money cost to IMAGE chunk government-personal-data-protection-policies-jul21.pdf : 0.0
+
+
+
+Token cost to TABLE chunk government-personal-data-protection-policies-jul21.pdf : 19090
+
+Money cost to TABLE chunk government-personal-data-protection-policies-jul21.pdf : 0.00089944
+
+
+
+Token cost to EMBED TABLE government-personal-data-protection-policies-jul21.pdf : 3162
+
+Money cost to EMBED TABLE government-personal-data-protection-policies-jul21.pdf : 6.324e-05
+
+
+
+Token cost to PAGE chunk government-personal-data-protection-policies-jul21.pdf : 665655
+
+Money cost to PAGE chunk government-personal-data-protection-policies-jul21.pdf : 0.020718380000000005
+
+
+
+Token cost to EMBED PAGE government-personal-data-protection-policies-jul21.pdf : 27911
+
+Money cost to EMBED PAGE government-personal-data-protection-policies-jul21.pdf : 0.00055822
+
+

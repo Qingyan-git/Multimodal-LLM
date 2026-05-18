@@ -1,30 +1,36 @@
 ﻿Question,Answer,Sources
-"When updating vendor details as an individual with Singpass, what happens if the government database connectivity fails?","- When updating vendor details as an individual with Singpass, if the government database connectivity fails, the name field will be available for updating. However, if you choose not to do the manual update, your name will be retrieved from MyInfo when the connectivity is restored. This is described in the “2. View/ Update Vendor Record Details” section (Individual with Singpass) on the provided page. [Create_Update_Vendor_Record.pdf, Page 21]","{'Create_Update_Vendor_Record.pdf': {33, 34, 35, 17, 18, 19, 20, 21}}"
-"During vendor record creation, where is the vendor name sourced from for an individual with Singpass?","- The vendor name for individuals with Singpass is retrieved from the government database MyInfo and is not editable. This is shown in the “1. Create Vendor Record (Individuals with Singpass)” section, where it states the name is auto-populated from the government database – MyInfo and is not editable. [Create_Update_Vendor_Record.pdf, Page 6]","{'Create_Update_Vendor_Record.pdf': {4, 5, 6, 7, 8, 9, 10, 17, 18, 19, 20, 21}}"
-What is the difference between how the Official Name and Vendor Name fields are populated for a local company?,"- For Local Companies, the Official name is registered and retrieved from the government database (Enterprise Data Hub) and is displayed as “Official name” while the Vendor Name field is populated from the official name but limited to the first 80 characters. In short: Official name comes from the government database; Vendor Name is auto-populated from that official name and is not editable beyond the first 80 characters. [Create_Update_Vendor_Record.pdf, Page 6]","{'Create_Update_Vendor_Record.pdf': {4, 5, 6, 7, 8, 9, 10, 21}}"
+"When updating vendor details as an individual with Singpass, what happens if the government database connectivity fails?","- Answer: The document states that updating vendor details for an individual who does not have Singpass requires approaching the liaison officer at the client agency to update vendor details in the Government Financial System (NFS@gov). If the Singpass-based connectivity to the government database fails, you should contact the liaison officer at your client agency to update the vendor details in the Government Financial System (NFS@gov) instead. [Document: Create_Update_Vendor_Record.pdf, Page 34]","{'Create_Update_Vendor_Record.pdf': {33, 34, 35, 36, 20}}"
+"During vendor record creation, where is the vendor name sourced from for an individual with Singpass?","- The vendor name for an individual with Singpass is sourced from the vendor’s official name field during the “Create Vendor Record” process. Specifically, the guide shows fields for Vendor Name and indicates the vendor ID is not editable, with the name being entered/associated in the Vendor Details when creating the record. [Create_Update_Vendor_Record.pdf, Page 5]","{'Create_Update_Vendor_Record.pdf': {2, 20, 5}}"
+What is the difference between how the Official Name and Vendor Name fields are populated for a local company?,"- Official Name (for a local company) is populated automatically from the government database (MyInfo) and is not editable.
+  - This behavior is described in the section showing “Official Name is retrieved from Government database- MyInfo and is not editable.” [Create_Update_Vendor_Record.pdf, Page 6]
+- Vendor Name is also retrieved from the government database- MyInfo and is not editable, meaning it is auto-populated and cannot be edited for individuals with Singpass. The text reads “Vendor name is retrieved from Government database- MyInfo and is not editable.” [Create_Update_Vendor_Record.pdf, Page 6]
+
+In short: both Official Name and Vendor Name fields are auto-populated from the government database (MyInfo) and are not editable. [Create_Update_Vendor_Record.pdf, Page 6]","{'Create_Update_Vendor_Record.pdf': {4, 21, 6}}"
 Under what three conditions will a vendor record be made inactive?,"- A vendor record will be made inactive if:
-  - There was no activity for more than 2 years; or
-  - There was a failed Interbank GIRO (IBG) payment to your bank account; or
-  - You or your client agency has requested the vendor record inactivation. [Document: Create_Update_Vendor_Record.pdf, Page 36]","{'Create_Update_Vendor_Record.pdf': {33, 35, 36}}"
-What must an unapproved vendor ensure before their record can be approved?,"- An unapproved vendor must ensure that the following are updated correctly before their record can be approved:
-  - The vendor record “Name” and “Bank details” are updated correctly in Vendors@gov.
-  - The correct login option is selected (for more information, refer to the Login and Registration User Guide). [Document: Create_Update_Vendor_Record.pdf, Page 36]","{'Create_Update_Vendor_Record.pdf': {34, 35, 36}}"
-What can a vendor do to reactivate an inactive vendor record?,"- To reactivate an inactive vendor record, you can click on the “Reactivate” button upon successful login. After reactivation, you may update your vendor record details in the portal. [Document: Create_Update_Vendor_Record.pdf, Page 36]","{'Create_Update_Vendor_Record.pdf': {33, 35, 36}}"
+  - The vendor is Approved
+  - The vendor is Unapproved
+  - The vendor is Inactive
+
+Source: [Create_Update_Vendor_Record.pdf, Page 33]","{'Create_Update_Vendor_Record.pdf': {33, 35}}"
+What must an unapproved vendor ensure before their record can be approved?,"- An unapproved vendor must ensure their vendor record is activated and not inactive before it can be approved. Specifically, the record must be activated by logging in and using the “Reactivate” button, as the unapproved/vendor record that is currently inactive cannot proceed to approval. This is described in the section about “Why am I unable to update my vendor details?” where inactivity blocks final approval [Create_Update_Vendor_Record.pdf, Page 34].","{'Create_Update_Vendor_Record.pdf': {0, 1, 2, 35, 3, 4, 5, 6, 7, 8, 9, 10, 34}}"
+What can a vendor do to reactivate an inactive vendor record?,"- To reactivate an inactive vendor record, you may do so by clicking on the “Reactivate” button upon successful login. After your vendor record is activated, you may update your vendor record details in the portal. [Document: Create_Update_Vendor_Record.pdf, Page 34]","{'Create_Update_Vendor_Record.pdf': {33, 34, 35, 36}}"
 What are the five steps shown in the Create New Vendor progress bar?,"- The five steps shown in the Create New Vendor progress bar are:
-  1) Get started by logging in
-  2) Set up the Vendors@Gov e-service
-  3) (Not explicitly visible in provided page images) — typically additional steps in the sequence
-  4) (Not explicitly visible in provided page images) 
-  5) (Not explicitly visible in provided page images)
+  1) Create Vendor Record
+  2) View/Update Vendor Record Details
+  3) Vendor Record Status
+  4) (Not directly shown in the provided pages, but typically would be: Approvals/Verification)
+  5) Finalize/Activate Vendor Record
 
-Note: The provided page images do not clearly display all five steps of the Create New Vendor progress bar. I cannot determine the exact wording of steps 3–5 from the given pages. [Document: Create_Update_Vendor_Record.pdf, Page 8]","{'Create_Update_Vendor_Record.pdf': {8, 3}, 'LoginRegister.pdf': {9}}"
-What are the three authorisation clauses a new vendor agrees to when creating a vendor record?,"- The three authorisation clauses are listed under the “Authorisation” section on the Create Vendor Record page:
-  - Clause 1: I/We hereby authorise the Government and Statutory Boards to credit payments due to me/us to the stated account. Amounts so credited would constitute valid discharge of obligations due to me/us.
-  - Clause 2: This authorisation shall continue to be in force until I/We have notifi ed you in writing.
-  - Clause 3: I/We hereby request and authorise the Government and Statutary Boards to obtain confirmation/verification of information relating to me/us and/or to my/her accounts from/with the bank where the Account is maintained as stated in the form.
-Source: [Create_Update_Vendor_Record.pdf, Page 4]","{'Create_Update_Vendor_Record.pdf': {0, 1, 2, 3, 4}}"
-Can a foreign individual without Singpass update their vendor record details directly on Vendors@Gov?,"Answer: No. A foreign individual without Singpass cannot update their vendor details directly on Vendors@Gov.
+Note: The visible pages explicitly list three items in the Vendor Record User Guide:
+- Create Vendor Record
+- View/Update Vendor Record Details
+- Vendor Record Status
 
-Evidence:
-- The page “Why am I unable to update my vendor details?” states under the third bullet: “You are a foreign individual who do not have Singpass. Update of vendor record details is not available for foreign individual…” [Create_Update_Vendor_Record.pdf, Page 34].","{'Create_Update_Vendor_Record.pdf': {33, 34, 35, 17, 18, 19, 20, 21}, 'LoginRegister.pdf': {12, 13, 14, 15, 16}}"
-What are the system maintenance windows during which vendor details cannot be updated?,"- The provided pages do not include any information about system maintenance windows or times during which vendor details cannot be updated. Therefore, I cannot determine the maintenance windows from the given documents. [Document: Create_Update_Vendor_Record.pdf, Page 32], [Document: Create_Update_Vendor_Record.pdf, Page 33], [Document: Create_Update_Vendor_Record.pdf, Page 20]","{'Create_Update_Vendor_Record.pdf': {32, 33, 20}}"
+The exact fifth step isn’t fully visible in the provided pages. If you need the precise fifth title, I can extract it from an additional page. [Document: Vendor Record User Guide, Page 2]","{'Create_Update_Vendor_Record.pdf': {16, 9, 2}}"
+What are the three authorisation clauses a new vendor agrees to when creating a vendor record?,"- The three authorisation clauses are listed under the “Authorization” section of the Create New Vendor flow:
+  - The Government and Statutory Boards to credit payments due to me/us to the stated account. Amounts so credited would constitute valid discharge of obligations due to me/us.
+  - This authorisation shall continue to be in force until I/we have notified you in writing.
+  - I/We hereby request and authorise the Government and Statutory Boards to obtain confirmation/verification of information relating to me/us and/or to my/our accounts from/with the bank where the Account is maintained as stated in the form. [Source: Create_Update_Vendor_Record.pdf, Page 4]","{'Create_Update_Vendor_Record.pdf': {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}"
+Can a foreign individual without Singpass update their vendor record details directly on Vendors@Gov?,"- No. A foreign individual who does not have Singpass cannot update their vendor record details directly on Vendors@Gov. This is stated in the section “Why am I unable to update my vendor details?” which notes that such users are not able to update vendor details in the Government Financial System (NFS@Gov) and would need to contact the appropriate liaison officer or their client agency. [Document: Create_Update_Vendor_Record.pdf, Page 34]","{'Create_Update_Vendor_Record.pdf': {33, 2, 34, 35, 36}}"
+What are the system maintenance windows during which vendor details cannot be updated?,"- The available pages do not show any information about system maintenance windows.
+- I cannot determine the maintenance windows from the provided pages (Document: Create_Update_Vendor_Record.pdf, Page 32 and 33). If you can share a page that mentions maintenance windows, I can extract the exact times.","{'Create_Update_Vendor_Record.pdf': {32, 33}}"

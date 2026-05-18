@@ -1,0 +1,4 @@
+Housekeeping of Personal Data,Housekeeping of Personal Data,Data Lifecycle,Data Lifecycle,Data Lifecycle,Data Lifecycle,Data Lifecycle
+Basic Practices,Basic Practices,Disposal,Disposal,Disposal,Disposal,Disposal
+Protect temporary files such as interface files or data migration files while they exist and remove them once they are not required.,Protect temporary files such as interface files or data migration files while they exist and remove them once they are not required.,•,•,•,•,•
+Implement a routine schedule to identify and remove temporary files when these are no longer needed.,Implement a routine schedule to identify and remove temporary files when these are no longer needed.,,,,,

@@ -1,0 +1,5 @@
+Implementation Model,Interoperability protocol required,Currency conversion required,Key Considerations
+Single Bank Shared Ledger Network (Single Currency),No,No,Operates within a single bank's shared ledger to enable internal real-time transfers.
+"Multi-Bank (Single Currency, Same Shared Ledger Network)",Partial 18,No,"Participating banks operate on a shared permissioned ledger with needed agreement on access, rules, and settlement."
+"Multi-Bank (Single Currency, Different Shared Ledger Networks)",Yes,No,Participating banks operate on separate ledgers. Interoperability protocols would be required to coordinate messaging and settlement.
+Cross-Currency (Single or Multi- bank),Depending on the Shared Ledger network and tokenised deposit pair involved.,Yes,"FX mechanism is required to support cross-currency transactions, operating within a single shared ledger network or across networks."

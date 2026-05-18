@@ -1,0 +1,48 @@
+
+Token cost to TEXT chunk wsh-national-stats-2025.pdf : 888178
+
+Money cost to TEXT chunk wsh-national-stats-2025.pdf : 0.01718191
+
+
+
+Token cost to EMBED TEXT wsh-national-stats-2025.pdf : 40126
+
+Money cost to EMBED TEXT wsh-national-stats-2025.pdf : 0.00080252
+
+
+
+Token cost to IMAGE chunk wsh-national-stats-2025.pdf : 45871
+
+Money cost to IMAGE chunk wsh-national-stats-2025.pdf : 0.00463055
+
+
+
+Token cost to EMBED IMAGE wsh-national-stats-2025.pdf : 8381
+
+Money cost to EMBED IMAGE wsh-national-stats-2025.pdf : 0.00016762
+
+
+
+Token cost to TABLE chunk wsh-national-stats-2025.pdf : 319265
+
+Money cost to TABLE chunk wsh-national-stats-2025.pdf : 0.009392010000000001
+
+
+
+Token cost to EMBED TABLE wsh-national-stats-2025.pdf : 37427
+
+Money cost to EMBED TABLE wsh-national-stats-2025.pdf : 0.00074854
+
+
+
+Token cost to PAGE chunk wsh-national-stats-2025.pdf : 3377362
+
+Money cost to PAGE chunk wsh-national-stats-2025.pdf : 0.06197600000000001
+
+
+
+Token cost to EMBED PAGE wsh-national-stats-2025.pdf : 74190
+
+Money cost to EMBED PAGE wsh-national-stats-2025.pdf : 0.0014838000000000002
+
+

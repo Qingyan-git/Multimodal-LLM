@@ -1,0 +1,108 @@
+Division,Group,Description
+05,,Mining of coal and lignite
+,051,Mining of hard coal
+,052,Mining of lignite
+06,,Extraction of crude petroleum & natural gas
+,061,Extraction of crude petroleum
+,062,Extraction of natural gas
+07,,Mining of metal ores
+,071,Mining of iron ores
+,072,Mining of non-ferrous metal ores
+08,,Other mining and quarrying
+,081,"Quarrying of stone, sand and clay"
+,089,Mining and quarrying n.e.c.
+09,,Mining support service activities
+,091,Support activities for petroleum
+,099,"Support activities for other mining, quarrying"
+10,,Food products
+,101,Processing/preserving of meat
+,102,"Processing/preserving of fish, etc."
+,103,"Processing/preserving of fruit,vegetables"
+,104,Vegetable and animal oils and fats
+,105,Dairy products
+,106,"Grain mill products,starches and starch products"
+,107,Other food products
+,108,Prepared animal feeds
+11,,Beverages
+,110,Beverages
+12,,Tobacco products
+,120,Tobacco products
+13,,Textiles
+,131,"Spinning, weaving and finishing of textiles"
+,139,Other textiles
+14,,Wearing apparel
+,141,"Wearing apparel, except fur apparel"
+,142,Articles of fur
+,143,Knitted and crocheted apparel
+15,,Leather and related products
+,151,"Leather;luggage,handbags,saddlery,harness;fur"
+,152,Footwear
+16,,"Wood products, excluding furniture"
+,161,Sawmilling and planing of wood
+,162,"Wood products, cork, straw, plaiting materials"
+17,,Paper and paper products
+,170,Paper and paper products
+18,,Printing and reproduction of recorded media
+,181 182,Printing and service activities related to printing
+19,,Reproduction of recorded media Coke and refined petroleum products
+,191,Coke oven products
+,192,Refined petroleum products
+20,,Chemicals and chemical products
+,201,"Basic chemicals,fertilizers, etc."
+,202,Other chemical products
+,203,Man-made fibres
+21,,"Pharmaceuticals,medicinal chemicals, etc."
+,210,"Pharmaceuticals,medicinal chemicals, etc."
+22,,Rubber and plastics products
+,221,Rubber products
+23,222,Other non-metallic mineral products
+,231 239,Glass and glass products
+24,,metals
+,241,Basic iron and Basic steel
+,242,Basic precious and other non-ferrous metals
+,243,Casting of metals
+25,,"Fabricated metal products, except machinery"
+,251,"Struct.metal products, tanks, reservoirs"
+,252,Weapons and ammunition
+,259,Other metal products;metal working services
+26,,"Computer, electronic and optical products"
+,261,Electronic components and boards
+,262,Computers and peripheral equipment
+,263,Communication equipment
+,264,Consumer electronics
+,265,"Measuring,testing equipment; watches, etc."
+,266,"Irradiation/electromedical equipment,etc."
+,267,Optical instruments and photographic equipment
+,268,Magnetic and optical media
+27,,Electrical equipment
+,271,"Electric motors,generators,transformers,etc."
+,272,Batteries and accumulators
+,273,Wiring and wiring devices
+,274,Electric lighting equipment
+,275,Domestic appliances
+,279,Other electrical equipment
+28,,Machinery and equipment n.e.c.
+,281,General-purpose machinery
+,282,Special-purpose machinery
+29,,"Motor vehicles, trailers and semi-trailers"
+,291,Motor vehicles
+,292,"Automobile bodies, trailers and semi-trailers"
+,293,Parts and accessories for motor vehicles
+30,,Other transport equipment
+,301,Building of ships and boats
+,302,Railway locomotives and rolling stock
+,303,Air and spacecraft and related machinery
+,304,Military fighting vehicles
+,309,Transport equipment n.e.c.
+31,,Furniture
+,310,Furniture
+32,,Other manufacturing
+,321,"Jewellery, bijouterie and related articles"
+,322,Musical instruments
+,323,Sports goods
+,324,Games and toys
+,325,Medical and dental instruments and supplies
+,329,Other manufacturing n.e.c.
+33,,Repair and installation of machinery/equipment
+,331,Repair of fabricated metal products/machinery
+,332,Installation of industrial machinery/equipment

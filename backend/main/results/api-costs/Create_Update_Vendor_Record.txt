@@ -1,0 +1,48 @@
+
+Token cost to TEXT chunk Create_Update_Vendor_Record.pdf : 72080
+
+Money cost to TEXT chunk Create_Update_Vendor_Record.pdf : 0.00174408
+
+
+
+Token cost to EMBED TEXT Create_Update_Vendor_Record.pdf : 7977
+
+Money cost to EMBED TEXT Create_Update_Vendor_Record.pdf : 0.00015954
+
+
+
+Token cost to IMAGE chunk Create_Update_Vendor_Record.pdf : 56298
+
+Money cost to IMAGE chunk Create_Update_Vendor_Record.pdf : 0.0057264199999999986
+
+
+
+Token cost to EMBED IMAGE Create_Update_Vendor_Record.pdf : 11212
+
+Money cost to EMBED IMAGE Create_Update_Vendor_Record.pdf : 0.00022424
+
+
+
+Token cost to TABLE chunk Create_Update_Vendor_Record.pdf : 1830
+
+Money cost to TABLE chunk Create_Update_Vendor_Record.pdf : 0.0001216
+
+
+
+Token cost to EMBED TABLE Create_Update_Vendor_Record.pdf : 373
+
+Money cost to EMBED TABLE Create_Update_Vendor_Record.pdf : 7.4600000000000006e-06
+
+
+
+Token cost to PAGE chunk Create_Update_Vendor_Record.pdf : 333611
+
+Money cost to PAGE chunk Create_Update_Vendor_Record.pdf : 0.015448659999999998
+
+
+
+Token cost to EMBED PAGE Create_Update_Vendor_Record.pdf : 24508
+
+Money cost to EMBED PAGE Create_Update_Vendor_Record.pdf : 0.00049016
+
+

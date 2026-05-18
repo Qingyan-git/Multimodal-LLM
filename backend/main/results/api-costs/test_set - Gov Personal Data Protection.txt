@@ -1,0 +1,18 @@
+
+Token cost to ANSWER QUESTIONS for test_set - Gov Personal Data Protection.csv : 75489
+
+Money cost to ANSWER QUESTIONS for test_set - Gov Personal Data Protection.csv : 0.0053396500000000005
+
+
+
+Token cost to ANSWER QUESTIONS for test_set - Gov Personal Data Protection.csv : 63238
+
+Money cost to ANSWER QUESTIONS for test_set - Gov Personal Data Protection.csv : 0.00490315
+
+
+
+Token cost to ANSWER IMAGE QUESTIONS for test_set - Gov Personal Data Protection.csv : 104362
+
+Money cost to ANSWER IMAGE QUESTIONS for test_set - Gov Personal Data Protection.csv : 0.005495070000000001
+
+

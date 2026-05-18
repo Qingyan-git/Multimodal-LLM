@@ -47,17 +47,18 @@ def delete_all_files_in_folder(folder_path):
     print(f'{count} files removed.\n\n')
 
 
-def clean_text(text):
+# def clean_text(text):
 
-    image_chunk_identifier = r"\*\*==> picture \[\d* x \d*\] intentionally omitted <==\*\*"
-    picture_text_pattern = r"\*\*----- (Start|End) of picture text -----\*\*"
-    break_patterns = r"\<br\>+"
-    cleaned_text = re.sub(image_chunk_identifier, '', text)
-    cleaned_text = re.sub(picture_text_pattern, '', cleaned_text)
-    cleaned_text = re.sub(break_patterns, '', cleaned_text)
-    cleaned_text = re.sub(r'\n{3,}','\n\n',cleaned_text)
+#     image_chunk_identifier = r"\*\*==> picture \[\d* x \d*\] intentionally omitted <==\*\*"
+#     picture_text_pattern = r"\*\*----- (Start|End) of picture text -----\*\*"
+#     break_patterns = r"\<br\>+"
+#     cleaned_text = re.sub(image_chunk_identifier, '', text)
+#     cleaned_text = re.sub(picture_text_pattern, '', cleaned_text)
+#     cleaned_text = re.sub(break_patterns, '', cleaned_text)
+#     cleaned_text = re.sub(r'\n{3,}','\n\n',cleaned_text)
 
-    return cleaned_text.strip()
+#     return cleaned_text.strip()
+
 
 def get_page_numbers(chunks, starting_page_no=0, page_pattern=r"\s*--- end of page\.page_number=(\d+) ---\s*"):
     final_text_chunks = []
@@ -92,6 +93,7 @@ def get_page_numbers(chunks, starting_page_no=0, page_pattern=r"\s*--- end of pa
 
 async def extract_text(file):
     
+    semaphore = asyncio.Semaphore(5)
     model = OpenAIModel()
     recursive_splitter = RecursiveSplitter()
     max_chunk_size = recursive_splitter.get_max_chunk_size()
@@ -99,28 +101,33 @@ async def extract_text(file):
     with pymupdf.open(file) as doc:
         markdown_text = pymupdf4llm.to_markdown(doc, header=True, footer=True, page_separators=True)
 
-    cleaned_markdown_text = clean_text(markdown_text)
+    # cleaned_markdown_text = clean_text(markdown_text)
     filename = str(file.stem) + '.md'
-    save_to_file(filename,cleaned_markdown_text)
+    save_to_file(filename,markdown_text)
 
-    semantic_texts = model.semantic_chunker(cleaned_markdown_text)
+    semantic_texts = model.semantic_chunker(markdown_text)
     
-    final_texts = []
+    # final_texts = []
     # for text in semantic_texts:
     #     if len(text) > max_chunk_size:
     #         split_texts = recursive_splitter.recursive_split(text)
     #         final_texts.extend(split_texts)
     #     else:
     #         final_texts.append(text)
+    # final_texts.extend(semantic_texts)
 
-    final_texts.extend(semantic_texts)
-    
-    tasks = [model.get_context(cleaned_markdown_text,text) for text in final_texts]
+    # tasks = [model.get_context(markdown_text,text) for text in semantic_texts]
+
+    async def sem_task(markdown_text,text):
+        async with semaphore:
+            return await model.get_context(markdown_text,text)
+
+    tasks = [sem_task(markdown_text,text) for text in semantic_texts]
     texts_context = await asyncio.gather(*tasks)
-    texts_page_numbers = get_page_numbers(final_texts)
+    texts_page_numbers = get_page_numbers(semantic_texts)
 
     final_chunks = []
-    for i,text in enumerate(final_texts):
+    for i,text in enumerate(semantic_texts):
 
         save_text = f"Final chunk number {i}, content : \n{text}\n"
         save_to_file(filename,save_text,method='a')
@@ -148,9 +155,11 @@ async def process_text(folder_path):
 
                 if file.is_file():
 
+                    print(f'Processing {file.stem}\n\n')
+
                     insert_pdfs(file)
 
-                    print(f'Finished inserting pdf to postgresdb\n\n')
+                    print(f'\tFinished inserting pdf to postgresdb\n\n')
 
                     with get_openai_callback() as cb:
 
@@ -185,7 +194,7 @@ async def process_text(folder_path):
 
                         print(f'\tFinished uploading embeddings to qdrant\n\n')
 
-                    print(f'Finished processing\n\n')
+                    print(f'Finished processing {file.stem}\n\n')
 
             print(f'\nFinished processing all files\n')
 

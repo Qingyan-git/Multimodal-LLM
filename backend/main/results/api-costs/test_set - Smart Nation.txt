@@ -1,0 +1,12 @@
+
+Token cost to ANSWER QUESTIONS for test_set - Smart Nation.csv : 83334
+
+Money cost to ANSWER QUESTIONS for test_set - Smart Nation.csv : 0.00774825
+
+
+
+Token cost to ANSWER IMAGE QUESTIONS for test_set - Smart Nation.csv : 111535
+
+Money cost to ANSWER IMAGE QUESTIONS for test_set - Smart Nation.csv : 0.006956370000000001
+
+

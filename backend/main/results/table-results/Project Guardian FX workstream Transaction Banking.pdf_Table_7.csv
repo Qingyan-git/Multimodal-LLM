@@ -1,0 +1,4 @@
+Stage,Activity
+Issue Token,1. Issuer Bank A in Singapore off-chain debits Ant International's Entity A cash account for SGD fiat currency 2. Issuer mints Bank A SGD token to Ant International's Entity A's token address
+Transfer Token,"3. SGD token is transferred to the liquidity provider's token address 4. The liquidity provider provides price quote, checks for currency pair availability, relevant screening and performs token exchange (SGD token for USD token). The liquidity provider then transfers USD token to Ant International Entity B's token address"
+Redeem Token,5. Issuer Bank B burns USD token from Ant International Entity B's token address 6. Issuer Bank B credits Ant International Entity B's cash account with USD fiat currency.

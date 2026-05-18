@@ -11,6 +11,6 @@
 __pycache__/
 
 # Ignore the data for the datasets
-data
-pdfs
-**/results
+# data
+# pdfs
+# **/results

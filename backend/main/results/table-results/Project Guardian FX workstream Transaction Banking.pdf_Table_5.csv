@@ -1,0 +1,8 @@
+#,Risk Mitigant,Description
+1,Ensure Robust Internal Compliance Functions,"Develop and scale internal risk, compliance, and control frameworks to align with the growing complexity of tokenised systems, ensuring continuous monitoring and adaptability."
+2,Ensure an Effective Incident Response Mechanism,"Establish clear, proportionate protocols to address faults in smart contracts or shared ledger discrepancies, minimising potential disruptions."
+3,Ensure Standardised Smart Contract Audits,Implement recognised audit frameworks and conduct independent security reviews before deployment to proactively identify and rectify vulnerabilities.
+4,Ensure Clear & Documented Code,"Write smart contracts in well-commented, transparent code that facilitates routine audits, maintenance, and updates."
+5,Ensure Extensive Pre-deployment Testing,Conduct comprehensive simulations and stress tests under diverse scenarios to validate smart contract behaviour and operational resilience before live deployment.
+6,Ensure a Combined Access &Manual Review Framework,"Utilise a unified approach that integrates automated access controls with human intervention to monitor and verify key system functions, reducing the risk of error or malicious activity."
+7,Ensure Contractual Clarity Among Stakeholders,"Clearly define legal roles, responsibilities, and liabilities among all parties through robust contractual agreements to guarantee enforceability and mitigate disputes."

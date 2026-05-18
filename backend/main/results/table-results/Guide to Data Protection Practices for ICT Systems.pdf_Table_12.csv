@@ -1,0 +1,7 @@
+Database Security,Data Lifecycle,Data Lifecycle,Data Lifecycle,Data Lifecycle,Data Lifecycle,Data Lifecycle
+Basic Practices,Disposal,Disposal,Disposal,Disposal,Disposal,Disposal
+"a. Enforce strict control over users' activities such as limiting their direct access to the database, ability to execute arbitrary SQL commands or access the database schema.",,,,,,
+b. Log all database activities such as any changes to the database and data access activities to track unauthorised activities or anomalies.,,,,,,
+"c. Checkthat the database is secured andnotplacedinavulnerable spot within the network. For example, the database should be placed behind a firewall.",,,,,,
+d. Consider database repositories encryption or encrypt datasets containing sensitive personal data that have a higher risk of adversely affecting the individual should they be compromised. Review the method of encryption (e.g. algorithm and key length) periodically to ensure that it is recognised by the industry as relevant and secure.,,,,,,
+"e. Implement tight control over access to personal data based on the sensitivity of the data. For example, the database can be configured to restrict users from viewing data by excluding columns containing sensitive data such as credit card numbers.",,,,,,

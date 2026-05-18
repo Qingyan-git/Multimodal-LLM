@@ -1,0 +1,12 @@
+Process Measures,Clause number
+Collect datasets only where necessary,8
+Limit retention period of data,9
+Secured isolated environments for high-risk users,12
+Retrieve only the data required instead of data dumps,15
+Access sensitive files on secured platforms,18
+Limit and monitor authorised and privileged access to sensitive data in ICT systems,25
+Maintain data lineage for data to support data incident management,29
+Manage keys to data protection technical safeguards,45
+Securely distribute passwords out-of-band,54
+Distribute files through approved secure channels,57
+Protect sensitive data when distributing via email,59

@@ -14,6 +14,7 @@ import numpy as np
 import io
 import re
 import unicodedata
+import pymupdf
 
 from text_chunking import save_to_file,delete_all_files_in_folder
 from llms_and_models import OpenAIModel, SparseEmbedder, ColBERTEmbedder
@@ -88,7 +89,7 @@ def save_image(image,filename,path=Path(os.getenv('image_results_path'))):
     return
 
 
-def is_useable_image(img, page_w, page_h, min_dim=100, area_threshold=0.15):
+def is_useable_image(img, page_w, page_h, min_dim=100, area_threshold=0.20):
     prov = img.prov[0]
     bbox = prov.bbox
     
@@ -115,71 +116,131 @@ def is_useable_image(img, page_w, page_h, min_dim=100, area_threshold=0.15):
     return True
 
 
-async def extract_images(filepath):
-
+async def extract_images(filepath, chunk_size=10):
     model = OpenAIModel()
 
-    # Keep page/element images so they can be exported. The `images_scale` controls
-    # the rendered image resolution (scale=1 ~ 72 DPI). The `generate_*` toggles
-    # decide which elements are enriched with images.
+    with pymupdf.open(filepath) as doc:
+        total_pages = len(doc)
+
     pipeline_options = PdfPipelineOptions()
-    pipeline_options.images_scale = 2.0 
-    pipeline_options.generate_page_images = True
+    pipeline_options.images_scale = 1.0 
     pipeline_options.generate_picture_images = True
-    pipeline_options.picture_description_options.picture_area_threshold = 0.15
+    pipeline_options.picture_description_options.picture_area_threshold = 0.40
 
-    docling = DocumentConverter(
-        format_options={
-            InputFormat.PDF: PdfFormatOption(pipeline_options=pipeline_options)
-        }
-    )
-
-    #Object that holds the document
-    document = docling.convert(filepath).document
-
-    #All document images
-    document_images = document.pictures
-
+    # Placed safely OUTSIDE the loop so chunks append cleanly
     all_chunks = []
-
-    useable_images = []
-    for img in document_images:
-        # 1. Get the page index from the image provenance
-        page_no = img.prov[0].page_no 
-        
-        # 2. Access the specific page item to get its dimensions
-        # Docling pages are 1-indexed in provenance but 0-indexed in the list
-        # Check if your version uses document.pages[page_no - 1] or [page_no]
-        page_item = document.pages[page_no] 
-        
-        page_w = page_item.size.width
-        page_h = page_item.size.height
-
-        # 3. Now pass these dynamic dimensions into your function
-        if is_useable_image(img, page_w, page_h):
-            useable_images.append(img)
-
-    for i, image in enumerate(useable_images):
-        # 1. Extract the PIL image from the Docling item
-        pil_img = image.get_image(doc=document)
-        # 2. Define a filename WITH an extension
-        clean_name = f"image_{i}.jpeg"
-        # 3. Call your save function
-        save_image(pil_img, filename=clean_name)
-
     semaphore = asyncio.Semaphore(5)
 
-    async def sem_task(img):
-        async with semaphore:
-            return await process_single_image(model, document, img)
+    # 2. Iterate through the document in windows of `chunk_size` pages
+    for start in range(1, total_pages + 1, chunk_size):
+        end = min(start + chunk_size - 1, total_pages)
+        print(f"\t\t---> Processing page range {start} to {end}...\n\n")
 
-    # Create all tasks at once, but the semaphore will throttle them
-    tasks = [sem_task(img) for img in useable_images]
-    
-    # This will now run all images, but only 5 at a time
-    all_chunks = await asyncio.gather(*tasks)
+        # Re-creating the converter inside the loop flushes hidden C++ memory caches
+        docling = DocumentConverter(
+            format_options={
+                InputFormat.PDF: PdfFormatOption(pipeline_options=pipeline_options)
+            }
+        )
 
+        # Convert ONLY the specified range of pages
+        document = docling.convert(filepath, page_range=(start, end)).document
+        document_images = document.pictures
+
+        useable_images = []
+        for img in document_images:
+            abs_page_no = img.prov[0].page_no
+            page_item = document.pages[abs_page_no] 
+            
+            # Extract dimensions from the PageItem object
+            page_w = page_item.size.width
+            page_h = page_item.size.height
+
+            # Pass these dynamic dimensions into your function
+            if is_useable_image(img, page_w, page_h):
+                useable_images.append(img)
+
+        # Unique filename mapping includes page boundaries to prevent overwriting
+        for i, image in enumerate(useable_images):
+            pil_img = image.get_image(doc=document)
+            clean_name = f"{filepath.stem}_batch_{start}-{end}_image_{i}.jpeg"
+            save_image(pil_img, filename=clean_name)
+
+        # Target utility tasks for this step
+        async def sem_task(img):
+            async with semaphore:
+                return await process_single_image(model, document, img)
+
+        if useable_images:
+            tasks = [sem_task(img) for img in useable_images]
+            page_range_chunks = await asyncio.gather(*tasks)
+            
+            # EXTEND the main list instead of overwriting it
+            all_chunks.extend(page_range_chunks)
+
+    # Return the complete list only AFTER the loop finishes entirely
     return all_chunks
+
+
+
+    # # Keep page/element images so they can be exported. The `images_scale` controls
+    # # the rendered image resolution (scale=1 ~ 72 DPI). The `generate_*` toggles
+    # # decide which elements are enriched with images.
+    # pipeline_options = PdfPipelineOptions()
+    # pipeline_options.images_scale = 1.0 
+    # pipeline_options.generate_picture_images = True
+    # pipeline_options.picture_description_options.picture_area_threshold = 0.40
+
+    # docling = DocumentConverter(
+    #     format_options={
+    #         InputFormat.PDF: PdfFormatOption(pipeline_options=pipeline_options)
+    #     }
+    # )
+
+    # #Object that holds the document
+    # document = docling.convert(filepath).document
+
+    # #All document images
+    # document_images = document.pictures
+
+    # all_chunks = []
+
+    # useable_images = []
+    # for img in document_images:
+    #     # 1. Get the page index from the image provenance
+    #     page_no = img.prov[0].page_no 
+        
+    #     # 2. Access the specific page item to get its dimensions
+    #     page_item = document.pages[page_no] 
+        
+    #     page_w = page_item.size.width
+    #     page_h = page_item.size.height
+
+    #     # 3. Now pass these dynamic dimensions into your function
+    #     if is_useable_image(img, page_w, page_h):
+    #         useable_images.append(img)
+
+    # for i, image in enumerate(useable_images):
+    #     # 1. Extract the PIL image from the Docling item
+    #     pil_img = image.get_image(doc=document)
+    #     # 2. Define a filename WITH an extension
+    #     clean_name = f"{filepath.stem}_image_{i}.jpeg"
+    #     # 3. Call your save function
+    #     save_image(pil_img, filename=clean_name)
+
+    # semaphore = asyncio.Semaphore(5)
+
+    # async def sem_task(img):
+    #     async with semaphore:
+    #         return await process_single_image(model, document, img)
+
+    # # Create all tasks at once, but the semaphore will throttle them
+    # tasks = [sem_task(img) for img in useable_images]
+    
+    # # This will now run all images, but only 5 at a time
+    # all_chunks = await asyncio.gather(*tasks)
+
+    # return all_chunks
 
 
 async def process_single_image(model,document,image):
@@ -208,9 +269,8 @@ async def process_single_image(model,document,image):
 
     #Some image metadata
     metadata = {
-        'source': image.source,
-        'pages' : [image.prov[0].page_no], #Cannot be list() because image.prov[0].page_no is an int which is not iterable
-    }
+        'pages' : [image.prov[0].page_no - 1], #Cannot be list() because image.prov[0].page_no is an int which is not iterable
+        }
 
     #All into image_chunk object and return
     image_chunk = ImageChunk()
@@ -236,9 +296,11 @@ async def process_images(folder_path):
 
                 if file.is_file():
 
+                    print(f'Processing {file.stem}\n\n')
+
                     insert_pdfs(file)
 
-                    print(f'Finished inserting pdf to postgresdb\n\n')
+                    print(f'\tFinished inserting pdf to postgresdb\n\n')
 
                     with get_openai_callback() as cb:
 
@@ -273,7 +335,7 @@ async def process_images(folder_path):
 
                         print(f'\tFinished uploading embeddings to qdrant\n\n')
 
-                    print(f'Finished processing\n\n')
+                print(f'Finished processing {file.stem}\n\n')
 
             print(f'\nFinished processing all files\n')
 
