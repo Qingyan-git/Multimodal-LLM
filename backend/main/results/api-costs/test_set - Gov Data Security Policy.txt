@@ -4,3 +4,9 @@ Token cost to ANSWER QUESTIONS for test_set - Gov Data Security Policy.csv : 546
 Money cost to ANSWER QUESTIONS for test_set - Gov Data Security Policy.csv : 0.00486223
 
 
+
+Token cost to ANSWER QUESTIONS for test_set - Gov Data Security Policy.csv : 71703
+
+Money cost to ANSWER QUESTIONS for test_set - Gov Data Security Policy.csv : 0.005936100000000001
+
+

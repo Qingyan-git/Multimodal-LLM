@@ -4,3 +4,9 @@ Token cost to ANSWER QUESTIONS for test_set - Guide to Data Protection.csv : 472
 Money cost to ANSWER QUESTIONS for test_set - Guide to Data Protection.csv : 0.0033765599999999994
 
 
+
+Token cost to ANSWER QUESTIONS for test_set - Guide to Data Protection.csv : 60145
+
+Money cost to ANSWER QUESTIONS for test_set - Guide to Data Protection.csv : 0.004130049999999999
+
+

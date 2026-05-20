@@ -1,282 +1,329 @@
 ﻿Question,Answer,Sources
-When were Singapore's government data security policies first established?,"Based on the provided documents, there is no explicit date stating when Singapore's government data security policies were first established. The items reference policy frameworks and acts (e.g., Government Data Security Policies Annex A, IM on ICT&SS Management, PSGA enacted in 2018) but do not provide a first-established date for the policies themselves.
+When were Singapore's government data security policies first established?,"Answer: The Government Data Security Policies trace back to 2001, when the policies on ICT&SS Management were established (as noted in the first data item).
 
-What is available from the sources:
-- Government Data Security Policies (Annex A) discuss guidance on data security measures and risk management, with a clause 23 about volume and time-limited data access (source: government-data-security-policies.pdf, page 7) [cite: government-data-security-policies.pdf, p.7].
-- Government Personal Data Protection Policies (Jul 2021 edition) references the IM on ICT&SS Management and the PSGA enacted in 2018, including penalties for misuse or re-identification of data (source: government-personal-data-protection-policies-jul21.pdf, page 3) [cite: government-personal-data-protection-policies-jul21.pdf, pp.3].
-- Page 14 of the same 2021 policies describes sections 13–15 on data handling, disclosures, and consent mechanics (source: government-personal-data-protection-policies-jul21.pdf, page 14) [cite: government-personal-data-protection-policies-jul21.pdf, p.14].
-
-Direct answer: A first-established date for Singapore’s government data security policies is not provided in the given documents.
-
-If you’d like, I can extract and present the exact surrounding dates and legislative references (e.g., PSGA 2018) as a concise summary from the available items to aid your RAG indexing. 
+Direct supporting context from sources:
+- Data item 1 (Government Personal Data Protection Policies): mentions ""Since 2001, the Government's data security policies have been set out in the IM on ICT&SS Management."" [Source: government-personal-data-protection-policies-jul21.pdf, page 4]
+- Data item 2 (Government Data Security Policies, Annex A): references the ICT&SS Manual from 2001 as part of the governance timeline (as context for risk management and logging). [Source: government-data-security-policies.pdf, page 9]
 
 Sources Used:
-- government-data-security-policies.pdf, page 7
-- government-personal-data-protection-policies-jul21.pdf, pages 3 and 14","Taken from government-data-security-policies.pdf : pages 7
-Taken from government-personal-data-protection-policies-jul21.pdf : pages 3, 4, 14"
-Has the Government Instruction Manual been updated since 2001?,"Direct answer isn’t explicitly stated in the provided text. However, the documents repeatedly reference updates or recommendations after 2001:
+- government-personal-data-protection-policies-jul21.pdf, page 4
+- government-data-security-policies.pdf, pages 9 and 5 (for corroborating timeline references)","Taken from government-personal-data-protection-policies-jul21.pdf : pages 4
+Taken from government-data-security-policies.pdf : pages 5, 8, 9"
+Has the Government Instruction Manual been updated since 2001?,"Answer: Yes.
 
-- The first data item notes: “Since 2001, the Government’s data security policies have been set out in the Government Instruction Manual (IM) on Infocomm Technology and Smart Systems (ICT&SS) Management. In 2019, the Public Sector Data Security Review Committee recommended additional technical and process measures to protect data and prevent data compromise.” This implies there were considerations or recommendations beyond 2001, including 2019.
+Reasoning grounded in the provided documents:
+- The Government Data Security Policies items explicitly reference that the Government’s data security policies have been set out since 2001 in the Government Instruction Manual (IM) on ICT&SS Management, and that in 2019 the Public Sector Data Security Review Committee recommended additional measures which were incorporated into the IM on ICT&SS Management. This indicates updates to the IM after 2001 (noting 2019 actions and incorporation) (sources: government-data-security-policies.pdf, pages 1–2; 2–3) [Sources Used: government-data-security-policies.pdf, pages 1-2 and 2-3].
 
-- The second and third data items discuss sections and annexes within the same policy framework and reference updates and ongoing management, with dates like 2001 onward and mentions of updates to the policy document without public publication changes.
+- Additionally, the Change Log entry in Government Personal Data Protection Policies (Jul 2021) references updates to the policy document, reinforcing that updates continued beyond 2001 (Source: government-personal-data-protection-policies-jul21.pdf, pages 43–44) [Source Used: government-personal-data-protection-policies-jul21.pdf, pages 43-44].
 
-Paraphrased from the available content:
-- The policy framework began in 2001 and has undergone later recommendations (notably in 2019) to add technical and process measures. The documents acknowledge that “the Government may update the policies set out in this document without publishing such updates to the public,” suggesting possible updates since 2001 that may not be publicly posted.
+Direct answer: Yes—the IM on ICT&SS Management has been updated since 2001, including actions from 2019 (Public Sector Data Security Review Committee) and a July 2021 update reflected in related policy documents. 
 
 Sources:
-- government-data-security-policies.pdf, pages 1–2, 2–3, and 4
+- government-data-security-policies.pdf, pages 1–2; 2–3
+- government-personal-data-protection-policies-jul21.pdf, pages 43–44","Taken from government-data-security-policies.pdf : pages 1, 2, 3
+Taken from government-personal-data-protection-policies-jul21.pdf : pages 43, 44"
+What prompted additional data security measures to be introduced?,"Direct answer isn’t explicitly stated as a single cause in the provided excerpts. However, the relevant content indicates that:
 
-Cited content details:
-- “Since 2001, the Government’s data security policies have been set out in the Government Instruction Manual (IM) on Infocomm Technology and Smart Systems (ICT&SS) Management. In 2019, the Public Sector Data Security Review Committee recommended additional technical and process measures…” (Source: government-data-security-policies.pdf, page 1)
-- “Since 2001 onward governs agency data security requirements and risk-based technical/process measures.” (Source: government-data-security-policies.pdf, page 4)
-- “The Government may update the policies set out in this document without publishing such updates to the public.” (Source: government-data-security-policies.pdf, page 2)
+- In 2019, the Public Sector Data Security Review Committee recommended additional technical and process measures to protect data and prevent data compromise. This explicitly mentions why extra measures were introduced.
+- Additional context from other items notes ongoing adoption of DLP tools, data protection safeguards, and risk-based data protection measures within the ICT&SS Management framework.
 
-If you want a concise answer: The provided documents indicate that updates or recommendations beyond 2001 have occurred or been recommended, notably in 2019, and they acknowledge potential updates to the policy without public announcements. They do not provide a specific confirmation of a formal, public update date to the IM beyond these references.","Taken from government-data-security-policies.pdf : pages 1, 2, 3, 4"
-What prompted additional data security measures to be introduced?,"Direct answer not explicitly stated as a simple cause-and-effect line in the text. However, the closest explicit prompt for additional measures is found in the introductory material: in 2019, the Public Sector Data Security Review Committee recommended additional technical and process measures to protect data and prevent data compromise. This recommendation prompted the introduction of further data security measures.
+Therefore, the prompt for additional data security measures was the recommendation by the Public Sector Data Security Review Committee in 2019 to bolster protection and prevent data compromise.
 
-- Source: government-data-security-policies.pdf, pages 1-2 (Introduction stating the 2019 Public Sector Data Security Review recommendations) [Source file: government-data-security-policies.pdf; Page 1-2]","Taken from government-data-security-policies.pdf : pages 1, 2, 4, 11, 12"
-What types of measures did the Public Sector Data Security Review Committee recommend?,"Direct answer isn't explicitly stated as a concise list in the provided items. However, the closest explicit reference says: ""In 2019, the Public Sector Data Security Review Committee recommended additional technical and process measures to protect data and prevent data compromise."" It does not enumerate the exact measures in these excerpts.
+Sources:
+- government-data-security-policies.pdf, pages referencing 2019 Public Sector Data Security Review Committee recommendation for additional measures (data_item 1, content excerpt).
+- government-data-security-policies.pdf, pages 1–2, introductory policy context tying risk-based protection to the review context (data_item 1).
+- government-data-security-policies.pdf, page 11–12 referencing DLP requirements and monitoring as part of Annex A security measures (data_item 3). 
 
-What I can provide from the available content:
-- The Public Sector Data Security Review Committee (2019) recommended additional measures to protect data and prevent data compromise, described as both technical and process-oriented.
+Cited source details:
+- <data_item> with pages [1, 2] and content about the 2019 recommendation.
+- <data_item> with pages [18] and the table of Technical Measures (for context on added measures).
+- <data_item> with pages [11, 12] and section on DLP tool requirements (for context on added safeguards).","Taken from government-data-security-policies.pdf : pages 1, 2, 5, 11, 12, 18"
+What types of measures did the Public Sector Data Security Review Committee recommend?,"- The Public Sector Data Security Review Committee, in 2019, recommended additional technical and process measures to protect data and prevent data compromise. These recommended measures were incorporated into the Government Instruction Manual (IM) on ICT&SS Management. (Source: government-data-security-policies.pdf, pages 2; 1-2 context) 
 
-Source citations:
-- goverment-data-security-policies.pdf, pages 1-2 (for the general statement about the 2019 recommendations)
+Sources used:
+- government-data-security-policies.pdf, pages [2], [1,2]","Taken from government-data-security-policies.pdf : pages 1, 2, 4, 6, 7, 8"
+How should agencies decide which data security measures to implement?,"Direct answer isn't explicitly stated as a single sentence in the documents, but the closest guidance across items indicates:
 
-Sources Used: government-data-security-policies.pdf, pages [1, 2]","Taken from government-data-security-policies.pdf : pages 1, 2"
-How should agencies decide which data security measures to implement?,"Direct answer based on the provided documents:
+- Agencies should implement technical and process measures to protect data based on a risk-based approach. They should determine protections according to the risk level determined through a data security risk assessment, and then apply appropriate measures (technical and process) on top of existing cybersecurity measures. This aligns with Section 2 and related sections describing risk-based data protection and the need for risk assessments to guide measures. Additionally, risk assessment triggers are outlined (e.g., when acquiring a new dataset, developing a new ICT system, or when existing data has not been risk assessed) and reviews should occur according to policy rhythm.
 
-- Agencies should adopt a risk-based approach when deciding which data security measures to implement. Specifically, measures should be selected and applied on top of existing cybersecurity controls, guided by a risk assessment that determines the appropriate level of protection for each data set or context. The goal is to protect data according to the assessed risk while minimising impact to operations, resources, and costs. This risk-based strategy is emphasized across the sections describing technical and process measures (Sections 05 and 06) and is reiterated in the ICT&SS Management focus on risk-based technical and process controls.
+Key paraphrased points from the documents:
+- Use a risk-based approach to selecting and implementing data protection measures.
+- Conduct a data security risk assessment to determine the appropriate level of protection.
+- Implement technical and process measures proportionate to the assessed risk, in conjunction with existing cybersecurity measures.
+- Review risk assessments on the cadence specified by the Government Risk Management Policy or when risk factors change.
 
-Key supporting details from the sources:
-- Section 05 (Section 2): Agencies should implement appropriate technical and process measures to protect data against threats and prevent compromises, adopting a risk-based approach to implementing these measures, and layering them on top of existing cybersecurity controls. Data protection should be proportionate to the risk level determined by a risk assessment, balancing protection with operational impact and cost. 
-  - Source: government-data-security-policies.pdf, Page 4. [Metadata: pages [4]]
-- Section 06 (Section 2): Agencies should adopt strategies that support risk-based implementation of safeguards, including minimizing data exposure, enhancing logging/monitoring, and ensuring data becomes unusable if extracted. This aligns with a risk-based, layered approach to protection. 
-  - Source: government-data-security-policies.pdf, Page 4. [Metadata: pages [4]]
+Cited sources:
+- Government Data Security Policies (Annex A) – Sections describing risk-based approach and the need for risk assessments (pages 3–4; references to Section 3–4, risk management policy) [government-data-security-policies.pdf, pages 3-4].
+- Government Data Security Policies – Section 2: Technical and process measures to protect data and prevent compromises, emphasizing a risk-based approach (government-data-security-policies.pdf, page 4). [data_item with pages 3,4]
+- Additional context on risk assessment triggers and review cadence (Section 3–4) [government-data-security-policies.pdf, pages 3-4].
 
-Also relevant context showing implementation guidance:
-- Annex A context describes maintaining logs and records to identify high-risk activities as part of incident response, reinforcing the role of risk-informed controls in operations. 
-  - Source: government-data-security-policies.pdf, Page 9. [Metadata: pages [9, 10]]
+Sources Used:
+- government-data-security-policies.pdf (Pages 3-4; 2-4 references in items)
+- government-data-security-policies.pdf (Pages 4-7, sections referenced in items)
+- government-data-security-policies.pdf (Pages 6-7; Section 3.3 and 3; 21; 22 references)","Taken from government-data-security-policies.pdf : pages 3, 4, 5, 6, 7, 8, 14, 15"
+When must agencies conduct a data security risk assessment?,"Direct answer:
+- Agencies must conduct a data security risk assessment when:
+  - a) When acquiring a new dataset;
+  - b) Developing a new ICT system that contains personal or entity data; or
+  - c) When existing data which has not been risk assessed is first used.
 
-- The DLP and email protection sections (Clauses 35–37) illustrate concrete, risk-informed controls (e.g., assess data sensitivity, prompt user for potentially risky actions, and enforce policies to prevent data loss) supporting the overarching risk-based decision framework.
-  - Source: government-data-security-policies.pdf, Page 11. [Metadata: pages [11]]
+Cited sources:
+- Government Data Security Policies | ¾ (Section 3, and Section 1 details)
+  - See: Data security risk assessment triggers in the policy: “03 Agencies should conduct a data security risk assessment: a) When acquiring a new dataset; b) Developing a new ICT system that contains personal or entity data; or c) When existing data which has not been risk assessed is first used.” (Pages 3)
+  - And the accompanying Section 1 description: “01 To ensure adequate and effective data security risk management, Agencies should perform data security risk assessments for their datasets, as part of the Government ICT Risk Management Methodology.” (Page 2)
+
+Sources Used: government-data-security-policies.pdf (pages 2, 3, and 4)","Taken from government-data-security-policies.pdf : pages 2, 3, 4, 5"
+How often should agencies review their data security risk assessments once conducted?,"Direct answer: Agencies should review their data security risk assessments: b) When there are changes to the data security risk factors; and more generally, according to the frequency stated in the Government Risk Management Policy.
+
+Cited details:
+- From the policy excerpts: “04 Agencies should review the data security risk assessments: a) According to the frequency stated in the Government Risk Management Policy; or b) When there are changes to the data security risk factors.” (Source: government-data-security-policies.pdf, pages 3; also echoed in related sections on data risk management)
+
+Sources Used: government-data-security-policies.pdf (pages 3 and 2)","Taken from government-data-security-policies.pdf : pages 2, 3, 4, 6, 7, 8"
+What are the main strategies agencies should adopt to safeguard data?,"Main strategies agencies should adopt to safeguard data (as described in the provided documents):
+
+- Reduce the surface area of attack
+  - Collect, retain, and store data only where necessary
+  - Minimise the download of data to endpoint devices
+  - Access and use data only for the task at hand
+- Enhance logging and monitoring
+  - Improve the logging and monitoring of data transactions to detect risky or suspicious activity
+- Protect data so it becomes unusable if extracted
+  - Render data unusable even if exfiltrated
+  - Obfuscation/masking/removal of sensitive attributes and dataset partitioning to limit exposure
+  - Consider hiding true values (noise, banding, masking) and removing irrelevant attributes
+- Data protection at rest and in distribution
+  - Use methods such as hashing with salt, field-level encryption, and tokenisation to render data unusable when stored or distributed
+- Data minimisation and lifecycle controls
+  - Limit retention periods and purge data when retention ends, transferring archival data to archival systems
+  - Ensure data is stored only as long as necessary for its purpose, with retention periods defined for each dataset
+- Data access controls and separation of duties
+  - Separate roles for data users and keys management
+- Safe environments for high-risk access
+  - Provide secured isolated environments for high-risk users accessing sensitive data
+
+Cited in relation to sections on attack surface reduction, data protection measures (render-unusable data, obfuscation, dataset partitioning), retention and lifecycle, and protection during storage/distribution.
+
+Sources used: government-data-security-policies.pdf (pages 4, 5, 12, 14, 5, etc.), including sections referenced (e.g., Section 3, 5.2, 5.1, 3.2).","Taken from government-data-security-policies.pdf : pages 4, 5, 6, 12, 14, 15"
+What rules govern how long agencies can keep collected data?,"Direct answer not explicitly stated as a single rule across items, but the closest applicable rule is found in the item describing Preservation of Copies of Personal Data (pages 24), which includes retention-related provisions:
+
+- Clause 45(b): If a request to provide personal data is rejected, the agency must preserve a copy of the personal data concerned for not less than 30 days from the rejection.
+- Clause 46: Any preserved copy must be a complete and accurate copy of the personal data concerned.
+
+Additionally, another item references general retention of personal data in a decision context (page 25):
+- Paragraph 48: An agency shall retain personal data that has been used to make a decision about an individual for a long enough period to allow the individual access to the data after the decision has been made.
+- Paragraph 49: An agency shall retain personal data only for the period necessary for the fulfilment of the purposes for which it was collected unless required by legislation or a Public Records/archiving framework.
+
+Paraphrase of the relevant content for your question:
+- If a data request is rejected (per clause 45), keep a copy for at least 30 days (clause 45(b)).
+- Any preserved copy must be complete and accurate (clause 46).
+- Data used to make a decision should be retained long enough to allow the individual access to it after the decision (paragraph 48).
+- Data should be retained only for the period necessary for the purposes for which it was collected, unless there is a legislative or archival requirement (paragraph 49).
+
+Sources used:
+- Government Personal Data Protection Policies, Jul 2021 edition — Preservation of Copies of Personal Data (pages 24) [Source: government-personal-data-protection-policies-jul21.pdf]
+- Government Personal Data Protection Policies, Jul 2021 edition — Retention of Personal Data (page 25) [Source: government-personal-data-protection-policies-jul21.pdf]
+
+If you want, I can extract these into a JSON snippet with clause numbers and retention periods.","Taken from government-personal-data-protection-policies-jul21.pdf : pages 14, 18, 24, 25, 26"
+What happens to data that must be kept for archival purposes after its retention period ends?,"Direct answer not explicitly stated as a single sentence in the provided items. However, the closest and consistent guidance across the documents indicates:
+
+- Data that has reached the end of its retention period should be purged from ICT systems and user devices when the retention period is over, with data retained to fulfil archival requirements being transferred to archival systems. This is stated in the Government Data Security Policies (Section 3.2 note) and aligns with retention guidance in the related PDPP materials.
+
+- Additionally, retention guidance notes that data should be retained only for the period necessary for the purposes for which it was collected, unless archival requirements specify otherwise (i.e., there is a requirement in legislation or in the IM on Office Admin: Management of Public Records to retain for archival or other purposes).
+
+Structured paraphrase from the sources:
+- When the retention period ends, data not needed for ongoing purposes should be purged from endpoint devices and ICT systems. If there is an archival requirement, the data should be moved to archival systems rather than being deleted.
+- Archival retention may override normal retention limits if mandated by legislation or records management policies.
+
+Cited sources:
+- government-data-security-policies.pdf, pages 5 and 5 (Section 3: data minimization, retention concepts; retention per dataset; purge at end of retention; archival transfer) 
+- government-personal-data-protection-policies-jul21.pdf, pages 25–26 (Retention of Personal Data—Sections 48–49; archival/legislation overrides) 
+
+Sources Used:
+- Government Data Security Policies (Annex/Section 3.2 context on purging and archival transfer) [government-data-security-policies.pdf, page 5]
+- Government Personal Data Protection Policies (Retention of Personal Data; archival considerations) [government-personal-data-protection-policies-jul21.pdf, pages 25–26]","Taken from government-data-security-policies.pdf : pages 5, 6
+Taken from government-personal-data-protection-policies-jul21.pdf : pages 25, 26"
+How should agencies handle high-risk users who need access to sensitive data?,"Direct answer:
+- Agencies should ensure that high-risk users’ access to data in a virtually secured isolated environment is monitored at all times and that retrieval is limited to the data required to complete their assigned tasks (i.e., retrieve only what is needed, not data dumps). Access should be on a need-to-know basis, with rights regularly reviewed, and users should access only the data to which they have been granted access rights, ensuring the task falls within permitted use. Data access should be volume- and time-limited. Sensitive data should be accessed only through secured platforms, with appropriate logging and security controls. Privileged access should be restricted to the minimum necessary data and systems for the user’s role, with regular reviews and prompt removal when roles change.
+
+Key supporting points from the documents:
+- High-risk user access in a virtually secured isolated environment must be monitored at all times, with retrieval limited to data required for the task (Section 3.3; Annex A A2) [government-data-security-policies.pdf, pages 6–7].
+- Retrieve only the data required for the assigned task; avoid data dumps; data should be accessed on a need-to-know basis; rights to access must be regularly reviewed; users should access only authorized data; task must fall within permitted use (Section 3.3, and 4.1; Annex A A2) [pages 6–7].
+- Access to data by privileged accounts or privileged data roles should be limited to what is necessary for their functions; regular review and expeditious removal when roles change (Section 4; Annex A A2/A3) [pages 8].
+- Access should be through secured platforms where practicable, with logging; volume and time limits on data access (Volume limited and time limited data access; page references 22 and 4/sections) [Annex A A2].
+- Data should be accessed via need-to-know, with regular rights reviews and task alignment (Section 3.3; Section 4.1; Annex A A2) [pages 6–8].
+
+Sources Used:
+- government-data-security-policies.pdf (Annex A), pages 6–9; 7; 8; 16–18; 14–15; 22; 60–61 (as referenced in content blocks).","Taken from government-data-security-policies.pdf : pages 6, 7, 8, 9, 14, 15, 16, 17, 18, 19, 20, 21, 22"
+What controls should govern who can access sensitive data in ICT systems?,"Direct answer:
+
+- The controls should ensure that access to sensitive data in ICT systems is granted only to authorised users, and that privileged access is limited to what is necessary for the user's role and purpose. This includes:
+  - Using access control features of ICT systems with logging and monitoring, and re-authentication when duration or volume limits are exceeded (to enforce limits) [from Annex A, Sections 22–27; sources reference: government-data-security-policies.pdf, pages 8; 7].
+  - Implementing Automatic Identity and Access Management (IAM) tools to automate management of users’ identities and access rights, ensuring access is granted only to authorised individuals at any time (Section 24) [sources: government-data-security-policies.pdf, pages 8; 7].
+  - Limiting and monitoring authorised and privileged access to sensitive data in ICT systems; revising access regularly and removing access when roles change; minimising risk of unauthorized access (Section 25) [sources: government-data-security-policies.pdf, pages 8; 7].
+  - Ensuring access is limited to the data necessary for the stated purpose of use (Section 26) and restricting privileged accounts to required systems and datasets (Section 27) [sources: government-data-security-policies.pdf, pages 8; 7].
+
+Contextual summaries (from the same policy items):
+- Access rights should be need-to-know, regularly reviewed, and limited to data necessary for the task, with privileged access restricted to required systems/datasets (Sections 21–27 in Annex A) [sources: government-data-security-policies.pdf, page 7–8].
+- Volume/time limits on data access should be enforced through system controls, logging/monitoring, and re-authentication when limits are exceeded (Sections 22–23) [sources: government-data-security-policies.pdf, pages 7–8].
+
+If you’d like, I can extract exact phrasing for a checklist or map these into a policy-compliance checklist.
+
+Sources Used:
+- government-data-security-policies.pdf, pages 8; 7; 6–8 (Annex A sections 22–27, 24, 25–27; need-to-know concepts; access control; IAM tools)","Taken from government-data-security-policies.pdf : pages 6, 7, 8
+Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 8, 9"
+What is 'volume and time limited data access' and why is it required?,"Direct answer isn’t available as a single explicit definition in the items, but the closest, directly cited content describes it as a principle and mechanism in the Government Data Security Policies focusing on limiting both the volume of sensitive data accessed and the duration of that access.
+
+What it corresponds to in the provided content:
+- Section 22 (implied heading in Annex A): “Volume limited and time limited data access” with the principle that agencies should limit the volume of sensitive data and the duration of access to prevent excessive access. Mechanisms to enforce this include:
+  - Using access control features of ICT systems with logging/monitoring.
+  - Re-authentication when duration or volume exceeded.
+- Related items emphasize predefined limits for:
+  - The volume of sensitive data to be accessed.
+  - The duration of access to sensitive data.
+  - Enforcement through access controls, logging/monitoring, and re-authentication when limits are exceeded.
+- Automated Identity and Access Management (IAM) tools are recommended to automate management of users’ identity and access rights, ensuring only authorized people have access at any time, which supports volume/time limits.
+- Further guidance reinforces limiting access to only what is needed for a stated purpose and restricting privileged access to necessary datasets and systems.
+
+Structured paraphrase from the documents:
+- What it is: A policy principle to restrict both how much sensitive data can be accessed (volume) and for how long (time) a user can access it, to minimize exposure.
+- Why it is required: To prevent excessive access to sensitive data, reduce risk of unauthorized or unnecessary data exposure, and enforce least-privilege through mechanisms like logging/monitoring, re-authentication, and automated IAM controls.
+
+Cited sources:
+- Government Data Security Policies (Annex A) — pages referencing Section 22 and the components of volume/time-limited data access, and Sections 23–27 detailing limits, enforcement mechanisms, and IAM tools. Specifically, see:
+  - government-data-security-policies.pdf, pages [8], [7], and [18] for the related sections and table context.
+  - The content describing: “Volume limited and time limited data access” and the predefined limits for volume and duration, plus enforcement via access controls/logging/monitoring and re-authentication, and the role of Automatic Identity and Access Management tools.
+
+Sources Used: Government Data Security Policies (Annex A) [pages 7, 8, 18]
+
+If you’d like, I can extract a concise JSON mapping clause numbers to exact phrases for a RAG system.","Taken from government-data-security-policies.pdf : pages 7, 8, 18"
+"What should agencies log when users access data, and how must those logs be protected?","Answer:
+- Agencies should log and monitor data transactions to detect suspicious or risky activities and to assist in response and remediation. This includes maintaining logs and records to pinpoint risky activities and to aid in response and remediation (Section 4.1 referenced in the policies) [government-data-security-policies.pdf, pages 8 and 9, related sections cited in multiple items].
+- Logs should be protected from accidental or deliberate modification or erasure, ensuring the integrity of the data access monitoring. The policy notes that logs should be protected from modification or erasure (found in the page referencing Section 4 and clause 34) [government-data-security-policies.pdf, page 10].
+
+Sources Used:
+- government-data-security-policies.pdf, pages 8-9 (Section 4.1 and logging guidance)
+- government-data-security-policies.pdf, page 10 (logs protection clause)","Taken from government-data-security-policies.pdf : pages 6, 7, 8, 9, 10, 11"
+What is digital watermarking and when must it be applied?,"Digital watermarking is the practice of embedding identifying information into files (the watermark) so that the originator or owner of the data can be identified. The watermark should contain information that identifies the originator and allows recipients to readily identify the originator when the file is examined with the appropriate digital tool.
+
+When to apply it:
+- Agencies should implement digital watermarking on files containing data to identify the originator, unless one of the following exceptions applies:
+  - The files are system generated; or
+  - The files cannot be digitally watermarked by readily available tools.
+
+These guidelines are outlined in the Government Data Security Policies (Public Sector) and reiterated in the related Annex/sections, including Section 4.2 and Sections 30–34, as described in the provided documents. 
+- Section 30: Watermarking should be used unless exempt.
+- Section 31: Watermarks must contain identifying information and be detectable by appropriate tools.
+
+Cited sources:
+- government-data-security-policies.pdf, pages 9–10 (discussing data lineage and the Digital watermarking of file sections) 
+- government-data-security-policies.pdf, page 10 (sections 30–34 and their summaries) 
+- government-data-security-policies.pdf, Annex A (Section 4.2 on detecting suspicious activity and incident response) 
+
+Sources Used: government-data-security-policies.pdf (pages 9, 10), Annex A references within the same document","Taken from government-data-security-policies.pdf : pages 9, 10
+Taken from smartnation2-report.pdf : pages 44, 45
+Taken from Project Guardian FX workstream Transaction Banking.pdf : pages 45"
+What are DLP tools required to do?,"Direct answer:
+DLP tools are required to monitor for possible data loss across endpoint devices, networks, and ICT systems; alert or notify users about potentially risky actions; detect and prevent unauthorized data transfers; and in addition, have the core capabilities to read data security classifications, alert or require user affirmation on risky actions, stop actions that violate DLP rules, and continuously monitor for violations.
+
+Cited sources:
+- government-data-security-policies.pdf, pages 10–11 (DLP scope, monitoring, alerts, prevention; clauses 36–37)
+- government-data-security-policies.pdf, page 11 (DLP features a–d)
+
+Structured summary of relevant points found in the documents:
+- DLP tools should monitor endpoints, networks, and ICT systems for possible data loss.
+- DLP tools should alert users to potentially risky actions that might lead to data compromise.
+- DLP tools should detect and prevent unauthorized data transfers.
+- DLP tools should be able to:
+  a) read the security/sensitivity classification of a document as determined by the user,
+  b) alert the user or require user affirmation on potentially risky actions,
+  c) stop the user from executing an action that would violate DLP rules,
+  d) monitor for violations of the DLP rules.
+- DLP coverage should be end-to-end across all ICT touchpoints (including endpoints and networks).
+
+Sources Used:
+- government-data-security-policies.pdf (pages 10, 11)
+- government-data-security-policies.pdf (page 11)","Taken from government-data-security-policies.pdf : pages 10, 11, 12, 18"
+What are the technical methods agencies can use to render sensitive data unusable if extracted?,"- Hashing with salt
+- Field Level Encryption
+- Tokenisation
+
+These are the three technical measures listed under Section 5.1 for rendering sensitive data unusable to an attacker, even if exfiltrated from storage. [Source: government-data-security-policies.pdf, pages 12]","Taken from government-data-security-policies.pdf : pages 4, 5, 12, 13"
+When is 'hashing with salt' most appropriate compared to field level encryption?,"Answer:
+Hashing with salt is most appropriate for scenarios where you need an irreversible transformation that yields a unique reference and there is no need to recover the original values. It is suitable for analytics use cases where identifiers must be de-identified and not recoverable, such as when working with data analytics where only de-identified data is required. It is not appropriate for operational systems that require identifiable data for service delivery.
+
+- In contrast, field level encryption is appropriate when the actual values are frequently required and authorized users should be able to decrypt and access the original data using the correct decryption key.
+
+Cited guidance:
+- Hashing with Salt: Irreversibly changes data to prevent recovery; suitable for analytics/de-identified data (Data Security Policies; hashing with salt section) [government-data-security-policies.pdf, pages around 12-13].
+- Field Level Encryption: Encrypts values at the field level; decryptable by authorized users with the correct key; suitable for service delivery systems needing identification of an individual (Data Security Policies; Field Level Encryption guidance) [government-data-security-policies.pdf, pages 13-14].
 
 Structured takeaway:
-- Use a risk assessment to determine data protection needs.
-- Implement measures in layers on top of existing cybersecurity controls.
-- Tailor protections to data sensitivity and threat level to minimize operational impact and cost.
-- Prioritize strategies that reduce data exposure, strengthen monitoring, and enforce safeguards to prevent data loss or misuse.
-
-Cited sources:
-- government-data-security-policies.pdf, Page 4 (Sections 05 and 06)
-- government-data-security-policies.pdf, Page 9 (Annex A – logs/records for incident response)
-- government-data-security-policies.pdf, Page 11 (Email protection and DLP sections 35–37)
-
-Sources Used:
-- government-data-security-policies.pdf, pages 4, 9, 11","Taken from government-data-security-policies.pdf : pages 4, 9, 10, 11"
-When must agencies conduct a data security risk assessment?,"Direct answer:
-- Agencies must conduct a data security risk assessment:
-  - When acquiring a new dataset
-  - When developing a new ICT system that contains personal or entity data
-  - When existing data which has not been risk assessed is first used
-
-Cited sources:
-- Government Data Security Policies | Annex A, Section 1 (Data Security Risk Management) — items 03 and related context. [government-data-security-policies.pdf, pages 3]
-
-Sources Used: government-data-security-policies.pdf (pages 3)","Taken from government-data-security-policies.pdf : pages 2, 3, 4"
-How often should agencies review their data security risk assessments once conducted?,"- Answer: Agencies should review the data security risk assessments according to the frequency stated in the Government Risk Management Policy, or when there are changes to the data security risk factors.
-- Source: government-data-security-policies.pdf, Section 1 (Data Security Risk Management) and Annex A; pages 3 (and related sections) [as cited in the provided data items].
-- Citations:
-  - government-data-security-policies.pdf, Page 3 (Section 1: Data Security Risk Management) — stating review frequency per Government Risk Management Policy and trigger for changes to risk factors.","Taken from government-data-security-policies.pdf : pages 2, 3, 4"
-What are the main strategies agencies should adopt to safeguard data?,"Direct answer based on the provided documents:
-
-Main strategies agencies should adopt to safeguard data:
-- Reduce the surface area of attack by minimising data collection, data retention, data access, and data downloads.
-- Enhance logging and monitoring of data transactions to detect risky or suspicious activity.
-- Protect data in a manner that renders the data unusable if extracted (data obfuscation/masking/removal of attributes and/or dataset partitioning as applicable).
-
-These are outlined as the three core strategies under Section 6 (and reiterated in related pages) of the Government Data Security Policies, implemented on top of any existing cybersecurity measures and guided by a risk assessment to balance protection with operational impact. 
-
-Cited sources:
-- government-data-security-policies.pdf, pages 4
-- government-data-security-policies.pdf, pages 4-5
-- government-data-security-policies.pdf, pages 14
-- government-data-security-policies.pdf, pages 14 (Annex references) 
-
-Note: The content above consolidates the explicit strategy points labeled a, b, and c across the cited sections.","Taken from government-data-security-policies.pdf : pages 4, 5, 14, 15"
-What rules govern how long agencies can keep collected data?,"Direct answer isn't explicitly stated as a single sentence in the provided documents, but the relevant rules about how long agencies can keep collected personal data are described in the retention provisions.
-
-- Key rule: An agency shall retain personal data that has been used to make a decision about an individual for a long enough period to allow the individual access to the data after the decision has been made. (Retention of Personal Data) [Source: Government Personal Data Protection Policies (Jul 2021), page 25] (Cited from data_item 1)
-- Core limitation: An agency shall retain personal data only for the period necessary for the fulfilment of the purposes for which it was collected, unless there is a legislative requirement or a requirement in the IM on Office Admin: Management of Public Records to retain for archival or other purposes. (Retention conditions) [Source: Government Personal Data Protection Policies (Jul 2021), pages 25–26] (Cited from data_item 1 and data_item 2)
-
-Cited sources:
-- government-personal-data-protection-policies-jul21.pdf, page 25 (Retention of Personal Data; Retention conditions)
-- government-personal-data-protection-policies-jul21.pdf, page 26 (officers’ responsibilities; retention context appears in annex context)
-
-If you’d like, I can extract the exact wording for retention duration and create a concise policy-summary. 
-
-Sources Used:
-- government-personal-data-protection-policies-jul21.pdf, pages 25–26
-- government-personal-data-protection-policies-jul21.pdf, page 25 (Retention of Personal Data; Retention conditions)","Taken from government-personal-data-protection-policies-jul21.pdf : pages 25, 26, 27, 28, 29"
-What happens to data that must be kept for archival purposes after its retention period ends?,"- Direct answer from the provided content: Data retained to fulfil archival requirements should be transferred to archival systems after the retention period ends. (From the Government Data Security Policies document, Section 3.2 note on archival data handling: “Data retained to fulfil archival requirements should be transferred to archival systems.”) This reflects the guidance on handling data that must be kept for archival purposes once its standard retention period is over.
-
-- Additional related context from the PDPA/Retention materials: Personal data retention policies emphasize retaining personal data only for the period necessary for the purposes collected, unless there's a legislative or archival requirement. When archival retention applies, the data may be kept for archival purposes and external terms may govern its handling. (From Government Personal Data Protection Policies, retention paragraphs 48–49; and related notes in the PDPC/retention discussion.)
-
-Sources Used:
-- government-data-security-policies.pdf, pages 5, 6 (section referencing archival transfer: “Data retained to fulfil archival requirements should be transferred to archival systems.”)
-- government-personal-data-protection-policies-jul21.pdf, pages 25–26 (retention of personal data and archival/legislative requirements)","Taken from government-data-security-policies.pdf : pages 5, 6
-Taken from government-personal-data-protection-policies-jul21.pdf : pages 25, 26
-Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 14"
-How should agencies handle high-risk users who need access to sensitive data?,"- Agencies should ensure that high-risk users’ access to data in a virtually secured isolated environment is monitored at all times, and that they “retrieve only the data required instead of data dumps.” They should require users to request and retrieve only the data needed to complete their assigned tasks, and limit access to only the data fields and records relevant to the user’s needs. Access to data should be granted on a need-to-know basis, with regular reviews of access rights, and controls to ensure users access only data they are authorized to use and that the task falls within permitted purposes. Additionally, access should be limited to the minimum necessary data within secured platforms, with logging and monitoring in place.
-
-- Key points from the sources:
-  - Monitor high-risk users in a virtually secured isolated environment and retrieve only required data (Section 3.2) [government-data-security-policies.pdf, pages 6–7].
-  - Users should request and retrieve only data needed; limit data fields/records to those relevant (Section 3.2–3.3) [government-data-security-policies.pdf, page 6; Section 3.3, page 7].
-  - Access rights should be granted on a need-to-know basis, regularly reviewed, and restricted to data relevant to the user’s task (Section 3.3) [government-data-security-policies.pdf, page 7].
-  - For sensitive data and privileged accounts, limit access to what is necessary for the user’s functions; routines include regular reviews and expeditious removal when roles change (Section 8) [government-data-security-policies.pdf, page 8].
-  - Use secured central platforms where practicable; ensure logging of access and necessary security measures (Sections 3.2–3.3, 4) [government-data-security-policies.pdf, pages 6–7].
-
-- In short: implement need-to-know access with regular reviews, enforce retrieval of only data needed, operate within virtually secured environments with continuous monitoring, and use secured platforms with comprehensive logging for high-risk users.
-
-**Sources Used:** government-data-security-policies.pdf (pages 6–9, 8 for privileged access; 14–15 for data obfuscation context)","Taken from government-data-security-policies.pdf : pages 6, 7, 8, 9, 14, 15"
-What controls should govern who can access sensitive data in ICT systems?,"Direct answer:
-- Access to sensitive data in ICT systems should be governed by access control policies and related controls that ensure only authorized users and, where necessary, privileged access are granted. This includes limiting and monitoring authorised and privileged access, using access control features of ICT systems with logging and monitoring, and re-authorisation when predefined limits are exceeded. Automatic Identity and Access Management (AIAM) tools should be implemented to automate user identity and access rights management.
-
-Supporting details from the sources:
-- Government Data Security Policies (Annex A): Agencies should limit data access when volume or duration exceeds predefined limits and use access control features with logging/monitoring, or require re-authorization. AIAM tools should be used to automate management of users’ identity and access rights, ensuring only authorised people have access at any time; access to sensitive data should be granted only to authorised users, and privileged access only where necessary. (Source: government-data-security-policies.pdf, page 7)
-- PDPC Guide to Data Protection Practices for ICT Systems: Governance and policy context emphasize that data protection risks are managed through ICT controls, cross-functional collaboration, and that ICT security policies should include an account and access control policy among others; data classification is repository/dataset-based to inform control levels. (Source: Guide to Data Protection Practices for ICT Systems.pdf, page 8)
-- PDPC Guide to Data Protection Practices for ICT Systems: Access control principle states users should not see information they do not need to know, consistent with the organisation’s access control policy. (Source: Guide to Data Protection Practices for ICT Systems.pdf, page 14)
-
-Cited sources:
-- government-data-security-policies.pdf, page 7
-- Guide to Data Protection Practices for ICT Systems.pdf, pages 8 and 14","Taken from government-data-security-policies.pdf : pages 7
-Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 8, 14"
-What is 'volume and time limited data access' and why is it required?,"Direct answer based on provided documents:
-
-- What is “volume and time limited data access”:
-  - It refers to restricting both how much sensitive data can be accessed (volume) and for how long a user can access it (duration). Agencies should limit the volume of sensitive data that can be accessed in ICT systems and the duration of that access, applying predefined limits. Access should be controlled through ICT system access controls, logging/monitoring, and/or re-authentication when limits are exceeded. This concept is specified as Section 22–23 in the Government Data Security Policies, Annex A (and related sections in the main body), and is emphasized as a key part of data minimisation and access governance. It is part of the broader policy context that includes Automatic Identity and Access Management (AIAM) and regular reviews/removal of access when roles change.
-
-- Why it is required:
-  - To prevent access to excessive sensitive data within a pre-determined period and to minimize exposure of data.
-  - To enforce least-privilege and strong access controls, reducing insider and external risk.
-  - To ensure that access is governed by predefined limits, monitored, and re-authenticated when necessary.
-  - To support data minimisation, governance, and automation of identity/access management across ICT systems.
-
-Cited sources:
-- government-data-security-policies.pdf, pages 8 (main body and Annex A) and 7 (Annex A) showing sections 22–25 and related content on volume/time-limited access, AIAM, and access monitoring. Specific excerpts reference:
-  - Section 22: limit volume and duration of access
-  - Section 23: predefined limits with control mechanisms
-  - Section 24: Automatic Identity and Access Management tools
-  - Section 25: limit and monitor authorised/privileged access
-
-Sources Used: government-data-security-policies.pdf (pages 8; 7)","Taken from government-data-security-policies.pdf : pages 7, 8"
-"What should agencies log when users access data, and how must those logs be protected?","Direct answer (from the provided documents):
-- What should agencies log when users access data:
-  - Agencies should log and monitor data transactions to detect suspicious or risky activities and to assist in response and remediation. This includes maintaining logs and records to pinpoint high-risk activities and to assist in response and remediation. It also mentions logging of access events and data transactions as part of monitoring data access.
-
-- How those logs must be protected:
-  - Logs should be protected from accidental or deliberate modification or erasure.
-
-Cited sources:
-- government-data-security-policies.pdf, pages 8 (Section 4: Log and monitor data transactions to detect risky or suspicious activity) and 10 (related notes about protecting logs). See content excerpts referencing maintaining logs/records and protection of logs from modification or erasure.
-
-Sources Used:
-- government-data-security-policies.pdf (pages 8, 10)","Taken from government-data-security-policies.pdf : pages 6, 7, 8, 9, 10, 11"
-What is digital watermarking and when must it be applied?,"Digital watermarking is a technique used to identify the originator of a file by embedding identifying information within the file itself. It can enable the recipient or tools to reveal who originated the file when examined with the appropriate digital tool.
-
-When to apply:
-- Agencies should implement digital watermarking on files containing data to identify the originator, unless the files are:
-  - a) System generated; or
-  - b) Cannot be digital watermarked by readily available tools.
-
-These points are drawn from the Government Data Security Policies content (Sections 30–31) as described in the provided document extracts. 
-
-- Source: government-data-security-policies.pdf, pages 9–10 (Annex and Digital watermarking section) [data_item: first and third items].","Taken from government-data-security-policies.pdf : pages 9, 10
-Taken from smartnation2-report.pdf : pages 44, 45"
-What are DLP tools required to do?,"DLP tools are required to:
-- Monitor endpoint devices, networks, and ICT systems for possible data loss and to detect and prevent unauthorized data transfers.
-- Read the security and sensitivity classification of a document as determined by the user.
-- Alert the user or require user affirmation on authorized but potentially risky user actions involving data, as determined by DLP rules.
-- Stop the user from executing actions that would violate DLP rules.
-- Monitor for violations of the DLP rules.
-
-Cited sources:
-- government-data-security-policies.pdf, pages 11 (Clauses 36–37)
-- government-data-security-policies.pdf, pages 10–11 (Annex A, Section referencing DLP tools capabilities)","Taken from government-data-security-policies.pdf : pages 10, 11, 12"
-What are the technical methods agencies can use to render sensitive data unusable if extracted?,"Direct answer:
-- The technical methods agencies can use to render sensitive data unusable if extracted are:
-  - a) Hashing with salt
-  - b) Field Level Encryption
-  - c) Tokenisation
-
-These three measures are listed as the technical options under Section 5.1 and reiterated in the related content across the provided documents.
-
-Cited sources:
-- government-data-security-policies.pdf, sections referenced in data_item entries:
-  - Data_item 1: Section 5.1: a) Hashing with salt; b) Field Level Encryption; c) Tokenisation. Page 12. (Source: government-data-security-policies.pdf, page 12)
-  - Data_item 2: Section 5.1 content describing the three approaches (a, b, c) and the same three methods. Pages 12–13. (Source: government-data-security-policies.pdf, pages 12–13)
-  - Data_item 3: Section 5 overview and the three approaches (a, b, c) plus mention of Section 39. Page 11–12. (Source: government-data-security-policies.pdf, pages 11–12)
-
-If you’d like, I can provide a machine-parsable JSON summary with fields for section, subsections, and the three methods.","Taken from government-data-security-policies.pdf : pages 11, 12, 13"
-When is 'hashing with salt' most appropriate compared to field level encryption?,"Direct answer:
-- Hashing with salt is most appropriate when the actual values do not need to be recovered and only a non-reversible transformed reference is needed. It is suitable for transforming identifiers or other values into a unique reference for analytics, where there is no requirement to identify the entities afterwards.
-- Field level encryption is preferred when the actual values are frequently required by authorized users and the data may need to be decrypted with the correct key.
-
-Cited sources:
-- Government Data Security Policies (Annex A / Sections 40-44) — hashing with salt described as irreversible transformation for referential purposes (data analytics without needing to recover identities) [government-data-security-policies.pdf, pages 13]. See the guidance for 40 and 41. 
-- For context on when reversible access is needed, field level encryption is described: decryptable by authorized users with the correct key (sections 42-43) [government-data-security-policies.pdf, pages 13]. 
-
-Sources Used:
-- government-data-security-policies.pdf — Annex A (Sections 40-44), page 13
-- government-data-security-policies.pdf — Sections 5.1 and 39 (for broader context on protecting data in storage/distribution) [pages 12–13]","Taken from government-data-security-policies.pdf : pages 12, 13"
-How should agencies reduce data concentration risk in stored datasets?,"- Direct answer:
-  - Agencies should reduce data concentration risk by partitioning sensitive data into smaller datasets, either by segmenting out selected entities, individuals, or attributes, and by applying different access controls to each partition. This can be done through physical partitioning (storing partitions in different locations) or virtual partitioning (isolated partitions), with each partition having its own access controls.
-
-- Supporting details from the sources:
-  - From the first data item (government-data-security-policies.pdf, pages 14-15): “51 Agencies should reduce data concentration risk by partitioning sensitive data into smaller datasets. This can be done by segmenting out selected entities, individuals or attributes and applying different access controls to each of the partitions. This reduces the likelihood of compromise of the selected entities, individuals or attributes should the larger dataset be compromised.” (Section on Dataset partitioning)
-  - From the second data item (government-data-security-policies.pdf, page 15): reiterates the guidance on partitioning datasets and emphasizes secure distribution practices to protect partitions.
-
-- Sources Used:
-  - government-data-security-policies.pdf, pages [14, 15] (Dataset partitioning; Section 5.2)
-  - government-data-security-policies.pdf, page [15] (Section 5.3: Protecting data during distribution; partitioning and access controls)","Taken from government-data-security-policies.pdf : pages 4, 5, 14, 15"
-What must agencies do when distributing sensitive files through unsecured channels?,"Direct answer:
-- Agencies should password protect and encrypt files containing sensitive data when distributing them through unsecured channels, to ensure that only authorized users can access the content. They should also ensure that the distribution channels are encrypted.
-
-Cited sources:
-- Government Data Security Policies (Annex A), Section 5.3 and related notes on protecting data during distribution, including password protecting and encrypting files when distributing through unsecured channels. Source: government-data-security-policies.pdf, pages 14 and 15–16. 
-- Also reflected in Annex A technical measures table listing ""Password protecting and encrypting files when distributing files through unsecured channels"" and related process measures. Source: government-data-security-policies.pdf, pages 16–18.
-
-Sources Used:
-- government-data-security-policies.pdf (Annex A sections corresponding to distributing sensitive data). Page references cited above.","Taken from government-data-security-policies.pdf : pages 14, 15, 16, 17, 18, 19, 20, 21, 22"
-What rules apply when agencies send sensitive data by email?,"- Rule: When agencies send sensitive data by email, they must protect against unintended disclosure and follow controls related to email data protection and data loss prevention.
-
-- Specific applicable provisions found in the documents:
-  - Email data protection tools (Clause 35): Agencies should implement email data protection tools that detect potentially risky data transfers and prompt users for confirmation of such transfers to prevent accidental or unauthorized disclosure via email. Note: this clause is not applicable for system-generated emails. Source: government-data-security-policies.pdf, pages 11 (Clause 35) [data_item with pages [11]].
-  - Data Loss Prevention (DLP) tools (Clauses 36–37): Agencies should implement DLP tools in endpoint devices, IT networks, and other ICT systems containing sensitive data to monitor data loss and to detect and prevent unauthorized data transfers. Clause 37 further specifies features such as classifying data by security/sensitivity, prompting user affirmation, blocking violations, and monitoring for violations. Source: government-data-security-policies.pdf, pages 11 (Clauses 36–37) [data_item with pages [11]].
-
-- Additional context from related sections reinforces the overarching aim: detect potentially risky transfers, prompt users, ensure coverage across endpoints and networks, and prevent unauthorized disclosure via email.
-
-- Direct answer summary: The rules are to use email data protection tools to detect risky email transfers and prompt user confirmation (not applicable to system-generated emails), and to deploy DLP tools across endpoints and networks to monitor for and prevent unauthorized data transfers, with features including data sensitivity classification, user prompts, enforcement to stop violations, and monitoring for violations.
-
-- If you need, I can provide a concise JSON snippet listing Clause 35, Clauses 36–37, and their required capabilities for integration into a RAG pipeline.
-
-Sources Used: government-data-security-policies.pdf, pages 11 (Clauses 35–37) and related mentions on email data protection tools and DLP.","Taken from government-data-security-policies.pdf : pages 10, 11, 16"
-What is the difference between 'security classification' and 'sensitivity classification'?,"Direct answer isn’t explicitly stated as a single sentence in the provided documents. However, the closest definitions present in the items allow us to distinguish the two concepts:
-
-- Security classification: Describes classifying information according to security levels that measure potential damage from unauthorized disclosure. In other words, it’s the overall framework that assigns levels based on the risk of harm from someone learning the information.
-
-- Sensitivity classification: Describes how data handling depends on sensitivity levels and the damage caused if disclosed; it appears twice with slightly different emphasis (the general idea of classifying information by sensitivity levels and the resulting potential damage). Put simply, sensitivity classification focuses on the handling requirements and potential impact tied to how sensitive the data is, guiding appropriate controls.
-
-In short:
-- Security classification = levels defined to gauge potential damage from disclosure.
-- Sensitivity classification = levels guiding handling and controls based on the data’s sensitivity and the damage its disclosure could cause.
+- Use hashing with salt when you do not need to recover the original values (analytics, de-identified references).
+- Use field level encryption when the actual values must be accessed by authorized users (service delivery, identifiable data).
 
 Sources:
-- government-data-security-policies.pdf, Annex A (pages around 22) [Privileged terms and classifications] 
-- government-data-security-policies.pdf, Annex A (page A6) [Sensitivity classification definitions]","Taken from government-data-security-policies.pdf : pages 15, 16, 22"
-Who counts as a 'user' under the Government Data Security Policies?,"Direct answer (from the provided content):
-- A “User” is defined as all Government officers and non-Government personnel who are granted access to Government Resources to perform official work for the Government. 
+- government-data-security-policies.pdf (pages 12, 13, 14 as referenced)","Taken from government-data-security-policies.pdf : pages 1, 12, 13, 14"
+How should agencies reduce data concentration risk in stored datasets?,"Direct answer:
+- Agencies should reduce data concentration risk by partitioning sensitive data into smaller datasets and applying different access controls to each partition. This can be done by physically partitioning in different storage locations or virtually partitioning in different isolated partitions, so that each partition has its own access controls. (Source: government-data-security-policies.pdf, pages 14-15) [Data item 1].
 
-Cited source: government-data-security-policies.pdf, metadata page [22] (Annex A definitions).
+Structured summary (fallback with citations):
+- Policy context: Government Data Security Policies document emphasizes data partitioning as a risk-reduction measure.
+- Action items:
+  - Partition sensitive data into smaller datasets to reduce concentration risk.
+  - Apply different access controls to each partition.
+  - Partitions can be created physically (different storage locations) or virtually (isolated partitions).
+- Rationale: Isolation limits impact if a partition is compromised and supports more granular access management. (Source: government-data-security-policies.pdf, pages 14-15) [Data item 1].
 
-Sources Used: government-data-security-policies.pdf, pages 22","Taken from government-data-security-policies.pdf : pages 6, 7, 8, 22"
+Sources Used: government-data-security-policies.pdf, pages 14-15 [Data item 1].","Taken from government-data-security-policies.pdf : pages 4, 5, 14, 15"
+What must agencies do when distributing sensitive files through unsecured channels?,"Direct answer:
+- Agencies must ensure that files containing sensitive data are secured with password protection and encryption when distributing them through unsecured channels, so that only authorized users can access the content. Additionally, when distributing passwords or encryption keys, these should be managed through out-of-band channels separate from the data channels.
+
+Cited sources:
+- Government Data Security Policies (pages 14–16) referencing Section 5.3 and related guidance:
+  - Password protecting and encrypting files when distributing files through unsecured channels.
+  - Securely distribute passwords out-of-band. 
+  - Ensure that only authorized users can access the content (via encryption/password protection). 
+  - Also notes distribution channel encryption and out-of-band handling of passwords/keys (from the summarized sections on data distribution and password management). 
+
+Sources Used: government-data-security-policies.pdf (pages 14, 15, 16)","Taken from government-data-security-policies.pdf : pages 14, 15, 16"
+What rules apply when agencies send sensitive data by email?,"Direct answer:
+
+- Agencies should protect sensitive data when distributing via email, including:
+  - Ensure that emails containing sensitive data are addressed to the correct recipients.
+  - Use a mailing list for regular mass communication to specific groups.
+  - Send emails via Blind Carbon Copy (BCC) when mass emailing parties outside of the Whole-of-Government.
+  - Password-protect and encrypt files containing sensitive data.
+  - Perform data file integrity verification for files where integrity is critical.
+
+Supporting context (for clarity):
+- These rules are specified as items 60 and 61 under the Government Data Security Policies (Annex A) as documented in the provided materials. They emphasize recipient verification, controlled mailing lists, BCC for external mass emails, and user-level protections (passwords, encryption, and integrity verification) for email-distributed data. 
+
+Sources:
+- government-data-security-policies.pdf, Annex A, pages including items 59–61; page references show the rule set for email data protection and integrity verification (specifically items 60 and 61). See also the related process/technical measures cross-referenced in the same document. 
+  - Source: government-data-security-policies.pdf (pages around 16–18, 10, 12, etc.). 
+  - Page numbers cited in the items: 16 (for the annex A summary and items 59–61), 17–18 (table of measures), 12 (Section 5.1 hashing with salt, etc.), 10 (monitoring and email protection). 
+
+Note: If you need, I can extract the exact quoted clauses for each bullet.","Taken from government-data-security-policies.pdf : pages 10, 11, 12, 13, 16, 17, 18, 19, 20, 21, 22"
+What is the difference between 'security classification' and 'sensitivity classification'?,"Direct answer based on the provided documents:
+
+- Security classification: Refers to classifying information by security levels and is used to measure or assess the potential damage in case of unauthorized disclosure. It is about the level of protection required for information based on security impact.
+
+- Sensitivity classification: Refers to classifying information according to sensitivity levels that measure the damage done to an individual or an organization in the event of unauthorized disclosure. It emphasizes the potential harm to individuals or the organization from exposure.
+
+In short, security classification centers on overall security impact and required protective measures, while sensitivity classification centers on the potential harm to people or the organization from disclosure.
+
+Cited sources:
+- Government Data Security Policies (Annex A) | 6; pages indicate context around Privileged accounts, Security classification, Sensitive, Sensitivity classification (Source: government-data-security-policies.pdf) [Pages 22].
+- Government Data Security Policies (Annex A) | A�6; includes definitions for Security classification and Sensitivity classification (Source: government-data-security-policies.pdf) [Page 22].
+
+Sources Used:
+- government-data-security-policies.pdf, pages 22 and Annex A (A�6)","Taken from government-data-security-policies.pdf : pages 16, 22
+Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 8, 9"
+Who counts as a 'user' under the Government Data Security Policies?,"Answer:
+- A ""user"" refers to all Government officers and non-Government personnel who are granted access to Government resources to perform official work for the Government. This definition is stated in the Government Data Security Policies (Annex A) glossary cross-referenced in the provided content. 
+
+Cited sources:
+- Government Data Security Policies (Annex A) | page indicator: 22 (definition of User) [data_item with pages [22], chunk_context describing glossary terms] 
+- Also aligns with the same Annex A context described across related items. 
+
+Sources Used: government-data-security-policies.pdf (pages 22)","Taken from government-data-security-policies.pdf : pages 5, 6, 13, 14, 22"

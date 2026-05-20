@@ -4,3 +4,9 @@ Token cost to ANSWER QUESTIONS for test_set - Project Guardian FX Workstream.csv
 Money cost to ANSWER QUESTIONS for test_set - Project Guardian FX Workstream.csv : 0.005370500000000001
 
 
+
+Token cost to ANSWER QUESTIONS for test_set - Project Guardian FX Workstream.csv : 59710
+
+Money cost to ANSWER QUESTIONS for test_set - Project Guardian FX Workstream.csv : 0.0061953500000000005
+
+

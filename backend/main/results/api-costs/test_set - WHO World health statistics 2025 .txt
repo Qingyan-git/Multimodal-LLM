@@ -4,3 +4,9 @@ Token cost to ANSWER QUESTIONS for test_set - WHO World health statistics 2025 .
 Money cost to ANSWER QUESTIONS for test_set - WHO World health statistics 2025 .csv : 0.005693450000000001
 
 
+
+Token cost to ANSWER QUESTIONS for test_set - WHO World health statistics 2025 .csv : 105833
+
+Money cost to ANSWER QUESTIONS for test_set - WHO World health statistics 2025 .csv : 0.0075764499999999985
+
+

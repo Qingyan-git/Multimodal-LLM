@@ -10,3 +10,51 @@ Token cost to EMBED PAGE Vendors@Gov_Process_Flow.pdf : 1157
 Money cost to EMBED PAGE Vendors@Gov_Process_Flow.pdf : 2.3140000000000002e-05
 
 
+
+Token cost to IMAGE chunk Vendors@Gov_Process_Flow.pdf : 0
+
+Money cost to IMAGE chunk Vendors@Gov_Process_Flow.pdf : 0.0
+
+
+
+Token cost to TABLE chunk Vendors@Gov_Process_Flow.pdf : 0
+
+Money cost to TABLE chunk Vendors@Gov_Process_Flow.pdf : 0.0
+
+
+
+Token cost to TEXT chunk Vendors@Gov_Process_Flow.pdf : 6712
+
+Money cost to TEXT chunk Vendors@Gov_Process_Flow.pdf : 0.0004931
+
+
+
+Token cost to EMBED TEXT Vendors@Gov_Process_Flow.pdf : 1387
+
+Money cost to EMBED TEXT Vendors@Gov_Process_Flow.pdf : 2.7740000000000002e-05
+
+
+
+Token cost to IMAGE chunk Vendors@Gov_Process_Flow.pdf : 0
+
+Money cost to IMAGE chunk Vendors@Gov_Process_Flow.pdf : 0.0
+
+
+
+Token cost to TABLE chunk Vendors@Gov_Process_Flow.pdf : 0
+
+Money cost to TABLE chunk Vendors@Gov_Process_Flow.pdf : 0.0
+
+
+
+Token cost to PAGE chunk Vendors@Gov_Process_Flow.pdf : 3927
+
+Money cost to PAGE chunk Vendors@Gov_Process_Flow.pdf : 0.0005628
+
+
+
+Token cost to EMBED PAGE Vendors@Gov_Process_Flow.pdf : 1083
+
+Money cost to EMBED PAGE Vendors@Gov_Process_Flow.pdf : 2.166e-05
+
+

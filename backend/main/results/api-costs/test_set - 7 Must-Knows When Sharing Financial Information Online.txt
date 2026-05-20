@@ -10,3 +10,15 @@ Token cost to ANSWER QUESTIONS for test_set - 7 Must-Knows When Sharing Financia
 Money cost to ANSWER QUESTIONS for test_set - 7 Must-Knows When Sharing Financial Information Online.csv : 0.00076177
 
 
+
+Token cost to ANSWER QUESTIONS for test_set - 7 Must-Knows When Sharing Financial Information Online.csv : 19812
+
+Money cost to ANSWER QUESTIONS for test_set - 7 Must-Knows When Sharing Financial Information Online.csv : 0.0014445500000000002
+
+
+
+Token cost to ANSWER QUESTIONS for test_set - 7 Must-Knows When Sharing Financial Information Online.csv : 16828
+
+Money cost to ANSWER QUESTIONS for test_set - 7 Must-Knows When Sharing Financial Information Online.csv : 0.0012194
+
+

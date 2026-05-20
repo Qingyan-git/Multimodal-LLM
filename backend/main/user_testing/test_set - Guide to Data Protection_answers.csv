@@ -1,151 +1,178 @@
 ﻿Question,Answer,Sources
-What are examples of sensitive personal data that organisations should give extra protection to?,"Direct answer isn’t explicitly enumerated in a single place, but related content mentions examples of sensitive personal data that require extra protection. From the PDPC guidance excerpts:
+What are examples of sensitive personal data that organisations should give extra protection to?,"- Personal data that may result in adverse impact to individuals if disclosed, e.g. health-related data or financial-related data.
+- Data that might result in adverse impact to the organisation if disclosed, e.g. data related to its intellectual property or client base.
+- Credit card numbers (as an example of sensitive data to restrict access).
 
-- Personal data that may result in adverse impact to individuals if disclosed, e.g. health-related data or financial-related data
-- Personal data used for transactional or authentication purposes (e.g., credit card info)
-- Any other data that might result in adverse impact to the organisation if disclosed (e.g., data related to its intellectual property or client base)
-
-These examples are drawn from the governance section referencing sensitive data categories and the notes on data that could cause harm if disclosed.
-
-Sources:
-- Guide to Data Protection Practices for ICT Systems.pdf, pages 8–9 (gives examples like health-related data, financial-related data, credit card info)
-- Guide to Data Protection Practices for ICT Systems.pdf, page 12 (discusses consent management and accuracy, includes references to personal data that may be sensitive)
+Directly from: Guide to Data Protection Practices for ICT Systems.pdf (pages 8, 9; 11–12; 18) [sources cited below]. 
 
 Cited sources:
-- ""Guide to Data Protection Practices for ICT Systems.pdf"" (pages 8–9)
-- ""Guide to Data Protection Practices for ICT Systems.pdf"" (page 12)
+- Guide to Data Protection Practices for ICT Systems.pdf, pages 8–9
+- Guide to Data Protection Practices for ICT Systems.pdf, pages 11–12
+- Guide to Data Protection Practices for ICT Systems.pdf, page 18
 
-Note: The document also notes that highly sensitive data should be protected based on the data’s sensitivity to the business and services offered.","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 8, 9, 12, 18"
-What does the guide recommend as an example of a strong password format?,"Direct answer: The guide recommends using passwords that mix numbers, uppercase, lowercase, and special characters, and suggests examples like “Learn2bike@5” or “LetsGo2gym@7” as strong password formats.
+Sources Used: Guide to Data Protection Practices for ICT Systems.pdf (pp. 8–9, 11–12, 18)","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 8, 9, 11, 12, 18"
+What does the guide recommend as an example of a strong password format?,"Direct answer not explicitly stated as a standalone sentence, but a concrete example is provided in the content as an illustrative password format. The guide mentions example phrases used to create stronger passwords, such as “Learn2bike@5” and “LetsGo2gym@7”.
 
-Cited sources:
-- Guide to Data Protection Practices for ICT Systems.pdf, pages 15 and 16 (PDPC, 2021). 
-  - Specific recommendations include combining numbers and uppercase, lowercase, and special characters, and example strong passwords such as “Learn2bike@5” and “LetsGo2gym@7” (from page 15 in the content). 
-  - Additional related password policy details (length, complexity, OTP/2FA, etc.) are described across the same document sections (page 16). 
-
-Sources Used: Guide to Data Protection Practices for ICT Systems.pdf (Pages 15, 16)","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 14, 15, 16
-Taken from LoginRegister.pdf : pages 29"
-What is a non-production environment?,"A non-production environment is a network, operating system, or other systems that are used as a development area or test bed for new software or technologies. This concept is explicitly described in the PDPC Guide to Data Protection Practices for ICT Systems as a footnote on page 21 (and again referenced in related context). 
-
-Sources:
-- Guide to Data Protection Practices for ICT Systems.pdf, page 21 (footnote: “Non-production environments include a network, operating system or other systems that are used as a development area or test bed for new software or technologies.”) [data_item with pages [21], metadata indicating page 21]","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 21, 22, 25, 26"
-At which stages of the data lifecycle should organisations enforce regular password changes?,"- Regular password changes should be enforced across the data lifecycle where applicable, with emphasis noted in the PDPC guidance that periodic changes are part of password controls. Specifically, the materials describe:
-  - Enforcing regular changes of passwords, with guidance that the periodic change interval can be set longer (e.g., twice a year or once a year) to balance security and effort.
-  - Password controls (change upon first login, minimum length, complexity, and periodic changes) apply to authentication and data handling across lifecycle stages.
-
-Directly referenced lifecycle context in the materials indicates the password policies are relevant to multiple lifecycle stages, but the explicit emphasis on periodic changes is tied to ongoing governance of authentication and password management rather than a single stage. The guidance suggests applying these controls as part of ongoing password management, which influences access throughout collection, use, storage, archival, and disposal as appropriate for credential handling.
-
-Sources:
-- Guide to Data Protection Practices for ICT Systems.pdf, pages 14–16
-  - Sections on enforcing password controls, including change on first login, minimum length, complexity, and periodic changes; and guidance on setting the interval for periodic changes (e.g., twice a year or once a year) (data item with pages [14], [15, 16]).
-  - Specific row items describing regular password changes and related governance.","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 14, 15, 16"
-Which data lifecycle stages does the practice of classifying and managing repositories by potential adverse impact apply to?,"- Data lifecycle stages: Collection, Use, Disclosure, Storage, Archival, Disposal.
-
-Rationale: In the first data item, under iv. Classification and tracking, item i. states: ""Classify and manage repositories or datasets containing personal data by considering the potential adverse impact to the individuals involved should the data be compromised."" The accompanying description and the related analysis indicate this practice is mapped across the Data Lifecycle with dots indicating applicability to multiple stages, spanning the lifecycle. The later items (f., k., etc.) reinforce cross-stage applicability, and the accompanying summaries describe it as touching multiple lifecycle stages.
-
-Sources:
-- Guide to Data Protection Practices for ICT Systems.pdf, data_item with pages [9]
-  - iv. Classification and tracking, item i. (and related lifecycle mapping in the analysis)
-- Guide to Data Protection Practices for ICT Systems.pdf, data_item with pages [10] ( Governance section cross-links to Data Lifecycle)","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 9, 10, 14"
-The guide says to conduct periodic checks for personal data stored in ICT systems and securely dispose of data no longer needed. Which lifecycle stages does this apply to?,"Direct answer:
-- This applies to the Data Lifecycle stages: Collection and Disposal (and relatedly Storage/Archival as indicated by the lifecycle mappings in the PDPC tables).
-
-Context from sources:
-- The PDPC Guide emphasizes secure disposal of personal data when not required anymore and data minimisation, which maps to the Disposal stage in the Data Lifecycle, with notes on minimizing collection earlier in the lifecycle. The Housekeeping of Personal Data section maps basic practices to the six Data Lifecycle stages (Collection, Use, Disclosure, Storage, Archival, Disposal), showing that disposal is explicitly a lifecycle stage to consider for housekeeping activities such as secure disposal of data no longer needed. It also covers retention policies and secure deletion at end-of-life for storage media, reinforcing disposal as a lifecycle stage where periodic checks and secure disposal apply.
+- Example of strong password format: including a memorable phrase combined with numbers and a mix of uppercase, lowercase, and special characters (e.g., “Learn2bike@5” or “LetsGo2gym@7”).
 
 Cited sources:
-- Guide to Data Protection Practices for ICT Systems.pdf, pages 10–11 (Housekeeping of Personal Data and data disposal guidance) [source file: Guide to Data Protection Practices for ICT Systems.pdf]
-- Guide to Data Protection Practices for ICT Systems.pdf, page 26 (Portable computing devices and removable storage media mapping to Data Lifecycle stages, including disposal considerations) [source file: Guide to Data Protection Practices for ICT Systems.pdf]
+- Guide to Data Protection Practices for ICT Systems.pdf, pages 15–16 (data_item 1)
+- Guide to Data Protection Practices for ICT Systems.pdf, page 14 (data_item 4)
 
 Sources Used:
-- Guide to Data Protection Practices for ICT Systems.pdf (pages 10–11; 26)","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 10, 11, 14, 26"
-"The guide says to conduct data protection impact assessment, which lifecycle stages does this apply to?","Direct answer: The data clearly indicates that conducting a data protection impact assessment (DPIA) is associated with the “iv. Classification and tracking” section and maps to multiple Data Lifecycle stages. Specifically, DPIA is mentioned under iv. Classification and tracking as item f: “Conduct data protection impact assessment (DPIA) before development to assess data types and activities required for achieving the purposes of a new ICT system.” The overall mapping in the related description shows Lifecycle coverage across several stages, implying DPIA considerations touch multiple stages in the lifecycle (from Collection through Disposal) as part of governance and risk assessment.
+- Guide to Data Protection Practices for ICT Systems.pdf (pages 15–16)
+- Guide to Data Protection Practices for ICT Systems.pdf (page 14)","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 14, 15, 16"
+What is a non-production environment?,"A non-production environment is described as a network, operating system, or other systems that are used as a development area or test bed for new software or technologies. It is explicitly mentioned that production data should not be used in these environments for testing or other purposes. This concept is referenced in the PDPC Guide to Data Protection Practices for ICT Systems documentation. 
 
-Cited sources:
-- data_item 1 [Guide to Data Protection Practices for ICT Systems.pdf], pages [10]
-  - DPIA reference: “f. Conduct data protection impact assessment (DPIA) before development to assess data types and activities required for achieving the purposes of a new ICT system.” 
-  - Context: DPIA is listed under iii. Risk Management / iv. Classification and tracking and is linked to data lifecycle coverage (Collection, Use, Disclosure, Storage, Archival, Disposal) via the described lifecycle mapping in the item.
-
-If you’d like, I can provide a JSON snippet mapping DPIA to the exact lifecycle stages with the row-level dots.","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 10, 17, 22"
-What specific type of sensitive data should be excluded from user views,"- Specific type of sensitive data to exclude from user views: Columns containing sensitive data such as credit card numbers should be restricted from user viewing by configuring the database to exclude these columns. This is stated as an example of implementing tight access controls based on data sensitivity. 
-- Source: Guide to Data Protection Practices for ICT Systems.pdf, page 18. 
-- Related context note: The document emphasizes restricting access to personal data based on sensitivity, including excluding columns with sensitive data like credit card numbers from user views. 
-- Citation: Source file and page as given in metadata. 
+- Source: Guide to Data Protection Practices for ICT Systems.pdf, page 21 and related pages (as indicated in metadata) and repeated in page 22 context. 
+- Relevant details include: non-production environments are development/test beds; avoid using production data in them; focus on data protection during testing and development. 
 
 Sources Used: 
-- Guide to Data Protection Practices for ICT Systems.pdf, page 18","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 18
-Taken from government-data-security-policies.pdf : pages 14, 15, 22"
-What should my organisation do to prevent too much data from being exported or leaked out of our systems?,"- Use monitoring and controls on data export activities to detect data exfiltration and set thresholds for allowable data export.
-- Implement automated build and deployment processes to minimize manual steps and reduce the risk of errors that could lead to unintended data exposure during deployment.
-- Encrypt exported data and communicate the password separately to the recipient of the data to protect data in transit and at rest.
-- Conduct network penetration testing before commissioning new ICT systems to identify and resolve vulnerabilities that could be exploited to exfiltrate data.
-- Maintain an inventory of portable computing devices and removable storage media, and minimize storing personal data on such devices to reduce risks of data leakage via portable media.
-- Ensure ongoing security awareness and policies so employees understand and follow data protection practices, reducing risks from social engineering or misuse that could lead to data leakage.
+- Guide to Data Protection Practices for ICT Systems.pdf (pages 21–22)","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 20, 21, 22, 23"
+At which stages of the data lifecycle should organisations enforce regular password changes?,"Answer:
+Organisations should enforce regular password changes across the data lifecycle stages, with emphasis noted in the data lifecycle mapping showing applicability at multiple stages, including Collection, Use, Storage, Archival, and Disposal (i.e., across the lifecycle). The guidance specifically discusses regular password changes and applies the controls broadly across lifecycle stages.
 
 Direct references:
-- Encrypt exported data and separately share the password (data item with pages 22–23) [Source: Guide to Data Protection Practices for ICT Systems.pdf, pages 22–23].
-- Automate build/deploy to minimize manual steps and errors (data item with pages 22–23) [Source: Guide to Data Protection Practices for ICT Systems.pdf, pages 22–23].
-- Monitor data export activities and set thresholds for allowable export (data item with pages 22–23) [Source: Guide to Data Protection Practices for ICT Systems.pdf, pages 22–23].
-- Penetration testing prior to live deployment (data item with pages 22–23) [Source: Guide to Data Protection Practices for ICT Systems.pdf, pages 22–23].
-- Inventory and limit storage on portable devices/removable media (data item with pages 25) [Source: Guide to Data Protection Practices for ICT Systems.pdf, page 25].
-- Awareness programs and policies for ICT security (data item with page 11) [Source: Guide to Data Protection Practices for ICT Systems.pdf, page 11].
+- The ICT Controls section identifies “Enforce regular password changes” and maps its applicability across the Data Lifecycle stages (Collection, Use, Storage, Archival, Disposal) per the provided table structure. This indicates the requirement spans across these stages. (Source: Guide to Data Protection Practices for ICT Systems.pdf, pages 15–16)
+
+Notes:
+- Related footnotes discuss password policies (length, complexity) and lifecycle considerations that reinforce applying password controls throughout the data lifecycle. (Source: Guide to Data Protection Practices for ICT Systems.pdf, page 15)
 
 Sources Used:
-- Guide to Data Protection Practices for ICT Systems.pdf (pages 22, 23, 11, 25)","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 10, 11, 22, 23, 25"
-"At which stages of the data lifecycle should organisations maintain a list of whitlested connections to only specific, trusted hosts? ","Direct answer: The data items indicate that maintaining a list of whitelisted connections to allow connections to only specific, trusted hosts is associated with multiple lifecycle stages, specifically reflected under ""Computer Networks"" practices. The relevant content shows the practice labeled as maintaining a whitelist of connections and its mapping across the Data Lifecycle stages, though exact stage labels are presented as a multi-stage mapping in the table-style description (Collection, Use, Disclosure, Storage, Archival, Disposal).
+- Guide to Data Protection Practices for ICT Systems.pdf (Pages 14–16)","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 14, 15, 16, 24, 25"
+Which data lifecycle stages does the practice of classifying and managing repositories by potential adverse impact apply to?,"- The practice of classifying and managing repositories by potential adverse impact appears under the “iv. Classification and tracking” section in the Governance/Data Lifecycle framework. The content describes applying this practice across the Data Lifecycle stages, with indicators (dots) shown under the following stages:
+  - Collection
+  - Use
+  - Disclosure
+  - Storage
+  - Archival
+  - Disposal
 
-In short: It spans multiple lifecycle stages, not limited to a single one, per the described mapping that places the whitelisting practice across several lifecycle phases.
+So, it applies to all six data lifecycle stages: Collection, Use, Disclosure, Storage, Archival, and Disposal.
 
 Sources:
-- Guide to Data Protection Practices for ICT Systems.pdf, relevant section in the Computer Networks/Data Lifecycle mapping (pages around the PC sections). [Source file: Guide to Data Protection Practices for ICT Systems.pdf, pages near those sections]","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 12, 16, 17"
-What are the four key components of governance mentioned in the guide?,"- Clear accountability
+- Guide to Data Protection Practices for ICT Systems.pdf, data_item with pages [10] (section iv. Classification and tracking) [context mentions lifecycle dots across all stages].
+- Also reflected in the same governance/lifecycle mapping structure across the dataset items.","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 9, 10, 13, 14, 15, 18, 19"
+The guide says to conduct periodic checks for personal data stored in ICT systems and securely dispose of data no longer needed. Which lifecycle stages does this apply to?,"Direct answer:
+- This applies to the Data Lifecycle stages: Collection, Use, Disclosure, Storage, Archival, and Disposal.
+
+Reasoning (based on the provided items):
+- The first data item discusses securely disposing of personal data no longer required and anonymising data when retention is unnecessary, which corresponds to the Disposal stage and also touches on the Storage/Archival considerations when retention is involved.
+- The same item also emphasizes regular asset inventory to ensure devices storing personal data are accounted for, which relates to the broader lifecycle coverage (Collection, Use, Disclosure, Storage, Archival, Disposal) through governance of data and devices.
+- The second item explicitly references housekeeping and retention practices mapped across the Data Lifecycle stages (Collection, Use, Disclosure, Storage, Archival, Disposal) in its description of Housekeeping of Personal Data and Retention of Personal Data.
+- The third item maps basic practices (e.g., managing devices) to Data Lifecycle stages including Disposal and others.
+
+Cited sources:
+- Source: Guide to Data Protection Practices for ICT Systems.pdf, pages 10–11. (Data items 1)
+- Source: Guide to Data Protection Practices for ICT Systems.pdf, page 14. (Data item 2)
+- Source: Guide to Data Protection Practices for ICT Systems.pdf, page 24. (Data item 4)
+
+Sources Used: 
+- Guide to Data Protection Practices for ICT Systems.pdf (pages 10–11; 14; 24)","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 10, 11, 13, 14, 24"
+"The guide says to conduct data protection impact assessment, which lifecycle stages does this apply to?","Direct answer: The provided PDPC Guide snippets describe data protection and ICT security practices mapped to data lifecycle stages, but none of the excerpts explicitly state a “Data Protection Impact Assessment” (DPIA) term. However, the content consistently links protective practices to lifecycle stages such as Collection, Use, Disclosure, Storage, Archival, and Disposal. Based on the closest matches in the documents:
+
+- Data lifecycle stages referenced across the items include: Collection, Use, Disclosure, Storage, Archival, Disposal (and in one item, Arrival is listed, likely a variant of Disposal).
+- Practices described (e.g., conducting impact analysis before coding changes) are discussed in the ICT Security and Testing context and are mapped to the Data Lifecycle columns, indicating applicability across multiple stages.
+
+Given these sources, a direct mapping you can rely on is:
+- DPIA-related thinking would apply across multiple lifecycle stages, particularly those involving data handling and risk exposure: Collection, Use, Disclosure, Storage, Archival, and Disposal.
+
+Cited sources:
+- Guide to Data Protection Practices for ICT Systems.pdf, pages 21 and 22 (ICT Security and Testing; Data Lifecycle mappings) [Source file: Guide to Data Protection Practices for ICT Systems.pdf; Pages 21, 22]
+- Guide to Data Protection Practices for ICT Systems.pdf, page 13 (Managing Consent and Access / Data Lifecycle) [Source file: Guide to Data Protection Practices for ICT Systems.pdf; Page 13]
+- Guide to Data Protection Practices for ICT Systems.pdf, page 24 (Personal Computers and Other Computing Devices; Data Lifecycle mappings) [Source file: Guide to Data Protection Practices for ICT Systems.pdf; Page 24]
+
+If you’d like, I can provide a structured JSON mapping of DPIA-like considerations to each lifecycle stage based on the closest described practices in the documents.","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 13, 21, 22, 24"
+What specific type of sensitive data should be excluded from user views,"- Specific type of sensitive data to exclude from user views: credit card numbers (columns containing sensitive data such as credit card numbers should be restricted so users cannot view them) [Source: Guide to Data Protection Practices for ICT Systems.pdf, page 18].
+
+- If you want a quick paraphrase from the related content: The policy example recommends configuring databases to restrict access to personal data by excluding columns that contain sensitive data, with credit card numbers given as an example. [Source: Guide to Data Protection Practices for ICT Systems.pdf, page 18]
+
+Cited sources:
+- Guide to Data Protection Practices for ICT Systems.pdf, page 18","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 18
+Taken from government-data-security-policies.pdf : pages 14, 15, 16"
+What should my organisation do to prevent too much data from being exported or leaked out of our systems?,"Direct answer (based on the provided content):
+- Monitor data export activities to detect data exfiltration and consider configuring a threshold for allowable data export. This Enhanced Practice is described as part of ICT Security and Testing within the data protection governance guidance. (Source: Guide to Data Protection Practices for ICT Systems.pdf, pages around 23; referenced in data_item with similarity score 30.205492)
+
+Additional relevant context from the same data items you provided:
+- Encrypt exported data and communicate the password separately to the target recipient of the exported data to reduce risk when data is exported. (Source: Guide to Data Protection Practices for ICT Systems.pdf, page 22-23 area)
+- Conduct network penetration testing prior to commissioning new ICT systems to identify vulnerabilities before go-live, as part of Enhanced Practices under ICT Security and Testing. This helps prevent leakage by fixing weaknesses before deployment. (Source: Guide to Data Protection Practices for ICT Systems.pdf, page 23)
+
+Structured takeaway:
+- Implement monitoring of data exports to detect exfiltration.
+- Set and enforce thresholds for allowable data export.
+- Encrypt exported data and use separate channels for passwords.
+- Strengthen pre-launch security testing (penetration testing) to reduce vulnerabilities that could lead to data leakage.
+
+Sources used:
+- Guide to Data Protection Practices for ICT Systems.pdf, pages 22–23
+  - Data export monitoring and thresholds (data_item with similarity 30.215948)
+  - Encryption of exported data and separate password delivery (same data_item)
+  - Network penetration testing prior to go-live (data_item with similarity 30.205492)
+- Additional governance context referenced from Guide to Data Protection Practices for ICT Systems.pdf, pages 8–9 (governance and enhanced practices) for overarching principles (data_item with similarity 30.171682)","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 8, 9, 10, 11, 22, 23"
+"At which stages of the data lifecycle should organisations maintain a list of whitlested connections to only specific, trusted hosts? ","Answer: The data item that mentions maintaining a list of whitelisted connections to allow connections to only specific, trusted hosts is in the first data_item (source: Guide to Data Protection Practices for ICT Systems.pdf, page 16). It states: ""Maintain a list of whitelisted connections to allow connections to only specifc, trusted hosts."" However, this item (f) does not explicitly map to a specific Data Lifecycle stage in the provided data_item text itself. 
+
+From the nearby context in that item, it discusses policy, network controls, and secure configuration practices, which align with governance and ICT controls rather than a single lifecycle stage. Since the content does not assign this practice to a named lifecycle stage (Collection, Use, Disclosure, Storage, Arrival, Disposal) with explicit markers, a direct stage mapping is not present in the provided extract.
+
+Direct answer isn’t available with an explicit lifecycle stage mapping in the documents. The closest available content indicates the practice exists under ICT security and configuration controls, but does not tag it to a specific lifecycle stage in the excerpt.
+
+Sources Used:
+- Guide to Data Protection Practices for ICT Systems.pdf, page 16
+
+If you’d like, I can summarize the related passages about whitelisting and network access controls from the same document for a broader understanding of where such practices typically fit within data protection governance.","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 12, 16, 22
+Taken from key-policies-third-party-framework.pdf : pages 2, 3, 4"
+What are the four key components of governance mentioned in the guide?,"The four key components of governance mentioned in the PDPC Guide to Data Protection Practices for ICT Systems are:
+- Clear accountability
 - Standards, policies and procedures
 - Risk management
 - Classification and tracking
 
-Sources: Guide to Data Protection Practices for ICT Systems.pdf, pages 8 and 9. [Sources Used: Guide to Data Protection Practices for ICT Systems.pdf, pages 8-9]","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 8, 9
-Taken from key-policies-third-party-framework.pdf : pages 3"
+Source: Guide to Data Protection Practices for ICT Systems.pdf, page 8 (and referenced in related items on page 9) [metadata indicates source file and page numbers]. 
+Cited sources:
+- Guide to Data Protection Practices for ICT Systems.pdf, pages 8 and 9.","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 8, 9
+Taken from government-personal-data-protection-policies-jul21.pdf : pages 10"
 What are the three main sections that data protection practices for ICT systems are grouped into?,"- Policy/Risk Management for ICT systems
 - ICT Controls
 - SOP/IT Operations
 
-Sources used: Guide to Data Protection Practices for ICT Systems.pdf (pages referenced in the items indicate these three sections)","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 5, 6, 7, 8, 10"
-What guide should organisations refer to if they want to anonymise data beyond the retention period?,"- Direct answer: Refer to the “Guide to Data Protection Practices for ICT Systems” by the Personal Data Protection Commission (PDPC). It states that if there is a need to retain data but in anonymised or aggregated form, consider anonymising the data as part of data minimisation and secure disposal practices. This guidance is located in the PDPC guide, pages 10–11.
+Sources Used: Guide to Data Protection Practices for ICT Systems.pdf (Pages 7; 5-8; 7; 29-33)
+","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 5, 6, 7, 8, 29, 30, 31, 32, 33"
+What guide should organisations refer to if they want to anonymise data beyond the retention period?,"Direct answer isn’t explicitly stated in a single line in the provided items. However, the closest guidance appears in the first data item, which discusses anonymisation as an option when retention is unnecessary, and specifically mentions anonymising data or transforming it into aggregated form for analytics.
 
-- Paraphrased supporting details from the source:
-  - The guide reinforces data minimisation and secure disposal as core practices in the data lifecycle.
-  - For personal data not required anymore, securely dispose of it; if retention is needed, anonymise or aggregate the data for analytics.
-
-Sources Used: Guide to Data Protection Practices for ICT Systems.pdf, pages 10–11","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 10, 11
-Taken from government-data-security-policies.pdf : pages 5, 6
-Taken from government-personal-data-protection-policies-jul21.pdf : pages 25"
-What checklist is the Incident Response Management checklist referenced from?,"- Direct answer: The Incident Response Management checklist is referenced from CSA’s Incident Response Checklist.
-- Supporting context from the provided items:
-  - Data item 1 notes: “This checklist is referenced from CSA’s Incident Response Checklist. Please access the full checklist from CSA’s website.”
-  - The same item also describes the Annex as containing a “Checklist for Incident Response Management,” which aligns with the CSA reference.
+Answer:
+Organisations should refer to the Guide to Data Protection Practices for ICT Systems (PDPC guide on data protection for ICT systems) for guidance on anonymising data beyond retention needs.
 
 Cited sources:
-- Data_Item: Guide to Data Protection Practices for ICT Systems.pdf, pages 33 (and related context mentioning CSA Incident Response Checklist)","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 3, 33, 34"
-What are the three key ICT policies that organisations are required to develop and implement?,"- Policy/Risk Management for ICT Systems
-- ICT Controls
-- SOP/IT Operations
+- Guide to Data Protection Practices for ICT Systems.pdf, pages 10–11
 
-Rationale: The documents describe three main sections containing data protection practices for ICT systems: Guidance on Policy/Risk Management for ICT Systems, ICT Controls, and SOP/IT Operations, which collectively guide governance, controls, and operational SOPs. 
+Sources Used: Guide to Data Protection Practices for ICT Systems.pdf (pages 10–11)","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 10, 11, 14
+Taken from government-personal-data-protection-policies-jul21.pdf : pages 25
+Taken from government-data-security-policies.pdf : pages 5, 6"
+What checklist is the Incident Response Management checklist referenced from?,"Answer:
+The Incident Response Management checklist is referenced from CSA’s Incident Response Checklist. This is noted as a cross-reference to CSA in the PDPC guidance context. 
+
 Sources:
-- Guide to Data Protection Practices for ICT Systems.pdf, pages 7–9. 
-- Guide to Data Protection Practices for ICT Systems.pdf, pages 5–8. 
-- Guide to Data Protection Practices for ICT Systems.pdf, page 7.","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 5, 6, 7, 8, 9, 26, 27"
-What enhanced practice does the guide recommend for admin access to sensitive personal data?,"Direct answer isn’t explicitly stated in a single concise sentence in the provided data. However, from the relevant item(s) we can extract the enhanced practice related to admin access and security controls.
+- data_item with pages [33], [34] referencing the CSA Incident Response Checklist and the cross-reference to CSA.
+  - Source: Guide to Data Protection Practices for ICT Systems.pdf, pages 33–34.","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 33, 34"
+What are the three key ICT policies that organisations are required to develop and implement?,"Direct answer unavailable in a single explicit sentence in the provided items. However, the closest explicit listing appears under the PDPC guide content, which describes key ICT policies that organisations should implement for data protection in ICT systems. The three policy areas referenced are:
 
-- Enhanced practice for admin access to sensitive personal data: Use a one-time password (OTP) or multi-factor authentication (2FA/MEA) for admin access.
+- Account and access control policy
+- Backup/retention policy
+- Password policy
+
+These are presented as the key ICT policies in the Governance/Policy area intended to guide ICT system implementations and data protection activities.
+
+Sources:
+- Guide to Data Protection Practices for ICT Systems.pdf, pages 8 (and surrounding Governance section content). [Source: Guide to Data Protection Practices for ICT Systems.pdf, pages 8]","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 5, 6, 7, 8, 9, 26, 27"
+What enhanced practice does the guide recommend for admin access to sensitive personal data?,"- Direct answer: Disallow non-administrator users from performing administrative actions, i.e., restrict admin access so that only administrators can install software, change security settings, or boot from external media when handling sensitive personal data.
+
+- Paraphrase from the provided content: The enhanced practices emphasize administrator-only control: keep administrator accounts for administrator use only and prevent non-administrator users from installing software, changing security settings, or booting from external/removable media when sensitive personal data is involved.
 
 Cited sources:
-- PDPC Guide to Data Protection Practices for ICT Systems.pdf, data_item with similarity 30.68726, pages [16], specifically under the section describing Enhanced Practices including: 
-  - b. Use a one-time password (OTP) or 2FA/MEA for admin access; dots across multiple lifecycle stages. [Source: Guide to Data Protection Practices for ICT Systems.pdf, pages [16]]","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 12, 16, 26, 27"
+- Guide to Data Protection Practices for ICT Systems.pdf, page references relevant to Enhanced Practices for Personal Computers and Other Computing Devices, including items g, h, i describing admin access and restrictions. 
+  • Source: Guide to Data Protection Practices for ICT Systems.pdf, pages around PDPC Enhanced Practices for devices (e.g., items g, h, i).","Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 8, 9, 19, 25, 26, 27"
 What resource should you consult if you are unsure whether you need a licence for providing financial advice?,"Direct answer:
-- Consult the MAS Guidelines on Provision of Financial Advisory Service (FAAG17) if you are unsure whether you need a licence for providing financial advice.
+- Consult the MAS Guidelines on Provision of Financial Advisory Service (FAAG17) for clarity on licensing when providing financial advice.
 
-Cited source:
-- 7 Must-Knows When Sharing Financial Information Online.pdf, Section: WHEN DO I NEED TO HAVE A LICENCE FOR PROVIDING FINANCIAL ADVICE? (referenced in data_item with MAS FAAG17) [Source: 7 Must-Knows When Sharing Financial Information Online.pdf, page 1] 
+Cited source: 7 Must-Knows When Sharing Financial Information Online.pdf (data_item with the licensing guidance). Page reference shown as [1] in metadata.
 
 Sources Used: 7 Must-Knows When Sharing Financial Information Online.pdf (pages [1])",Taken from 7 Must-Knows When Sharing Financial Information Online.pdf : pages 1

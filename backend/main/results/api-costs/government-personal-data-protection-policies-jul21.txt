@@ -10,3 +10,63 @@ Token cost to EMBED PAGE government-personal-data-protection-policies-jul21.pdf 
 Money cost to EMBED PAGE government-personal-data-protection-policies-jul21.pdf : 0.00068482
 
 
+
+Token cost to IMAGE chunk government-personal-data-protection-policies-jul21.pdf : 0
+
+Money cost to IMAGE chunk government-personal-data-protection-policies-jul21.pdf : 0.0
+
+
+
+Token cost to TABLE chunk government-personal-data-protection-policies-jul21.pdf : 19091
+
+Money cost to TABLE chunk government-personal-data-protection-policies-jul21.pdf : 0.0009977599999999999
+
+
+
+Token cost to EMBED TABLE government-personal-data-protection-policies-jul21.pdf : 3164
+
+Money cost to EMBED TABLE government-personal-data-protection-policies-jul21.pdf : 6.328e-05
+
+
+
+Token cost to TEXT chunk government-personal-data-protection-policies-jul21.pdf : 425808
+
+Money cost to TEXT chunk government-personal-data-protection-policies-jul21.pdf : 0.00738168
+
+
+
+Token cost to EMBED TEXT government-personal-data-protection-policies-jul21.pdf : 16827
+
+Money cost to EMBED TEXT government-personal-data-protection-policies-jul21.pdf : 0.00033654
+
+
+
+Token cost to IMAGE chunk government-personal-data-protection-policies-jul21.pdf : 0
+
+Money cost to IMAGE chunk government-personal-data-protection-policies-jul21.pdf : 0.0
+
+
+
+Token cost to TABLE chunk government-personal-data-protection-policies-jul21.pdf : 19067
+
+Money cost to TABLE chunk government-personal-data-protection-policies-jul21.pdf : 0.00098816
+
+
+
+Token cost to EMBED TABLE government-personal-data-protection-policies-jul21.pdf : 3139
+
+Money cost to EMBED TABLE government-personal-data-protection-policies-jul21.pdf : 6.277999999999999e-05
+
+
+
+Token cost to PAGE chunk government-personal-data-protection-policies-jul21.pdf : 668900
+
+Money cost to PAGE chunk government-personal-data-protection-policies-jul21.pdf : 0.02261867000000001
+
+
+
+Token cost to EMBED PAGE government-personal-data-protection-policies-jul21.pdf : 34593
+
+Money cost to EMBED PAGE government-personal-data-protection-policies-jul21.pdf : 0.00069186
+
+

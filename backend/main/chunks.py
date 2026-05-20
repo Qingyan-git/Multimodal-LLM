@@ -14,7 +14,7 @@ class Chunk:
 
     content : Optional[str] = ""
 
-    page_no : Optional[list] = field(default_factory=list)
+    metadata : Optional[dict] = field(default_factory=dict)
 
 
 @dataclass

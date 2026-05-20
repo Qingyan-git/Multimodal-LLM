@@ -1,187 +1,226 @@
 ﻿Question,Answer,Sources
-Which specific cause provided a HALE gain through morbidity reduction for the 70+ age group between 2000 and 2019?,"Direct answer: Diabetes mellitus morbidity did not provide a gain for the 70+ group; rather, the text notes that morbidity from diabetes increased and was responsible for a 0.14-year HALE loss in 2000–2019 for adults 30 years and older. The question asks for a cause that provided a HALE gain through morbidity reduction for the 70+ age group between 2000 and 2019. In the provided excerpts, the specific morbidity-driven gains by age group are listed, but for 70+ adults the only negative/mixed notes are related to Alzheimer’s/dementias (loss) and diabetes morbidity (loss). There is no clear mention of a morbidity reduction in the 70+ group contributing a HALE gain. The documented gains for the 70+ group appear in the context of mortality reductions (e.g., stroke, ischaemic heart disease) for adults 30+ but not a morbidity reduction for 70+.
+Which specific cause provided a HALE gain through morbidity reduction for the 70+ age group between 2000 and 2019?,"- The specific cause that provided a HALE gain through morbidity reduction for the 70+ age group between 2000 and 2019 is not explicitly listed as a single cause for the 70+ group in the provided text. The excerpts discuss various causes contributing to HALE gains across different ages, with a notable mention that morbidity from diabetes among adults 30+ years led to a 0.14-year HALE loss, and other regional patterns, but they do not isolate a morbidity-reduction cause for the 70+ group alone.
 
-What the source does say (paraphrased from the documents):
-- In 2000–2019, the largest HALE gains were from mortality reductions in various causes across age groups, with specific gains such as stroke (0.37 years) and ischaemic heart disease (0.28 years) among adults 30–69; and some region-specific notes. It also notes a loss due to Alzheimer’s/dementias in 70+ from mortality/morbidity increases, and a loss due to diabetes morbidity in the 30+ group in the same period.
-
-Cited sources for the exact phrasing:
-- WHO World health statistics 2025.pdf, pages around 16–19, including figures and description of HALE gains by age group, 2000–2019, and the commentary on morbidity/mortality drivers. (Sources: data_item 1, pages [16]; data_item 2, pages [18, 19]; data_item 3, pages [17, 18].)
-
-Conclusion: Based on the provided content, there isn’t a record of a specific morbidity reduction in the 70+ age group that yielded a HALE gain between 2000 and 2019. The material highlights gains primarily from mortality reductions across several causes and notes losses associated with Alzheimer’s/dementias and diabetes morbidity in older or 30+ populations, but not a positive morbidity-driven gain for the 70+ group.
-
-Sources Used:
-- WHO World health statistics 2025.pdf (data_item 1, pages 16)
-- WHO World health statistics 2025.pdf (data_item 2, pages 18, 19)
-- WHO World health statistics 2025.pdf (data_item 3, pages 17, 18)","Taken from WHO World health statistics 2025.pdf : pages 16, 17, 18, 19, 20"
-What was the specific HALE loss attributed to diabetes mellitus morbidity in the 30–69 age group globally between 2000 and 2019?,"Answer: The HALE loss attributed to diabetes mellitus morbidity among adults aged 30–69 years globally between 2000 and 2019 was 0.14 years.
+What is present in the sources:
+- In the global decomposition (Figure 1.2) for 2000–2019, several age groups are mentioned, including adults 30+, and notes that Alzheimer disease and other dementias caused a small HALE loss in the 70+ group, but this is a loss, not a gain from morbidity reduction.
+- Across regions, the 70+ age group appears in discussions of mortality and morbidity contributions, but the exact morbidity-reduction cause driving a positive HALE gain for the 70+ group is not explicitly named in the provided content.
 
 Cited sources:
-- WHO World health statistics 2025.pdf, related to Figure 1.2 and accompanying text (pages 17) [data_item with 0.14-year HALE loss due to diabetes in 2000–2019].
-- Supporting context appears in the same document describing the 0.14-year loss from diabetes morbidity in 2000–2019 (global, 30+ age group) and the overall HALE dynamics.","Taken from WHO World health statistics 2025.pdf : pages 11, 12, 13, 17, 18"
-Which cause is the leading driver of HALE gain for the African Region in the 30–69 age group (2000–2019)?,"Leading driver of HALE gain for the African Region in the 30–69 age group (2000–2019): reduction in mortality from noncommunicable diseases, specifically ischemic heart disease and related conditions, is highlighted as a major contributor in the region’s 30+ age group gains. In the African Region, the text notes that the gain is predominantly driven by declines in mortality from noncommunicable diseases among adults aged 30 years and older, with ischemic heart disease contributing to the HALE increase.
-
-Cited source: WHO World health statistics 2025.pdf, page 1 (context around Fig. 1.3 and regional summaries).","Taken from WHO World health statistics 2025.pdf : pages 16, 18, 19, 20"
-Which WHO region is the only one to show a HALE loss due to Collective violence and legal intervention in the 2000–2019 data?,"Answer: The provided data do not explicitly specify a single WHO region that shows a HALE loss due to Collective violence and legal intervention for the 2000–2019 period. The excerpts mention the contribution ""Collective violence and legal intervention"" with values and refer to region-specific patterns in Chapter 1 analyses, but they do not enumerate which region experienced a loss specifically in 2000–2019.
-
-What is present in the documents:
-- Several items mention ""Collective violence and legal intervention"" as a contributor to HALE changes, with associated numerical values and references to region-specific patterns (e.g., Fig. 1.2, 1.3, 1.4; Chapter 1 analyses). However, they do not single out the 2000–2019 period with a designated region showing a HALE loss.
-- The sources note COVID-19–related contributions and other causes, but again without a clearly named region showing a HALE loss for 2000–2019.
-
-Direct reference from the provided content:
-- ""Collective violence and legal intervention 0.18 0.12 11"" (from the 25-page item) suggests a contribution but does not specify a region or time frame for a 2000–2019 HALE loss.
-- ""Collective violence and legal intervention 0.18 0.1 4. Stroke..."" (from the 17-page item) again lists a contributor but not a region-specific 2000–2019 loss.
-
-If you need a precise region name, the current excerpts do not contain that explicit mapping. I can summarize the relevant details and indicate that region-specific pattern information exists in the sources, but the exact regional identification for the 2000–2019 HALE loss due to collective violence is not explicitly stated in the provided text.
-
-Sources Used:
-- WHO World health statistics 2025.pdf, pages 25, 19, 17","Taken from WHO World health statistics 2025.pdf : pages 17, 19, 25"
-Which condition caused the largest morbidity-related HALE loss globally during the 2019–2021 period?,"Direct answer isn’t explicitly stated in a single line within the provided text. However, the closest derived finding from the sources indicates that among morbidity drivers, anxiety disorders and depressive disorders are highlighted as notable contributors to HALE loss during 2019–2021, with each responsible for a 0.06-year loss globally for 2019–2021 and collectively contributing to the overall morbidity-related decline. The content also notes that COVID-19 morbidity contributed to global HALE loss (0.13-year for COVID-19 morbidity). Since the question asks for the largest morbidity-related HALE loss globally, and the pandemic-related morbidity from COVID-19 is presented with a specific quantified impact, COVID-19 morbidity is the largest single contributor explicitly quantified in the global 2019–2021 period in the provided material.
-
-- COVID-19 morbidity: 0.13-year global HALE loss (2019–2021)
-- Anxiety disorders: 0.06-year global loss (2019–2021)
-- Depressive disorders: 0.06-year global loss (2019–2021)
-
-If choosing the single condition with the largest global morbidity-related HALE loss from the provided data, the answer is COVID-19 morbidity.
+- WHO World health statistics 2025.pdf, page references include material from pages 16–20, particularly content describing HALE changes by cause and age group (Fig. 1.2 and related descriptions). Sources: WHO World health statistics 2025.pdf (pages 16, 17, 18–19) [Metadata references present in data_item entries].","Taken from WHO World health statistics 2025.pdf : pages 16, 17, 18, 19, 20"
+What was the specific HALE loss attributed to diabetes mellitus morbidity in the 30–69 age group globally between 2000 and 2019?,"Answer: The HALE loss attributed to diabetes mellitus morbidity in adults aged 30 years and older (including 30–69) between 2000 and 2019 was 0.14 years globally.
 
 Sources:
-- WHO World health statistics 2025.pdf, sections describing 1.2.2 Change attributed to morbidity and global regional figures (pages referenced in data_item 1). Specific figures: global HALE loss from COVID-19 morbidity (0.13 years) and contributions from anxiety and depressive disorders (0.06 years each) for 2019–2021. Also, the regional breakdown mentions COVID-19 contributions across regions (data item 3). 
-
-Citations:
-- Data_item 2 (WHO World health statistics 2025.pdf), pages 17–18, 21 (for Fig. 1.2 and 1.4 references) 
-- Data_item 3 (WHO World health statistics 2025.pdf), page 20 (1.2.2 Change attributed to morbidity narrative)","Taken from WHO World health statistics 2025.pdf : pages 17, 18, 20, 21"
-How many years of HALE were lost in the Region of the Americas due to COVID-19 mortality in the 70+ age group specifically?,"Direct answer not explicitly stated in the provided text. However, the closest data available mentions that in the Region of the Americas, COVID-19 mortality among adults aged 30 years and older contributed 2.05 years to the total 2.5-year HALE loss between 2019 and 2021, and that mortality from COVID-19 among adults aged 30 years and older accounted for 1.92 years of the HALE loss in the Region of the Americas (and 0.56 years from other COVID-19 pandemic-related outcomes) for the same period. The 70+ age-specific breakdown is not separately provided in the excerpts.
-
-- Region of the Americas: COVID-19 mortality among adults aged 30+ contributed 2.05 years to the total 2.5-year HALE loss (2019–2021) [source: data_item 1, page referencing Fig. 1.4].
-- Additional COVID-19 COVID-19-related mortality contributions: 0.56 years (Region of the Americas) [same source].
-
-What this means for 70+ specifically: the document does not isolate the 70+ age group for the Region of the Americas in the provided passages, so a precise 70+ figure cannot be extracted from the given content.
-
-Sources Used:
-- WHO World health statistics 2025.pdf, data_item 1 (pages 20–21), including the discussion of Region of the Americas COVID-19 mortality contributions to HALE loss (2019–2021) and Fig. 1.4.","Taken from WHO World health statistics 2025.pdf : pages 20, 21, 22, 24, 25"
-What is the leading cause of HALE disadvantage for females compared to males globally?,"Answer: The leading contributor to the female disadvantage in HALE globally is higher morbidity among females, which offsets their mortality advantage. Specifically, higher mortality/morbidity in various conditions reduces the HALE gap, with notable contributors including depressive disorders and other morbidity patterns (though the global data emphasize that, despite females’ lower mortality, greater morbidity lowers their healthy life expectancy).
-
-Directly from the provided text:
-- Global context notes that women have lower mortality but higher morbidity, resulting in a reduced HALE advantage in 2019.
-- The 2019 global HALE gap is about 2.3 years when morbidity is accounted for, indicating morbidity is the primary driver reducing the HALE advantage for females (global figures summarized around Fig. 1.5 and related text).
-
-Cited sources:
-- WHO World health statistics 2025.pdf, pages 21–22, 24 (global patterns of female HALE, morbidity offsets, and the 2.3-year global HALE gap in 2019). [Source: World health statistics 2025, global/global patterns sections; Fig. 1.5 and accompanying narrative]
-
-Note: If you want a precise single cause, the documents emphasize that higher female morbidity overall offsets mortality advantages, rather than a single leading cause globally. The text highlights depressive disorders’ contribution to HALE loss in 2019–2021 in some regions, but globally the overarching leading factor is higher female morbidity reducing HALE. 
-
-Sources Used: World health statistics 2025.pdf (pages 21–22, 24)","Taken from WHO World health statistics 2025.pdf : pages 21, 22, 24, 25"
-What is the HALE advantage for females in the Western Pacific Region regarding stroke mortality?,"Answer: In the Western Pacific region, stroke is the most significant contributor to the female HALE lead, contributing 3.43 years to the female advantage in HALE in 2019. By 2021, its contribution decreased as other factors emerged, but stroke remained a major contributor to the female HALE lead (the specific 2021 stroke contribution is not stated in the provided text for the Western Pacific region). 
-
-Cited facts:
-- ""Stroke is the most significant cause of death that contributed to the female HALE lead (3.43 years in total) in the Western Pacific region in 2019"" (Source: WHO World health statistics 2025.pdf, pages 24). [data_item with 30.83994 similarity]
-- For 2021, the text notes limited impact from COVID-19 on the HALE gap in the Western Pacific, but does not provide a separate stroke-specific year value (data_item with same page range). 
-
-Sources Used:
-- WHO World health statistics 2025.pdf, pages 24 (data_item 1)
-- WHO World health statistics 2025.pdf, pages 24 (data_item 1)","Taken from WHO World health statistics 2025.pdf : pages 21, 22, 24, 25"
-What was the global HALE advantage for females over males regarding COVID-19 mortality in 2021?,"Direct answer not explicitly stated as a single value for ""global HALE advantage for females over males regarding COVID-19 mortality in 2021."" However, relevant content provides regional/global context:
-
-- In 2021, lower female mortality from COVID-19 and other COVID-19 pandemic-related outcomes explained portions of the female HALE lead. Specifically, the text notes that for the global-level discussion, 0.96 years of the female lead in HALE in 2021 were due to lower female mortality from COVID-19 and 0.03 years from other COVID-19 outcomes (Fig. 1.6). These figures are described in the context of the Region of the Americas and Western Pacific examples, but the wording indicates a global contribution as part of the 2.96-year total female lead in 2021.
-
-So, the global HALE advantage contributed by lower female mortality from COVID-19 in 2021 is 0.96 years (with an additional 0.03 years from other COVID-19-related outcomes), totaling 0.99 years related to COVID-19 effects within the global female HALE lead.
-
-Cited sources:
-- WHO World Health Statistics 2025.pdf, pages around 24 (Fig. 1.6 discussion) and page 21–22 for global/gender patterns. Specifically: content referencing ""0.96 and 0.03 years"" of the lead in female HALE due to COVID-19 (Fig. 1.6).
-
-Sources Used:
-- WHO World health statistics 2025.pdf — pages 24; 21–22 (global gender patterns and COVID-19 contributions).","Taken from WHO World health statistics 2025.pdf : pages 16, 17, 21, 22, 24, 25"
-Which region saw the smallest female HALE advantage (0.01 years) in COVID-19 mortality for the 70+ age group in 2021?,"- The data indicates that in 2021, the smallest female HALE advantage due to COVID-19 mortality for the 70+ age group (i.e., the minimal positive contribution from COVID-19 mortality to female lead in HALE) was observed in the Western Pacific Region, where the COVID-19 mortality contribution to the female HALE lead among those aged 70 years and older was 0.01 years.
-
-Source: WHO World health statistics 2025.pdf, Fig. 1.6 details (Western Pacific region) [Data_item 1], and corroborating region summaries in the same document sections. 
-
-Cited sources:
-- World health statistics 2025.pdf, Fig. 1.6, Western Pacific Region detail (Data_item 1, pages 24).","Taken from WHO World health statistics 2025.pdf : pages 18, 19, 20, 21, 22, 24, 25"
-What is the HALE gap between High-income and Low-income countries caused by Lower respiratory infections in the 0–1 age group?,"Direct answer isn’t explicitly stated in the provided passages. However, we can summarize the closest available data:
-
-- The materials discuss HALE gaps between income groups and mention lower respiratory infections as a contributing factor, including age-specific contributions, in the context of 2019 and 2021 analyses (Figures 1.7 and 1.8). One excerpt notes that for high-income vs. low-income comparisons, lower respiratory infections contributed to the HALE gap with a value of 0.4 years in the 2019 breakdown for ischaemic heart disease and stroke, but the exact 0–1 age-group value for lower respiratory infections is not enumerated in the text provided. The accompanying figure captions indicate age-group and cause-specific contributions are depicted, but numeric specifics for the 0–1 age group are not included in the text we have.
-
-- What is available:
-  - The HALE gap between high-income and other income groups is decomposed by cause (including lower respiratory infections) and by age group in Figure 1.7 (for 2019) and Figure 1.8 (for 2021) in the WHO World Health Statistics 2025 report. The text confirms that lower respiratory infections contribute to the HALE gap, and that contributions vary by age group, but the exact numeric value for the 0–1 year age group is not provided in the excerpt.
-
-Sources used: WHO World Health Statistics 2025.pdf, pages 24–26.","Taken from WHO World health statistics 2025.pdf : pages 24, 25, 26"
-What is the negative HALE contribution of Drug use disorders for High-income countries when compared to Lower-middle-income countries?,"Direct answer not explicitly stated as a single numeric value in the provided content. However, the relevant passage mentions the HALE contributions for drug use disorders when comparing high-income countries to other income groups.
-
-From the first data item (pages 25–26), it states:
-- “populations in highincome countries on average faced higher mortality from drug use disorders in comparison with all the other three income groups, costing high-income countries 0.12, 0.13 and 0.13 years of the HALE lead, respectively, compared with low-income, lower-middle-income and upper-middle-income countries, respectively (Fig. 1.7).”
-
-To answer your specific question:
-- The negative HALE contribution of Drug use disorders for High-income countries when compared to Lower-middle-income countries is 0.13 years.
+- WHO World health statistics 2025.pdf, the segment describing Fig. 1.2 and the statement: “morbidity from diabetes among adults 30 years and older increased and was responsible for a 0.14-year HALE loss in 2000–2019 (Fig. 1.2).” [Pages 17] (Source file: WHO World health statistics 2025.pdf)","Taken from WHO World health statistics 2025.pdf : pages 11, 12, 13, 17, 18, 24"
+Which cause is the leading driver of HALE gain for the African Region in the 30–69 age group (2000–2019)?,"Direct answer isn't explicitly stated in the provided text excerpts. However, the most relevant item describing the African Region’s HALE gains (2000–2019) indicates that in the Africa region, the notable contributor to the HALE gain among adults aged 30–69 years was mortality reduction from HIV/AIDS, contributing 1.71 years within the 2.61-year total gain for adults 30–69 (with additional contributions from tuberculosis 0.68 years). This points to HIV/AIDS mortality reduction as the leading driver in that age group and region.
 
 Cited source:
-- WHO World health statistics 2025.pdf, Page referencing Fig. 1.7 (Data item with similar content on pages 25–26).","Taken from WHO World health statistics 2025.pdf : pages 24, 25, 26"
-What is the HALE lead for High-income countries over Lower-middle-income countries due specifically to COVID-19 mortality?,"The HALE lead for High-income countries over Lower-middle-income countries due specifically to COVID-19 mortality is 0.32 years.
+- WHO World health statistics 2025.pdf, data_item with pages mentioning Africa Region contributions, including HIV/AIDS as a major contributor to HALE gains for adults 30–69 (Section describing Figure 1.3 and accompanying text). Source: page references implied in that item’s content (see data_item details for 2000–2019 HALE gains, Africa Region). 
 
-Source: WHO World health statistics 2025.pdf, as described in the provided content (Figure 1.8 discussion noting COVID-19 mortality contributing to the HALE lead between high-income and lower-middle-income countries).  
-Cited from: data_item 1, pages around 25–26.","Taken from WHO World health statistics 2025.pdf : pages 24, 25, 26, 27"
-Which cause contributes a -0.16 year HALE disadvantage to High-income countries when compared to Low-income countries in the 2021 comparison?,"Direct answer isn’t explicitly stated as a single line in the provided text. However, within the 2021 comparison narrative (data_item 2), it notes several causes contributing to the HALE gaps and provides specific negative contributions for high-income countries when compared with other groups. The passage mentions that in 2021, some causes contributed to a negative HALE lead for high-income countries, including falls, back and neck pain, and drug use disorders, among others, with quantified values such as –0.32, –0.16, –0.21, etc., in 2021 relative to other income groups.
+Sources Used: WHO World health statistics 2025.pdf (data_item referencing Africa region text around Figure 1.3, 2000–2019).","Taken from WHO World health statistics 2025.pdf : pages 16, 18, 19, 20"
+Which WHO region is the only one to show a HALE loss due to Collective violence and legal intervention in the 2000–2019 data?,"Direct answer isn’t explicitly stated in the text snippets. However, from the provided content, we can summarize the relevant details:
 
-From the text:
-- It lists “falls (losing 0.32, 0.16 and 0.21 years compared with low-, lower-middle- and upper-middle-income countries, respectively)” and
-- “back and neck pain (–0.21, –0.38 and –0.36 years, respectively)” and
-- “drug use disorders (–0.20, –0.20 and –0.19 years, respectively).”
+- Several data items discuss HALE changes and contributing causes, including “Collective violence and legal intervention” as a contributor.
+- The 2000–2019 window is repeatedly mentioned across items as part of the HALE change analysis, but the specific region associated with a HALE loss due to collective violence and legal intervention in 2000–2019 is not plainly identified in the excerpts.
 
-The question asks: which cause contributes a –0.16 year HALE disadvantage to High-income countries when compared to Low-income countries in the 2021 comparison?
+What we can do with the available content:
+- Data_item with pages [17] mentions: “Collective violence and legal intervention 0.18 0.1 4. Stroke -0.01 5.” and references to multiple causes including COVID-19, stroke, diabetes, back and neck pain.
+- Data_item with pages [17] also states this chunk helps decomposition of HALE changes by cause and age, across regions, but does not tie 2000–2019 to a specific region’s HALE loss for collective violence.
+- Other items list “Collective violence and legal intervention” as a contributing cause with numerical values, but again not specifying which region shows a loss in 2000–2019.
 
-From the values given for falls: “falls … losing 0.32, 0.16 and 0.21 years compared with low-, lower-middle- and upper-middle-income countries, respectively.” The –0.16 years corresponds to the comparison with Low-income countries.
+Given the rules to ground strictly in the provided content and not introduce external inferences, the direct answer to ""which WHO region is the only one to show a HALE loss due to Collective violence and legal intervention in the 2000–2019 data?"" is not available in the excerpts.
 
-Therefore, the cause is falls.
-
-- Source: WHO World health statistics 2025.pdf, data_item 2, Figure 1.7 discussion (2021 comparison).  
-  [Pages 25–26 in the document context provided]
-
-Sources Used: WHO World health statistics 2025.pdf, data_item 2 (pages 25–26)","Taken from WHO World health statistics 2025.pdf : pages 24, 25, 26"
-What was the estimated Maternal Mortality Ratio for the African Region in the year 2023?,"Direct answer not found in exact numeric value for the African Region in 2023 within the provided excerpts. However, there is a relevant data point:
-
-- The African Region had a high MMR in 2023 of 442 (UI: 376–560) maternal deaths per 100,000 live births. This is stated explicitly in the 2023 regional breakdown.
-
-Source: WHO World health statistics 2025.pdf, page 33 (data_item 1).
-
-So: Estimated MMR for the African Region in 2023 = 442 maternal deaths per 100,000 live births (UI 376–560). 
-
-Citations:
-- Source: WHO World health statistics 2025.pdf, data_item 1, page 33. 
-- Specific line: ""In 2023, the African Region had a high MMR of 442 (UI: 376–560) per 100 000 live births.""","Taken from WHO World health statistics 2025.pdf : pages 30, 31, 32, 33, 34"
-What was the Neonatal Mortality Rate for the South-East Asia Region in 1990?,"Direct answer not explicitly stated for 1990 Neonatal Mortality Rate (NMR) by the South-East Asia Region in the supplied text. However, the closest available data shows regional trends and 1990 figures for neonatal mortality overall and regional comparisons, including that the South-East Asia Region had the highest regional NMR in 1990 at 53 deaths per 1000 live births. Therefore:
-
-- South-East Asia Region NMR in 1990: 53 deaths per 1,000 live births.
-
-Sources:
-- World health statistics 2025, Neonatal mortality section (Figure 2.2 discussion and caption indicating South-East Asia Region had the highest regional NMR in 1990 at 53). [Source: WHO World health statistics 2025.pdf, page references around Fig. 2.2; pages 32–33 in the provided data item set]","Taken from WHO World health statistics 2025.pdf : pages 18, 19, 20, 27, 28, 32, 33, 34"
-Which World Bank income group shows the most significant projected reduction in premature NCD mortality by 2030?,"Direct answer not explicitly stated in the provided items. However, the most relevant content describes that in the World Bank income groups, lower-income groups start with higher baseline risk and although all groups are projected to decline by 2030, disparities persist with higher-income groups maintaining lower values throughout. The materials do not quantify which group has the most significant projected reduction by 2030 in numerical terms.
-
-What is available from the sources:
-- The two-panel figure (by World Bank income groups) shows observed vs. projected trends through 2030, with dashed lines for projections. It indicates that lower-income groups start higher and decline more slowly, while higher-income groups may show a more pronounced decline toward 2030, but exact magnitudes are not provided in the text.
-- Global and regional narratives emphasize persistent disparities between income groups despite projected improvements.
-
-Structured fallback summary (paraphrasing the content present):
-- The World Bank income groups panel presents multiple colored lines for income categories (Lower-middle-income, Low-income, Upper-middle-income, High-income). Observed lines show past declines; projected (dashed) lines extend to 2030. Lower-income groups typically start with higher premature mortality from NCDs and show slower progress, whereas higher-income groups tend to have lower baseline values and may exhibit more pronounced declines toward 2030. Precise numeric reductions by 2030 are not provided in the extracted content.
+Structured fallback summary of what is present:
+- The WHO World Health Statistics 2025 reports HALE changes by region and cause, including “Collective violence and legal intervention” as a contributing factor (appears in multiple data items from pages 17 and 27, and in the Global Health Estimates 2024 excerpt). It mentions 2019–2021 data in some items and 2000–2019 in others, but does not explicitly designate a single region with a HALE loss due to collective violence for 2000–2019 within the provided text.
+- The data items indicate that collective violence is one of the contributing causes considered in HALE analyses, alongside other causes such as stroke and diabetes, across WHO regions, but the exact regional designation for a 2000–2019 HALE loss is not stated.
 
 Sources Used:
-- WHO World health statistics 2025.pdf, data_item with pages [25] and related content describing the income-group panel and its projections. 
-- WHO World health statistics 2025.pdf, data_item with pages [35] describing the regional panel (context used for understanding the structure, though question focuses on income groups).","Taken from WHO World health statistics 2025.pdf : pages 12, 27, 35"
-"What was the global suicide death rate per 100,000 population for males in 2021?","Answer: 12.4 per 100,000 population.
+- WHO World health statistics 2025.pdf, pages 17, 27
 
-Source: WHO World health statistics 2025.pdf, data item with pages [35], which states: ""The rate in males (12.4 (UI: 9.6–15.4) per 100 000) was more than double that in females (5.9 (UI: 4.2–7.7) per 100 000)."" This provides the global suicide crude death rate for males in 2021. 
-- Evidence context: The same data item discusses global suicide mortality rates and gender disparities for 2021. 
+If you’d like, I can extract any explicit line or paraphrase that mentions a region tied to a 2000–2019 HALE loss for collective violence, but based on the current text, that exact mapping isn’t present.","Taken from WHO World health statistics 2025.pdf : pages 17, 22, 27"
+Which condition caused the largest morbidity-related HALE loss globally during the 2019–2021 period?,"Answer: The provided documents indicate that during 2019–2021, COVID-19 contributed to morbidity-driven health loss, but the explicit question asks for the condition that caused the largest morbidity-related HALE loss globally in 2019–2021. The available excerpts emphasize that morbidity from diabetes among adults 30+ caused a 0.14-year HALE loss in 2000–2019, and that COVID-19 and related mental-health burdens were major contributors to HALE changes 2019–2021, with depressive and anxiety disorders highlighted as significant morbidity factors. However, the text does not plainly state a single universally largest morbidity-related HALE loss for 2019–2021.
+
+Directly relevant points available:
+- For 2000–2019, diabetes morbidity among adults 30+ caused a 0.14-year HALE loss globally (Fig. 1.2) [WHO World health statistics 2025, pages 17–18 mentions this directly].
+- For 2019–2021, the morbidity burden from COVID-19 and associated mental health issues (anxiety, depressive disorders) are described as major contributors to global HALE changes, with regional variations. The narrative emphasizes COVID-19’s role in increasing morbidity-related losses, not a single global value for one condition.
+
+Given the data, a precise single condition identified as the largest global 2019–2021 morbidity-related HALE loss is not explicitly stated. The materials describe COVID-19 morbidity and mental health burdens (anxiety and depressive disorders) as key drivers, rather than providing a definitive ranking by condition for 2019–2021.
+
+If you’d like, I can:
+- Provide a concise paraphrase of the exact wording around 2019–2021 morbidity drivers from the sources, or
+- Extract a structured summary of the conditions mentioned (COVID-19, anxiety disorders, depressive disorders, diabetes) with their described impact to illustrate the relative emphasis.
+
+Sources Used:
+- WHO World Health Statistics 2025.pdf, pages 17, 18 (mentions 2000–2019 diabetes morbidity loss and 2019–2021 COVID-19 morbidity impact)
+- WHO World Health Statistics 2025.pdf, page 21 (discussion of 2019–2021 morbidity contributions, COVID-19, mental health)","Taken from WHO World health statistics 2025.pdf : pages 17, 18, 21, 22"
+How many years of HALE were lost in the Region of the Americas due to COVID-19 mortality in the 70+ age group specifically?,"Direct answer isn't explicitly stated in the provided excerpts. However, the first data_item (pages 20) contains the relevant regional breakdown for HALE changes and notes that in the Region of the Americas, COVID-19 mortality among adults 30 years and older contributed 2.05 years to the total 2.5-year HALE loss in 2019–2021, with an additional 0.56 years from other COVID-19 pandemic-related outcomes (totaling 2.61 years if summed, but the text specifies 2.05 and 0.56 separately for 2019–2021). The 70+ age group detail is not broken out in the provided text snippet; it only specifies “adults aged 30 years and older” as the contributor.
+
+What is available from the provided text:
+- Region: Region of the Americas
+- Timeframe: 2019–2021
+- COVID-19 mortality contribution: 2.05 years for adults aged 30+ in that region
+- Additional COVID-19-related morbidity/consequences: 0.56 years
+- Total HALE loss mentioned for 2019–2021 in the Americas: 2.5 years (for the region across all causes and contributions)
+
+Cited source:
+- WHO World health statistics 2025.pdf, data_item with pages [20, 21] (Change and inequality in healthy longevity, and the contributing causes)
+
+Therefore, the exact figure for the 70+ age group is not provided in the excerpts. The available data only specify the 30+ age group contribution (2.05 years) to the Region of the Americas’ HALE loss due to COVID-19 mortality in 2019–2021.
+
+If you’d like, I can summarize the closest available data points or guide you to extract the precise 70+ figure from the full figure/text in the source.
+
+Sources Used:
+- WHO World health statistics 2025.pdf, data_item with pages 20–21.","Taken from WHO World health statistics 2025.pdf : pages 20, 21, 22, 23"
+What is the leading cause of HALE disadvantage for females compared to males globally?,"Direct answer isn’t explicitly stated as a single line in the provided documents. However, the materials do describe the leading contributing causes to the difference in HALE (healthy life expectancy) between females and males, globally, and indicate which factors drive mortality and morbidity gaps.
+
+From the first data item (Figure 1.5 description and associated text):
+- The text notes that females have a HALE advantage in mortality (lower female mortality from several causes) but a morbidity disadvantage (higher morbidity in some areas) that offsets the HALE advantage from mortality by 1.56 years. Major mortality-related contributors to the female HALE advantage include reductions in deaths from ischaemic heart disease, stroke, COPD, and trachea/bronchus/lung cancers. Conversely, mortality from sex-specific causes (breast cancer and maternal conditions) reduced the HALE advantage.
+- The overarching emphasis is on the combination of multiple causes contributing to the HALE gap, with mortality advantages offset by morbidity disadvantages, rather than a single “leading cause” driving the global disadvantage.
+
+From the third data item (global and 2019–2021 context):
+- It reiterates that the global HALE gap is a net result of a 3.85-year mortality advantage for females and a 1.56-year morbidity disadvantage, yielding a net HALE advantage of 2.29 years for females in that framing (the text notes 3.85-year mortality advantage and 1.56-year morbidity offset, though exact net may depend on figure references).
+
+Putting it together:
+- Globally, the leading determinant of the female HALE advantage (i.e., why females live longer in healthy life expectancy overall) is the lower female mortality from certain non-sex-specific causes such as ischaemic heart disease, stroke, COPD, and trachea, bronchus and lung cancers. These mortality advantages contribute the most to the HALE advantage.
+- However, this advantage is offset by higher female morbidity in other areas, and sex-specific mortality (breast cancer, maternal conditions) reduces the advantage.
 
 Cited sources:
-- WHO World health statistics 2025.pdf, pages 35.","Taken from WHO World health statistics 2025.pdf : pages 35, 36"
-Which region had the highest crude death rate (33.9) for interpersonal violence among males in 2021?,"- The Region of the Americas had the highest crude death rate for interpersonal violence among males in 2021, with a rate of 33.9 per 100,000 population. 
-
-Sources:
-- WHO World health statistics 2025.pdf, data_item 1, pages 37–39 (Figure references and accompanying text noting interpersonal violence as a contributor and region-specific rates). 
-- Specifically, the content states: ""In 2021... mortality for interpersonal violence... [Region of the Americas] accounting for 0.71 years of the HALE gap"" and the figure text context tying regional high values to the Americas. 
-
-Cited source: WHO World health statistics 2025.pdf, pages 37–39.","Taken from WHO World health statistics 2025.pdf : pages 24, 25, 36, 37, 38, 39"
-What percentage of the global population requiring NTD interventions resides in the South-East Asia Region according to the 2023 distribution data?,"Direct answer: About 52.7% of the global population requiring NTD interventions resides in the South-East Asia Region in 2023.
-
-Context from sources:
-- The 2023 distribution data state that South-East Asia has the highest values for both metrics, with the orange bar (Region’s population requiring NTD interventions) around 52.1% to 52.7% of the global total, as described in the chart caption and accompanying text. The accompanying description notes SE Asia bears the largest share of people requiring interventions.
+- WHO World Health Statistics 2025.pdf, Figure 1.5 description and associated text, pages around 21–22 (data_item 1).
+- WHO World Health Statistics 2025.pdf, global HALE gap discussion and Figure 1.5 context (data_item 3).
 
 Sources Used:
-- WHO World health statistics 2025.pdf, pages 42 (data narrative around Figure 2.9)","Taken from WHO World health statistics 2025.pdf : pages 12, 42, 43"
+- WHO World Health Statistics 2025.pdf (pages 21–23 range as referenced in the items)","Taken from WHO World health statistics 2025.pdf : pages 21, 22, 23"
+What is the HALE advantage for females in the Western Pacific Region regarding stroke mortality?,"Direct answer not explicitly stated in the provided items. However, we can summarize the closest available data:
+
+- The materials discuss HALE (Healthy Life Expectancy) gaps between sexes and how different causes (including stroke) contribute to female HALE advantages in various regions.
+- Factual statements present:
+  - In 2019, stroke is a major contributor to female HALE advantage in some regions (e.g., Region of the Americas and global patterns) but do not provide a specific numeric HALE advantage value for stroke mortality in the Western Pacific Region.
+  - For the Western Pacific region in 2019, stroke is cited as a significant contributor to mortality differences within figures describing regional contributions (Fig. 1.5), but no explicit numeric value for the HALE advantage due to stroke mortality in the Western Pacific is given in the text excerpts.
+
+Paraphrase of relevant content present:
+- The WHS 2025 documents describe that stroke is a major contributor to female HALE advantage globally and in several regions, with specific values given for other causes (e.g., ischaemic heart disease, COPD, breast cancer, maternal conditions) in various regions, and note that region-specific contributions (including the Western Pacific) shape the female HALE advantage. The text also notes that in 2019 the female HALE lead was substantial in some regions, and stroke contributes to HALE differences, but the exact Western Pacific region stroke-specific HALE advantage figure is not provided in these excerpts.
+
+Sources Used:
+- WHO World health statistics 2025.pdf, pages 21–24 (Fig. 1.5 and related discussion)","Taken from WHO World health statistics 2025.pdf : pages 21, 22, 24, 25"
+What was the global HALE advantage for females over males regarding COVID-19 mortality in 2021?,"Direct answer from the provided content: In 2021, lower female mortality from COVID-19 and other COVID-19 pandemic-related outcomes accounted for a combined HALE advantage of 0.89 years over males globally (0.72 years from COVID-19 mortality and 0.17 years from other COVID-19 pandemic-related outcomes), with the effect predominantly from those aged 30 years and older (0.70 and 0.16 years, respectively).
+
+Cited sources:
+- WHO World health statistics 2025.pdf, related to Fig. 1.6 and global HALE differences (Data item 1, page references indicate discussion of 2021 contributions).
+- Specific figures and phrasing are drawn from the described sentences: “What is most noteworthy is that lower female mortality from COVID-19 (0.72 years) and other COVID-19 pandemic-related outcomes (0.17 years) have contributed to a 0.89-year HALE advantage over males globally.” and the regional age-detail notes.
+
+Sources Used: WHO World health statistics 2025.pdf (Primary: discussions around Fig. 1.6 and global HALE gap, 2021).","Taken from WHO World health statistics 2025.pdf : pages 16, 17, 21, 22, 23, 24, 25"
+Which region saw the smallest female HALE advantage (0.01 years) in COVID-19 mortality for the 70+ age group in 2021?,"Direct answer isn't available in the provided items. However, from the included text, we can summarize related details:
+
+- The content mentions that in 2021, ""lower female mortality from COVID-19 and other COVID-19 pandemic-related outcomes explained 0.96 and 0.03 years, respectively, of the lead in female HALE (2.96 years in total)"" and that these contributions were ""concentrated in those aged 30 years and older."" It also notes regional patterns for various HALE contributions (e.g., in 2019 in the Region of the Americas, and region-specific patterns in Europe, Africa, etc.), but it does not specify a 70+ age group with a 0.01-year COVID-19 mortality contribution for any region in 2021.
+
+- The surrounding text references Figure 1.6 and related regional analyses, but the exact region with a 0.01-year contribution for the 70+ age group in 2021 is not explicitly named in the provided excerpts.
+
+Given these constraints, I cannot identify a region that ""saw the smallest female HALE advantage (0.01 years) in COVID-19 mortality for the 70+ age group in 2021"" from the supplied data.
+
+What I can provide from the available content:
+- In 2021, the female HALE lead is largely due to lower female mortality from COVID-19 and related outcomes, with contributions concentrated in those aged 30+ (0.46 and 0.18 years for COVID-19 and other COVID-19 outcomes in the region-specific notes) and a total of 2.96 years female lead globally (Fig. 1.6).
+- The text references region-specific patterns (Region of the Americas in 2019, Western Pacific in 2019, Europe in 2019, etc.) but does not specify the exact 0.01-year figure for the 70+ age group in 2021.
+
+Sources:
+- WHO World health statistics 2025.pdf, pages around 21–25 and 37–39 (global HALE/Gender gaps and figure references). Specific lines cited above come from: content describing 2021 contributions to female HALE lead from COVID-19 mortality, and regional notes (Fig. 1.6). 
+
+If you’d like, I can attempt to extract the precise region-and-age data from a higher-resolution image or the original figures (Fig. 1.6) if available. 
+
+Sources Used: WHO World health statistics 2025.pdf (pages 21–25, 37–39).","Taken from WHO World health statistics 2025.pdf : pages 21, 22, 23, 24, 25, 37, 38, 39"
+What is the HALE gap between High-income and Low-income countries caused by Lower respiratory infections in the 0–1 age group?,"Direct answer isn’t explicitly stated in the provided chunks. However, there is relevant context describing how various causes contribute to HALE gaps between income groups.
+
+From the first data item (Figure 1.7 discussion for 2019), the major causes contributing to HALE gaps include lower respiratory infections among others, with quantified contributions broken down by income comparisons. The text notes:
+- Lower death rates from these conditions in high-income countries accounted for: 0.52, 0.95 and 0.4 years of the HALE gap due to ischaemic heart disease, and 1.14, 0.76 and 1.01 years due to stroke, in comparisons with low-, lower-middle-, and upper-middle-income countries, respectively.
+
+For lower respiratory infections specifically, the excerpt references that “Lower respiratory infections” contributed to HALE differences in 2019, but it does not provide a distinct numeric value for the 0–1 age group (0–1 years) in the 2019 comparison between high-income and low-income countries. The second item (Figure 1.8 and 2021 discussion) and subsequent items discuss 2021 patterns and age-group visualizations, but again do not give a precise figure for the 0–1 age group for lower respiratory infections in the high-income vs low-income comparison.
+
+What can be stated from the available text:
+- Lower respiratory infections are among the major contributors to the HALE gap between high-income and other income groups.
+- The specific quantified contribution for the 0–1 age group and the exact comparison between high-income and low-income countries is not provided in the accessible content.
+
+Paraphrase of the related content for clarity:
+- The material discusses HALE gaps by income group and age, highlighting lower respiratory infections as a contributing cause, with various numerical contributions for other conditions (e.g., ischaemic heart disease, stroke) when comparing high-income to other income groups, but it does not specify the exact number for 0–1 years for lower respiratory infections in the high-income vs low-income comparison.
+
+Sources Used:
+- WHO World health statistics 2025.pdf, Figure 1.7 description (Data_item 1, pages around 24–25)
+- WHO World health statistics 2025.pdf, Figure 1.8 description (Data_item 2, page 26)
+- Additional context from related pages (Data_item 3 and 4)
+
+If you’d like, I can extract any additional nearby figures or re-skim for the exact numeric value in the 0–1 age group if more text is provided.","Taken from WHO World health statistics 2025.pdf : pages 24, 25, 26"
+What is the negative HALE contribution of Drug use disorders for High-income countries when compared to Lower-middle-income countries?,"Direct answer not explicitly stated in a single line, but can be inferred from the combined content across the items. The relevant figures describe the difference in healthy life expectancy (HALE) contributions by cause for high-income countries compared with other income groups.
+
+From the material describing Figure 1.7 (leading contributing causes for the difference in HALE in 2019 between high-income and other income groups) and the accompanying textual details:
+- Drug use disorders contribute negative years to the HALE gap when comparing high-income countries to other groups.
+- Specifically, for drug use disorders, the differences cited include negative contributions like –0.20 to –0.19 years in comparisons with low-, lower-middle-, and upper-middle-income countries, respectively (these exact values appear in the narrative summarizing the gaps).
+
+Focusing on the comparison of high-income vs. lower-middle-income countries, the text states:
+- Drug use disorders contributed –0.20 years to the HALE gap between high-income and lower-middle-income countries.
+
+Answer:
+- The negative HALE contribution of Drug use disorders for High-income countries when compared to Lower-middle-income countries is –0.20 years. 
+
+Sources:
+- WHO World health statistics 2025.pdf, related to Figure 1.7 and accompanying discussion (High-income vs. lower-middle-income comparison). [Pages referenced in data_item: 25]","Taken from WHO World health statistics 2025.pdf : pages 24, 25, 26"
+What is the HALE lead for High-income countries over Lower-middle-income countries due specifically to COVID-19 mortality?,"Direct answer isn’t available as a single explicit number for “HALE lead for High-income countries over Lower-middle-income countries due specifically to COVID-19 mortality” across the provided items. However, the closest supporting details are:
+
+- In the 2021 comparison between high-income and other income groups, the text notes that lower mortality due to COVID-19 and other COVID-19 pandemic-related outcomes accounted for HALE leads when comparing high-income countries to other groups. Specifically, it states that for this comparison, the HALE lead due to COVID-19-related mortality and outcomes contributed to the differences, with values mentioned in relation to various income groups (e.g., “accounted for the HALE lead of 0.25 years and 0.32 years, respectively, compared with low-income countries; 1.39 and 0.47 years, respectively, compared with lower-middle-income countries; and 0.21 and 0.14 years, respectively, compared with upper-middle-income countries”).
+- The exact phrasing indicates: for comparisons with lower-middle-income countries, the COVID-19 mortality contribution to the HALE lead is 1.39 years for COVID-19 mortality and 0.47 years for other COVID-19 pandemic-related outcomes (these numbers reflect the combined effect on the HALE lead when comparing high-income vs lower-middle-income groups).
+
+From this, the HALE lead for High-income over Lower-middle-income countries due specifically to COVID-19 mortality is 1.39 years.
+
+Cited source:
+- WHO World Health Statistics 2025.pdf, figures and accompanying text discussing Figure 1.8 and the 2021 HALE gaps by income group (High-income vs Lower-middle-income), including the COVID-19 mortality contribution of 1.39 years. [Source: WHO World Health Statistics 2025.pdf, page references around Fig. 1.8 and related narrative] 
+
+Sources Used: WHO World Health Statistics 2025.pdf (pages referencing Fig. 1.8 and corresponding narrative).","Taken from WHO World health statistics 2025.pdf : pages 24, 25, 26, 27"
+Which cause contributes a -0.16 year HALE disadvantage to High-income countries when compared to Low-income countries in the 2021 comparison?,"Direct answer from the provided content: The data indicating a -0.16 year HALE disadvantage for high-income countries (vs. low-income countries) in 2021 is associated with the age-cause breakdown shown in Figure 1.7. In the corresponding excerpt, the line item reads “-0.02 -0.16 -0.13 1. Falls 0.01 0.01 0.56 0.55 2. MORBIDITY …” which places -0.16 in the row aligned with “Falls” as a cause. Therefore:
+
+- Cause: Falls
+- HALE difference: -0.16 years for high-income countries compared with low-income countries in 2021
+
+Sources:
+- WHO World health statistics 2025.pdf, data_item with pages [24], containing Figure 1.7 description and the numeric snippet including -0.16 for Falls.","Taken from WHO World health statistics 2025.pdf : pages 24, 25, 26"
+What was the estimated Maternal Mortality Ratio for the African Region in the year 2023?,"Direct answer isn't explicitly stated for the African Region MMR in 2023 in the provided excerpts. However, one data item includes regional 2023 MMR values, and states: ""The African Region had a high MMR of 442 (UI: 376–560) per 100 000 live births in 2023"" and ""The African Region alone accounted for approximately 70% of global maternal deaths in 2023."" 
+
+Therefore:
+- Estimated MMR for the African Region in 2023: 442 maternal deaths per 100,000 live births (UI: 376–560). Source: WHO World Health Statistics 2025, page 33 (and page 32 as context) [Source: WHO et al. 2025; Figures described in 2.1 Maternal mortality; 2023 regional breakdown].
+
+Citations:
+- WHO World Health Statistics 2025.pdf, page 33 (and surrounding context on regional MMR, including the 442 per 100,000 in 2023). [Source: WHO et al.]","Taken from WHO World health statistics 2025.pdf : pages 30, 31, 32, 33, 34"
+What was the Neonatal Mortality Rate for the South-East Asia Region in 1990?,"Direct answer not explicitly stated in the provided text. However, the relevant data appears in the discussion of Figure 2.2 for Neonatal mortality and regional rates.
+
+From the content describing Neonatal mortality (World Health Statistics 2025, page with Fig. 2.2):
+- It notes that the South-East Asia Region had the highest regional Neonatal Mortality Rate (NMR) in 1990 at 53 deaths per 1000 live births.
+
+Therefore:
+- Neonatal Mortality Rate for the South-East Asia Region in 1990: 53 deaths per 1000 live births.
+
+Sources:
+- World health statistics 2025, pages around 33 (Figure 2.2 and related discussion) [Source: WHO World health statistics 2025.pdf, page 33]. 
+  - Specifically: “The South-East Asia Region had the highest regional NMR in 1990 at 53 (UI: 51–55) deaths per 1000 live births” (Fig. 2.2). [Data item 4, page 33]
+
+**Sources Used:** WHO World health statistics 2025.pdf (Data item 4, page 33)","Taken from WHO World health statistics 2025.pdf : pages 27, 28, 32, 33, 34"
+Which World Bank income group shows the most significant projected reduction in premature NCD mortality by 2030?,"Most significant projected reduction by 2030 is observed for the lower-income groups, which start at higher levels and show larger relative declines toward the projection year, though disparities with higher-income groups persist. This is inferred from the descriptions of the two-panel figure “Observed and projected trends for risk of premature mortality from NCDs (%), by WHO region” and “by World Bank income groups,” where lower-income groups typically begin higher and exhibit larger declines in the projected trends (heavy emphasis on convergence toward lower levels by 2030) (Source: WHO World Health Statistics 2025, Figure 2.3 captions and narrative around regional and income-group trajectories). 
+
+Cited sources:
+- WHO World health statistics 2025.pdf, Figure 2.3 captions and related narrative, pages 34–35. 
+  - Sources mention the World Bank income groups trajectories and the general pattern of higher starting levels for lower-income groups with declines toward 2030.
+
+Sources Used: WHO World health statistics 2025.pdf (Figure 2.3 captions and accompanying discussion on income groups)","Taken from WHO World health statistics 2025.pdf : pages 12, 34, 35"
+"What was the global suicide death rate per 100,000 population for males in 2021?","Global suicide death rate for males in 2021: 12.4 per 100,000 population. Source: WHO World Health Statistics 2025, data item with pages [35]. Citations: WHO World health statistics 2025.pdf, page 35.","Taken from WHO World health statistics 2025.pdf : pages 35, 36, 37, 38, 39"
+Which region had the highest crude death rate (33.9) for interpersonal violence among males in 2021?,"Direct answer isn’t explicitly stated word-for-word in the provided items. However, based on item 3 (data_item with pages [35]), it reports homicide mortality by region in 2021 and notes: “The WHO Region of the Americas had the highest mortality burden from homicide in 2021, with a total of 198 000 deaths, equivalent to a CDR of 19.3 per 100 000 population” and compares regional burdens. The question asks: highest crude death rate (33.9) for interpersonal violence among males in 2021.
+
+From the provided content, there is no line giving a per-region rate of 33.9 for interpersonal violence among males in 2021. The only explicit numerical regional rate given for homicide in 2021 is 19.3 per 100 000 in the Americas. Therefore, a direct answer with the exact 33.9 value cannot be found in the supplied items.
+
+What we can provide from the relevant content:
+- In 2021, the Region of the Americas had the highest homicide mortality burden (198,000 deaths; CDR 19.3 per 100,000).
+- The Western Pacific Region had a substantially lower rate (CDR 1.5 per 100,000) for homicide in 2021.
+- Men bear the majority of homicide deaths (about 80%).
+
+If you’d like, I can extract and tabulate the legible regional values from the figure descriptions to reproduce a structured table, but the exact 33.9 figure for interpersonal violence among males in 2021 isn’t present in the provided text.
+
+Sources used:
+- WHO World health statistics 2025.pdf, data_item with pages [35] (Homicide mortality by region, 2021)","Taken from WHO World health statistics 2025.pdf : pages 35, 37, 38, 39"
+What percentage of the global population requiring NTD interventions resides in the South-East Asia Region according to the 2023 distribution data?,"- Direct answer: Approximately 52.7% of the global population requiring NTD interventions resides in the South-East Asia Region, according to the 2023 distribution data shown in the referenced figure.
+
+Sources:
+- WHO World health statistics 2025.pdf, data item 1, figure/text describing share by region (South-East Asia Region orange bar ~ 52.7) [Pages 42].
+- The same article notes the regional breakdown for 2023 (Figure 2.9: Share of people requiring interventions against NTDs and share of population out of global total, by WHO region, 2023) (data item 2 corroborates context).","Taken from WHO World health statistics 2025.pdf : pages 34, 35, 42, 43"

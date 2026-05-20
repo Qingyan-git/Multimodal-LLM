@@ -10,3 +10,75 @@ Token cost to EMBED PAGE supplier_guide_detailed.pdf : 18945
 Money cost to EMBED PAGE supplier_guide_detailed.pdf : 0.0003789
 
 
+
+Token cost to IMAGE chunk supplier_guide_detailed.pdf : 6213
+
+Money cost to IMAGE chunk supplier_guide_detailed.pdf : 0.0006218
+
+
+
+Token cost to EMBED IMAGE supplier_guide_detailed.pdf : 991
+
+Money cost to EMBED IMAGE supplier_guide_detailed.pdf : 1.982e-05
+
+
+
+Token cost to TABLE chunk supplier_guide_detailed.pdf : 11919
+
+Money cost to TABLE chunk supplier_guide_detailed.pdf : 0.00039758
+
+
+
+Token cost to EMBED TABLE supplier_guide_detailed.pdf : 1408
+
+Money cost to EMBED TABLE supplier_guide_detailed.pdf : 2.816e-05
+
+
+
+Token cost to TEXT chunk supplier_guide_detailed.pdf : 621612
+
+Money cost to TEXT chunk supplier_guide_detailed.pdf : 0.008810650000000001
+
+
+
+Token cost to EMBED TEXT supplier_guide_detailed.pdf : 17120
+
+Money cost to EMBED TEXT supplier_guide_detailed.pdf : 0.00034240000000000003
+
+
+
+Token cost to IMAGE chunk supplier_guide_detailed.pdf : 6033
+
+Money cost to IMAGE chunk supplier_guide_detailed.pdf : 0.00058165
+
+
+
+Token cost to EMBED IMAGE supplier_guide_detailed.pdf : 902
+
+Money cost to EMBED IMAGE supplier_guide_detailed.pdf : 1.804e-05
+
+
+
+Token cost to TABLE chunk supplier_guide_detailed.pdf : 11936
+
+Money cost to TABLE chunk supplier_guide_detailed.pdf : 0.00040438
+
+
+
+Token cost to EMBED TABLE supplier_guide_detailed.pdf : 1426
+
+Money cost to EMBED TABLE supplier_guide_detailed.pdf : 2.852e-05
+
+
+
+Token cost to PAGE chunk supplier_guide_detailed.pdf : 278212
+
+Money cost to PAGE chunk supplier_guide_detailed.pdf : 0.012291410000000003
+
+
+
+Token cost to EMBED PAGE supplier_guide_detailed.pdf : 19987
+
+Money cost to EMBED PAGE supplier_guide_detailed.pdf : 0.00039974000000000005
+
+

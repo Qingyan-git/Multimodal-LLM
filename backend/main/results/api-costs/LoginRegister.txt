@@ -10,3 +10,63 @@ Token cost to EMBED PAGE LoginRegister.pdf : 28891
 Money cost to EMBED PAGE LoginRegister.pdf : 0.00057782
 
 
+
+Token cost to IMAGE chunk LoginRegister.pdf : 68603
+
+Money cost to IMAGE chunk LoginRegister.pdf : 0.008320489999999998
+
+
+
+Token cost to EMBED IMAGE LoginRegister.pdf : 17090
+
+Money cost to EMBED IMAGE LoginRegister.pdf : 0.0003418
+
+
+
+Token cost to TABLE chunk LoginRegister.pdf : 0
+
+Money cost to TABLE chunk LoginRegister.pdf : 0.0
+
+
+
+Token cost to TEXT chunk LoginRegister.pdf : 248686
+
+Money cost to TEXT chunk LoginRegister.pdf : 0.004499169999999999
+
+
+
+Token cost to EMBED TEXT LoginRegister.pdf : 10766
+
+Money cost to EMBED TEXT LoginRegister.pdf : 0.00021532
+
+
+
+Token cost to IMAGE chunk LoginRegister.pdf : 68136
+
+Money cost to IMAGE chunk LoginRegister.pdf : 0.00857879
+
+
+
+Token cost to EMBED IMAGE LoginRegister.pdf : 16824
+
+Money cost to EMBED IMAGE LoginRegister.pdf : 0.00033648
+
+
+
+Token cost to TABLE chunk LoginRegister.pdf : 0
+
+Money cost to TABLE chunk LoginRegister.pdf : 0.0
+
+
+
+Token cost to PAGE chunk LoginRegister.pdf : 332549
+
+Money cost to PAGE chunk LoginRegister.pdf : 0.016904639999999995
+
+
+
+Token cost to EMBED PAGE LoginRegister.pdf : 28803
+
+Money cost to EMBED PAGE LoginRegister.pdf : 0.00057606
+
+

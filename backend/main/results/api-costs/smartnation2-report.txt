@@ -10,3 +10,63 @@ Token cost to EMBED PAGE smartnation2-report.pdf : 86615
 Money cost to EMBED PAGE smartnation2-report.pdf : 0.0017323
 
 
+
+Token cost to IMAGE chunk smartnation2-report.pdf : 77143
+
+Money cost to IMAGE chunk smartnation2-report.pdf : 0.006569310000000001
+
+
+
+Token cost to EMBED IMAGE smartnation2-report.pdf : 11033
+
+Money cost to EMBED IMAGE smartnation2-report.pdf : 0.00022066
+
+
+
+Token cost to TABLE chunk smartnation2-report.pdf : 0
+
+Money cost to TABLE chunk smartnation2-report.pdf : 0.0
+
+
+
+Token cost to TEXT chunk smartnation2-report.pdf : 8521316
+
+Money cost to TEXT chunk smartnation2-report.pdf : 0.07934054999999994
+
+
+
+Token cost to EMBED TEXT smartnation2-report.pdf : 68017
+
+Money cost to EMBED TEXT smartnation2-report.pdf : 0.0013603399999999998
+
+
+
+Token cost to IMAGE chunk smartnation2-report.pdf : 77201
+
+Money cost to IMAGE chunk smartnation2-report.pdf : 0.006887510000000002
+
+
+
+Token cost to EMBED IMAGE smartnation2-report.pdf : 11109
+
+Money cost to EMBED IMAGE smartnation2-report.pdf : 0.00022218000000000002
+
+
+
+Token cost to TABLE chunk smartnation2-report.pdf : 0
+
+Money cost to TABLE chunk smartnation2-report.pdf : 0.0
+
+
+
+Token cost to PAGE chunk smartnation2-report.pdf : 3754994
+
+Money cost to PAGE chunk smartnation2-report.pdf : 0.07326358
+
+
+
+Token cost to EMBED PAGE smartnation2-report.pdf : 87212
+
+Money cost to EMBED PAGE smartnation2-report.pdf : 0.00174424
+
+

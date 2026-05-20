@@ -10,3 +10,75 @@ Token cost to EMBED PAGE WHO World health statistics 2025.pdf : 78594
 Money cost to EMBED PAGE WHO World health statistics 2025.pdf : 0.00157188
 
 
+
+Token cost to IMAGE chunk WHO World health statistics 2025.pdf : 196353
+
+Money cost to IMAGE chunk WHO World health statistics 2025.pdf : 0.01292859
+
+
+
+Token cost to EMBED IMAGE WHO World health statistics 2025.pdf : 25819
+
+Money cost to EMBED IMAGE WHO World health statistics 2025.pdf : 0.0005163800000000001
+
+
+
+Token cost to TABLE chunk WHO World health statistics 2025.pdf : 56752
+
+Money cost to TABLE chunk WHO World health statistics 2025.pdf : 0.00237149
+
+
+
+Token cost to EMBED TABLE WHO World health statistics 2025.pdf : 7294
+
+Money cost to EMBED TABLE WHO World health statistics 2025.pdf : 0.00014588
+
+
+
+Token cost to TEXT chunk WHO World health statistics 2025.pdf : 27432086
+
+Money cost to TEXT chunk WHO World health statistics 2025.pdf : 0.20827130000000008
+
+
+
+Token cost to EMBED TEXT WHO World health statistics 2025.pdf : 123870
+
+Money cost to EMBED TEXT WHO World health statistics 2025.pdf : 0.0024774
+
+
+
+Token cost to IMAGE chunk WHO World health statistics 2025.pdf : 194686
+
+Money cost to IMAGE chunk WHO World health statistics 2025.pdf : 0.012913099999999999
+
+
+
+Token cost to EMBED IMAGE WHO World health statistics 2025.pdf : 25007
+
+Money cost to EMBED IMAGE WHO World health statistics 2025.pdf : 0.00050014
+
+
+
+Token cost to TABLE chunk WHO World health statistics 2025.pdf : 56727
+
+Money cost to TABLE chunk WHO World health statistics 2025.pdf : 0.00236149
+
+
+
+Token cost to EMBED TABLE WHO World health statistics 2025.pdf : 7267
+
+Money cost to EMBED TABLE WHO World health statistics 2025.pdf : 0.00014534000000000001
+
+
+
+Token cost to PAGE chunk WHO World health statistics 2025.pdf : 6416465
+
+Money cost to PAGE chunk WHO World health statistics 2025.pdf : 0.08673817000000006
+
+
+
+Token cost to EMBED PAGE WHO World health statistics 2025.pdf : 79713
+
+Money cost to EMBED PAGE WHO World health statistics 2025.pdf : 0.0015942600000000001
+
+

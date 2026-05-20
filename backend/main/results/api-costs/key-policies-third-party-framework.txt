@@ -10,3 +10,63 @@ Token cost to EMBED PAGE key-policies-third-party-framework.pdf : 3513
 Money cost to EMBED PAGE key-policies-third-party-framework.pdf : 7.026000000000001e-05
 
 
+
+Token cost to IMAGE chunk key-policies-third-party-framework.pdf : 2753
+
+Money cost to IMAGE chunk key-policies-third-party-framework.pdf : 0.00036795
+
+
+
+Token cost to EMBED IMAGE key-policies-third-party-framework.pdf : 709
+
+Money cost to EMBED IMAGE key-policies-third-party-framework.pdf : 1.418e-05
+
+
+
+Token cost to TABLE chunk key-policies-third-party-framework.pdf : 0
+
+Money cost to TABLE chunk key-policies-third-party-framework.pdf : 0.0
+
+
+
+Token cost to TEXT chunk key-policies-third-party-framework.pdf : 8853
+
+Money cost to TEXT chunk key-policies-third-party-framework.pdf : 0.0006222
+
+
+
+Token cost to EMBED TEXT key-policies-third-party-framework.pdf : 1772
+
+Money cost to EMBED TEXT key-policies-third-party-framework.pdf : 3.544e-05
+
+
+
+Token cost to IMAGE chunk key-policies-third-party-framework.pdf : 2689
+
+Money cost to IMAGE chunk key-policies-third-party-framework.pdf : 0.00035250000000000006
+
+
+
+Token cost to EMBED IMAGE key-policies-third-party-framework.pdf : 674
+
+Money cost to EMBED IMAGE key-policies-third-party-framework.pdf : 1.348e-05
+
+
+
+Token cost to TABLE chunk key-policies-third-party-framework.pdf : 0
+
+Money cost to TABLE chunk key-policies-third-party-framework.pdf : 0.0
+
+
+
+Token cost to PAGE chunk key-policies-third-party-framework.pdf : 18184
+
+Money cost to PAGE chunk key-policies-third-party-framework.pdf : 0.0020473600000000002
+
+
+
+Token cost to EMBED PAGE key-policies-third-party-framework.pdf : 3495
+
+Money cost to EMBED PAGE key-policies-third-party-framework.pdf : 6.99e-05
+
+

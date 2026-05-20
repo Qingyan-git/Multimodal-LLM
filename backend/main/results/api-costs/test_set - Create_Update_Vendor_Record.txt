@@ -10,3 +10,9 @@ Token cost to ANSWER QUESTIONS for test_set - Create_Update_Vendor_Record.csv : 
 Money cost to ANSWER QUESTIONS for test_set - Create_Update_Vendor_Record.csv : 0.00130699
 
 
+
+Token cost to ANSWER QUESTIONS for test_set - Create_Update_Vendor_Record.csv : 34385
+
+Money cost to ANSWER QUESTIONS for test_set - Create_Update_Vendor_Record.csv : 0.0022922000000000003
+
+

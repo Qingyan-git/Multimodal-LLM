@@ -10,3 +10,75 @@ Token cost to EMBED PAGE Guide to Data Protection Practices for ICT Systems.pdf 
 Money cost to EMBED PAGE Guide to Data Protection Practices for ICT Systems.pdf : 0.00061526
 
 
+
+Token cost to IMAGE chunk Guide to Data Protection Practices for ICT Systems.pdf : 4840
+
+Money cost to IMAGE chunk Guide to Data Protection Practices for ICT Systems.pdf : 0.0005311000000000001
+
+
+
+Token cost to EMBED IMAGE Guide to Data Protection Practices for ICT Systems.pdf : 874
+
+Money cost to EMBED IMAGE Guide to Data Protection Practices for ICT Systems.pdf : 1.748e-05
+
+
+
+Token cost to TABLE chunk Guide to Data Protection Practices for ICT Systems.pdf : 127435
+
+Money cost to TABLE chunk Guide to Data Protection Practices for ICT Systems.pdf : 0.00282968
+
+
+
+Token cost to EMBED TABLE Guide to Data Protection Practices for ICT Systems.pdf : 14311
+
+Money cost to EMBED TABLE Guide to Data Protection Practices for ICT Systems.pdf : 0.00028622
+
+
+
+Token cost to TEXT chunk Guide to Data Protection Practices for ICT Systems.pdf : 1461374
+
+Money cost to TEXT chunk Guide to Data Protection Practices for ICT Systems.pdf : 0.018027680000000004
+
+
+
+Token cost to EMBED TEXT Guide to Data Protection Practices for ICT Systems.pdf : 28266
+
+Money cost to EMBED TEXT Guide to Data Protection Practices for ICT Systems.pdf : 0.00056532
+
+
+
+Token cost to IMAGE chunk Guide to Data Protection Practices for ICT Systems.pdf : 4569
+
+Money cost to IMAGE chunk Guide to Data Protection Practices for ICT Systems.pdf : 0.00046995
+
+
+
+Token cost to EMBED IMAGE Guide to Data Protection Practices for ICT Systems.pdf : 739
+
+Money cost to EMBED IMAGE Guide to Data Protection Practices for ICT Systems.pdf : 1.4779999999999999e-05
+
+
+
+Token cost to TABLE chunk Guide to Data Protection Practices for ICT Systems.pdf : 127555
+
+Money cost to TABLE chunk Guide to Data Protection Practices for ICT Systems.pdf : 0.0034306400000000017
+
+
+
+Token cost to EMBED TABLE Guide to Data Protection Practices for ICT Systems.pdf : 14432
+
+Money cost to EMBED TABLE Guide to Data Protection Practices for ICT Systems.pdf : 0.00028864
+
+
+
+Token cost to PAGE chunk Guide to Data Protection Practices for ICT Systems.pdf : 834127
+
+Money cost to PAGE chunk Guide to Data Protection Practices for ICT Systems.pdf : 0.02131395000000001
+
+
+
+Token cost to EMBED PAGE Guide to Data Protection Practices for ICT Systems.pdf : 29544
+
+Money cost to EMBED PAGE Guide to Data Protection Practices for ICT Systems.pdf : 0.00059088
+
+

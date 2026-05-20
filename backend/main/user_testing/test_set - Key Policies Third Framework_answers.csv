@@ -1,79 +1,100 @@
 ﻿Question,Answer,Sources
-"How does the Government define a ""Third Party"" under this framework?","- Direct answer: A Third Party is defined as a party (other than a data subject or an Agency) which either (i) delivers, develops, implements, operates, provides or otherwise supplies ICT systems or services to an Agency, or (ii) collects, stores or otherwise processes data for an Agency. This definition is stated in the Lifecycle section of the framework.
+"How does the Government define a ""Third Party"" under this framework?","Direct answer cannot be found with a single explicit definition term in the provided items. However, the closest explicit definition appears in the first data item, which defines a Third Party as:
 
-- paraphrased recap from the provided text: The framework defines a Third Party as an entity distinct from data subjects and government Agencies that either supplies ICT systems/services to the Agency or handles data for the Agency.
-
-Sources:
-- key-policies-third-party-framework.pdf, data_item 1, pages 2-3 (definition appears in the content describing the lifecycle and the term “Third Party”). 
-- key-policies-third-party-framework.pdf, data_item 2, page 4 (context around Stage 4 and lifecycle). 
+- “a party (other than a data subject[a] or an Agency[b]) which:
+  (i) delivers, develops, implements, operates, provides or otherwise supplies ICT systems or services to an Agency, or
+  (ii) collects, stores or otherwise processes data for an Agency.”
 
 Citations:
-- Source file: key-policies-third-party-framework.pdf; Page numbers: 2-3. 
-- Source file: key-policies-third-party-framework.pdf; Page number: 4.","Taken from key-policies-third-party-framework.pdf : pages 2, 3, 4, 5"
-"What is a ""data subject""?","Direct answer isn’t explicitly stated in the provided items. However, related content defines terms around data handling and access governance in government data security policies. Specifically, one item defines “Sensitive” data and discusses data handling and potential impact on individuals, and another item defines “User” and “Privileged data role,” but there is no explicit definition of “data subject” in the excerpts.
+- Source: key-policies-third-party-framework.pdf, data_item 1
+- Page reference: Page 02 (as indicated in metadata and accompanying content)
 
-Paraphrase of the closest related content:
-- The documents discuss roles, classifications, and handling of government data, including the concept of sensitive information and the potential impact if disclosed (e.g., on insurability, employability, reputation). They also define who constitutes a user (government officers and non-government personnel granted access to government resources) and how privileged access and privileged data roles operate.
+If you’d like, I can paraphrase or pull exact phrasing into a compact data snippet for your RAG pipeline. 
+
+Sources Used:
+- key-policies-third-party-framework.pdf (data_item 1), pages 2-3 as referenced in metadata.","Taken from key-policies-third-party-framework.pdf : pages 2, 3, 4, 5"
+"What is a ""data subject""?","Direct answer isn’t explicitly available in the provided documents. However, I can summarize the related content present:
+
+- The documents discuss data protection, data security, and governance concepts, including terms like privileged accounts, data roles, security classifications, and sensitive/sensitivity classifications (as part of Government Data Security Policies, Annex A). These items focus on who may access data (users, roles) and how data should be classified and handled, but they do not define the term “data subject” themselves. 
+- The materials emphasize governance, handling, and protection of data, as well as the roles of users, classification, and use within government contexts.
+
+Paraphrase of related content you provided:
+- Privileged accounts and privileged data roles differentiate who has high-level access versus data-needed-for-task access (data scientists, database admins, etc.), with attention to security classifications and sensitivity classifications to govern data handling and minimize risk (Annex A, Government Data Security Policies, pages around A6; also cover page context on the same policy).
+- The policy cover explains the document’s purpose and disclaimers, and the body provides definitions and explanations of concepts related to data security and access.
+
+If you’d like, I can extract relevant terms and craft a compact JSON-style entry for RAG ingestion based on the provided content (e.g., sections for Privileged accounts, Privileged data role, Security classification, Sensitive, Sensitivity classification, Use, User) and indicate their definitions as given.
+
+Sources used:
+- Government Data Security Policies (Annex A) — content describing privileged accounts, privileged data roles, security classification, sensitive, sensitivity classification, use, and user; and the cover/context (pages 1 and 22 references). 
+  - Documents: government-data-security-policies.pdf (Pages [1], [22], [6] referenced in the chunks).","Taken from WHO World health statistics 2025.pdf : pages 2
+Taken from Guide to Data Protection Practices for ICT Systems.pdf : pages 30
+Taken from government-data-security-policies.pdf : pages 1, 22"
+"What counts as an ""Agency""?","Answer:
+- An Agency refers to Organs of State, Ministries, Departments and Statutory Boards. This definition appears in the glossary/table of the Government Data Security Policies (Annex A) and is also echoed in the Third-Party Management Framework context where “Agency” is defined as Organs of State, Ministries, Departments and Statutory Boards. 
 
 Cited sources:
-- government-data-security-policies.pdf, pages [22] (definitions of Privileged accounts, Privileged data role, Security classification, Sensitive, Use, User) 
-- government-data-security-policies.pdf, pages [18] (Technical measures and process measures context) 
+- government-data-security-policies.pdf, Glossary entry for Agency (Annex A) [page 4] — ""Agency refers to Organs of State, Ministries, Departments and Statutory Boards."" 
+- government-data-security-policies.pdf, Third-Party Management Framework context (pages 2–4) — confirms Agency as related to the government structure defined above.
 
-If you want, I can extract a machine-readable JSON representation from these items for your RAG system. 
-
-Sources Used: government-data-security-policies.pdf (pages 18, 22)","Taken from government-data-security-policies.pdf : pages 18, 22
-Taken from WHO World health statistics 2025.pdf : pages 2"
-"What counts as an ""Agency""?","Direct answer isn’t explicitly stated in a single definitional statement across the items. However, the closest defined term appears in the Third-Party Management Framework content:
-
-- In the Key Policies of the Government’s Third-Party Management Framework, a note defines “Agency” as “Organs of State, Ministries, Departments and Statutory Boards.” This indicates that within the framework, an Agency refers to these government bodies or units.
-
-Cited sources:
-- Key Policies of the Government’s Third-Party Management Framework, pages 2–3 (metadata lists source: key-policies-third-party-framework.pdf, pages [2, 3, 4]). Specifically, the document includes a definition of “Agency” equating it to Organs of State, Ministries, Departments and Statutory Boards. [Source: key-policies-third-party-framework.pdf, pages 2-3]","Taken from government-personal-data-protection-policies-jul21.pdf : pages 18, 37
+Sources Used: government-data-security-policies.pdf (Annex A glossary, page 4; Third-Party Management Framework pages 2–4)","Taken from government-data-security-policies.pdf : pages 20, 21, 22
+Taken from government-personal-data-protection-policies-jul21.pdf : pages 35
 Taken from key-policies-third-party-framework.pdf : pages 2, 3, 4"
-What are the stages of the Third-Party Management Framework lifecycle?,"- Evaluation and Selection
+What are the stages of the Third-Party Management Framework lifecycle?,"**Answer:**
+The stages of the Third-Party Management Framework lifecycle are:
+- Evaluation and Selection
 - Contracting and On-boarding
 - Service Management
 - Transition Out
 
-Sources: 
-- key-policies-third-party-framework.pdf, pages 3 (Lifecycle stages). 
-- key-policies-third-party-framework.pdf, pages 1–2 (Introduction and lifecycle overview). 
-- key-policies-third-party-framework.pdf, pages 4–5 (Stage details: Service Management and Transition Out).","Taken from key-policies-third-party-framework.pdf : pages 1, 2, 3, 4, 5"
-What must agencies do before engaging a Third Party?,"- Before engaging a Third Party, Agencies must carry out the Evaluation and Selection process as part of the lifecycle stages outlined in the Government’s Third-Party Management Framework. This includes assessing and selecting Third Parties prior to contracting and onboarding, as described in the materials covering Stage 1 (Evaluation and Selection) and Stage 2 (Contracting and On-boarding) in the framework. 
+These stages are presented as a four-stage lifecycle in a circular workflow, running in that clockwise order. (Sources show four stages with those exact names and sequencing.) 
 
-Sources:
-- key-policies-third-party-framework.pdf, pages 4-5 (Stage 4 and related lifecycle context) [Document: Key Policies of the Government’s Third-Party Management Framework] 
-- key-policies-third-party-framework.pdf, pages 1-2 (Introduction and lifecycle overview including Evaluation and Selection) [Document: Government’s Third-Party Management Framework]","Taken from key-policies-third-party-framework.pdf : pages 1, 2, 4, 5"
+**Sources Used:** key-policies-third-party-framework.pdf (pages referencing the four stages)","Taken from key-policies-third-party-framework.pdf : pages 2, 3, 4, 5"
+What must agencies do before engaging a Third Party?,"Direct answer not explicitly labeled in a single sentence across items. However, the closest explicit guidance comes from the Stage 1 and Stage 2 content in the provided documents, which describe activities agencies must undertake before engaging Third Parties.
+
+- From Stage 1 (Evaluation and Selection): Agencies must identify, assess, prioritize, and mitigate risks during outsourcing work to Third Parties during the evaluation and selection process to ensure security, data, and project risks are adequately managed before engagement. This implies thorough risk assessment and mitigation planning prior to engaging Third Parties. (Source: key-policies-third-party-framework.pdf, pages 4-5)
+
+- From Stage 2 (Contracting and On-boarding): Agencies must address security, data, and project risks by establishing contracts or other instruments to govern performance and risk, effectively putting governance in place before engagement. This includes ensuring that risk management is embedded in the contracting/on-boarding phase. (Source: key-policies-third-party-framework.pdf, pages 4-5)
+
+- Additionally, the Introduction overview notes that Third Parties may handle government data and that lifecycle stages include Evaluation and Selection, Contracting and On-boarding, Service Management, and Transition Out, reinforcing the need for proactive controls before engagement. (Source: key-policies-third-party-framework.pdf, pages 1-2)
+
+So, the concise answer:
+- Agencies must assess and mitigate risks during the Evaluation and Selection stage and establish governance through contracts or instruments during Contracting and On-boarding before engaging a Third Party. (Cited from: key-policies-third-party-framework.pdf, pages 1-2 and 4-5)
+
+**Sources Used:** key-policies-third-party-framework.pdf (pages 1-2, 4-5)","Taken from key-policies-third-party-framework.pdf : pages 1, 2, 4, 5"
 How does the Government ensure Third-Party personnel are prepared before work begins?,"Direct answer:
-- The Government requires onboarding measures for Third-Party personnel, including briefings on data security requirements, providing security clearances where necessary, and obtaining undertakings from third-party personnel as required. This is described as part of Stage 2 in the Third-Party Management Framework, embedded with a supplementary block (03) detailing ensuring Third Parties and their personnel are adequately assessed, cleared, and prepared before they start work.
+- The Government requires an on-boarding process for Third-Party personnel that includes briefings on applicable data security requirements, security clearance, and obtaining undertakings from the Third-Party personnel where necessary before they begin assigned work. This is part of Stage 2: Contracting and On-boarding and is echoed in the related Stage 1/3 materials about preparing personnel for work.
 
 Cited sources:
-- key-policies-third-party-framework.pdf, content describing Stage 2 contracting/on-boarding and the embedded 03 block (pages referencing Stage 2/03) [Data item 1; page context indicates Stage 2 and onboarding details].
-- key-policies-third-party-framework.pdf, Stage 3/Stage 4 details (for context on ongoing governance) [Data item 3], but the specific question about preparation before work begins pertains to Stage 2 onboarding content in Data item 1.
+- key-policies-third-party-framework.pdf, Stage 2 description (On-boarding): on-boarding process includes briefings on applicable data security requirements, security clearance and obtaining undertakings from Third-Party personnel, where necessary. [Source: data_item with pages referencing Stage 2; metadata indicates Stage 2 content in the document] 
+- key-policies-third-party-framework.pdf, Stage 1–2 overview (Stage 2 exact text) [Source: data_item that contains the Stage 2 wording; page references in metadata]
 
 Sources Used:
-- key-policies-third-party-framework.pdf (Data item 1; Stage 2 onboarding and the 03 block)
-- key-policies-third-party-framework.pdf (Data item 3; Stage 3/Stage 4 context)","Taken from key-policies-third-party-framework.pdf : pages 4, 5"
-What ongoing checks does the Government require during a Third Party's engagement?,"- Ongoing checks described in the documents:
-  - Stage 3 (Service Management): Agencies shall regularly monitor and review the Third Parties’ performance and compliance with applicable public sector policies and standards incorporated in contracts or equivalent instruments with the Third Parties. (Source: key-policies-third-party-framework.pdf, pages 4-5) [Cited as: Government’s Third-Party Management Framework – Stage 3, Monitoring/Review]
-  - Stage 3 also specifies that Agencies shall perform regular checks or audits on their Third Parties throughout the period of engagement to ensure that the Third Parties carry out their assigned work in compliance with contractual obligations and applicable public sector policies and standards. More stringent requirements will be imposed on Third Parties dealing with higher-risk systems/services. (Source: key-policies-third-party-framework.pdf, pages 4-5) [Cited as: Government’s Third-Party Management Framework – Stage 3, Audits during engagement]
-- Additionally, Stage 4 mentions exit-related checks, but the question focuses on ongoing checks during engagement, so the primary answer is Stage 3’s monitoring/regular audits (04 and 05). (Source: same framework) 
+- key-policies-third-party-framework.pdf (Stage 2 wording about on-boarding of Third-Party personnel)","Taken from key-policies-third-party-framework.pdf : pages 2, 3, 4, 5"
+What ongoing checks does the Government require during a Third Party's engagement?,"Direct answer cannot be found as a single quoted line, but the provided policy items describe the ongoing checks as:
+- Agencies shall regularly monitor and review the Third Parties’ performance and compliance with applicable public sector policies and standards incorporated in contracts or equivalent instruments (Stage 3: Service Management) [source: key-policies-third-party-framework.pdf, pages 4-5].
+- Agencies shall perform regular checks or audits on their Third Parties throughout the period of engagement to ensure that the Third Parties carry out their assigned work in compliance with contractual obligations and applicable public sector policies and standards, with more stringent requirements for higher-risk systems/services (Stage 3: Service Management) [source: key-policies-third-party-framework.pdf, pages 4-5].
 
-Direct references:
-- Data item: key-policies-third-party-framework.pdf, pages 4-5. 
-  - 04: Regular monitoring and review of Third Parties’ performance and compliance with applicable public sector policies and standards in contracts.
-  - 05: Regular checks or audits during the engagement to ensure compliance; higher-risk situations may require stricter controls. 
-
-Sources used:
-- key-policies-third-party-framework.pdf (pages 4-5)","Taken from key-policies-third-party-framework.pdf : pages 4, 5"
-What happens when a Third Party's contract ends?,"Direct answer not explicitly stated as a single sentence in the provided items. However, the closest explicit reference is to the Transition Out stage, which covers ensuring business continuity and the proper transfer and disposal of data and assets back to Agencies upon the exit of the Third Parties, including up-to-date exit management plans and conducting exit checks or audits before services are discontinued.
-
-- In the Transition Out stage (Stage 4), agencies shall put in place and maintain up-to-date exit management plans for all Third Parties’ work and services, which shall include the conduct of exit checks or audits before the Third Parties discontinue their services. This addresses what happens when a contract ends: data and assets are transferred back, and proper exit procedures are performed to ensure continuity and compliance. 
-- The material also notes that transition is part of a four-stage lifecycle: Evaluation and Selection, Contracting and On-boarding, Service Management, Transition Out, emphasizing cyclical governance and disengagement processes (ending a contract is followed by proper close-out and data/asset transfer).
+These entries collectively reflect the ongoing oversight through regular monitoring, reviews, and audits during the engagement.
 
 Sources:
-- key-policies-third-party-framework.pdf, pages 4-5, Transition Out details. 
-- key-policies-third-party-framework.pdf, pages 2-4 (lifecycle context). 
+- key-policies-third-party-framework.pdf, pages 4-5
+- key-policies-third-party-framework.pdf, page 5
+","Taken from key-policies-third-party-framework.pdf : pages 1, 2, 4, 5"
+What happens when a Third Party's contract ends?,"Direct answer: The provided documents describe that upon exit or contract conclusion with a Third Party, agencies should ensure proper transition out activities, including the transfer and disposal of data and assets back to Agencies, and to maintain up-to-date exit management plans with exit checks or audits before the Third Party discontinues their services.
 
-Sources Used: key-policies-third-party-framework.pdf (pages 4-5; and pages 2-4 for lifecycle context)","Taken from key-policies-third-party-framework.pdf : pages 3, 4, 5
-Taken from government-personal-data-protection-policies-jul21.pdf : pages 14"
+From the sources:
+- Stage 4 Transition Out (pages 4–5) states: agencies ensure business continuity and proper transfer/disposal of data and assets back to Agencies upon the exit of the Third Parties; agencies must put in place and maintain up-to-date exit management plans for all Third Parties’ work and services, including conduct of exit checks or audits before the Third Parties discontinue their services. This is the direct reference for what happens when a contract ends.
+- The lifecycle synopsis (pages 2–3) also places Transition Out as the stage following Service Management, reinforcing that exit procedures are part of the official framework.
+
+Cited sources:
+- key-policies-third-party-framework.pdf, pages 4–5
+- key-policies-third-party-framework.pdf, pages 2–3
+
+Structured summary (fallback but direct to the point):
+- When a Third Party’s contract ends, agencies must ensure business continuity and properly transfer or dispose of data and assets back to the Agencies.
+- Agencies should have up-to-date exit management plans for all Third Parties’ work and services.
+- Exit checks or audits should be conducted before the Third Party discontinues their services.
+
+Sources Used:
+- key-policies-third-party-framework.pdf (pages 4–5)
+- key-policies-third-party-framework.pdf (pages 2–3)","Taken from key-policies-third-party-framework.pdf : pages 2, 3, 4, 5"
