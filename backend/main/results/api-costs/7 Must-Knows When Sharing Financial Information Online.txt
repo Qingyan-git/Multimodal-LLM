@@ -1,36 +1,12 @@
 
-Token cost to TEXT chunk 7 Must-Knows When Sharing Financial Information Online.pdf : 3873
+Token cost to PAGE chunk 7 Must-Knows When Sharing Financial Information Online.pdf : 6063
 
-Money cost to TEXT chunk 7 Must-Knows When Sharing Financial Information Online.pdf : 0.0002843
-
-
-
-Token cost to EMBED TEXT 7 Must-Knows When Sharing Financial Information Online.pdf : 1024
-
-Money cost to EMBED TEXT 7 Must-Knows When Sharing Financial Information Online.pdf : 2.048e-05
+Money cost to PAGE chunk 7 Must-Knows When Sharing Financial Information Online.pdf : 0.0007455500000000001
 
 
 
-Token cost to IMAGE chunk 7 Must-Knows When Sharing Financial Information Online.pdf : 0
+Token cost to EMBED PAGE 7 Must-Knows When Sharing Financial Information Online.pdf : 1307
 
-Money cost to IMAGE chunk 7 Must-Knows When Sharing Financial Information Online.pdf : 0.0
-
-
-
-Token cost to TABLE chunk 7 Must-Knows When Sharing Financial Information Online.pdf : 0
-
-Money cost to TABLE chunk 7 Must-Knows When Sharing Financial Information Online.pdf : 0.0
-
-
-
-Token cost to PAGE chunk 7 Must-Knows When Sharing Financial Information Online.pdf : 5418
-
-Money cost to PAGE chunk 7 Must-Knows When Sharing Financial Information Online.pdf : 0.0005642
-
-
-
-Token cost to EMBED PAGE 7 Must-Knows When Sharing Financial Information Online.pdf : 865
-
-Money cost to EMBED PAGE 7 Must-Knows When Sharing Financial Information Online.pdf : 1.73e-05
+Money cost to EMBED PAGE 7 Must-Knows When Sharing Financial Information Online.pdf : 2.614e-05
 
 

@@ -570,10 +570,18 @@ Government Data Security Policies |   �1
 
 **==> picture [596 x 48] intentionally omitted <==**
 
-## The Government takes its responsibility as a custodian of data very seriously. Since 2001, the Government’s data security policies have been set out in the Government Instruction Manual (IM) on Infocomm Technology and Smart Systems (ICT&SS) Management. In 2019, the Public Sector Data Security Review Committee recommended additional technical and process measures to protect data and prevent data compromise. The recommended measures have since been incorporated into the IM on ICT&SS Management. This document sets out the key policies in the IM on ICT&SS Management that govern how data security is managed by agencies. The policies prescribe data security requirements, including technical and process measures, to safeguard data against security threats. The technical and process measures described in this document are implemented using a riskbased approach. Agencies should select the measures based on the data security risk level, after taking into account their operating contexts. For example, the recommended measure “Hashingwith-Salt” irreversibly changes a data field in order to prevent an attacker from accessing the original value of the data field even when the data is extracted from the system. It would be suitable for use in analytics systems where only de-identified data is required but not appropriate for use in operational systems which require identifiable data for service delivery. _Note: This document contains general information for the public only.
+## The Government takes its responsibility as a custodian of data very seriously. Since 2001, the Government’s data security policies have been set out in the Government Instruction Manual (IM) on Infocomm Technology and Smart Systems (ICT&SS) Management. In 2019, the Public Sector Data Security Review Committee recommended additional technical and process measures to protect data and prevent data compromise.
 
 
 Final chunk number 1, content : 
+The recommended measures have since been incorporated into the IM on ICT&SS Management. This document sets out the key policies in the IM on ICT&SS Management that govern how data security is managed by agencies. The policies prescribe data security requirements, including technical and process measures, to safeguard data against security threats. The technical and process measures described in this document are implemented using a riskbased approach.
+
+
+Final chunk number 2, content : 
+Agencies should select the measures based on the data security risk level, after taking into account their operating contexts. For example, the recommended measure “Hashingwith-Salt” irreversibly changes a data field in order to prevent an attacker from accessing the original value of the data field even when the data is extracted from the system. It would be suitable for use in analytics systems where only de-identified data is required but not appropriate for use in operational systems which require identifiable data for service delivery. _Note: This document contains general information for the public only.
+
+
+Final chunk number 3, content : 
 It is not intended to be relied upon as a comprehensive or definitive guide on each agency’s policies and practices. The data security measures implemented by each agency will differ depending on various factors such as the sensitivity of the data and the agency’s assessment of data security risks. The Government may update the policies set out in this document without publishing such updates to the public._ 
 
 Government Data Security Policies |   �2 
@@ -584,7 +592,11 @@ Government Data Security Policies |   �2
 
 ## Section 1: Data Security Risk Management 
 
-- 01 To ensure adequate and effective data security risk management, Agencies should perform data security risk assessments for their datasets, as part of the Government ICT Risk Management Methodology. This will enable Agencies to identify data security risks, evaluate the risks, implement measures to mitigate the risks, assess the effectiveness of the implemented measures and manage the risks within limits acceptable to the Agency. - 02 Agencies should use the Data Security Risk Assessment Methodology, which is part of the Government ICT Risk Management Methodology, to conduct data security risk assessments for their datasets. - 03 Agencies should conduct a data security risk assessment: 
+- 01 To ensure adequate and effective data security risk management, Agencies should perform data security risk assessments for their datasets, as part of the Government ICT Risk Management Methodology. This will enable Agencies to identify data security risks, evaluate the risks, implement measures to mitigate the risks, assess the effectiveness of the implemented measures and manage the risks within limits acceptable to the Agency. - 02 Agencies should use the Data Security Risk Assessment Methodology, which is part of the Government ICT Risk Management Methodology, to conduct data security risk assessments for their datasets.
+
+
+Final chunk number 4, content : 
+- 03 Agencies should conduct a data security risk assessment: 
 
    - a) When acquiring a new dataset; 
 
@@ -605,7 +617,7 @@ Government Data Security Policies |   �2
 - 05 Agencies should implement the appropriate technical and process measures to protect data against data security threats and prevent compromises of the confidentiality and integrity of the data. Agencies should adopt a risk-based approach when implementing the technical and process measures. Technical measures are only effective when the complementary process measures are implemented too (See Annex A).
 
 
-Final chunk number 2, content : 
+Final chunk number 5, content : 
 The data security technical and process measures are to be implemented on top of any cybersecurity measures in place. Data should be protected according to the risk level determined through a data security risk assessment. Agencies should ensure that data is adequately protected while minimising the impact to operations, resources and costs. 06 Agencies should adopt the following strategies when implementing the technical measures and process measures to safeguard data: 
 
 - a) Reduce the surface area of attack by minimising data collection, data retention, data access and data downloads; 
@@ -630,10 +642,14 @@ The data security technical and process measures are to be implemented on top of
 
 _Collect datasets only where necessary_ 
 
-- 08 Agencies should minimise the collection of datasets to only what is necessary for their functions and operations. For each collected dataset, Agencies should identify the specific use of the dataset, and whether the dataset is required to carry out an immediate function or a pre-requisite to carry out a future function (e.g.
+- 08 Agencies should minimise the collection of datasets to only what is necessary for their functions and operations.
 
 
-Final chunk number 3, content : 
+Final chunk number 6, content : 
+For each collected dataset, Agencies should identify the specific use of the dataset, and whether the dataset is required to carry out an immediate function or a pre-requisite to carry out a future function (e.g.
+
+
+Final chunk number 7, content : 
 longitudinal datasets for analytics purposes) or both. Where the dataset includes data on individuals, Agencies should also collect the data in accordance with the Government’s personal data protection policies. _Limit retention period of data_ 
 
 - 09 Agencies should ensure that every dataset collected is stored only for the period that is necessary to fulfil the purposes for which the dataset is collected, subject to any legal or Agencies’ archival requirements. Where the dataset includes data on individuals, Agencies should also retain the data in accordance with the Government’s personal data protection policies. - 10 Agencies should set a retention period for each dataset. Government Data Security Policies |   �5 
@@ -646,14 +662,18 @@ longitudinal datasets for analytics purposes) or both. Where the dataset include
 
 _Secured isolated environments for high-risk users_ 
 
-- 12 To minimise the risk of data exfiltration, Agencies should ensure that users, assessed by Agencies to be high-risk, access sensitive data only in secured isolated environments. Such isolated environments can be secured physically ("Physically Secured Isolated Environment") or virtually ("Virtually Secured Isolated Environment"). - 13 Agencies should ensure that the high-risk user’s access to the data in a physically secured isolated environment (i.e.
+- 12 To minimise the risk of data exfiltration, Agencies should ensure that users, assessed by Agencies to be high-risk, access sensitive data only in secured isolated environments.
 
 
-Final chunk number 4, content : 
+Final chunk number 8, content : 
+Such isolated environments can be secured physically ("Physically Secured Isolated Environment") or virtually ("Virtually Secured Isolated Environment"). - 13 Agencies should ensure that the high-risk user’s access to the data in a physically secured isolated environment (i.e.
+
+
+Final chunk number 9, content : 
 an ICT system that contains sensitive data and is not connected to any other systems) is monitored at all times and technical measures should be implemented in the ICT system to stop any unauthorised transfer of sensitive data out of the environment.
 
 
-Final chunk number 5, content : 
+Final chunk number 10, content : 
 - 14 Agencies should ensure that the high-risk user’s access to the data in a virtually secured isolated environment (i.e. an environment equipped with ICT infrastructure that stops the exfiltration of data from the ICT system containing the sensitive data) is monitored at all times. _Retrieve only the data required instead of data dumps_ 
 
 - 15 Agencies should ensure that users request and retrieve only the data required to complete their assigned tasks and that users do not retrieve more data than needed. - 16 Agencies should implement processes to ensure that when data is stored in documents or files, a user is given access to only the data fields and data records relevant to the user’s needs. - 17 Agencies should implement processes to ensure that data stored within databases is accessed by users through data queries as far as practicable. Government Data Security Policies |   �6 
@@ -688,14 +708,18 @@ _Access sensitive files on secured platforms_
 
 _Volume limited and time limited data access_ 
 
-- 22 Agencies should limit the volume of sensitive data in ICT systems that can be accessed by users, and the duration for which users can access the sensitive data. This prevents users from accessing too much sensitive data within the pre-determined period of time. - 23 
+- 22 Agencies should limit the volume of sensitive data in ICT systems that can be accessed by users, and the duration for which users can access the sensitive data. This prevents users from accessing too much sensitive data within the pre-determined period of time.
+
+
+Final chunk number 11, content : 
+- 23 
 
    - a) The volume of sensitive data to be accessed; and 
 
    - b) The duration of access to sensitive data.
 
 
-Final chunk number 6, content : 
+Final chunk number 12, content : 
 Agencies should restrict data access when the volume or the duration of data accessed exceeds predefined limits. This should be done through: 
 
 - a) Use of access control features of ICT systems, together with logging and monitoring of data access controls; or 
@@ -707,7 +731,7 @@ Agencies should restrict data access when the volume or the duration of data acc
 - 25 Agencies should put in place processes to ensure that access to sensitive data in ICT systems is granted only to authorised users, and privileged access to data is granted only where necessary.
 
 
-Final chunk number 7, content : 
+Final chunk number 13, content : 
 Users' access to sensitive data should be regularly reviewed and removed expeditiously when the user's role changes. This is to reduce the risk of unauthorised access to sensitive data. - 26 Agencies should ensure an authorised user’s access to sensitive data is limited to the sensitive data needed for a stated purpose of use. - 27 Agencies should ensure that access to data by users with privileged accounts or users who hold privileged data roles, are limited to the ICT systems, data platforms, and datasets needed to carry out the users’ functions. Government Data Security Policies |   �8 
 
 --- end of page.page_number=8 ---
@@ -727,11 +751,11 @@ _Maintain data lineage for data to support data incident management_
 - 29 Agencies should keep data lineage records for data.
 
 
-Final chunk number 8, content : 
+Final chunk number 14, content : 
 Data lineage records help to identify any unauthorised access, usage or modification of data. Data lineage records support Agencies in managing and responding to data incidents.
 
 
-Final chunk number 9, content : 
+Final chunk number 15, content : 
 The data lineage records should be tracked at the dataset’s meta data level but need not be tracked for every change made to the dataset. The data lineage records should cover how the data is used, how it flows between users and systems, and the key changes made to the dataset. Government Data Security Policies |   �9 
 
 --- end of page.page_number=9 ---
@@ -752,10 +776,14 @@ The data lineage records should be tracked at the dataset’s meta data level bu
 
 _Enhanced logging and active monitoring of data access_ 
 
-- 32 Agencies should log, actively monitor and analyse data access to detect anomalous activities and to support remediation when data incidents occur. - 33 Agencies should maintain logs of access to data. The logs should show what data has been accessed, how it has been accessed and who accessed it.
+- 32 Agencies should log, actively monitor and analyse data access to detect anomalous activities and to support remediation when data incidents occur. - 33 Agencies should maintain logs of access to data.
 
 
-Final chunk number 10, content : 
+Final chunk number 16, content : 
+The logs should show what data has been accessed, how it has been accessed and who accessed it.
+
+
+Final chunk number 17, content : 
 In addition, the logs should be protected from accidental or deliberate modification or erasure. - 34 Agencies should ensure active monitoring of data access to sensitive data by scanning for signs of data security compromise and actively checking ICT systems and data platforms for compliance with the data security rules. Government Data Security Policies |   �10 
 
 --- end of page.page_number=10 ---
@@ -766,7 +794,15 @@ _Email data protection tools_
 
 - 35 Agencies should implement email data protection tools that detect potentially risky data transfers and prompt users for confirmation of such data transfers to prevent any accidental or unauthorised disclosure through email. This clause is not applicable for system generated emails. _Data loss protection (DLP) tools_ 
 
-- 36 Agencies should implement DLP tools in their endpoint devices, IT networks and other ICT systems containing sensitive data. The DLP tools should monitor the endpoint devices, networks and ICT systems for possible data loss, alert the user to potentially risky user action which might result in data compromise, and detect and prevent any unauthorised data transfers. - 37 Agencies should implement DLP tools to cover all possible avenues of data loss from their ICT systems. This includes endpoint devices and network systems. Agencies are to implement DLP tools that have the following features: 
+- 36 Agencies should implement DLP tools in their endpoint devices, IT networks and other ICT systems containing sensitive data.
+
+
+Final chunk number 18, content : 
+The DLP tools should monitor the endpoint devices, networks and ICT systems for possible data loss, alert the user to potentially risky user action which might result in data compromise, and detect and prevent any unauthorised data transfers.
+
+
+Final chunk number 19, content : 
+- 37 Agencies should implement DLP tools to cover all possible avenues of data loss from their ICT systems. This includes endpoint devices and network systems. Agencies are to implement DLP tools that have the following features: 
 
 - a) Able to read the security and sensitivity classification of a document as determined by the user; 
 
@@ -782,7 +818,11 @@ _Email data protection tools_
 
 ## Section 5: Protect the data directly when it is stored and distributed to render the data unusable even if extracted 
 
-- 38 Agencies should protect the data directly to render the data unusable to an attacker if extracted from ICT systems. This provides an additional layer of defence on top of the other cyber security and data security measures. The 3 approaches that Agencies may take to protect data in this manner are: 
+- 38 Agencies should protect the data directly to render the data unusable to an attacker if extracted from ICT systems. This provides an additional layer of defence on top of the other cyber security and data security measures.
+
+
+Final chunk number 20, content : 
+The 3 approaches that Agencies may take to protect data in this manner are: 
 
 - a) Render sensitive data unusable to an attacker, even if exfiltrated from storage; 
 
@@ -804,9 +844,17 @@ _Email data protection tools_
 
 ## _Hashing with Salt_ 
 
-- 40 Agencies should ensure that sensitive values to be protected are combined with a secret value, called the salt, before applying a cryptographic hashing function to generate a hashed value that cannot be reversed with current computing resources. - 41 Agencies should consider using “hashing with salt” where the actual values need not be recovered but can be transformed into a unique reference. For example, hashing with salt is suitable to protect identifiers in data in data analytics use cases where there is no need to identify the entities. ## _Field Level Encryption_ 
+- 40 Agencies should ensure that sensitive values to be protected are combined with a secret value, called the salt, before applying a cryptographic hashing function to generate a hashed value that cannot be reversed with current computing resources. - 41 Agencies should consider using “hashing with salt” where the actual values need not be recovered but can be transformed into a unique reference. For example, hashing with salt is suitable to protect identifiers in data in data analytics use cases where there is no need to identify the entities.
 
-- 42 level. Within a dataset, only authorised users should be allowed to access and decrypt the values protected by Field Level Encryption. Other users of the dataset that are not authorised to access the protected values, should not be allowed to access and decrypt the protected values. - 43 Agencies should consider using Field Level Encryption when the actual values of the sensitive data are frequently required. The encrypted value can be decrypted using the correct decryption key by an authorised user. For example, field level encryption is suitable for service delivery systems where there is a need to correctly identify an individual in order to deliver a service. ## _Tokenisation_ 
+
+Final chunk number 21, content : 
+## _Field Level Encryption_ 
+
+- 42 level. Within a dataset, only authorised users should be allowed to access and decrypt the values protected by Field Level Encryption.
+
+
+Final chunk number 22, content : 
+Other users of the dataset that are not authorised to access the protected values, should not be allowed to access and decrypt the protected values. - 43 Agencies should consider using Field Level Encryption when the actual values of the sensitive data are frequently required. The encrypted value can be decrypted using the correct decryption key by an authorised user. For example, field level encryption is suitable for service delivery systems where there is a need to correctly identify an individual in order to deliver a service. ## _Tokenisation_ 
 
 - 44 Agencies should ensure that sensitive values to be protected are replaced with token values and that the original values cannot be reasonably recovered from the token values. The mapping between the original values and token values should be kept securely and separated from the tokenised data set. Government Data Security Policies |   �13 
 
@@ -822,7 +870,11 @@ _Manage keys to data protection technical safeguards_
 
    - b) Encryption and decryption keys of Field Level Encryption; and 
 
-   - c) Mapping of token value of tokenisation. - 47 Agencies should ensure proper separation of roles of the persons using the protected data and the persons managing the keys. ## Section 5.2: Partially hide the full data 
+   - c) Mapping of token value of tokenisation.
+
+
+Final chunk number 23, content : 
+- 47 Agencies should ensure proper separation of roles of the persons using the protected data and the persons managing the keys. ## Section 5.2: Partially hide the full data 
 
 - 48 Agencies should hide sensitive data fields by implementing the following technical measure(s) as appropriate: 
 
@@ -838,7 +890,11 @@ _Manage keys to data protection technical safeguards_
 
 ## _Dataset partitioning_ 
 
-- 51 Agencies should reduce data concentration risk by partitioning sensitive data into smaller datasets. This can be done by segmenting out selected entities, individuals or attributes and applying different access controls to each of the partitions. This reduces the likelihood of compromise of the selected entities, individuals or attributes should the larger dataset be compromised. - 52 Agencies should consider partitioning the dataset by either: 
+- 51 Agencies should reduce data concentration risk by partitioning sensitive data into smaller datasets. This can be done by segmenting out selected entities, individuals or attributes and applying different access controls to each of the partitions. This reduces the likelihood of compromise of the selected entities, individuals or attributes should the larger dataset be compromised.
+
+
+Final chunk number 24, content : 
+- 52 Agencies should consider partitioning the dataset by either: 
 
    - a) Physically partitioning the dataset in different storage locations; or 
 
@@ -846,9 +902,17 @@ _Manage keys to data protection technical safeguards_
 
 _Password protecting and encrypting files when distributing files through unsecured channels_ 
 
-- 53 Agencies should ensure that files containing sensitive data are secured with password and encryption when the file is distributed through unsecured channels and where there is possible unauthorised access to the file. Password protecting and encrypting the files ensure that only authorised users are permitted to access the content of the file. ## _Securely distribute passwords out-of-band_ 
+- 53 Agencies should ensure that files containing sensitive data are secured with password and encryption when the file is distributed through unsecured channels and where there is possible unauthorised access to the file. Password protecting and encrypting the files ensure that only authorised users are permitted to access the content of the file.
 
-- 54 Agencies should ensure that encrypted data files and their passwords are securely distributed out-of-band through separate channels. This is to prevent compromise of both the protected data files and passwords during transit due to malicious interception or accidental disclosure. Password hints may be sent in the same channel. Government Data Security Policies |   �15 
+
+Final chunk number 25, content : 
+## _Securely distribute passwords out-of-band_ 
+
+- 54 Agencies should ensure that encrypted data files and their passwords are securely distributed out-of-band through separate channels.
+
+
+Final chunk number 26, content : 
+This is to prevent compromise of both the protected data files and passwords during transit due to malicious interception or accidental disclosure. Password hints may be sent in the same channel. Government Data Security Policies |   �15 
 
 --- end of page.page_number=15 ---
 
@@ -865,7 +929,7 @@ _Password protecting and encrypting files when distributing files through unsecu
 - 59 Agencies should ensure that sensitive data is protected from unintended disclosure when sending via email.
 
 
-Final chunk number 11, content : 
+Final chunk number 27, content : 
 ## 60 Agencies should: 
 
 - a) Ensure that emails containing sensitive data are addressed to the correct recipients; 
@@ -1001,7 +1065,11 @@ Government Data Security Policies (Annex A) |   A�5
 |---|---|
 |Privileged data<br>role|Privileged data roles refer to user roles that are able to access,<br>create, modify, or delete data where the data access has not been<br>personally and explicitly granted but gained by the virtue of the roles’<br>job functions that require access to the data platforms and systems<br>that contain the data.<br>Examples of privileged data roles are data scientists and data<br>engineers who have access to data on data platforms and systems<br>for the purpose of data processing etc. System administrators and<br>database administrators who have access to privileged accounts will<br>also be considered as having privileged data roles.|
 |Security classifcation|Security Classifcation refers to classifying information according to the<br>security levels that measure the damage done to national security, or national<br>or Agency interest, in the event of an unauthorised disclosure.|
-|Sensitive|Sensitive refers to data if leaked could give rise to discrimination or other<br>negative impact on a data subject (e.g. the person’s insurability,<br>employability, reputation, etc.).|
+|Sensitive|Sensitive refers to data if leaked could give rise to discrimination or other<br>negative impact on a data subject (e.g.
+
+
+Final chunk number 28, content : 
+the person’s insurability,<br>employability, reputation, etc.).|
 |Sensitivity classifcation|Sensitivity Classifcation refers to classifying information according to<br>sensitivity levels that measure the damage done to an individual or an<br>organisation, in the event of an unauthorised disclosure.|
 |Use|Use refers to the treatment and handling of data within an agency.|
 |User|Users refers to all Government ofcers and non-Government personnel who<br>are granted access to Government Resources to perform ofcial work for the<br>Government.|

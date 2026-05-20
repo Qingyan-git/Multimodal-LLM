@@ -124,10 +124,14 @@ _Published on 30 Apr 2020_
 
 ## Introduction 
 
-The Government recognises that Agencies work extensively with Third Parties to deliver services to citizens, carry out operational functions, and plan and analyse policies. When doing so, these Third Parties may handle large volumes of data from the Government. Hence, the high standards of data protection that the Government places on itself must also extend to these Third Parties.
+The Government recognises that Agencies work extensively with Third Parties to deliver services to citizens, carry out operational functions, and plan and analyse policies. When doing so, these Third Parties may handle large volumes of data from the Government.
 
 
 Final chunk number 2, content : 
+Hence, the high standards of data protection that the Government places on itself must also extend to these Third Parties.
+
+
+Final chunk number 3, content : 
 With this in mind, the Government has introduced policies to guide Agencies in ensuring that Third Parties adequately safeguard data. These policies are organised based on the lifecycle of the relationship between the Agency and the Third Party, namely: Evaluation and Selection, Contracting and On-boarding, Service Management and Transition Out (as shown in Diagram below). When working with Third Parties, Agencies will define the data security requirements that each Third Party has to comply with based on the Government’s data security policies. Key Policies of the Government’s Third-Party Management Framework    | 
 
 01 
@@ -168,7 +172,11 @@ Third-Party<br>04  Transition Management<br>        Out 02   [Contracting]<br>Fr
 
 > Stage 1 01[    To ensure that the Government ] adequately manages its security, data **Evaluation** and project risks when engaging Third **and Selection** Parties, Agencies shall identify, assess, prioritise and mitigate the risks when outsourcing work to Third Parties during the evaluation and selection process. **==> picture [6 x 386] intentionally omitted <==**
 
-Stage 2 02[    To ensure that the security, data and ] project risks involved in assigning work **Contracting** to Third Parties are addressed, **and** Agencies shall establish contracts or other equivalent instruments with their **On-boarding** Third Parties to govern how the Third Parties should perform the assigned work in a manner that addresses all identified risks involved. 03[    To ensure that the appointed Third ] Parties (and their personnel) are adequately assessed, cleared and prepared for the assigned work, Agencies shall implement an on-boarding process which includes briefings on applicable data security requirements, security clearance and obtaining undertakings from Third-Party personnel, where necessary. Key Policies of the Government’s Third-Party Management Framework    | 
+Stage 2 02[    To ensure that the security, data and ] project risks involved in assigning work **Contracting** to Third Parties are addressed, **and** Agencies shall establish contracts or other equivalent instruments with their **On-boarding** Third Parties to govern how the Third Parties should perform the assigned work in a manner that addresses all identified risks involved. 03[    To ensure that the appointed Third ] Parties (and their personnel) are adequately assessed, cleared and prepared for the assigned work, Agencies shall implement an on-boarding process which includes briefings on applicable data security requirements, security clearance and obtaining undertakings from Third-Party personnel, where necessary.
+
+
+Final chunk number 4, content : 
+Key Policies of the Government’s Third-Party Management Framework    | 
 
 03 
 

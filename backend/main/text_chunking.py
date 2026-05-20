@@ -60,33 +60,33 @@ def delete_all_files_in_folder(folder_path):
 #     return cleaned_text.strip()
 
 
-def get_page_numbers(chunks, starting_page_no=0, page_pattern=r"\s*--- end of page\.page_number=(\d+) ---\s*"):
+def get_page_numbers(chunks, starting_page_no=1, page_pattern=r"\s*--- end of page\.page_number=(\d+) ---\s*"):
     final_text_chunks = []
     
-    # If starting_page_no is passed as 1-based, you might want to subtract 1 here too
+    # Track the background page state as a strict 1-indexed integer
     current_page_number = starting_page_no
     
     for chunk in chunks:
         pages = set()
         for match in re.finditer(page_pattern, chunk):
-            # 1. Convert human-readable (1-based) to 0-based
-            page_0_indexed = int(match.group(1)) - 1
+            # The regex group matches exactly what is printed (which is 1-indexed)
+            found_page_no = int(match.group(1))
+            # Update our tracker state
+            current_page_number = found_page_no
             
-            # 2. Update the tracker for chunks that don't have tags
-            current_page_number = page_0_indexed + 1
-            
-            # 3. Logic for split chunks
+            # Boundary check for split chunks
             if match.start() != 0:
-                # Text existed before the tag, so it belongs to the page that just ended
-                pages.add(page_0_indexed)
+                # Text before the marker belongs to the page that is ending
+                pages.add(found_page_no)
             if match.end() != len(chunk):
-                # Text exists after the tag, so it belongs to the next page
-                pages.add(page_0_indexed + 1)
+                # Text after the marker belongs to the next page
+                pages.add(found_page_no + 1)
         
         if not pages:
-            pages = [current_page_number]
+            # Fallback for chunks that do not contain a marker tag
+            pages.add(current_page_number)
  
-        final_text_chunks.append(list(pages))
+        final_text_chunks.append(sorted(list(pages)))
 
     return final_text_chunks
 
@@ -208,7 +208,6 @@ async def process_text(folder_path):
 if __name__ == '__main__':
     print(f'Ingestion running\n\n\n')
     text_pdfs_path = Path(os.getenv('all_pdfs_path'))
-    print(text_pdfs_path)
     text_results_path = Path(os.getenv('text_results_path'))
 
     delete_all_files_in_folder(text_results_path)

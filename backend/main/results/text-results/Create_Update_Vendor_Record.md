@@ -882,7 +882,15 @@ _Do note that only the first 80 characters are retrieved and displayed under the
 
 **==> picture [605 x 210] intentionally omitted <==**
 
-## _**Your Contact Details and Address will be populated from MyInfo for individuals and EDH for companies. However, you**_ 3 _**may amend your details if they are inaccurately reflected. To amend your address, you may click on the ‘Clear Address’ button**_ 
+## _**Your Contact Details and Address will be populated from MyInfo for individuals and EDH for companies.
+
+
+Final chunk number 1, content : 
+However, you**_ 3 _**may amend your details if they are inaccurately reflected.
+
+
+Final chunk number 2, content : 
+To amend your address, you may click on the ‘Clear Address’ button**_ 
 
 - _**Email address:** All Vendors@Gov updates and softcopy remittance advices will be sent to this email address. Only one email address is allowed for each vendor record._ 
 
@@ -930,7 +938,11 @@ _**Telegraphic Transfer (TT)** – Select this option if you are receiving:_
 
 --- end of page.page_number=10 ---
 
-## **1. Create Vendor Record – Bank Details (IBG)** 
+## **1.
+
+
+Final chunk number 3, content : 
+Create Vendor Record – Bank Details (IBG)** 
 
 **==> picture [621 x 63] intentionally omitted <==**
 
@@ -943,7 +955,7 @@ _**Inter-Bank Giro (IBG) option selected.**_
 _The bank account provided must be registered under the entity’s name and ID.
 
 
-Final chunk number 1, content : 
+Final chunk number 4, content : 
 Bank details (Eg: Bank & Branch code, Bank account) must be updated correctly. If you are unsure of your bank details, please contact your bank to confirm the correct information._ 
 
 _**Company/ Organization** – You should provide a corporate bank account that is registered under your business registration name and ID (Eg: UEN)._ 
@@ -998,7 +1010,11 @@ _Once approved, you will receive an email notification at your registered email 
 
 ## _**PayNow  (PAYN) option selected.**_ 
 
-_**Select your proxy type and enter your proxy value. The PayNow proxy value refers to the unique indicator of the recipient which  may be used to receive payments via PayNow.**_ 
+_**Select your proxy type and enter your proxy value.
+
+
+Final chunk number 5, content : 
+The PayNow proxy value refers to the unique indicator of the recipient which  may be used to receive payments via PayNow.**_ 
 
 - _PayNow proxy should be within 8 to 17 characters._ 
 
@@ -1009,8 +1025,12 @@ _**Select your proxy type and enter your proxy value. The PayNow proxy value ref
    - _Corporates: UEN (e.g.
 
 
-Final chunk number 2, content : 
-201234567A) or UEN + 3-character suffix (e.g. 201234567A_ _**B12** , 201234567A_ _**321** ), where a 3-character alphanumeric suffix can be added to your company’s UEN to create multiple PayNow proxies. This is based off what proxy is registered with your bank and the respective bank account._ 
+Final chunk number 6, content : 
+201234567A) or UEN + 3-character suffix (e.g.
+
+
+Final chunk number 7, content : 
+201234567A_ _**B12** , 201234567A_ _**321** ), where a 3-character alphanumeric suffix can be added to your company’s UEN to create multiple PayNow proxies. This is based off what proxy is registered with your bank and the respective bank account._ 
 
 _**Important: Please ensure that your bank account is correctly linked with the PayNow proxy provided to avoid payment errors. This can usually be done via the bank’s iBanking website or mobile application. For clarifications on linking your PayNow proxy to your bank account, please contact your bank.**_ 
 
@@ -1036,7 +1056,11 @@ _**PayNow  (PAYN) option selected.**_
 
 --- end of page.page_number=15 ---
 
-## **1. Create Vendor Record – Bank Details (TT)** 
+## **1.
+
+
+Final chunk number 8, content : 
+Create Vendor Record – Bank Details (TT)** 
 
 **==> picture [614 x 56] intentionally omitted <==**
 
@@ -1090,7 +1114,11 @@ _New vendors will be directed to ‘Create New Vendor’ page to create a vendor
 
 _Existing vendor may navigate to ‘Update Vendor Details’ to update your name, contact, GST registration and bank details._ 
 
-## _**3. Vendor Record Status**_ 
+## _**3.
+
+
+Final chunk number 9, content : 
+Vendor Record Status**_ 
 
 _Vendor record status include Approved, Unapproved, Inactive._ 
 
@@ -1178,7 +1206,11 @@ _Do note that only the first 80 characters are retrieved and displayed under the
 
 --- end of page.page_number=23 ---
 
-## **2. View/ Update Vendor Record Details – Contact Details** 
+## **2.
+
+
+Final chunk number 10, content : 
+View/ Update Vendor Record Details – Contact Details** 
 
 **==> picture [605 x 210] intentionally omitted <==**
 
@@ -1240,7 +1272,11 @@ _**Inter-Bank Giro (IBG) option selected.**_
 
 ## _**Select your bank and branch code, enter your account number.**_ 
 
-_The bank account provided must be registered under the entity’s name and ID. Bank details (Eg: Bank & Branch code, Bank account) must be updated correctly. If you are unsure of your bank details, please contact your bank to confirm the correct information._ 
+_The bank account provided must be registered under the entity’s name and ID.
+
+
+Final chunk number 11, content : 
+Bank details (Eg: Bank & Branch code, Bank account) must be updated correctly. If you are unsure of your bank details, please contact your bank to confirm the correct information._ 
 
 _**Company/ Organization** – You should provide a corporate bank account that is registered under your business registration name and ID (Eg: UEN)._ 
 
@@ -1303,13 +1339,17 @@ _**Select your proxy type and enter your proxy value. The PayNow proxy value ref
    - _Corporates: UEN (e.g.
 
 
-Final chunk number 3, content : 
-201234567A) or UEN + 3-character suffix (e.g. 201234567A_ _**B12** , 201234567A_ _**321** ), where a 3-character alphanumeric suffix can be added to your company’s UEN to create multiple PayNow proxies. This is based off what proxy is registered with your bank and the respective bank account._ 
+Final chunk number 12, content : 
+201234567A) or UEN + 3-character suffix (e.g.
+
+
+Final chunk number 13, content : 
+201234567A_ _**B12** , 201234567A_ _**321** ), where a 3-character alphanumeric suffix can be added to your company’s UEN to create multiple PayNow proxies. This is based off what proxy is registered with your bank and the respective bank account._ 
 
 _**Important: Please ensure that your bank account is correctly linked with the PayNow proxy provided to avoid payment errors. This can usually be done via the bank’s iBanking website or mobile application.
 
 
-Final chunk number 4, content : 
+Final chunk number 14, content : 
 For clarifications on linking your PayNow proxy to your bank account, please contact your bank.**_ 
 
 **29** 
@@ -1347,7 +1387,7 @@ _The bank account provided must be registered under your entity’s name with th
 _Please ensure to provide the correct bank details to avoid payment rejection by the bank.
 
 
-Final chunk number 5, content : 
+Final chunk number 15, content : 
 If you are unsure of your bank details, please contact your bank to confirm the information for your remittance transfer._ 
 
 31 
@@ -1386,13 +1426,21 @@ POSB/ DBS Bank code: 7171- DBS Bank Ltd
 
 If there are 9 digits in your account number, the branch code is “081-POSB” 
 
-If there are 10 digits in your account number, the branch code is the first 3 digits of your account number. For example, if your account number is 0012345678, the branch code is ‘001’.
+If there are 10 digits in your account number, the branch code is the first 3 digits of your account number.
 
 
-Final chunk number 6, content : 
+Final chunk number 16, content : 
+For example, if your account number is 0012345678, the branch code is ‘001’.
+
+
+Final chunk number 17, content : 
 ## Maybank 
 
-There are two bank codes (7302 & 9636) available for Maybank account, and you are required to contact your bank to confirm the correct bank details (E.g.: Bank and Branch code, Bank Account) before updating it at Vendors@Gov portal. - (a) 732- Maybank Singapore Limited 
+There are two bank codes (7302 & 9636) available for Maybank account, and you are required to contact your bank to confirm the correct bank details (E.g.: Bank and Branch code, Bank Account) before updating it at Vendors@Gov portal.
+
+
+Final chunk number 18, content : 
+- (a) 732- Maybank Singapore Limited 
 
 - (b) 9636- Malayan Banking Berhad 
 
@@ -1415,13 +1463,13 @@ There are two bank codes (7232 & 9548) available for HSBC bank account, , and yo
 1. Update of vendor details will not be available between 0500hrs to 0600hrs, and 1900hrs to 1930hrs (GMT+8) from Monday to Saturday for routine system maintenance. 2.
 
 
-Final chunk number 7, content : 
+Final chunk number 19, content : 
 You will not be able to update your vendor record details if: 
 
 ## ➢ **Your vendor record is currently inactive** .
 
 
-Final chunk number 8, content : 
+Final chunk number 20, content : 
 - _If you would like to activate your vendor record, you may do so by clicking on the ‘Reactivate’ button upon successful login. After your vendor record is activated, you may update your vendor record details at the portal._ 
 
 - ➢ **Your vendor record was created under a specific agency’s SET ID (Eg: MOF10)** . _Vendors with vendor ID tagged to a specific agency business unit (Eg: MOF10) are unable to update their vendor record in Vendors@Gov. You are required to approach the liaison officer at your client agency to update your vendor details in the Government Financial System (NFS@Gov)._ 
@@ -1450,7 +1498,11 @@ _New vendors will be directed to ‘Create New Vendor’ page to create a vendor
 
 _Existing vendor may navigate to ‘Update Vendor Details’ to update your name, contact, GST registration and bank details._ 
 
-## _**3. Vendor Record Status**_ 
+## _**3.
+
+
+Final chunk number 21, content : 
+Vendor Record Status**_ 
 
 _Vendor record status include Approved, Unapproved, Inactive._ 
 

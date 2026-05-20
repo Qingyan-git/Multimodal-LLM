@@ -347,8 +347,7 @@ async def extract_tables(filepath, chunk_size=10):
         for curr_table in document_tables:
 
             df = curr_table.export_to_dataframe(doc=document)
-            native_page_no = curr_table.prov[0].page_no 
-            zero_indexed_page = native_page_no - 1
+            page_no = curr_table.prov[0].page_no 
             caption = curr_table.caption_text(doc=document)
 
             #One item is one final table
@@ -356,7 +355,7 @@ async def extract_tables(filepath, chunk_size=10):
                 'tables' : [curr_table],
                 'extracted_dfs': [df],
                 'caption' : [caption],
-                'pages' : [zero_indexed_page],
+                'pages' : [page_no],
                 'markdown_text': shared_markdown_text,
                 'filename': filename
             }
@@ -364,7 +363,7 @@ async def extract_tables(filepath, chunk_size=10):
             should_merge = False
             if all_tables:
                 prev_table = all_tables[-1]['tables'][-1]
-                page_diff = zero_indexed_page - last_seen_table
+                page_diff = page_no - last_seen_table
 
                 if page_diff == 0:
                     # Case 1: Same page - merge only if headers match
@@ -389,7 +388,7 @@ async def extract_tables(filepath, chunk_size=10):
                 # Unified New Table Logic
                 all_tables.append(item)
 
-            last_seen_table = zero_indexed_page
+            last_seen_table = page_no
 
     cleaned_chunks = await format_tables(all_tables)
 

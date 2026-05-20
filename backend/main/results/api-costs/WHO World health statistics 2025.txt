@@ -1,48 +1,12 @@
 
-Token cost to TEXT chunk WHO World health statistics 2025.pdf : 10972131
+Token cost to PAGE chunk WHO World health statistics 2025.pdf : 6414317
 
-Money cost to TEXT chunk WHO World health statistics 2025.pdf : 0.10831392000000004
-
-
-
-Token cost to EMBED TEXT WHO World health statistics 2025.pdf : 91813
-
-Money cost to EMBED TEXT WHO World health statistics 2025.pdf : 0.0018362600000000001
+Money cost to PAGE chunk WHO World health statistics 2025.pdf : 0.09020024999999993
 
 
 
-Token cost to IMAGE chunk WHO World health statistics 2025.pdf : 190681
+Token cost to EMBED PAGE WHO World health statistics 2025.pdf : 78594
 
-Money cost to IMAGE chunk WHO World health statistics 2025.pdf : 0.012402120000000004
-
-
-
-Token cost to EMBED IMAGE WHO World health statistics 2025.pdf : 20604
-
-Money cost to EMBED IMAGE WHO World health statistics 2025.pdf : 0.00041208
-
-
-
-Token cost to TABLE chunk WHO World health statistics 2025.pdf : 56709
-
-Money cost to TABLE chunk WHO World health statistics 2025.pdf : 0.0021652
-
-
-
-Token cost to EMBED TABLE WHO World health statistics 2025.pdf : 7186
-
-Money cost to EMBED TABLE WHO World health statistics 2025.pdf : 0.00014371999999999999
-
-
-
-Token cost to PAGE chunk WHO World health statistics 2025.pdf : 6406449
-
-Money cost to PAGE chunk WHO World health statistics 2025.pdf : 0.09098857999999997
-
-
-
-Token cost to EMBED PAGE WHO World health statistics 2025.pdf : 64588
-
-Money cost to EMBED PAGE WHO World health statistics 2025.pdf : 0.00129176
+Money cost to EMBED PAGE WHO World health statistics 2025.pdf : 0.00157188
 
 

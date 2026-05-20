@@ -101,23 +101,27 @@ async def answer_testset_images(filepath,model,sparse,late):
 
 def get_relevant_chunks(dense, sparse, late):
     
-    similar_chunks = get_similar_chunks(dense,sparse,late)
+    similar_chunks = get_similar_chunks(dense, sparse, late)
 
     formatted_chunks = []
-    relevant_chunks = []
+    sources = defaultdict(list)
 
     for chunk in similar_chunks:
         document_name = chunk['document_name']
-        pages = ','.join(map(str,chunk['metadata']['pages']))
-        text = chunk['content']
-
-        relevant_chunks.append((document_name,pages,text))
+        chunk_pages = chunk['metadata']['pages']
         formatted_chunks.append(ContextMessage(chunk).get_message())
 
-    sources = [f"\nChunk Text : {text} from {document_name}, page {pages}\n" for (document_name,pages,text) in relevant_chunks]
-    sources_quote = "".join(sources)
+        sources[document_name].extend(chunk_pages)
+    
+    citation_lines = []
+    for doc_name, pages_list in sources.items():
+        # Clean up duplicates by casting to a set, sort them, and map to strings
+        unique_sorted_pages = ", ".join(map(str, sorted(list(set(pages_list)))))
+        citation_lines.append(f"Taken from {doc_name} : pages {unique_sorted_pages}")
 
-    return (formatted_chunks,sources_quote)
+    sources_quote = "\n".join(citation_lines)
+
+    return (formatted_chunks, sources_quote)
 
 
 async def answer_testset(filepath,model,sparse,late):
@@ -169,17 +173,15 @@ async def answer_all(folder_path):
 
                         save_to_file(filename=f'{file.stem}.txt',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
 
-                    with get_openai_callback() as cb_image:
+                    # with get_openai_callback() as cb_image:
 
-                        await answer_testset_images(file,model,sparse_embedder,late_embedder)
+                    #     await answer_testset_images(file,model,sparse_embedder,late_embedder)
 
-                        token_cost = f"Token cost to ANSWER IMAGE QUESTIONS for {file.name} : {cb_image.total_tokens}"
-                        money_cost = f"Money cost to ANSWER IMAGE QUESTIONS for {file.name} : {cb_image.total_cost}"
-                        total_cost = [token_cost,money_cost]
+                    #     token_cost = f"Token cost to ANSWER IMAGE QUESTIONS for {file.name} : {cb_image.total_tokens}"
+                    #     money_cost = f"Money cost to ANSWER IMAGE QUESTIONS for {file.name} : {cb_image.total_cost}"
+                    #     total_cost = [token_cost,money_cost]
 
-                        save_to_file(filename=f'{file.stem}.txt',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
-
-                       
+                    #     save_to_file(filename=f'{file.stem}.txt',content=total_cost,filepath=os.getenv('api_costs_path'),method='a')
 
                     print(f"\tFinished processing {file.stem}\n\n")
             

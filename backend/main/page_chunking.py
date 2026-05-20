@@ -68,7 +68,7 @@ async def extract_pages(filepath):
             async with semaphore:
                 return await process_page(i, page)
 
-        tasks = [sem_task(i,page) for i, page in enumerate(doc)]
+        tasks = [sem_task(i,page) for i, page in enumerate(doc, start=1)]
         all_chunks = await asyncio.gather(*tasks)
 
     return all_chunks

@@ -1,737 +1,139 @@
 ﻿Question,Answer,Sources
-What are the types of vendors that can register on Vendors@Gov?,"Direct answer:
-- The Vendors@Gov login guide mentions four vendor entity types that can use the system for authentication:
-  - UEN Registered Company/Organisation (including Sole Proprietors or Societies)
-  - Foreign Company/Organisation without UEN
-  - Individuals with Singpass
-  - Individuals with AGD Password
+What are the types of vendors that can register on Vendors@Gov?,"- UEN Registered Company/Organisation
+- Foreign Company/Organisation without UEN
+- Individuals with Singpass
+- Individuals with AGD Password
 
-Notes:
-- This categorization appears across the provided pages of the Vendors@Gov Login User Guide, with UEN and foreign without UEN addressed explicitly, and individual login options (Singpass and AGD) described as applicable to individuals transacting for personal matters (e.g., freelancers). The materials indicate these as the login paths for different entity types.
+These are the four entity/user categories outlined for Vendors@Gov login/registration (covering who can register and login, including both entity types and individual access paths). 
 
-Cited sources:
-- Vendors@Gov Login User Guide, Login methods overview: LoginRegister.pdf, page 11 (source file: LoginRegister.pdf, page [11])
-- Vendors@Gov Login User Guide, Foreign without UEN flow: LoginRegister.pdf, page 12 and 13 (source file: LoginRegister.pdf, pages [12])
-- Corppass registration and non-UEN flow details: LoginRegister.pdf, pages 14–16 (source file: LoginRegister.pdf, pages [14–16])
+Sources:
+- LoginRegister.pdf, pages 2, 20, 23 (Vendors@Gov Log In User Guide). 
+  - Pages 2 and 23 describe the four user categories and eligibility (UEN, foreign without UEN, individuals with Singpass, individuals with AGD Password).
+  - Page 20 provides details for Step 3: Vendors@Gov e-service setup and Vendor ID handling. 
+  - Page 23 reiterates the four categories and emphasizes Singpass as a key method.","Taken from LoginRegister.pdf : pages 2, 20, 23"
+How does a UEN Registered Entity log in to Vendors@Gov?,"Direct answer:
+- To log in to Vendors@Gov as a UEN-registered entity, follow Step 1 in the Vendors@Gov login flow for Business Users: select the “For Business Users” option to login to Vendors@Gov, after ensuring your organization is registered for Corppass.
 
-Sources Used: LoginRegister.pdf (pages 11, 12–16)","
-Chunk Text : This image is a page from a user guide titled “Vendors@Gov Log In User Guide.” The layout features a clean, documentation-style design with branding at the top. In the upper left, the Vendors@Gov logo appears in blue and orange, while the upper right shows the AGD logo in orange. The main heading is centered and bold, reading “Vendors@Gov Log In User Guide,” setting a formal, instructional tone.
-
-Below the header, the page presents a numbered list of login methods, each with a short descriptive subtitle and a lighter, italicized note underneath. The sections appear to list four options, with the first one partially faded or de-emphasized, suggesting it may be the default or less relevant on this page. The visible entries are:
-
-1. “For UEN Registered Company/ Organisation” followed by a gray, lighter subtitle that says, “This login method is applicable to UEN registered vendors who are transacting as a Company/ Organisation, Sole Proprietors, or Societies.”
-
-2. “For Foreign Company/ Organisation without UEN” in a darker blue text, with a gray subtitle beneath: “This login method is applicable to non-UEN registered vendors who are transacting as a Foreign Company/ Organisation.”
-
-3. “For Individuals with Singpass” appears in a pale or faded style, with a light gray subtitle: “This login method is applicable to vendors who are transacting as an individual for your personal payment matters (e.g. freelancers).”
-
-4. “For Individuals with AGD Password” also faded, accompanied by a gray subtitle: “This login method is applicable to vendors who are transacting as an individual for your personal payment matters (e.g. freelancers) but are not eligible for Singpass.”
-
-The page uses a left-aligned, stacked layout for each option, with the emphasized option in blue and the others shown in varying levels of gray to indicate focus or availability. A small page number “12” is shown at the bottom-right, suggesting this is one page in a multi-page guide. Overall, the image presents a formal, government-oriented login guide with clear typographic hierarchy and color-coding to differentiate between the authentication methods. from LoginRegister.pdf, page 11
-
-Chunk Text : This image appears to be a slide from a presentation, focused on the topic “2. Login for Foreign Company/ Organisation without UEN.” The layout presents a two-column design: on the left, a prominent illustration; on the right, a text block labeled “NOTE” with steps and guidance.
-
-The left side features a large, stylized illustration depicting an invoice document. In the foreground, two human figures—one standing and one kneeling or leaning—engage with the document, while surrounding elements include a payment-related graphic and circular icons. The scene has a clean, modern vector aesthetic with soft blues and muted colors, and there are abstract trees in autumnal colors (yellow, orange, and red) to the right of the figures. At the top of this illustration sits a small overlay with two callout options: “For Business Users” (Login with Singpass) and “For Individual Users” (Login with Singpass). The overall impression is of a user interface and financial document workflow.
-
-The right side contains a clearly labeled Note section. The heading “NOTE” is accompanied by a small icon of a document with a folded corner. The text explains that the organization must first register for CorpPass to access Vendors@gov and mentions a “click here” link for more information and a guide. Beneath this, there is a short step labeled “Step 1 — Select ‘For Business Users’ option to login to Vendors@Gov.”
-
-Overall, the slide communicates instructions for logging in for foreign companies or organizations that do not have a UEN, including a visual cue about the login options for business versus individual users and a brief procedural note about CorpPass registration. The page number visible at the bottom right is 13. The color scheme uses a light gray background with a thin orange vertical bar along the left margin, aligning with typical presentation templates. from LoginRegister.pdf, page 12
-
-Chunk Text : Login for Foreign Company/ Organisation without UEN** 
-
-_This login method is applicable to non-UEN registered vendors who are transacting as a Foreign Company/ Organisation._ 
-
-**==> picture [477 x 205] intentionally omitted <==**
-
-**Step 2** – Enter your Singpass login details. 14 
-
---- end of page.page_number=14 ---
-
-## **2. Login for Foreign Company/ Organisation without UEN** 
-
-_This login method is applicable to non-UEN registered vendors who are transacting as a Foreign Company/ Organisation._ 
-
-**==> picture [449 x 241] intentionally omitted <==**
-
-**==> picture [83 x 35] intentionally omitted <==**
-
-This step is only applicable to users who have been assigned to transact with multiple vendor IDs on behalf of your organisation. **Step 3** – Select the ‘Vendor ID/account’ you would like to access and click ‘Continue’ to login. 15 
-
---- end of page.page_number=15 ---
-
-## **Corppass Registration Guide for Non-UEN Registered Entity** 
-
-**Overview of steps to perform on Corppass to enable login to the Vendors@Gov e-service** 
-
-For a user to be able to access the Vendors@Gov e-service, the user must have a Singpass account and be assigned the Vendors@Gov e-service for the foreign Registered Entity on Corppass (www.corppass.gov.sg). The following outlines the steps required for a user to access Vendors@Gov. User guides for each individual step can be found here. **Step 1: Nominate a Corppass Admin who will register for Corppass on behalf of the entity Step 2: Activate Singpass account for Corppass Admin (only for foreign ID users) Step 3: Set up the Vendors@Gov e-service** 
-
-**Step 4: Create Corppass User account and assign the Vendors@Gov e-service to users Step 5: Activate the Corppass User account Step 6: Activate Singpass account for Corppass User (only for foreign ID users)** 
-
-16 
-
---- end of page.page_number=16 ---
-
-## **Corppass Registration Guide for Non-UEN Registered Entity** 
-
-## **Step 1: Nominate a Corppass Admin who will register for Corppass on behalf of the entity** 
-
-Your entity will need to appoint an administrator for the Corppass account. The appointed person will register for Corppass on behalf of the entity. The appointed person’s Corppass Administrator (Admin) account will be registered together with the entity’s Corppass account. from LoginRegister.pdf, page 16,13,14,15
-"
-How does a UEN Registered Entity log in to Vendors@Gov?,"Answer:
-A UEN Registered Entity logs in to Vendors@Gov by using a two-step flow that involves selecting a vendor account and then proceeding to login with Singpass, with support for multiple vendor IDs if needed.
-
-Direct steps referenced in the provided documents:
-- Step 1: Login for UEN Registered Company/ Organisation. On the login screen, select the appropriate account under “Select Account” and click Continue to proceed to login (the Continue action is highlighted as the next step). This step is designed for users who transact as a Company/Organisation, Sole Proprietors, or Societies and may involve multiple vendor IDs (Step 3 indicates selecting the Vendor ID/account to access before continuing). The screen emphasizes choosing the correct vendor ID and proceeding to login (Continue button) after account selection. Source references describe the Step 1 UI and its purpose for multi-ID access. (Source: Vendors@Gov Login User Guide, LoginRegister.pdf, pages 4)
-
-- Step 2: Singpass login. After selecting the account, you enter your Singpass login details to access Vendors@Gov. This step follows the initial account selection. (Source: Vendors@Gov Login User Guide, LoginRegister.pdf, page 4)
-
-- Step 3 (context for multi-ID users): If you are assigned to transact with multiple vendor IDs, you must select the vendor ID/account you wish to access and click Continue to login. This clarifies the flow when multiple IDs exist. (Source: Vendors@Gov Login User Guide, LoginRegister.pdf, page 5)
-
-Additional context:
-- Corppass may be involved in enabling access to the Vendors@Gov e-service via steps you perform in Corppass (registration, enabling services, and assigning users). The guides outline the required Corppass steps to enable login for the UEN Registered Entity. (Source: Vendors@Gov Login User Guide, LoginRegister.pdf, pages 4–6)
-
-In short: Choose your vendor ID at Step 1, click Continue, then enter Singpass credentials at Step 2 to log in; if you have multiple IDs, select the appropriate ID at Step 3 and continue login.
+Contextual notes from the sources:
+- The login guide identifies the process for UEN-registered entities under the section “1. Login for UEN Registered Company/ Organisation,” noting that Corppass registration is a prerequisite to access Vendors@Gov, and the first action is to choose the For Business Users option to proceed. This step is labeled as Step 1 in the guide’s flow. (Source: Vendors@Gov Log In User Guide; pages 3 and 5 excerpts in LoginRegister.pdf)
 
 Cited sources:
-- Vendors@Gov Login User Guide, LoginRegister.pdf, pages 4–6 (Step 1, Step 2, Step 3; multi-ID context; Corppass context)","
-Chunk Text : This image appears to be a page from a training or user guide, focusing on the first step of logging in for UEN registered companies or organizations. The overall layout shows a clean, document-style slide with a light, professional color scheme, dominated by white space and a thin orange vertical gutter on the left edge.
-
-At the top, a prominent heading reads “1. Login for UEN Registered Company/ Organisation,” signaling that this is the first step in a multi-step process. Beneath the header, there is a subheading line in smaller, italicized text that states: “This login method is applicable to UEN registered vendors who are transacting as a Company/ Organisation, Sole Proprietors, or Societies.” This line clarifies the audience and scope of the login method.
-
-In the central portion of the page, there is a screenshot or diagram illustrating a login screen. The diagram features a label “Select Account” with a user icon, followed by a caption: “Please select an account to proceed into Vendors@gov.” The focal area is a cluster of radio button options arranged in two rows within a red-outlined rectangular box. Each option is represented by a short, dotted avatar-like rectangle, suggesting multiple vendor accounts or IDs to choose from. A dark gray “Logout” button sits to the left of a blue “Continue” button, with the latter also highlighted by a red outline, drawing attention to the action of proceeding to login.
-
-To the right of the central diagram, there is a note panel labeled with a small icon and the word “NOTE.” The note text explains the step is applicable to users who have been assigned to transact with multiple vendor IDs on behalf of their organization. Below the note, another short block labeled “Step 3 —” provides a concise instruction: “Select the ‘Vendor ID/account’ you would like to access and click ‘Continue’ to login.” This appears to be part of a numbered sequence, and the current image is labeled as Step 1.
-
-The page has a polished, instructional tone, designed to guide users through choosing the correct vendor account and continuing to login. The right-hand note and step instruction supplement the central visual of the account selection, ensuring users understand both the purpose and the action required.
-
-In sum, the image is a training slide that demonstrates the initial login step for UEN-registered companies, showing an account selection UI with multiple vendor IDs, and highlighting the Continue action, while providing a contextual note about multi-ID access and a forward reference to Step 3. The visual cues—two highlighted buttons, a red-outlined account picker, and the note panel—emphasize the sequence and user actions needed to proceed with login. This description can help users or systems searching for “login for UEN registered company,” “vendor ID selection,” or “continue to login” to locate this asset. from LoginRegister.pdf, page 4
-
-Chunk Text : Login for UEN Registered Company/ Organisation** 
-
-_This login method is applicable to UEN registered vendors who are transacting as a Company/ Organisation, Sole Proprietors, or Societies._ 
-
-**==> picture [477 x 205] intentionally omitted <==**
-
-**Step 2** – Enter your Singpass login details. 4 
-
---- end of page.page_number=4 ---
-
-## **1. Login for UEN Registered Company/ Organisation** 
-
-_This login method is applicable to UEN registered vendors who are transacting as a Company/ Organisation, Sole Proprietors, or Societies._ 
-
-**==> picture [449 x 241] intentionally omitted <==**
-
-**==> picture [83 x 35] intentionally omitted <==**
-
-This step is only applicable to users who have been assigned to transact with multiple vendor IDs on behalf of your organisation. **Step 3** – Select the ‘Vendor ID/account’ you would like to access and click ‘Continue’ to login. 5 
-
---- end of page.page_number=5 ---
-
-## **Corppass Registration Guide for UEN Registered Entity** 
-
-**Overview of steps to perform on Corppass to enable login to the Vendors@Gov e-service** 
-
-For a user to be able to access the Vendors@Gov e-service, the user must have a Singpass account and be assigned the Vendors@Gov e-service for the UEN Registered Entity on Corppass (www.corppass.gov.sg). The following outlines the steps required for a user to access Vendors@Gov. User guides for each individual step can be found here. **Step 1: Register for Corppass and set up Corppass Admin account** 
-
-**Step 2: Set up the Vendors@Gov e-service** 
-
-**Step 3: Create Corppass User account and assign the Vendors@Gov e-service to users Step 4: Activate the Corppass User account Step 5: Activate Singpass account (only for foreign ID users)** 
-
-6 
-
---- end of page.page_number=6 ---
-
-## **Corppass Registration Guide for UEN Registered Entity** 
-
-**Step 1: Register for Corppass and set up Corppass Admin account** 
-
-After obtaining a Corppass ID from Corppass, proceed to Corppass to create a Corppass Administrator(Admin) account. **==> picture [292 x 102] intentionally omitted <==**
-
-**If you are the Registered Officer (RO) of your entity** , you can either appoint yourself as a Corppass Admin or approve another user to be the Corppass Admin. Examples of RO include the Owner, Partner, Director or Corporate Secretary of the entity. from LoginRegister.pdf, page 3,4,5,6
-
-Chunk Text : **==> picture [88 x 32] intentionally omitted <==**
-
-**==> picture [304 x 76] intentionally omitted <==**
-
-Login User Guide A guide to log into Vendors@Gov portal. --- end of page.page_number=1 ---
-
-**==> picture [222 x 63] intentionally omitted <==**
-
-**==> picture [87 x 32] intentionally omitted <==**
-
-## **Vendors@Gov Log In User Guide** 
-
-## Select your entity type: 
-
-## **1. For UEN Registered Company/ Organisation** 
-
-_This login method is_ applicable _to UEN registered vendors who are transacting as a Company/ Organisation, Sole Proprietors, or Societies._ 
-
-## **2. For Foreign Company/ Organisation without UEN** 
-
-_This login method is applicable to non-UEN registered vendors who are transacting as a Foreign Company/ Organisation._ 
-
-## **3. from LoginRegister.pdf, page 0,1
-"
-What happens after a UEN Registered Entity or Foreign Entity creates their vendor record?,"Answer:
-After a UEN Registered Entity or Foreign Entity creates their vendor record, the vendor record will be auto-approved.
-
-Cited sources:
-- Vendors@Gov_Process_Flow.pdf, mentions: ""After creating record, your vendor record will be auto approved. For UEN Registered Entity and Foreign Entity, your vendor record will be auto- [approved]."" [Source: Vendors@Gov_Process_Flow.pdf, page [0]]","
-Chunk Text : refer ‘Login and Registration User Guide’. vendor record creation.<br>Note: Vendors who are transacting with Statutory<br>Boards will need to separately inform your client<br>New vendors will need to ‘Create New Vendor’ record in Vendors@Gov after logging in. agency of your bank details for them to process<br>your payment at their financial system.<br>Inter-Bank Giro/Paynow Telegraphic Transfer<br>After creating record, your vendor record will be auto approved. For UEN Registered Entity and Foreign Entity, your vendor record will be auto- Instructions to set your Vendors@Gov password<br>approved after you create vendor record. will be issued to you after 7 working days through<br>email.<br>Please contact AGD Helpdesk if you would like to update your GST<br>Registration number. Login to Vendors@Gov under ‘Foreign Individual<br>with an AGD Password’ with your user ID and<br>For Individual SingPass holder who has registered a Telegraphic Transfer (TT)  AGD Password.<br>bank account will need to submit a copy of bank statement stating the account<br>holder name and bank account details to AGD for your vendor record approval.<br>To submit the document, please lodge a helpdesk ticket.<br>Approved<br>**----- End of picture text -----**<br>
-
-
-Submit e-invoices via Vendors@Gov. For more information, please refer to ‘E-Invoice and E-Credit Note Submission’ User Guide. For entities, you may also submit e-invoices via InvoiceNow, which is the preferred channel for e- invoice submission. from Vendors@Gov_Process_Flow.pdf, page 0
-
-Chunk Text : This image appears to be a page from a user guide or training document, focusing on the first step: “Create Vendor Record.” The layout is clean and corporate, with a light gray content area and a narrow orange left margin accent.
-
-At the top, a bold heading states “1. Create Vendor Record,” using a dark blue font. A thin horizontal line runs beneath the header, helping separate the title from the main content. Along the upper portion of the page, there are three small, labeled fields or placeholder boxes: “Vendor ID” on the left with a highlighted orange border, and two other fields labeled “Official Name” and “Vendor Name *” that appear as light gray text boxes or placeholders. These fields are aligned horizontally in a row, suggesting that the form to create a vendor record includes these three inputs.
-
-The majority of the content is a light gray information card or box set below the row of fields. It begins with a blue numbered badge containing the number “1” followed by the heading “Vendor ID is not editable.” The text inside this box explains that the Vendor ID is a unique identifier that identifies the vendor record and is assigned in a specific way. It outlines how the ID is generated for different entity types, subdividing the explanation into sections:
-
-- Company/Organisation, with subsections for “UEN Registered Entity” and “Foreign Entity,” noting the vendor ID assignments as: “the vendor ID will be your organization’s UEN” and “the vendor ID will be your Corppass Entity ID/GeBIZ trading partner reference.”
-- Individual, with subsections for “NRIC/FIN Holder” and “Non-NRIC/FIN Holder,” indicating the vendor ID will be the holder’s NRIC/FIN number or their passport number, respectively.
-
-An additional line at the bottom of the box cautions that “The vendor ID may appear incorrectly if you have selected the wrong login option.”
-
-In terms of overall composition, the page uses a two-column-ish feel: a small visual row of input labels near the top and a prominent, standalone information box that communicates the critical rule about the vendor ID’s editability and its assignment rules. The color scheme relies on blue for headings and bullet points, orange for the selected Vendor ID box outline, and gray for background and secondary text, mirroring typical corporate software documentation aesthetics.
-
-This image would be indexed under keywords like “Vendor record creation,” “Vendor ID not editable,” “Vendor ID assignment rules,” “UEN,” “NRIC/FIN,” “corporate entity vs. individual,” and “vendor record form” for a RAG (retrieval-augmented generation) application. from Create_Update_Vendor_Record.pdf, page 4
-
-Chunk Text : The registration is done on Corppass (www.corppass.gov.sg). If the appointed administrator has Singpass, proceed to register for Corppass via Singpass. Otherwise, register via foreign ID. When registering via foreign ID, Singpass Foreign user Account (SFA) will also be automatically created for the appointed administrator. **==> picture [510 x 207] intentionally omitted <==**
-
-**Note:** Once the registration is submitted, Corppass will take 5 to 10 working days to process your registration. 17 
-
---- end of page.page_number=17 ---
-
-## **Corppass Registration Guide for Non-UEN Registered Entity** 
-
-**Step 2: Activate Singpass account for Corppass Admin (only for foreign ID users)** 
-
-**For Corppass Admin with Singpass** , this step is not applicable. Proceed to login to Corppass via Singpass to set up the Vendors@Gov e-service. **For Corppass Admin with foreign ID** , your Singpass Foreign user Account (SFA) will be created once your Corppass Admin account is approved. An email will be sent to you to inform you to activate your SFA. Once you have activated your SFA, you may proceed to login to Corppass via Singpass to set up the Vendors@Gov e-service. **==> picture [612 x 197] intentionally omitted <==**
-
-18 
-
---- end of page.page_number=18 ---
-
-## **Corppass Registration Guide for Non-UEN Registered Entity** 
-
-## **Step 3: Set up the Vendors@Gov e-service** 
-
-The Corppass Admin will need to set up the Vendors@Gov e-service for the entity on Corppass. **==> picture [357 x 116] intentionally omitted <==**
-
-**==> picture [357 x 155] intentionally omitted <==**
-
-19 
-
---- end of page.page_number=19 ---
-
-## **Corppass Registration Guide for Non-UEN Registered Entity** 
-
-## **Step 3: Set up the Vendors@Gov e-service** 
-
-## **Important:** 
-
-- If your entity has an existing Vendor ID on Vendors@Gov or has been awarded Invoicing Instructions through your GeBIZ ID e.g. Y12345, please indicate the Vendor ID or GeBIZ ID in the vendor ID field. Otherwise, leave the field blank. from LoginRegister.pdf, page 16,17,18,19
-"
-What additional step must a Non-SingPass Holder complete before they can access Vendors@Gov?,"- The provided documents describe the onboarding flow for Non-UEN Registered Entities to access Vendors@Gov via Corppass, including steps for Singpass activation. However, there is no explicit mention of a separate “Non-SingPass Holder” additional step beyond the standard steps listed (Step 1–Step 6) and the Singpass activation workflow in the Non-UEN context.
-
-- Closest referenced content indicates that for foreign ID users, a Singpass account (SFA) is created or activated, and then the user proceeds to login to Vendors@gov via the “For Business Users” option after activation. This implies that activation of Singpass (SFA) is a prerequisite for access.
-
-Directly from the provided text, the relevant summarized points are:
-- Step 2 (for Corppass Admin with foreign ID): Singpass activation occurs; an SFA is created and must be activated before accessing Vendors@gov.
-- Step 6: Activate Singpass for foreign ID users; after activation, login to Vendors@gov is possible.
-- Step 5: Activate Corppass User accounts; then log in via Vendors@gov using “For Business Users.”
-
-Direct answer based on the present content:
-- A Non-SingPass Holder must have their Singpass (Foreign user Account) activated as part of the process before they can access Vendors@Gov, i.e., complete Singpass activation for foreign ID users (SFA) and then use Vendors@gov after activation.
-
-Cited sources:
-- LoginRegister.pdf, pages 17, 21, 22 (Corppass Registration Guide for Non-UEN Registered Entity; Step 2 and Step 6 descriptions)","
-Chunk Text : This image presents a page titled “Corppass Registration Guide for Non-UEN Registered Entity.” The overall layout resembles a slide from a training or onboarding deck. The top portion features a bold, dark-blue headline that spans the width of the slide. A thin orange vertical margin sits along the left edge, adding a design accent.
-
-Directly beneath the title is a blue, rounded rectangular callout labeled “Step 2: Activate Singpass account for Corppass Admin (only for foreign ID users).” This header row uses white text on a medium-dark blue background, signaling a step in a guided process.
-
-Within the blue callout, there are two paragraphs of explanatory text with smaller white headings for emphasis:
-- “For Corppass Admin with Singpass, this step is not applicable. Proceed to login to Corppass via Singpass to set up the Vendors@gov e-service.”
-- “For Corppass Admin with foreign ID, your Singpass Foreign user Account (SFA) will be created once your Corppass Admin account is approved. An email will be sent to you to inform you to activate your SFA. Once you have activated your SFA, you may proceed to login to Corppass via Singpass to set up the Vendors@gov e-service.”
-
-Below the text block, there is a screenshot of a web header that resembles a government portal navigation bar. The screenshot shows a dark navigation bar at the top with menu items such as “Home,” “About Us,” “Services,” and “Help.” On the right side of the header, there is a prominent orange button labeled “Log in with Singpass” accompanied by a small search icon on the far right.
-
-In the main content area of the screenshot, aligned to the left, there is a large banner that reads “Welcome to Corppass.” The banner includes descriptive copy about Corppass, noting that it is the authorization system for entities to manage digital service access for employees who need to perform corporate transactions, and mentions there are more than 200 government digital services available today. A smaller subtext invites users to “Sign up now to prevent any disruption to your business transactions. Find out more.” To the right or foreground of the banner, there is a close-up image of a hand interacting with a mobile device, reinforcing the digital, self-service theme.
-
-The page background features a light blue tinted rectangle framing the screenshot, visually separating the slide’s central content from the slide margins. The bottom-right corner of the image includes a small page number, “18,” indicating this is slide 18 of a larger presentation.
-
-In summary, the image depicts a step-by-step guide slide for registering Corppass Admin accounts, with a focus on Singpass activation, supported by a screenshot of a government portal header and a welcome banner for Corppass, all arranged in a clean, instructional layout with a blue color scheme and an orange accent. The textual content is integrated as part of the slide’s explanation of the activation process, including conditional notes for Singpass users and foreign ID users. from LoginRegister.pdf, page 17
-
-Chunk Text : This image appears to be a page from a presentation or guide titled “Corppass Registration Guide for Non-UEN Registered Entity.” The top of the page features a large, bold heading in dark blue text. A light horizontal rule runs beneath the title, and there is an orange vertical margin on the left edge, giving a clean, branded layout.
-
-The main content area is organized into two clearly defined sections labeled “Step 5: Activate Corppass User accounts” and “Step 6: Activate Singpass account (only for foreign ID users).” Each section is presented as a rounded blue callout box with white text, making them visually distinct from the page background.
-
-Step 5 contains a paragraph starting with “If you are a Corppass Admin, steps 5 and 6 are not applicable,” followed by guidance for different user roles:
-- For Corppass Admin: instructions indicate proceeding to log into Vendors@gov using the “For Business Users” option.
-- For Corppass User: a note that an email should have been sent to activate the Corppass account, and that logging in to Vendors@gov using the “For Business Users” option is required after activation.
-- Subpoints address specific user types: NRIC or FIN users should already have an active Singpass account and may log in to Vendors@gov using “For Business Users”; foreign ID users (SFA) would have had a Singpass account created automatically alongside the Corppass User account.
-
-Step 6 covers activation of a Singpass account, restricted to foreign ID users:
-- It states that an email should have been sent to inform the user to activate their SFA, and after activation, they may proceed to log in to Vendors@gov using the “For Business Users” option.
-
-The page number “22” is indicated in the bottom-right corner, suggesting this is part of a larger slide deck or document.
-
-Overall, the image communicates a two-step workflow for enabling access through Corppass and Singpass, with role-specific instructions for administrators, standard users, and foreign-ID users, using color-coded callout boxes to delineate each step. Keywords for indexing or search might include: Corppass registration, Singpass activation, non-UEN entity, government vendor login, “For Business Users” option, admin vs user flow, foreign ID users, SFA activation. from LoginRegister.pdf, page 21
-
-Chunk Text : This image appears to be a page from a training or onboarding document titled “Corppass Registration Guide for Non-UEN Registered Entity.” The top section features a bold, dark-blue header with the title, centered toward the upper third of the page. A thin horizontal rule runs beneath the title, visually separating it from the content area.
-
-Directly below the rule, there is a prominent light-blue callout box that spans most of the page width. At the left edge of this box, a small rounded tab with a darker blue background and white text reads “Overview of steps to perform on Corppass to enable login to the Vendors@Gov e-service.” The content inside the blue box is presented as a block of instructional text, with multiple sentences describing prerequisites and the general workflow. It mentions the need for a Singpass account and assignment to the Vendors@Gov e-service for access to the foreign Registered Entity on Corppass (www.corppass.gov.sg). Within this box, there is a line that states “The following outlines the steps required for a user to access Vendors@Gov. User guides for each individual step can be found here.” The word “here” is likely a hyperlink reference. The main body lists six steps in a numbered format, each starting with “Step 1” through “Step 6,” and describes actions such as nominating an admin, activating Singpass for foreign IDs, setting up vendors, creating a Corppass user account, and activating those accounts for both Corppass and Singpass for foreign users.
-
-The page background is white with a subtle left vertical orange margin stripe that runs from the top to the bottom, adding a branding accent. In the bottom-right corner, a small page number, “16,” is visible, indicating this is part of a multi-page document.
-
-In summary, the image is a page of a guidance document that outlines the six-step process for non-UEN registered entities to enable login to the Vendors@Gov e-service via Corppass, including prerequisites like Singpass activation and the sequence of admin and user account setups. The visual emphasis is on the blue information box containing the step-by-step instructions, with a clean, professional layout suitable for training materials. from LoginRegister.pdf, page 15
-"
-How long does it take for a Non-SingPass Holder to receive their Vendors@Gov login credentials?,"Direct answer: The materials indicate that Corppass/Vendors@Gov registrations take 5 to 10 working days to process after submission. This processing timeframe is mentioned in the Corppass registration guidance for non-UEN registered entities, and the related notes reference the same 5–10 working days window (even for Admin activation and SFA setup when registering via foreign ID).
-
-However, the specific question asks for the login credentials for a Non-SingPass Holder. The sources describe:
-- If the Corppass Admin uses Singpass, proceed to login via Singpass to set up the Vendors@Gov e-service.
-- If the Corppass Admin uses foreign ID, a Singpass Foreign User Account (SFA) is created after approval, and you can log in via Singpass once activated.
-
-The implied credential provisioning process (SFA activation and login setup) is tied to the 5–10 working days processing time after submission. So, for a Non-SingPass Holder, the overall timeframe to receive login credentials (SFA activation and setup) is within 5 to 10 working days after submission.
-
-Cited sources:
-- LoginRegister.pdf, pages 17-19 (Corppass Registration Guide for Non-UEN Registered Entity) [source: LoginRegister.pdf, pages 17-19]
-- LoginRegister.pdf, page 18 (activation and SFA notes) [source: LoginRegister.pdf, page 18]
-- Vendors@Gov_Process_Flow.pdf (processing note and workflow context) [source: Vendors@Gov_Process_Flow.pdf, page 0]
-
-If you need, I can extract the exact quoted lines from those pages. 
-
-Sources Used: LoginRegister.pdf (pages 17–19), Vendors@Gov_Process_Flow.pdf (page 0)","
-Chunk Text : The registration is done on Corppass (www.corppass.gov.sg). If the appointed administrator has Singpass, proceed to register for Corppass via Singpass. Otherwise, register via foreign ID. When registering via foreign ID, Singpass Foreign user Account (SFA) will also be automatically created for the appointed administrator. **==> picture [510 x 207] intentionally omitted <==**
-
-**Note:** Once the registration is submitted, Corppass will take 5 to 10 working days to process your registration. 17 
-
---- end of page.page_number=17 ---
-
-## **Corppass Registration Guide for Non-UEN Registered Entity** 
-
-**Step 2: Activate Singpass account for Corppass Admin (only for foreign ID users)** 
-
-**For Corppass Admin with Singpass** , this step is not applicable. Proceed to login to Corppass via Singpass to set up the Vendors@Gov e-service. **For Corppass Admin with foreign ID** , your Singpass Foreign user Account (SFA) will be created once your Corppass Admin account is approved. An email will be sent to you to inform you to activate your SFA. Once you have activated your SFA, you may proceed to login to Corppass via Singpass to set up the Vendors@Gov e-service. **==> picture [612 x 197] intentionally omitted <==**
-
-18 
-
---- end of page.page_number=18 ---
-
-## **Corppass Registration Guide for Non-UEN Registered Entity** 
-
-## **Step 3: Set up the Vendors@Gov e-service** 
-
-The Corppass Admin will need to set up the Vendors@Gov e-service for the entity on Corppass. **==> picture [357 x 116] intentionally omitted <==**
-
-**==> picture [357 x 155] intentionally omitted <==**
-
-19 
-
---- end of page.page_number=19 ---
-
-## **Corppass Registration Guide for Non-UEN Registered Entity** 
-
-## **Step 3: Set up the Vendors@Gov e-service** 
-
-## **Important:** 
-
-- If your entity has an existing Vendor ID on Vendors@Gov or has been awarded Invoicing Instructions through your GeBIZ ID e.g. Y12345, please indicate the Vendor ID or GeBIZ ID in the vendor ID field. Otherwise, leave the field blank. from LoginRegister.pdf, page 16,17,18,19
-
-Chunk Text : This image appears to be a slide from a presentation titled “Corppass Registration Guide for Non-UEN Registered Entity.” The slide is structured with a clean, professional layout using a light blue content area and a pale background. At the very top, the title is displayed in bold, dark blue text, making it the primary focus of the slide.
-
-The main body of the slide is organized as Step 1: Nominate a Corppass Admin who will register for Corppass on behalf of the entity. This header sits inside a rounded blue callout box with white text, drawing attention to the procedural action. Beneath this header, there is a paragraph of instructional text that explains, in a concise, stepwise manner, the need to appoint an administrator for the Corppass account. It notes that the appointed person will register on behalf of the entity, and that their Corppass Administrator (Admin) account will be registered together with the entity’s Corppass account.
-
-The instructional text continues with references to the registration process, noting that registration is done on Corppass and providing a website link in blue, www.corppass.gov.sg, for emphasis. It mentions that if the appointed administrator has Singpass, they should proceed to register for Corppass via Singpass, with an alternative instruction to register via foreign ID if Singpass is not available. There is also a note about automatic creation of a Singpass Foreign User Account (SFA) for the appointed administrator when registering via foreign ID.
-
-Within the slide, there is a visual screenshot illustrating the user interface of Corppass or Singpass, showing a navigation menu with items such as “Register for Corppass,” “LUEA Registered Entity,” “Foreign Entity,” and “Register via Singpass.” A portion of the screenshot includes a finger pointing toward a button or link, likely to emphasize the registration flow. The screenshot is embedded inside the slide with a light gray border and appears to be part of the step-by-step guide.
-
-Towards the bottom of the slide, there is a prominent note in a smaller font, prefaced with the word “Note:” that states after submission, Corppass registration will take 5 to 10 working days to process.
-
-Overall, the slide serves as an instructional guide for Non-UEN registered entities to nominate a Corppass Admin who will complete the registration process, including references to using Singpass or foreign ID for the registration, and a timeframe for processing. The color scheme uses blues and grays for a formal, institutional look, with the important action header and the link to Corppass clearly highlighted. from LoginRegister.pdf, page 16
-
-Chunk Text : UPDATED ON 02 AUGUST 2024 
-
-## 
-
-**==> picture [132 x 28] intentionally omitted <==**
-
-**==> picture [59 x 21] intentionally omitted <==**
-
-## **PROCESS FLOW** 
-
-**==> picture [751 x 369] intentionally omitted <==**
-
-**----- Start of picture text -----**<br>
-COMPANY/ ORGANISATION INDIVIDUAL (For personal payment transactions)<br>UEN REGISTERED ENTITY FOREIGN ENTITY WITHOUT UEN SINGPASS HOLDER NON- SINGPASS HOLDER<br>Login to Vendors@Gov under ‘Business’ option  Login to Vendors@Gov under ‘Business’ option  Login to Vendors@Gov under ‘Individuals’ option  Submit a copy of AGD Password form to AGD.<br>with your Singpass / Singapore Foreign User  with your Singpass / Singapore Foreign User  with your SingPass.<br>Account (SFA). Account (SFA). Foreign Individuals who are registering an EFT<br>bank account will also need to submit the original<br>For more information on how to get started, please  For more information on how to get started, please  DCA form with bank endorsement to AGD for<br>refer to ‘Login and Registration User Guide’. from Vendors@Gov_Process_Flow.pdf, page 0
-"
-What must an Individual SingPass Holder do if they register a TT bank account?,"Answer:
-If they are an Individual SingPass Holder registering a Telegraphic Transfer (TT) bank account, they must lodge a helpdesk ticket for assistance. The TT bank details update function is not available for individuals registering TT bank accounts. 
-
-Cited details:
-- From the ""Vendor Record User Guide"" content: “Telegraphic Transfer (TT) option selected. ... Update of Telegraphic Transfer (TT) bank details function is not available for local/foreign vendors who are transacting as an individual. To update your TT bank details, please lodge a helpdesk ticket.” (Source: Create_Update_Vendor_Record.pdf, pages 31-32) 
-- Also notes on TT-related processes around TT bank details and restrictions for individuals (same source).
+- Vendors@Gov Log In User Guide (LoginRegister.pdf), page references indicating Step 1 and Corppass prerequisite details. 
+  - Specifically: Page 3 excerpt describing Step 1 – Select “For Business Users” option to login to Vendors@Gov; Corppass registration prerequisite mentioned.
+  - Page 5 excerpt describing Step 3 – Select the Vendor ID/account to access and continue login (for context on subsequent steps after initial login). 
+
+If you want, I can extract exact text strings (Step 1 label, button names, and notes) for indexing or provide a JSON snippet suitable for a retrieval-augmented workflow. 
+
+Sources Used: 
+- Vendors@Gov Log In User Guide (LoginRegister.pdf) — referenced pages 3 and 5.","Taken from LoginRegister.pdf : pages 3, 5, 8"
+What happens after a UEN Registered Entity or Foreign Entity creates their vendor record?,"- After a UEN Registered Entity or Foreign Entity creates their vendor record, the record will be auto approved. For UEN Registered Entity and Foreign Entity, the vendor record will be auto-approved after you create the vendor record. Once approved, you can proceed with the related payment/process steps and submission of e-invoices as described in the Vendors@Gov guidance. 
+
+Cited source: 
+- Vendors@Gov_Process_Flow.pdf, content referencing auto-approval after vendor record creation (pages listed as [1]) [source file: Vendors@Gov_Process_Flow.pdf]. 
+- Additional context about the creation step and approval gate is reinforced in the same document’s process flow description. 
+
+Sources Used: Vendors@Gov_Process_Flow.pdf (pages [1])","Taken from Vendors@Gov_Process_Flow.pdf : pages 1
+Taken from Create_Update_Vendor_Record.pdf : pages 5"
+What additional step must a Non-SingPass Holder complete before they can access Vendors@Gov?,"Direct answer:
+- A Non-SingPass Holder must have their Singpass account activated (specifically a Singpass Foreign user Account, or SFA) before they can access Vendors@Gov.
+
+Cited context references:
+- Data_item 1 (non-UEN registered entity, Step 2): for foreign ID users, a Singpass Foreign user Account (SFA) will be created upon approval; after activation, you can log in to Corppass via Singpass to set up Vendors@Gov e-service. This implies activation of the Singpass/SFA is required prior to access.
+- Data_item 2 (non-UEN entity, Step 6): Step 6 is Activate Singpass account (only for foreign ID users); after activation, you may login to Vendors@Gov using the For Business Users option.
+- Data_item 3 (overview of steps): Step 2 covers Activate Singpass account for Corppass Admin (only for foreign ID users) and notes activation is a prerequisite to access the Vendors@Gov e-service.
 
 Sources Used:
-- Create_Update_Vendor_Record.pdf (pages 31-32)","
-Chunk Text : UPDATED ON 02 AUGUST 2024 
-
-## 
-
-**==> picture [132 x 28] intentionally omitted <==**
-
-**==> picture [59 x 21] intentionally omitted <==**
-
-## **PROCESS FLOW** 
-
-**==> picture [751 x 369] intentionally omitted <==**
-
-**----- Start of picture text -----**<br>
-COMPANY/ ORGANISATION INDIVIDUAL (For personal payment transactions)<br>UEN REGISTERED ENTITY FOREIGN ENTITY WITHOUT UEN SINGPASS HOLDER NON- SINGPASS HOLDER<br>Login to Vendors@Gov under ‘Business’ option  Login to Vendors@Gov under ‘Business’ option  Login to Vendors@Gov under ‘Individuals’ option  Submit a copy of AGD Password form to AGD.<br>with your Singpass / Singapore Foreign User  with your Singpass / Singapore Foreign User  with your SingPass.<br>Account (SFA). Account (SFA). Foreign Individuals who are registering an EFT<br>bank account will also need to submit the original<br>For more information on how to get started, please  For more information on how to get started, please  DCA form with bank endorsement to AGD for<br>refer to ‘Login and Registration User Guide’. from Vendors@Gov_Process_Flow.pdf, page 0
-
-Chunk Text : If you are unsure of your bank details, please contact your bank to confirm the information for your remittance transfer._ 
-
-31 
-
---- end of page.page_number=31 ---
-
-## **2. View/ Update Vendor Record Details – Bank Details (TT)** 
-
-**==> picture [381 x 76] intentionally omitted <==**
-
-## _**Telegraphic Transfer (TT) option selected.**_ 
-
-_After updating the bank details, click ‘Next’ and on the summary page, click ‘Next’ again to submit your vendor record request._ 
-
-**==> picture [400 x 124] intentionally omitted <==**
-
-## _**You can only submit e-Invoices after your vendor record has been approved.**_ 
-
-_Update of Telegraphic Transfer (TT) bank details function is not available for local/foreign vendors who are transacting as an  individual. To update your TT bank details, please lodge a helpdesk ticket._ 
-
-_GST registration update is not available for vendors who have registered a TT bank account. To update your GST registration details, please lodge a helpdesk ticket for assistance._ 
-
-32 
-
---- end of page.page_number=32 ---
-
-**==> picture [17 x 540] intentionally omitted <==**
-
-## **Note for Inter-Bank GIRO registration** 
-
-1. Vendors who are receiving payments through Inter-Bank GIRO must have a registered bank account listed in the Vendors@Gov approved banks. ## **Key points to note for the following banks:** 
-
-## POSB/DBS Bank 
-
-POSB/ DBS Bank code: 7171- DBS Bank Ltd 
-
-If there are 9 digits in your account number, the branch code is “081-POSB” 
-
-If there are 10 digits in your account number, the branch code is the first 3 digits of your account number. For example, if your account number is 0012345678, the branch code is ‘001’. from Create_Update_Vendor_Record.pdf, page 32,30,31
-
-Chunk Text : Bank details (Eg: Bank & Branch code, Bank account) must be updated correctly. If you are unsure of your bank details, please contact your bank to confirm the correct information._ 
-
-_**Company/ Organization** – You should provide a corporate bank account that is registered under your business registration name and ID (Eg: UEN)._ 
-
-_**Individuals** – You should provide a bank account that is registered under your personal name and ID (Eg: NRIC, FIN or Passport no.)._ 
-
-11 
-
---- end of page.page_number=11 ---
-
-## **1. Create Vendor Record – Bank Details (IBG)** 
-
-**==> picture [621 x 63] intentionally omitted <==**
-
-**==> picture [586 x 122] intentionally omitted <==**
-
-_**Inter-Bank Giro (IBG) option selected.**_ 
-
-## _**Select your GST registration status.**_ 
-
-- _If you are GST Registered, please select ‘Yes’ for GST Registered option. Then, enter your GST registration number (Please enter only the numbers and omit the ‘-‘ dash)._ 
-
-- _If you are not GST Registered, please select ‘No’ for GST Registered option’._ 
-
-**==> picture [57 x 25] intentionally omitted <==**
-
-_GST registration update is not available for vendors who have registered a TT bank account. To update your GST registration details, please lodge a helpdesk ticket for assistance._ 
-
-12 
-
---- end of page.page_number=12 ---
-
-## **1. Create Vendor Record – Bank Details (IBG)** 
-
-**==> picture [600 x 158] intentionally omitted <==**
-
-## _**Inter-Bank Giro (IBG) option selected.**_ 
-
-_After updating your payment details, click_ _**‘Next’** and on the summary page, click_ _**‘Next’** again to submit your vendor record request._ 
-
-_Once approved, you will receive an email notification at your registered email address._ 
-
-13 
-
---- end of page.page_number=13 ---
-
-## **1. Create Vendor Record – Bank Details (PayNow)** 
-
-**==> picture [609 x 76] intentionally omitted <==**
-
-**==> picture [391 x 98] intentionally omitted <==**
-
-## _**PayNow  (PAYN) option selected.**_ 
-
-_**Select your proxy type and enter your proxy value. The PayNow proxy value refers to the unique indicator of the recipient which  may be used to receive payments via PayNow.**_ 
-
-- _PayNow proxy should be within 8 to 17 characters._ 
-
-- _Acceptable PayNow proxy values are as follows:_ 
-
-   - _Individuals: NRIC/FIN Number (e.g. S1234567X)_ 
-
-   - _Corporates: UEN (e.g. from Create_Update_Vendor_Record.pdf, page 10,11,12,13
-"
-What is the preferred channel for e-invoice submission for entities?,"- The preferred channel for e-invoice submission for entities is InvoiceNow. This is stated in the first data item: “Submit e-invoices via Vendors@Gov. For more information, please refer to ‘E-Invoice and E-Credit Note Submission’ User Guide. For entities, you may also submit e-invoices via InvoiceNow, which is the preferred channel for e- invoice submission.”  
-- Source: Vendors@Gov_Process_Flow.pdf, page [0].  
-- Additional context: E-invoice submissions can also be submitted via Vendors@Gov, but InvoiceNow is highlighted as the preferred channel for entities.  
-
-Sources Used: Vendors@Gov_Process_Flow.pdf (pages [0])","
-Chunk Text : refer ‘Login and Registration User Guide’. vendor record creation.<br>Note: Vendors who are transacting with Statutory<br>Boards will need to separately inform your client<br>New vendors will need to ‘Create New Vendor’ record in Vendors@Gov after logging in. agency of your bank details for them to process<br>your payment at their financial system.<br>Inter-Bank Giro/Paynow Telegraphic Transfer<br>After creating record, your vendor record will be auto approved. For UEN Registered Entity and Foreign Entity, your vendor record will be auto- Instructions to set your Vendors@Gov password<br>approved after you create vendor record. will be issued to you after 7 working days through<br>email.<br>Please contact AGD Helpdesk if you would like to update your GST<br>Registration number. Login to Vendors@Gov under ‘Foreign Individual<br>with an AGD Password’ with your user ID and<br>For Individual SingPass holder who has registered a Telegraphic Transfer (TT)  AGD Password.<br>bank account will need to submit a copy of bank statement stating the account<br>holder name and bank account details to AGD for your vendor record approval.<br>To submit the document, please lodge a helpdesk ticket.<br>Approved<br>**----- End of picture text -----**<br>
-
-
-Submit e-invoices via Vendors@Gov. For more information, please refer to ‘E-Invoice and E-Credit Note Submission’ User Guide. For entities, you may also submit e-invoices via InvoiceNow, which is the preferred channel for e- invoice submission. from Vendors@Gov_Process_Flow.pdf, page 0
-
-Chunk Text : To get started, please refer to ‘E-invoice Submission via InvoiceNow Network’ User Guide. Upon successful submission, your e-invoice will be sent to your client agency’s financial system for their processing. Receive payment on the payment schedule date. The payment schedule date is calculated based on the payment term you have selected on your e-invoice. (Eg: If your e-invoice payment term is 30 Days, your e-invoice will be paid to you on the 30[th] day from your e-invoice date.) 
-
-If you did not receive your payment on the payment schedule due date, please contact your client agency to check on your e-invoice status. Retrieve remittance advices for payments paid by ‘Accountant-General’s Department (AGD)’ at Vendors@Gov portal. For more information, please refer to ‘View and Retrieve Paid Transactions’ User Guide. from Vendors@Gov_Process_Flow.pdf, page 0
-
-Chunk Text : UPDATED ON 02 AUGUST 2024 
-
-## 
-
-**==> picture [132 x 28] intentionally omitted <==**
-
-**==> picture [59 x 21] intentionally omitted <==**
-
-## **PROCESS FLOW** 
-
-**==> picture [751 x 369] intentionally omitted <==**
-
-**----- Start of picture text -----**<br>
-COMPANY/ ORGANISATION INDIVIDUAL (For personal payment transactions)<br>UEN REGISTERED ENTITY FOREIGN ENTITY WITHOUT UEN SINGPASS HOLDER NON- SINGPASS HOLDER<br>Login to Vendors@Gov under ‘Business’ option  Login to Vendors@Gov under ‘Business’ option  Login to Vendors@Gov under ‘Individuals’ option  Submit a copy of AGD Password form to AGD.<br>with your Singpass / Singapore Foreign User  with your Singpass / Singapore Foreign User  with your SingPass.<br>Account (SFA). Account (SFA). Foreign Individuals who are registering an EFT<br>bank account will also need to submit the original<br>For more information on how to get started, please  For more information on how to get started, please  DCA form with bank endorsement to AGD for<br>refer to ‘Login and Registration User Guide’. from Vendors@Gov_Process_Flow.pdf, page 0
-"
-How is the payment schedule date calculated for an e-invoice?,"- The payment schedule date is calculated based on the payment term selected on your e-invoice. For example, if the e-invoice payment term is 30 days, the payment will be made on the 30th day from the e-invoice date. 
-
-Source: Vendors@Gov_Process_Flow.pdf, content under “E-invoice Submission via InvoiceNow Network” and payment terms. 
-- Related reference: same document notes check status if not paid by the due date and mentions remittance advices via AGD portal.
+- LoginRegister.pdf, pages 18, 22, 16 (as referenced in the metadata for each item)","Taken from LoginRegister.pdf : pages 16, 18, 22"
+How long does it take for a Non-SingPass Holder to receive their Vendors@Gov login credentials?,"Direct answer isn’t explicitly stated as a single line in the provided documents. However, the closest explicit timing reference available pertains to the overall Corppass registration process for Non-UEN Registered Entities, which notes: “Once the registration is submitted, Corppass will take 5 to 10 working days to process your registration.” This refers to the registration itself, not specifically the arrival of login credentials for a non-Singpass holder, but it provides the relevant timeframe observed in these materials for onboarding.
+
+Paraphrased from the related content:
+- For Non-UEN Registered Entity onboarding via Corppass, the registration submission leads to a processing window of 5 to 10 working days (during which the administrator’s Singpass Foreign user Account (SFA) may be created, and activation emails may be sent). The documents discuss Steps 1–3, including creating the admin account and activating the SFA, with the processing timeframe noted.
 
 Cited sources:
-- Vendors@Gov_Process_Flow.pdf, pages [0] (payment terms and schedule explanation)","
-Chunk Text : To get started, please refer to ‘E-invoice Submission via InvoiceNow Network’ User Guide. Upon successful submission, your e-invoice will be sent to your client agency’s financial system for their processing. Receive payment on the payment schedule date. The payment schedule date is calculated based on the payment term you have selected on your e-invoice. (Eg: If your e-invoice payment term is 30 Days, your e-invoice will be paid to you on the 30[th] day from your e-invoice date.) 
+- LoginRegister.pdf, pages 17–19 (Corppass Registration Guide for Non-UEN Registered Entity) [Source: LoginRegister.pdf, pages 17–19]
+- LoginRegister.pdf, page 16 (Step 1 mention of Nominate Corppass Admin) [Source: LoginRegister.pdf, page 16]
 
-If you did not receive your payment on the payment schedule due date, please contact your client agency to check on your e-invoice status. Retrieve remittance advices for payments paid by ‘Accountant-General’s Department (AGD)’ at Vendors@Gov portal. For more information, please refer to ‘View and Retrieve Paid Transactions’ User Guide. from Vendors@Gov_Process_Flow.pdf, page 0
+If you need, I can extract the exact phrasing from the pages or provide a summarized timeline of steps for the non-SingPass holder path. 
 
-Chunk Text : --- end of page.page_number=1 ---
+Sources Used: LoginRegister.pdf (pages 16–19)","Taken from LoginRegister.pdf : pages 16, 17, 18, 19, 20
+Taken from Vendors@Gov_Process_Flow.pdf : pages 1"
+What must an Individual SingPass Holder do if they register a TT bank account?,"Direct answer not explicitly stated in the provided items. However, using the closest related content:
 
- from Vendors@Gov_Process_Flow.pdf, page 1
+- The TT (Telegraphic Transfer) bank details section notes: “The bank account provided must be registered under your entity’s name with the bank.” It also states: “GST registration update is not available for vendors who have registered a TT bank account. To update your GST registration details, please lodge a helpdesk ticket for assistance.” It further mentions: “To update your TT bank details, please lodge a helpdesk ticket.” 
+- It also says for TT updates: “Update of Telegraphic Transfer (TT) bank details function is not available for local/foreign vendors who are transacting as an individual. To update your TT bank details, please lodge a helpdesk ticket.”
 
-Chunk Text : 
-    Text before image : For existing vendor, please navigate to ' Update Vendor Details ' to view or update your vendor record details.
-    Image description : This image shows a software interface, likely an invoicing or accounting portal, captured from a workflow or dashboard screen. The overall layout is a two-column design: a vertical navigation rail on the left and a main content area on the right.
+From the above, for an Individual SingPass Holder registering a TT bank account, the implied action is that updating TT bank details is not available for individuals, and they should lodge a helpdesk ticket to update TT bank details.
 
-On the left, a pale blue vertical sidebar contains a hierarchical menu with several items and sub-items. The top item appears to be a Home breadcrumb, followed by a section labeled “E-Invoice” with sub-options such as “Create E-Invoice,” “Upload Batch E-Invoices,” and “Upload Attachment.” A second group under the same left rail is labeled “View Invoicing Instructions,” and a highlighted item at the bottom reads “Update Vendor Details,” emphasized with an orange border.
+Cited sources:
+- Create_Update_Vendor_Record.pdf, pages 16-17 (TT bank details guidance and note on individuals) 
+- Create_Update_Vendor_Record.pdf, page 32 (note reiterating TT bank details update for individuals via helpdesk)
 
-The main content area on the right displays a header toolbar with a row of status indicators and counts. The toolbar shows several tabs or status badges, including “All Invoices” (with a blue icon and label), and other categories such as “Draft,” “Submitted,” “Processing,” “Approved,” “Paid,” and “Rejected.” Each category has a numeric badge next to it, though the numbers are small or partially obscured in the screenshot. The header also includes a small user or system icon on the far left and a compact set of action icons on the far right, consistent with a dashboard for invoice management.
+Note: The exact phrasing about a “SingPass Holder” is not present, but the policy regarding individuals applies generally to individuals (not allowed to update TT details and must lodge a helpdesk ticket). 
 
-Below the toolbar, the central display features a tabular or list-like grid. The header row of the table contains column labels such as “SNO,” “STATUS,” “INVOICE NO.,” “INVOICE DATE,” “CLIENT AGENCY,” “CURRENCY,” “INVOICE AMOUNT,” and “ACTIONS.” The visible rows beneath are densely populated with repeated, greyed-out text blocks, suggesting a large dataset with many invoices. The rows appear to be uniformly formatted, with alternating shading or subtle dividers to distinguish entries.
+Sources Used: Create_Update_Vendor_Record.pdf (pages 16-17, 32)","Taken from Create_Update_Vendor_Record.pdf : pages 16, 17, 18, 26, 27, 28, 29, 31, 32, 33"
+What is the preferred channel for e-invoice submission for entities?,"- Answer: For entities, the preferred channel for e-invoice submission is InvoiceNow.
 
-In terms of style and intent, the image conveys a business software interface designed for managing electronic invoices. It emphasizes navigation through the left-hand menu, quick status filtering via the top badges, and a detailed invoice list in the main area, with actions available per invoice in the final column. The color scheme relies on light blues and greys, with an orange accent used to highlight the “Update Vendor Details” navigation item. The layout is clean and data-centric, suitable for enterprise users performing invoicing and vendor management tasks.
-    Image caption : No image caption
-    Text after image : No text after image
-     from Create_Update_Vendor_Record.pdf, page 19
-"
-What should a vendor do if they do not receive payment on the scheduled due date?,"- If you did not receive your payment on the payment schedule due date, contact your client agency to check on your e-invoice status. For remittance details related to payments paid by the Accountant-General’s Department (AGD), retrieve remittance advices from the Vendors@Gov portal.
+- Supporting context: The content states that entities may submit e-invoices via InvoiceNow, which is described as the preferred channel for e-invoice submission. This is found in the first data item under the Vendors@Gov Process Flow text. Also related mentions in the same item refer to submitting e-invoices via Vendors@Gov with InvoiceNow as the preferred channel for e-invoice submission for entities. 
 
-Sources:
-- Vendors@Gov_Process_Flow.pdf (payment schedule date, contact for status, remittance advices) [pages 0]
-- Additional context references in Create_Update_Vendor_Record.pdf regarding PayNow and bank details (not required for this specific question, but confirms process around payments and status retrieval) [pages 9, 10]","
-Chunk Text : To get started, please refer to ‘E-invoice Submission via InvoiceNow Network’ User Guide. Upon successful submission, your e-invoice will be sent to your client agency’s financial system for their processing. Receive payment on the payment schedule date. The payment schedule date is calculated based on the payment term you have selected on your e-invoice. (Eg: If your e-invoice payment term is 30 Days, your e-invoice will be paid to you on the 30[th] day from your e-invoice date.) 
+Sources Used:
+- Vendors@Gov_Process_Flow.pdf, relevant sections on e-invoice submission and InvoiceNow (pages indicated in metadata as [1]).",Taken from Vendors@Gov_Process_Flow.pdf : pages 1
+How is the payment schedule date calculated for an e-invoice?,"- The payment schedule date is calculated based on the payment term selected on your e-invoice. For example, if the e-invoice payment term is 30 days, the payment will be made on the 30th day from the e-invoice date. (Source: Vendors@Gov_Process_Flow.pdf, page 1) 
 
-If you did not receive your payment on the payment schedule due date, please contact your client agency to check on your e-invoice status. Retrieve remittance advices for payments paid by ‘Accountant-General’s Department (AGD)’ at Vendors@Gov portal. For more information, please refer to ‘View and Retrieve Paid Transactions’ User Guide. from Vendors@Gov_Process_Flow.pdf, page 0
-
-Chunk Text : This image appears to be a slide or page from a procedure or training document titled “2. View/ Update Vendor Record Details – Bank Details (PayNow).” The layout uses a clean, light background with an orange accent color for emphasis, and a small page number “30” at the bottom-right.
-
-At the top of the visible content, a large heading states the section name. Below this, the main content is organized as a form-like interface labeled “Bank Details.” Within this area, there are options for selecting a payment method, with circles (radio buttons) for different methods. One option, PayNow, is visually highlighted with an orange outline around its circular selector, drawing attention to it. Nearby, there is a label for “Inter‑Bank GIRO” and another for “Telegraphic Transfer,” suggesting multiple payment method choices.
-
-The form includes fields and dropdowns. A labeled field “Proxy Type” sits toward the middle-left, followed by a corresponding input area toward the right labeled “Proxy Status.” There is a rectangular orange-bordered box toward the lower-middle section around the fields “GST Registered” and “GST Registration Number.” Inside this box, “GST Registered” is followed by a Yes/No option row, and the GST Registration Number field shows “N/A,” indicating the number is not applicable or not available.
-
-Directly beneath the form is a prominent orange banner with white text that reads “PayNow (PAYN) option selected.” This section likely highlights the current selection for this vendor record.
-
-Under the banner, there is a grey informational panel containing two bullet-like instructions:
-- If you are GST Registered, please select “Yes” for GST Registered option. Then, enter your GST registration number (Please enter only the numbers and omit the ‘-’ dash).
-- If you are not GST Registered, please select “No” for GST Registered option.
-
-The page includes a light, subtle grid or layout guide in the background and a small, partially visible right-aligned text or watermark near the top-right, which could be a page reference or document identifier.
-
-In summary, the image shows a screenshot of a form used to view or update vendor bank details with a particular emphasis on PayNow as a payment method, GST registration status, and related fields. The overall design uses orange highlighting to guide attention to PayNow, GST status, and the selected option, with instructional text provided to assist data entry. This content would be relevant for indexing material about vendor master maintenance, payment method configuration, and GST compliance steps within a financial or ERP system. from Create_Update_Vendor_Record.pdf, page 29
-
-Chunk Text : The image appears to be a page from a training or user guide focused on creating a vendor record, specifically the bank details section. At the top, a bold title reads “1. Create Vendor Record – Bank Details,” indicating this is step one in a sequence. A thin horizontal line runs beneath the title, separating the header from the body content. On the left edge, there is an orange vertical margin accent, giving the page a distinct layout border.
-
-In the main content area, a small labeled box titled “Bank Details” is visible. Within this box, there is a line labeled “Payment Method” with options displayed as radio button choices. The options shown include “Inter-Bank GIRO,” “PayNow,” and “Telegraphic Transfer.” A highlighted or selected option is denoted by a light emphasis around one of the choices, though the exact selected option is not clearly marked due to image resolution.
-
-Beneath the bank details box, there is a prominent numbered step indicator with the number “4,” followed by a bold instruction: “Select your payment mode and enter your bank details.” This is presented as a block of text that explains the purpose of choosing a payment mode and entering bank details. The text provides brief definitions for each payment mode:
-- “Inter-Bank GIRO (IBG)” – described as the option to select if you are receiving Singapore dollars (SGD) payment with a local bank account.
-- “Paynow (PAYNOW)” – described as the option if you are receiving SGD payment via PayNow, with a note to ensure that all agencies you are transacting with are PayNow ready.
-- “Telegraphic Transfer (TT)” – described as the option if you are receiving a transfer, with sub-points (a) foreign currency payment; or (b) SGD payment with a foreign bank account.
-
-Below this explanatory block, there is a “NOTE” section depicted with a heading “NOTE” in a slightly larger font, followed by several bullet points. The notes provide practical constraints and clarifications:
-- The IBG option is not available for foreign vendors; a foreign vendor may submit a hard copy Direct Credit Authorisation (DCA) form with bank endorsement to AGD and subsequently lodge a helpdesk ticket for assistance to update the IBG bank details.
-- The PAYNOW option is the sole payment mode for SGD payables to CAE-eligible self-employed vendors, with a note that a helpdesk ticket is required for updates to PayNow.
-- The TT option is not available for vendors who are transacting as individuals; individuals may lodge a helpdesk ticket for assistance to update their TT bank details.
-
-In the lower-right corner, a page number is visible, reading “10,” indicating this is page 10 of the document. The overall color scheme uses a clean white background with dark blue and gray text, and the orange left margin provides a visual cue consistent with the document’s layout. The content is organized to guide a user through selecting a payment method and understanding the implications of each option, with additional notes about eligibility and process steps. This description would be suitable for indexing in a retrieval-augmented generation (RAG) system to help locate specific guidance on vendor bank details and payment methods. from Create_Update_Vendor_Record.pdf, page 9
-"
-Where can vendors retrieve remittance advices for payments made by AGD?,"Vendors can retrieve remittance advices for payments paid by the Accountant-General’s Department (AGD) at the Vendors@Gov portal. 
-
-Sources:
-- Vendors@Gov_Process_Flow.pdf, pages [0] (content mentions: “Retrieve remittance advices for payments paid by ‘Accountant-General’s Department (AGD)’ at Vendors@Gov portal.”)","
-Chunk Text : To get started, please refer to ‘E-invoice Submission via InvoiceNow Network’ User Guide. Upon successful submission, your e-invoice will be sent to your client agency’s financial system for their processing. Receive payment on the payment schedule date. The payment schedule date is calculated based on the payment term you have selected on your e-invoice. (Eg: If your e-invoice payment term is 30 Days, your e-invoice will be paid to you on the 30[th] day from your e-invoice date.) 
-
-If you did not receive your payment on the payment schedule due date, please contact your client agency to check on your e-invoice status. Retrieve remittance advices for payments paid by ‘Accountant-General’s Department (AGD)’ at Vendors@Gov portal. For more information, please refer to ‘View and Retrieve Paid Transactions’ User Guide. from Vendors@Gov_Process_Flow.pdf, page 0
-
-Chunk Text : --- end of page.page_number=1 ---
-
- from Vendors@Gov_Process_Flow.pdf, page 1
-
-Chunk Text : This image appears to be the cover page of a guide related to vendor management. It features the branding of Vendors.gov prominently at the top left, with the text “vendors@gov” in a blue and orange color scheme. In the upper right corner, there is an AGD logo rendered in orange. The central focal point is a large title that reads “Vendor Record User Guide,” presented in bold, black typography. A horizontal line runs beneath the title, reinforcing its heading status. Just below the line, there is a smaller subtitle: “A guide to create, view and update vendor record details at Vendors@Gov.” The page has a clean, minimal layout with a white background and a thin vertical orange stripe along the far left edge, contributing a subtle brand accent. Overall, the image conveys a formal, instructional document intended to guide users on managing vendor records within the Vendors@Gov system. from Create_Update_Vendor_Record.pdf, page 0
-"
-What special consideration applies to vendors transacting with Statutory Boards?,"- Special consideration: Vendors who are transacting with Statutory Boards will need to separately inform your client. This is noted in the Vendors@Gov onboarding context as a separate notification requirement for vendors dealing with Statutory Boards. 
+Sources Used: Vendors@Gov_Process_Flow.pdf, page 1",Taken from Vendors@Gov_Process_Flow.pdf : pages 1
+What should a vendor do if they do not receive payment on the scheduled due date?,"Direct answer:
+- If you do not receive payment on the payment schedule due date, contact your client agency to check on your e-invoice status.
 
 Cited source:
-- Vendors@Gov_Process_Flow.pdf, pages [0] — mentions the need to separately inform your client for vendors transacting with Statutory Boards. 
-- Also relevant context appears in Create_Update_Vendor_Record.pdf (Vendor onboarding) referencing related onboarding steps and notifications. 
+- Vendors@Gov_Process_Flow.pdf, page 1 (as referenced in the content about e-invoice submission, payment schedule, and status checks) 
 
-Sources Used: Vendors@Gov_Process_Flow.pdf (page 0), Create_Update_Vendor_Record.pdf (page 3)","
-Chunk Text : refer ‘Login and Registration User Guide’. vendor record creation.<br>Note: Vendors who are transacting with Statutory<br>Boards will need to separately inform your client<br>New vendors will need to ‘Create New Vendor’ record in Vendors@Gov after logging in. agency of your bank details for them to process<br>your payment at their financial system.<br>Inter-Bank Giro/Paynow Telegraphic Transfer<br>After creating record, your vendor record will be auto approved. For UEN Registered Entity and Foreign Entity, your vendor record will be auto- Instructions to set your Vendors@Gov password<br>approved after you create vendor record. will be issued to you after 7 working days through<br>email.<br>Please contact AGD Helpdesk if you would like to update your GST<br>Registration number. Login to Vendors@Gov under ‘Foreign Individual<br>with an AGD Password’ with your user ID and<br>For Individual SingPass holder who has registered a Telegraphic Transfer (TT)  AGD Password.<br>bank account will need to submit a copy of bank statement stating the account<br>holder name and bank account details to AGD for your vendor record approval.<br>To submit the document, please lodge a helpdesk ticket.<br>Approved<br>**----- End of picture text -----**<br>
+Sources Used:
+- Vendors@Gov_Process_Flow.pdf, page 1","Taken from Vendors@Gov_Process_Flow.pdf : pages 1
+Taken from Create_Update_Vendor_Record.pdf : pages 35, 36, 37"
+Where can vendors retrieve remittance advices for payments made by AGD?,"Remittance advices for payments made by the Accountant-General’s Department (AGD) can be retrieved on the Vendors@Gov portal. 
 
+Cited source: Vendors@Gov_Process_Flow.pdf, page 1.","Taken from Vendors@Gov_Process_Flow.pdf : pages 1
+Taken from Create_Update_Vendor_Record.pdf : pages 24, 25, 26
+Taken from LoginRegister.pdf : pages 27"
+What special consideration applies to vendors transacting with Statutory Boards?,"- Special consideration: Vendors who are transacting with Statutory Boards will need to separately inform your client. 
 
-Submit e-invoices via Vendors@Gov. For more information, please refer to ‘E-Invoice and E-Credit Note Submission’ User Guide. For entities, you may also submit e-invoices via InvoiceNow, which is the preferred channel for e- invoice submission. from Vendors@Gov_Process_Flow.pdf, page 0
+Source: Vendors@Gov_Process_Flow.pdf, page 1. [metadata indicates source and page 1]  
+Also echoed in the same item where it mentions “New vendors will need to ‘Create New Vendor’ record in Vendors@Gov after logging in…,” and the note about informing the client applies specifically to those transacting with Statutory Boards. This is the clearest direct reference to Statutory Boards in the provided documents. 
 
-Chunk Text : This image appears to be a captured page from a software or training UI titled “1. Create Vendor Record.” The top area shows a bold header in a blue-gray color, indicating a step in a multi-step process. Beneath the header, there is a breadcrumb-like line that reads “If you are a new vendor, you will be directed to ‘Create New Vendor’ page,” followed by a light gray horizontal bar that spans the width of the content area, mimicking a breadcrumb or page indicator.
+Sources Used:  
+- Vendors@Gov_Process_Flow.pdf, page 1","Taken from Vendors@Gov_Process_Flow.pdf : pages 1
+Taken from LoginRegister.pdf : pages 2, 3, 11"
+What are the main stages of the Vendors@Gov process flow?,"Main stages of the Vendors@Gov process flow (as described across the provided documents):
 
-The main interactive area highlights a button labeled “Create New Vendor” with an icon of a small person next to it. The button is outlined with an orange border, drawing attention to it as a primary action. Just to the right or below this button, there is a thin set of status indicators: a progress line with several labeled milestones along it. The milestones include “Authorisation,” “Vendor Details,” “Bank Details,” “Summary,” and “Complete.” The first milestone, “Authorisation,” is marked with a green check and a small green line, followed by a blue progress line with circular nodes at each milestone, suggesting the user’s current position in the process is at or near the first step.
+- Login / Registration
+  - Users log in and begin the vendor onboarding process.
+- Create New Vendor / Create Vendor Record
+  - After logging in, new vendors must create a new vendor record in Vendors@gov.
+  - If directed, proceed to the Create New Vendor page.
+- Authorisation (Approval) 
+  - An authorization step is present; the process includes an “Authorisation” stage (green check in the progress bar), indicating verified authorization before proceeding.
+- Vendor Details
+  - Collect and enter vendor-specific details.
+- Bank Details
+  - Collect bank-related information for payments.
+- Summary
+  - Consolidate entered information and prepare for final processing.
+- Complete
+  - Finalize the vendor record creation workflow.
 
-Underneath the progress bar, a bold heading reads “Authorisation,” occupying the center of the content area. This is followed by a block of numbered, small-type text that appears to be terms or instructions related to authorisation. The three numbered items outline permissions and steps: authorising the government and statutory boards to credit payments to the specified account, the continuation of the authorisation until written notice is provided, and a request to authorise the government and statutory boards to obtain confirmation or verification of information related to the account or the bank where the account is maintained.
+Supporting steps and pathways indicated in the flow:
+- Payment methods tied to entity type (Inter-Bank Giro/Paynow, Telegraphic Transfer) and post-approval invoicing.
+- GST registration considerations and documentation submission as part of enabling payments.
+- Post-approval actions include submitting e-invoices, retrieving remittance advices, and viewing paid transactions.
 
-In summary, the image depicts the initial screen for creating a vendor record, focusing on the authorisation stage of a multi-step workflow. The visual elements emphasize the primary action (Create New Vendor) and a linear progress indicator showing the current step within the process, with accompanying text detailing the authorisation requirements. The overall layout uses a clean, professional design with blue-gray accents, an orange accent around the main action button, and a horizontal progression bar across the page. This asset would be suitable for indexing under vendor onboarding, supplier management, and process workflow documentation. from Create_Update_Vendor_Record.pdf, page 3
+Sources:
+- Vendors@Gov_Process_Flow.pdf, Page 1 (_process flow overview and steps including login, Create New Vendor, and payment flows)_ 
+- Vendors@gov PROCESS FLOW (image/text description), Page 1 (overview of lanes: UEN entity, foreign entity, SingPass holder, etc.)_
 
-Chunk Text : For Individuals with Singpass** 
+Notes:
+- The Create Vendor Record item explicitly emphasizes the Authorisation step and the progression through Vendor Details, Bank Details, Summary, and Complete. 
+- The process flow diagram includes an explicit “Approved” gate before continuing with invoicing and payment processing. 
 
-_This login method is applicable to vendors who are transacting as an individual for your personal payment matters (e.g. freelancers)._ 
+If you’d like, I can convert these into a JSON outline with step IDs and required documents per path for easy RAG indexing. 
 
-## **4. For Individuals with AGD Password** 
-
-_This login method is applicable to vendors who are transacting as an individual for your personal payment matters (e.g. freelancers) but are not eligible for Singpass._ 
-
-12 
-
---- end of page.page_number=12 ---
-
-## **2. Login for Foreign Company/ Organisation without UEN** 
-
-_This login method is applicable to non-UEN registered vendors who are transacting as a Foreign Company/ Organisation._ 
-
-**==> picture [334 x 352] intentionally omitted <==**
-
-**==> picture [83 x 35] intentionally omitted <==**
-
-Your organisation will first need to register for Corppass to access Vendors@Gov. For more information on Corppass registration, please click here for Guide. **Step 1** – Select ‘For Business Users’ option to login to Vendors@Gov. 13 
-
---- end of page.page_number=13 ---
-
-## **2. from LoginRegister.pdf, page 11,12,13
-"
-What are the main stages of the Vendors@Gov process flow?,"Direct answer:
-The main stages of the Vendors@Gov process flow, as described in the provided content, are:
-
-- Login and vendor creation
-  - Login to Vendors@gov (options include SingPass, Singapore Foreign User Account)
-  - Create vendor record
-  - Registration of vendor in the system
-- Vendor record approval and onboarding
-  - Record auto-approval after vendor record creation
-  - Authorisation and related onboarding milestones (see Authorisation, Vendor Details, Bank Details, Summary, Complete)
-- Payment transfer setup
-  - Inter-Bank Giro/PayNow (record creation, submission for approval, possible status checks and approvals)
-  - Telegraphic Transfer (TT) facility setup and usage, with GST considerations and verification steps
-- Post-payment processing and compliance
-  - Submit e-invoices via Vendors@gov
-  - Retrieve remittance advices for AGD-paid transactions
-  - Access “View and Retrieve Paid Transactions” guidance
-
-Notes across pathways:
-- Distinctions among UEN-registered entities vs. foreign entities; SingPass vs. non-SingPass holders
-- Additional compliance prompts such as GST registration and notifying client agencies for certain payments
-- Administrative path for company entities registering and processing payments
-
-Cited sources:
-- Vendors@Gov_Process_Flow.pdf, pages [0] (process overview and flow description)
-- Create_Update_Vendor_Record.pdf, page [3] (Create Vendor Record and Authorisation milestones)
-- LoginRegister.pdf, pages [40, 39] (2FA and concluding notes on login/authentication)","
-Chunk Text : This image is a process flow diagram from vendors@gov titled “PROCESS FLOW” with AGD branding. It appears to map the end-to-end steps for personal payment transactions within a company or organization context, distinguishing between entities with and without UEN (Unique Entity Number) and between SingPass and non-SingPass holders. The overall layout is a horizontal flow from left to right with stacked lanes and multiple decision points, boxes, and arrows guiding you through registration, login, and various transfer and posting steps.
-
-At the very top, there is a header row showing two primary sections: on the left, “COMPANY / ORGANISATION” and on the right, “INDIVIDUAL (For personal payment transactions).” The left column splits into two sub-branches: “UEN REGISTERED ENTITY” and “FOREIGN ENTITY WITHOUT UEN.” The right column splits into two sub-branches: “SINGPASS HOLDER” and “NON-SINGPASS HOLDER.” The branding elements “vendors@gov” and “PROCESS FLOW” sit centrally along the top, with an AGD logo appearing on the far right.
-
-Each branch leads to a sequence of steps. For example, under the UEN registered entity path, a Login step is described: “Login to Vendors@gov under ‘Business’ option with SingPass / Singapore Foreign User Account (SFA).” The foreign entity path mentions a similar login option with language about registration and user guide access. The SingPass holder path includes a Login step and the note about using SingPass. The non-SingPass path directs the user to submit a copy of the AGD Password form to AGD, with additional clarification that foreign individuals or foreign banks may need to complete certain procedures. There are explicit notes about “IF you want to create or update GST registration,” “Note: Vendors who are transacting with Statutory Boards will need to separately inform their client agency for payment processing,” and similar compliance prompts.
-
-Across the horizontal axis, there are major process blocks for creating vendors and registering them in the system. A central horizontal line runs across the diagram, marking the transition to actions like “Inter-Bank Giro/Paynow” and “Telegraphic Transfer.” These appear as the next stage after initial login and vendor creation: 
-- Inter-Bank Giro/Paynow: This flow shows the steps for creating a record and submitting for approval, with a note that new records will require a status check and may go through an approval workflow.
-- Telegraphic Transfer: This section covers steps for utilizing a telegraphic transfer (TT) facility, including if the entity is an UEN registered entity or a foreign entity, with references to a “GST Registration number” and a linked AGD HDesk for updates. There is also a mention of a bank statement to verify the owner’s details and bank account data.
-
-Text blocks within the flow explain required actions, such as:
-- “Login to Vendors@gov under ‘Business’ option with SingPass / Singapore Foreign User Account (SFA).”
-- “After creating record, your record will be auto-approved once you have created vendor record.”
-- “Instructions to set your Vendors@gov password will be issued to you after 7 working days through email.”
-- “Submit a copy of AGD Password form to AGD for SingPass individuals.”
-- “Submit e-invoices via Vendors@gov. For more information, please refer to ‘E-Invoice and E-Credit Note Submission’ User Guide.”
-
-At the bottom of the diagram, there is a compliance and status section describing actions after the payments are processed. It mentions steps like:
-- “Submit e-invoices via Vendors@gov. For more information, please refer to ‘E-Invoice and E-Credit Note Submission’ User Guide.”
-- “Retreive remittance advices for payments paid by ‘Accountant-General’s Department (AGD) at Vendors@gov portal.’”
-- “For more information, please refer to the ‘View and Retrieve Paid Transactions’ User Guide.”
-
-Overall, the diagram uses a consistent color scheme of dark blue for headers and process lanes, light blue for sub-steps, and white boxes for narrative instructions and notes. Arrows connect sequential steps and decision points, guiding the reader from initial login choices by entity type through to vendor creation, record approvals, and payment transfer methods. The structure is designed to show both the user journey for individuals (SingPass holders and non-SingPass holders) and the administrative path for company entities registering and processing payments through the Vendors@gov platform. The document is clearly a high-level SOP for payment processing via the government e-invoicing and payments system. from Vendors@Gov_Process_Flow.pdf, page 0
-
-Chunk Text : This image appears to be a captured page from a software or training UI titled “1. Create Vendor Record.” The top area shows a bold header in a blue-gray color, indicating a step in a multi-step process. Beneath the header, there is a breadcrumb-like line that reads “If you are a new vendor, you will be directed to ‘Create New Vendor’ page,” followed by a light gray horizontal bar that spans the width of the content area, mimicking a breadcrumb or page indicator.
-
-The main interactive area highlights a button labeled “Create New Vendor” with an icon of a small person next to it. The button is outlined with an orange border, drawing attention to it as a primary action. Just to the right or below this button, there is a thin set of status indicators: a progress line with several labeled milestones along it. The milestones include “Authorisation,” “Vendor Details,” “Bank Details,” “Summary,” and “Complete.” The first milestone, “Authorisation,” is marked with a green check and a small green line, followed by a blue progress line with circular nodes at each milestone, suggesting the user’s current position in the process is at or near the first step.
-
-Underneath the progress bar, a bold heading reads “Authorisation,” occupying the center of the content area. This is followed by a block of numbered, small-type text that appears to be terms or instructions related to authorisation. The three numbered items outline permissions and steps: authorising the government and statutory boards to credit payments to the specified account, the continuation of the authorisation until written notice is provided, and a request to authorise the government and statutory boards to obtain confirmation or verification of information related to the account or the bank where the account is maintained.
-
-In summary, the image depicts the initial screen for creating a vendor record, focusing on the authorisation stage of a multi-step workflow. The visual elements emphasize the primary action (Create New Vendor) and a linear progress indicator showing the current step within the process, with accompanying text detailing the authorisation requirements. The overall layout uses a clean, professional design with blue-gray accents, an orange accent around the main action button, and a horizontal progression bar across the page. This asset would be suitable for indexing under vendor onboarding, supplier management, and process workflow documentation. from Create_Update_Vendor_Record.pdf, page 3
-
-Chunk Text : **==> picture [580 x 261] intentionally omitted <==**
-
-40 
-
---- end of page.page_number=40 ---
-
-**==> picture [222 x 63] intentionally omitted <==**
-
-**==> picture [87 x 32] intentionally omitted <==**
-
-## **- END -** 
-
-Updated on 02 August 2024 
-
-41 
-
---- end of page.page_number=41 ---
-
- from LoginRegister.pdf, page 40,39
-"
+Sources Used: Vendors@Gov_Process_Flow.pdf (Pages: 1)","Taken from Vendors@Gov_Process_Flow.pdf : pages 1
+Taken from Create_Update_Vendor_Record.pdf : pages 4"

@@ -1334,7 +1334,19 @@ Government Personal Data Protection Policies   | **2**
 
 
 Final chunk number 2, content : 
-The need for two different legal frameworks governing data management in the public and private sectors arises because the public has different expectations of the services provided by the Government and the private sector. The public expects the Government to deliver services in an integrated manner across agencies. In contrast, each private sector organisation is expected to be individually accountable for the personal data in its possession, and there is no expectation of a similarly integrated delivery of services across different private sector organisations. Government Personal Data Protection Policies   | **3** 
+The need for two different legal frameworks governing data management in the public and private sectors arises because the public has different expectations of the services provided by the Government and the private sector.
+
+
+Final chunk number 3, content : 
+The public expects the Government to deliver services in an integrated manner across agencies.
+
+
+Final chunk number 4, content : 
+In contrast, each private sector organisation is expected to be individually accountable for the personal data in its possession, and there is no expectation of a similarly integrated delivery of services across different private sector organisations.
+
+
+Final chunk number 5, content : 
+Government Personal Data Protection Policies   | **3** 
 
 --- end of page.page_number=3 ---
 
@@ -1343,7 +1355,7 @@ The need for two different legal frameworks governing data management in the pub
 Since 2001, the Government's data security policies have been set out in the IM on ICT&SS Management. The IM on ICT&SS Management sets out how the Government manages and protects data (including personal data) in its possession or control. In 2018, the PSGA was enacted to further strengthen public sector data governance. The PSGA imposes criminal penalties on public officers who (a) knowingly or recklessly disclose data without authorisation; (b) misuse data that results in personal gain for the public officer or another person, or harm or loss to another person; and (c) knowingly or recklessly re-identify anonymised information without authorisation.
 
 
-Final chunk number 3, content : 
+Final chunk number 6, content : 
 This document sets out the key policies in the IM on ICT&SS Management that govern how personal data is managed and protected by agencies. These policies apply to all personal data (in electronic (structured and unstructured) and non-electronic forms) possessed, controlled, or processed by an agency, except: 
 
 - (a) Personal data of a deceased individual (However, provisions relating to the disclosure of personal data and protection of personal data shall apply in respect of the personal data of an individual who has been dead for 10 or less years.); and 
@@ -1451,7 +1463,7 @@ Data, whether true or not, about an individual who can be identified –
 - (c) a wrong or a breach of a duty for which a remedy is claimed under any law.
 
 
-Final chunk number 4, content : 
+Final chunk number 7, content : 
 Government Personal Data Protection Policies   | **8** 
 
 --- end of page.page_number=8 ---
@@ -1490,7 +1502,11 @@ In relation to personal data about an individual, means personal data that is ge
 
 - (a) at which the individual appears; and 
 
-- (b) that is open to the public. Government Personal Data Protection Policies   | **9** 
+- (b) that is open to the public.
+
+
+Final chunk number 8, content : 
+Government Personal Data Protection Policies   | **9** 
 
 --- end of page.page_number=9 ---
 
@@ -1500,12 +1516,16 @@ In relation to personal data about an individual, means personal data that is ge
 
 01 
 
-An agency shall ensure that up-to-date policies and processes that adhere to all the provisions in this policy are implemented within the agency and when transferring data to any other organisation. 02 
+An agency shall ensure that up-to-date policies and processes that adhere to all the provisions in this policy are implemented within the agency and when transferring data to any other organisation.
+
+
+Final chunk number 9, content : 
+02 
 
 An agency shall implement processes to receive and address, within a reasonable time, enquiries or feedback about the agency’s policies and processes relating to the processing of personal data.
 
 
-Final chunk number 5, content : 
+Final chunk number 10, content : 
 03 
 
 An agency shall make available information about its policies and processes with respect to the processing of personal data through a privacy statement to be displayed on its digital services. 04 
@@ -1535,10 +1555,14 @@ Before an agency collects, uses or discloses personal data, the agency shall che
 - ii.
 
 
-Final chunk number 6, content : 
+Final chunk number 11, content : 
 such collection or use is authorised by any law or required by order of court; 
 
-- iii. such collection or use is necessary in the public interest (including without limitation national interest); 
+- iii.
+
+
+Final chunk number 12, content : 
+such collection or use is necessary in the public interest (including without limitation national interest); 
 
 - iv. such collection or use is permitted without consent by the exclusions in Annex A or Part I of Annex B and complies with all applicable legal obligations; or 
 
@@ -1560,15 +1584,27 @@ Government Personal Data Protection Policies   | **11**
 
 - ii. such disclosure is authorised by any other law or required by order of court; 
 
-- iii. such disclosure is necessary in the public interest (including without limitation national interest); 
+- iii.
+
+
+Final chunk number 13, content : 
+such disclosure is necessary in the public interest (including without limitation national interest); 
 
 - iv.
 
 
-Final chunk number 7, content : 
+Final chunk number 14, content : 
 such disclosure is permitted without consent by the exclusions in Annex A or Part 2 of Annex B, and such disclosure complies with all applicable legal obligations; or 
 
-- v. the individual that the personal data relates to, gives, or is deemed to give, his consent to the disclosure of his personal data by the agency for the purposes set out in paragraph 21. Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, the agency shall obtain the consent at or before the time of processing. Where the agency wants to use data for a purpose not previously identified, consent to the use for that purpose may be obtained after the data is collected but before use. Where the data collected may be shared with another agency for another function or purpose, the agency shall notify the individual as such at the point of collection. 07 
+- v. the individual that the personal data relates to, gives, or is deemed to give, his consent to the disclosure of his personal data by the agency for the purposes set out in paragraph 21. Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, the agency shall obtain the consent at or before the time of processing.
+
+
+Final chunk number 15, content : 
+Where the agency wants to use data for a purpose not previously identified, consent to the use for that purpose may be obtained after the data is collected but before use.
+
+
+Final chunk number 16, content : 
+Where the data collected may be shared with another agency for another function or purpose, the agency shall notify the individual as such at the point of collection. 07 
 
 Where an agency needs to obtain an individual’s express consent pursuant to paragraph 5, the agency shall not, as a condition of the supply of a product or service or the administration of a public programme or scheme, require an individual to consent to the collection, use or disclosure of personal data about the individual beyond what is reasonable to supply the product or service to the individual, or to administer the public programme or scheme. Government Personal Data Protection Policies   | **12** 
 
@@ -1782,7 +1818,11 @@ Government Personal Data Protection Policies   | **19**
 
 - (d) reveal the identity of an individual who has provided personal data about another individual and the individual providing the personal data does not consent to the disclosure of his identity; or 
 
-- (e) be contrary to the national interest. If an agency is able to provide the individual with the individual’s personal data and other information requested under paragraph 27 without providing the personal data and other information excluded under paragraphs 28, 29 and 31, the agency shall do so. 31 
+- (e) be contrary to the national interest.
+
+
+Final chunk number 17, content : 
+If an agency is able to provide the individual with the individual’s personal data and other information requested under paragraph 27 without providing the personal data and other information excluded under paragraphs 28, 29 and 31, the agency shall do so. 31 
 
 An agency shall not inform any individual under paragraph 27(b) that the agency has disclosed personal data about the individual to a law enforcement agency if the disclosure was made under any written law without the consent of the individual. 32 
 
@@ -1929,7 +1969,7 @@ An agency shall take reasonable and practical steps to ensure that all data, inc
 (e) complete.
 
 
-Final chunk number 8, content : 
+Final chunk number 18, content : 
 **==> picture [341 x 35] intentionally omitted <==**
 
 **----- Start of picture text -----**<br>
@@ -1957,7 +1997,7 @@ Responsibilities of Public Officers<br>**----- End of picture text -----**<br>
 Officers shall be mindful of the requirements of the Official Secrets Act and Statutory Bodies and Government Companies (Protection of Secrecy) Act, which prohibit unauthorised disclosure of certain information held by virtue of a person’s office or position in the Government or such entity. (These prohibitions apply regardless of whether the information was obtained directly from the public or from another agency). In addition, officers shall be mindful of their obligations set out in the Public Sector (Governance) Act, which criminalises the acts of knowing or reckless unauthorised disclosure of data, misuse of data for a gain to himself/other individual or for a harm or loss to another individual and knowing or reckless unauthorised re-identification of anonymised data.
 
 
-Final chunk number 9, content : 
+Final chunk number 19, content : 
 51 
 
 An agency shall ensure that all their officers are informed of their responsibilities and liabilities (i.e. that they should not access, use, disclose or retain personal data for purposes other than the performance of their duties of employment, and that failure to comply may be criminal offence and may rise to disciplinary action against the officer). Government Personal Data Protection Policies   | **26** 
@@ -2030,7 +2070,11 @@ The collection, use or disclosure (as the case may be) of personal data about an
 
 The collection, use or disclosure (as the case may be) of personal data about an individual is solely for artistic or literary purposes. 03 
 
-The collection, use or disclosure (as the case may be) of personal data about an individual is solely for archival or historical purposes, if a reasonable person would not consider the personal data to be too sensitive to the individual to be collected, used or disclosed (as the case may be) at the proposed time. Government Personal Data Protection Policies _(Annex A)_ | **29** 
+The collection, use or disclosure (as the case may be) of personal data about an individual is solely for archival or historical purposes, if a reasonable person would not consider the personal data to be too sensitive to the individual to be collected, used or disclosed (as the case may be) at the proposed time.
+
+
+Final chunk number 20, content : 
+Government Personal Data Protection Policies _(Annex A)_ | **29** 
 
 --- end of page.page_number=29 ---
 
@@ -2066,7 +2110,11 @@ The personal data about an individual —
 
 - (a) is provided to the agency by another individual to enable the agency to provide a service for the personal or domestic purposes of that other individual; and 
 
-- (b) is collected, used or disclosed (as the case may be) by the agency solely for the purpose in sub-paragraph (a). 10 
+- (b) is collected, used or disclosed (as the case may be) by the agency solely for the purpose in sub-paragraph (a).
+
+
+Final chunk number 21, content : 
+10 
 
 The personal data about an individual — 
 
@@ -2148,7 +2196,11 @@ Government Personal Data Protection Policies _(Annex A)_ | **32**
 
       - (i) Y may collect, and Z may disclose, only personal data that is necessary for X or Y (as the case may be) to determine whether to proceed with the relevant transaction; and 
 
-      - (ii) Y and Z must have entered into an agreement that requires Y to use or disclose the personal data solely for purposes related to the relevant transaction. - (3) If X enters into the relevant transaction, the following conditions apply: 
+      - (ii) Y and Z must have entered into an agreement that requires Y to use or disclose the personal data solely for purposes related to the relevant transaction.
+
+
+Final chunk number 22, content : 
+- (3) If X enters into the relevant transaction, the following conditions apply: 
 
    - (a) X may use or disclose the personal data collected from Y or Z (as the case may be) only for the same purposes for which Y or Z (as the case may be) would have been permitted to use or disclose the personal data; 
 
@@ -2203,7 +2255,7 @@ Government Personal Data Protection Policies _(Annex A)_ | **35**
 **“business trust”** has the meaning given by section 2 of the Business Trusts Act (Cap.
 
 
-Final chunk number 10, content : 
+Final chunk number 23, content : 
 31A); 
 
 **“corporation”** and **“related corporation”** have the meanings given by section 4(1) of the Companies Act (Cap. 50); 
@@ -2263,14 +2315,18 @@ The collection or use of personal data about an individual who is a current or f
 - (c) a prescribed healthcare body.
 
 
-Final chunk number 11, content : 
+Final chunk number 24, content : 
 03 
 
 The collection or use of personal data about any individual disclosed to any officer of a prescribed law enforcement agency, upon production of written authorisation signed by the head or director of that prescribed law enforcement agency or a person of a similar rank, certifying that the personal data is necessary for the purposes of the functions or duties of the officer.
 
 
-Final chunk number 12, content : 
-For the purposes of this paragraph 3, the term “prescribed law enforcement agency” shall have the same meaning given to it in the Personal Data Protection Act (No. 26 of 2012). **==> picture [398 x 61] intentionally omitted <==**
+Final chunk number 25, content : 
+For the purposes of this paragraph 3, the term “prescribed law enforcement agency” shall have the same meaning given to it in the Personal Data Protection Act (No.
+
+
+Final chunk number 26, content : 
+26 of 2012). **==> picture [398 x 61] intentionally omitted <==**
 
 **----- Start of picture text -----**<br>
 PART 2: DISCLOSURE OF PERSONAL DATA<br>WITHOUT CONSENT<br>**----- End of picture text -----**<br>
@@ -2386,7 +2442,11 @@ An agency is not required to comply with paragraph 38, 39, 40, 41, 42, 43 and 44
 
 - (e) the personal data of the beneficiaries of a private trust kept solely for the purpose of administering the trust; or 
 
-- (f) personal data kept by an arbitral institution or a mediation centre solely for the purposes of arbitration or mediation proceedings administered by the arbitral institution or mediation centre. 02 
+- (f) personal data kept by an arbitral institution or a mediation centre solely for the purposes of arbitration or mediation proceedings administered by the arbitral institution or mediation centre.
+
+
+Final chunk number 27, content : 
+02 
 
 An agency is not required to transmit corrected personal data to any other organisation under paragraph 41(b) if it is not reasonably practicable or it involves a disproportionate effort for the agency to do so e.g. public records shared under open access (with or without a fee). Government Personal Data Protection Policies _(Annex D)_ | **42** 
 
@@ -2399,8 +2459,16 @@ An agency is not required to transmit corrected personal data to any other organ
 |1|1 July 2021|a.
 
 
-Final chunk number 13, content : 
-Introduced new provision on deemed consent by<br>contractual necessity<br>b. Revised existing exceptions to consent — business<br>asset transaction purposes, employment relationship<br>purposes and research purposes<br>c. Elaborated what public agencies are required to do when<br>they reject individuals’ requests for access to their<br>personal data, e.g. notify individuals of the rejection<br>within the stated time and in accordance with the stated<br>requirements, preserve a copy of the personal data<br>concerned<br>d. Clarifed that the “repetitious or systematic nature” of<br>access requests referred to the number and frequency<br>of requests received|
+Final chunk number 28, content : 
+Introduced new provision on deemed consent by<br>contractual necessity<br>b. Revised existing exceptions to consent — business<br>asset transaction purposes, employment relationship<br>purposes and research purposes<br>c.
+
+
+Final chunk number 29, content : 
+Elaborated what public agencies are required to do when<br>they reject individuals’ requests for access to their<br>personal data, e.g. notify individuals of the rejection<br>within the stated time and in accordance with the stated<br>requirements, preserve a copy of the personal data<br>concerned<br>d.
+
+
+Final chunk number 30, content : 
+Clarifed that the “repetitious or systematic nature” of<br>access requests referred to the number and frequency<br>of requests received|
 
 
 

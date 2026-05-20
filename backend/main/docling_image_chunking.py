@@ -1,7 +1,7 @@
-
-from docling.datamodel.document import DocItemLabel, TextItem
+import docling
+from docling_core.types.doc.document import TextItem
 from docling.datamodel.base_models import InputFormat
-from docling.datamodel.pipeline_options import PdfPipelineOptions, PictureDescriptionBaseOptions
+from docling.datamodel.pipeline_options import PdfPipelineOptions
 from docling.document_converter import DocumentConverter, PdfFormatOption
 from langchain_community.callbacks.manager import get_openai_callback
 
@@ -269,7 +269,7 @@ async def process_single_image(model,document,image):
 
     #Some image metadata
     metadata = {
-        'pages' : [image.prov[0].page_no - 1], #Cannot be list() because image.prov[0].page_no is an int which is not iterable
+        'pages' : [image.prov[0].page_no], #Cannot be list() because image.prov[0].page_no is an int which is not iterable
         }
 
     #All into image_chunk object and return

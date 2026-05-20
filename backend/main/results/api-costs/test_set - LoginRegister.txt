@@ -1,12 +1,6 @@
 
-Token cost to ANSWER QUESTIONS for test_set - LoginRegister.csv : 19424
+Token cost to ANSWER QUESTIONS for test_set - LoginRegister.csv : 20260
 
-Money cost to ANSWER QUESTIONS for test_set - LoginRegister.csv : 0.0019414000000000002
-
-
-
-Token cost to ANSWER IMAGE QUESTIONS for test_set - LoginRegister.csv : 21947
-
-Money cost to ANSWER IMAGE QUESTIONS for test_set - LoginRegister.csv : 0.00159456
+Money cost to ANSWER QUESTIONS for test_set - LoginRegister.csv : 0.0019454
 
 

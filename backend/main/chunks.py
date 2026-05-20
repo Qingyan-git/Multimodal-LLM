@@ -14,7 +14,7 @@ class Chunk:
 
     content : Optional[str] = ""
 
-    metadata : Optional[dict] = field(default_factory=dict)
+    page_no : Optional[list] = field(default_factory=list)
 
 
 @dataclass
@@ -35,12 +35,3 @@ class TableChunk(Chunk):
 @dataclass
 class PageChunk(Chunk):
     type : str = 'page'
-
-
-class ViDoReChunk(Chunk):
-    type : str = 'ViDoRe'
-    parent_id: Optional[str] = None
-
-    def __post_init__(self):
-        if self.parent_id:
-            self.metadata['corpus_id'] = self.parent_id

@@ -1,12 +1,6 @@
 
-Token cost to ANSWER QUESTIONS for test_set - Key Policies Third Framework.csv : 24056
+Token cost to ANSWER QUESTIONS for test_set - Key Policies Third Framework.csv : 20471
 
-Money cost to ANSWER QUESTIONS for test_set - Key Policies Third Framework.csv : 0.0018909
-
-
-
-Token cost to ANSWER IMAGE QUESTIONS for test_set - Key Policies Third Framework.csv : 32382
-
-Money cost to ANSWER IMAGE QUESTIONS for test_set - Key Policies Third Framework.csv : 0.00142978
+Money cost to ANSWER QUESTIONS for test_set - Key Policies Third Framework.csv : 0.0016574
 
 

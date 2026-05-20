@@ -28,7 +28,7 @@ class OpenAIModel:
         self.text_splitter = SemanticChunker(
             self.embedding_model, 
             breakpoint_threshold_type="interquartile",
-            breakpoint_threshold_amount=1.2,
+            breakpoint_threshold_amount=0.5,
             buffer_size=2
         )
 
@@ -56,12 +56,7 @@ class OpenAIModel:
         token_cost = 0
         money_cost = 0
         for chunk in chunks:
-            text = f"""
-            Chunk from document : {chunk.document_name}
-            Chunk context : {chunk.context}
-            Chunk content : {chunk.content}
-            Chunk metadata : {chunk.metadata}
-            """
+            text = format_chunk(chunk)
             texts.append(text)
 
         # --- TIKTOKEN INTEGRATION ---
@@ -94,7 +89,7 @@ class OpenAIModel:
             "5. OUTPUT FORMAT: Return the succinct context as plain text. Do not use Markdown, headers, or tags."
         )
 
-        user_message = user_message = f"""
+        user_message = f"""
         [TASK]
         Situate the provided <chunk> within the <document> for a vector search index.
 
@@ -126,22 +121,14 @@ class OpenAIModel:
         base64_image = base64.b64encode(image).decode('utf-8')
 
         system_message = """
-        ### Role & Goal
-        You are an expert visual analyst describing an image for someone who cannot see it. Your description will be indexed in a search engine, so it needs to be detailed, literal, and written in natural, fluid prose. Write as if you are explaining the image to a colleague in a professional, clear conversation.
+        You are an expert data and visual analyst. Your task is to analyze the provided image, which is primarily a chart, graph, table, or process diagram.
 
-        ### Task
-        Observe the provided image and write a comprehensive, narrative-style breakdown. Instead of making disjointed bulleted lists or using rigid section headers, weave all the visual data, text, and relationships into a seamless, natural description.
+        Provide a comprehensive breakdown of the image by covering the following:
+        1. **Overview**: State what kind of visual it is (e.g., line graph, flowchart, bar chart) and its main title or core subject.
+        2. **Structure & Data Extraction**: Detail the components. For charts/graphs, identify the axes, legends, labels, and key data points or metrics. For diagrams/flowcharts, describe the steps, directional flow, and connections.
+        3. **Analysis & Insights**: Analyze what the data or diagram is showing. Highlight prominent trends, significant spikes, anomalies, or the ultimate conclusion of the process.
 
-        ### Writing Guidelines
-        - **Narrative Flow**: Start naturally with a high-level sentence explaining what the image is (e.g., "This image is a flowchart outlining..."). Then, smoothly transition into the details, describing the setting, key subjects, and the core purpose of the visual.
-        - **Natural Data Integration**: Weave any visible text, labels, chart data, or specific data points directly into your sentences. For example, instead of listing "Header: Q3 Results", write "At the top of the page, a prominent header reads 'Q3 Results'..."
-        - **Visual & Structural Relationships**: Describe how things connect or relate in the same sentence. Explain how elements are grouped, what arrows point to, or how colors differentiate information, maintaining a logical reading order (e.g., top-to-bottom or left-to-right).
-        - **Search-Friendly Vocabulary**: Write using a diverse, descriptive vocabulary with realistic keywords and synonyms that someone might type into a search query to find this exact asset.
-
-        ### Constraints
-        - **Stay Literal and Objective**: Only describe what is visibly present. Do not interpret abstract meanings, hypothesize, or add creative assumptions. 
-        - **No Heavy Formatting**: Write in clean, continuous prose or simple paragraphs. Do not use markdown headers, bolding inside sentences, or tables, as this description must serve as clean text for embedding models.
-        - **Tone**: Professional, analytical, conversational, and direct.
+        Keep your description objective, analytical, and literal. Base your analysis strictly on the visible information presented in the image.
         """
 
         human_message = [
@@ -217,7 +204,6 @@ class OpenAIModel:
 
 
     async def answer_questions_images(self,user_query,images):
-        pass
 
         # 1. Construct the Image blocks for the Human Message
         image_content = []
@@ -333,7 +319,7 @@ class SparseEmbedder:
 
         formatted_chunks = []
         for chunk in chunks:
-            message = f"Context : {chunk.context} | Content : {chunk.content}"
+            message = format_chunk(chunk)
             formatted_chunks.append(message)
         
         # Returns a list of sparse vectors for ingestion
@@ -366,7 +352,7 @@ class ColBERTEmbedder:
 
         formatted_chunks = []
         for chunk in chunks:
-            message = f"Context : {chunk.context} | Content : {chunk.content}"
+            message = format_chunk(chunk)
             formatted_chunks.append(message)
         # FastEmbed returns a generator, we convert to a list of ndarrays
         # Qdrant accepts these numpy arrays directly
@@ -378,3 +364,15 @@ class ColBERTEmbedder:
         # Use .query_embed for search queries
         # returns a generator, so we take the first item [0]
         return list(self.model.query_embed(query_text))[0]
+
+
+def format_chunk(chunk):
+
+    message = f"""
+    Chunk from document : {chunk.document_name}
+    Chunk context : {chunk.context}
+    Chunk content : {chunk.content}
+    Chunk metadata : {chunk.metadata}
+    """
+
+    return message
